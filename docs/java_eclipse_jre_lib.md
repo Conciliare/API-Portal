@@ -254,8 +254,6 @@ AdvancedLogging advancedLogging = client.getAdvancedLogging();
 
 ### <a name="logging_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingInfoAsync") loggingInfoAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Info
 
 
@@ -306,8 +304,6 @@ advancedLogging.loggingInfoAsync(key, uid, name, origin, time, contentType, new 
 
 ### <a name="logging_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingSetupAsync") loggingSetupAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Setup
 
 
@@ -341,7 +337,7 @@ String key = "key";
 String uid = "uid";
 String name = "name";
 String origin = "origin";
-boolean activate = false;
+boolean activate = true;
 String contentType = "Content-Type";
 // Invoking the API call with sample inputs
 advancedLogging.loggingSetupAsync(key, uid, name, origin, activate, contentType, new APICallBack<HttpsApiRestShApiSLR>() {
@@ -357,8 +353,6 @@ advancedLogging.loggingSetupAsync(key, uid, name, origin, activate, contentType,
 
 
 ### <a name="logging_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingInfoAsync") loggingInfoAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
@@ -401,8 +395,6 @@ try {
 
 
 ### <a name="logging_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingSetupAsync") loggingSetupAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
@@ -659,15 +651,13 @@ The singleton instance of the ``` Encryption ``` class can be accessed from the 
 Encryption encryption = client.getEncryption();
 ```
 
-### <a name="data_and_file_encryption_api_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Encryption.dataAndFileEncryptionAPIAsync") dataAndFileEncryptionAPIAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Encryption.dataAndFileEncryptionAsync") dataAndFileEncryptionAsync
 
 > Data and File Encryption API
 
 
 ```java
-void dataAndFileEncryptionAPIAsync(
+void dataAndFileEncryptionAsync(
         final String key,
         final String uid,
         final String data,
@@ -696,10 +686,10 @@ String key = "key";
 String uid = "uid";
 String data = "data";
 String method = "method";
-int bit = 31;
+int bit = 147;
 String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-encryption.dataAndFileEncryptionAPIAsync(key, uid, data, method, bit, contentType, new APICallBack<HttpsApiRestShApiSER>() {
+encryption.dataAndFileEncryptionAsync(key, uid, data, method, bit, contentType, new APICallBack<HttpsApiRestShApiSER>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSER response) {
         // TODO success callback handler
     }
@@ -711,15 +701,13 @@ encryption.dataAndFileEncryptionAPIAsync(key, uid, data, method, bit, contentTyp
 ```
 
 
-### <a name="data_and_file_encryption_api_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Encryption.dataAndFileEncryptionAPIAsync") dataAndFileEncryptionAPIAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Encryption.dataAndFileEncryptionAsync") dataAndFileEncryptionAsync
 
 > Data and File Encryption API
 
 
 ```java
-void dataAndFileEncryptionAPIAsync(
+void dataAndFileEncryptionAsync(
         final HttpsApiRestShApiSE body,
         final String contentType,
         final APICallBack<HttpsApiRestShApiSER> callBack)
@@ -740,7 +728,7 @@ try {
     HttpsApiRestShApiSE body = new HttpsApiRestShApiSE();
     String contentType = "Content-Type";
     // Invoking the API call with sample inputs
-    encryption.dataAndFileEncryptionAPIAsync(body, contentType, new APICallBack<HttpsApiRestShApiSER>() {
+    encryption.dataAndFileEncryptionAsync(body, contentType, new APICallBack<HttpsApiRestShApiSER>() {
         public void onSuccess(HttpContext context, HttpsApiRestShApiSER response) {
             // TODO success callback handler
         }
@@ -768,8 +756,6 @@ CDN cDN = client.getCDN();
 ```
 
 ### <a name="c_dn_push_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPushZoneAsync") cDNPushZoneAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
@@ -818,8 +804,6 @@ cDN.cDNPushZoneAsync(key, uid, cname, file, contentType, new APICallBack<HttpsAp
 
 ### <a name="c_dn_pull_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPullZoneAsync") cDNPullZoneAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Pull Zone API
 
 
@@ -867,8 +851,6 @@ cDN.cDNPullZoneAsync(key, uid, origin, cname, contentType, new APICallBack<Https
 
 ### <a name="c_dn_push_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPushZoneAsync") cDNPushZoneAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Push Zone API
 
 
@@ -910,8 +892,6 @@ try {
 
 
 ### <a name="c_dn_pull_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPullZoneAsync") cDNPullZoneAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
@@ -967,8 +947,6 @@ DNS dNS = client.getDNS();
 
 ### <a name="d_ns_configuration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSConfigurationAsync") dNSConfigurationAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -1016,8 +994,6 @@ dNS.dNSConfigurationAsync(key, uid, domain, records, contentType, new APICallBac
 
 ### <a name="d_ns_configuration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSConfigurationAsync") dNSConfigurationAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -1059,8 +1035,6 @@ try {
 
 
 ### <a name="d_ns_creation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSCreationAsync") dNSCreationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -1105,8 +1079,6 @@ dNS.dNSCreationAsync(key, uid, domain, contentType, new APICallBack<HttpsApiRest
 
 
 ### <a name="d_ns_creation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSCreationAsync") dNSCreationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -1160,15 +1132,13 @@ The singleton instance of the ``` CodeObfuscation ``` class can be accessed from
 CodeObfuscation codeObfuscation = client.getCodeObfuscation();
 ```
 
-### <a name="code_application_obfuscation_and_anti_tampering_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CodeObfuscation.codeApplicationObfuscationAndAntiTamperingAsync") codeApplicationObfuscationAndAntiTamperingAsync
+### <a name="obfuscation_and_anti_tampering_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CodeObfuscation.obfuscationAndAntiTamperingAsync") obfuscationAndAntiTamperingAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```java
-void codeApplicationObfuscationAndAntiTamperingAsync(
+void obfuscationAndAntiTamperingAsync(
         final String key,
         final String uid,
         final String app,
@@ -1194,7 +1164,7 @@ String uid = "uid";
 String app = "app";
 String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-codeObfuscation.codeApplicationObfuscationAndAntiTamperingAsync(key, uid, app, contentType, new APICallBack<HttpsApiRestShApiSOR>() {
+codeObfuscation.obfuscationAndAntiTamperingAsync(key, uid, app, contentType, new APICallBack<HttpsApiRestShApiSOR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSOR response) {
         // TODO success callback handler
     }
@@ -1206,15 +1176,13 @@ codeObfuscation.codeApplicationObfuscationAndAntiTamperingAsync(key, uid, app, c
 ```
 
 
-### <a name="code_application_obfuscation_and_anti_tampering_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CodeObfuscation.codeApplicationObfuscationAndAntiTamperingAsync") codeApplicationObfuscationAndAntiTamperingAsync
+### <a name="obfuscation_and_anti_tampering_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CodeObfuscation.obfuscationAndAntiTamperingAsync") obfuscationAndAntiTamperingAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```java
-void codeApplicationObfuscationAndAntiTamperingAsync(
+void obfuscationAndAntiTamperingAsync(
         final HttpsApiRestShApiSO body,
         final String contentType,
         final APICallBack<HttpsApiRestShApiSOR> callBack)
@@ -1235,7 +1203,7 @@ try {
     HttpsApiRestShApiSO body = new HttpsApiRestShApiSO();
     String contentType = "Content-Type";
     // Invoking the API call with sample inputs
-    codeObfuscation.codeApplicationObfuscationAndAntiTamperingAsync(body, contentType, new APICallBack<HttpsApiRestShApiSOR>() {
+    codeObfuscation.obfuscationAndAntiTamperingAsync(body, contentType, new APICallBack<HttpsApiRestShApiSOR>() {
         public void onSuccess(HttpContext context, HttpsApiRestShApiSOR response) {
             // TODO success callback handler
         }
@@ -1264,9 +1232,7 @@ Hosting hosting = client.getHosting();
 
 ### <a name="hosting_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Hosting.hostingSetupAsync") hostingSetupAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```java
@@ -1313,9 +1279,7 @@ hosting.hostingSetupAsync(key, uid, app, domain, contentType, new APICallBack<Ht
 
 ### <a name="hosting_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Hosting.hostingSetupAsync") hostingSetupAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```java
@@ -1478,8 +1442,6 @@ ImageManipulationAndModerationAPI imageManipulationAndModerationAPI = client.get
 
 ### <a name="image_manipulation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.ImageManipulationAndModerationAPI.imageManipulationAsync") imageManipulationAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 
@@ -1526,8 +1488,6 @@ imageManipulationAndModerationAPI.imageManipulationAsync(key, uid, image, transf
 
 
 ### <a name="image_manipulation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.ImageManipulationAndModerationAPI.imageManipulationAsync") imageManipulationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
@@ -1583,8 +1543,6 @@ Verification verification = client.getVerification();
 
 ### <a name="user_address_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userAddressVerificationAsync") userAddressVerificationAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Address Verification API
 
 
@@ -1627,7 +1585,7 @@ String a = "a";
 String sa = "sa";
 String c = "c";
 String s = "s";
-int z = 31;
+int z = 238;
 String contentType = "Content-Type";
 // Invoking the API call with sample inputs
 verification.userAddressVerificationAsync(key, uid, user, a, sa, c, s, z, contentType, new APICallBack<HttpsApiRestShApiVAR>() {
@@ -1643,8 +1601,6 @@ verification.userAddressVerificationAsync(key, uid, user, a, sa, c, s, z, conten
 
 
 ### <a name="user_address_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userAddressVerificationAsync") userAddressVerificationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1687,8 +1643,6 @@ try {
 
 
 ### <a name="user_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userVerificationAsync") userVerificationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
@@ -1737,8 +1691,6 @@ verification.userVerificationAsync(key, uid, user, code, contentType, new APICal
 
 ### <a name="user_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userVerificationAsync") userVerificationAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Verification API
 
 
@@ -1780,8 +1732,6 @@ try {
 
 
 ### <a name="cellphone_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.cellphoneVerificationAsync") cellphoneVerificationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1826,8 +1776,6 @@ verification.cellphoneVerificationAsync(key, uid, to, contentType, new APICallBa
 
 
 ### <a name="cellphone_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.cellphoneVerificationAsync") cellphoneVerificationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1883,8 +1831,6 @@ TwoFactorAuthenticationAPI twoFactorAuthenticationAPI = client.getTwoFactorAuthe
 
 ### <a name="m2_fa_token_response_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.m2FATokenResponseAsync") m2FATokenResponseAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1932,8 +1878,6 @@ twoFactorAuthenticationAPI.m2FATokenResponseAsync(key, uid, user, code, contentT
 
 ### <a name="m2_fa_token_response_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.m2FATokenResponseAsync") m2FATokenResponseAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1975,8 +1919,6 @@ try {
 
 
 ### <a name="two_factor_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.twoFactorAuthenticationAsync") twoFactorAuthenticationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -2021,8 +1963,6 @@ twoFactorAuthenticationAPI.twoFactorAuthenticationAsync(key, uid, to, contentTyp
 
 
 ### <a name="two_factor_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.twoFactorAuthenticationAsync") twoFactorAuthenticationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -2078,8 +2018,6 @@ UserManagement userManagement = client.getUserManagement();
 
 ### <a name="get_user_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.getUserInfoAsync") getUserInfoAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -2127,8 +2065,6 @@ userManagement.getUserInfoAsync(key, uid, user, apiuid, contentType, new APICall
 
 ### <a name="get_user_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.getUserInfoAsync") getUserInfoAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -2170,8 +2106,6 @@ try {
 
 
 ### <a name="update_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.updateUserAsync") updateUserAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
@@ -2226,8 +2160,6 @@ userManagement.updateUserAsync(key, uid, user, apiuid, avatar, customInput, cont
 
 ### <a name="update_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.updateUserAsync") updateUserAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Update User API
 
 
@@ -2269,8 +2201,6 @@ try {
 
 
 ### <a name="delete_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.deleteUserAsync") deleteUserAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -2318,8 +2248,6 @@ userManagement.deleteUserAsync(api, uid, user, apiuid, contentType, new APICallB
 
 
 ### <a name="delete_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.deleteUserAsync") deleteUserAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -2375,8 +2303,6 @@ LoginAndRegistration loginAndRegistration = client.getLoginAndRegistration();
 
 ### <a name="user_registration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userRegistrationAsync") userRegistrationAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Registration API
 
 
@@ -2420,8 +2346,8 @@ String user = "user";
 String password = "password";
 String name = "name";
 String email = "email";
-int phone = 31;
-int countrycode = 31;
+int phone = 238;
+int countrycode = 238;
 String address = "address";
 String contentType = "Content-Type";
 // Invoking the API call with sample inputs
@@ -2438,8 +2364,6 @@ loginAndRegistration.userRegistrationAsync(key, uid, user, password, name, email
 
 
 ### <a name="user_registration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userRegistrationAsync") userRegistrationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -2482,8 +2406,6 @@ try {
 
 
 ### <a name="user_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userAuthenticationAsync") userAuthenticationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
@@ -2531,8 +2453,6 @@ loginAndRegistration.userAuthenticationAsync(key, uid, user, password, contentTy
 
 
 ### <a name="user_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userAuthenticationAsync") userAuthenticationAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 

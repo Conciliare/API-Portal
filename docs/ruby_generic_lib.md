@@ -131,9 +131,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build smash.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install smash-1.7.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install smash-1.8.0.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=SMASH-Ruby&workspaceName=SMASH-Ruby&projectName=smash&gemName=smash&gemVer=1.7.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=SMASH-Ruby&workspaceName=SMASH-Ruby&projectName=smash&gemName=smash&gemVer=1.8.0)
 
 ## How to Use
 
@@ -143,41 +143,41 @@ The following section explains how to use the SMASH Ruby Gem in a new Rails proj
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.7.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.8.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.7.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.8.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.7.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.8.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the SMASH gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'smash', '~> 1.7.0' ```
+In order to use the SMASH gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'smash', '~> 1.8.0' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.7.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.8.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.7.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.8.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.7.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.8.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.7.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.8.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.7.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.8.0)
 
 ## How to Test
 
@@ -214,7 +214,7 @@ client = Smash::SMASH.new(
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=SMASH%20-%20API-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.7.0&initLine=client%2520%253D%2520SMASH.new%2528%2527basic_auth_user_name%2527%252C%2520%2527basic_auth_password%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=SMASH%20-%20API-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.8.0&initLine=client%2520%253D%2520SMASH.new%2528%2527basic_auth_user_name%2527%252C%2520%2527basic_auth_password%2527%2529)
 
 
 
@@ -247,8 +247,6 @@ advancedLogging = client.advanced_logging
 ```
 
 ### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_info") logging_info
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
@@ -291,8 +289,6 @@ result = advancedLogging.logging_info(key, uid, name, origin, time, content_type
 
 ### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_setup") logging_setup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Setup
 
 
@@ -334,8 +330,6 @@ result = advancedLogging.logging_setup(key, uid, name, origin, activate, content
 
 ### <a name="logging_info1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_info1") logging_info1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Info
 
 
@@ -364,8 +358,6 @@ result = advancedLogging.logging_info1(body, content_type)
 
 
 ### <a name="logging_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_setup1") logging_setup1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
@@ -565,20 +557,18 @@ The singleton instance of the ``` Encryption ``` class can be accessed from the 
 encryption = client.encryption
 ```
 
-### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption_api") data_and_file_encryption_api
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption") data_and_file_encryption
 
 > Data and File Encryption API
 
 
 ```ruby
-def data_and_file_encryption_api(key,
-                                     uid,
-                                     data,
-                                     method,
-                                     bit,
-                                     content_type); end
+def data_and_file_encryption(key,
+                                 uid,
+                                 data,
+                                 method,
+                                 bit,
+                                 content_type); end
 ```
 
 #### Parameters
@@ -600,24 +590,22 @@ key = 'key'
 uid = 'uid'
 data = 'data'
 method = 'method'
-bit = 127
+bit = 201
 content_type = 'Content-Type'
 
-result = encryption.data_and_file_encryption_api(key, uid, data, method, bit, content_type)
+result = encryption.data_and_file_encryption(key, uid, data, method, bit, content_type)
 
 ```
 
 
-### <a name="data_and_file_encryption_api1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption_api1") data_and_file_encryption_api1
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption1") data_and_file_encryption1
 
 > Data and File Encryption API
 
 
 ```ruby
-def data_and_file_encryption_api1(body,
-                                      content_type); end
+def data_and_file_encryption1(body,
+                                  content_type); end
 ```
 
 #### Parameters
@@ -634,7 +622,7 @@ def data_and_file_encryption_api1(body,
 body = HttpsApiRestShApiSE.new
 content_type = 'Content-Type'
 
-result = encryption.data_and_file_encryption_api1(body, content_type)
+result = encryption.data_and_file_encryption1(body, content_type)
 
 ```
 
@@ -652,8 +640,6 @@ cDN = client.cdn
 ```
 
 ### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_push_zone") cdn_push_zone
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
@@ -693,8 +679,6 @@ result = cDN.cdn_push_zone(key, uid, cname, file, content_type)
 
 ### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_pull_zone") cdn_pull_zone
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Pull Zone API
 
 
@@ -733,8 +717,6 @@ result = cDN.cdn_pull_zone(key, uid, origin, cname, content_type)
 
 ### <a name="cdn_push_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_push_zone1") cdn_push_zone1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Push Zone API
 
 
@@ -763,8 +745,6 @@ result = cDN.cdn_push_zone1(body, content_type)
 
 
 ### <a name="cdn_pull_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_pull_zone1") cdn_pull_zone1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
@@ -807,8 +787,6 @@ dNS = client.dns
 
 ### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_configuration") dns_configuration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -847,8 +825,6 @@ result = dNS.dns_configuration(key, uid, domain, records, content_type)
 
 ### <a name="dns_configuration1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_configuration1") dns_configuration1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -877,8 +853,6 @@ result = dNS.dns_configuration1(body, content_type)
 
 
 ### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_creation") dns_creation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -914,8 +888,6 @@ result = dNS.dns_creation(key, uid, domain, content_type)
 
 
 ### <a name="dns_creation1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_creation1") dns_creation1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -956,18 +928,16 @@ The singleton instance of the ``` CodeObfuscation ``` class can be accessed from
 codeObfuscation = client.code_obfuscation
 ```
 
-### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.code_application_obfuscation_and_anti_tampering") code_application_obfuscation_and_anti_tampering
+### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscation_and_anti_tampering") obfuscation_and_anti_tampering
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```ruby
-def code_application_obfuscation_and_anti_tampering(key,
-                                                        uid,
-                                                        app,
-                                                        content_type); end
+def obfuscation_and_anti_tampering(key,
+                                       uid,
+                                       app,
+                                       content_type); end
 ```
 
 #### Parameters
@@ -988,21 +958,19 @@ uid = 'uid'
 app = 'app'
 content_type = 'Content-Type'
 
-result = codeObfuscation.code_application_obfuscation_and_anti_tampering(key, uid, app, content_type)
+result = codeObfuscation.obfuscation_and_anti_tampering(key, uid, app, content_type)
 
 ```
 
 
-### <a name="code_application_obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.code_application_obfuscation_and_anti_tampering1") code_application_obfuscation_and_anti_tampering1
+### <a name="obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscation_and_anti_tampering1") obfuscation_and_anti_tampering1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```ruby
-def code_application_obfuscation_and_anti_tampering1(body,
-                                                         content_type); end
+def obfuscation_and_anti_tampering1(body,
+                                        content_type); end
 ```
 
 #### Parameters
@@ -1019,7 +987,7 @@ def code_application_obfuscation_and_anti_tampering1(body,
 body = HttpsApiRestShApiSO.new
 content_type = 'Content-Type'
 
-result = codeObfuscation.code_application_obfuscation_and_anti_tampering1(body, content_type)
+result = codeObfuscation.obfuscation_and_anti_tampering1(body, content_type)
 
 ```
 
@@ -1038,9 +1006,7 @@ hosting = client.hosting
 
 ### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hosting_setup") hosting_setup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```ruby
@@ -1078,9 +1044,7 @@ result = hosting.hosting_setup(key, uid, app, domain, content_type)
 
 ### <a name="hosting_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hosting_setup1") hosting_setup1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```ruby
@@ -1208,8 +1172,6 @@ imageManipulationAndModerationAPI = client.image_manipulation_and_moderation_api
 
 ### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.image_manipulation") image_manipulation
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 
@@ -1247,8 +1209,6 @@ result = imageManipulationAndModerationAPI.image_manipulation(key, uid, image, t
 
 
 ### <a name="image_manipulation1"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.image_manipulation1") image_manipulation1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
@@ -1291,8 +1251,6 @@ verification = client.verification
 
 ### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_address_verification") user_address_verification
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Address Verification API
 
 
@@ -1333,7 +1291,7 @@ a = 'a'
 sa = 'sa'
 c = 'c'
 s = 's'
-z = 86
+z = 37
 content_type = 'Content-Type'
 
 result = verification.user_address_verification(key, uid, user, a, sa, c, s, z, content_type)
@@ -1342,8 +1300,6 @@ result = verification.user_address_verification(key, uid, user, a, sa, c, s, z, 
 
 
 ### <a name="user_address_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_address_verification1") user_address_verification1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1373,8 +1329,6 @@ result = verification.user_address_verification1(body, content_type)
 
 
 ### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_verification") user_verification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
@@ -1414,8 +1368,6 @@ result = verification.user_verification(key, uid, user, code, content_type)
 
 ### <a name="user_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_verification1") user_verification1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Verification API
 
 
@@ -1444,8 +1396,6 @@ result = verification.user_verification1(body, content_type)
 
 
 ### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphone_verification") cellphone_verification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1481,8 +1431,6 @@ result = verification.cellphone_verification(key, uid, to, content_type)
 
 
 ### <a name="cellphone_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphone_verification1") cellphone_verification1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1525,8 +1473,6 @@ twoFactorAuthenticationAPI = client.two_factor_authentication_api
 
 ### <a name="2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.2_fa_token_response") 2_fa_token_response
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1565,8 +1511,6 @@ result = twoFactorAuthenticationAPI.2_fa_token_response(key, uid, user, code, co
 
 ### <a name="2_fa_token_response1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.2_fa_token_response1") 2_fa_token_response1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1595,8 +1539,6 @@ result = twoFactorAuthenticationAPI.2_fa_token_response1(body, content_type)
 
 
 ### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.two_factor_authentication") two_factor_authentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1632,8 +1574,6 @@ result = twoFactorAuthenticationAPI.two_factor_authentication(key, uid, to, cont
 
 
 ### <a name="two_factor_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.two_factor_authentication1") two_factor_authentication1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1676,8 +1616,6 @@ userManagement = client.user_management
 
 ### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.get_user_info") get_user_info
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1716,8 +1654,6 @@ result = userManagement.get_user_info(key, uid, user, apiuid, content_type)
 
 ### <a name="get_user_info1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.get_user_info1") get_user_info1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1746,8 +1682,6 @@ result = userManagement.get_user_info1(body, content_type)
 
 
 ### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.update_user") update_user
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
@@ -1793,8 +1727,6 @@ result = userManagement.update_user(key, uid, user, apiuid, avatar, custom_input
 
 ### <a name="update_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.update_user1") update_user1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Update User API
 
 
@@ -1823,8 +1755,6 @@ result = userManagement.update_user1(body, content_type)
 
 
 ### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.delete_user") delete_user
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -1863,8 +1793,6 @@ result = userManagement.delete_user(api, uid, user, apiuid, content_type)
 
 
 ### <a name="delete_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.delete_user1") delete_user1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -1907,8 +1835,6 @@ loginAndRegistration = client.login_and_registration
 
 ### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_registration") user_registration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Registration API
 
 
@@ -1950,8 +1876,8 @@ user = 'user'
 password = 'password'
 name = 'name'
 email = 'email'
-phone = 86
-countrycode = 86
+phone = 37
+countrycode = 37
 address = 'address'
 content_type = 'Content-Type'
 
@@ -1961,8 +1887,6 @@ result = loginAndRegistration.user_registration(key, uid, user, password, name, 
 
 
 ### <a name="user_registration1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_registration1") user_registration1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -1992,8 +1916,6 @@ result = loginAndRegistration.user_registration1(body, content_type)
 
 
 ### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_authentication") user_authentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
@@ -2032,8 +1954,6 @@ result = loginAndRegistration.user_authentication(key, uid, user, password, cont
 
 
 ### <a name="user_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_authentication1") user_authentication1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 

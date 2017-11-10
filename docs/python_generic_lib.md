@@ -258,8 +258,6 @@ An instance of the ``` AdvancedLogging ``` class can be accessed from the API Cl
 
 ### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_info") logging_info
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Info
 
 ```python
@@ -302,8 +300,6 @@ result = advanced_logging_client.logging_info(key, uid, name, origin, time, cont
 
 ### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_setup") logging_setup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Setup
 
 ```python
@@ -336,7 +332,7 @@ key = 'key'
 uid = 'uid'
 name = 'name'
 origin = 'origin'
-activate = True
+activate = False
 content_type = 'Content-Type'
 
 result = advanced_logging_client.logging_setup(key, uid, name, origin, activate, content_type)
@@ -345,8 +341,6 @@ result = advanced_logging_client.logging_setup(key, uid, name, origin, activate,
 
 
 ### <a name="logging_info1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_info1") logging_info1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
@@ -377,8 +371,6 @@ result = advanced_logging_client.logging_info1(body, content_type)
 
 
 ### <a name="logging_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_setup1") logging_setup1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
@@ -583,20 +575,18 @@ An instance of the ``` Encryption ``` class can be accessed from the API Client.
  encryption_client = client.encryption
 ```
 
-### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption_api") data_and_file_encryption_api
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption") data_and_file_encryption
 
 > Data and File Encryption API
 
 ```python
-def data_and_file_encryption_api(self,
-                                     key,
-                                     uid,
-                                     data,
-                                     method,
-                                     bit,
-                                     content_type)
+def data_and_file_encryption(self,
+                                 key,
+                                 uid,
+                                 data,
+                                 method,
+                                 bit,
+                                 content_type)
 ```
 
 #### Parameters
@@ -619,24 +609,22 @@ key = 'key'
 uid = 'uid'
 data = 'data'
 method = 'method'
-bit = 191
+bit = 10
 content_type = 'Content-Type'
 
-result = encryption_client.data_and_file_encryption_api(key, uid, data, method, bit, content_type)
+result = encryption_client.data_and_file_encryption(key, uid, data, method, bit, content_type)
 
 ```
 
 
-### <a name="data_and_file_encryption_api1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption_api1") data_and_file_encryption_api1
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption1") data_and_file_encryption1
 
 > Data and File Encryption API
 
 ```python
-def data_and_file_encryption_api1(self,
-                                      body,
-                                      content_type)
+def data_and_file_encryption1(self,
+                                  body,
+                                  content_type)
 ```
 
 #### Parameters
@@ -654,7 +642,7 @@ def data_and_file_encryption_api1(self,
 body = HttpsApiRestShApiSE()
 content_type = 'Content-Type'
 
-result = encryption_client.data_and_file_encryption_api1(body, content_type)
+result = encryption_client.data_and_file_encryption1(body, content_type)
 
 ```
 
@@ -672,8 +660,6 @@ An instance of the ``` CDN ``` class can be accessed from the API Client.
 ```
 
 ### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_push_zone") cdn_push_zone
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
@@ -714,8 +700,6 @@ result = cdn_client.cdn_push_zone(key, uid, cname, file, content_type)
 
 ### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_pull_zone") cdn_pull_zone
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Pull Zone API
 
 ```python
@@ -755,8 +739,6 @@ result = cdn_client.cdn_pull_zone(key, uid, origin, cname, content_type)
 
 ### <a name="cdn_push_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_push_zone1") cdn_push_zone1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Push Zone API
 
 ```python
@@ -786,8 +768,6 @@ result = cdn_client.cdn_push_zone1(body, content_type)
 
 
 ### <a name="cdn_pull_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_pull_zone1") cdn_pull_zone1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
@@ -831,8 +811,6 @@ An instance of the ``` DNS ``` class can be accessed from the API Client.
 
 ### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_configuration") dns_configuration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 ```python
@@ -872,8 +850,6 @@ result = dns_client.dns_configuration(key, uid, domain, records, content_type)
 
 ### <a name="dns_configuration1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_configuration1") dns_configuration1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 ```python
@@ -903,8 +879,6 @@ result = dns_client.dns_configuration1(body, content_type)
 
 
 ### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_creation") dns_creation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -941,8 +915,6 @@ result = dns_client.dns_creation(key, uid, domain, content_type)
 
 
 ### <a name="dns_creation1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_creation1") dns_creation1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -984,18 +956,16 @@ An instance of the ``` CodeObfuscation ``` class can be accessed from the API Cl
  code_obfuscation_client = client.code_obfuscation
 ```
 
-### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.code_application_obfuscation_and_anti_tampering") code_application_obfuscation_and_anti_tampering
+### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscation_and_anti_tampering") obfuscation_and_anti_tampering
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 ```python
-def code_application_obfuscation_and_anti_tampering(self,
-                                                        key,
-                                                        uid,
-                                                        app,
-                                                        content_type)
+def obfuscation_and_anti_tampering(self,
+                                       key,
+                                       uid,
+                                       app,
+                                       content_type)
 ```
 
 #### Parameters
@@ -1017,21 +987,19 @@ uid = 'uid'
 app = 'app'
 content_type = 'Content-Type'
 
-result = code_obfuscation_client.code_application_obfuscation_and_anti_tampering(key, uid, app, content_type)
+result = code_obfuscation_client.obfuscation_and_anti_tampering(key, uid, app, content_type)
 
 ```
 
 
-### <a name="code_application_obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.code_application_obfuscation_and_anti_tampering1") code_application_obfuscation_and_anti_tampering1
+### <a name="obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscation_and_anti_tampering1") obfuscation_and_anti_tampering1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 ```python
-def code_application_obfuscation_and_anti_tampering1(self,
-                                                         body,
-                                                         content_type)
+def obfuscation_and_anti_tampering1(self,
+                                        body,
+                                        content_type)
 ```
 
 #### Parameters
@@ -1049,7 +1017,7 @@ def code_application_obfuscation_and_anti_tampering1(self,
 body = HttpsApiRestShApiSO()
 content_type = 'Content-Type'
 
-result = code_obfuscation_client.code_application_obfuscation_and_anti_tampering1(body, content_type)
+result = code_obfuscation_client.obfuscation_and_anti_tampering1(body, content_type)
 
 ```
 
@@ -1068,9 +1036,7 @@ An instance of the ``` Hosting ``` class can be accessed from the API Client.
 
 ### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hosting_setup") hosting_setup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 ```python
 def hosting_setup(self,
@@ -1109,9 +1075,7 @@ result = hosting_client.hosting_setup(key, uid, app, domain, content_type)
 
 ### <a name="hosting_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hosting_setup1") hosting_setup1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 ```python
 def hosting_setup1(self,
@@ -1242,8 +1206,6 @@ An instance of the ``` ImageManipulationAndModerationAPI ``` class can be access
 
 ### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.image_manipulation") image_manipulation
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 ```python
@@ -1282,8 +1244,6 @@ result = image_manipulation_and_moderation_api_client.image_manipulation(key, ui
 
 
 ### <a name="image_manipulation1"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.image_manipulation1") image_manipulation1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
@@ -1327,8 +1287,6 @@ An instance of the ``` Verification ``` class can be accessed from the API Clien
 
 ### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_address_verification") user_address_verification
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Address Verification API
 
 ```python
@@ -1370,7 +1328,7 @@ a = 'a'
 sa = 'sa'
 c = 'c'
 s = 's'
-z = 150
+z = 101
 content_type = 'Content-Type'
 
 result = verification_client.user_address_verification(key, uid, user, a, sa, c, s, z, content_type)
@@ -1379,8 +1337,6 @@ result = verification_client.user_address_verification(key, uid, user, a, sa, c,
 
 
 ### <a name="user_address_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_address_verification1") user_address_verification1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1411,8 +1367,6 @@ result = verification_client.user_address_verification1(body, content_type)
 
 
 ### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_verification") user_verification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
@@ -1453,8 +1407,6 @@ result = verification_client.user_verification(key, uid, user, code, content_typ
 
 ### <a name="user_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_verification1") user_verification1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Verification API
 
 ```python
@@ -1484,8 +1436,6 @@ result = verification_client.user_verification1(body, content_type)
 
 
 ### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphone_verification") cellphone_verification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1522,8 +1472,6 @@ result = verification_client.cellphone_verification(key, uid, to, content_type)
 
 
 ### <a name="cellphone_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphone_verification1") cellphone_verification1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1567,8 +1515,6 @@ An instance of the ``` TwoFactorAuthenticationAPI ``` class can be accessed from
 
 ### <a name="2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.2_fa_token_response") 2_fa_token_response
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 ```python
@@ -1608,8 +1554,6 @@ result = two_factor_authentication_api_client.2_fa_token_response(key, uid, user
 
 ### <a name="2_fa_token_response1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.2_fa_token_response1") 2_fa_token_response1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 ```python
@@ -1639,8 +1583,6 @@ result = two_factor_authentication_api_client.2_fa_token_response1(body, content
 
 
 ### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.two_factor_authentication") two_factor_authentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1677,8 +1619,6 @@ result = two_factor_authentication_api_client.two_factor_authentication(key, uid
 
 
 ### <a name="two_factor_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.two_factor_authentication1") two_factor_authentication1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1722,8 +1662,6 @@ An instance of the ``` UserManagement ``` class can be accessed from the API Cli
 
 ### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.get_user_info") get_user_info
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 ```python
@@ -1763,8 +1701,6 @@ result = user_management_client.get_user_info(key, uid, user, apiuid, content_ty
 
 ### <a name="get_user_info1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.get_user_info1") get_user_info1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 ```python
@@ -1794,8 +1730,6 @@ result = user_management_client.get_user_info1(body, content_type)
 
 
 ### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.update_user") update_user
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
@@ -1842,8 +1776,6 @@ result = user_management_client.update_user(key, uid, user, apiuid, avatar, cust
 
 ### <a name="update_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.update_user1") update_user1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Update User API
 
 ```python
@@ -1873,8 +1805,6 @@ result = user_management_client.update_user1(body, content_type)
 
 
 ### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.delete_user") delete_user
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -1914,8 +1844,6 @@ result = user_management_client.delete_user(api, uid, user, apiuid, content_type
 
 
 ### <a name="delete_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.delete_user1") delete_user1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -1959,8 +1887,6 @@ An instance of the ``` LoginAndRegistration ``` class can be accessed from the A
 
 ### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_registration") user_registration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Registration API
 
 ```python
@@ -2003,8 +1929,8 @@ user = 'user'
 password = 'password'
 name = 'name'
 email = 'email'
-phone = 150
-countrycode = 150
+phone = 101
+countrycode = 101
 address = 'address'
 content_type = 'Content-Type'
 
@@ -2014,8 +1940,6 @@ result = login_and_registration_client.user_registration(key, uid, user, passwor
 
 
 ### <a name="user_registration1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_registration1") user_registration1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -2046,8 +1970,6 @@ result = login_and_registration_client.user_registration1(body, content_type)
 
 
 ### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_authentication") user_authentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
@@ -2087,8 +2009,6 @@ result = login_and_registration_client.user_authentication(key, uid, user, passw
 
 
 ### <a name="user_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_authentication1") user_authentication1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 

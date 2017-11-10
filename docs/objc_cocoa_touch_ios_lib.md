@@ -229,8 +229,6 @@ AdvancedLogging* advancedLogging = [[AdvancedLogging alloc]init] ;
 
 ### <a name="logging_info_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfoAsyncWithKey") loggingInfoAsyncWithKey
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Info
 
 
@@ -278,8 +276,6 @@ function loggingInfoAsyncWithKey:(NSString*) key
 
 ### <a name="logging_setup_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetupAsyncWithKey") loggingSetupAsyncWithKey
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Setup
 
 
@@ -316,7 +312,7 @@ function loggingSetupAsyncWithKey:(NSString*) key
     NSString* uid = @"uid";
     NSString* name = @"name";
     NSString* origin = @"origin";
-    BOOL activate = false;
+    BOOL activate = true;
     NSString* contentType = @"Content-Type";
 
     [self.advancedLogging loggingSetupAsyncWithKey: key uid : uid name : name origin : origin activate : activate contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLR* response, NSError* error) { 
@@ -326,8 +322,6 @@ function loggingSetupAsyncWithKey:(NSString*) key
 
 
 ### <a name="logging_info1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo1AsyncWithBody") loggingInfo1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
@@ -363,8 +357,6 @@ function loggingInfo1AsyncWithBody:(HttpsApiRestShApiSLI*) body
 
 
 ### <a name="logging_setup1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup1AsyncWithBody") loggingSetup1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
@@ -599,21 +591,19 @@ function httpsApiRestShApiSW1AsyncWithBody:(HttpsApiRestShApiSW*) body
 Encryption* encryption = [[Encryption alloc]init] ;
 ```
 
-### <a name="data_and_file_encryption_api_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPIAsyncWithKey") dataAndFileEncryptionAPIAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAsyncWithKey") dataAndFileEncryptionAsyncWithKey
 
 > Data and File Encryption API
 
 
 ```objc
-function dataAndFileEncryptionAPIAsyncWithKey:(NSString*) key
+function dataAndFileEncryptionAsyncWithKey:(NSString*) key
                 uid:(NSString*) uid
                 data:(NSString*) data
                 method:(NSString*) method
                 bit:(int) bit
                 contentType:(NSString*) contentType
-                completionBlock:(CompletedGetDataAndFileEncryptionAPI) onCompleted(key uid : uid data : data method : method bit : bit contentType : contentType)
+                completionBlock:(CompletedGetDataAndFileEncryption) onCompleted(key uid : uid data : data method : method bit : bit contentType : contentType)
 ```
 
 #### Parameters
@@ -639,26 +629,24 @@ function dataAndFileEncryptionAPIAsyncWithKey:(NSString*) key
     NSString* uid = @"uid";
     NSString* data = @"data";
     NSString* method = @"method";
-    int bit = 114;
+    int bit = 24;
     NSString* contentType = @"Content-Type";
 
-    [self.encryption dataAndFileEncryptionAPIAsyncWithKey: key uid : uid data : data method : method bit : bit contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
+    [self.encryption dataAndFileEncryptionAsyncWithKey: key uid : uid data : data method : method bit : bit contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="data_and_file_encryption_api1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPI1AsyncWithBody") dataAndFileEncryptionAPI1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryption1AsyncWithBody") dataAndFileEncryption1AsyncWithBody
 
 > Data and File Encryption API
 
 
 ```objc
-function dataAndFileEncryptionAPI1AsyncWithBody:(HttpsApiRestShApiSE*) body
+function dataAndFileEncryption1AsyncWithBody:(HttpsApiRestShApiSE*) body
                 contentType:(NSString*) contentType
-                completionBlock:(CompletedPostDataAndFileEncryptionAPI1) onCompleted(body contentType : contentType)
+                completionBlock:(CompletedPostDataAndFileEncryption1) onCompleted(body contentType : contentType)
 ```
 
 #### Parameters
@@ -679,7 +667,7 @@ function dataAndFileEncryptionAPI1AsyncWithBody:(HttpsApiRestShApiSE*) body
     HttpsApiRestShApiSE* body = [[HttpsApiRestShApiSE alloc]init];
     NSString* contentType = @"Content-Type";
 
-    [self.encryption dataAndFileEncryptionAPI1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
+    [self.encryption dataAndFileEncryption1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -695,8 +683,6 @@ CDN* cDN = [[CDN alloc]init] ;
 ```
 
 ### <a name="c_dn_push_zone_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZoneAsyncWithKey") cDNPushZoneAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
@@ -742,8 +728,6 @@ function cDNPushZoneAsyncWithKey:(NSString*) key
 
 ### <a name="c_dn_pull_zone_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZoneAsyncWithKey") cDNPullZoneAsyncWithKey
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Pull Zone API
 
 
@@ -788,8 +772,6 @@ function cDNPullZoneAsyncWithKey:(NSString*) key
 
 ### <a name="c_dn_push_zone1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone1AsyncWithBody") cDNPushZone1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Push Zone API
 
 
@@ -824,8 +806,6 @@ function cDNPushZone1AsyncWithBody:(HttpsApiRestShApiSCPush*) body
 
 
 ### <a name="c_dn_pull_zone1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone1AsyncWithBody") cDNPullZone1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
@@ -871,8 +851,6 @@ DNS* dNS = [[DNS alloc]init] ;
 
 ### <a name="d_ns_configuration_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfigurationAsyncWithKey") dNSConfigurationAsyncWithKey
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -917,8 +895,6 @@ function dNSConfigurationAsyncWithKey:(NSString*) key
 
 ### <a name="d_ns_configuration1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration1AsyncWithBody") dNSConfiguration1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -953,8 +929,6 @@ function dNSConfiguration1AsyncWithBody:(HttpsApiRestShApiSDC*) body
 
 
 ### <a name="d_ns_creation_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreationAsyncWithKey") dNSCreationAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -996,8 +970,6 @@ function dNSCreationAsyncWithKey:(NSString*) key
 
 
 ### <a name="d_ns_creation1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation1AsyncWithBody") dNSCreation1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -1041,19 +1013,17 @@ function dNSCreation1AsyncWithBody:(HttpsApiRestShApiSDA*) body
 CodeObfuscation* codeObfuscation = [[CodeObfuscation alloc]init] ;
 ```
 
-### <a name="code_application_obfuscation_and_anti_tampering_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTamperingAsyncWithKey") codeApplicationObfuscationAndAntiTamperingAsyncWithKey
+### <a name="obfuscation_and_anti_tampering_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTamperingAsyncWithKey") obfuscationAndAntiTamperingAsyncWithKey
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```objc
-function codeApplicationObfuscationAndAntiTamperingAsyncWithKey:(NSString*) key
+function obfuscationAndAntiTamperingAsyncWithKey:(NSString*) key
                 uid:(NSString*) uid
                 app:(NSString*) app
                 contentType:(NSString*) contentType
-                completionBlock:(CompletedGetCodeApplicationObfuscationAndAntiTampering) onCompleted(key uid : uid app : app contentType : contentType)
+                completionBlock:(CompletedGetObfuscationAndAntiTampering) onCompleted(key uid : uid app : app contentType : contentType)
 ```
 
 #### Parameters
@@ -1078,23 +1048,21 @@ function codeApplicationObfuscationAndAntiTamperingAsyncWithKey:(NSString*) key
     NSString* app = @"app";
     NSString* contentType = @"Content-Type";
 
-    [self.codeObfuscation codeApplicationObfuscationAndAntiTamperingAsyncWithKey: key uid : uid app : app contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSOR* response, NSError* error) { 
+    [self.codeObfuscation obfuscationAndAntiTamperingAsyncWithKey: key uid : uid app : app contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSOR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="code_application_obfuscation_and_anti_tampering1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTampering1AsyncWithBody") codeApplicationObfuscationAndAntiTampering1AsyncWithBody
+### <a name="obfuscation_and_anti_tampering1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTampering1AsyncWithBody") obfuscationAndAntiTampering1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```objc
-function codeApplicationObfuscationAndAntiTampering1AsyncWithBody:(HttpsApiRestShApiSO*) body
+function obfuscationAndAntiTampering1AsyncWithBody:(HttpsApiRestShApiSO*) body
                 contentType:(NSString*) contentType
-                completionBlock:(CompletedPostCodeApplicationObfuscationAndAntiTampering1) onCompleted(body contentType : contentType)
+                completionBlock:(CompletedPostObfuscationAndAntiTampering1) onCompleted(body contentType : contentType)
 ```
 
 #### Parameters
@@ -1115,7 +1083,7 @@ function codeApplicationObfuscationAndAntiTampering1AsyncWithBody:(HttpsApiRestS
     HttpsApiRestShApiSO* body = [[HttpsApiRestShApiSO alloc]init];
     NSString* contentType = @"Content-Type";
 
-    [self.codeObfuscation codeApplicationObfuscationAndAntiTampering1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSOR* response, NSError* error) { 
+    [self.codeObfuscation obfuscationAndAntiTampering1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSOR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1132,9 +1100,7 @@ Hosting* hosting = [[Hosting alloc]init] ;
 
 ### <a name="hosting_setup_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetupAsyncWithKey") hostingSetupAsyncWithKey
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```objc
@@ -1178,9 +1144,7 @@ function hostingSetupAsyncWithKey:(NSString*) key
 
 ### <a name="hosting_setup1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup1AsyncWithBody") hostingSetup1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```objc
@@ -1330,8 +1294,6 @@ ImageManipulationAndModerationAPI* imageManipulationAndModerationAPI = [[ImageMa
 
 ### <a name="image_manipulation_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulationAsyncWithKey") imageManipulationAsyncWithKey
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 
@@ -1376,8 +1338,6 @@ function imageManipulationAsyncWithKey:(NSString*) key
 
 ### <a name="image_manipulation1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation1AsyncWithBody") imageManipulation1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 
@@ -1421,8 +1381,6 @@ Verification* verification = [[Verification alloc]init] ;
 ```
 
 ### <a name="user_address_verification_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerificationAsyncWithKey") userAddressVerificationAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1469,7 +1427,7 @@ function userAddressVerificationAsyncWithKey:(NSString*) key
     NSString* sa = @"sa";
     NSString* c = @"c";
     NSString* s = @"s";
-    int z = 72;
+    int z = 237;
     NSString* contentType = @"Content-Type";
 
     [self.verification userAddressVerificationAsyncWithKey: key uid : uid user : user a : a sa : sa c : c s : s z : z contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVAR* response, NSError* error) { 
@@ -1479,8 +1437,6 @@ function userAddressVerificationAsyncWithKey:(NSString*) key
 
 
 ### <a name="user_address_verification1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification1AsyncWithBody") userAddressVerification1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1516,8 +1472,6 @@ function userAddressVerification1AsyncWithBody:(HttpsApiRestShApiVA*) body
 
 
 ### <a name="user_verification_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerificationAsyncWithKey") userVerificationAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
@@ -1563,8 +1517,6 @@ function userVerificationAsyncWithKey:(NSString*) key
 
 ### <a name="user_verification1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification1AsyncWithBody") userVerification1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Verification API
 
 
@@ -1599,8 +1551,6 @@ function userVerification1AsyncWithBody:(HttpsApiRestShApiVU*) body
 
 
 ### <a name="cellphone_verification_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerificationAsyncWithKey") cellphoneVerificationAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1642,8 +1592,6 @@ function cellphoneVerificationAsyncWithKey:(NSString*) key
 
 
 ### <a name="cellphone_verification1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification1AsyncWithBody") cellphoneVerification1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1689,8 +1637,6 @@ TwoFactorAuthenticationAPI* twoFactorAuthenticationAPI = [[TwoFactorAuthenticati
 
 ### <a name="m2_fa_token_response_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponseAsyncWithKey") m2FATokenResponseAsyncWithKey
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1735,8 +1681,6 @@ function m2FATokenResponseAsyncWithKey:(NSString*) key
 
 ### <a name="m2_fa_token_response1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse1AsyncWithBody") m2FATokenResponse1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1771,8 +1715,6 @@ function m2FATokenResponse1AsyncWithBody:(HttpsApiRestShApi2faT*) body
 
 
 ### <a name="two_factor_authentication_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthenticationAsyncWithKey") twoFactorAuthenticationAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1814,8 +1756,6 @@ function twoFactorAuthenticationAsyncWithKey:(NSString*) key
 
 
 ### <a name="two_factor_authentication1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication1AsyncWithBody") twoFactorAuthentication1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1861,8 +1801,6 @@ UserManagement* userManagement = [[UserManagement alloc]init] ;
 
 ### <a name="get_user_info_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfoAsyncWithKey") getUserInfoAsyncWithKey
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1907,8 +1845,6 @@ function getUserInfoAsyncWithKey:(NSString*) key
 
 ### <a name="get_user_info1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo1AsyncWithBody") getUserInfo1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1943,8 +1879,6 @@ function getUserInfo1AsyncWithBody:(HttpsApiRestShApiUI*) body
 
 
 ### <a name="update_user_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUserAsyncWithKey") updateUserAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
@@ -1996,8 +1930,6 @@ function updateUserAsyncWithKey:(NSString*) key
 
 ### <a name="update_user1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser1AsyncWithBody") updateUser1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Update User API
 
 
@@ -2032,8 +1964,6 @@ function updateUser1AsyncWithBody:(HttpsApiRestShApiUU*) body
 
 
 ### <a name="delete_user_async_with_api"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUserAsyncWithApi") deleteUserAsyncWithApi
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -2079,8 +2009,6 @@ function deleteUserAsyncWithApi:(NSString*) api
 
 ### <a name="delete_user1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser1AsyncWithBody") deleteUser1AsyncWithBody
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Delete User API
 
 
@@ -2124,8 +2052,6 @@ LoginAndRegistration* loginAndRegistration = [[LoginAndRegistration alloc]init] 
 ```
 
 ### <a name="user_registration_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistrationAsyncWithKey") userRegistrationAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -2173,8 +2099,8 @@ function userRegistrationAsyncWithKey:(NSString*) key
     NSString* password = @"password";
     NSString* name = @"name";
     NSString* email = @"email";
-    int phone = 164;
-    int countrycode = 164;
+    int phone = 237;
+    int countrycode = 237;
     NSString* address = @"address";
     NSString* contentType = @"Content-Type";
 
@@ -2185,8 +2111,6 @@ function userRegistrationAsyncWithKey:(NSString*) key
 
 
 ### <a name="user_registration1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration1AsyncWithBody") userRegistration1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -2222,8 +2146,6 @@ function userRegistration1AsyncWithBody:(HttpsApiRestShApiAUR*) body
 
 
 ### <a name="user_authentication_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthenticationAsyncWithKey") userAuthenticationAsyncWithKey
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
@@ -2268,8 +2190,6 @@ function userAuthenticationAsyncWithKey:(NSString*) key
 
 
 ### <a name="user_authentication1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication1AsyncWithBody") userAuthentication1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
