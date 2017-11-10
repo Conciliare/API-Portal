@@ -1,6 +1,6 @@
 # 
 
-**`API Version:`** `1.07`
+**`API Version:`** `1.08`
 
 # Introduction
 * ## Multi-use Flexible API for: 
@@ -272,8 +272,6 @@ Global API errors are applied across all endpoints.
 
 **`GET`** `/s/l/i`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Info
 
 
@@ -324,8 +322,6 @@ Global API errors are applied across all endpoints.
 
 **`GET`** `/s/l`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Setup
 
 
@@ -360,8 +356,6 @@ Global API errors are applied across all endpoints.
 
 
 **`POST`** `/s/l/i`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
@@ -422,8 +416,6 @@ Raw
 
 
 **`POST`** `/s/l`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
@@ -645,12 +637,10 @@ Raw
 ## <a name="encryption"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Encryption") Encryption
 
 
-### <a name="data_and_file_encryption_api"></a>![Endpoint: ](https://apidocs.io/img/method.png "Data and File Encryption API") Data and File Encryption API
+### <a name="data_and_file_encryption"></a>![Endpoint: ](https://apidocs.io/img/method.png "Data and File Encryption") Data and File Encryption
 
 
 **`GET`** `/s/e`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Data and File Encryption API
 
@@ -686,12 +676,10 @@ Raw
 ```
 
 
-### <a name="data_and_file_encryption_api1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Data and File Encryption API1") Data and File Encryption API1
+### <a name="data_and_file_encryption1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Data and File Encryption1") Data and File Encryption1
 
 
 **`POST`** `/s/e`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Data and File Encryption API
 
@@ -748,8 +736,6 @@ Raw
 
 **`GET`** `/s/c/push`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Push Zone API
 
 
@@ -786,8 +772,6 @@ Raw
 
 **`GET`** `/s/c/pull`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Pull Zone API
 
 
@@ -822,8 +806,6 @@ Raw
 
 
 **`POST`** `/s/c/push`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
@@ -870,8 +852,6 @@ Raw
 
 
 **`POST`** `/s/c/pull`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
@@ -923,8 +903,6 @@ Raw
 
 **`GET`** `/s/d/c`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -960,8 +938,6 @@ Raw
 
 
 **`POST`** `/s/d/c`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Configuration API
 
@@ -1009,8 +985,6 @@ Raw
 
 **`GET`** `/s/d/a`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Creation API
 
 
@@ -1049,8 +1023,6 @@ Raw
 
 
 **`POST`** `/s/d/a`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -1101,14 +1073,12 @@ Raw
 ## <a name="code_obfuscation"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Code Obfuscation") Code Obfuscation
 
 
-### <a name="code/application_obfuscation_and_anti_tampering"></a>![Endpoint: ](https://apidocs.io/img/method.png "Code/Application Obfuscation and Anti-Tampering") Code/Application Obfuscation and Anti-Tampering
+### <a name="obfuscation_and_anti_tampering"></a>![Endpoint: ](https://apidocs.io/img/method.png "Obfuscation and Anti-Tampering") Obfuscation and Anti-Tampering
 
 
 **`GET`** `/s/o`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 
@@ -1137,14 +1107,12 @@ Raw
 ```
 
 
-### <a name="code/application_obfuscation_and_anti_tampering1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Code/Application Obfuscation and Anti-Tampering1") Code/Application Obfuscation and Anti-Tampering1
+### <a name="obfuscation_and_anti_tampering1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Obfuscation and Anti-Tampering1") Obfuscation and Anti-Tampering1
 
 
 **`POST`** `/s/o`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 
@@ -1193,9 +1161,7 @@ Raw
 
 **`GET`** `/s/h`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 
@@ -1232,9 +1198,7 @@ Raw
 
 **`POST`** `/s/h`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 
@@ -1385,8 +1349,6 @@ Raw
 
 **`GET`** `/i`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 
@@ -1424,8 +1386,6 @@ Raw
 
 
 **`POST`** `/i`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
@@ -1481,8 +1441,6 @@ Raw
 
 **`GET`** `/v/a`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Address Verification API
 
 
@@ -1522,8 +1480,6 @@ Raw
 
 
 **`POST`** `/v/a`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1576,8 +1532,6 @@ Raw
 
 **`GET`** `/v/u`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Verification API
 
 
@@ -1613,8 +1567,6 @@ Raw
 
 
 **`POST`** `/v/u`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
@@ -1662,8 +1614,6 @@ Raw
 
 **`GET`** `/v`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Verification API
 
 
@@ -1699,8 +1649,6 @@ Raw
 
 
 **`POST`** `/v`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1753,8 +1701,6 @@ Raw
 
 **`GET`** `/2fa/t`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1790,8 +1736,6 @@ Raw
 
 
 **`POST`** `/2fa/t`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication Token Reply
 
@@ -1839,8 +1783,6 @@ Raw
 
 **`GET`** `/2fa`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication API
 
 
@@ -1876,8 +1818,6 @@ Raw
 
 
 **`POST`** `/2fa`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1930,8 +1870,6 @@ Raw
 
 
 **`GET`** `/u/i`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Get User Info API
 
@@ -1987,8 +1925,6 @@ Raw
 
 
 **`POST`** `/u/i`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Get User Info API
 
@@ -2055,8 +1991,6 @@ Raw
 
 **`GET`** `/u/u`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Update User API
 
 
@@ -2100,8 +2034,6 @@ Raw
 
 
 **`POST`** `/u/u`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
@@ -2169,8 +2101,6 @@ Raw
 
 **`GET`** `/u/d`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Delete User API
 
 
@@ -2206,8 +2136,6 @@ Raw
 
 
 **`POST`** `/u/d`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -2260,8 +2188,6 @@ Raw
 
 **`GET`** `/a/u/r`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Registration API
 
 
@@ -2311,8 +2237,6 @@ Raw
 
 
 **`POST`** `/a/u/r`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -2379,8 +2303,6 @@ Raw
 
 **`GET`** `/a/u/l`
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Authentication API
 
 
@@ -2431,8 +2353,6 @@ Raw
 
 
 **`POST`** `/a/u/l`
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 

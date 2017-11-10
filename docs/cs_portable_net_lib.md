@@ -237,8 +237,6 @@ IAdvancedLogging advancedLogging = client.AdvancedLogging;
 
 ### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingInfo") LoggingInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Info
 
 
@@ -281,8 +279,6 @@ Models.HttpsApiRestShApiSLIR result = await advancedLogging.LoggingInfo(key, uid
 
 ### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingSetup") LoggingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Setup
 
 
@@ -315,7 +311,7 @@ string key = "key";
 string uid = "uid";
 string name = "name";
 string origin = "origin";
-bool activate = true;
+bool activate = false;
 string contentType = "Content-Type";
 
 Models.HttpsApiRestShApiSLR result = await advancedLogging.LoggingSetup(key, uid, name, origin, activate, contentType);
@@ -324,8 +320,6 @@ Models.HttpsApiRestShApiSLR result = await advancedLogging.LoggingSetup(key, uid
 
 
 ### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingInfo") LoggingInfo
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
@@ -354,8 +348,6 @@ Models.HttpsApiRestShApiSLIR result = await advancedLogging.LoggingInfo(body, co
 
 
 ### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingSetup") LoggingSetup
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
@@ -554,15 +546,13 @@ The singleton instance of the ``` Encryption ``` class can be accessed from the 
 IEncryption encryption = client.Encryption;
 ```
 
-### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Encryption.DataAndFileEncryptionAPI") DataAndFileEncryptionAPI
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Encryption.DataAndFileEncryption") DataAndFileEncryption
 
 > Data and File Encryption API
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSER> DataAndFileEncryptionAPI(
+Task<Models.HttpsApiRestShApiSER> DataAndFileEncryption(
         string key,
         string uid,
         string data,
@@ -590,23 +580,21 @@ string key = "key";
 string uid = "uid";
 string data = "data";
 string method = "method";
-int bit = 37;
+int bit = 110;
 string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryptionAPI(key, uid, data, method, bit, contentType);
+Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryption(key, uid, data, method, bit, contentType);
 
 ```
 
 
-### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Encryption.DataAndFileEncryptionAPI") DataAndFileEncryptionAPI
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Encryption.DataAndFileEncryption") DataAndFileEncryption
 
 > Data and File Encryption API
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSER> DataAndFileEncryptionAPI(Models.HttpsApiRestShApiSE body, string contentType)
+Task<Models.HttpsApiRestShApiSER> DataAndFileEncryption(Models.HttpsApiRestShApiSE body, string contentType)
 ```
 
 #### Parameters
@@ -623,7 +611,7 @@ Task<Models.HttpsApiRestShApiSER> DataAndFileEncryptionAPI(Models.HttpsApiRestSh
 var body = new Models.HttpsApiRestShApiSE();
 string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryptionAPI(body, contentType);
+Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryption(body, contentType);
 
 ```
 
@@ -641,8 +629,6 @@ ICDN cDN = client.CDN;
 ```
 
 ### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDN.CDNPushZone") CDNPushZone
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
@@ -683,8 +669,6 @@ Models.HttpsApiRestShApiSCPushR result = await cDN.CDNPushZone(key, uid, cname, 
 
 ### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDN.CDNPullZone") CDNPullZone
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Pull Zone API
 
 
@@ -724,8 +708,6 @@ Models.HttpsApiRestShApiSCPullR result = await cDN.CDNPullZone(key, uid, origin,
 
 ### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDN.CDNPushZone") CDNPushZone
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Push Zone API
 
 
@@ -753,8 +735,6 @@ Models.HttpsApiRestShApiSCPushR result = await cDN.CDNPushZone(body, contentType
 
 
 ### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDN.CDNPullZone") CDNPullZone
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
@@ -796,8 +776,6 @@ IDNS dNS = client.DNS;
 
 ### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNS.DNSConfiguration") DNSConfiguration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -837,8 +815,6 @@ Models.HttpsApiRestShApiSDCR result = await dNS.DNSConfiguration(key, uid, domai
 
 ### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNS.DNSConfiguration") DNSConfiguration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -866,8 +842,6 @@ Models.HttpsApiRestShApiSDCR result = await dNS.DNSConfiguration(body, contentTy
 
 
 ### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNS.DNSCreation") DNSCreation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -904,8 +878,6 @@ Models.HttpsApiRestShApiSDAR result = await dNS.DNSCreation(key, uid, domain, co
 
 
 ### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNS.DNSCreation") DNSCreation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -945,15 +917,13 @@ The singleton instance of the ``` CodeObfuscation ``` class can be accessed from
 ICodeObfuscation codeObfuscation = client.CodeObfuscation;
 ```
 
-### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CodeObfuscation.CodeApplicationObfuscationAndAntiTampering") CodeApplicationObfuscationAndAntiTampering
+### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CodeObfuscation.ObfuscationAndAntiTampering") ObfuscationAndAntiTampering
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSOR> CodeApplicationObfuscationAndAntiTampering(
+Task<Models.HttpsApiRestShApiSOR> ObfuscationAndAntiTampering(
         string key,
         string uid,
         string app,
@@ -978,20 +948,18 @@ string uid = "uid";
 string app = "app";
 string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSOR result = await codeObfuscation.CodeApplicationObfuscationAndAntiTampering(key, uid, app, contentType);
+Models.HttpsApiRestShApiSOR result = await codeObfuscation.ObfuscationAndAntiTampering(key, uid, app, contentType);
 
 ```
 
 
-### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CodeObfuscation.CodeApplicationObfuscationAndAntiTampering") CodeApplicationObfuscationAndAntiTampering
+### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CodeObfuscation.ObfuscationAndAntiTampering") ObfuscationAndAntiTampering
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSOR> CodeApplicationObfuscationAndAntiTampering(Models.HttpsApiRestShApiSO body, string contentType)
+Task<Models.HttpsApiRestShApiSOR> ObfuscationAndAntiTampering(Models.HttpsApiRestShApiSO body, string contentType)
 ```
 
 #### Parameters
@@ -1008,7 +976,7 @@ Task<Models.HttpsApiRestShApiSOR> CodeApplicationObfuscationAndAntiTampering(Mod
 var body = new Models.HttpsApiRestShApiSO();
 string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSOR result = await codeObfuscation.CodeApplicationObfuscationAndAntiTampering(body, contentType);
+Models.HttpsApiRestShApiSOR result = await codeObfuscation.ObfuscationAndAntiTampering(body, contentType);
 
 ```
 
@@ -1027,9 +995,7 @@ IHosting hosting = client.Hosting;
 
 ### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Hosting.HostingSetup") HostingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```csharp
@@ -1068,9 +1034,7 @@ Models.HttpsApiRestShApiSHR result = await hosting.HostingSetup(key, uid, app, d
 
 ### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Hosting.HostingSetup") HostingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```csharp
@@ -1197,8 +1161,6 @@ IImageManipulationAndModerationAPI imageManipulationAndModerationAPI = client.Im
 
 ### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.ImageManipulationAndModerationAPI.ImageManipulation") ImageManipulation
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 
@@ -1237,8 +1199,6 @@ Models.HttpsApiRestShApiIR result = await imageManipulationAndModerationAPI.Imag
 
 
 ### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.ImageManipulationAndModerationAPI.ImageManipulation") ImageManipulation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
@@ -1279,8 +1239,6 @@ IVerification verification = client.Verification;
 ```
 
 ### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.UserAddressVerification") UserAddressVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1323,7 +1281,7 @@ string a = "a";
 string sa = "sa";
 string c = "c";
 string s = "s";
-int z = 37;
+int z = 110;
 string contentType = "Content-Type";
 
 Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(key, uid, user, a, sa, c, s, z, contentType);
@@ -1332,8 +1290,6 @@ Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(
 
 
 ### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.UserAddressVerification") UserAddressVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1362,8 +1318,6 @@ Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(
 
 
 ### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.UserVerification") UserVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
@@ -1404,8 +1358,6 @@ Models.HttpsApiRestShApiVUR result = await verification.UserVerification(key, ui
 
 ### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.UserVerification") UserVerification
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Verification API
 
 
@@ -1433,8 +1385,6 @@ Models.HttpsApiRestShApiVUR result = await verification.UserVerification(body, c
 
 
 ### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.CellphoneVerification") CellphoneVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1471,8 +1421,6 @@ Models.HttpsApiRestShApiVR result = await verification.CellphoneVerification(key
 
 
 ### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.CellphoneVerification") CellphoneVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1514,8 +1462,6 @@ ITwoFactorAuthenticationAPI twoFactorAuthenticationAPI = client.TwoFactorAuthent
 
 ### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPI.M2FATokenResponse") M2FATokenResponse
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1555,8 +1501,6 @@ Models.HttpsApiRestShApi2faTR result = await twoFactorAuthenticationAPI.M2FAToke
 
 ### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPI.M2FATokenResponse") M2FATokenResponse
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1584,8 +1528,6 @@ Models.HttpsApiRestShApi2faTR result = await twoFactorAuthenticationAPI.M2FAToke
 
 
 ### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPI.TwoFactorAuthentication") TwoFactorAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1622,8 +1564,6 @@ Models.HttpsApiRestShApi2faR result = await twoFactorAuthenticationAPI.TwoFactor
 
 
 ### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPI.TwoFactorAuthentication") TwoFactorAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1665,8 +1605,6 @@ IUserManagement userManagement = client.UserManagement;
 
 ### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagement.GetUserInfo") GetUserInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1706,8 +1644,6 @@ Models.HttpsApiRestShApiUIR result = await userManagement.GetUserInfo(key, uid, 
 
 ### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagement.GetUserInfo") GetUserInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1735,8 +1671,6 @@ Models.HttpsApiRestShApiUIR result = await userManagement.GetUserInfo(body, cont
 
 
 ### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagement.UpdateUser") UpdateUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
@@ -1783,8 +1717,6 @@ Models.HttpsApiRestShApiUUR result = await userManagement.UpdateUser(key, uid, u
 
 ### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagement.UpdateUser") UpdateUser
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Update User API
 
 
@@ -1812,8 +1744,6 @@ Models.HttpsApiRestShApiUUR result = await userManagement.UpdateUser(body, conte
 
 
 ### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagement.DeleteUser") DeleteUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -1854,8 +1784,6 @@ Models.HttpsApiRestShApiUDR result = await userManagement.DeleteUser(api, uid, u
 
 ### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagement.DeleteUser") DeleteUser
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Delete User API
 
 
@@ -1895,8 +1823,6 @@ ILoginAndRegistration loginAndRegistration = client.LoginAndRegistration;
 ```
 
 ### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistration.UserRegistration") UserRegistration
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -1940,8 +1866,8 @@ string user = "user";
 string password = "password";
 string name = "name";
 string email = "email";
-int phone = 37;
-int countrycode = 37;
+int phone = 202;
+int countrycode = 202;
 string address = "address";
 string contentType = "Content-Type";
 
@@ -1951,8 +1877,6 @@ Models.HttpsApiRestShApiAURR result = await loginAndRegistration.UserRegistratio
 
 
 ### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistration.UserRegistration") UserRegistration
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -1981,8 +1905,6 @@ Models.HttpsApiRestShApiAURR result = await loginAndRegistration.UserRegistratio
 
 
 ### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistration.UserAuthentication") UserAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
@@ -2022,8 +1944,6 @@ Models.HttpsApiRestShApiAULR result = await loginAndRegistration.UserAuthenticat
 
 
 ### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistration.UserAuthentication") UserAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 

@@ -281,8 +281,6 @@ $advancedLogging = $client->getAdvancedLogging();
 
 ### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Info
 
 
@@ -326,8 +324,6 @@ $result = $advancedLogging->loggingInfo($key, $uid, $name, $origin, $time, $cont
 
 ### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup") loggingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Setup
 
 
@@ -361,7 +357,7 @@ $key = 'key';
 $uid = 'uid';
 $name = 'name';
 $origin = 'origin';
-$activate = true;
+$activate = false;
 $contentType = 'Content-Type';
 
 $result = $advancedLogging->loggingSetup($key, $uid, $name, $origin, $activate, $contentType);
@@ -370,8 +366,6 @@ $result = $advancedLogging->loggingSetup($key, $uid, $name, $origin, $activate, 
 
 
 ### <a name="logging_info1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo1") loggingInfo1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
@@ -403,8 +397,6 @@ $result = $advancedLogging->loggingInfo1($body, $contentType);
 
 
 ### <a name="logging_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup1") loggingSetup1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
@@ -614,15 +606,13 @@ The singleton instance of the ``` Encryption ``` class can be accessed from the 
 $encryption = $client->getEncryption();
 ```
 
-### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPI") dataAndFileEncryptionAPI
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryption") dataAndFileEncryption
 
 > Data and File Encryption API
 
 
 ```php
-function dataAndFileEncryptionAPI(
+function dataAndFileEncryption(
         $key,
         $uid,
         $data,
@@ -651,23 +641,21 @@ $key = 'key';
 $uid = 'uid';
 $data = 'data';
 $method = 'method';
-$bit = 213;
+$bit = 32;
 $contentType = 'Content-Type';
 
-$result = $encryption->dataAndFileEncryptionAPI($key, $uid, $data, $method, $bit, $contentType);
+$result = $encryption->dataAndFileEncryption($key, $uid, $data, $method, $bit, $contentType);
 
 ```
 
 
-### <a name="data_and_file_encryption_api1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPI1") dataAndFileEncryptionAPI1
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryption1") dataAndFileEncryption1
 
 > Data and File Encryption API
 
 
 ```php
-function dataAndFileEncryptionAPI1(
+function dataAndFileEncryption1(
         $body,
         $contentType)
 ```
@@ -687,7 +675,7 @@ function dataAndFileEncryptionAPI1(
 $body = new HttpsApiRestShApiSE();
 $contentType = 'Content-Type';
 
-$result = $encryption->dataAndFileEncryptionAPI1($body, $contentType);
+$result = $encryption->dataAndFileEncryption1($body, $contentType);
 
 ```
 
@@ -705,8 +693,6 @@ $cDN = $client->getCDN();
 ```
 
 ### <a name="c_dn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone") cDNPushZone
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
@@ -748,8 +734,6 @@ $result = $cDN->cDNPushZone($key, $uid, $cname, $file, $contentType);
 
 ### <a name="c_dn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone") cDNPullZone
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Pull Zone API
 
 
@@ -790,8 +774,6 @@ $result = $cDN->cDNPullZone($key, $uid, $origin, $cname, $contentType);
 
 ### <a name="c_dn_push_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone1") cDNPushZone1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Push Zone API
 
 
@@ -822,8 +804,6 @@ $result = $cDN->cDNPushZone1($body, $contentType);
 
 
 ### <a name="c_dn_pull_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone1") cDNPullZone1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
@@ -868,8 +848,6 @@ $dNS = $client->getDNS();
 
 ### <a name="d_ns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration") dNSConfiguration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -910,8 +888,6 @@ $result = $dNS->dNSConfiguration($key, $uid, $domain, $records, $contentType);
 
 ### <a name="d_ns_configuration1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration1") dNSConfiguration1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -942,8 +918,6 @@ $result = $dNS->dNSConfiguration1($body, $contentType);
 
 
 ### <a name="d_ns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation") dNSCreation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -981,8 +955,6 @@ $result = $dNS->dNSCreation($key, $uid, $domain, $contentType);
 
 
 ### <a name="d_ns_creation1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation1") dNSCreation1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -1025,15 +997,13 @@ The singleton instance of the ``` CodeObfuscation ``` class can be accessed from
 $codeObfuscation = $client->getCodeObfuscation();
 ```
 
-### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTampering") codeApplicationObfuscationAndAntiTampering
+### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTampering") obfuscationAndAntiTampering
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```php
-function codeApplicationObfuscationAndAntiTampering(
+function obfuscationAndAntiTampering(
         $key,
         $uid,
         $app,
@@ -1059,20 +1029,18 @@ $uid = 'uid';
 $app = 'app';
 $contentType = 'Content-Type';
 
-$result = $codeObfuscation->codeApplicationObfuscationAndAntiTampering($key, $uid, $app, $contentType);
+$result = $codeObfuscation->obfuscationAndAntiTampering($key, $uid, $app, $contentType);
 
 ```
 
 
-### <a name="code_application_obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTampering1") codeApplicationObfuscationAndAntiTampering1
+### <a name="obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTampering1") obfuscationAndAntiTampering1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```php
-function codeApplicationObfuscationAndAntiTampering1(
+function obfuscationAndAntiTampering1(
         $body,
         $contentType)
 ```
@@ -1092,7 +1060,7 @@ function codeApplicationObfuscationAndAntiTampering1(
 $body = new HttpsApiRestShApiSO();
 $contentType = 'Content-Type';
 
-$result = $codeObfuscation->codeApplicationObfuscationAndAntiTampering1($body, $contentType);
+$result = $codeObfuscation->obfuscationAndAntiTampering1($body, $contentType);
 
 ```
 
@@ -1111,9 +1079,7 @@ $hosting = $client->getHosting();
 
 ### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup") hostingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```php
@@ -1153,9 +1119,7 @@ $result = $hosting->hostingSetup($key, $uid, $app, $domain, $contentType);
 
 ### <a name="hosting_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup1") hostingSetup1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```php
@@ -1289,8 +1253,6 @@ $imageManipulationAndModerationAPI = $client->getImageManipulationAndModerationA
 
 ### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation") imageManipulation
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 
@@ -1330,8 +1292,6 @@ $result = $imageManipulationAndModerationAPI->imageManipulation($key, $uid, $ima
 
 
 ### <a name="image_manipulation1"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation1") imageManipulation1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
@@ -1376,8 +1336,6 @@ $verification = $client->getVerification();
 
 ### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification") userAddressVerification
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Address Verification API
 
 
@@ -1420,7 +1378,7 @@ $a = 'a';
 $sa = 'sa';
 $c = 'c';
 $s = 's';
-$z = 50;
+$z = 124;
 $contentType = 'Content-Type';
 
 $result = $verification->userAddressVerification($key, $uid, $user, $a, $sa, $c, $s, $z, $contentType);
@@ -1429,8 +1387,6 @@ $result = $verification->userAddressVerification($key, $uid, $user, $a, $sa, $c,
 
 
 ### <a name="user_address_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification1") userAddressVerification1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1462,8 +1418,6 @@ $result = $verification->userAddressVerification1($body, $contentType);
 
 
 ### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification") userVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
@@ -1505,8 +1459,6 @@ $result = $verification->userVerification($key, $uid, $user, $code, $contentType
 
 ### <a name="user_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification1") userVerification1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Verification API
 
 
@@ -1537,8 +1489,6 @@ $result = $verification->userVerification1($body, $contentType);
 
 
 ### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification") cellphoneVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1576,8 +1526,6 @@ $result = $verification->cellphoneVerification($key, $uid, $to, $contentType);
 
 
 ### <a name="cellphone_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification1") cellphoneVerification1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1622,8 +1570,6 @@ $twoFactorAuthenticationAPI = $client->getTwoFactorAuthenticationAPI();
 
 ### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse") m2FATokenResponse
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1664,8 +1610,6 @@ $result = $twoFactorAuthenticationAPI->m2FATokenResponse($key, $uid, $user, $cod
 
 ### <a name="m2_fa_token_response1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse1") m2FATokenResponse1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1696,8 +1640,6 @@ $result = $twoFactorAuthenticationAPI->m2FATokenResponse1($body, $contentType);
 
 
 ### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication") twoFactorAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1735,8 +1677,6 @@ $result = $twoFactorAuthenticationAPI->twoFactorAuthentication($key, $uid, $to, 
 
 
 ### <a name="two_factor_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication1") twoFactorAuthentication1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1781,8 +1721,6 @@ $userManagement = $client->getUserManagement();
 
 ### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo") getUserInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1823,8 +1761,6 @@ $result = $userManagement->getUserInfo($key, $uid, $user, $apiuid, $contentType)
 
 ### <a name="get_user_info1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo1") getUserInfo1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1855,8 +1791,6 @@ $result = $userManagement->getUserInfo1($body, $contentType);
 
 
 ### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser") updateUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
@@ -1904,8 +1838,6 @@ $result = $userManagement->updateUser($key, $uid, $user, $apiuid, $avatar, $cust
 
 ### <a name="update_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser1") updateUser1
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Update User API
 
 
@@ -1936,8 +1868,6 @@ $result = $userManagement->updateUser1($body, $contentType);
 
 
 ### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser") deleteUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -1978,8 +1908,6 @@ $result = $userManagement->deleteUser($api, $uid, $user, $apiuid, $contentType);
 
 
 ### <a name="delete_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser1") deleteUser1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -2024,8 +1952,6 @@ $loginAndRegistration = $client->getLoginAndRegistration();
 
 ### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration") userRegistration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Registration API
 
 
@@ -2069,8 +1995,8 @@ $user = 'user';
 $password = 'password';
 $name = 'name';
 $email = 'email';
-$phone = 50;
-$countrycode = 50;
+$phone = 215;
+$countrycode = 215;
 $address = 'address';
 $contentType = 'Content-Type';
 
@@ -2080,8 +2006,6 @@ $result = $loginAndRegistration->userRegistration($key, $uid, $user, $password, 
 
 
 ### <a name="user_registration1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration1") userRegistration1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -2113,8 +2037,6 @@ $result = $loginAndRegistration->userRegistration1($body, $contentType);
 
 
 ### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication") userAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
@@ -2155,8 +2077,6 @@ $result = $loginAndRegistration->userAuthentication($key, $uid, $user, $password
 
 
 ### <a name="user_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication1") userAuthentication1
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 

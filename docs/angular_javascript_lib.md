@@ -405,8 +405,6 @@ The singleton instance of the ``` AdvancedLogging ``` class can be accessed via 
 
 ### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Info
 
 
@@ -457,8 +455,6 @@ function loggingInfo(key, uid, name, origin, time, contentType)
 
 ### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup") loggingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Setup
 
 
@@ -488,7 +484,7 @@ function loggingSetup(key, uid, name, origin, activate, contentType)
         var uid = 'uid';
         var name = 'name';
         var origin = 'origin';
-        var activate = false;
+        var activate = true;
         var contentType = 'Content-Type';
 
 
@@ -508,8 +504,6 @@ function loggingSetup(key, uid, name, origin, activate, contentType)
 
 
 ### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
@@ -552,8 +546,6 @@ function loggingInfo(body, contentType)
 
 
 ### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup") loggingSetup
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
@@ -822,15 +814,13 @@ The singleton instance of the ``` Encryption ``` class can be accessed via Depen
 	});
 ```
 
-### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPI") dataAndFileEncryptionAPI
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryption") dataAndFileEncryption
 
 > Data and File Encryption API
 
 
 ```javascript
-function dataAndFileEncryptionAPI(key, uid, data, method, bit, contentType)
+function dataAndFileEncryption(key, uid, data, method, bit, contentType)
 ```
 #### Parameters
 
@@ -855,11 +845,11 @@ function dataAndFileEncryptionAPI(key, uid, data, method, bit, contentType)
         var uid = 'uid';
         var data = 'data';
         var method = 'method';
-        var bit = 59;
+        var bit = 132;
         var contentType = 'Content-Type';
 
 
-		var result = Encryption.dataAndFileEncryptionAPI(key, uid, data, method, bit, contentType);
+		var result = Encryption.dataAndFileEncryption(key, uid, data, method, bit, contentType);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -874,15 +864,13 @@ function dataAndFileEncryptionAPI(key, uid, data, method, bit, contentType)
 
 
 
-### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPI") dataAndFileEncryptionAPI
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryption") dataAndFileEncryption
 
 > Data and File Encryption API
 
 
 ```javascript
-function dataAndFileEncryptionAPI(body, contentType)
+function dataAndFileEncryption(body, contentType)
 ```
 #### Parameters
 
@@ -903,7 +891,7 @@ function dataAndFileEncryptionAPI(body, contentType)
         var contentType = 'Content-Type';
 
 
-		var result = Encryption.dataAndFileEncryptionAPI(body, contentType);
+		var result = Encryption.dataAndFileEncryption(body, contentType);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -932,8 +920,6 @@ The singleton instance of the ``` CDN ``` class can be accessed via Dependency I
 ```
 
 ### <a name="c_dn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone") cDNPushZone
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
@@ -983,8 +969,6 @@ function cDNPushZone(key, uid, cname, file, contentType)
 
 ### <a name="c_dn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone") cDNPullZone
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Pull Zone API
 
 
@@ -1033,8 +1017,6 @@ function cDNPullZone(key, uid, origin, cname, contentType)
 
 ### <a name="c_dn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone") cDNPushZone
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Push Zone API
 
 
@@ -1076,8 +1058,6 @@ function cDNPushZone(body, contentType)
 
 
 ### <a name="c_dn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone") cDNPullZone
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
@@ -1134,8 +1114,6 @@ The singleton instance of the ``` DNS ``` class can be accessed via Dependency I
 
 ### <a name="d_ns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration") dNSConfiguration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -1184,8 +1162,6 @@ function dNSConfiguration(key, uid, domain, records, contentType)
 
 ### <a name="d_ns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration") dNSConfiguration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -1227,8 +1203,6 @@ function dNSConfiguration(body, contentType)
 
 
 ### <a name="d_ns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation") dNSCreation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -1275,8 +1249,6 @@ function dNSCreation(key, uid, domain, contentType)
 
 
 ### <a name="d_ns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation") dNSCreation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -1331,15 +1303,13 @@ The singleton instance of the ``` CodeObfuscation ``` class can be accessed via 
 	});
 ```
 
-### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTampering") codeApplicationObfuscationAndAntiTampering
+### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTampering") obfuscationAndAntiTampering
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```javascript
-function codeApplicationObfuscationAndAntiTampering(key, uid, app, contentType)
+function obfuscationAndAntiTampering(key, uid, app, contentType)
 ```
 #### Parameters
 
@@ -1364,7 +1334,7 @@ function codeApplicationObfuscationAndAntiTampering(key, uid, app, contentType)
         var contentType = 'Content-Type';
 
 
-		var result = CodeObfuscation.codeApplicationObfuscationAndAntiTampering(key, uid, app, contentType);
+		var result = CodeObfuscation.obfuscationAndAntiTampering(key, uid, app, contentType);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1379,15 +1349,13 @@ function codeApplicationObfuscationAndAntiTampering(key, uid, app, contentType)
 
 
 
-### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTampering") codeApplicationObfuscationAndAntiTampering
+### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTampering") obfuscationAndAntiTampering
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```javascript
-function codeApplicationObfuscationAndAntiTampering(body, contentType)
+function obfuscationAndAntiTampering(body, contentType)
 ```
 #### Parameters
 
@@ -1408,7 +1376,7 @@ function codeApplicationObfuscationAndAntiTampering(body, contentType)
         var contentType = 'Content-Type';
 
 
-		var result = CodeObfuscation.codeApplicationObfuscationAndAntiTampering(body, contentType);
+		var result = CodeObfuscation.obfuscationAndAntiTampering(body, contentType);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1438,9 +1406,7 @@ The singleton instance of the ``` Hosting ``` class can be accessed via Dependen
 
 ### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup") hostingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```javascript
@@ -1488,9 +1454,7 @@ function hostingSetup(key, uid, app, domain, contentType)
 
 ### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup") hostingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```javascript
@@ -1664,8 +1628,6 @@ The singleton instance of the ``` ImageManipulationAndModerationAPI ``` class ca
 
 ### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation") imageManipulation
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 
@@ -1713,8 +1675,6 @@ function imageManipulation(key, uid, image, transform, contentType)
 
 
 ### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation") imageManipulation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
@@ -1771,8 +1731,6 @@ The singleton instance of the ``` Verification ``` class can be accessed via Dep
 
 ### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification") userAddressVerification
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Address Verification API
 
 
@@ -1808,7 +1766,7 @@ function userAddressVerification(key, uid, user, a, sa, c, s, z, contentType)
         var sa = 'sa';
         var c = 'c';
         var s = 's';
-        var z = 59;
+        var z = 132;
         var contentType = 'Content-Type';
 
 
@@ -1828,8 +1786,6 @@ function userAddressVerification(key, uid, user, a, sa, c, s, z, contentType)
 
 
 ### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification") userAddressVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1872,8 +1828,6 @@ function userAddressVerification(body, contentType)
 
 
 ### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification") userVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
@@ -1923,8 +1877,6 @@ function userVerification(key, uid, user, code, contentType)
 
 ### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification") userVerification
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Verification API
 
 
@@ -1966,8 +1918,6 @@ function userVerification(body, contentType)
 
 
 ### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification") cellphoneVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -2014,8 +1964,6 @@ function cellphoneVerification(key, uid, to, contentType)
 
 
 ### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification") cellphoneVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -2072,8 +2020,6 @@ The singleton instance of the ``` TwoFactorAuthenticationAPI ``` class can be ac
 
 ### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse") m2FATokenResponse
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -2122,8 +2068,6 @@ function m2FATokenResponse(key, uid, user, code, contentType)
 
 ### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse") m2FATokenResponse
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -2165,8 +2109,6 @@ function m2FATokenResponse(body, contentType)
 
 
 ### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication") twoFactorAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -2213,8 +2155,6 @@ function twoFactorAuthentication(key, uid, to, contentType)
 
 
 ### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication") twoFactorAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -2271,8 +2211,6 @@ The singleton instance of the ``` UserManagement ``` class can be accessed via D
 
 ### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo") getUserInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -2321,8 +2259,6 @@ function getUserInfo(key, uid, user, apiuid, contentType)
 
 ### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo") getUserInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -2364,8 +2300,6 @@ function getUserInfo(body, contentType)
 
 
 ### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser") updateUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
@@ -2419,8 +2353,6 @@ function updateUser(key, uid, user, apiuid, avatar, customInput, contentType)
 
 ### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser") updateUser
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Update User API
 
 
@@ -2462,8 +2394,6 @@ function updateUser(body, contentType)
 
 
 ### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser") deleteUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -2512,8 +2442,6 @@ function deleteUser(api, uid, user, apiuid, contentType)
 
 
 ### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser") deleteUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -2570,8 +2498,6 @@ The singleton instance of the ``` LoginAndRegistration ``` class can be accessed
 
 ### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration") userRegistration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Registration API
 
 
@@ -2607,8 +2533,8 @@ function userRegistration(key, uid, user, password, name, email, phone, countryc
         var password = 'password';
         var name = 'name';
         var email = 'email';
-        var phone = 59;
-        var countrycode = 59;
+        var phone = 132;
+        var countrycode = 132;
         var address = 'address';
         var contentType = 'Content-Type';
 
@@ -2629,8 +2555,6 @@ function userRegistration(key, uid, user, password, name, email, phone, countryc
 
 
 ### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration") userRegistration
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -2673,8 +2597,6 @@ function userRegistration(body, contentType)
 
 
 ### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication") userAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
@@ -2723,8 +2645,6 @@ function userAuthentication(key, uid, user, password, contentType)
 
 
 ### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication") userAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 

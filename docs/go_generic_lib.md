@@ -266,8 +266,6 @@ advancedLogging := advancedlogging_pkg.NewADVANCEDLOGGING()
 
 ### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingInfo") LoggingInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Info
 
 
@@ -311,8 +309,6 @@ result,_ = advancedLogging.LoggingInfo(key, uid, name, origin, time, contentType
 
 ### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingSetup") LoggingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > WAF Log Setup
 
 
@@ -345,7 +341,7 @@ key := "key"
 uid := "uid"
 name := "name"
 origin := "origin"
-activate := false
+activate := true
 contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSLR
@@ -355,8 +351,6 @@ result,_ = advancedLogging.LoggingSetup(key, uid, name, origin, activate, conten
 
 
 ### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingInfo") LoggingInfo
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
@@ -388,8 +382,6 @@ result,_ = advancedLogging.LoggingInfo(body, contentType)
 
 
 ### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingSetup") LoggingSetup
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
@@ -601,15 +593,13 @@ Factory for the ``` ENCRYPTION ``` interface can be accessed from the package en
 encryption := encryption_pkg.NewENCRYPTION()
 ```
 
-### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".encryption_pkg.DataAndFileEncryptionAPI") DataAndFileEncryptionAPI
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".encryption_pkg.DataAndFileEncryption") DataAndFileEncryption
 
 > Data and File Encryption API
 
 
 ```go
-func (me *ENCRYPTION_IMPL) DataAndFileEncryptionAPI(
+func (me *ENCRYPTION_IMPL) DataAndFileEncryption(
             key string,
             uid string,
             data string,
@@ -637,24 +627,22 @@ key := "key"
 uid := "uid"
 data := "data"
 method := "method"
-bit,_ := strconv.ParseInt("178", 10, 8)
+bit,_ := strconv.ParseInt("251", 10, 8)
 contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSER
-result,_ = encryption.DataAndFileEncryptionAPI(key, uid, data, method, bit, contentType)
+result,_ = encryption.DataAndFileEncryption(key, uid, data, method, bit, contentType)
 
 ```
 
 
-### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".encryption_pkg.DataAndFileEncryptionAPI") DataAndFileEncryptionAPI
-
-> *Tags:*  ``` Skips Authentication ``` 
+### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".encryption_pkg.DataAndFileEncryption") DataAndFileEncryption
 
 > Data and File Encryption API
 
 
 ```go
-func (me *ENCRYPTION_IMPL) DataAndFileEncryptionAPI(
+func (me *ENCRYPTION_IMPL) DataAndFileEncryption(
             body *models_pkg.HttpsApiRestShApiSE,
             contentType string)(*models_pkg.HttpsApiRestShApiSER,error)
 ```
@@ -674,7 +662,7 @@ var body *models_pkg.HttpsApiRestShApiSE
 contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSER
-result,_ = encryption.DataAndFileEncryptionAPI(body, contentType)
+result,_ = encryption.DataAndFileEncryption(body, contentType)
 
 ```
 
@@ -692,8 +680,6 @@ cDN := cdn_pkg.NewCDN()
 ```
 
 ### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPushZone") CDNPushZone
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
@@ -735,8 +721,6 @@ result,_ = cDN.CDNPushZone(key, uid, cname, file, contentType)
 
 ### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPullZone") CDNPullZone
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Pull Zone API
 
 
@@ -777,8 +761,6 @@ result,_ = cDN.CDNPullZone(key, uid, origin, cname, contentType)
 
 ### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPushZone") CDNPushZone
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > CDN Push Zone API
 
 
@@ -809,8 +791,6 @@ result,_ = cDN.CDNPushZone(body, contentType)
 
 
 ### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPullZone") CDNPullZone
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
@@ -855,8 +835,6 @@ dNS := dns_pkg.NewDNS()
 
 ### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSConfiguration") DNSConfiguration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -897,8 +875,6 @@ result,_ = dNS.DNSConfiguration(key, uid, domain, records, contentType)
 
 ### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSConfiguration") DNSConfiguration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > DNS Configuration API
 
 
@@ -929,8 +905,6 @@ result,_ = dNS.DNSConfiguration(body, contentType)
 
 
 ### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSCreation") DNSCreation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -968,8 +942,6 @@ result,_ = dNS.DNSCreation(key, uid, domain, contentType)
 
 
 ### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSCreation") DNSCreation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
@@ -1012,15 +984,13 @@ Factory for the ``` CODEOBFUSCATION ``` interface can be accessed from the packa
 codeObfuscation := codeobfuscation_pkg.NewCODEOBFUSCATION()
 ```
 
-### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".codeobfuscation_pkg.CodeApplicationObfuscationAndAntiTampering") CodeApplicationObfuscationAndAntiTampering
+### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".codeobfuscation_pkg.ObfuscationAndAntiTampering") ObfuscationAndAntiTampering
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```go
-func (me *CODEOBFUSCATION_IMPL) CodeApplicationObfuscationAndAntiTampering(
+func (me *CODEOBFUSCATION_IMPL) ObfuscationAndAntiTampering(
             key string,
             uid string,
             app string,
@@ -1046,20 +1016,18 @@ app := "app"
 contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSOR
-result,_ = codeObfuscation.CodeApplicationObfuscationAndAntiTampering(key, uid, app, contentType)
+result,_ = codeObfuscation.ObfuscationAndAntiTampering(key, uid, app, contentType)
 
 ```
 
 
-### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".codeobfuscation_pkg.CodeApplicationObfuscationAndAntiTampering") CodeApplicationObfuscationAndAntiTampering
+### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".codeobfuscation_pkg.ObfuscationAndAntiTampering") ObfuscationAndAntiTampering
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Code/Application Obfuscation and Anti-Tampering API
+> Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```go
-func (me *CODEOBFUSCATION_IMPL) CodeApplicationObfuscationAndAntiTampering(
+func (me *CODEOBFUSCATION_IMPL) ObfuscationAndAntiTampering(
             body *models_pkg.HttpsApiRestShApiSO,
             contentType string)(*models_pkg.HttpsApiRestShApiSOR,error)
 ```
@@ -1079,7 +1047,7 @@ var body *models_pkg.HttpsApiRestShApiSO
 contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSOR
-result,_ = codeObfuscation.CodeApplicationObfuscationAndAntiTampering(body, contentType)
+result,_ = codeObfuscation.ObfuscationAndAntiTampering(body, contentType)
 
 ```
 
@@ -1098,9 +1066,7 @@ hosting := hosting_pkg.NewHOSTING()
 
 ### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".hosting_pkg.HostingSetup") HostingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```go
@@ -1140,9 +1106,7 @@ result,_ = hosting.HostingSetup(key, uid, app, domain, contentType)
 
 ### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".hosting_pkg.HostingSetup") HostingSetup
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Node.JS Web APP Hosting
+> Node.JS and Static Web APP Hosting
 
 
 ```go
@@ -1277,8 +1241,6 @@ imageManipulationAndModerationAPI := imagemanipulationandmoderationapi_pkg.NewIM
 
 ### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".imagemanipulationandmoderationapi_pkg.ImageManipulation") ImageManipulation
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Image Manipulation API
 
 
@@ -1318,8 +1280,6 @@ result,_ = imageManipulationAndModerationAPI.ImageManipulation(key, uid, image, 
 
 
 ### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".imagemanipulationandmoderationapi_pkg.ImageManipulation") ImageManipulation
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
@@ -1364,8 +1324,6 @@ verification := verification_pkg.NewVERIFICATION()
 
 ### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserAddressVerification") UserAddressVerification
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Address Verification API
 
 
@@ -1407,7 +1365,7 @@ a := "a"
 sa := "sa"
 c := "c"
 s := "s"
-z,_ := strconv.ParseInt("178", 10, 8)
+z,_ := strconv.ParseInt("251", 10, 8)
 contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiVAR
@@ -1417,8 +1375,6 @@ result,_ = verification.UserAddressVerification(key, uid, user, a, sa, c, s, z, 
 
 
 ### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserAddressVerification") UserAddressVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
@@ -1450,8 +1406,6 @@ result,_ = verification.UserAddressVerification(body, contentType)
 
 
 ### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserVerification") UserVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
@@ -1493,8 +1447,6 @@ result,_ = verification.UserVerification(key, uid, user, code, contentType)
 
 ### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserVerification") UserVerification
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Verification API
 
 
@@ -1525,8 +1477,6 @@ result,_ = verification.UserVerification(body, contentType)
 
 
 ### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.CellphoneVerification") CellphoneVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1564,8 +1514,6 @@ result,_ = verification.CellphoneVerification(key, uid, to, contentType)
 
 
 ### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.CellphoneVerification") CellphoneVerification
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
@@ -1610,8 +1558,6 @@ twoFactorAuthenticationAPI := twofactorauthenticationapi_pkg.NewTWOFACTORAUTHENT
 
 ### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.M2FATokenResponse") M2FATokenResponse
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1652,8 +1598,6 @@ result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(key, uid, user, code, co
 
 ### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.M2FATokenResponse") M2FATokenResponse
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Two Factor Authentication Token Reply
 
 
@@ -1684,8 +1628,6 @@ result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(body, contentType)
 
 
 ### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.TwoFactorAuthentication") TwoFactorAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1723,8 +1665,6 @@ result,_ = twoFactorAuthenticationAPI.TwoFactorAuthentication(key, uid, to, cont
 
 
 ### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.TwoFactorAuthentication") TwoFactorAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
@@ -1769,8 +1709,6 @@ userManagement := usermanagement_pkg.NewUSERMANAGEMENT()
 
 ### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.GetUserInfo") GetUserInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1811,8 +1749,6 @@ result,_ = userManagement.GetUserInfo(key, uid, user, apiuid, contentType)
 
 ### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.GetUserInfo") GetUserInfo
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Get User Info API
 
 
@@ -1843,8 +1779,6 @@ result,_ = userManagement.GetUserInfo(body, contentType)
 
 
 ### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.UpdateUser") UpdateUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
@@ -1892,8 +1826,6 @@ result,_ = userManagement.UpdateUser(key, uid, user, apiuid, avatar, customInput
 
 ### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.UpdateUser") UpdateUser
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > Update User API
 
 
@@ -1924,8 +1856,6 @@ result,_ = userManagement.UpdateUser(body, contentType)
 
 
 ### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.DeleteUser") DeleteUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -1966,8 +1896,6 @@ result,_ = userManagement.DeleteUser(api, uid, user, apiuid, contentType)
 
 
 ### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.DeleteUser") DeleteUser
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
@@ -2012,8 +1940,6 @@ loginAndRegistration := loginandregistration_pkg.NewLOGINANDREGISTRATION()
 
 ### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserRegistration") UserRegistration
 
-> *Tags:*  ``` Skips Authentication ``` 
-
 > User Registration API
 
 
@@ -2056,8 +1982,8 @@ user := "user"
 password := "password"
 name := "name"
 email := "email"
-phone,_ := strconv.ParseInt("136", 10, 8)
-countrycode,_ := strconv.ParseInt("136", 10, 8)
+phone,_ := strconv.ParseInt("210", 10, 8)
+countrycode,_ := strconv.ParseInt("210", 10, 8)
 address := "address"
 contentType := "Content-Type"
 
@@ -2068,8 +1994,6 @@ result,_ = loginAndRegistration.UserRegistration(key, uid, user, password, name,
 
 
 ### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserRegistration") UserRegistration
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
@@ -2101,8 +2025,6 @@ result,_ = loginAndRegistration.UserRegistration(body, contentType)
 
 
 ### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserAuthentication") UserAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
@@ -2143,8 +2065,6 @@ result,_ = loginAndRegistration.UserAuthentication(key, uid, user, password, con
 
 
 ### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserAuthentication") UserAuthentication
-
-> *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
