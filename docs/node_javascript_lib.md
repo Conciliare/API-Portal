@@ -223,8 +223,8 @@ In order to setup authentication in the API client, you need the following infor
 
 | Parameter | Description |
 |-----------|-------------|
-| key | Your API Key |
-| uid | Your User ID |
+| basicAuthUserName | The username to use with basic authentication |
+| basicAuthPassword | The password to use with basic authentication |
 
 
 
@@ -234,8 +234,8 @@ API client can be initialized as following:
 const lib = require('lib');
 
 // Configuration parameters and credentials
-lib.Configuration.key = "API"; // Your API Key
-lib.Configuration.uid = "UID"; // Your User ID
+lib.Configuration.basicAuthUserName = "basicAuthUserName"; // The username to use with basic authentication
+lib.Configuration.basicAuthPassword = "basicAuthPassword"; // The password to use with basic authentication
 
 ```
 
@@ -245,31 +245,31 @@ lib.Configuration.uid = "UID"; // Your User ID
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [AdvancedLoggingController](#advanced_logging_controller)
-* [WAFDDOSProtectionController](#wafddos_protection_controller)
-* [EncryptionController](#encryption_controller)
-* [CDNController](#cdn_controller)
-* [DNSController](#dns_controller)
-* [CodeObfuscationController](#code_obfuscation_controller)
-* [HostingController](#hosting_controller)
-* [DataManipulationConversionSortingAndCompressionAPIController](#data_manipulation_conversion_sorting_and_compression_api_controller)
-* [ImageManipulationAndModerationAPIController](#image_manipulation_and_moderation_api_controller)
-* [VerificationController](#verification_controller)
-* [TwoFactorAuthenticationAPIController](#two_factor_authentication_api_controller)
-* [UserManagementController](#user_management_controller)
-* [LoginAndRegistrationController](#login_and_registration_controller)
+* [AdvancedLogging](#advanced_logging)
+* [WAFDDOSProtection](#wafddos_protection)
+* [Encryption](#encryption)
+* [CDN](#cdn)
+* [DNS](#dns)
+* [CodeObfuscation](#code_obfuscation)
+* [Hosting](#hosting)
+* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
+* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [Verification](#verification)
+* [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
+* [UserManagement](#user_management)
+* [LoginAndRegistration](#login_and_registration)
 
-## <a name="advanced_logging_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AdvancedLoggingController") AdvancedLoggingController
+## <a name="advanced_logging"></a>![Class: ](https://apidocs.io/img/class.png ".AdvancedLogging") AdvancedLogging
 
 ### Get singleton instance
 
-The singleton instance of the ``` AdvancedLoggingController ``` class can be accessed from the API Client.
+The singleton instance of the ``` AdvancedLogging ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.AdvancedLoggingController;
+var controller = lib.AdvancedLogging;
 ```
 
-### <a name="get_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSLI") getHttpsApiRestShApiSLI
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -277,7 +277,7 @@ var controller = lib.AdvancedLoggingController;
 
 
 ```javascript
-function getHttpsApiRestShApiSLI(input, callback)
+function loggingInfo(key, uid, name, origin, time, contentType, callback)
 ```
 #### Parameters
 
@@ -296,15 +296,14 @@ function getHttpsApiRestShApiSLI(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['name'] = 'name';
-        input['origin'] = 'origin';
-        input['time'] = 'time';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var name = 'name';
+    var origin = 'origin';
+    var time = 'time';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiSLI(input, function(error, response, context) {
+    controller.loggingInfo(key, uid, name, origin, time, contentType, function(error, response, context) {
 
     
     });
@@ -312,7 +311,7 @@ function getHttpsApiRestShApiSLI(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSL") getHttpsApiRestShApiSL
+### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup") loggingSetup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -320,7 +319,7 @@ function getHttpsApiRestShApiSLI(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApiSL(input, callback)
+function loggingSetup(key, uid, name, origin, activate, contentType, callback)
 ```
 #### Parameters
 
@@ -339,15 +338,14 @@ function getHttpsApiRestShApiSL(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['name'] = 'name';
-        input['origin'] = 'origin';
-        input['activate'] = false;
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var name = 'name';
+    var origin = 'origin';
+    var activate = true;
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiSL(input, function(error, response, context) {
+    controller.loggingSetup(key, uid, name, origin, activate, contentType, function(error, response, context) {
 
     
     });
@@ -355,7 +353,7 @@ function getHttpsApiRestShApiSL(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSLI") createHttpsApiRestShApiSLI
+### <a name="logging_info1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo1") loggingInfo1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -363,7 +361,7 @@ function getHttpsApiRestShApiSL(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSLI(input, callback)
+function loggingInfo1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -378,11 +376,10 @@ function createHttpsApiRestShApiSLI(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSLIModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiSLI({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiSLI(input, function(error, response, context) {
+    controller.loggingInfo1(body, contentType, function(error, response, context) {
 
     
     });
@@ -390,7 +387,7 @@ function createHttpsApiRestShApiSLI(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSL") createHttpsApiRestShApiSL
+### <a name="logging_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup1") loggingSetup1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -398,7 +395,7 @@ function createHttpsApiRestShApiSLI(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSL(input, callback)
+function loggingSetup1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -413,11 +410,10 @@ function createHttpsApiRestShApiSL(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSLModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiSL({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiSL(input, function(error, response, context) {
+    controller.loggingSetup1(body, contentType, function(error, response, context) {
 
     
     });
@@ -427,17 +423,17 @@ function createHttpsApiRestShApiSL(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtectionController") WAFDDOSProtectionController
+## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtection") WAFDDOSProtection
 
 ### Get singleton instance
 
-The singleton instance of the ``` WAFDDOSProtectionController ``` class can be accessed from the API Client.
+The singleton instance of the ``` WAFDDOSProtection ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.WAFDDOSProtectionController;
+var controller = lib.WAFDDOSProtection;
 ```
 
-### <a name="get_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSWC") getHttpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -445,7 +441,7 @@ var controller = lib.WAFDDOSProtectionController;
 
 
 ```javascript
-function getHttpsApiRestShApiSWC(input, callback)
+function httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType, callback)
 ```
 #### Parameters
 
@@ -464,15 +460,14 @@ function getHttpsApiRestShApiSWC(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'API';
-        input['uid'] = 'UID';
-        input['name'] = 'origin-name';
-        input['origin'] = 'origin.yourdomain.tld';
-        input['rule'] = 'header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does';
-        input['contentType'] = 'application/json';
+    var key = 'API';
+    var uid = 'UID';
+    var name = 'origin-name';
+    var origin = 'origin.yourdomain.tld';
+    var rule = 'header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does';
+    var contentType = 'application/json';
 
-    controller.getHttpsApiRestShApiSWC(input, function(error, response, context) {
+    controller.httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType, function(error, response, context) {
 
     
     });
@@ -480,7 +475,7 @@ function getHttpsApiRestShApiSWC(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSW") getHttpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -488,7 +483,7 @@ function getHttpsApiRestShApiSWC(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApiSW(input, callback)
+function httpsApiRestShApiSW(key, uid, origin, cname, contentType, callback)
 ```
 #### Parameters
 
@@ -506,14 +501,13 @@ function getHttpsApiRestShApiSW(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'API';
-        input['uid'] = 'UID';
-        input['origin'] = 'origin.yourdomain.tld';
-        input['cname'] = 'yourdomain.tld,www.yourdomain.tld';
-        input['contentType'] = 'application/json';
+    var key = 'API';
+    var uid = 'UID';
+    var origin = 'origin.yourdomain.tld';
+    var cname = 'yourdomain.tld,www.yourdomain.tld';
+    var contentType = 'application/json';
 
-    controller.getHttpsApiRestShApiSW(input, function(error, response, context) {
+    controller.httpsApiRestShApiSW(key, uid, origin, cname, contentType, function(error, response, context) {
 
     
     });
@@ -521,7 +515,7 @@ function getHttpsApiRestShApiSW(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSWC") createHttpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC1") httpsApiRestShApiSWC1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -529,7 +523,7 @@ function getHttpsApiRestShApiSW(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSWC(input, callback)
+function httpsApiRestShApiSWC1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -544,17 +538,16 @@ function createHttpsApiRestShApiSWC(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSWCModel({
+    var body = new HttpsApiRestShApiSWC({
   "key": "YOUR API KEY",
   "uid": "YOUR USER ID",
   "name": "WHAT YOU WISH TO NAME YOUR WAF",
   "origin": "ORIGIN YOU WISH TO PROTECT",
   "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
 });
-        input['contentType'] = 'application/json';
+    var contentType = 'application/json';
 
-    controller.createHttpsApiRestShApiSWC(input, function(error, response, context) {
+    controller.httpsApiRestShApiSWC1(body, contentType, function(error, response, context) {
 
     
     });
@@ -562,7 +555,7 @@ function createHttpsApiRestShApiSWC(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSW") createHttpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW1") httpsApiRestShApiSW1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -570,7 +563,7 @@ function createHttpsApiRestShApiSWC(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSW(input, callback)
+function httpsApiRestShApiSW1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -585,16 +578,15 @@ function createHttpsApiRestShApiSW(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSWModel({
+    var body = new HttpsApiRestShApiSW({
   "key": "YOUR API KEY",
   "uid": "YOUR USER ID",
   "origin": "ORIGIN YOU WISH TO PROTECT",
   "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
 });
-        input['contentType'] = 'application/json';
+    var contentType = 'application/json';
 
-    controller.createHttpsApiRestShApiSW(input, function(error, response, context) {
+    controller.httpsApiRestShApiSW1(body, contentType, function(error, response, context) {
 
     
     });
@@ -604,17 +596,17 @@ function createHttpsApiRestShApiSW(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="encryption_controller"></a>![Class: ](https://apidocs.io/img/class.png ".EncryptionController") EncryptionController
+## <a name="encryption"></a>![Class: ](https://apidocs.io/img/class.png ".Encryption") Encryption
 
 ### Get singleton instance
 
-The singleton instance of the ``` EncryptionController ``` class can be accessed from the API Client.
+The singleton instance of the ``` Encryption ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.EncryptionController;
+var controller = lib.Encryption;
 ```
 
-### <a name="get_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.getHttpsApiRestShApiSE") getHttpsApiRestShApiSE
+### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPI") dataAndFileEncryptionAPI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -622,7 +614,7 @@ var controller = lib.EncryptionController;
 
 
 ```javascript
-function getHttpsApiRestShApiSE(input, callback)
+function dataAndFileEncryptionAPI(key, uid, data, method, bit, contentType, callback)
 ```
 #### Parameters
 
@@ -641,15 +633,14 @@ function getHttpsApiRestShApiSE(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['data'] = 'data';
-        input['method'] = 'method';
-        input['bit'] = 6;
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var data = 'data';
+    var method = 'method';
+    var bit = 228;
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiSE(input, function(error, response, context) {
+    controller.dataAndFileEncryptionAPI(key, uid, data, method, bit, contentType, function(error, response, context) {
 
     
     });
@@ -657,7 +648,7 @@ function getHttpsApiRestShApiSE(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.createHttpsApiRestShApiSE") createHttpsApiRestShApiSE
+### <a name="data_and_file_encryption_api1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPI1") dataAndFileEncryptionAPI1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -665,7 +656,7 @@ function getHttpsApiRestShApiSE(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSE(input, callback)
+function dataAndFileEncryptionAPI1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -680,11 +671,10 @@ function createHttpsApiRestShApiSE(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSEModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiSE({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiSE(input, function(error, response, context) {
+    controller.dataAndFileEncryptionAPI1(body, contentType, function(error, response, context) {
 
     
     });
@@ -694,17 +684,17 @@ function createHttpsApiRestShApiSE(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="cdn_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CDNController") CDNController
+## <a name="cdn"></a>![Class: ](https://apidocs.io/img/class.png ".CDN") CDN
 
 ### Get singleton instance
 
-The singleton instance of the ``` CDNController ``` class can be accessed from the API Client.
+The singleton instance of the ``` CDN ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.CDNController;
+var controller = lib.CDN;
 ```
 
-### <a name="get_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiSCPush") getHttpsApiRestShApiSCPush
+### <a name="c_dn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone") cDNPushZone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -712,7 +702,7 @@ var controller = lib.CDNController;
 
 
 ```javascript
-function getHttpsApiRestShApiSCPush(input, callback)
+function cDNPushZone(key, uid, cname, file, contentType, callback)
 ```
 #### Parameters
 
@@ -730,14 +720,13 @@ function getHttpsApiRestShApiSCPush(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['cname'] = 'cname';
-        input['file'] = 'file';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var cname = 'cname';
+    var file = 'file';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiSCPush(input, function(error, response, context) {
+    controller.cDNPushZone(key, uid, cname, file, contentType, function(error, response, context) {
 
     
     });
@@ -745,7 +734,7 @@ function getHttpsApiRestShApiSCPush(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiSCPull") getHttpsApiRestShApiSCPull
+### <a name="c_dn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone") cDNPullZone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -753,7 +742,7 @@ function getHttpsApiRestShApiSCPush(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApiSCPull(input, callback)
+function cDNPullZone(key, uid, origin, cname, contentType, callback)
 ```
 #### Parameters
 
@@ -771,14 +760,13 @@ function getHttpsApiRestShApiSCPull(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['origin'] = 'origin';
-        input['cname'] = 'cname';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var origin = 'origin';
+    var cname = 'cname';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiSCPull(input, function(error, response, context) {
+    controller.cDNPullZone(key, uid, origin, cname, contentType, function(error, response, context) {
 
     
     });
@@ -786,7 +774,7 @@ function getHttpsApiRestShApiSCPull(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiSCPush") createHttpsApiRestShApiSCPush
+### <a name="c_dn_push_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone1") cDNPushZone1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -794,7 +782,7 @@ function getHttpsApiRestShApiSCPull(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSCPush(input, callback)
+function cDNPushZone1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -809,11 +797,10 @@ function createHttpsApiRestShApiSCPush(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSCPushModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiSCPush({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiSCPush(input, function(error, response, context) {
+    controller.cDNPushZone1(body, contentType, function(error, response, context) {
 
     
     });
@@ -821,7 +808,7 @@ function createHttpsApiRestShApiSCPush(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiSCPull") createHttpsApiRestShApiSCPull
+### <a name="c_dn_pull_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone1") cDNPullZone1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -829,7 +816,7 @@ function createHttpsApiRestShApiSCPush(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSCPull(input, callback)
+function cDNPullZone1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -844,11 +831,10 @@ function createHttpsApiRestShApiSCPull(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSCPullModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiSCPull({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiSCPull(input, function(error, response, context) {
+    controller.cDNPullZone1(body, contentType, function(error, response, context) {
 
     
     });
@@ -858,17 +844,17 @@ function createHttpsApiRestShApiSCPull(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="dns_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DNSController") DNSController
+## <a name="dns"></a>![Class: ](https://apidocs.io/img/class.png ".DNS") DNS
 
 ### Get singleton instance
 
-The singleton instance of the ``` DNSController ``` class can be accessed from the API Client.
+The singleton instance of the ``` DNS ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.DNSController;
+var controller = lib.DNS;
 ```
 
-### <a name="get_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiSDC") getHttpsApiRestShApiSDC
+### <a name="d_ns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration") dNSConfiguration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -876,7 +862,7 @@ var controller = lib.DNSController;
 
 
 ```javascript
-function getHttpsApiRestShApiSDC(input, callback)
+function dNSConfiguration(key, uid, domain, records, contentType, callback)
 ```
 #### Parameters
 
@@ -894,14 +880,13 @@ function getHttpsApiRestShApiSDC(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['domain'] = 'domain';
-        input['records'] = 'records';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var domain = 'domain';
+    var records = 'records';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiSDC(input, function(error, response, context) {
+    controller.dNSConfiguration(key, uid, domain, records, contentType, function(error, response, context) {
 
     
     });
@@ -909,7 +894,7 @@ function getHttpsApiRestShApiSDC(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiSDC") createHttpsApiRestShApiSDC
+### <a name="d_ns_configuration1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration1") dNSConfiguration1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -917,7 +902,7 @@ function getHttpsApiRestShApiSDC(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSDC(input, callback)
+function dNSConfiguration1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -932,11 +917,10 @@ function createHttpsApiRestShApiSDC(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSDCModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiSDC({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiSDC(input, function(error, response, context) {
+    controller.dNSConfiguration1(body, contentType, function(error, response, context) {
 
     
     });
@@ -944,7 +928,7 @@ function createHttpsApiRestShApiSDC(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiSDA") getHttpsApiRestShApiSDA
+### <a name="d_ns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation") dNSCreation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -952,7 +936,7 @@ function createHttpsApiRestShApiSDC(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApiSDA(input, callback)
+function dNSCreation(key, uid, domain, contentType, callback)
 ```
 #### Parameters
 
@@ -969,13 +953,12 @@ function getHttpsApiRestShApiSDA(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['domain'] = 'domain';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var domain = 'domain';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiSDA(input, function(error, response, context) {
+    controller.dNSCreation(key, uid, domain, contentType, function(error, response, context) {
 
     
     });
@@ -983,7 +966,7 @@ function getHttpsApiRestShApiSDA(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiSDA") createHttpsApiRestShApiSDA
+### <a name="d_ns_creation1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation1") dNSCreation1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -991,7 +974,7 @@ function getHttpsApiRestShApiSDA(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSDA(input, callback)
+function dNSCreation1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1006,11 +989,10 @@ function createHttpsApiRestShApiSDA(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSDAModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiSDA({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiSDA(input, function(error, response, context) {
+    controller.dNSCreation1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1020,17 +1002,17 @@ function createHttpsApiRestShApiSDA(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="code_obfuscation_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CodeObfuscationController") CodeObfuscationController
+## <a name="code_obfuscation"></a>![Class: ](https://apidocs.io/img/class.png ".CodeObfuscation") CodeObfuscation
 
 ### Get singleton instance
 
-The singleton instance of the ``` CodeObfuscationController ``` class can be accessed from the API Client.
+The singleton instance of the ``` CodeObfuscation ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.CodeObfuscationController;
+var controller = lib.CodeObfuscation;
 ```
 
-### <a name="get_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.getHttpsApiRestShApiSO") getHttpsApiRestShApiSO
+### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTampering") codeApplicationObfuscationAndAntiTampering
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1038,7 +1020,7 @@ var controller = lib.CodeObfuscationController;
 
 
 ```javascript
-function getHttpsApiRestShApiSO(input, callback)
+function codeApplicationObfuscationAndAntiTampering(key, uid, app, contentType, callback)
 ```
 #### Parameters
 
@@ -1055,13 +1037,12 @@ function getHttpsApiRestShApiSO(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['app'] = 'app';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var app = 'app';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiSO(input, function(error, response, context) {
+    controller.codeApplicationObfuscationAndAntiTampering(key, uid, app, contentType, function(error, response, context) {
 
     
     });
@@ -1069,7 +1050,7 @@ function getHttpsApiRestShApiSO(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.createHttpsApiRestShApiSO") createHttpsApiRestShApiSO
+### <a name="code_application_obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTampering1") codeApplicationObfuscationAndAntiTampering1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1077,7 +1058,7 @@ function getHttpsApiRestShApiSO(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSO(input, callback)
+function codeApplicationObfuscationAndAntiTampering1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1092,11 +1073,10 @@ function createHttpsApiRestShApiSO(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSOModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiSO({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiSO(input, function(error, response, context) {
+    controller.codeApplicationObfuscationAndAntiTampering1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1106,17 +1086,17 @@ function createHttpsApiRestShApiSO(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="hosting_controller"></a>![Class: ](https://apidocs.io/img/class.png ".HostingController") HostingController
+## <a name="hosting"></a>![Class: ](https://apidocs.io/img/class.png ".Hosting") Hosting
 
 ### Get singleton instance
 
-The singleton instance of the ``` HostingController ``` class can be accessed from the API Client.
+The singleton instance of the ``` Hosting ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.HostingController;
+var controller = lib.Hosting;
 ```
 
-### <a name="get_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.getHttpsApiRestShApiSH") getHttpsApiRestShApiSH
+### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup") hostingSetup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1124,7 +1104,7 @@ var controller = lib.HostingController;
 
 
 ```javascript
-function getHttpsApiRestShApiSH(input, callback)
+function hostingSetup(key, uid, app, domain, contentType, callback)
 ```
 #### Parameters
 
@@ -1142,14 +1122,13 @@ function getHttpsApiRestShApiSH(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['app'] = 'app';
-        input['domain'] = 'domain';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var app = 'app';
+    var domain = 'domain';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiSH(input, function(error, response, context) {
+    controller.hostingSetup(key, uid, app, domain, contentType, function(error, response, context) {
 
     
     });
@@ -1157,7 +1136,7 @@ function getHttpsApiRestShApiSH(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.createHttpsApiRestShApiSH") createHttpsApiRestShApiSH
+### <a name="hosting_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup1") hostingSetup1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1165,7 +1144,7 @@ function getHttpsApiRestShApiSH(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiSH(input, callback)
+function hostingSetup1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1180,11 +1159,10 @@ function createHttpsApiRestShApiSH(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiSHModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiSH({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiSH(input, function(error, response, context) {
+    controller.hostingSetup1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1194,17 +1172,17 @@ function createHttpsApiRestShApiSH(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPIController") DataManipulationConversionSortingAndCompressionAPIController
+## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
 
 ### Get singleton instance
 
-The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPIController ``` class can be accessed from the API Client.
+The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.DataManipulationConversionSortingAndCompressionAPIController;
+var controller = lib.DataManipulationConversionSortingAndCompressionAPI;
 ```
 
-### <a name="get_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.getHttpsApiRestShApiD") getHttpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD") httpsApiRestShApiD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1212,7 +1190,7 @@ var controller = lib.DataManipulationConversionSortingAndCompressionAPIControlle
 
 
 ```javascript
-function getHttpsApiRestShApiD(input, callback)
+function httpsApiRestShApiD(key, uid, user, apiuid, data, contentType, callback)
 ```
 #### Parameters
 
@@ -1231,15 +1209,14 @@ function getHttpsApiRestShApiD(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'API';
-        input['uid'] = 'UID';
-        input['user'] = 'UID';
-        input['apiuid'] = 'apiUID';
-        input['data'] = 'https://static.yourcdn.com/data.file';
-        input['contentType'] = 'application/json';
+    var key = 'API';
+    var uid = 'UID';
+    var user = 'UID';
+    var apiuid = 'apiUID';
+    var data = 'https://static.yourcdn.com/data.file';
+    var contentType = 'application/json';
 
-    controller.getHttpsApiRestShApiD(input, function(error, response, context) {
+    controller.httpsApiRestShApiD(key, uid, user, apiuid, data, contentType, function(error, response, context) {
 
     
     });
@@ -1247,7 +1224,7 @@ function getHttpsApiRestShApiD(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.createHttpsApiRestShApiD") createHttpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d1"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD1") httpsApiRestShApiD1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1255,7 +1232,7 @@ function getHttpsApiRestShApiD(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiD(input, callback)
+function httpsApiRestShApiD1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1270,8 +1247,7 @@ function createHttpsApiRestShApiD(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiDModel({
+    var body = new HttpsApiRestShApiD({
   "key": "YOUR API KEY",
   "uid": "YOUR USER ID",
   "user": "USERS EMAIL OR USERNAME",
@@ -1282,9 +1258,9 @@ function createHttpsApiRestShApiD(input, callback)
   "sorting": "SORT BY (NAME, DATE, TYPE, SIZE)",
   "compression": "COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)"
 });
-        input['contentType'] = 'application/json';
+    var contentType = 'application/json';
 
-    controller.createHttpsApiRestShApiD(input, function(error, response, context) {
+    controller.httpsApiRestShApiD1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1294,17 +1270,17 @@ function createHttpsApiRestShApiD(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPIController") ImageManipulationAndModerationAPIController
+## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
 
 ### Get singleton instance
 
-The singleton instance of the ``` ImageManipulationAndModerationAPIController ``` class can be accessed from the API Client.
+The singleton instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.ImageManipulationAndModerationAPIController;
+var controller = lib.ImageManipulationAndModerationAPI;
 ```
 
-### <a name="get_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.getHttpsApiRestShApiI") getHttpsApiRestShApiI
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation") imageManipulation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1312,7 +1288,7 @@ var controller = lib.ImageManipulationAndModerationAPIController;
 
 
 ```javascript
-function getHttpsApiRestShApiI(input, callback)
+function imageManipulation(key, uid, image, transform, contentType, callback)
 ```
 #### Parameters
 
@@ -1330,14 +1306,13 @@ function getHttpsApiRestShApiI(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['image'] = 'image';
-        input['transform'] = 'transform';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var image = 'image';
+    var transform = 'transform';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiI(input, function(error, response, context) {
+    controller.imageManipulation(key, uid, image, transform, contentType, function(error, response, context) {
 
     
     });
@@ -1345,7 +1320,7 @@ function getHttpsApiRestShApiI(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.createHttpsApiRestShApiI") createHttpsApiRestShApiI
+### <a name="image_manipulation1"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation1") imageManipulation1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1353,7 +1328,7 @@ function getHttpsApiRestShApiI(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiI(input, callback)
+function imageManipulation1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1368,11 +1343,10 @@ function createHttpsApiRestShApiI(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiIModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiI({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiI(input, function(error, response, context) {
+    controller.imageManipulation1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1382,17 +1356,17 @@ function createHttpsApiRestShApiI(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="verification_controller"></a>![Class: ](https://apidocs.io/img/class.png ".VerificationController") VerificationController
+## <a name="verification"></a>![Class: ](https://apidocs.io/img/class.png ".Verification") Verification
 
 ### Get singleton instance
 
-The singleton instance of the ``` VerificationController ``` class can be accessed from the API Client.
+The singleton instance of the ``` Verification ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.VerificationController;
+var controller = lib.Verification;
 ```
 
-### <a name="get_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVA") getHttpsApiRestShApiVA
+### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification") userAddressVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1400,7 +1374,7 @@ var controller = lib.VerificationController;
 
 
 ```javascript
-function getHttpsApiRestShApiVA(input, callback)
+function userAddressVerification(key, uid, user, a, sa, c, s, z, contentType, callback)
 ```
 #### Parameters
 
@@ -1422,18 +1396,17 @@ function getHttpsApiRestShApiVA(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['user'] = 'user';
-        input['a'] = 'a';
-        input['sa'] = 'sa';
-        input['c'] = 'c';
-        input['s'] = 's';
-        input['z'] = 6;
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var user = 'user';
+    var a = 'a';
+    var sa = 'sa';
+    var c = 'c';
+    var s = 's';
+    var z = 186;
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiVA(input, function(error, response, context) {
+    controller.userAddressVerification(key, uid, user, a, sa, c, s, z, contentType, function(error, response, context) {
 
     
     });
@@ -1441,7 +1414,7 @@ function getHttpsApiRestShApiVA(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVA") createHttpsApiRestShApiVA
+### <a name="user_address_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification1") userAddressVerification1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1449,7 +1422,7 @@ function getHttpsApiRestShApiVA(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiVA(input, callback)
+function userAddressVerification1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1464,11 +1437,10 @@ function createHttpsApiRestShApiVA(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiVAModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiVA({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiVA(input, function(error, response, context) {
+    controller.userAddressVerification1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1476,7 +1448,7 @@ function createHttpsApiRestShApiVA(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVU") getHttpsApiRestShApiVU
+### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification") userVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1484,7 +1456,7 @@ function createHttpsApiRestShApiVA(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApiVU(input, callback)
+function userVerification(key, uid, user, code, contentType, callback)
 ```
 #### Parameters
 
@@ -1502,14 +1474,13 @@ function getHttpsApiRestShApiVU(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['user'] = 'user';
-        input['code'] = 'code';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var user = 'user';
+    var code = 'code';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiVU(input, function(error, response, context) {
+    controller.userVerification(key, uid, user, code, contentType, function(error, response, context) {
 
     
     });
@@ -1517,7 +1488,7 @@ function getHttpsApiRestShApiVU(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVU") createHttpsApiRestShApiVU
+### <a name="user_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification1") userVerification1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1525,7 +1496,7 @@ function getHttpsApiRestShApiVU(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiVU(input, callback)
+function userVerification1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1540,11 +1511,10 @@ function createHttpsApiRestShApiVU(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiVUModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiVU({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiVU(input, function(error, response, context) {
+    controller.userVerification1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1552,7 +1522,7 @@ function createHttpsApiRestShApiVU(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiV") getHttpsApiRestShApiV
+### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification") cellphoneVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1560,7 +1530,7 @@ function createHttpsApiRestShApiVU(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApiV(input, callback)
+function cellphoneVerification(key, uid, to, contentType, callback)
 ```
 #### Parameters
 
@@ -1577,13 +1547,12 @@ function getHttpsApiRestShApiV(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['to'] = 'to';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var to = 'to';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiV(input, function(error, response, context) {
+    controller.cellphoneVerification(key, uid, to, contentType, function(error, response, context) {
 
     
     });
@@ -1591,7 +1560,7 @@ function getHttpsApiRestShApiV(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiV") createHttpsApiRestShApiV
+### <a name="cellphone_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification1") cellphoneVerification1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1599,7 +1568,7 @@ function getHttpsApiRestShApiV(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiV(input, callback)
+function cellphoneVerification1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1614,11 +1583,10 @@ function createHttpsApiRestShApiV(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiVModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiV({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiV(input, function(error, response, context) {
+    controller.cellphoneVerification1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1628,17 +1596,17 @@ function createHttpsApiRestShApiV(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="two_factor_authentication_api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".TwoFactorAuthenticationAPIController") TwoFactorAuthenticationAPIController
+## <a name="two_factor_authentication_api"></a>![Class: ](https://apidocs.io/img/class.png ".TwoFactorAuthenticationAPI") TwoFactorAuthenticationAPI
 
 ### Get singleton instance
 
-The singleton instance of the ``` TwoFactorAuthenticationAPIController ``` class can be accessed from the API Client.
+The singleton instance of the ``` TwoFactorAuthenticationAPI ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.TwoFactorAuthenticationAPIController;
+var controller = lib.TwoFactorAuthenticationAPI;
 ```
 
-### <a name="get_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faT") getHttpsApiRestShApi2faT
+### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse") m2FATokenResponse
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1646,7 +1614,7 @@ var controller = lib.TwoFactorAuthenticationAPIController;
 
 
 ```javascript
-function getHttpsApiRestShApi2faT(input, callback)
+function m2FATokenResponse(key, uid, user, code, contentType, callback)
 ```
 #### Parameters
 
@@ -1664,14 +1632,13 @@ function getHttpsApiRestShApi2faT(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['user'] = 'user';
-        input['code'] = 'code';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var user = 'user';
+    var code = 'code';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApi2faT(input, function(error, response, context) {
+    controller.m2FATokenResponse(key, uid, user, code, contentType, function(error, response, context) {
 
     
     });
@@ -1679,7 +1646,7 @@ function getHttpsApiRestShApi2faT(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faT") createHttpsApiRestShApi2faT
+### <a name="m2_fa_token_response1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse1") m2FATokenResponse1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1687,7 +1654,7 @@ function getHttpsApiRestShApi2faT(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApi2faT(input, callback)
+function m2FATokenResponse1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1702,11 +1669,10 @@ function createHttpsApiRestShApi2faT(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApi2faTModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApi2faT({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApi2faT(input, function(error, response, context) {
+    controller.m2FATokenResponse1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1714,7 +1680,7 @@ function createHttpsApiRestShApi2faT(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api2fa"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2fa") getHttpsApiRestShApi2fa
+### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication") twoFactorAuthentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1722,7 +1688,7 @@ function createHttpsApiRestShApi2faT(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApi2fa(input, callback)
+function twoFactorAuthentication(key, uid, to, contentType, callback)
 ```
 #### Parameters
 
@@ -1739,13 +1705,12 @@ function getHttpsApiRestShApi2fa(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['to'] = 'to';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var to = 'to';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApi2fa(input, function(error, response, context) {
+    controller.twoFactorAuthentication(key, uid, to, contentType, function(error, response, context) {
 
     
     });
@@ -1753,7 +1718,7 @@ function getHttpsApiRestShApi2fa(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api2fa"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2fa") createHttpsApiRestShApi2fa
+### <a name="two_factor_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication1") twoFactorAuthentication1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1761,7 +1726,7 @@ function getHttpsApiRestShApi2fa(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApi2fa(input, callback)
+function twoFactorAuthentication1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1776,11 +1741,10 @@ function createHttpsApiRestShApi2fa(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApi2faModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApi2fa({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApi2fa(input, function(error, response, context) {
+    controller.twoFactorAuthentication1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1790,17 +1754,17 @@ function createHttpsApiRestShApi2fa(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="user_management_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UserManagementController") UserManagementController
+## <a name="user_management"></a>![Class: ](https://apidocs.io/img/class.png ".UserManagement") UserManagement
 
 ### Get singleton instance
 
-The singleton instance of the ``` UserManagementController ``` class can be accessed from the API Client.
+The singleton instance of the ``` UserManagement ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.UserManagementController;
+var controller = lib.UserManagement;
 ```
 
-### <a name="get_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUI") getHttpsApiRestShApiUI
+### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo") getUserInfo
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1808,7 +1772,7 @@ var controller = lib.UserManagementController;
 
 
 ```javascript
-function getHttpsApiRestShApiUI(input, callback)
+function getUserInfo(key, uid, user, apiuid, contentType, callback)
 ```
 #### Parameters
 
@@ -1826,14 +1790,13 @@ function getHttpsApiRestShApiUI(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['user'] = 'user';
-        input['apiuid'] = 'apiuid';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var user = 'user';
+    var apiuid = 'apiuid';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiUI(input, function(error, response, context) {
+    controller.getUserInfo(key, uid, user, apiuid, contentType, function(error, response, context) {
 
     
     });
@@ -1841,7 +1804,7 @@ function getHttpsApiRestShApiUI(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUI") createHttpsApiRestShApiUI
+### <a name="get_user_info1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo1") getUserInfo1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1849,7 +1812,7 @@ function getHttpsApiRestShApiUI(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiUI(input, callback)
+function getUserInfo1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1864,11 +1827,10 @@ function createHttpsApiRestShApiUI(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiUIModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiUI({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiUI(input, function(error, response, context) {
+    controller.getUserInfo1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1876,7 +1838,7 @@ function createHttpsApiRestShApiUI(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUU") getHttpsApiRestShApiUU
+### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser") updateUser
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1884,7 +1846,7 @@ function createHttpsApiRestShApiUI(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApiUU(input, callback)
+function updateUser(key, uid, user, apiuid, avatar, customInput, contentType, callback)
 ```
 #### Parameters
 
@@ -1904,16 +1866,15 @@ function getHttpsApiRestShApiUU(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['user'] = 'user';
-        input['apiuid'] = 'apiuid';
-        input['avatar'] = 'avatar';
-        input['customInput'] = custom input;
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var user = 'user';
+    var apiuid = 'apiuid';
+    var avatar = 'avatar';
+    var customInput = custom input;
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiUU(input, function(error, response, context) {
+    controller.updateUser(key, uid, user, apiuid, avatar, customInput, contentType, function(error, response, context) {
 
     
     });
@@ -1921,7 +1882,7 @@ function getHttpsApiRestShApiUU(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUU") createHttpsApiRestShApiUU
+### <a name="update_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser1") updateUser1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1929,7 +1890,7 @@ function getHttpsApiRestShApiUU(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiUU(input, callback)
+function updateUser1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -1944,11 +1905,10 @@ function createHttpsApiRestShApiUU(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiUUModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiUU({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiUU(input, function(error, response, context) {
+    controller.updateUser1(body, contentType, function(error, response, context) {
 
     
     });
@@ -1956,7 +1916,7 @@ function createHttpsApiRestShApiUU(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUD") getHttpsApiRestShApiUD
+### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser") deleteUser
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1964,7 +1924,7 @@ function createHttpsApiRestShApiUU(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApiUD(input, callback)
+function deleteUser(api, uid, user, apiuid, contentType, callback)
 ```
 #### Parameters
 
@@ -1982,14 +1942,13 @@ function getHttpsApiRestShApiUD(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['api'] = 'api';
-        input['uid'] = 'uid';
-        input['user'] = 'user';
-        input['apiuid'] = 'apiuid';
-        input['contentType'] = 'Content-Type';
+    var api = 'api';
+    var uid = 'uid';
+    var user = 'user';
+    var apiuid = 'apiuid';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiUD(input, function(error, response, context) {
+    controller.deleteUser(api, uid, user, apiuid, contentType, function(error, response, context) {
 
     
     });
@@ -1997,7 +1956,7 @@ function getHttpsApiRestShApiUD(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUD") createHttpsApiRestShApiUD
+### <a name="delete_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser1") deleteUser1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2005,7 +1964,7 @@ function getHttpsApiRestShApiUD(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiUD(input, callback)
+function deleteUser1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -2020,11 +1979,10 @@ function createHttpsApiRestShApiUD(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiUDModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiUD({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiUD(input, function(error, response, context) {
+    controller.deleteUser1(body, contentType, function(error, response, context) {
 
     
     });
@@ -2034,17 +1992,17 @@ function createHttpsApiRestShApiUD(input, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="login_and_registration_controller"></a>![Class: ](https://apidocs.io/img/class.png ".LoginAndRegistrationController") LoginAndRegistrationController
+## <a name="login_and_registration"></a>![Class: ](https://apidocs.io/img/class.png ".LoginAndRegistration") LoginAndRegistration
 
 ### Get singleton instance
 
-The singleton instance of the ``` LoginAndRegistrationController ``` class can be accessed from the API Client.
+The singleton instance of the ``` LoginAndRegistration ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.LoginAndRegistrationController;
+var controller = lib.LoginAndRegistration;
 ```
 
-### <a name="get_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAUR") getHttpsApiRestShApiAUR
+### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration") userRegistration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2052,7 +2010,7 @@ var controller = lib.LoginAndRegistrationController;
 
 
 ```javascript
-function getHttpsApiRestShApiAUR(input, callback)
+function userRegistration(key, uid, user, password, name, email, phone, countrycode, address, contentType, callback)
 ```
 #### Parameters
 
@@ -2075,19 +2033,18 @@ function getHttpsApiRestShApiAUR(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['user'] = 'user';
-        input['password'] = 'password';
-        input['name'] = 'name';
-        input['email'] = 'email';
-        input['phone'] = 98;
-        input['countrycode'] = 98;
-        input['address'] = 'address';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var user = 'user';
+    var password = 'password';
+    var name = 'name';
+    var email = 'email';
+    var phone = 186;
+    var countrycode = 186;
+    var address = 'address';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiAUR(input, function(error, response, context) {
+    controller.userRegistration(key, uid, user, password, name, email, phone, countrycode, address, contentType, function(error, response, context) {
 
     
     });
@@ -2095,7 +2052,7 @@ function getHttpsApiRestShApiAUR(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAUR") createHttpsApiRestShApiAUR
+### <a name="user_registration1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration1") userRegistration1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2103,7 +2060,7 @@ function getHttpsApiRestShApiAUR(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiAUR(input, callback)
+function userRegistration1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -2118,11 +2075,10 @@ function createHttpsApiRestShApiAUR(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiAURModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiAUR({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiAUR(input, function(error, response, context) {
+    controller.userRegistration1(body, contentType, function(error, response, context) {
 
     
     });
@@ -2130,7 +2086,7 @@ function createHttpsApiRestShApiAUR(input, callback)
 
 
 
-### <a name="get_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAUL") getHttpsApiRestShApiAUL
+### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication") userAuthentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2138,7 +2094,7 @@ function createHttpsApiRestShApiAUR(input, callback)
 
 
 ```javascript
-function getHttpsApiRestShApiAUL(input, callback)
+function userAuthentication(key, uid, user, password, contentType, callback)
 ```
 #### Parameters
 
@@ -2156,14 +2112,13 @@ function getHttpsApiRestShApiAUL(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['key'] = 'key';
-        input['uid'] = 'uid';
-        input['user'] = 'user';
-        input['password'] = 'password';
-        input['contentType'] = 'Content-Type';
+    var key = 'key';
+    var uid = 'uid';
+    var user = 'user';
+    var password = 'password';
+    var contentType = 'Content-Type';
 
-    controller.getHttpsApiRestShApiAUL(input, function(error, response, context) {
+    controller.userAuthentication(key, uid, user, password, contentType, function(error, response, context) {
 
     
     });
@@ -2171,7 +2126,7 @@ function getHttpsApiRestShApiAUL(input, callback)
 
 
 
-### <a name="create_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAUL") createHttpsApiRestShApiAUL
+### <a name="user_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication1") userAuthentication1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2179,7 +2134,7 @@ function getHttpsApiRestShApiAUL(input, callback)
 
 
 ```javascript
-function createHttpsApiRestShApiAUL(input, callback)
+function userAuthentication1(body, contentType, callback)
 ```
 #### Parameters
 
@@ -2194,11 +2149,10 @@ function createHttpsApiRestShApiAUL(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['body'] = new HttpsApiRestShApiAULModel({"key":"value"});
-        input['contentType'] = 'Content-Type';
+    var body = new HttpsApiRestShApiAUL({"key":"value"});
+    var contentType = 'Content-Type';
 
-    controller.createHttpsApiRestShApiAUL(input, function(error, response, context) {
+    controller.userAuthentication1(body, contentType, function(error, response, context) {
 
     
     });

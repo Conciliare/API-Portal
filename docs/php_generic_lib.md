@@ -236,18 +236,18 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| key | Your API Key |
-| uid | Your User ID |
+| basicAuthUserName | The username to use with basic authentication |
+| basicAuthPassword | The password to use with basic authentication |
 
 
 
 API client can be initialized as following.
 
 ```php
-$key = 'API'; // Your API Key
-$uid = 'UID'; // Your User ID
+$basicAuthUserName = 'basicAuthUserName'; // The username to use with basic authentication
+$basicAuthPassword = 'basicAuthPassword'; // The password to use with basic authentication
 
-$client = new SMASHLib\SMASHClient($key, $uid);
+$client = new SMASHLib\SMASHClient($basicAuthUserName, $basicAuthPassword);
 ```
 
 
@@ -255,31 +255,31 @@ $client = new SMASHLib\SMASHClient($key, $uid);
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [AdvancedLoggingController](#advanced_logging_controller)
-* [WAFDDOSProtectionController](#wafddos_protection_controller)
-* [EncryptionController](#encryption_controller)
-* [CDNController](#cdn_controller)
-* [DNSController](#dns_controller)
-* [CodeObfuscationController](#code_obfuscation_controller)
-* [HostingController](#hosting_controller)
-* [DataManipulationConversionSortingAndCompressionAPIController](#data_manipulation_conversion_sorting_and_compression_api_controller)
-* [ImageManipulationAndModerationAPIController](#image_manipulation_and_moderation_api_controller)
-* [VerificationController](#verification_controller)
-* [TwoFactorAuthenticationAPIController](#two_factor_authentication_api_controller)
-* [UserManagementController](#user_management_controller)
-* [LoginAndRegistrationController](#login_and_registration_controller)
+* [AdvancedLogging](#advanced_logging)
+* [WAFDDOSProtection](#wafddos_protection)
+* [Encryption](#encryption)
+* [CDN](#cdn)
+* [DNS](#dns)
+* [CodeObfuscation](#code_obfuscation)
+* [Hosting](#hosting)
+* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
+* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [Verification](#verification)
+* [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
+* [UserManagement](#user_management)
+* [LoginAndRegistration](#login_and_registration)
 
-## <a name="advanced_logging_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AdvancedLoggingController") AdvancedLoggingController
+## <a name="advanced_logging"></a>![Class: ](https://apidocs.io/img/class.png ".AdvancedLogging") AdvancedLogging
 
 ### Get singleton instance
 
-The singleton instance of the ``` AdvancedLoggingController ``` class can be accessed from the API Client.
+The singleton instance of the ``` AdvancedLogging ``` class can be accessed from the API Client.
 
 ```php
 $advancedLogging = $client->getAdvancedLogging();
 ```
 
-### <a name="get_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSLI") getHttpsApiRestShApiSLI
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -287,7 +287,13 @@ $advancedLogging = $client->getAdvancedLogging();
 
 
 ```php
-function getHttpsApiRestShApiSLI($options)
+function loggingInfo(
+        $key,
+        $uid,
+        $name,
+        $origin,
+        $time,
+        $contentType)
 ```
 
 #### Parameters
@@ -307,30 +313,18 @@ function getHttpsApiRestShApiSLI($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $name = 'name';
-$collect['name'] = $name;
-
 $origin = 'origin';
-$collect['origin'] = $origin;
-
 $time = 'time';
-$collect['time'] = $time;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $advancedLogging->getHttpsApiRestShApiSLI($collect);
+$result = $advancedLogging->loggingInfo($key, $uid, $name, $origin, $time, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSL") getHttpsApiRestShApiSL
+### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup") loggingSetup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -338,7 +332,13 @@ $result = $advancedLogging->getHttpsApiRestShApiSLI($collect);
 
 
 ```php
-function getHttpsApiRestShApiSL($options)
+function loggingSetup(
+        $key,
+        $uid,
+        $name,
+        $origin,
+        $activate,
+        $contentType)
 ```
 
 #### Parameters
@@ -358,30 +358,18 @@ function getHttpsApiRestShApiSL($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $name = 'name';
-$collect['name'] = $name;
-
 $origin = 'origin';
-$collect['origin'] = $origin;
-
-$activate = false;
-$collect['activate'] = $activate;
-
+$activate = true;
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $advancedLogging->getHttpsApiRestShApiSL($collect);
+$result = $advancedLogging->loggingSetup($key, $uid, $name, $origin, $activate, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSLI") createHttpsApiRestShApiSLI
+### <a name="logging_info1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo1") loggingInfo1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -389,7 +377,9 @@ $result = $advancedLogging->getHttpsApiRestShApiSL($collect);
 
 
 ```php
-function createHttpsApiRestShApiSLI($options)
+function loggingInfo1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -404,19 +394,15 @@ function createHttpsApiRestShApiSLI($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiSLIModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiSLI();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $advancedLogging->createHttpsApiRestShApiSLI($collect);
+$result = $advancedLogging->loggingInfo1($body, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSL") createHttpsApiRestShApiSL
+### <a name="logging_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup1") loggingSetup1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -424,7 +410,9 @@ $result = $advancedLogging->createHttpsApiRestShApiSLI($collect);
 
 
 ```php
-function createHttpsApiRestShApiSL($options)
+function loggingSetup1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -439,31 +427,27 @@ function createHttpsApiRestShApiSL($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiSLModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiSL();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $advancedLogging->createHttpsApiRestShApiSL($collect);
+$result = $advancedLogging->loggingSetup1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtectionController") WAFDDOSProtectionController
+## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtection") WAFDDOSProtection
 
 ### Get singleton instance
 
-The singleton instance of the ``` WAFDDOSProtectionController ``` class can be accessed from the API Client.
+The singleton instance of the ``` WAFDDOSProtection ``` class can be accessed from the API Client.
 
 ```php
 $wAFDDOSProtection = $client->getWAFDDOSProtection();
 ```
 
-### <a name="get_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSWC") getHttpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -471,7 +455,13 @@ $wAFDDOSProtection = $client->getWAFDDOSProtection();
 
 
 ```php
-function getHttpsApiRestShApiSWC($options)
+function httpsApiRestShApiSWC(
+        $key,
+        $uid,
+        $name,
+        $origin,
+        $rule,
+        $contentType)
 ```
 
 #### Parameters
@@ -491,30 +481,18 @@ function getHttpsApiRestShApiSWC($options)
 
 ```php
 $key = 'API';
-$collect['key'] = $key;
-
 $uid = 'UID';
-$collect['uid'] = $uid;
-
 $name = 'origin-name';
-$collect['name'] = $name;
-
 $origin = 'origin.yourdomain.tld';
-$collect['origin'] = $origin;
-
 $rule = 'header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does';
-$collect['rule'] = $rule;
-
 $contentType = 'application/json';
-$collect['contentType'] = $contentType;
 
-
-$result = $wAFDDOSProtection->getHttpsApiRestShApiSWC($collect);
+$result = $wAFDDOSProtection->httpsApiRestShApiSWC($key, $uid, $name, $origin, $rule, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSW") getHttpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -522,7 +500,12 @@ $result = $wAFDDOSProtection->getHttpsApiRestShApiSWC($collect);
 
 
 ```php
-function getHttpsApiRestShApiSW($options)
+function httpsApiRestShApiSW(
+        $key,
+        $uid,
+        $origin,
+        $cname,
+        $contentType)
 ```
 
 #### Parameters
@@ -541,27 +524,17 @@ function getHttpsApiRestShApiSW($options)
 
 ```php
 $key = 'API';
-$collect['key'] = $key;
-
 $uid = 'UID';
-$collect['uid'] = $uid;
-
 $origin = 'origin.yourdomain.tld';
-$collect['origin'] = $origin;
-
 $cname = 'yourdomain.tld,www.yourdomain.tld';
-$collect['cname'] = $cname;
-
 $contentType = 'application/json';
-$collect['contentType'] = $contentType;
 
-
-$result = $wAFDDOSProtection->getHttpsApiRestShApiSW($collect);
+$result = $wAFDDOSProtection->httpsApiRestShApiSW($key, $uid, $origin, $cname, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSWC") createHttpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC1") httpsApiRestShApiSWC1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -569,7 +542,9 @@ $result = $wAFDDOSProtection->getHttpsApiRestShApiSW($collect);
 
 
 ```php
-function createHttpsApiRestShApiSWC($options)
+function httpsApiRestShApiSWC1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -586,18 +561,14 @@ function createHttpsApiRestShApiSWC($options)
 ```php
 $bodyValue = "{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}";
 $body = APIHelper::deserialize($bodyValue);
-$collect['body'] = $body;
-
 $contentType = 'application/json';
-$collect['contentType'] = $contentType;
 
-
-$result = $wAFDDOSProtection->createHttpsApiRestShApiSWC($collect);
+$result = $wAFDDOSProtection->httpsApiRestShApiSWC1($body, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSW") createHttpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW1") httpsApiRestShApiSW1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -605,7 +576,9 @@ $result = $wAFDDOSProtection->createHttpsApiRestShApiSWC($collect);
 
 
 ```php
-function createHttpsApiRestShApiSW($options)
+function httpsApiRestShApiSW1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -622,30 +595,26 @@ function createHttpsApiRestShApiSW($options)
 ```php
 $bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}";
 $body = APIHelper::deserialize($bodyValue);
-$collect['body'] = $body;
-
 $contentType = 'application/json';
-$collect['contentType'] = $contentType;
 
-
-$result = $wAFDDOSProtection->createHttpsApiRestShApiSW($collect);
+$result = $wAFDDOSProtection->httpsApiRestShApiSW1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="encryption_controller"></a>![Class: ](https://apidocs.io/img/class.png ".EncryptionController") EncryptionController
+## <a name="encryption"></a>![Class: ](https://apidocs.io/img/class.png ".Encryption") Encryption
 
 ### Get singleton instance
 
-The singleton instance of the ``` EncryptionController ``` class can be accessed from the API Client.
+The singleton instance of the ``` Encryption ``` class can be accessed from the API Client.
 
 ```php
 $encryption = $client->getEncryption();
 ```
 
-### <a name="get_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.getHttpsApiRestShApiSE") getHttpsApiRestShApiSE
+### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPI") dataAndFileEncryptionAPI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -653,7 +622,13 @@ $encryption = $client->getEncryption();
 
 
 ```php
-function getHttpsApiRestShApiSE($options)
+function dataAndFileEncryptionAPI(
+        $key,
+        $uid,
+        $data,
+        $method,
+        $bit,
+        $contentType)
 ```
 
 #### Parameters
@@ -673,30 +648,18 @@ function getHttpsApiRestShApiSE($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $data = 'data';
-$collect['data'] = $data;
-
 $method = 'method';
-$collect['method'] = $method;
-
-$bit = 34;
-$collect['bit'] = $bit;
-
+$bit = 213;
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $encryption->getHttpsApiRestShApiSE($collect);
+$result = $encryption->dataAndFileEncryptionAPI($key, $uid, $data, $method, $bit, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.createHttpsApiRestShApiSE") createHttpsApiRestShApiSE
+### <a name="data_and_file_encryption_api1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAPI1") dataAndFileEncryptionAPI1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -704,7 +667,9 @@ $result = $encryption->getHttpsApiRestShApiSE($collect);
 
 
 ```php
-function createHttpsApiRestShApiSE($options)
+function dataAndFileEncryptionAPI1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -719,31 +684,27 @@ function createHttpsApiRestShApiSE($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiSEModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiSE();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $encryption->createHttpsApiRestShApiSE($collect);
+$result = $encryption->dataAndFileEncryptionAPI1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="cdn_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CDNController") CDNController
+## <a name="cdn"></a>![Class: ](https://apidocs.io/img/class.png ".CDN") CDN
 
 ### Get singleton instance
 
-The singleton instance of the ``` CDNController ``` class can be accessed from the API Client.
+The singleton instance of the ``` CDN ``` class can be accessed from the API Client.
 
 ```php
 $cDN = $client->getCDN();
 ```
 
-### <a name="get_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiSCPush") getHttpsApiRestShApiSCPush
+### <a name="c_dn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone") cDNPushZone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -751,7 +712,12 @@ $cDN = $client->getCDN();
 
 
 ```php
-function getHttpsApiRestShApiSCPush($options)
+function cDNPushZone(
+        $key,
+        $uid,
+        $cname,
+        $file,
+        $contentType)
 ```
 
 #### Parameters
@@ -770,27 +736,17 @@ function getHttpsApiRestShApiSCPush($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $cname = 'cname';
-$collect['cname'] = $cname;
-
 $file = 'file';
-$collect['file'] = $file;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $cDN->getHttpsApiRestShApiSCPush($collect);
+$result = $cDN->cDNPushZone($key, $uid, $cname, $file, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiSCPull") getHttpsApiRestShApiSCPull
+### <a name="c_dn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone") cDNPullZone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -798,7 +754,12 @@ $result = $cDN->getHttpsApiRestShApiSCPush($collect);
 
 
 ```php
-function getHttpsApiRestShApiSCPull($options)
+function cDNPullZone(
+        $key,
+        $uid,
+        $origin,
+        $cname,
+        $contentType)
 ```
 
 #### Parameters
@@ -817,27 +778,17 @@ function getHttpsApiRestShApiSCPull($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $origin = 'origin';
-$collect['origin'] = $origin;
-
 $cname = 'cname';
-$collect['cname'] = $cname;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $cDN->getHttpsApiRestShApiSCPull($collect);
+$result = $cDN->cDNPullZone($key, $uid, $origin, $cname, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiSCPush") createHttpsApiRestShApiSCPush
+### <a name="c_dn_push_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone1") cDNPushZone1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -845,7 +796,9 @@ $result = $cDN->getHttpsApiRestShApiSCPull($collect);
 
 
 ```php
-function createHttpsApiRestShApiSCPush($options)
+function cDNPushZone1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -860,19 +813,15 @@ function createHttpsApiRestShApiSCPush($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiSCPushModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiSCPush();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $cDN->createHttpsApiRestShApiSCPush($collect);
+$result = $cDN->cDNPushZone1($body, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiSCPull") createHttpsApiRestShApiSCPull
+### <a name="c_dn_pull_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone1") cDNPullZone1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -880,7 +829,9 @@ $result = $cDN->createHttpsApiRestShApiSCPush($collect);
 
 
 ```php
-function createHttpsApiRestShApiSCPull($options)
+function cDNPullZone1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -895,31 +846,27 @@ function createHttpsApiRestShApiSCPull($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiSCPullModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiSCPull();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $cDN->createHttpsApiRestShApiSCPull($collect);
+$result = $cDN->cDNPullZone1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="dns_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DNSController") DNSController
+## <a name="dns"></a>![Class: ](https://apidocs.io/img/class.png ".DNS") DNS
 
 ### Get singleton instance
 
-The singleton instance of the ``` DNSController ``` class can be accessed from the API Client.
+The singleton instance of the ``` DNS ``` class can be accessed from the API Client.
 
 ```php
 $dNS = $client->getDNS();
 ```
 
-### <a name="get_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiSDC") getHttpsApiRestShApiSDC
+### <a name="d_ns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration") dNSConfiguration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -927,7 +874,12 @@ $dNS = $client->getDNS();
 
 
 ```php
-function getHttpsApiRestShApiSDC($options)
+function dNSConfiguration(
+        $key,
+        $uid,
+        $domain,
+        $records,
+        $contentType)
 ```
 
 #### Parameters
@@ -946,27 +898,17 @@ function getHttpsApiRestShApiSDC($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $domain = 'domain';
-$collect['domain'] = $domain;
-
 $records = 'records';
-$collect['records'] = $records;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $dNS->getHttpsApiRestShApiSDC($collect);
+$result = $dNS->dNSConfiguration($key, $uid, $domain, $records, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiSDC") createHttpsApiRestShApiSDC
+### <a name="d_ns_configuration1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration1") dNSConfiguration1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -974,7 +916,9 @@ $result = $dNS->getHttpsApiRestShApiSDC($collect);
 
 
 ```php
-function createHttpsApiRestShApiSDC($options)
+function dNSConfiguration1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -989,19 +933,15 @@ function createHttpsApiRestShApiSDC($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiSDCModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiSDC();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $dNS->createHttpsApiRestShApiSDC($collect);
+$result = $dNS->dNSConfiguration1($body, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiSDA") getHttpsApiRestShApiSDA
+### <a name="d_ns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation") dNSCreation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1009,7 +949,11 @@ $result = $dNS->createHttpsApiRestShApiSDC($collect);
 
 
 ```php
-function getHttpsApiRestShApiSDA($options)
+function dNSCreation(
+        $key,
+        $uid,
+        $domain,
+        $contentType)
 ```
 
 #### Parameters
@@ -1027,24 +971,16 @@ function getHttpsApiRestShApiSDA($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $domain = 'domain';
-$collect['domain'] = $domain;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $dNS->getHttpsApiRestShApiSDA($collect);
+$result = $dNS->dNSCreation($key, $uid, $domain, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiSDA") createHttpsApiRestShApiSDA
+### <a name="d_ns_creation1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation1") dNSCreation1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1052,7 +988,9 @@ $result = $dNS->getHttpsApiRestShApiSDA($collect);
 
 
 ```php
-function createHttpsApiRestShApiSDA($options)
+function dNSCreation1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1067,31 +1005,27 @@ function createHttpsApiRestShApiSDA($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiSDAModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiSDA();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $dNS->createHttpsApiRestShApiSDA($collect);
+$result = $dNS->dNSCreation1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="code_obfuscation_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CodeObfuscationController") CodeObfuscationController
+## <a name="code_obfuscation"></a>![Class: ](https://apidocs.io/img/class.png ".CodeObfuscation") CodeObfuscation
 
 ### Get singleton instance
 
-The singleton instance of the ``` CodeObfuscationController ``` class can be accessed from the API Client.
+The singleton instance of the ``` CodeObfuscation ``` class can be accessed from the API Client.
 
 ```php
 $codeObfuscation = $client->getCodeObfuscation();
 ```
 
-### <a name="get_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.getHttpsApiRestShApiSO") getHttpsApiRestShApiSO
+### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTampering") codeApplicationObfuscationAndAntiTampering
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1099,7 +1033,11 @@ $codeObfuscation = $client->getCodeObfuscation();
 
 
 ```php
-function getHttpsApiRestShApiSO($options)
+function codeApplicationObfuscationAndAntiTampering(
+        $key,
+        $uid,
+        $app,
+        $contentType)
 ```
 
 #### Parameters
@@ -1117,24 +1055,16 @@ function getHttpsApiRestShApiSO($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $app = 'app';
-$collect['app'] = $app;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $codeObfuscation->getHttpsApiRestShApiSO($collect);
+$result = $codeObfuscation->codeApplicationObfuscationAndAntiTampering($key, $uid, $app, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.createHttpsApiRestShApiSO") createHttpsApiRestShApiSO
+### <a name="code_application_obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.codeApplicationObfuscationAndAntiTampering1") codeApplicationObfuscationAndAntiTampering1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1142,7 +1072,9 @@ $result = $codeObfuscation->getHttpsApiRestShApiSO($collect);
 
 
 ```php
-function createHttpsApiRestShApiSO($options)
+function codeApplicationObfuscationAndAntiTampering1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1157,31 +1089,27 @@ function createHttpsApiRestShApiSO($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiSOModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiSO();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $codeObfuscation->createHttpsApiRestShApiSO($collect);
+$result = $codeObfuscation->codeApplicationObfuscationAndAntiTampering1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="hosting_controller"></a>![Class: ](https://apidocs.io/img/class.png ".HostingController") HostingController
+## <a name="hosting"></a>![Class: ](https://apidocs.io/img/class.png ".Hosting") Hosting
 
 ### Get singleton instance
 
-The singleton instance of the ``` HostingController ``` class can be accessed from the API Client.
+The singleton instance of the ``` Hosting ``` class can be accessed from the API Client.
 
 ```php
 $hosting = $client->getHosting();
 ```
 
-### <a name="get_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.getHttpsApiRestShApiSH") getHttpsApiRestShApiSH
+### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup") hostingSetup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1189,7 +1117,12 @@ $hosting = $client->getHosting();
 
 
 ```php
-function getHttpsApiRestShApiSH($options)
+function hostingSetup(
+        $key,
+        $uid,
+        $app,
+        $domain,
+        $contentType)
 ```
 
 #### Parameters
@@ -1208,27 +1141,17 @@ function getHttpsApiRestShApiSH($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $app = 'app';
-$collect['app'] = $app;
-
 $domain = 'domain';
-$collect['domain'] = $domain;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $hosting->getHttpsApiRestShApiSH($collect);
+$result = $hosting->hostingSetup($key, $uid, $app, $domain, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.createHttpsApiRestShApiSH") createHttpsApiRestShApiSH
+### <a name="hosting_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup1") hostingSetup1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1236,7 +1159,9 @@ $result = $hosting->getHttpsApiRestShApiSH($collect);
 
 
 ```php
-function createHttpsApiRestShApiSH($options)
+function hostingSetup1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1251,31 +1176,27 @@ function createHttpsApiRestShApiSH($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiSHModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiSH();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $hosting->createHttpsApiRestShApiSH($collect);
+$result = $hosting->hostingSetup1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPIController") DataManipulationConversionSortingAndCompressionAPIController
+## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
 
 ### Get singleton instance
 
-The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPIController ``` class can be accessed from the API Client.
+The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed from the API Client.
 
 ```php
 $dataManipulationConversionSortingAndCompressionAPI = $client->getDataManipulationConversionSortingAndCompressionAPI();
 ```
 
-### <a name="get_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.getHttpsApiRestShApiD") getHttpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD") httpsApiRestShApiD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1283,7 +1204,13 @@ $dataManipulationConversionSortingAndCompressionAPI = $client->getDataManipulati
 
 
 ```php
-function getHttpsApiRestShApiD($options)
+function httpsApiRestShApiD(
+        $key,
+        $uid,
+        $user,
+        $apiuid,
+        $data,
+        $contentType)
 ```
 
 #### Parameters
@@ -1303,30 +1230,18 @@ function getHttpsApiRestShApiD($options)
 
 ```php
 $key = 'API';
-$collect['key'] = $key;
-
 $uid = 'UID';
-$collect['uid'] = $uid;
-
 $user = 'UID';
-$collect['user'] = $user;
-
 $apiuid = 'apiUID';
-$collect['apiuid'] = $apiuid;
-
 $data = 'https://static.yourcdn.com/data.file';
-$collect['data'] = $data;
-
 $contentType = 'application/json';
-$collect['contentType'] = $contentType;
 
-
-$result = $dataManipulationConversionSortingAndCompressionAPI->getHttpsApiRestShApiD($collect);
+$result = $dataManipulationConversionSortingAndCompressionAPI->httpsApiRestShApiD($key, $uid, $user, $apiuid, $data, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.createHttpsApiRestShApiD") createHttpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d1"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD1") httpsApiRestShApiD1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1334,7 +1249,9 @@ $result = $dataManipulationConversionSortingAndCompressionAPI->getHttpsApiRestSh
 
 
 ```php
-function createHttpsApiRestShApiD($options)
+function httpsApiRestShApiD1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1351,30 +1268,26 @@ function createHttpsApiRestShApiD($options)
 ```php
 $bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}";
 $body = APIHelper::deserialize($bodyValue);
-$collect['body'] = $body;
-
 $contentType = 'application/json';
-$collect['contentType'] = $contentType;
 
-
-$result = $dataManipulationConversionSortingAndCompressionAPI->createHttpsApiRestShApiD($collect);
+$result = $dataManipulationConversionSortingAndCompressionAPI->httpsApiRestShApiD1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPIController") ImageManipulationAndModerationAPIController
+## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
 
 ### Get singleton instance
 
-The singleton instance of the ``` ImageManipulationAndModerationAPIController ``` class can be accessed from the API Client.
+The singleton instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed from the API Client.
 
 ```php
 $imageManipulationAndModerationAPI = $client->getImageManipulationAndModerationAPI();
 ```
 
-### <a name="get_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.getHttpsApiRestShApiI") getHttpsApiRestShApiI
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation") imageManipulation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1382,7 +1295,12 @@ $imageManipulationAndModerationAPI = $client->getImageManipulationAndModerationA
 
 
 ```php
-function getHttpsApiRestShApiI($options)
+function imageManipulation(
+        $key,
+        $uid,
+        $image,
+        $transform,
+        $contentType)
 ```
 
 #### Parameters
@@ -1401,27 +1319,17 @@ function getHttpsApiRestShApiI($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $image = 'image';
-$collect['image'] = $image;
-
 $transform = 'transform';
-$collect['transform'] = $transform;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $imageManipulationAndModerationAPI->getHttpsApiRestShApiI($collect);
+$result = $imageManipulationAndModerationAPI->imageManipulation($key, $uid, $image, $transform, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.createHttpsApiRestShApiI") createHttpsApiRestShApiI
+### <a name="image_manipulation1"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation1") imageManipulation1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1429,7 +1337,9 @@ $result = $imageManipulationAndModerationAPI->getHttpsApiRestShApiI($collect);
 
 
 ```php
-function createHttpsApiRestShApiI($options)
+function imageManipulation1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1444,31 +1354,27 @@ function createHttpsApiRestShApiI($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiIModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiI();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $imageManipulationAndModerationAPI->createHttpsApiRestShApiI($collect);
+$result = $imageManipulationAndModerationAPI->imageManipulation1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="verification_controller"></a>![Class: ](https://apidocs.io/img/class.png ".VerificationController") VerificationController
+## <a name="verification"></a>![Class: ](https://apidocs.io/img/class.png ".Verification") Verification
 
 ### Get singleton instance
 
-The singleton instance of the ``` VerificationController ``` class can be accessed from the API Client.
+The singleton instance of the ``` Verification ``` class can be accessed from the API Client.
 
 ```php
 $verification = $client->getVerification();
 ```
 
-### <a name="get_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVA") getHttpsApiRestShApiVA
+### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification") userAddressVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1476,7 +1382,16 @@ $verification = $client->getVerification();
 
 
 ```php
-function getHttpsApiRestShApiVA($options)
+function userAddressVerification(
+        $key,
+        $uid,
+        $user,
+        $a,
+        $sa,
+        $c,
+        $s,
+        $z,
+        $contentType)
 ```
 
 #### Parameters
@@ -1499,39 +1414,21 @@ function getHttpsApiRestShApiVA($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $user = 'user';
-$collect['user'] = $user;
-
 $a = 'a';
-$collect['a'] = $a;
-
 $sa = 'sa';
-$collect['sa'] = $sa;
-
 $c = 'c';
-$collect['c'] = $c;
-
 $s = 's';
-$collect['s'] = $s;
-
-$z = 125;
-$collect['z'] = $z;
-
+$z = 50;
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $verification->getHttpsApiRestShApiVA($collect);
+$result = $verification->userAddressVerification($key, $uid, $user, $a, $sa, $c, $s, $z, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVA") createHttpsApiRestShApiVA
+### <a name="user_address_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification1") userAddressVerification1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1539,7 +1436,9 @@ $result = $verification->getHttpsApiRestShApiVA($collect);
 
 
 ```php
-function createHttpsApiRestShApiVA($options)
+function userAddressVerification1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1554,19 +1453,15 @@ function createHttpsApiRestShApiVA($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiVAModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiVA();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $verification->createHttpsApiRestShApiVA($collect);
+$result = $verification->userAddressVerification1($body, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVU") getHttpsApiRestShApiVU
+### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification") userVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1574,7 +1469,12 @@ $result = $verification->createHttpsApiRestShApiVA($collect);
 
 
 ```php
-function getHttpsApiRestShApiVU($options)
+function userVerification(
+        $key,
+        $uid,
+        $user,
+        $code,
+        $contentType)
 ```
 
 #### Parameters
@@ -1593,27 +1493,17 @@ function getHttpsApiRestShApiVU($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $user = 'user';
-$collect['user'] = $user;
-
 $code = 'code';
-$collect['code'] = $code;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $verification->getHttpsApiRestShApiVU($collect);
+$result = $verification->userVerification($key, $uid, $user, $code, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVU") createHttpsApiRestShApiVU
+### <a name="user_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification1") userVerification1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1621,7 +1511,9 @@ $result = $verification->getHttpsApiRestShApiVU($collect);
 
 
 ```php
-function createHttpsApiRestShApiVU($options)
+function userVerification1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1636,19 +1528,15 @@ function createHttpsApiRestShApiVU($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiVUModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiVU();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $verification->createHttpsApiRestShApiVU($collect);
+$result = $verification->userVerification1($body, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiV") getHttpsApiRestShApiV
+### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification") cellphoneVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1656,7 +1544,11 @@ $result = $verification->createHttpsApiRestShApiVU($collect);
 
 
 ```php
-function getHttpsApiRestShApiV($options)
+function cellphoneVerification(
+        $key,
+        $uid,
+        $to,
+        $contentType)
 ```
 
 #### Parameters
@@ -1674,24 +1566,16 @@ function getHttpsApiRestShApiV($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $to = 'to';
-$collect['to'] = $to;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $verification->getHttpsApiRestShApiV($collect);
+$result = $verification->cellphoneVerification($key, $uid, $to, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiV") createHttpsApiRestShApiV
+### <a name="cellphone_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification1") cellphoneVerification1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1699,7 +1583,9 @@ $result = $verification->getHttpsApiRestShApiV($collect);
 
 
 ```php
-function createHttpsApiRestShApiV($options)
+function cellphoneVerification1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1714,31 +1600,27 @@ function createHttpsApiRestShApiV($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiVModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiV();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $verification->createHttpsApiRestShApiV($collect);
+$result = $verification->cellphoneVerification1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="two_factor_authentication_api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".TwoFactorAuthenticationAPIController") TwoFactorAuthenticationAPIController
+## <a name="two_factor_authentication_api"></a>![Class: ](https://apidocs.io/img/class.png ".TwoFactorAuthenticationAPI") TwoFactorAuthenticationAPI
 
 ### Get singleton instance
 
-The singleton instance of the ``` TwoFactorAuthenticationAPIController ``` class can be accessed from the API Client.
+The singleton instance of the ``` TwoFactorAuthenticationAPI ``` class can be accessed from the API Client.
 
 ```php
 $twoFactorAuthenticationAPI = $client->getTwoFactorAuthenticationAPI();
 ```
 
-### <a name="get_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faT") getHttpsApiRestShApi2faT
+### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse") m2FATokenResponse
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1746,7 +1628,12 @@ $twoFactorAuthenticationAPI = $client->getTwoFactorAuthenticationAPI();
 
 
 ```php
-function getHttpsApiRestShApi2faT($options)
+function m2FATokenResponse(
+        $key,
+        $uid,
+        $user,
+        $code,
+        $contentType)
 ```
 
 #### Parameters
@@ -1765,27 +1652,17 @@ function getHttpsApiRestShApi2faT($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $user = 'user';
-$collect['user'] = $user;
-
 $code = 'code';
-$collect['code'] = $code;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $twoFactorAuthenticationAPI->getHttpsApiRestShApi2faT($collect);
+$result = $twoFactorAuthenticationAPI->m2FATokenResponse($key, $uid, $user, $code, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faT") createHttpsApiRestShApi2faT
+### <a name="m2_fa_token_response1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse1") m2FATokenResponse1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1793,7 +1670,9 @@ $result = $twoFactorAuthenticationAPI->getHttpsApiRestShApi2faT($collect);
 
 
 ```php
-function createHttpsApiRestShApi2faT($options)
+function m2FATokenResponse1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1808,19 +1687,15 @@ function createHttpsApiRestShApi2faT($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApi2faTModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApi2faT();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $twoFactorAuthenticationAPI->createHttpsApiRestShApi2faT($collect);
+$result = $twoFactorAuthenticationAPI->m2FATokenResponse1($body, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api2fa"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2fa") getHttpsApiRestShApi2fa
+### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication") twoFactorAuthentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1828,7 +1703,11 @@ $result = $twoFactorAuthenticationAPI->createHttpsApiRestShApi2faT($collect);
 
 
 ```php
-function getHttpsApiRestShApi2fa($options)
+function twoFactorAuthentication(
+        $key,
+        $uid,
+        $to,
+        $contentType)
 ```
 
 #### Parameters
@@ -1846,24 +1725,16 @@ function getHttpsApiRestShApi2fa($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $to = 'to';
-$collect['to'] = $to;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $twoFactorAuthenticationAPI->getHttpsApiRestShApi2fa($collect);
+$result = $twoFactorAuthenticationAPI->twoFactorAuthentication($key, $uid, $to, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api2fa"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2fa") createHttpsApiRestShApi2fa
+### <a name="two_factor_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication1") twoFactorAuthentication1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1871,7 +1742,9 @@ $result = $twoFactorAuthenticationAPI->getHttpsApiRestShApi2fa($collect);
 
 
 ```php
-function createHttpsApiRestShApi2fa($options)
+function twoFactorAuthentication1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1886,31 +1759,27 @@ function createHttpsApiRestShApi2fa($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApi2faModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApi2fa();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $twoFactorAuthenticationAPI->createHttpsApiRestShApi2fa($collect);
+$result = $twoFactorAuthenticationAPI->twoFactorAuthentication1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="user_management_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UserManagementController") UserManagementController
+## <a name="user_management"></a>![Class: ](https://apidocs.io/img/class.png ".UserManagement") UserManagement
 
 ### Get singleton instance
 
-The singleton instance of the ``` UserManagementController ``` class can be accessed from the API Client.
+The singleton instance of the ``` UserManagement ``` class can be accessed from the API Client.
 
 ```php
 $userManagement = $client->getUserManagement();
 ```
 
-### <a name="get_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUI") getHttpsApiRestShApiUI
+### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo") getUserInfo
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1918,7 +1787,12 @@ $userManagement = $client->getUserManagement();
 
 
 ```php
-function getHttpsApiRestShApiUI($options)
+function getUserInfo(
+        $key,
+        $uid,
+        $user,
+        $apiuid,
+        $contentType)
 ```
 
 #### Parameters
@@ -1937,27 +1811,17 @@ function getHttpsApiRestShApiUI($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $user = 'user';
-$collect['user'] = $user;
-
 $apiuid = 'apiuid';
-$collect['apiuid'] = $apiuid;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $userManagement->getHttpsApiRestShApiUI($collect);
+$result = $userManagement->getUserInfo($key, $uid, $user, $apiuid, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUI") createHttpsApiRestShApiUI
+### <a name="get_user_info1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo1") getUserInfo1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1965,7 +1829,9 @@ $result = $userManagement->getHttpsApiRestShApiUI($collect);
 
 
 ```php
-function createHttpsApiRestShApiUI($options)
+function getUserInfo1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -1980,19 +1846,15 @@ function createHttpsApiRestShApiUI($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiUIModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiUI();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $userManagement->createHttpsApiRestShApiUI($collect);
+$result = $userManagement->getUserInfo1($body, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUU") getHttpsApiRestShApiUU
+### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser") updateUser
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2000,7 +1862,14 @@ $result = $userManagement->createHttpsApiRestShApiUI($collect);
 
 
 ```php
-function getHttpsApiRestShApiUU($options)
+function updateUser(
+        $key,
+        $uid,
+        $user,
+        $apiuid,
+        $avatar,
+        $customInput,
+        $contentType)
 ```
 
 #### Parameters
@@ -2021,33 +1890,19 @@ function getHttpsApiRestShApiUU($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $user = 'user';
-$collect['user'] = $user;
-
 $apiuid = 'apiuid';
-$collect['apiuid'] = $apiuid;
-
 $avatar = 'avatar';
-$collect['avatar'] = $avatar;
-
 $customInput = 'custom input';
-$collect['customInput'] = $customInput;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $userManagement->getHttpsApiRestShApiUU($collect);
+$result = $userManagement->updateUser($key, $uid, $user, $apiuid, $avatar, $customInput, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUU") createHttpsApiRestShApiUU
+### <a name="update_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser1") updateUser1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2055,7 +1910,9 @@ $result = $userManagement->getHttpsApiRestShApiUU($collect);
 
 
 ```php
-function createHttpsApiRestShApiUU($options)
+function updateUser1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -2070,19 +1927,15 @@ function createHttpsApiRestShApiUU($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiUUModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiUU();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $userManagement->createHttpsApiRestShApiUU($collect);
+$result = $userManagement->updateUser1($body, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUD") getHttpsApiRestShApiUD
+### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser") deleteUser
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2090,7 +1943,12 @@ $result = $userManagement->createHttpsApiRestShApiUU($collect);
 
 
 ```php
-function getHttpsApiRestShApiUD($options)
+function deleteUser(
+        $api,
+        $uid,
+        $user,
+        $apiuid,
+        $contentType)
 ```
 
 #### Parameters
@@ -2109,27 +1967,17 @@ function getHttpsApiRestShApiUD($options)
 
 ```php
 $api = 'api';
-$collect['api'] = $api;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $user = 'user';
-$collect['user'] = $user;
-
 $apiuid = 'apiuid';
-$collect['apiuid'] = $apiuid;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $userManagement->getHttpsApiRestShApiUD($collect);
+$result = $userManagement->deleteUser($api, $uid, $user, $apiuid, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUD") createHttpsApiRestShApiUD
+### <a name="delete_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser1") deleteUser1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2137,7 +1985,9 @@ $result = $userManagement->getHttpsApiRestShApiUD($collect);
 
 
 ```php
-function createHttpsApiRestShApiUD($options)
+function deleteUser1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -2152,31 +2002,27 @@ function createHttpsApiRestShApiUD($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiUDModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiUD();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $userManagement->createHttpsApiRestShApiUD($collect);
+$result = $userManagement->deleteUser1($body, $contentType);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="login_and_registration_controller"></a>![Class: ](https://apidocs.io/img/class.png ".LoginAndRegistrationController") LoginAndRegistrationController
+## <a name="login_and_registration"></a>![Class: ](https://apidocs.io/img/class.png ".LoginAndRegistration") LoginAndRegistration
 
 ### Get singleton instance
 
-The singleton instance of the ``` LoginAndRegistrationController ``` class can be accessed from the API Client.
+The singleton instance of the ``` LoginAndRegistration ``` class can be accessed from the API Client.
 
 ```php
 $loginAndRegistration = $client->getLoginAndRegistration();
 ```
 
-### <a name="get_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAUR") getHttpsApiRestShApiAUR
+### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration") userRegistration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2184,7 +2030,17 @@ $loginAndRegistration = $client->getLoginAndRegistration();
 
 
 ```php
-function getHttpsApiRestShApiAUR($options)
+function userRegistration(
+        $key,
+        $uid,
+        $user,
+        $password,
+        $name,
+        $email,
+        $phone,
+        $countrycode,
+        $address,
+        $contentType)
 ```
 
 #### Parameters
@@ -2208,42 +2064,22 @@ function getHttpsApiRestShApiAUR($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $user = 'user';
-$collect['user'] = $user;
-
 $password = 'password';
-$collect['password'] = $password;
-
 $name = 'name';
-$collect['name'] = $name;
-
 $email = 'email';
-$collect['email'] = $email;
-
-$phone = 84;
-$collect['phone'] = $phone;
-
-$countrycode = 84;
-$collect['countrycode'] = $countrycode;
-
+$phone = 50;
+$countrycode = 50;
 $address = 'address';
-$collect['address'] = $address;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $loginAndRegistration->getHttpsApiRestShApiAUR($collect);
+$result = $loginAndRegistration->userRegistration($key, $uid, $user, $password, $name, $email, $phone, $countrycode, $address, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAUR") createHttpsApiRestShApiAUR
+### <a name="user_registration1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration1") userRegistration1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2251,7 +2087,9 @@ $result = $loginAndRegistration->getHttpsApiRestShApiAUR($collect);
 
 
 ```php
-function createHttpsApiRestShApiAUR($options)
+function userRegistration1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -2266,19 +2104,15 @@ function createHttpsApiRestShApiAUR($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiAURModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiAUR();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $loginAndRegistration->createHttpsApiRestShApiAUR($collect);
+$result = $loginAndRegistration->userRegistration1($body, $contentType);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAUL") getHttpsApiRestShApiAUL
+### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication") userAuthentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2286,7 +2120,12 @@ $result = $loginAndRegistration->createHttpsApiRestShApiAUR($collect);
 
 
 ```php
-function getHttpsApiRestShApiAUL($options)
+function userAuthentication(
+        $key,
+        $uid,
+        $user,
+        $password,
+        $contentType)
 ```
 
 #### Parameters
@@ -2305,27 +2144,17 @@ function getHttpsApiRestShApiAUL($options)
 
 ```php
 $key = 'key';
-$collect['key'] = $key;
-
 $uid = 'uid';
-$collect['uid'] = $uid;
-
 $user = 'user';
-$collect['user'] = $user;
-
 $password = 'password';
-$collect['password'] = $password;
-
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $loginAndRegistration->getHttpsApiRestShApiAUL($collect);
+$result = $loginAndRegistration->userAuthentication($key, $uid, $user, $password, $contentType);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAUL") createHttpsApiRestShApiAUL
+### <a name="user_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication1") userAuthentication1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2333,7 +2162,9 @@ $result = $loginAndRegistration->getHttpsApiRestShApiAUL($collect);
 
 
 ```php
-function createHttpsApiRestShApiAUL($options)
+function userAuthentication1(
+        $body,
+        $contentType)
 ```
 
 #### Parameters
@@ -2348,14 +2179,10 @@ function createHttpsApiRestShApiAUL($options)
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiAULModel();
-$collect['body'] = $body;
-
+$body = new HttpsApiRestShApiAUL();
 $contentType = 'Content-Type';
-$collect['contentType'] = $contentType;
 
-
-$result = $loginAndRegistration->createHttpsApiRestShApiAUL($collect);
+$result = $loginAndRegistration->userAuthentication1($body, $contentType);
 
 ```
 

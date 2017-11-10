@@ -1,6 +1,6 @@
 # 
 
-**`API Version:`** `1.05`
+**`API Version:`** `1.07`
 
 # Introduction
 * ## Multi-use Flexible API for: 
@@ -129,14 +129,52 @@ Be sure to include your User API KEY, and UID when sending a POST or GET request
 
 
 
-## Base URL
+## Server Configuration for Base URLs
 
-The base URL for this API is `https://api.rest.sh/api`
+This section provides details on the environments available and lists down the servers in each of the environment. The default environment for this API is set to `Production` while the default server is set to `PATH`.
+### Environments
 
+An environment consists of a set of servers with base URL values. The environment can be changed programatically allowing rapid switching between different environments e.g.the user can specify a Production and Testing Environment.The available environments for this API are: 
+
+#### Production
+> Production Enviroment
+
+This environment comprises of the following servers: 
+
+| Name | Base URL | 
+|-----------|-------------|
+| PATH | https://api.rest.sh/api |
+
+#### Sandbox
+> Testing and Debugging
+
+This environment comprises of the following servers: 
+
+| Name | Base URL | 
+|-----------|-------------|
+| PATH | https://sb.rest.sh/api |
+
+#### Beta
+> Updated Nightly (May Contain Bugs)
+
+This environment comprises of the following servers: 
+
+| Name | Base URL | 
+|-----------|-------------|
+| PATH | https://b.rest.sh/api |
+
+
+
+### Base URL Parameters
+The following parameters are used by the listed base URLs:
+
+| Name | Type | Tags | Description | Default Value | 
+|------|------| ---- | ----------- | ------------- |
+| protocol | string |  ``` Optional ```  | Protocol to be used. | `"HTTPS"` |
 
 
 ## Authentication
-This API uses `custom query` parameter(s) for authentication.
+This API uses `basic authentication`.
 
 
 
@@ -146,8 +184,9 @@ The parameters required for authentication are listed below:
 
 | Parameter | Description | Example | 
 |-----------|-------------| ------- |
-| key | Your API Key | `"API"` |
-| uid | Your User ID | `"UID"` |
+| UID | Your user ID | `"UID"` |
+| secret | Your Private API Key | `"SECRET"` |
+| key | Your Public API Key | `"KEY"` |
 
 
 
@@ -228,7 +267,7 @@ Global API errors are applied across all endpoints.
 ## <a name="advanced_logging"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Advanced Logging") Advanced Logging
 
 
-### <a name="https://api.rest.sh/api/s/l/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/i") https://api.rest.sh/api/s/l/i
+### <a name="logging_info"></a>![Endpoint: ](https://apidocs.io/img/method.png "Logging Info") Logging Info
 
 
 **`GET`** `/s/l/i`
@@ -280,7 +319,7 @@ Global API errors are applied across all endpoints.
 ```
 
 
-### <a name="https://api.rest.sh/api/s/l"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l") https://api.rest.sh/api/s/l
+### <a name="logging_setup"></a>![Endpoint: ](https://apidocs.io/img/method.png "Logging Setup") Logging Setup
 
 
 **`GET`** `/s/l`
@@ -317,7 +356,7 @@ Global API errors are applied across all endpoints.
 ```
 
 
-### <a name="https://api.rest.sh/api/s/l/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/i") https://api.rest.sh/api/s/l/i
+### <a name="logging_info1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Logging Info1") Logging Info1
 
 
 **`POST`** `/s/l/i`
@@ -379,7 +418,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/l"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l") https://api.rest.sh/api/s/l
+### <a name="logging_setup1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Logging Setup1") Logging Setup1
 
 
 **`POST`** `/s/l`
@@ -506,7 +545,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/w/c"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/c") https://api.rest.sh/api/s/w/c
+### <a name="https://api.rest.sh/api/s/w/c1"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/c1") https://api.rest.sh/api/s/w/c1
 
 
 **`POST`** `/security/waf/configure`
@@ -554,7 +593,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/w"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w") https://api.rest.sh/api/s/w
+### <a name="https://api.rest.sh/api/s/w1"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w1") https://api.rest.sh/api/s/w1
 
 
 **`POST`** `/security/waf`
@@ -606,7 +645,7 @@ Raw
 ## <a name="encryption"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Encryption") Encryption
 
 
-### <a name="https://api.rest.sh/api/s/e"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/e") https://api.rest.sh/api/s/e
+### <a name="data_and_file_encryption_api"></a>![Endpoint: ](https://apidocs.io/img/method.png "Data and File Encryption API") Data and File Encryption API
 
 
 **`GET`** `/s/e`
@@ -647,7 +686,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/e"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/e") https://api.rest.sh/api/s/e
+### <a name="data_and_file_encryption_api1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Data and File Encryption API1") Data and File Encryption API1
 
 
 **`POST`** `/s/e`
@@ -704,7 +743,7 @@ Raw
 ## <a name="cdn"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "CDN") CDN
 
 
-### <a name="https://api.rest.sh/api/s/c/push"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/push") https://api.rest.sh/api/s/c/push
+### <a name="cdn_push_zone"></a>![Endpoint: ](https://apidocs.io/img/method.png "CDN Push Zone") CDN Push Zone
 
 
 **`GET`** `/s/c/push`
@@ -742,7 +781,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/c/pull"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/pull") https://api.rest.sh/api/s/c/pull
+### <a name="cdn_pull_zone"></a>![Endpoint: ](https://apidocs.io/img/method.png "CDN Pull Zone") CDN Pull Zone
 
 
 **`GET`** `/s/c/pull`
@@ -779,7 +818,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/c/push"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/push") https://api.rest.sh/api/s/c/push
+### <a name="cdn_push_zone1"></a>![Endpoint: ](https://apidocs.io/img/method.png "CDN Push Zone1") CDN Push Zone1
 
 
 **`POST`** `/s/c/push`
@@ -827,7 +866,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/c/pull"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/pull") https://api.rest.sh/api/s/c/pull
+### <a name="cdn_pull_zone1"></a>![Endpoint: ](https://apidocs.io/img/method.png "CDN Pull Zone1") CDN Pull Zone1
 
 
 **`POST`** `/s/c/pull`
@@ -879,7 +918,7 @@ Raw
 ## <a name="dns"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "DNS") DNS
 
 
-### <a name="https://api.rest.sh/api/s/d/c"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/c") https://api.rest.sh/api/s/d/c
+### <a name="dns_configuration"></a>![Endpoint: ](https://apidocs.io/img/method.png "DNS Configuration") DNS Configuration
 
 
 **`GET`** `/s/d/c`
@@ -917,7 +956,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/d/c"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/c") https://api.rest.sh/api/s/d/c
+### <a name="dns_configuration1"></a>![Endpoint: ](https://apidocs.io/img/method.png "DNS Configuration1") DNS Configuration1
 
 
 **`POST`** `/s/d/c`
@@ -965,7 +1004,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/d/a"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/a") https://api.rest.sh/api/s/d/a
+### <a name="dns_creation"></a>![Endpoint: ](https://apidocs.io/img/method.png "DNS Creation") DNS Creation
 
 
 **`GET`** `/s/d/a`
@@ -1006,7 +1045,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/d/a"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/a") https://api.rest.sh/api/s/d/a
+### <a name="dns_creation1"></a>![Endpoint: ](https://apidocs.io/img/method.png "DNS Creation1") DNS Creation1
 
 
 **`POST`** `/s/d/a`
@@ -1062,7 +1101,7 @@ Raw
 ## <a name="code_obfuscation"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Code Obfuscation") Code Obfuscation
 
 
-### <a name="https://api.rest.sh/api/s/o"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/o") https://api.rest.sh/api/s/o
+### <a name="code/application_obfuscation_and_anti_tampering"></a>![Endpoint: ](https://apidocs.io/img/method.png "Code/Application Obfuscation and Anti-Tampering") Code/Application Obfuscation and Anti-Tampering
 
 
 **`GET`** `/s/o`
@@ -1098,7 +1137,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/o"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/o") https://api.rest.sh/api/s/o
+### <a name="code/application_obfuscation_and_anti_tampering1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Code/Application Obfuscation and Anti-Tampering1") Code/Application Obfuscation and Anti-Tampering1
 
 
 **`POST`** `/s/o`
@@ -1149,7 +1188,7 @@ Raw
 ## <a name="hosting"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Hosting") Hosting
 
 
-### <a name="https://api.rest.sh/api/s/h"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/h") https://api.rest.sh/api/s/h
+### <a name="hosting_setup"></a>![Endpoint: ](https://apidocs.io/img/method.png "Hosting Setup") Hosting Setup
 
 
 **`GET`** `/s/h`
@@ -1188,7 +1227,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/s/h"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/h") https://api.rest.sh/api/s/h
+### <a name="hosting_setup1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Hosting Setup1") Hosting Setup1
 
 
 **`POST`** `/s/h`
@@ -1282,7 +1321,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/d"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/d") https://api.rest.sh/api/d
+### <a name="https://api.rest.sh/api/d1"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/d1") https://api.rest.sh/api/d1
 
 
 **`POST`** `/data`
@@ -1341,7 +1380,7 @@ Raw
 ## <a name="image_manipulation_and_moderation_api"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Image Manipulation and Moderation API") Image Manipulation and Moderation API
 
 
-### <a name="https://api.rest.sh/api/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/i") https://api.rest.sh/api/i
+### <a name="image_manipulation"></a>![Endpoint: ](https://apidocs.io/img/method.png "Image Manipulation") Image Manipulation
 
 
 **`GET`** `/i`
@@ -1381,7 +1420,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/i") https://api.rest.sh/api/i
+### <a name="image_manipulation1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Image Manipulation1") Image Manipulation1
 
 
 **`POST`** `/i`
@@ -1437,7 +1476,7 @@ Raw
 ## <a name="verification"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Verification") Verification
 
 
-### <a name="https://api.rest.sh/api/v/a"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/a") https://api.rest.sh/api/v/a
+### <a name="user_address_verification"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Address Verification") User Address Verification
 
 
 **`GET`** `/v/a`
@@ -1479,7 +1518,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/v/a"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/a") https://api.rest.sh/api/v/a
+### <a name="user_address_verification1"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Address Verification1") User Address Verification1
 
 
 **`POST`** `/v/a`
@@ -1532,7 +1571,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/v/u"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/u") https://api.rest.sh/api/v/u
+### <a name="user_verification"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Verification") User Verification
 
 
 **`GET`** `/v/u`
@@ -1570,7 +1609,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/v/u"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/u") https://api.rest.sh/api/v/u
+### <a name="user_verification1"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Verification1") User Verification1
 
 
 **`POST`** `/v/u`
@@ -1618,7 +1657,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/v"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v") https://api.rest.sh/api/v
+### <a name="cellphone_verification"></a>![Endpoint: ](https://apidocs.io/img/method.png "Cellphone Verification") Cellphone Verification
 
 
 **`GET`** `/v`
@@ -1656,7 +1695,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/v"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v") https://api.rest.sh/api/v
+### <a name="cellphone_verification1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Cellphone Verification1") Cellphone Verification1
 
 
 **`POST`** `/v`
@@ -1709,7 +1748,7 @@ Raw
 ## <a name="two_factor_authentication_api"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Two Factor Authentication API") Two Factor Authentication API
 
 
-### <a name="https://api.rest.sh/api/2fa/t"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/t") https://api.rest.sh/api/2fa/t
+### <a name="2_fa_token_response"></a>![Endpoint: ](https://apidocs.io/img/method.png "2FA Token Response") 2FA Token Response
 
 
 **`GET`** `/2fa/t`
@@ -1747,7 +1786,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/2fa/t"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/t") https://api.rest.sh/api/2fa/t
+### <a name="2_fa_token_response1"></a>![Endpoint: ](https://apidocs.io/img/method.png "2FA Token Response1") 2FA Token Response1
 
 
 **`POST`** `/2fa/t`
@@ -1795,7 +1834,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/2fa"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa") https://api.rest.sh/api/2fa
+### <a name="two_factor_authentication"></a>![Endpoint: ](https://apidocs.io/img/method.png "Two Factor Authentication") Two Factor Authentication
 
 
 **`GET`** `/2fa`
@@ -1833,7 +1872,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/2fa"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa") https://api.rest.sh/api/2fa
+### <a name="two_factor_authentication1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Two Factor Authentication1") Two Factor Authentication1
 
 
 **`POST`** `/2fa`
@@ -1887,7 +1926,7 @@ Raw
 ## <a name="user_management"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "User Management") User Management
 
 
-### <a name="https://api.rest.sh/api/u/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/i") https://api.rest.sh/api/u/i
+### <a name="get_user_info"></a>![Endpoint: ](https://apidocs.io/img/method.png "Get User Info") Get User Info
 
 
 **`GET`** `/u/i`
@@ -1944,7 +1983,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/u/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/i") https://api.rest.sh/api/u/i
+### <a name="get_user_info1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Get User Info1") Get User Info1
 
 
 **`POST`** `/u/i`
@@ -2011,7 +2050,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/u/u"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/u") https://api.rest.sh/api/u/u
+### <a name="update_user"></a>![Endpoint: ](https://apidocs.io/img/method.png "Update User") Update User
 
 
 **`GET`** `/u/u`
@@ -2057,7 +2096,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/u/u"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/u") https://api.rest.sh/api/u/u
+### <a name="update_user1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Update User1") Update User1
 
 
 **`POST`** `/u/u`
@@ -2125,7 +2164,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/u/d"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/d") https://api.rest.sh/api/u/d
+### <a name="delete_user"></a>![Endpoint: ](https://apidocs.io/img/method.png "Delete User") Delete User
 
 
 **`GET`** `/u/d`
@@ -2163,7 +2202,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/u/d"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/d") https://api.rest.sh/api/u/d
+### <a name="delete_user1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Delete User1") Delete User1
 
 
 **`POST`** `/u/d`
@@ -2216,7 +2255,7 @@ Raw
 ## <a name="login_and_registration"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Login and Registration") Login and Registration
 
 
-### <a name="https://api.rest.sh/api/a/u/r"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/r") https://api.rest.sh/api/a/u/r
+### <a name="user_registration"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Registration") User Registration
 
 
 **`GET`** `/a/u/r`
@@ -2268,7 +2307,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/a/u/r"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/r") https://api.rest.sh/api/a/u/r
+### <a name="user_registration1"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Registration1") User Registration1
 
 
 **`POST`** `/a/u/r`
@@ -2335,7 +2374,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/a/u/l"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/l") https://api.rest.sh/api/a/u/l
+### <a name="user_authentication"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Authentication") User Authentication
 
 
 **`GET`** `/a/u/l`
@@ -2388,7 +2427,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/a/u/l"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/l") https://api.rest.sh/api/a/u/l
+### <a name="user_authentication1"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Authentication1") User Authentication1
 
 
 **`POST`** `/a/u/l`
