@@ -1,6 +1,6 @@
 # 
 
-**`API Version:`** `1.02`
+**`API Version:`** `1.05`
 
 # Introduction
 * ## Multi-use Flexible API for: 
@@ -228,10 +228,10 @@ Global API errors are applied across all endpoints.
 ## <a name="advanced_logging"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Advanced Logging") Advanced Logging
 
 
-### <a name="https://api.rest.sh/api/security/logging/info"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/logging/info") https://api.rest.sh/api/security/logging/info
+### <a name="https://api.rest.sh/api/s/l/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/i") https://api.rest.sh/api/s/l/i
 
 
-**`GET`** `/security/logging/info`
+**`GET`** `/s/l/i`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -243,11 +243,11 @@ Global API errors are applied across all endpoints.
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| name | string |  ``` Required ```  | TODO: Add a parameter description | `origin-name` | 
-| origin | string |  ``` Required ```  | TODO: Add a parameter description | `origin.yourdomain.tld` | 
-| time | string |  ``` Required ```  | TODO: Add a parameter description | `01/01/0101;24:59:01` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| name | string |  ``` Required ```  | - | `origin-name` | 
+| origin | string |  ``` Required ```  | - | `origin.yourdomain.tld` | 
+| time | string |  ``` Required ```  | - | `01/01/0101;24:59:01` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -256,7 +256,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/logging/infoResponse](#https://api.rest.sh/api/security/logging/info_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/l/i/r](#https://api.rest.sh/api/s/l/i/r)**) 
 
 ```
 {
@@ -280,10 +280,10 @@ Global API errors are applied across all endpoints.
 ```
 
 
-### <a name="https://api.rest.sh/api/security/logging"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/logging") https://api.rest.sh/api/security/logging
+### <a name="https://api.rest.sh/api/s/l"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l") https://api.rest.sh/api/s/l
 
 
-**`GET`** `/security/logging`
+**`GET`** `/s/l`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -295,11 +295,11 @@ Global API errors are applied across all endpoints.
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| name | string |  ``` Required ```  | TODO: Add a parameter description | `origin-name` | 
-| origin | string |  ``` Required ```  | TODO: Add a parameter description | `origin.yourdomain.tld` | 
-| activate | boolean |  ``` Required ```  | TODO: Add a parameter description | `true` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| name | string |  ``` Required ```  | - | `origin-name` | 
+| origin | string |  ``` Required ```  | - | `origin.yourdomain.tld` | 
+| activate | boolean |  ``` Required ```  | - | `true` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -308,7 +308,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/loggingResponse](#https://api.rest.sh/api/security/logging_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/l/r](#https://api.rest.sh/api/s/l/r)**) 
 
 ```
 {
@@ -317,10 +317,10 @@ Global API errors are applied across all endpoints.
 ```
 
 
-### <a name="https://api.rest.sh/api/security/logging/info"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/logging/info") https://api.rest.sh/api/security/logging/info
+### <a name="https://api.rest.sh/api/s/l/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/i") https://api.rest.sh/api/s/l/i
 
 
-**`POST`** `/security/logging/info`
+**`POST`** `/s/l/i`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -338,7 +338,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/security/logging/infoRequest](#https://api.rest.sh/api/security/logging/info_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/l/i](#https://api.rest.sh/api/s/l/i) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -355,7 +355,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/logging/infoResponse](#https://api.rest.sh/api/security/logging/info_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/l/i/r](#https://api.rest.sh/api/s/l/i/r)**) 
 
 ```
 {
@@ -379,10 +379,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/security/logging"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/logging") https://api.rest.sh/api/security/logging
+### <a name="https://api.rest.sh/api/s/l"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l") https://api.rest.sh/api/s/l
 
 
-**`POST`** `/security/logging`
+**`POST`** `/s/l`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -400,7 +400,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/security/loggingRequest](#https://api.rest.sh/api/security/logging_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/l](#https://api.rest.sh/api/s/l) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -417,7 +417,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/loggingResponse](#https://api.rest.sh/api/security/logging_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/l/r](#https://api.rest.sh/api/s/l/r)**) 
 
 ```
 {
@@ -431,7 +431,7 @@ Raw
 ## <a name="waf_&_ddos_protection"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "WAF & DDOS Protection") WAF & DDOS Protection
 
 
-### <a name="https://api.rest.sh/api/security/waf/configure"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/waf/configure") https://api.rest.sh/api/security/waf/configure
+### <a name="https://api.rest.sh/api/s/w/c"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/c") https://api.rest.sh/api/s/w/c
 
 
 **`GET`** `/security/waf/configure`
@@ -446,11 +446,11 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| name | string |  ``` Required ```  | TODO: Add a parameter description | `origin-name` | 
-| origin | string |  ``` Required ```  | TODO: Add a parameter description | `origin.yourdomain.tld` | 
-| rule | string |  ``` Required ```  | TODO: Add a parameter description | `header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| name | string |  ``` Required ```  | - | `origin-name` | 
+| origin | string |  ``` Required ```  | - | `origin.yourdomain.tld` | 
+| rule | string |  ``` Required ```  | - | `header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -459,7 +459,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/waf/configureResponse](#https://api.rest.sh/api/security/waf/configure_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/w/c/r](#https://api.rest.sh/api/s/w/c/r)**) 
 
 ```
 {
@@ -469,7 +469,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/security/waf"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/waf") https://api.rest.sh/api/security/waf
+### <a name="https://api.rest.sh/api/s/w"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w") https://api.rest.sh/api/s/w
 
 
 **`GET`** `/security/waf`
@@ -484,10 +484,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| origin | string |  ``` Required ```  | TODO: Add a parameter description | `origin.yourdomain.tld` | 
-| cname | string |  ``` Required ```  | TODO: Add a parameter description | `yourdomain.tld,www.yourdomain.tld` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| origin | string |  ``` Required ```  | - | `origin.yourdomain.tld` | 
+| cname | string |  ``` Required ```  | - | `yourdomain.tld,www.yourdomain.tld` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -496,7 +496,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/wafResponse](#https://api.rest.sh/api/security/waf_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/w/r](#https://api.rest.sh/api/s/w/r)**) 
 
 ```
 {
@@ -506,7 +506,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/security/waf/configure"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/waf/configure") https://api.rest.sh/api/security/waf/configure
+### <a name="https://api.rest.sh/api/s/w/c"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/c") https://api.rest.sh/api/s/w/c
 
 
 **`POST`** `/security/waf/configure`
@@ -527,7 +527,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/security/waf/configureRequest](#https://api.rest.sh/api/security/waf/configure_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/w/c](#https://api.rest.sh/api/s/w/c) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -544,7 +544,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/waf/configureResponse](#https://api.rest.sh/api/security/waf/configure_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/w/c/r](#https://api.rest.sh/api/s/w/c/r)**) 
 
 ```
 {
@@ -554,7 +554,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/security/waf"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/waf") https://api.rest.sh/api/security/waf
+### <a name="https://api.rest.sh/api/s/w"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w") https://api.rest.sh/api/s/w
 
 
 **`POST`** `/security/waf`
@@ -575,7 +575,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/security/wafRequest](#https://api.rest.sh/api/security/waf_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/w](#https://api.rest.sh/api/s/w) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -591,7 +591,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/wafResponse](#https://api.rest.sh/api/security/waf_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/w/r](#https://api.rest.sh/api/s/w/r)**) 
 
 ```
 {
@@ -606,10 +606,10 @@ Raw
 ## <a name="encryption"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Encryption") Encryption
 
 
-### <a name="https://api.rest.sh/api/security/encryption"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/encryption") https://api.rest.sh/api/security/encryption
+### <a name="https://api.rest.sh/api/s/e"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/e") https://api.rest.sh/api/s/e
 
 
-**`GET`** `/security/encryption`
+**`GET`** `/s/e`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -621,11 +621,11 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| data | string |  ``` Required ```  | TODO: Add a parameter description | `DATA` | 
-| method | string |  ``` Required ```  | TODO: Add a parameter description | `DES,RSA` | 
-| bit | number |  ``` Required ```  | TODO: Add a parameter description | `4096` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| data | string |  ``` Required ```  | - | `DATA` | 
+| method | string |  ``` Required ```  | - | `DES,RSA` | 
+| bit | number |  ``` Required ```  | - | `4096` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -634,7 +634,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/encryptionResponse](#https://api.rest.sh/api/security/encryption_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/e/r](#https://api.rest.sh/api/s/e/r)**) 
 
 ```
 {
@@ -647,10 +647,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/security/encryption"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/encryption") https://api.rest.sh/api/security/encryption
+### <a name="https://api.rest.sh/api/s/e"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/e") https://api.rest.sh/api/s/e
 
 
-**`POST`** `/security/encryption`
+**`POST`** `/s/e`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -668,7 +668,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/security/encryptionRequest](#https://api.rest.sh/api/security/encryption_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/e](#https://api.rest.sh/api/s/e) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -686,7 +686,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/security/encryptionResponse](#https://api.rest.sh/api/security/encryption_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/e/r](#https://api.rest.sh/api/s/e/r)**) 
 
 ```
 {
@@ -704,10 +704,10 @@ Raw
 ## <a name="cdn"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "CDN") CDN
 
 
-### <a name="https://api.rest.sh/api/service/cdn/push"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/cdn/push") https://api.rest.sh/api/service/cdn/push
+### <a name="https://api.rest.sh/api/s/c/push"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/push") https://api.rest.sh/api/s/c/push
 
 
-**`GET`** `/service/cdn/push`
+**`GET`** `/s/c/push`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -719,10 +719,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| cname | string |  ``` Required ```  | TODO: Add a parameter description | `cdn.yourdomain.tld,cdn1.yourdomain.tld,cdn2.yourdomain.tld` | 
-| file | string |  ``` Required ```  | TODO: Add a parameter description | `static.yourdomain.tld/file.type` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| cname | string |  ``` Required ```  | - | `cdn.yourdomain.tld,cdn1.yourdomain.tld,cdn2.yourdomain.tld` | 
+| file | string |  ``` Required ```  | - | `static.yourdomain.tld/file.type` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -731,7 +731,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/cdn/pushResponse](#https://api.rest.sh/api/service/cdn/push_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/c/push/r](#https://api.rest.sh/api/s/c/push/r)**) 
 
 ```
 {
@@ -742,10 +742,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/service/cdn/pull"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/cdn/pull") https://api.rest.sh/api/service/cdn/pull
+### <a name="https://api.rest.sh/api/s/c/pull"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/pull") https://api.rest.sh/api/s/c/pull
 
 
-**`GET`** `/service/cdn/pull`
+**`GET`** `/s/c/pull`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -757,10 +757,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| origin | string |  ``` Required ```  | TODO: Add a parameter description | `origin.yourdomain.tld` | 
-| cname | string |  ``` Required ```  | TODO: Add a parameter description | `cdn.yourdomain.tld,cdn1.yourdomain.tld,cdn2.yourdomain.tld` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| origin | string |  ``` Required ```  | - | `origin.yourdomain.tld` | 
+| cname | string |  ``` Required ```  | - | `cdn.yourdomain.tld,cdn1.yourdomain.tld,cdn2.yourdomain.tld` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -769,7 +769,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/cdn/pullResponse](#https://api.rest.sh/api/service/cdn/pull_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/c/pull/r](#https://api.rest.sh/api/s/c/pull/r)**) 
 
 ```
 {
@@ -779,10 +779,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/service/cdn/push"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/cdn/push") https://api.rest.sh/api/service/cdn/push
+### <a name="https://api.rest.sh/api/s/c/push"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/push") https://api.rest.sh/api/s/c/push
 
 
-**`POST`** `/service/cdn/push`
+**`POST`** `/s/c/push`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -800,7 +800,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/service/cdn/pushRequest](#https://api.rest.sh/api/service/cdn/push_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/c/push](#https://api.rest.sh/api/s/c/push) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -816,7 +816,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/cdn/pushResponse](#https://api.rest.sh/api/service/cdn/push_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/c/push/r](#https://api.rest.sh/api/s/c/push/r)**) 
 
 ```
 {
@@ -827,10 +827,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/service/cdn/pull"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/cdn/pull") https://api.rest.sh/api/service/cdn/pull
+### <a name="https://api.rest.sh/api/s/c/pull"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/pull") https://api.rest.sh/api/s/c/pull
 
 
-**`POST`** `/service/cdn/pull`
+**`POST`** `/s/c/pull`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -848,7 +848,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/service/cdn/pullRequest](#https://api.rest.sh/api/service/cdn/pull_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/c/pull](#https://api.rest.sh/api/s/c/pull) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -864,7 +864,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/cdn/pullResponse](#https://api.rest.sh/api/service/cdn/pull_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/c/pull/r](#https://api.rest.sh/api/s/c/pull/r)**) 
 
 ```
 {
@@ -879,10 +879,10 @@ Raw
 ## <a name="dns"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "DNS") DNS
 
 
-### <a name="https://api.rest.sh/api/service/dns/configure"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/dns/configure") https://api.rest.sh/api/service/dns/configure
+### <a name="https://api.rest.sh/api/s/d/c"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/c") https://api.rest.sh/api/s/d/c
 
 
-**`GET`** `/service/dns/configure`
+**`GET`** `/s/d/c`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -894,10 +894,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| domain | string |  ``` Required ```  | TODO: Add a parameter description | `yourdomain.tld` | 
-| records | string |  ``` Required ```  | TODO: Add a parameter description | `set:root:a:127.0.0.1,set:www:a:127.0.0.1,set:cdn:cname:cname.domain.com` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| domain | string |  ``` Required ```  | - | `yourdomain.tld` | 
+| records | string |  ``` Required ```  | - | `set:root:a:127.0.0.1,set:www:a:127.0.0.1,set:cdn:cname:cname.domain.com` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -906,7 +906,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/dns/configureResponse](#https://api.rest.sh/api/service/dns/configure_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/d/c/r](#https://api.rest.sh/api/s/d/c/r)**) 
 
 ```
 {
@@ -917,10 +917,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/service/dns/configure"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/dns/configure") https://api.rest.sh/api/service/dns/configure
+### <a name="https://api.rest.sh/api/s/d/c"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/c") https://api.rest.sh/api/s/d/c
 
 
-**`POST`** `/service/dns/configure`
+**`POST`** `/s/d/c`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -938,7 +938,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/service/dns/configureRequest](#https://api.rest.sh/api/service/dns/configure_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/d/c](#https://api.rest.sh/api/s/d/c) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -954,7 +954,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/dns/configureResponse](#https://api.rest.sh/api/service/dns/configure_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/d/c/r](#https://api.rest.sh/api/s/d/c/r)**) 
 
 ```
 {
@@ -965,10 +965,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/service/dns/add"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/dns/add") https://api.rest.sh/api/service/dns/add
+### <a name="https://api.rest.sh/api/s/d/a"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/a") https://api.rest.sh/api/s/d/a
 
 
-**`GET`** `/service/dns/add`
+**`GET`** `/s/d/a`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -980,9 +980,9 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| domain | string |  ``` Required ```  | TODO: Add a parameter description | `yourdomain.tld,seconddomain.tld` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| domain | string |  ``` Required ```  | - | `yourdomain.tld,seconddomain.tld` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -991,7 +991,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/dns/addResponse](#https://api.rest.sh/api/service/dns/add_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/d/a/r](#https://api.rest.sh/api/s/d/a/r)**) 
 
 ```
 {
@@ -1006,10 +1006,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/service/dns/add"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/dns/add") https://api.rest.sh/api/service/dns/add
+### <a name="https://api.rest.sh/api/s/d/a"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/a") https://api.rest.sh/api/s/d/a
 
 
-**`POST`** `/service/dns/add`
+**`POST`** `/s/d/a`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1027,7 +1027,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/service/dns/addRequest](#https://api.rest.sh/api/service/dns/add_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/d/a](#https://api.rest.sh/api/s/d/a) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1042,7 +1042,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/dns/addResponse](#https://api.rest.sh/api/service/dns/add_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/d/a/r](#https://api.rest.sh/api/s/d/a/r)**) 
 
 ```
 {
@@ -1062,10 +1062,10 @@ Raw
 ## <a name="code_obfuscation"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Code Obfuscation") Code Obfuscation
 
 
-### <a name="https://api.rest.sh/api/service/obfuscation"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/obfuscation") https://api.rest.sh/api/service/obfuscation
+### <a name="https://api.rest.sh/api/s/o"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/o") https://api.rest.sh/api/s/o
 
 
-**`GET`** `/service/obfuscation`
+**`GET`** `/s/o`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1077,9 +1077,9 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| app | string |  ``` Required ```  | TODO: Add a parameter description | `git://app.git` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| app | string |  ``` Required ```  | - | `git://app.git` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1088,7 +1088,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/obfuscationResponse](#https://api.rest.sh/api/service/obfuscation_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/o/r](#https://api.rest.sh/api/s/o/r)**) 
 
 ```
 {
@@ -1098,10 +1098,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/service/obfuscation"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/obfuscation") https://api.rest.sh/api/service/obfuscation
+### <a name="https://api.rest.sh/api/s/o"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/o") https://api.rest.sh/api/s/o
 
 
-**`POST`** `/service/obfuscation`
+**`POST`** `/s/o`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1119,7 +1119,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/service/obfuscationRequest](#https://api.rest.sh/api/service/obfuscation_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/o](#https://api.rest.sh/api/s/o) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1134,7 +1134,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/obfuscationResponse](#https://api.rest.sh/api/service/obfuscation_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/o/r](#https://api.rest.sh/api/s/o/r)**) 
 
 ```
 {
@@ -1149,10 +1149,10 @@ Raw
 ## <a name="hosting"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Hosting") Hosting
 
 
-### <a name="https://api.rest.sh/api/service/hosting"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/hosting") https://api.rest.sh/api/service/hosting
+### <a name="https://api.rest.sh/api/s/h"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/h") https://api.rest.sh/api/s/h
 
 
-**`GET`** `/service/hosting`
+**`GET`** `/s/h`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1164,10 +1164,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| app | string |  ``` Required ```  | TODO: Add a parameter description | `git://app.git` | 
-| domain | string |  ``` Required ```  | TODO: Add a parameter description | `yourdomain.tld,seconddomain.tld` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| app | string |  ``` Required ```  | - | `git://app.git` | 
+| domain | string |  ``` Required ```  | - | `yourdomain.tld,seconddomain.tld` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1176,7 +1176,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/hostingResponse](#https://api.rest.sh/api/service/hosting_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/h/r](#https://api.rest.sh/api/s/h/r)**) 
 
 ```
 {
@@ -1188,10 +1188,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/service/hosting"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/hosting") https://api.rest.sh/api/service/hosting
+### <a name="https://api.rest.sh/api/s/h"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/h") https://api.rest.sh/api/s/h
 
 
-**`POST`** `/service/hosting`
+**`POST`** `/s/h`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1209,7 +1209,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/service/hostingRequest](#https://api.rest.sh/api/service/hosting_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/s/h](#https://api.rest.sh/api/s/h) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1225,7 +1225,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/service/hostingResponse](#https://api.rest.sh/api/service/hosting_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/s/h/r](#https://api.rest.sh/api/s/h/r)**) 
 
 ```
 {
@@ -1242,7 +1242,7 @@ Raw
 ## <a name="data_manipulation,_conversion,_sorting,_and_compression_api"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Data Manipulation, Conversion, Sorting, and Compression API") Data Manipulation, Conversion, Sorting, and Compression API
 
 
-### <a name="https://api.rest.sh/api/data"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/data") https://api.rest.sh/api/data
+### <a name="https://api.rest.sh/api/d"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/d") https://api.rest.sh/api/d
 
 
 **`GET`** `/data`
@@ -1257,11 +1257,11 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| user | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| apiuid | string |  ``` Required ```  | TODO: Add a parameter description | `apiUID` | 
-| data | string |  ``` Required ```  | TODO: Add a parameter description | `https://static.yourcdn.com/data.file` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| user | string |  ``` Required ```  | - | `UID` | 
+| apiuid | string |  ``` Required ```  | - | `apiUID` | 
+| data | string |  ``` Required ```  | - | `https://static.yourcdn.com/data.file` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1270,7 +1270,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/dataResponse](#https://api.rest.sh/api/data_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/d/r](#https://api.rest.sh/api/d/r)**) 
 
 ```
 {
@@ -1282,7 +1282,7 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/data"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/data") https://api.rest.sh/api/data
+### <a name="https://api.rest.sh/api/d"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/d") https://api.rest.sh/api/d
 
 
 **`POST`** `/data`
@@ -1303,7 +1303,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/dataRequest](#https://api.rest.sh/api/data_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/d](#https://api.rest.sh/api/d) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1324,7 +1324,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/dataResponse](#https://api.rest.sh/api/data_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/d/r](#https://api.rest.sh/api/d/r)**) 
 
 ```
 {
@@ -1341,10 +1341,10 @@ Raw
 ## <a name="image_manipulation_and_moderation_api"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Image Manipulation and Moderation API") Image Manipulation and Moderation API
 
 
-### <a name="https://api.rest.sh/api/image"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/image") https://api.rest.sh/api/image
+### <a name="https://api.rest.sh/api/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/i") https://api.rest.sh/api/i
 
 
-**`GET`** `/image`
+**`GET`** `/i`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1356,10 +1356,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| image | string |  ``` Required ```  | TODO: Add a parameter description | `https://img.yourdomain.tld/image.type` | 
-| transform | string |  ``` Required ```  | TODO: Add a parameter description | `x:flip,y:flip,grayscale:true,compress:true;80,convert:png` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| image | string |  ``` Required ```  | - | `https://img.yourdomain.tld/image.type` | 
+| transform | string |  ``` Required ```  | - | `x:flip,y:flip,grayscale:true,compress:true;80,convert:png` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1368,7 +1368,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/imageResponse](#https://api.rest.sh/api/image_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/i/r](#https://api.rest.sh/api/i/r)**) 
 
 ```
 {
@@ -1381,10 +1381,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/image"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/image") https://api.rest.sh/api/image
+### <a name="https://api.rest.sh/api/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/i") https://api.rest.sh/api/i
 
 
-**`POST`** `/image`
+**`POST`** `/i`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1402,7 +1402,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/imageRequest](#https://api.rest.sh/api/image_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/i](#https://api.rest.sh/api/i) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1419,7 +1419,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/imageResponse](#https://api.rest.sh/api/image_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/i/r](#https://api.rest.sh/api/i/r)**) 
 
 ```
 {
@@ -1437,10 +1437,10 @@ Raw
 ## <a name="verification"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Verification") Verification
 
 
-### <a name="https://api.rest.sh/api/verify/address"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify/address") https://api.rest.sh/api/verify/address
+### <a name="https://api.rest.sh/api/v/a"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/a") https://api.rest.sh/api/v/a
 
 
-**`GET`** `/verify/address`
+**`GET`** `/v/a`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1452,14 +1452,14 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| user | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| a | string |  ``` Required ```  | TODO: Add a parameter description | `3301 South Greenfield Rd` | 
-| sa | string |  ``` Required ```  | TODO: Add a parameter description | `Address Line Two` | 
-| c | string |  ``` Required ```  | TODO: Add a parameter description | `Gilbert` | 
-| s | string |  ``` Required ```  | TODO: Add a parameter description | `AZ` | 
-| z | number |  ``` Required ```  | TODO: Add a parameter description | `85297` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| user | string |  ``` Required ```  | - | `UID` | 
+| a | string |  ``` Required ```  | - | `3301 South Greenfield Rd` | 
+| sa | string |  ``` Required ```  | - | `Address Line Two` | 
+| c | string |  ``` Required ```  | - | `Gilbert` | 
+| s | string |  ``` Required ```  | - | `AZ` | 
+| z | number |  ``` Required ```  | - | `85297` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1468,7 +1468,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/verify/addressResponse](#https://api.rest.sh/api/verify/address_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/v/a/r](#https://api.rest.sh/api/v/a/r)**) 
 
 ```
 {
@@ -1479,10 +1479,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/verify/address"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify/address") https://api.rest.sh/api/verify/address
+### <a name="https://api.rest.sh/api/v/a"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/a") https://api.rest.sh/api/v/a
 
 
-**`POST`** `/verify/address`
+**`POST`** `/v/a`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1500,7 +1500,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/verify/addressRequest](#https://api.rest.sh/api/verify/address_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/v/a](#https://api.rest.sh/api/v/a) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1521,7 +1521,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/verify/addressResponse](#https://api.rest.sh/api/verify/address_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/v/a/r](#https://api.rest.sh/api/v/a/r)**) 
 
 ```
 {
@@ -1532,10 +1532,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/verify/user"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify/user") https://api.rest.sh/api/verify/user
+### <a name="https://api.rest.sh/api/v/u"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/u") https://api.rest.sh/api/v/u
 
 
-**`GET`** `/verify/2fa`
+**`GET`** `/v/u`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1547,10 +1547,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| user | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| code | string |  ``` Required ```  | TODO: Add a parameter description | `CODE` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| user | string |  ``` Required ```  | - | `UID` | 
+| code | string |  ``` Required ```  | - | `CODE` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1559,7 +1559,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/verify/userResponse](#https://api.rest.sh/api/verify/user_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/v/u/r](#https://api.rest.sh/api/v/u/r)**) 
 
 ```
 {
@@ -1570,10 +1570,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/verify/user"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify/user") https://api.rest.sh/api/verify/user
+### <a name="https://api.rest.sh/api/v/u"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/u") https://api.rest.sh/api/v/u
 
 
-**`POST`** `/verify/user`
+**`POST`** `/v/u`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1591,7 +1591,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/verify/userRequest](#https://api.rest.sh/api/verify/user_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/v/u](#https://api.rest.sh/api/v/u) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1607,7 +1607,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/verify/userResponse](#https://api.rest.sh/api/verify/user_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/v/u/r](#https://api.rest.sh/api/v/u/r)**) 
 
 ```
 {
@@ -1618,10 +1618,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/verify"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify") https://api.rest.sh/api/verify
+### <a name="https://api.rest.sh/api/v"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v") https://api.rest.sh/api/v
 
 
-**`GET`** `/verify`
+**`GET`** `/v`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1633,9 +1633,9 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| to | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| to | string |  ``` Required ```  | - | `UID` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1644,7 +1644,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/verifyResponse](#https://api.rest.sh/api/verify_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/v/r](#https://api.rest.sh/api/v/r)**) 
 
 ```
 {
@@ -1656,10 +1656,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/verify"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify") https://api.rest.sh/api/verify
+### <a name="https://api.rest.sh/api/v"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v") https://api.rest.sh/api/v
 
 
-**`POST`** `/2fa`
+**`POST`** `/v`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1677,7 +1677,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/verifyRequest](#https://api.rest.sh/api/verify_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/v](#https://api.rest.sh/api/v) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1692,7 +1692,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/verifyResponse](#https://api.rest.sh/api/verify_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/v/r](#https://api.rest.sh/api/v/r)**) 
 
 ```
 {
@@ -1709,10 +1709,10 @@ Raw
 ## <a name="two_factor_authentication_api"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Two Factor Authentication API") Two Factor Authentication API
 
 
-### <a name="https://api.rest.sh/api/2fa/token"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/token") https://api.rest.sh/api/2fa/token
+### <a name="https://api.rest.sh/api/2fa/t"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/t") https://api.rest.sh/api/2fa/t
 
 
-**`GET`** `/verify/2fa`
+**`GET`** `/2fa/t`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1724,10 +1724,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| user | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| code | string |  ``` Required ```  | TODO: Add a parameter description | `CODE` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| user | string |  ``` Required ```  | - | `UID` | 
+| code | string |  ``` Required ```  | - | `CODE` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1736,7 +1736,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/2fa/tokenResponse](#https://api.rest.sh/api/2fa/token_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/2fa/t/r](#https://api.rest.sh/api/2fa/t/r)**) 
 
 ```
 {
@@ -1747,10 +1747,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/2fa/token"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/token") https://api.rest.sh/api/2fa/token
+### <a name="https://api.rest.sh/api/2fa/t"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/t") https://api.rest.sh/api/2fa/t
 
 
-**`POST`** `/verify/2fa`
+**`POST`** `/2fa/t`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1768,7 +1768,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/2fa/tokenRequest](#https://api.rest.sh/api/2fa/token_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/2fa/t](#https://api.rest.sh/api/2fa/t) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1784,7 +1784,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/2fa/tokenResponse](#https://api.rest.sh/api/2fa/token_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/2fa/t/r](#https://api.rest.sh/api/2fa/t/r)**) 
 
 ```
 {
@@ -1798,7 +1798,7 @@ Raw
 ### <a name="https://api.rest.sh/api/2fa"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa") https://api.rest.sh/api/2fa
 
 
-**`GET`** `/verify`
+**`GET`** `/2fa`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1810,9 +1810,9 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| to | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| to | string |  ``` Required ```  | - | `UID` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1821,7 +1821,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/2faResponse](#https://api.rest.sh/api/2fa_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/2fa/r](#https://api.rest.sh/api/2fa/r)**) 
 
 ```
 {
@@ -1836,7 +1836,7 @@ Raw
 ### <a name="https://api.rest.sh/api/2fa"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa") https://api.rest.sh/api/2fa
 
 
-**`POST`** `/verify`
+**`POST`** `/2fa`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1854,14 +1854,15 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/2faRequest](#https://api.rest.sh/api/2fa_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/2fa](#https://api.rest.sh/api/2fa) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "to": "USERS UID"
+  "request": "request",
+  "to": "to",
+  "verified": "verified",
+  "id": "id"
 }
 ``` 
 
@@ -1869,7 +1870,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/2faResponse](#https://api.rest.sh/api/2fa_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/2fa/r](#https://api.rest.sh/api/2fa/r)**) 
 
 ```
 {
@@ -1886,10 +1887,10 @@ Raw
 ## <a name="user_management"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "User Management") User Management
 
 
-### <a name="https://api.rest.sh/api/user/info"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/info") https://api.rest.sh/api/user/info
+### <a name="https://api.rest.sh/api/u/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/i") https://api.rest.sh/api/u/i
 
 
-**`GET`** `/user/info`
+**`GET`** `/u/i`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1901,10 +1902,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| user | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| apiuid | string |  ``` Required ```  | TODO: Add a parameter description | `apiUID` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| user | string |  ``` Required ```  | - | `UID` | 
+| apiuid | string |  ``` Required ```  | - | `apiUID` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -1913,7 +1914,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/user/infoResponse](#https://api.rest.sh/api/user/info_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/u/i/r](#https://api.rest.sh/api/u/i/r)**) 
 
 ```
 {
@@ -1943,10 +1944,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/user/info"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/info") https://api.rest.sh/api/user/info
+### <a name="https://api.rest.sh/api/u/i"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/i") https://api.rest.sh/api/u/i
 
 
-**`POST`** `/user/info`
+**`POST`** `/u/i`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1964,7 +1965,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/user/infoRequest](#https://api.rest.sh/api/user/info_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/u/i](#https://api.rest.sh/api/u/i) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -1980,7 +1981,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/user/infoResponse](#https://api.rest.sh/api/user/info_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/u/i/r](#https://api.rest.sh/api/u/i/r)**) 
 
 ```
 {
@@ -2010,10 +2011,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/user/update"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/update") https://api.rest.sh/api/user/update
+### <a name="https://api.rest.sh/api/u/u"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/u") https://api.rest.sh/api/u/u
 
 
-**`GET`** `/user/update`
+**`GET`** `/u/u`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2025,12 +2026,12 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| user | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| apiuid | string |  ``` Required ```  | TODO: Add a parameter description | `apiUID` | 
-| avatar | string |  ``` Required ```  | TODO: Add a parameter description | `https://img.cdnurl.com/UID/image` | 
-| custom input | string |  ``` Required ```  | TODO: Add a parameter description | `custom input` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| user | string |  ``` Required ```  | - | `UID` | 
+| apiuid | string |  ``` Required ```  | - | `apiUID` | 
+| avatar | string |  ``` Required ```  | - | `https://img.cdnurl.com/UID/image` | 
+| custom input | string |  ``` Required ```  | - | `custom input` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -2039,7 +2040,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/user/updateResponse](#https://api.rest.sh/api/user/update_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/u/u/r](#https://api.rest.sh/api/u/u/r)**) 
 
 ```
 {
@@ -2056,10 +2057,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/user/update"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/update") https://api.rest.sh/api/user/update
+### <a name="https://api.rest.sh/api/u/u"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/u") https://api.rest.sh/api/u/u
 
 
-**`POST`** `/user/update`
+**`POST`** `/u/u`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2077,7 +2078,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/user/updateRequest](#https://api.rest.sh/api/user/update_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/u/u](#https://api.rest.sh/api/u/u) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -2107,7 +2108,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/user/updateResponse](#https://api.rest.sh/api/user/update_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/u/u/r](#https://api.rest.sh/api/u/u/r)**) 
 
 ```
 {
@@ -2124,10 +2125,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/user/delete"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/delete") https://api.rest.sh/api/user/delete
+### <a name="https://api.rest.sh/api/u/d"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/d") https://api.rest.sh/api/u/d
 
 
-**`GET`** `/user/delete`
+**`GET`** `/u/d`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2139,10 +2140,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| api | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| user | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| apiuid | string |  ``` Required ```  | TODO: Add a parameter description | `apiUID` | 
+| api | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| user | string |  ``` Required ```  | - | `UID` | 
+| apiuid | string |  ``` Required ```  | - | `apiUID` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -2151,7 +2152,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/user/deleteResponse](#https://api.rest.sh/api/user/delete_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/u/d/r](#https://api.rest.sh/api/u/d/r)**) 
 
 ```
 {
@@ -2162,10 +2163,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/user/delete"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/delete") https://api.rest.sh/api/user/delete
+### <a name="https://api.rest.sh/api/u/d"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/d") https://api.rest.sh/api/u/d
 
 
-**`POST`** `/user/delete`
+**`POST`** `/u/d`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2183,7 +2184,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/user/deleteRequest](#https://api.rest.sh/api/user/delete_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/u/d](#https://api.rest.sh/api/u/d) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -2199,7 +2200,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/user/deleteResponse](#https://api.rest.sh/api/user/delete_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/u/d/r](#https://api.rest.sh/api/u/d/r)**) 
 
 ```
 {
@@ -2215,10 +2216,10 @@ Raw
 ## <a name="login_and_registration"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "Login and Registration") Login and Registration
 
 
-### <a name="https://api.rest.sh/api/auth/user/register"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/auth/user/register") https://api.rest.sh/api/auth/user/register
+### <a name="https://api.rest.sh/api/a/u/r"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/r") https://api.rest.sh/api/a/u/r
 
 
-**`GET`** `/auth/user/register`
+**`GET`** `/a/u/r`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2230,15 +2231,15 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| user | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| password | string |  ``` Required ```  | TODO: Add a parameter description | `Password` | 
-| name | string |  ``` Required ```  | TODO: Add a parameter description | `John Doe` | 
-| email | string |  ``` Required ```  | TODO: Add a parameter description | `email@email.com` | 
-| phone | number |  ``` Required ```  | TODO: Add a parameter description | `1234567890` | 
-| countrycode | number |  ``` Required ```  | TODO: Add a parameter description | `1` | 
-| address | string |  ``` Required ```  | TODO: Add a parameter description | `3301 South Greenfield Rd, Gilbert, AZ 85297` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| user | string |  ``` Required ```  | - | `UID` | 
+| password | string |  ``` Required ```  | - | `Password` | 
+| name | string |  ``` Required ```  | - | `John Doe` | 
+| email | string |  ``` Required ```  | - | `email@email.com` | 
+| phone | number |  ``` Required ```  | - | `1234567890` | 
+| countrycode | number |  ``` Required ```  | - | `1` | 
+| address | string |  ``` Required ```  | - | `3301 South Greenfield Rd, Gilbert, AZ 85297` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -2247,7 +2248,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/auth/user/registerResponse](#https://api.rest.sh/api/auth/user/register_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/a/u/r/r](#https://api.rest.sh/api/a/u/r/r)**) 
 
 ```
 {
@@ -2267,10 +2268,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/auth/user/register"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/auth/user/register") https://api.rest.sh/api/auth/user/register
+### <a name="https://api.rest.sh/api/a/u/r"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/r") https://api.rest.sh/api/a/u/r
 
 
-**`POST`** `/auth/user/register`
+**`POST`** `/a/u/r`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2288,7 +2289,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/auth/user/registerRequest](#https://api.rest.sh/api/auth/user/register_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/a/u/r](#https://api.rest.sh/api/a/u/r) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -2314,7 +2315,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/auth/user/registerResponse](#https://api.rest.sh/api/auth/user/register_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/a/u/r/r](#https://api.rest.sh/api/a/u/r/r)**) 
 
 ```
 {
@@ -2334,10 +2335,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/auth/user/login"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/auth/user/login") https://api.rest.sh/api/auth/user/login
+### <a name="https://api.rest.sh/api/a/u/l"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/l") https://api.rest.sh/api/a/u/l
 
 
-**`GET`** `/auth/user/login`
+**`GET`** `/a/u/l`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2349,10 +2350,10 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | TODO: Add a parameter description | `API` | 
-| uid | string |  ``` Required ```  | TODO: Add a parameter description | `UID` | 
-| user | string |  ``` Required ```  | TODO: Add a parameter description | `Username` | 
-| password | string |  ``` Required ```  | TODO: Add a parameter description | `Password` | 
+| key | string |  ``` Required ```  | - | `API` | 
+| uid | string |  ``` Required ```  | - | `UID` | 
+| user | string |  ``` Required ```  | - | `Username` | 
+| password | string |  ``` Required ```  | - | `Password` | 
 
 #### Request Headers
 >Content-Type=application/json;
@@ -2361,7 +2362,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/auth/user/loginResponse](#https://api.rest.sh/api/auth/user/login_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/a/u/l/r](#https://api.rest.sh/api/a/u/l/r)**) 
 
 ```
 {
@@ -2387,10 +2388,10 @@ Raw
 ```
 
 
-### <a name="https://api.rest.sh/api/auth/user/login"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/auth/user/login") https://api.rest.sh/api/auth/user/login
+### <a name="https://api.rest.sh/api/a/u/l"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/l") https://api.rest.sh/api/a/u/l
 
 
-**`POST`** `/auth/user/login`
+**`POST`** `/a/u/l`
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2408,7 +2409,7 @@ Raw
 
 |  Type | Tags | Description |
 | ------| ---- |-------------| 
-| [https://api.rest.sh/api/auth/user/loginRequest](#https://api.rest.sh/api/auth/user/login_request) |  ``` Required ```  | TODO: Add description | 
+| [https://api.rest.sh/api/a/u/l](#https://api.rest.sh/api/a/u/l) |  ``` Required ```  | - | 
 
  *Example Body* 
 ``` 
@@ -2424,7 +2425,7 @@ Raw
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/auth/user/loginResponse](#https://api.rest.sh/api/auth/user/login_response)**) 
+ *Example Body* (**[https://api.rest.sh/api/a/u/l/r](#https://api.rest.sh/api/a/u/l/r)**) 
 
 ```
 {
@@ -2456,65 +2457,64 @@ Raw
 
 ### List of Models
 
-* [https://api.rest.sh/api/security/logging/infoRequest](#https://api.rest.sh/api/security/logging/info_request)
-* [https://api.rest.sh/api/security/loggingRequest](#https://api.rest.sh/api/security/logging_request)
-* [https://api.rest.sh/api/dataRequest](#https://api.rest.sh/api/data_request)
-* [https://api.rest.sh/api/verify/addressRequest](#https://api.rest.sh/api/verify/address_request)
-* [https://api.rest.sh/api/security/waf/configureRequest](#https://api.rest.sh/api/security/waf/configure_request)
-* [https://api.rest.sh/api/security/wafRequest](#https://api.rest.sh/api/security/waf_request)
-* [Info17](#info17)
-* [https://api.rest.sh/api/security/encryptionResponse](#https://api.rest.sh/api/security/encryption_response)
-* [https://api.rest.sh/api/security/encryptionRequest](#https://api.rest.sh/api/security/encryption_request)
-* [https://api.rest.sh/api/service/cdn/pushRequest](#https://api.rest.sh/api/service/cdn/push_request)
-* [https://api.rest.sh/api/service/cdn/pullRequest](#https://api.rest.sh/api/service/cdn/pull_request)
-* [https://api.rest.sh/api/user/updateRequest](#https://api.rest.sh/api/user/update_request)
-* [https://api.rest.sh/api/service/dns/configureRequest](#https://api.rest.sh/api/service/dns/configure_request)
-* [Data](#data)
-* [Log](#log)
-* [Nameservers](#nameservers)
-* [https://api.rest.sh/api/service/hostingResponse](#https://api.rest.sh/api/service/hosting_response)
-* [https://api.rest.sh/api/security/waf/configureResponse](#https://api.rest.sh/api/security/waf/configure_response)
-* [https://api.rest.sh/api/auth/user/registerRequest](#https://api.rest.sh/api/auth/user/register_request)
-* [https://api.rest.sh/api/security/wafResponse](#https://api.rest.sh/api/security/waf_response)
-* [https://api.rest.sh/api/service/obfuscationResponse](#https://api.rest.sh/api/service/obfuscation_response)
-* [https://api.rest.sh/api/service/hostingRequest](#https://api.rest.sh/api/service/hosting_request)
-* [https://api.rest.sh/api/dataResponse](#https://api.rest.sh/api/data_response)
-* [https://api.rest.sh/api/service/obfuscationRequest](#https://api.rest.sh/api/service/obfuscation_request)
-* [https://api.rest.sh/api/imageResponse](#https://api.rest.sh/api/image_response)
-* [https://api.rest.sh/api/imageRequest](#https://api.rest.sh/api/image_request)
-* [Info](#info)
-* [https://api.rest.sh/api/2fa/tokenRequest](#https://api.rest.sh/api/2fa/token_request)
-* [https://api.rest.sh/api/2faResponse](#https://api.rest.sh/api/2fa_response)
-* [https://api.rest.sh/api/verify/userRequest](#https://api.rest.sh/api/verify/user_request)
-* [https://api.rest.sh/api/service/cdn/pushResponse](#https://api.rest.sh/api/service/cdn/push_response)
-* [https://api.rest.sh/api/service/cdn/pullResponse](#https://api.rest.sh/api/service/cdn/pull_response)
-* [https://api.rest.sh/api/verifyResponse](#https://api.rest.sh/api/verify_response)
-* [https://api.rest.sh/api/user/deleteRequest](#https://api.rest.sh/api/user/delete_request)
-* [https://api.rest.sh/api/service/dns/configureResponse](#https://api.rest.sh/api/service/dns/configure_response)
-* [https://api.rest.sh/api/user/infoResponse](#https://api.rest.sh/api/user/info_response)
-* [https://api.rest.sh/api/service/dns/addResponse](#https://api.rest.sh/api/service/dns/add_response)
-* [https://api.rest.sh/api/user/infoRequest](#https://api.rest.sh/api/user/info_request)
-* [https://api.rest.sh/api/service/dns/addRequest](#https://api.rest.sh/api/service/dns/add_request)
-* [Info12](#info12)
-* [https://api.rest.sh/api/user/updateResponse](#https://api.rest.sh/api/user/update_response)
-* [https://api.rest.sh/api/2fa/tokenResponse](#https://api.rest.sh/api/2fa/token_response)
-* [https://api.rest.sh/api/2faRequest](#https://api.rest.sh/api/2fa_request)
-* [Info7](#info7)
-* [https://api.rest.sh/api/verify/addressResponse](#https://api.rest.sh/api/verify/address_response)
-* [https://api.rest.sh/api/auth/user/registerResponse](#https://api.rest.sh/api/auth/user/register_response)
-* [https://api.rest.sh/api/verify/userResponse](#https://api.rest.sh/api/verify/user_response)
-* [https://api.rest.sh/api/auth/user/loginResponse](#https://api.rest.sh/api/auth/user/login_response)
+* [https://api.rest.sh/api/s/l/r](#https://api.rest.sh/api/s/l/r)
+* [https://api.rest.sh/api/s/l/i/r](#https://api.rest.sh/api/s/l/i/r)
 * [MMDDYYYYHHMMSS](#mmddyyyyhhmmss)
-* [https://api.rest.sh/api/auth/user/loginRequest](#https://api.rest.sh/api/auth/user/login_request)
-* [https://api.rest.sh/api/security/logging/infoResponse](#https://api.rest.sh/api/security/logging/info_response)
-* [https://api.rest.sh/api/verifyRequest](#https://api.rest.sh/api/verify_request)
-* [https://api.rest.sh/api/security/loggingResponse](#https://api.rest.sh/api/security/logging_response)
-* [https://api.rest.sh/api/user/deleteResponse](#https://api.rest.sh/api/user/delete_response)
-## <a name="https://api.rest.sh/api/security/logging/info_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/logging/infoRequest") https://api.rest.sh/api/security/logging/infoRequest
+* [https://api.rest.sh/api/a/u/l](#https://api.rest.sh/api/a/u/l)
+* [https://api.rest.sh/api/a/u/l/r](#https://api.rest.sh/api/a/u/l/r)
+* [https://api.rest.sh/api/a/u/r/r](#https://api.rest.sh/api/a/u/r/r)
+* [Info7](#info7)
+* [https://api.rest.sh/api/u/u/r](#https://api.rest.sh/api/u/u/r)
+* [Info12](#info12)
+* [https://api.rest.sh/api/u/i](#https://api.rest.sh/api/u/i)
+* [https://api.rest.sh/api/u/i/r](#https://api.rest.sh/api/u/i/r)
+* [https://api.rest.sh/api/u/d](#https://api.rest.sh/api/u/d)
+* [https://api.rest.sh/api/v/r](#https://api.rest.sh/api/v/r)
+* [https://api.rest.sh/api/v/u](#https://api.rest.sh/api/v/u)
+* [https://api.rest.sh/api/2fa](#https://api.rest.sh/api/2fa)
+* [https://api.rest.sh/api/2fa/t](#https://api.rest.sh/api/2fa/t)
+* [https://api.rest.sh/api/i](#https://api.rest.sh/api/i)
+* [https://api.rest.sh/api/i/r](#https://api.rest.sh/api/i/r)
+* [https://api.rest.sh/api/d/r](#https://api.rest.sh/api/d/r)
+* [https://api.rest.sh/api/s/h](#https://api.rest.sh/api/s/h)
+* [https://api.rest.sh/api/s/h/r](#https://api.rest.sh/api/s/h/r)
+* [Nameservers](#nameservers)
+* [https://api.rest.sh/api/s/d/c](#https://api.rest.sh/api/s/d/c)
+* [https://api.rest.sh/api/s/c/pull](#https://api.rest.sh/api/s/c/pull)
+* [https://api.rest.sh/api/s/c/push](#https://api.rest.sh/api/s/c/push)
+* [https://api.rest.sh/api/s/e](#https://api.rest.sh/api/s/e)
+* [https://api.rest.sh/api/s/e/r](#https://api.rest.sh/api/s/e/r)
+* [https://api.rest.sh/api/s/w](#https://api.rest.sh/api/s/w)
+* [https://api.rest.sh/api/s/w/c](#https://api.rest.sh/api/s/w/c)
+* [https://api.rest.sh/api/s/l](#https://api.rest.sh/api/s/l)
+* [https://api.rest.sh/api/s/l/i](#https://api.rest.sh/api/s/l/i)
+* [Info](#info)
+* [https://api.rest.sh/api/a/u/r](#https://api.rest.sh/api/a/u/r)
+* [https://api.rest.sh/api/u/u](#https://api.rest.sh/api/u/u)
+* [Info17](#info17)
+* [https://api.rest.sh/api/v/a](#https://api.rest.sh/api/v/a)
+* [https://api.rest.sh/api/d](#https://api.rest.sh/api/d)
+* [https://api.rest.sh/api/u/d/r](#https://api.rest.sh/api/u/d/r)
+* [https://api.rest.sh/api/v](#https://api.rest.sh/api/v)
+* [https://api.rest.sh/api/v/u/r](#https://api.rest.sh/api/v/u/r)
+* [https://api.rest.sh/api/v/a/r](#https://api.rest.sh/api/v/a/r)
+* [https://api.rest.sh/api/2fa/r](#https://api.rest.sh/api/2fa/r)
+* [https://api.rest.sh/api/2fa/t/r](#https://api.rest.sh/api/2fa/t/r)
+* [https://api.rest.sh/api/s/d/a](#https://api.rest.sh/api/s/d/a)
+* [https://api.rest.sh/api/s/d/a/r](#https://api.rest.sh/api/s/d/a/r)
+* [https://api.rest.sh/api/s/d/c/r](#https://api.rest.sh/api/s/d/c/r)
+* [https://api.rest.sh/api/s/c/pull/r](#https://api.rest.sh/api/s/c/pull/r)
+* [https://api.rest.sh/api/s/c/push/r](#https://api.rest.sh/api/s/c/push/r)
+* [https://api.rest.sh/api/s/o](#https://api.rest.sh/api/s/o)
+* [https://api.rest.sh/api/s/o/r](#https://api.rest.sh/api/s/o/r)
+* [https://api.rest.sh/api/s/w/r](#https://api.rest.sh/api/s/w/r)
+* [https://api.rest.sh/api/s/w/c/r](#https://api.rest.sh/api/s/w/c/r)
+* [Log](#log)
+* [Data](#data)
+## <a name="https://api.rest.sh/api/s/l/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/r") https://api.rest.sh/api/s/l/r
 
 
 
-> TODO: Add a model description
 
 
 
@@ -2522,65 +2522,23 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| name | string |  ``` Required ```  | TODO: Add a property description | 
-| origin | string |  ``` Required ```  | TODO: Add a property description | 
-| time | string |  ``` Required ```  | TODO: Add a property description | 
+| success | string |  ``` Required ```  | - | 
 
 
 
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "name": "YOUR WAF'S NAME",
-  "origin": "ORIGIN URL",
-  "time": "LOOKUP SPECIFIC TIMES IN LOG (MM/DD/YYYY;HH:MM:SS) SEPERATED BY A COMMA OR ('*' / ALL)"
+  "success": "RETURNS TRUE IF ADVANCED LOGGING IS ACTIVATED"
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/security/logging_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/loggingRequest") https://api.rest.sh/api/security/loggingRequest
+## <a name="https://api.rest.sh/api/s/l/i/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/i/r") https://api.rest.sh/api/s/l/i/r
 
 
 
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| name | string |  ``` Required ```  | TODO: Add a property description | 
-| origin | string |  ``` Required ```  | TODO: Add a property description | 
-| activate | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "name": "YOUR WAF'S NAME",
-  "origin": "ORIGIN URL",
-  "activate": "TRUE OR FALSE IF YOU WANT ADVANCED LOGGING ACTIVATED"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/data_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/dataRequest") https://api.rest.sh/api/dataRequest
-
-
-
-> TODO: Add a model description
 
 
 
@@ -2588,474 +2546,27 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| user | string |  ``` Required ```  | TODO: Add a property description | 
-| apiuid | string |  ``` Required ```  | TODO: Add a property description | 
-| url | string |  ``` Required ```  | TODO: Add a property description | 
-| manipulation | string |  ``` Required ```  | TODO: Add a property description | 
-| conversion | string |  ``` Required ```  | TODO: Add a property description | 
-| sorting | string |  ``` Required ```  | TODO: Add a property description | 
-| compression | string |  ``` Required ```  | TODO: Add a property description | 
+| log | [Log](#log) |  ``` Required ```  | - | 
 
 
 
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID",
-  "url": "DATA URL OR DIRECT FILE UPLOAD FROM CLIENT",
-  "manipulation": "DATA MANIPULATION DIRECTIVES",
-  "conversion": "CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)",
-  "sorting": "SORT BY (NAME, DATE, TYPE, SIZE)",
-  "compression": "COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/verify/address_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify/addressRequest") https://api.rest.sh/api/verify/addressRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| user | string |  ``` Required ```  | TODO: Add a property description | 
-| address | string |  ``` Required ```  | TODO: Add a property description | 
-| a | string |  ``` Required ```  | TODO: Add a property description | 
-| sa | string |  ``` Required ```  | TODO: Add a property description | 
-| c | string |  ``` Required ```  | TODO: Add a property description | 
-| s | string |  ``` Required ```  | TODO: Add a property description | 
-| z | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS UID",
-  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-  "a": "ADDRESS LINE ONE",
-  "sa": "ADDRESS LINE TWO",
-  "c": "CITY OR PROVINCE",
-  "s": "STATE OR REGION",
-  "z": "ZIPCODE"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/security/waf/configure_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/waf/configureRequest") https://api.rest.sh/api/security/waf/configureRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| name | string |  ``` Required ```  | TODO: Add a property description | 
-| origin | string |  ``` Required ```  | TODO: Add a property description | 
-| cname | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "name": "WHAT YOU WISH TO NAME YOUR WAF",
-  "origin": "ORIGIN YOU WISH TO PROTECT",
-  "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/security/waf_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/wafRequest") https://api.rest.sh/api/security/wafRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| origin | string |  ``` Required ```  | TODO: Add a property description | 
-| cname | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "origin": "ORIGIN YOU WISH TO PROTECT",
-  "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
-}
-```
-
-
-
-## <a name="info17"></a>![Type: ](https://apidocs.io/img/method.png "Info17") Info17
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| realname | string |  ``` Required ```  | TODO: Add a property description | 
-| displayname | string |  ``` Required ```  | TODO: Add a property description | 
-| avatar | string |  ``` Required ```  | TODO: Add a property description | 
-| email | string |  ``` Required ```  | TODO: Add a property description | 
-| address | string |  ``` Required ```  | TODO: Add a property description | 
-| address1 | string |  ``` Required ```  | TODO: Add a property description | 
-| address2 | string |  ``` Required ```  | TODO: Add a property description | 
-| city | string |  ``` Required ```  | TODO: Add a property description | 
-| state | string |  ``` Required ```  | TODO: Add a property description | 
-| zipcode | string |  ``` Required ```  | TODO: Add a property description | 
-| phone | string |  ``` Required ```  | TODO: Add a property description | 
-| lastlogin | string |  ``` Required ```  | TODO: Add a property description | 
-| ip | string |  ``` Required ```  | TODO: Add a property description | 
-| 2fa | string |  ``` Required ```  | TODO: Add a property description | 
-| iplock | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "realname": "realname",
-  "displayname": "displayname",
-  "avatar": "avatar",
-  "email": "email",
-  "address": "address",
-  "address1": "address1",
-  "address2": "address2",
-  "city": "city",
-  "state": "state",
-  "zipcode": "zipcode",
-  "phone": "phone",
-  "lastlogin": "lastlogin",
-  "ip": "ip",
-  "2fa": "2fa",
-  "iplock": "iplock"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/security/encryption_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/encryptionResponse") https://api.rest.sh/api/security/encryptionResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| data | string |  ``` Required ```  | TODO: Add a property description | 
-| file | string |  ``` Required ```  | TODO: Add a property description | 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| public | string |  ``` Required ```  | TODO: Add a property description | 
-| private | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "data": "RETURNED ENCRYPTED DATA URL",
-  "file": "RETURNED ENCRYPTED FILE URL",
-  "success": "SHOWS TRUE IF ENCRYPTION WAS SUCCESSFULL",
-  "public": "PUBLIC ENCRYPTION KEY FOR YOUR DATA OR FILES",
-  "private": "PRIVATE ENCRYPTION KEY FOR YOUR DATA OR FILES"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/security/encryption_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/encryptionRequest") https://api.rest.sh/api/security/encryptionRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| data | string |  ``` Required ```  | TODO: Add a property description | 
-| file | string |  ``` Required ```  | TODO: Add a property description | 
-| method | string |  ``` Required ```  | TODO: Add a property description | 
-| bit | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "data": "DATA YOU WISH TO ENCRYPT",
-  "file": "FILE YOU WISH TO ENCRYPT",
-  "method": "SINGLE OR MULTIPLE ENCRYPTION TYPES TO APPLY TO DATA OR FILES SEPERATED BY A COMMA (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP)",
-  "bit": "SIZE OF ENCRYPTION KEY"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/service/cdn/push_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/cdn/pushRequest") https://api.rest.sh/api/service/cdn/pushRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| cname | string |  ``` Required ```  | TODO: Add a property description | 
-| file | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "cname": "DOMAIN OR DOMAINS YOU WISH TO ALLOW CNAME ACCESS SEPERATED BY A COMMA",
-  "file": "FILE OR FILES YOU WISH TO UPLOAD SEPERATED BY A COMMA"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/service/cdn/pull_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/cdn/pullRequest") https://api.rest.sh/api/service/cdn/pullRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| origin | string |  ``` Required ```  | TODO: Add a property description | 
-| cname | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "origin": "ORIGIN DOMAIN TO PULL ASSETS FROM",
-  "cname": "DOMAIN OR DOMAINS YOU WISH TO ALLOW CNAME ACCESS SEPERATED BY A COMMA"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/user/update_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/updateRequest") https://api.rest.sh/api/user/updateRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| user | string |  ``` Required ```  | TODO: Add a property description | 
-| apiuid | string |  ``` Required ```  | TODO: Add a property description | 
-| oldpassword | string |  ``` Required ```  | TODO: Add a property description | 
-| newpassword | string |  ``` Required ```  | TODO: Add a property description | 
-| name | string |  ``` Required ```  | TODO: Add a property description | 
-| email | string |  ``` Required ```  | TODO: Add a property description | 
-| phone | string |  ``` Required ```  | TODO: Add a property description | 
-| avatar | string |  ``` Required ```  | TODO: Add a property description | 
-| countrycode | string |  ``` Required ```  | TODO: Add a property description | 
-| address | string |  ``` Required ```  | TODO: Add a property description | 
-| a | string |  ``` Required ```  | TODO: Add a property description | 
-| sa | string |  ``` Required ```  | TODO: Add a property description | 
-| c | string |  ``` Required ```  | TODO: Add a property description | 
-| s | string |  ``` Required ```  | TODO: Add a property description | 
-| z | string |  ``` Required ```  | TODO: Add a property description | 
-| custom-input | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID",
-  "oldpassword": "SEND A ENCRYPTED VERSION OF YOUR USERS CURRENT PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
-  "newpassword": "SEND A ENCRYPTED VERSION OF YOUR USERS NEW PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
-  "name": "USERS REAL NAME",
-  "email": "USERS EMAIL",
-  "phone": "USERS CELL PHONE NUMBER",
-  "avatar": "UPDATE USER AVATAR",
-  "countrycode": "USERS CELL PHONE COUNTRY CODE",
-  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-  "a": "ADDRESS LINE ONE",
-  "sa": "ADDRESS LINE TWO",
-  "c": "CITY OR PROVINCE",
-  "s": "STATE OR REGION",
-  "z": "ZIPCODE",
-  "custom-input": "ADD CUSTOM DATA/INPUTS TO YOUR USERS PROFILE"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/service/dns/configure_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/dns/configureRequest") https://api.rest.sh/api/service/dns/configureRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| domain | string |  ``` Required ```  | TODO: Add a property description | 
-| records | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "domain": "DOMAINS TO SET DNS RECORDS",
-  "records": "RECORDS TO SET TO DOMAIN"
-}
-```
-
-
-
-## <a name="data"></a>![Type: ](https://apidocs.io/img/method.png "Data") Data
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| result | string |  ``` Required ```  | TODO: Add a property description | 
-| content | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "result": "result",
-  "content": "content",
-  "id": "id"
-}
-```
-
-
-
-## <a name="log"></a>![Type: ](https://apidocs.io/img/method.png "Log") Log
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| MMDDYYYYHHMMSSX | [MMDDYYYYHHMMSS](#mmddyyyyhhmmss) |  ``` Required ```  | TODO: Add a property description | 
-| MMDDYYYYHHMMSSY | [MMDDYYYYHHMMSS](#mmddyyyyhhmmss) |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "MMDDYYYYHHMMSSX": {
-    "data": {
-      "result": "result",
-      "content": "content",
-      "id": "id"
-    }
-  },
-  "MMDDYYYYHHMMSSY": {
-    "data": {
-      "result": "result",
-      "content": "content",
-      "id": "id"
+  "log": {
+    "01010101245901": {
+      "data": {
+        "result": "INFO",
+        "content": "LOG: CONTENT AND ACTIONS PERFORMED",
+        "id": "FUNCTION ID"
+      }
+    },
+    "01010101245902": {
+      "data": {
+        "result": "ERROR",
+        "content": "LOG: ERROR CONTENT AND ACTIONS PERFORMED",
+        "id": "FUNCTION ID"
+      }
     }
   }
 }
@@ -3063,11 +2574,10 @@ Raw
 
 
 
-## <a name="nameservers"></a>![Type: ](https://apidocs.io/img/method.png "Nameservers") Nameservers
+## <a name="mmddyyyyhhmmss"></a>![Type: ](https://apidocs.io/img/method.png "MMDDYYYYHHMMSS") MMDDYYYYHHMMSS
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3075,30 +2585,27 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| ns1 | string |  ``` Required ```  | TODO: Add a property description | 
-| ns2 | string |  ``` Required ```  | TODO: Add a property description | 
-| ns3 | string |  ``` Required ```  | TODO: Add a property description | 
-| ns4 | string |  ``` Required ```  | TODO: Add a property description | 
+| data | [Data](#data) |  ``` Required ```  | - | 
 
 
 
 #### Example
 ```
 {
-  "ns1": "ns1",
-  "ns2": "ns2",
-  "ns3": "ns3",
-  "ns4": "ns4"
+  "data": {
+    "result": "result",
+    "content": "content",
+    "id": "id"
+  }
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/service/hosting_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/hostingResponse") https://api.rest.sh/api/service/hostingResponse
+## <a name="https://api.rest.sh/api/a/u/l"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/l") https://api.rest.sh/api/a/u/l
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3106,78 +2613,10 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| url | string |  ``` Required ```  | TODO: Add a property description | 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "request": "REQUEST TYPE",
-  "url": "RETURNED APP HOSTING URL",
-  "success": "RETURNS TRUE IF APP WAS SUCCESSFULLY DEPLOYED",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/security/waf/configure_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/waf/configureResponse") https://api.rest.sh/api/security/waf/configureResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| rule | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "success": "SHOWS TRUE WHEN THE WAF AND ORIGIN SHIELD (DDOS PROTECTION) IS DEPLOYED SUCCESSFULLY",
-  "rule": "RULES APPLIED TO WAF"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/auth/user/register_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/auth/user/registerRequest") https://api.rest.sh/api/auth/user/registerRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| user | string |  ``` Required ```  | TODO: Add a property description | 
-| password | string |  ``` Required ```  | TODO: Add a property description | 
-| name | string |  ``` Required ```  | TODO: Add a property description | 
-| email | string |  ``` Required ```  | TODO: Add a property description | 
-| phone | string |  ``` Required ```  | TODO: Add a property description | 
-| countrycode | string |  ``` Required ```  | TODO: Add a property description | 
-| address | string |  ``` Required ```  | TODO: Add a property description | 
-| a | string |  ``` Required ```  | TODO: Add a property description | 
-| sa | string |  ``` Required ```  | TODO: Add a property description | 
-| c | string |  ``` Required ```  | TODO: Add a property description | 
-| s | string |  ``` Required ```  | TODO: Add a property description | 
-| z | string |  ``` Required ```  | TODO: Add a property description | 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| password | string |  ``` Required ```  | - | 
 
 
 
@@ -3187,27 +2626,16 @@ Raw
   "key": "YOUR API KEY",
   "uid": "YOUR USER ID",
   "user": "USERS EMAIL OR USERNAME",
-  "password": "SEND A ENCRYPTED VERSION OF YOUR USERS PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
-  "name": "USERS REAL NAME",
-  "email": "USERS EMAIL",
-  "phone": "USERS CELL PHONE NUMBER",
-  "countrycode": "USERS CELL PHONE COUNTRY CODE",
-  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-  "a": "ADDRESS LINE ONE",
-  "sa": "ADDRESS LINE TWO",
-  "c": "CITY OR PROVINCE",
-  "s": "STATE OR REGION",
-  "z": "ZIPCODE"
+  "password": "SEND A ENCRYPTED VERSION OF YOUR USERS PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD"
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/security/waf_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/wafResponse") https://api.rest.sh/api/security/wafResponse
+## <a name="https://api.rest.sh/api/a/u/l/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/l/r") https://api.rest.sh/api/a/u/l/r
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3215,95 +2643,11 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| cname | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "success": "SHOWS TRUE WHEN THE WAF AND ORIGIN SHIELD (DDOS PROTECTION) IS DEPLOYED SUCCESSFULLY",
-  "cname": "RECORD TO APPEND YOUR URLS TO VIA A CNAME"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/service/obfuscation_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/obfuscationResponse") https://api.rest.sh/api/service/obfuscationResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| app | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "success": "RETURNS TRUE IF APP WAS SUCCESSFULLY OBFUSCTATED AND PROTECTED",
-  "app": "OBFUSCATED APP URL"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/service/hosting_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/hostingRequest") https://api.rest.sh/api/service/hostingRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| app | string |  ``` Required ```  | TODO: Add a property description | 
-| domain | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "app": "APP GIT URL OR URL CONTAINING YOUR APP IN A ZIP FILE",
-  "domain": "ALLOWED DOMAIN NAMES SEPERATED BY A COMMA TO CNAME WITH ACCESS TO HOSTED APP"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/data_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/dataResponse") https://api.rest.sh/api/dataResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| url | string |  ``` Required ```  | TODO: Add a property description | 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
+| request | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| valid | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+| info | [Info](#info) |  ``` Required ```  | - | 
 
 
 
@@ -3311,19 +2655,32 @@ Raw
 ```
 {
   "request": "REQUEST TYPE",
-  "url": "RETURNED DATA URL",
-  "success": "RETURNS TRUE IF DATA MANIPULATION WAS SUCCESSFULL",
-  "id": "TRANSACTION ID"
+  "uid": "Users UID",
+  "valid": "RETURNS TRUE IF USER LOGIN DETAILS ARE VALID",
+  "id": "TRANSACTION ID",
+  "info": {
+    "uid": "USERS ID",
+    "apiuid": "API SIDE USER ID",
+    "realname": "USERS REAL NAME",
+    "displayname": "USERS USERNAME",
+    "avatar": "USER AVATAR URL",
+    "email": "USERS EMAIL",
+    "address": "USERS ADDRESS",
+    "phone": "USERS CELL PHONE NUMBER",
+    "lastlogin": "USERS LAST LOGIN",
+    "ip": "USERS IP",
+    "2fa": "RETURNS TRUE IF 2FA IS ENABLED",
+    "iplock": "RETURNS TRUE IF IP LOCK IS ENABLED"
+  }
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/service/obfuscation_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/obfuscationRequest") https://api.rest.sh/api/service/obfuscationRequest
+## <a name="https://api.rest.sh/api/a/u/r/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/r/r") https://api.rest.sh/api/a/u/r/r
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3331,40 +2688,10 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| app | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "app": "APP GIT URL or URL CONTAINING YOUR APP IN A ZIP FILE"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/image_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/imageResponse") https://api.rest.sh/api/imageResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| url | string |  ``` Required ```  | TODO: Add a property description | 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| moderated | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
+| request | string |  ``` Required ```  | - | 
+| active | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+| info | [Info7](#info7) |  ``` Required ```  | - | 
 
 
 
@@ -3372,20 +2699,26 @@ Raw
 ```
 {
   "request": "REQUEST TYPE",
-  "url": "RETURNED IMAGE URL AND DATA",
-  "success": "RETURNS TRUE IF IMAGE MANIPULATION WAS SUCCESSFULL",
-  "moderated": "RETURNS TRUE IF IMAGE CONTAINED GRAPHIC IMAGERY",
-  "id": "TRANSACTION ID"
+  "active": "RETURNS TRUE, IF USER WAS SUCCESSFULLY REGISTERED",
+  "id": "TRANSACTION ID",
+  "info": {
+    "uid": "USERS ID",
+    "apiuid": "API SIDE USER ID",
+    "realname": "USERS REAL NAME",
+    "displayname": "USERS USERNAME",
+    "email": "USERS EMAIL",
+    "address": "USERS ADDRESS",
+    "phone": "USERS CELL PHONE NUMBER"
+  }
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/image_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/imageRequest") https://api.rest.sh/api/imageRequest
+## <a name="info7"></a>![Type: ](https://apidocs.io/img/method.png "Info7") Info7
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3393,51 +2726,13 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| image | string |  ``` Required ```  | TODO: Add a property description | 
-| transform | string |  ``` Required ```  | TODO: Add a property description | 
-| moderate | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "image": "DIRECT IMAGE URL OR CLIENT UPLOAD",
-  "transform": "IMAGE MANIPULATION DIRECTIVES",
-  "moderate": "SET TO TRUE IF YOU WISH TO AUTOMATICALLT CENSOR GRAPHIC IMAGES"
-}
-```
-
-
-
-## <a name="info"></a>![Type: ](https://apidocs.io/img/method.png "Info") Info
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| apiuid | string |  ``` Required ```  | TODO: Add a property description | 
-| realname | string |  ``` Required ```  | TODO: Add a property description | 
-| displayname | string |  ``` Required ```  | TODO: Add a property description | 
-| avatar | string |  ``` Required ```  | TODO: Add a property description | 
-| email | string |  ``` Required ```  | TODO: Add a property description | 
-| address | string |  ``` Required ```  | TODO: Add a property description | 
-| phone | string |  ``` Required ```  | TODO: Add a property description | 
-| lastlogin | string |  ``` Required ```  | TODO: Add a property description | 
-| ip | string |  ``` Required ```  | TODO: Add a property description | 
-| 2fa | string |  ``` Required ```  | TODO: Add a property description | 
-| iplock | string |  ``` Required ```  | TODO: Add a property description | 
+| uid | string |  ``` Required ```  | - | 
+| apiuid | string |  ``` Required ```  | - | 
+| realname | string |  ``` Required ```  | - | 
+| displayname | string |  ``` Required ```  | - | 
+| email | string |  ``` Required ```  | - | 
+| address | string |  ``` Required ```  | - | 
+| phone | string |  ``` Required ```  | - | 
 
 
 
@@ -3448,24 +2743,18 @@ Raw
   "apiuid": "apiuid",
   "realname": "realname",
   "displayname": "displayname",
-  "avatar": "avatar",
   "email": "email",
   "address": "address",
-  "phone": "phone",
-  "lastlogin": "lastlogin",
-  "ip": "ip",
-  "2fa": "2fa",
-  "iplock": "iplock"
+  "phone": "phone"
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/2fa/token_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/tokenRequest") https://api.rest.sh/api/2fa/tokenRequest
+## <a name="https://api.rest.sh/api/u/u/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/u/r") https://api.rest.sh/api/u/u/r
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3473,41 +2762,10 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| user | string |  ``` Required ```  | TODO: Add a property description | 
-| code | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS UID",
-  "code": "USER INPUTTED TOKEN"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/2fa_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2faResponse") https://api.rest.sh/api/2faResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| to | string |  ``` Required ```  | TODO: Add a property description | 
-| verified | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
+| request | string |  ``` Required ```  | - | 
+| updated | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+| info | [Info12](#info12) |  ``` Required ```  | - | 
 
 
 
@@ -3515,19 +2773,23 @@ Raw
 ```
 {
   "request": "REQUEST TYPE",
-  "to": "USER BEING VERIFIED",
-  "verified": "RETURNS TRUE OR FALSE",
-  "id": "TRANSACTION ID"
+  "updated": "RETURNS TRUE, IF USERS PROFILE WAS SUCCESSFULLY UPDATED",
+  "id": "TRANSACTION ID",
+  "info": {
+    "uid": "USERS ID",
+    "apiuid": "API SIDE USER ID",
+    "avatar": "INPUTTED AVATAR URL",
+    "custom-input": "CUSTOM INPUTTED PROFILE DATA"
+  }
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/verify/user_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify/userRequest") https://api.rest.sh/api/verify/userRequest
+## <a name="info12"></a>![Type: ](https://apidocs.io/img/method.png "Info12") Info12
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3535,30 +2797,29 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| user | string |  ``` Required ```  | TODO: Add a property description | 
-| code | string |  ``` Required ```  | TODO: Add a property description | 
+| uid | string |  ``` Required ```  | - | 
+| apiuid | string |  ``` Required ```  | - | 
+| avatar | string |  ``` Required ```  | - | 
+| custom-input | string |  ``` Required ```  | - | 
 
 
 
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS UID",
-  "code": "USER INPUTTED TOKEN"
+  "uid": "uid",
+  "apiuid": "apiuid",
+  "avatar": "avatar",
+  "custom-input": "custom-input"
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/service/cdn/push_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/cdn/pushResponse") https://api.rest.sh/api/service/cdn/pushResponse
+## <a name="https://api.rest.sh/api/u/i"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/i") https://api.rest.sh/api/u/i
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3566,97 +2827,10 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| upload | string |  ``` Required ```  | TODO: Add a property description | 
-| cname | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "success": "SHOWS TRUE WHEN PUSH ZONE IS DEPLOYED SUCCESSFULLY",
-  "upload": "LIST OF FILES UPLOADED TO YOUR PUSH ZONE",
-  "cname": "RECORD TO APPEND YOUR URLS TO VIA A CNAME"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/service/cdn/pull_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/cdn/pullResponse") https://api.rest.sh/api/service/cdn/pullResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| cname | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "success": "SHOWS TRUE WHEN PULL ZONE IS DEPLOYED SUCCESSFULLY",
-  "cname": "RECORD TO APPEND YOUR URLS TO VIA A CNAME"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/verify_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verifyResponse") https://api.rest.sh/api/verifyResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| to | string |  ``` Required ```  | TODO: Add a property description | 
-| verified | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "request": "REQUEST TYPE",
-  "to": "USER BEING VERIFIED",
-  "verified": "RETURNS TRUE OR FALSE",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/user/delete_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/deleteRequest") https://api.rest.sh/api/user/deleteRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| user | string |  ``` Required ```  | TODO: Add a property description | 
-| apiuid | string |  ``` Required ```  | TODO: Add a property description | 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| apiuid | string |  ``` Required ```  | - | 
 
 
 
@@ -3672,40 +2846,10 @@ Raw
 
 
 
-## <a name="https://api.rest.sh/api/service/dns/configure_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/dns/configureResponse") https://api.rest.sh/api/service/dns/configureResponse
+## <a name="https://api.rest.sh/api/u/i/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/i/r") https://api.rest.sh/api/u/i/r
 
 
 
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
-| domain | string |  ``` Required ```  | TODO: Add a property description | 
-| records | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "success": "SHOWS TRUE IF RECORDS WERE SUCCESSFULLY SET",
-  "domain": "DOMAIN",
-  "records": "RECORDS SET TO DOMAIN"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/user/info_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/infoResponse") https://api.rest.sh/api/user/infoResponse
-
-
-
-> TODO: Add a model description
 
 
 
@@ -3713,12 +2857,12 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| apiuid | string |  ``` Required ```  | TODO: Add a property description | 
-| verified | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-| info | [Info17](#info17) |  ``` Required ```  | TODO: Add a property description | 
+| request | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| apiuid | string |  ``` Required ```  | - | 
+| verified | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+| info | [Info17](#info17) |  ``` Required ```  | - | 
 
 
 
@@ -3752,11 +2896,10 @@ Raw
 
 
 
-## <a name="https://api.rest.sh/api/service/dns/add_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/dns/addResponse") https://api.rest.sh/api/service/dns/addResponse
+## <a name="https://api.rest.sh/api/u/d"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/d") https://api.rest.sh/api/u/d
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3764,8 +2907,1107 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| domain | string |  ``` Required ```  | TODO: Add a property description | 
-| nameservers | [Nameservers](#nameservers) |  ``` Required ```  | TODO: Add a property description | 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| apiuid | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "user": "USERS EMAIL OR USERNAME",
+  "apiuid": "USERS API SIDE USER ID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/v/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/r") https://api.rest.sh/api/v/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| request | string |  ``` Required ```  | - | 
+| to | string |  ``` Required ```  | - | 
+| verified | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "REQUEST TYPE",
+  "to": "USER BEING VERIFIED",
+  "verified": "RETURNS TRUE OR FALSE",
+  "id": "TRANSACTION ID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/v/u"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/u") https://api.rest.sh/api/v/u
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| code | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "user": "USERS UID",
+  "code": "USER INPUTTED TOKEN"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/2fa"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa") https://api.rest.sh/api/2fa
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| request | string |  ``` Required ```  | - | 
+| to | string |  ``` Required ```  | - | 
+| verified | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "request",
+  "to": "to",
+  "verified": "verified",
+  "id": "id"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/2fa/t"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/t") https://api.rest.sh/api/2fa/t
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| code | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "user": "USERS UID",
+  "code": "USER INPUTTED TOKEN"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/i"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/i") https://api.rest.sh/api/i
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| image | string |  ``` Required ```  | - | 
+| transform | string |  ``` Required ```  | - | 
+| moderate | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "image": "DIRECT IMAGE URL OR CLIENT UPLOAD",
+  "transform": "IMAGE MANIPULATION DIRECTIVES",
+  "moderate": "SET TO TRUE IF YOU WISH TO AUTOMATICALLT CENSOR GRAPHIC IMAGES"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/i/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/i/r") https://api.rest.sh/api/i/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| request | string |  ``` Required ```  | - | 
+| url | string |  ``` Required ```  | - | 
+| success | string |  ``` Required ```  | - | 
+| moderated | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "REQUEST TYPE",
+  "url": "RETURNED IMAGE URL AND DATA",
+  "success": "RETURNS TRUE IF IMAGE MANIPULATION WAS SUCCESSFULL",
+  "moderated": "RETURNS TRUE IF IMAGE CONTAINED GRAPHIC IMAGERY",
+  "id": "TRANSACTION ID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/d/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/d/r") https://api.rest.sh/api/d/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| request | string |  ``` Required ```  | - | 
+| url | string |  ``` Required ```  | - | 
+| success | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "REQUEST TYPE",
+  "url": "RETURNED DATA URL",
+  "success": "RETURNS TRUE IF DATA MANIPULATION WAS SUCCESSFULL",
+  "id": "TRANSACTION ID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/h"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/h") https://api.rest.sh/api/s/h
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| app | string |  ``` Required ```  | - | 
+| domain | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "app": "APP GIT URL OR URL CONTAINING YOUR APP IN A ZIP FILE",
+  "domain": "ALLOWED DOMAIN NAMES SEPERATED BY A COMMA TO CNAME WITH ACCESS TO HOSTED APP"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/h/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/h/r") https://api.rest.sh/api/s/h/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| request | string |  ``` Required ```  | - | 
+| url | string |  ``` Required ```  | - | 
+| success | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "REQUEST TYPE",
+  "url": "RETURNED APP HOSTING URL",
+  "success": "RETURNS TRUE IF APP WAS SUCCESSFULLY DEPLOYED",
+  "id": "TRANSACTION ID"
+}
+```
+
+
+
+## <a name="nameservers"></a>![Type: ](https://apidocs.io/img/method.png "Nameservers") Nameservers
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| ns1 | string |  ``` Required ```  | - | 
+| ns2 | string |  ``` Required ```  | - | 
+| ns3 | string |  ``` Required ```  | - | 
+| ns4 | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "ns1": "ns1",
+  "ns2": "ns2",
+  "ns3": "ns3",
+  "ns4": "ns4"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/d/c"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/c") https://api.rest.sh/api/s/d/c
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| domain | string |  ``` Required ```  | - | 
+| records | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "domain": "DOMAINS TO SET DNS RECORDS",
+  "records": "RECORDS TO SET TO DOMAIN"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/c/pull"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/pull") https://api.rest.sh/api/s/c/pull
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| origin | string |  ``` Required ```  | - | 
+| cname | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "origin": "ORIGIN DOMAIN TO PULL ASSETS FROM",
+  "cname": "DOMAIN OR DOMAINS YOU WISH TO ALLOW CNAME ACCESS SEPERATED BY A COMMA"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/c/push"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/push") https://api.rest.sh/api/s/c/push
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| cname | string |  ``` Required ```  | - | 
+| file | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "cname": "DOMAIN OR DOMAINS YOU WISH TO ALLOW CNAME ACCESS SEPERATED BY A COMMA",
+  "file": "FILE OR FILES YOU WISH TO UPLOAD SEPERATED BY A COMMA"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/e"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/e") https://api.rest.sh/api/s/e
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| data | string |  ``` Required ```  | - | 
+| file | string |  ``` Required ```  | - | 
+| method | string |  ``` Required ```  | - | 
+| bit | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "data": "DATA YOU WISH TO ENCRYPT",
+  "file": "FILE YOU WISH TO ENCRYPT",
+  "method": "SINGLE OR MULTIPLE ENCRYPTION TYPES TO APPLY TO DATA OR FILES SEPERATED BY A COMMA (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP)",
+  "bit": "SIZE OF ENCRYPTION KEY"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/e/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/e/r") https://api.rest.sh/api/s/e/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| data | string |  ``` Required ```  | - | 
+| file | string |  ``` Required ```  | - | 
+| success | string |  ``` Required ```  | - | 
+| public | string |  ``` Required ```  | - | 
+| private | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "data": "RETURNED ENCRYPTED DATA URL",
+  "file": "RETURNED ENCRYPTED FILE URL",
+  "success": "SHOWS TRUE IF ENCRYPTION WAS SUCCESSFULL",
+  "public": "PUBLIC ENCRYPTION KEY FOR YOUR DATA OR FILES",
+  "private": "PRIVATE ENCRYPTION KEY FOR YOUR DATA OR FILES"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/w"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w") https://api.rest.sh/api/s/w
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| origin | string |  ``` Required ```  | - | 
+| cname | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "origin": "ORIGIN YOU WISH TO PROTECT",
+  "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/w/c"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/c") https://api.rest.sh/api/s/w/c
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| name | string |  ``` Required ```  | - | 
+| origin | string |  ``` Required ```  | - | 
+| cname | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "name": "WHAT YOU WISH TO NAME YOUR WAF",
+  "origin": "ORIGIN YOU WISH TO PROTECT",
+  "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/l"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l") https://api.rest.sh/api/s/l
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| name | string |  ``` Required ```  | - | 
+| origin | string |  ``` Required ```  | - | 
+| activate | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "name": "YOUR WAF'S NAME",
+  "origin": "ORIGIN URL",
+  "activate": "TRUE OR FALSE IF YOU WANT ADVANCED LOGGING ACTIVATED"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/l/i"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/i") https://api.rest.sh/api/s/l/i
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| name | string |  ``` Required ```  | - | 
+| origin | string |  ``` Required ```  | - | 
+| time | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "name": "YOUR WAF'S NAME",
+  "origin": "ORIGIN URL",
+  "time": "LOOKUP SPECIFIC TIMES IN LOG (MM/DD/YYYY;HH:MM:SS) SEPERATED BY A COMMA OR ('*' / ALL)"
+}
+```
+
+
+
+## <a name="info"></a>![Type: ](https://apidocs.io/img/method.png "Info") Info
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| uid | string |  ``` Required ```  | - | 
+| apiuid | string |  ``` Required ```  | - | 
+| realname | string |  ``` Required ```  | - | 
+| displayname | string |  ``` Required ```  | - | 
+| avatar | string |  ``` Required ```  | - | 
+| email | string |  ``` Required ```  | - | 
+| address | string |  ``` Required ```  | - | 
+| phone | string |  ``` Required ```  | - | 
+| lastlogin | string |  ``` Required ```  | - | 
+| ip | string |  ``` Required ```  | - | 
+| 2fa | string |  ``` Required ```  | - | 
+| iplock | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "uid": "uid",
+  "apiuid": "apiuid",
+  "realname": "realname",
+  "displayname": "displayname",
+  "avatar": "avatar",
+  "email": "email",
+  "address": "address",
+  "phone": "phone",
+  "lastlogin": "lastlogin",
+  "ip": "ip",
+  "2fa": "2fa",
+  "iplock": "iplock"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/a/u/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/r") https://api.rest.sh/api/a/u/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| password | string |  ``` Required ```  | - | 
+| name | string |  ``` Required ```  | - | 
+| email | string |  ``` Required ```  | - | 
+| phone | string |  ``` Required ```  | - | 
+| countrycode | string |  ``` Required ```  | - | 
+| address | string |  ``` Required ```  | - | 
+| a | string |  ``` Required ```  | - | 
+| sa | string |  ``` Required ```  | - | 
+| c | string |  ``` Required ```  | - | 
+| s | string |  ``` Required ```  | - | 
+| z | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "user": "USERS EMAIL OR USERNAME",
+  "password": "SEND A ENCRYPTED VERSION OF YOUR USERS PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
+  "name": "USERS REAL NAME",
+  "email": "USERS EMAIL",
+  "phone": "USERS CELL PHONE NUMBER",
+  "countrycode": "USERS CELL PHONE COUNTRY CODE",
+  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
+  "a": "ADDRESS LINE ONE",
+  "sa": "ADDRESS LINE TWO",
+  "c": "CITY OR PROVINCE",
+  "s": "STATE OR REGION",
+  "z": "ZIPCODE"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/u/u"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/u") https://api.rest.sh/api/u/u
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| apiuid | string |  ``` Required ```  | - | 
+| oldpassword | string |  ``` Required ```  | - | 
+| newpassword | string |  ``` Required ```  | - | 
+| name | string |  ``` Required ```  | - | 
+| email | string |  ``` Required ```  | - | 
+| phone | string |  ``` Required ```  | - | 
+| avatar | string |  ``` Required ```  | - | 
+| countrycode | string |  ``` Required ```  | - | 
+| address | string |  ``` Required ```  | - | 
+| a | string |  ``` Required ```  | - | 
+| sa | string |  ``` Required ```  | - | 
+| c | string |  ``` Required ```  | - | 
+| s | string |  ``` Required ```  | - | 
+| z | string |  ``` Required ```  | - | 
+| custom-input | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "user": "USERS EMAIL OR USERNAME",
+  "apiuid": "USERS API SIDE USER ID",
+  "oldpassword": "SEND A ENCRYPTED VERSION OF YOUR USERS CURRENT PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
+  "newpassword": "SEND A ENCRYPTED VERSION OF YOUR USERS NEW PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
+  "name": "USERS REAL NAME",
+  "email": "USERS EMAIL",
+  "phone": "USERS CELL PHONE NUMBER",
+  "avatar": "UPDATE USER AVATAR",
+  "countrycode": "USERS CELL PHONE COUNTRY CODE",
+  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
+  "a": "ADDRESS LINE ONE",
+  "sa": "ADDRESS LINE TWO",
+  "c": "CITY OR PROVINCE",
+  "s": "STATE OR REGION",
+  "z": "ZIPCODE",
+  "custom-input": "ADD CUSTOM DATA/INPUTS TO YOUR USERS PROFILE"
+}
+```
+
+
+
+## <a name="info17"></a>![Type: ](https://apidocs.io/img/method.png "Info17") Info17
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| realname | string |  ``` Required ```  | - | 
+| displayname | string |  ``` Required ```  | - | 
+| avatar | string |  ``` Required ```  | - | 
+| email | string |  ``` Required ```  | - | 
+| address | string |  ``` Required ```  | - | 
+| address1 | string |  ``` Required ```  | - | 
+| address2 | string |  ``` Required ```  | - | 
+| city | string |  ``` Required ```  | - | 
+| state | string |  ``` Required ```  | - | 
+| zipcode | string |  ``` Required ```  | - | 
+| phone | string |  ``` Required ```  | - | 
+| lastlogin | string |  ``` Required ```  | - | 
+| ip | string |  ``` Required ```  | - | 
+| 2fa | string |  ``` Required ```  | - | 
+| iplock | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "realname": "realname",
+  "displayname": "displayname",
+  "avatar": "avatar",
+  "email": "email",
+  "address": "address",
+  "address1": "address1",
+  "address2": "address2",
+  "city": "city",
+  "state": "state",
+  "zipcode": "zipcode",
+  "phone": "phone",
+  "lastlogin": "lastlogin",
+  "ip": "ip",
+  "2fa": "2fa",
+  "iplock": "iplock"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/v/a"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/a") https://api.rest.sh/api/v/a
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| address | string |  ``` Required ```  | - | 
+| a | string |  ``` Required ```  | - | 
+| sa | string |  ``` Required ```  | - | 
+| c | string |  ``` Required ```  | - | 
+| s | string |  ``` Required ```  | - | 
+| z | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "user": "USERS UID",
+  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
+  "a": "ADDRESS LINE ONE",
+  "sa": "ADDRESS LINE TWO",
+  "c": "CITY OR PROVINCE",
+  "s": "STATE OR REGION",
+  "z": "ZIPCODE"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/d"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/d") https://api.rest.sh/api/d
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| apiuid | string |  ``` Required ```  | - | 
+| url | string |  ``` Required ```  | - | 
+| manipulation | string |  ``` Required ```  | - | 
+| conversion | string |  ``` Required ```  | - | 
+| sorting | string |  ``` Required ```  | - | 
+| compression | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "user": "USERS EMAIL OR USERNAME",
+  "apiuid": "USERS API SIDE USER ID",
+  "url": "DATA URL OR DIRECT FILE UPLOAD FROM CLIENT",
+  "manipulation": "DATA MANIPULATION DIRECTIVES",
+  "conversion": "CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)",
+  "sorting": "SORT BY (NAME, DATE, TYPE, SIZE)",
+  "compression": "COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/u/d/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/d/r") https://api.rest.sh/api/u/d/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| request | string |  ``` Required ```  | - | 
+| deleted | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "REQUEST TYPE",
+  "deleted": "RETURNS TRUE, IF USERS ACCOUNT WAS SUCCESSFULLY DELETED",
+  "id": "TRANSACTION ID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/v"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v") https://api.rest.sh/api/v
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| to | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "to": "USERS UID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/v/u/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/u/r") https://api.rest.sh/api/v/u/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| request | string |  ``` Required ```  | - | 
+| correct | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "REQUEST TYPE",
+  "correct": "RETURNS IF 2FA TOKEN IS CORRECT",
+  "id": "TRANSACTION ID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/v/a/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/a/r") https://api.rest.sh/api/v/a/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| request | string |  ``` Required ```  | - | 
+| active | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "REQUEST TYPE",
+  "active": "RETURNS TRUE, IF ADDRESS IS ACTIVE AND IF USER IS CURRENTLY THERE",
+  "id": "TRANSACTION ID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/2fa/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/r") https://api.rest.sh/api/2fa/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| to | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "REQUEST TYPE",
+  "to": "USER BEING VERIFIED",
+  "verified": "RETURNS TRUE OR FALSE",
+  "id": "TRANSACTION ID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/2fa/t/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/t/r") https://api.rest.sh/api/2fa/t/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| request | string |  ``` Required ```  | - | 
+| correct | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "request": "REQUEST TYPE",
+  "correct": "RETURNS IF 2FA TOKEN IS CORRECT",
+  "id": "TRANSACTION ID"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/d/a"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/a") https://api.rest.sh/api/s/d/a
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| domain | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "key": "YOUR API KEY",
+  "uid": "YOUR USER ID",
+  "domain": "DOMAINS SEPERATED BY A COMMA TO ADD TO DNS"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/d/a/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/a/r") https://api.rest.sh/api/s/d/a/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| domain | string |  ``` Required ```  | - | 
+| nameservers | [Nameservers](#nameservers) |  ``` Required ```  | - | 
 
 
 
@@ -3784,11 +4026,10 @@ Raw
 
 
 
-## <a name="https://api.rest.sh/api/user/info_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/infoRequest") https://api.rest.sh/api/user/infoRequest
+## <a name="https://api.rest.sh/api/s/d/c/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/c/r") https://api.rest.sh/api/s/d/c/r
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3796,10 +4037,91 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| user | string |  ``` Required ```  | TODO: Add a property description | 
-| apiuid | string |  ``` Required ```  | TODO: Add a property description | 
+| success | string |  ``` Required ```  | - | 
+| domain | string |  ``` Required ```  | - | 
+| records | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "success": "SHOWS TRUE IF RECORDS WERE SUCCESSFULLY SET",
+  "domain": "DOMAIN",
+  "records": "RECORDS SET TO DOMAIN"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/c/pull/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/pull/r") https://api.rest.sh/api/s/c/pull/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| success | string |  ``` Required ```  | - | 
+| cname | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "success": "SHOWS TRUE WHEN PULL ZONE IS DEPLOYED SUCCESSFULLY",
+  "cname": "RECORD TO APPEND YOUR URLS TO VIA A CNAME"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/c/push/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/push/r") https://api.rest.sh/api/s/c/push/r
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| success | string |  ``` Required ```  | - | 
+| upload | string |  ``` Required ```  | - | 
+| cname | string |  ``` Required ```  | - | 
+
+
+
+#### Example
+```
+{
+  "success": "SHOWS TRUE WHEN PUSH ZONE IS DEPLOYED SUCCESSFULLY",
+  "upload": "LIST OF FILES UPLOADED TO YOUR PUSH ZONE",
+  "cname": "RECORD TO APPEND YOUR URLS TO VIA A CNAME"
+}
+```
+
+
+
+## <a name="https://api.rest.sh/api/s/o"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/o") https://api.rest.sh/api/s/o
+
+
+
+
+
+
+
+
+| Name | Type | Tags | Description |
+|-----------|------| ---- |-------------| 
+| key | string |  ``` Required ```  | - | 
+| uid | string |  ``` Required ```  | - | 
+| app | string |  ``` Required ```  | - | 
 
 
 
@@ -3808,18 +4130,16 @@ Raw
 {
   "key": "YOUR API KEY",
   "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID"
+  "app": "APP GIT URL or URL CONTAINING YOUR APP IN A ZIP FILE"
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/service/dns/add_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/service/dns/addRequest") https://api.rest.sh/api/service/dns/addRequest
+## <a name="https://api.rest.sh/api/s/o/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/o/r") https://api.rest.sh/api/s/o/r
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3827,28 +4147,25 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| domain | string |  ``` Required ```  | TODO: Add a property description | 
+| success | string |  ``` Required ```  | - | 
+| app | string |  ``` Required ```  | - | 
 
 
 
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "domain": "DOMAINS SEPERATED BY A COMMA TO ADD TO DNS"
+  "success": "RETURNS TRUE IF APP WAS SUCCESSFULLY OBFUSCTATED AND PROTECTED",
+  "app": "OBFUSCATED APP URL"
 }
 ```
 
 
 
-## <a name="info12"></a>![Type: ](https://apidocs.io/img/method.png "Info12") Info12
+## <a name="https://api.rest.sh/api/s/w/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/r") https://api.rest.sh/api/s/w/r
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3856,30 +4173,25 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| apiuid | string |  ``` Required ```  | TODO: Add a property description | 
-| avatar | string |  ``` Required ```  | TODO: Add a property description | 
-| custom-input | string |  ``` Required ```  | TODO: Add a property description | 
+| success | string |  ``` Required ```  | - | 
+| cname | string |  ``` Required ```  | - | 
 
 
 
 #### Example
 ```
 {
-  "uid": "uid",
-  "apiuid": "apiuid",
-  "avatar": "avatar",
-  "custom-input": "custom-input"
+  "success": "SHOWS TRUE WHEN THE WAF AND ORIGIN SHIELD (DDOS PROTECTION) IS DEPLOYED SUCCESSFULLY",
+  "cname": "RECORD TO APPEND YOUR URLS TO VIA A CNAME"
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/user/update_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/updateResponse") https://api.rest.sh/api/user/updateResponse
+## <a name="https://api.rest.sh/api/s/w/c/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/c/r") https://api.rest.sh/api/s/w/c/r
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3887,35 +4199,25 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| updated | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-| info | [Info12](#info12) |  ``` Required ```  | TODO: Add a property description | 
+| success | string |  ``` Required ```  | - | 
+| rule | string |  ``` Required ```  | - | 
 
 
 
 #### Example
 ```
 {
-  "request": "REQUEST TYPE",
-  "updated": "RETURNS TRUE, IF USERS PROFILE WAS SUCCESSFULLY UPDATED",
-  "id": "TRANSACTION ID",
-  "info": {
-    "uid": "USERS ID",
-    "apiuid": "API SIDE USER ID",
-    "avatar": "INPUTTED AVATAR URL",
-    "custom-input": "CUSTOM INPUTTED PROFILE DATA"
-  }
+  "success": "SHOWS TRUE WHEN THE WAF AND ORIGIN SHIELD (DDOS PROTECTION) IS DEPLOYED SUCCESSFULLY",
+  "rule": "RULES APPLIED TO WAF"
 }
 ```
 
 
 
-## <a name="https://api.rest.sh/api/2fa/token_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/tokenResponse") https://api.rest.sh/api/2fa/tokenResponse
+## <a name="log"></a>![Type: ](https://apidocs.io/img/method.png "Log") Log
 
 
 
-> TODO: Add a model description
 
 
 
@@ -3923,325 +4225,26 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| correct | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
+| MMDDYYYYHHMMSSX | [MMDDYYYYHHMMSS](#mmddyyyyhhmmss) |  ``` Required ```  | - | 
+| MMDDYYYYHHMMSSY | [MMDDYYYYHHMMSS](#mmddyyyyhhmmss) |  ``` Required ```  | - | 
 
 
 
 #### Example
 ```
 {
-  "request": "REQUEST TYPE",
-  "correct": "RETURNS IF 2FA TOKEN IS CORRECT",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/2fa_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2faRequest") https://api.rest.sh/api/2faRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| to | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "to": "USERS UID"
-}
-```
-
-
-
-## <a name="info7"></a>![Type: ](https://apidocs.io/img/method.png "Info7") Info7
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| apiuid | string |  ``` Required ```  | TODO: Add a property description | 
-| realname | string |  ``` Required ```  | TODO: Add a property description | 
-| displayname | string |  ``` Required ```  | TODO: Add a property description | 
-| email | string |  ``` Required ```  | TODO: Add a property description | 
-| address | string |  ``` Required ```  | TODO: Add a property description | 
-| phone | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "uid": "uid",
-  "apiuid": "apiuid",
-  "realname": "realname",
-  "displayname": "displayname",
-  "email": "email",
-  "address": "address",
-  "phone": "phone"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/verify/address_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify/addressResponse") https://api.rest.sh/api/verify/addressResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| active | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "request": "REQUEST TYPE",
-  "active": "RETURNS TRUE, IF ADDRESS IS ACTIVE AND IF USER IS CURRENTLY THERE",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/auth/user/register_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/auth/user/registerResponse") https://api.rest.sh/api/auth/user/registerResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| active | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-| info | [Info7](#info7) |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "request": "REQUEST TYPE",
-  "active": "RETURNS TRUE, IF USER WAS SUCCESSFULLY REGISTERED",
-  "id": "TRANSACTION ID",
-  "info": {
-    "uid": "USERS ID",
-    "apiuid": "API SIDE USER ID",
-    "realname": "USERS REAL NAME",
-    "displayname": "USERS USERNAME",
-    "email": "USERS EMAIL",
-    "address": "USERS ADDRESS",
-    "phone": "USERS CELL PHONE NUMBER"
-  }
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/verify/user_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verify/userResponse") https://api.rest.sh/api/verify/userResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| correct | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "request": "REQUEST TYPE",
-  "correct": "RETURNS IF 2FA TOKEN IS CORRECT",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/auth/user/login_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/auth/user/loginResponse") https://api.rest.sh/api/auth/user/loginResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| valid | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-| info | [Info](#info) |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "request": "REQUEST TYPE",
-  "uid": "Users UID",
-  "valid": "RETURNS TRUE IF USER LOGIN DETAILS ARE VALID",
-  "id": "TRANSACTION ID",
-  "info": {
-    "uid": "USERS ID",
-    "apiuid": "API SIDE USER ID",
-    "realname": "USERS REAL NAME",
-    "displayname": "USERS USERNAME",
-    "avatar": "USER AVATAR URL",
-    "email": "USERS EMAIL",
-    "address": "USERS ADDRESS",
-    "phone": "USERS CELL PHONE NUMBER",
-    "lastlogin": "USERS LAST LOGIN",
-    "ip": "USERS IP",
-    "2fa": "RETURNS TRUE IF 2FA IS ENABLED",
-    "iplock": "RETURNS TRUE IF IP LOCK IS ENABLED"
-  }
-}
-```
-
-
-
-## <a name="mmddyyyyhhmmss"></a>![Type: ](https://apidocs.io/img/method.png "MMDDYYYYHHMMSS") MMDDYYYYHHMMSS
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| data | [Data](#data) |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "data": {
-    "result": "result",
-    "content": "content",
-    "id": "id"
-  }
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/auth/user/login_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/auth/user/loginRequest") https://api.rest.sh/api/auth/user/loginRequest
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| user | string |  ``` Required ```  | TODO: Add a property description | 
-| password | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "password": "SEND A ENCRYPTED VERSION OF YOUR USERS PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/security/logging/info_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/logging/infoResponse") https://api.rest.sh/api/security/logging/infoResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| log | [Log](#log) |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "log": {
-    "01010101245901": {
-      "data": {
-        "result": "INFO",
-        "content": "LOG: CONTENT AND ACTIONS PERFORMED",
-        "id": "FUNCTION ID"
-      }
-    },
-    "01010101245902": {
-      "data": {
-        "result": "ERROR",
-        "content": "LOG: ERROR CONTENT AND ACTIONS PERFORMED",
-        "id": "FUNCTION ID"
-      }
+  "MMDDYYYYHHMMSSX": {
+    "data": {
+      "result": "result",
+      "content": "content",
+      "id": "id"
+    }
+  },
+  "MMDDYYYYHHMMSSY": {
+    "data": {
+      "result": "result",
+      "content": "content",
+      "id": "id"
     }
   }
 }
@@ -4249,40 +4252,10 @@ Raw
 
 
 
-## <a name="https://api.rest.sh/api/verify_request"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/verifyRequest") https://api.rest.sh/api/verifyRequest
+## <a name="data"></a>![Type: ](https://apidocs.io/img/method.png "Data") Data
 
 
 
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| key | string |  ``` Required ```  | TODO: Add a property description | 
-| uid | string |  ``` Required ```  | TODO: Add a property description | 
-| to | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "to": "USERS UID"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/security/logging_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/security/loggingResponse") https://api.rest.sh/api/security/loggingResponse
-
-
-
-> TODO: Add a model description
 
 
 
@@ -4290,43 +4263,18 @@ Raw
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| success | string |  ``` Required ```  | TODO: Add a property description | 
+| result | string |  ``` Required ```  | - | 
+| content | string |  ``` Required ```  | - | 
+| id | string |  ``` Required ```  | - | 
 
 
 
 #### Example
 ```
 {
-  "success": "RETURNS TRUE IF ADVANCED LOGGING IS ACTIVATED"
-}
-```
-
-
-
-## <a name="https://api.rest.sh/api/user/delete_response"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/user/deleteResponse") https://api.rest.sh/api/user/deleteResponse
-
-
-
-> TODO: Add a model description
-
-
-
-
-
-| Name | Type | Tags | Description |
-|-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | TODO: Add a property description | 
-| deleted | string |  ``` Required ```  | TODO: Add a property description | 
-| id | string |  ``` Required ```  | TODO: Add a property description | 
-
-
-
-#### Example
-```
-{
-  "request": "REQUEST TYPE",
-  "deleted": "RETURNS TRUE, IF USERS ACCOUNT WAS SUCCESSFULLY DELETED",
-  "id": "TRANSACTION ID"
+  "result": "result",
+  "content": "content",
+  "id": "id"
 }
 ```
 

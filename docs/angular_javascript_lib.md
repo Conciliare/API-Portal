@@ -235,60 +235,60 @@ Import the reference to the generated SDK files inside your html file like:
 
     <!-- Models -->
     <script src="scripts/SMASH/Models/BaseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityLoggingInfoRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityLoggingRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiDataRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVerifyAddressRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityWafConfigureRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityWafRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/Info17Model.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityEncryptionResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityEncryptionRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceCdnPushRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceCdnPullRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUserUpdateRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceDnsConfigureRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/DataModel.js"></script>
-    <script src="scripts/SMASH/Models/LogModel.js"></script>
-    <script src="scripts/SMASH/Models/NameserversModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceHostingResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityWafConfigureResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAuthUserRegisterRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityWafResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceObfuscationResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceHostingRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiDataResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceObfuscationRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiImageResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiImageRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/InfoModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faTokenRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVerifyUserRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceCdnPushResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceCdnPullResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVerifyResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUserDeleteRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceDnsConfigureResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUserInfoResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceDnsAddResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUserInfoRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiServiceDnsAddRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/Info12Model.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUserUpdateResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faTokenResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/Info7Model.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVerifyAddressResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAuthUserRegisterResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVerifyUserResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAuthUserLoginResponseModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLIRModel.js"></script>
     <script src="scripts/SMASH/Models/MMDDYYYYHHMMSSModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAuthUserLoginRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityLoggingInfoResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVerifyRequestModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSecurityLoggingResponseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUserDeleteResponseModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiAULModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiAULRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiAURRModel.js"></script>
+    <script src="scripts/SMASH/Models/Info7Model.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUURModel.js"></script>
+    <script src="scripts/SMASH/Models/Info12Model.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUIModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUIRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUDModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVUModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faTModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiIModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiIRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiDRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSHModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSHRModel.js"></script>
+    <script src="scripts/SMASH/Models/NameserversModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDCModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPullModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPushModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSEModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSERModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWCModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLIModel.js"></script>
+    <script src="scripts/SMASH/Models/InfoModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiAURModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUUModel.js"></script>
+    <script src="scripts/SMASH/Models/Info17Model.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVAModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiDModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUDRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVURModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVARModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faTRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDAModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDARModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDCRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPullRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPushRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSOModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSORModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWRModel.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWCRModel.js"></script>
+    <script src="scripts/SMASH/Models/LogModel.js"></script>
+    <script src="scripts/SMASH/Models/DataModel.js"></script>
 
     ...
 </head>
@@ -399,11 +399,11 @@ app.factory('config', function($scope, Configuration)
 The singleton instance of the ``` AdvancedLoggingController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSecurityLoggingInfoResponseModel, HttpsApiRestShApiSecurityLoggingResponseModel){
+	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSLIRModel, HttpsApiRestShApiSLRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_security_logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSecurityLoggingInfo") getHttpsApiRestShApiSecurityLoggingInfo
+### <a name="get_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSLI") getHttpsApiRestShApiSLI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -411,7 +411,7 @@ The singleton instance of the ``` AdvancedLoggingController ``` class can be acc
 
 
 ```javascript
-function getHttpsApiRestShApiSecurityLoggingInfo(input)
+function getHttpsApiRestShApiSLI(input)
 ```
 #### Parameters
 
@@ -431,7 +431,7 @@ function getHttpsApiRestShApiSecurityLoggingInfo(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSecurityLoggingInfoResponseModel){
+	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSLIRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -441,7 +441,7 @@ function getHttpsApiRestShApiSecurityLoggingInfo(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = AdvancedLoggingController.getHttpsApiRestShApiSecurityLoggingInfo(input);
+		var result = AdvancedLoggingController.getHttpsApiRestShApiSLI(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -456,7 +456,7 @@ function getHttpsApiRestShApiSecurityLoggingInfo(input)
 
 
 
-### <a name="get_https_api_rest_sh_api_security_logging"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSecurityLogging") getHttpsApiRestShApiSecurityLogging
+### <a name="get_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSL") getHttpsApiRestShApiSL
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -464,7 +464,7 @@ function getHttpsApiRestShApiSecurityLoggingInfo(input)
 
 
 ```javascript
-function getHttpsApiRestShApiSecurityLogging(input)
+function getHttpsApiRestShApiSL(input)
 ```
 #### Parameters
 
@@ -484,7 +484,7 @@ function getHttpsApiRestShApiSecurityLogging(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSecurityLoggingResponseModel){
+	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSLRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -494,7 +494,7 @@ function getHttpsApiRestShApiSecurityLogging(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = AdvancedLoggingController.getHttpsApiRestShApiSecurityLogging(input);
+		var result = AdvancedLoggingController.getHttpsApiRestShApiSL(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -509,7 +509,7 @@ function getHttpsApiRestShApiSecurityLogging(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_security_logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSecurityLoggingInfo") createHttpsApiRestShApiSecurityLoggingInfo
+### <a name="create_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSLI") createHttpsApiRestShApiSLI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -517,7 +517,7 @@ function getHttpsApiRestShApiSecurityLogging(input)
 
 
 ```javascript
-function createHttpsApiRestShApiSecurityLoggingInfo(input)
+function createHttpsApiRestShApiSLI(input)
 ```
 #### Parameters
 
@@ -533,13 +533,13 @@ function createHttpsApiRestShApiSecurityLoggingInfo(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSecurityLoggingInfoResponseModel){
+	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSLIRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiSecurityLoggingInfoRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiSLIModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = AdvancedLoggingController.createHttpsApiRestShApiSecurityLoggingInfo(input);
+		var result = AdvancedLoggingController.createHttpsApiRestShApiSLI(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -554,7 +554,7 @@ function createHttpsApiRestShApiSecurityLoggingInfo(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_security_logging"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSecurityLogging") createHttpsApiRestShApiSecurityLogging
+### <a name="create_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSL") createHttpsApiRestShApiSL
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -562,7 +562,7 @@ function createHttpsApiRestShApiSecurityLoggingInfo(input)
 
 
 ```javascript
-function createHttpsApiRestShApiSecurityLogging(input)
+function createHttpsApiRestShApiSL(input)
 ```
 #### Parameters
 
@@ -578,13 +578,13 @@ function createHttpsApiRestShApiSecurityLogging(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSecurityLoggingResponseModel){
+	app.controller("testController", function($scope, AdvancedLoggingController, HttpsApiRestShApiSLRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiSecurityLoggingRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiSLModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = AdvancedLoggingController.createHttpsApiRestShApiSecurityLogging(input);
+		var result = AdvancedLoggingController.createHttpsApiRestShApiSL(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -608,11 +608,11 @@ function createHttpsApiRestShApiSecurityLogging(input)
 The singleton instance of the ``` WAFDDOSProtectionController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSecurityWafConfigureResponseModel, HttpsApiRestShApiSecurityWafResponseModel){
+	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSWCRModel, HttpsApiRestShApiSWRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_security_waf_configure"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSecurityWafConfigure") getHttpsApiRestShApiSecurityWafConfigure
+### <a name="get_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSWC") getHttpsApiRestShApiSWC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -620,7 +620,7 @@ The singleton instance of the ``` WAFDDOSProtectionController ``` class can be a
 
 
 ```javascript
-function getHttpsApiRestShApiSecurityWafConfigure(input)
+function getHttpsApiRestShApiSWC(input)
 ```
 #### Parameters
 
@@ -640,7 +640,7 @@ function getHttpsApiRestShApiSecurityWafConfigure(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSecurityWafConfigureResponseModel){
+	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSWCRModel){
         var input = [];
         input['key'] = 'API';
         input['uid'] = 'UID';
@@ -650,7 +650,7 @@ function getHttpsApiRestShApiSecurityWafConfigure(input)
         input['contentType'] = 'application/json';
 
 
-		var result = WAFDDOSProtectionController.getHttpsApiRestShApiSecurityWafConfigure(input);
+		var result = WAFDDOSProtectionController.getHttpsApiRestShApiSWC(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -665,7 +665,7 @@ function getHttpsApiRestShApiSecurityWafConfigure(input)
 
 
 
-### <a name="get_https_api_rest_sh_api_security_waf"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSecurityWaf") getHttpsApiRestShApiSecurityWaf
+### <a name="get_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSW") getHttpsApiRestShApiSW
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -673,7 +673,7 @@ function getHttpsApiRestShApiSecurityWafConfigure(input)
 
 
 ```javascript
-function getHttpsApiRestShApiSecurityWaf(input)
+function getHttpsApiRestShApiSW(input)
 ```
 #### Parameters
 
@@ -692,7 +692,7 @@ function getHttpsApiRestShApiSecurityWaf(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSecurityWafResponseModel){
+	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSWRModel){
         var input = [];
         input['key'] = 'API';
         input['uid'] = 'UID';
@@ -701,7 +701,7 @@ function getHttpsApiRestShApiSecurityWaf(input)
         input['contentType'] = 'application/json';
 
 
-		var result = WAFDDOSProtectionController.getHttpsApiRestShApiSecurityWaf(input);
+		var result = WAFDDOSProtectionController.getHttpsApiRestShApiSW(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -716,7 +716,7 @@ function getHttpsApiRestShApiSecurityWaf(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_security_waf_configure"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSecurityWafConfigure") createHttpsApiRestShApiSecurityWafConfigure
+### <a name="create_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSWC") createHttpsApiRestShApiSWC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -724,7 +724,7 @@ function getHttpsApiRestShApiSecurityWaf(input)
 
 
 ```javascript
-function createHttpsApiRestShApiSecurityWafConfigure(input)
+function createHttpsApiRestShApiSWC(input)
 ```
 #### Parameters
 
@@ -740,9 +740,9 @@ function createHttpsApiRestShApiSecurityWafConfigure(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSecurityWafConfigureResponseModel){
+	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSWCRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiSecurityWafConfigureRequestModel({
+        input['body'] = new HttpsApiRestShApiSWCModel({
   "key": "YOUR API KEY",
   "uid": "YOUR USER ID",
   "name": "WHAT YOU WISH TO NAME YOUR WAF",
@@ -752,7 +752,7 @@ function createHttpsApiRestShApiSecurityWafConfigure(input)
         input['contentType'] = 'application/json';
 
 
-		var result = WAFDDOSProtectionController.createHttpsApiRestShApiSecurityWafConfigure(input);
+		var result = WAFDDOSProtectionController.createHttpsApiRestShApiSWC(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -767,7 +767,7 @@ function createHttpsApiRestShApiSecurityWafConfigure(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_security_waf"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSecurityWaf") createHttpsApiRestShApiSecurityWaf
+### <a name="create_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSW") createHttpsApiRestShApiSW
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -775,7 +775,7 @@ function createHttpsApiRestShApiSecurityWafConfigure(input)
 
 
 ```javascript
-function createHttpsApiRestShApiSecurityWaf(input)
+function createHttpsApiRestShApiSW(input)
 ```
 #### Parameters
 
@@ -791,9 +791,9 @@ function createHttpsApiRestShApiSecurityWaf(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSecurityWafResponseModel){
+	app.controller("testController", function($scope, WAFDDOSProtectionController, HttpsApiRestShApiSWRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiSecurityWafRequestModel({
+        input['body'] = new HttpsApiRestShApiSWModel({
   "key": "YOUR API KEY",
   "uid": "YOUR USER ID",
   "origin": "ORIGIN YOU WISH TO PROTECT",
@@ -802,7 +802,7 @@ function createHttpsApiRestShApiSecurityWaf(input)
         input['contentType'] = 'application/json';
 
 
-		var result = WAFDDOSProtectionController.createHttpsApiRestShApiSecurityWaf(input);
+		var result = WAFDDOSProtectionController.createHttpsApiRestShApiSW(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -826,11 +826,11 @@ function createHttpsApiRestShApiSecurityWaf(input)
 The singleton instance of the ``` EncryptionController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, EncryptionController, HttpsApiRestShApiSecurityEncryptionResponseModel){
+	app.controller("testController", function($scope, EncryptionController, HttpsApiRestShApiSERModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_security_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.getHttpsApiRestShApiSecurityEncryption") getHttpsApiRestShApiSecurityEncryption
+### <a name="get_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.getHttpsApiRestShApiSE") getHttpsApiRestShApiSE
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -838,7 +838,7 @@ The singleton instance of the ``` EncryptionController ``` class can be accessed
 
 
 ```javascript
-function getHttpsApiRestShApiSecurityEncryption(input)
+function getHttpsApiRestShApiSE(input)
 ```
 #### Parameters
 
@@ -858,17 +858,17 @@ function getHttpsApiRestShApiSecurityEncryption(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, EncryptionController, HttpsApiRestShApiSecurityEncryptionResponseModel){
+	app.controller("testController", function($scope, EncryptionController, HttpsApiRestShApiSERModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
         input['data'] = 'data';
         input['method'] = 'method';
-        input['bit'] = 129;
+        input['bit'] = 134;
         input['contentType'] = 'Content-Type';
 
 
-		var result = EncryptionController.getHttpsApiRestShApiSecurityEncryption(input);
+		var result = EncryptionController.getHttpsApiRestShApiSE(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -883,7 +883,7 @@ function getHttpsApiRestShApiSecurityEncryption(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_security_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.createHttpsApiRestShApiSecurityEncryption") createHttpsApiRestShApiSecurityEncryption
+### <a name="create_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.createHttpsApiRestShApiSE") createHttpsApiRestShApiSE
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -891,7 +891,7 @@ function getHttpsApiRestShApiSecurityEncryption(input)
 
 
 ```javascript
-function createHttpsApiRestShApiSecurityEncryption(input)
+function createHttpsApiRestShApiSE(input)
 ```
 #### Parameters
 
@@ -907,13 +907,13 @@ function createHttpsApiRestShApiSecurityEncryption(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, EncryptionController, HttpsApiRestShApiSecurityEncryptionResponseModel){
+	app.controller("testController", function($scope, EncryptionController, HttpsApiRestShApiSERModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiSecurityEncryptionRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiSEModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = EncryptionController.createHttpsApiRestShApiSecurityEncryption(input);
+		var result = EncryptionController.createHttpsApiRestShApiSE(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -937,11 +937,11 @@ function createHttpsApiRestShApiSecurityEncryption(input)
 The singleton instance of the ``` CDNController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiServiceCdnPushResponseModel, HttpsApiRestShApiServiceCdnPullResponseModel){
+	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiSCPushRModel, HttpsApiRestShApiSCPullRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_service_cdn_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiServiceCdnPush") getHttpsApiRestShApiServiceCdnPush
+### <a name="get_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiSCPush") getHttpsApiRestShApiSCPush
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -949,7 +949,7 @@ The singleton instance of the ``` CDNController ``` class can be accessed via De
 
 
 ```javascript
-function getHttpsApiRestShApiServiceCdnPush(input)
+function getHttpsApiRestShApiSCPush(input)
 ```
 #### Parameters
 
@@ -968,7 +968,7 @@ function getHttpsApiRestShApiServiceCdnPush(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiServiceCdnPushResponseModel){
+	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiSCPushRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -977,7 +977,7 @@ function getHttpsApiRestShApiServiceCdnPush(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = CDNController.getHttpsApiRestShApiServiceCdnPush(input);
+		var result = CDNController.getHttpsApiRestShApiSCPush(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -992,7 +992,7 @@ function getHttpsApiRestShApiServiceCdnPush(input)
 
 
 
-### <a name="get_https_api_rest_sh_api_service_cdn_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiServiceCdnPull") getHttpsApiRestShApiServiceCdnPull
+### <a name="get_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiSCPull") getHttpsApiRestShApiSCPull
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1000,7 +1000,7 @@ function getHttpsApiRestShApiServiceCdnPush(input)
 
 
 ```javascript
-function getHttpsApiRestShApiServiceCdnPull(input)
+function getHttpsApiRestShApiSCPull(input)
 ```
 #### Parameters
 
@@ -1019,7 +1019,7 @@ function getHttpsApiRestShApiServiceCdnPull(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiServiceCdnPullResponseModel){
+	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiSCPullRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -1028,7 +1028,7 @@ function getHttpsApiRestShApiServiceCdnPull(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = CDNController.getHttpsApiRestShApiServiceCdnPull(input);
+		var result = CDNController.getHttpsApiRestShApiSCPull(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1043,7 +1043,7 @@ function getHttpsApiRestShApiServiceCdnPull(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_service_cdn_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiServiceCdnPush") createHttpsApiRestShApiServiceCdnPush
+### <a name="create_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiSCPush") createHttpsApiRestShApiSCPush
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1051,7 +1051,7 @@ function getHttpsApiRestShApiServiceCdnPull(input)
 
 
 ```javascript
-function createHttpsApiRestShApiServiceCdnPush(input)
+function createHttpsApiRestShApiSCPush(input)
 ```
 #### Parameters
 
@@ -1067,13 +1067,13 @@ function createHttpsApiRestShApiServiceCdnPush(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiServiceCdnPushResponseModel){
+	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiSCPushRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiServiceCdnPushRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiSCPushModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = CDNController.createHttpsApiRestShApiServiceCdnPush(input);
+		var result = CDNController.createHttpsApiRestShApiSCPush(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1088,7 +1088,7 @@ function createHttpsApiRestShApiServiceCdnPush(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_service_cdn_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiServiceCdnPull") createHttpsApiRestShApiServiceCdnPull
+### <a name="create_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiSCPull") createHttpsApiRestShApiSCPull
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1096,7 +1096,7 @@ function createHttpsApiRestShApiServiceCdnPush(input)
 
 
 ```javascript
-function createHttpsApiRestShApiServiceCdnPull(input)
+function createHttpsApiRestShApiSCPull(input)
 ```
 #### Parameters
 
@@ -1112,13 +1112,13 @@ function createHttpsApiRestShApiServiceCdnPull(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiServiceCdnPullResponseModel){
+	app.controller("testController", function($scope, CDNController, HttpsApiRestShApiSCPullRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiServiceCdnPullRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiSCPullModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = CDNController.createHttpsApiRestShApiServiceCdnPull(input);
+		var result = CDNController.createHttpsApiRestShApiSCPull(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1142,11 +1142,11 @@ function createHttpsApiRestShApiServiceCdnPull(input)
 The singleton instance of the ``` DNSController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiServiceDnsConfigureResponseModel, HttpsApiRestShApiServiceDnsAddResponseModel){
+	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiSDCRModel, HttpsApiRestShApiSDARModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_service_dns_configure"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiServiceDnsConfigure") getHttpsApiRestShApiServiceDnsConfigure
+### <a name="get_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiSDC") getHttpsApiRestShApiSDC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1154,7 +1154,7 @@ The singleton instance of the ``` DNSController ``` class can be accessed via De
 
 
 ```javascript
-function getHttpsApiRestShApiServiceDnsConfigure(input)
+function getHttpsApiRestShApiSDC(input)
 ```
 #### Parameters
 
@@ -1173,7 +1173,7 @@ function getHttpsApiRestShApiServiceDnsConfigure(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiServiceDnsConfigureResponseModel){
+	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiSDCRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -1182,7 +1182,7 @@ function getHttpsApiRestShApiServiceDnsConfigure(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = DNSController.getHttpsApiRestShApiServiceDnsConfigure(input);
+		var result = DNSController.getHttpsApiRestShApiSDC(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1197,7 +1197,7 @@ function getHttpsApiRestShApiServiceDnsConfigure(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_service_dns_configure"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiServiceDnsConfigure") createHttpsApiRestShApiServiceDnsConfigure
+### <a name="create_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiSDC") createHttpsApiRestShApiSDC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1205,7 +1205,7 @@ function getHttpsApiRestShApiServiceDnsConfigure(input)
 
 
 ```javascript
-function createHttpsApiRestShApiServiceDnsConfigure(input)
+function createHttpsApiRestShApiSDC(input)
 ```
 #### Parameters
 
@@ -1221,13 +1221,13 @@ function createHttpsApiRestShApiServiceDnsConfigure(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiServiceDnsConfigureResponseModel){
+	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiSDCRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiServiceDnsConfigureRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiSDCModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = DNSController.createHttpsApiRestShApiServiceDnsConfigure(input);
+		var result = DNSController.createHttpsApiRestShApiSDC(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1242,7 +1242,7 @@ function createHttpsApiRestShApiServiceDnsConfigure(input)
 
 
 
-### <a name="get_https_api_rest_sh_api_service_dns_add"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiServiceDnsAdd") getHttpsApiRestShApiServiceDnsAdd
+### <a name="get_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiSDA") getHttpsApiRestShApiSDA
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1250,7 +1250,7 @@ function createHttpsApiRestShApiServiceDnsConfigure(input)
 
 
 ```javascript
-function getHttpsApiRestShApiServiceDnsAdd(input)
+function getHttpsApiRestShApiSDA(input)
 ```
 #### Parameters
 
@@ -1268,7 +1268,7 @@ function getHttpsApiRestShApiServiceDnsAdd(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiServiceDnsAddResponseModel){
+	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiSDARModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -1276,7 +1276,7 @@ function getHttpsApiRestShApiServiceDnsAdd(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = DNSController.getHttpsApiRestShApiServiceDnsAdd(input);
+		var result = DNSController.getHttpsApiRestShApiSDA(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1291,7 +1291,7 @@ function getHttpsApiRestShApiServiceDnsAdd(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_service_dns_add"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiServiceDnsAdd") createHttpsApiRestShApiServiceDnsAdd
+### <a name="create_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiSDA") createHttpsApiRestShApiSDA
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1299,7 +1299,7 @@ function getHttpsApiRestShApiServiceDnsAdd(input)
 
 
 ```javascript
-function createHttpsApiRestShApiServiceDnsAdd(input)
+function createHttpsApiRestShApiSDA(input)
 ```
 #### Parameters
 
@@ -1315,13 +1315,13 @@ function createHttpsApiRestShApiServiceDnsAdd(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiServiceDnsAddResponseModel){
+	app.controller("testController", function($scope, DNSController, HttpsApiRestShApiSDARModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiServiceDnsAddRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiSDAModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = DNSController.createHttpsApiRestShApiServiceDnsAdd(input);
+		var result = DNSController.createHttpsApiRestShApiSDA(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1345,11 +1345,11 @@ function createHttpsApiRestShApiServiceDnsAdd(input)
 The singleton instance of the ``` CodeObfuscationController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, CodeObfuscationController, HttpsApiRestShApiServiceObfuscationResponseModel){
+	app.controller("testController", function($scope, CodeObfuscationController, HttpsApiRestShApiSORModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_service_obfuscation"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.getHttpsApiRestShApiServiceObfuscation") getHttpsApiRestShApiServiceObfuscation
+### <a name="get_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.getHttpsApiRestShApiSO") getHttpsApiRestShApiSO
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1357,7 +1357,7 @@ The singleton instance of the ``` CodeObfuscationController ``` class can be acc
 
 
 ```javascript
-function getHttpsApiRestShApiServiceObfuscation(input)
+function getHttpsApiRestShApiSO(input)
 ```
 #### Parameters
 
@@ -1375,7 +1375,7 @@ function getHttpsApiRestShApiServiceObfuscation(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, CodeObfuscationController, HttpsApiRestShApiServiceObfuscationResponseModel){
+	app.controller("testController", function($scope, CodeObfuscationController, HttpsApiRestShApiSORModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -1383,7 +1383,7 @@ function getHttpsApiRestShApiServiceObfuscation(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = CodeObfuscationController.getHttpsApiRestShApiServiceObfuscation(input);
+		var result = CodeObfuscationController.getHttpsApiRestShApiSO(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1398,7 +1398,7 @@ function getHttpsApiRestShApiServiceObfuscation(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_service_obfuscation"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.createHttpsApiRestShApiServiceObfuscation") createHttpsApiRestShApiServiceObfuscation
+### <a name="create_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.createHttpsApiRestShApiSO") createHttpsApiRestShApiSO
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1406,7 +1406,7 @@ function getHttpsApiRestShApiServiceObfuscation(input)
 
 
 ```javascript
-function createHttpsApiRestShApiServiceObfuscation(input)
+function createHttpsApiRestShApiSO(input)
 ```
 #### Parameters
 
@@ -1422,13 +1422,13 @@ function createHttpsApiRestShApiServiceObfuscation(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, CodeObfuscationController, HttpsApiRestShApiServiceObfuscationResponseModel){
+	app.controller("testController", function($scope, CodeObfuscationController, HttpsApiRestShApiSORModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiServiceObfuscationRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiSOModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = CodeObfuscationController.createHttpsApiRestShApiServiceObfuscation(input);
+		var result = CodeObfuscationController.createHttpsApiRestShApiSO(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1452,11 +1452,11 @@ function createHttpsApiRestShApiServiceObfuscation(input)
 The singleton instance of the ``` HostingController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, HostingController, HttpsApiRestShApiServiceHostingResponseModel){
+	app.controller("testController", function($scope, HostingController, HttpsApiRestShApiSHRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_service_hosting"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.getHttpsApiRestShApiServiceHosting") getHttpsApiRestShApiServiceHosting
+### <a name="get_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.getHttpsApiRestShApiSH") getHttpsApiRestShApiSH
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1464,7 +1464,7 @@ The singleton instance of the ``` HostingController ``` class can be accessed vi
 
 
 ```javascript
-function getHttpsApiRestShApiServiceHosting(input)
+function getHttpsApiRestShApiSH(input)
 ```
 #### Parameters
 
@@ -1483,7 +1483,7 @@ function getHttpsApiRestShApiServiceHosting(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, HostingController, HttpsApiRestShApiServiceHostingResponseModel){
+	app.controller("testController", function($scope, HostingController, HttpsApiRestShApiSHRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -1492,7 +1492,7 @@ function getHttpsApiRestShApiServiceHosting(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = HostingController.getHttpsApiRestShApiServiceHosting(input);
+		var result = HostingController.getHttpsApiRestShApiSH(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1507,7 +1507,7 @@ function getHttpsApiRestShApiServiceHosting(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_service_hosting"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.createHttpsApiRestShApiServiceHosting") createHttpsApiRestShApiServiceHosting
+### <a name="create_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.createHttpsApiRestShApiSH") createHttpsApiRestShApiSH
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1515,7 +1515,7 @@ function getHttpsApiRestShApiServiceHosting(input)
 
 
 ```javascript
-function createHttpsApiRestShApiServiceHosting(input)
+function createHttpsApiRestShApiSH(input)
 ```
 #### Parameters
 
@@ -1531,13 +1531,13 @@ function createHttpsApiRestShApiServiceHosting(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, HostingController, HttpsApiRestShApiServiceHostingResponseModel){
+	app.controller("testController", function($scope, HostingController, HttpsApiRestShApiSHRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiServiceHostingRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiSHModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = HostingController.createHttpsApiRestShApiServiceHosting(input);
+		var result = HostingController.createHttpsApiRestShApiSH(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1561,11 +1561,11 @@ function createHttpsApiRestShApiServiceHosting(input)
 The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPIController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, DataManipulationConversionSortingAndCompressionAPIController, HttpsApiRestShApiDataResponseModel){
+	app.controller("testController", function($scope, DataManipulationConversionSortingAndCompressionAPIController, HttpsApiRestShApiDRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_data"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.getHttpsApiRestShApiData") getHttpsApiRestShApiData
+### <a name="get_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.getHttpsApiRestShApiD") getHttpsApiRestShApiD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1573,7 +1573,7 @@ The singleton instance of the ``` DataManipulationConversionSortingAndCompressio
 
 
 ```javascript
-function getHttpsApiRestShApiData(input)
+function getHttpsApiRestShApiD(input)
 ```
 #### Parameters
 
@@ -1593,7 +1593,7 @@ function getHttpsApiRestShApiData(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, DataManipulationConversionSortingAndCompressionAPIController, HttpsApiRestShApiDataResponseModel){
+	app.controller("testController", function($scope, DataManipulationConversionSortingAndCompressionAPIController, HttpsApiRestShApiDRModel){
         var input = [];
         input['key'] = 'API';
         input['uid'] = 'UID';
@@ -1603,7 +1603,7 @@ function getHttpsApiRestShApiData(input)
         input['contentType'] = 'application/json';
 
 
-		var result = DataManipulationConversionSortingAndCompressionAPIController.getHttpsApiRestShApiData(input);
+		var result = DataManipulationConversionSortingAndCompressionAPIController.getHttpsApiRestShApiD(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1618,7 +1618,7 @@ function getHttpsApiRestShApiData(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_data"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.createHttpsApiRestShApiData") createHttpsApiRestShApiData
+### <a name="create_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.createHttpsApiRestShApiD") createHttpsApiRestShApiD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1626,7 +1626,7 @@ function getHttpsApiRestShApiData(input)
 
 
 ```javascript
-function createHttpsApiRestShApiData(input)
+function createHttpsApiRestShApiD(input)
 ```
 #### Parameters
 
@@ -1642,9 +1642,9 @@ function createHttpsApiRestShApiData(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, DataManipulationConversionSortingAndCompressionAPIController, HttpsApiRestShApiDataResponseModel){
+	app.controller("testController", function($scope, DataManipulationConversionSortingAndCompressionAPIController, HttpsApiRestShApiDRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiDataRequestModel({
+        input['body'] = new HttpsApiRestShApiDModel({
   "key": "YOUR API KEY",
   "uid": "YOUR USER ID",
   "user": "USERS EMAIL OR USERNAME",
@@ -1658,7 +1658,7 @@ function createHttpsApiRestShApiData(input)
         input['contentType'] = 'application/json';
 
 
-		var result = DataManipulationConversionSortingAndCompressionAPIController.createHttpsApiRestShApiData(input);
+		var result = DataManipulationConversionSortingAndCompressionAPIController.createHttpsApiRestShApiD(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1682,11 +1682,11 @@ function createHttpsApiRestShApiData(input)
 The singleton instance of the ``` ImageManipulationAndModerationAPIController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, ImageManipulationAndModerationAPIController, HttpsApiRestShApiImageResponseModel){
+	app.controller("testController", function($scope, ImageManipulationAndModerationAPIController, HttpsApiRestShApiIRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_image"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.getHttpsApiRestShApiImage") getHttpsApiRestShApiImage
+### <a name="get_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.getHttpsApiRestShApiI") getHttpsApiRestShApiI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1694,7 +1694,7 @@ The singleton instance of the ``` ImageManipulationAndModerationAPIController ``
 
 
 ```javascript
-function getHttpsApiRestShApiImage(input)
+function getHttpsApiRestShApiI(input)
 ```
 #### Parameters
 
@@ -1713,7 +1713,7 @@ function getHttpsApiRestShApiImage(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, ImageManipulationAndModerationAPIController, HttpsApiRestShApiImageResponseModel){
+	app.controller("testController", function($scope, ImageManipulationAndModerationAPIController, HttpsApiRestShApiIRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -1722,7 +1722,7 @@ function getHttpsApiRestShApiImage(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = ImageManipulationAndModerationAPIController.getHttpsApiRestShApiImage(input);
+		var result = ImageManipulationAndModerationAPIController.getHttpsApiRestShApiI(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1737,7 +1737,7 @@ function getHttpsApiRestShApiImage(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_image"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.createHttpsApiRestShApiImage") createHttpsApiRestShApiImage
+### <a name="create_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.createHttpsApiRestShApiI") createHttpsApiRestShApiI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1745,7 +1745,7 @@ function getHttpsApiRestShApiImage(input)
 
 
 ```javascript
-function createHttpsApiRestShApiImage(input)
+function createHttpsApiRestShApiI(input)
 ```
 #### Parameters
 
@@ -1761,13 +1761,13 @@ function createHttpsApiRestShApiImage(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, ImageManipulationAndModerationAPIController, HttpsApiRestShApiImageResponseModel){
+	app.controller("testController", function($scope, ImageManipulationAndModerationAPIController, HttpsApiRestShApiIRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiImageRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiIModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = ImageManipulationAndModerationAPIController.createHttpsApiRestShApiImage(input);
+		var result = ImageManipulationAndModerationAPIController.createHttpsApiRestShApiI(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1791,11 +1791,11 @@ function createHttpsApiRestShApiImage(input)
 The singleton instance of the ``` VerificationController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVerifyAddressResponseModel, HttpsApiRestShApiVerifyUserResponseModel, HttpsApiRestShApiVerifyResponseModel){
+	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVARModel, HttpsApiRestShApiVURModel, HttpsApiRestShApiVRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_verify_address"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVerifyAddress") getHttpsApiRestShApiVerifyAddress
+### <a name="get_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVA") getHttpsApiRestShApiVA
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1803,7 +1803,7 @@ The singleton instance of the ``` VerificationController ``` class can be access
 
 
 ```javascript
-function getHttpsApiRestShApiVerifyAddress(input)
+function getHttpsApiRestShApiVA(input)
 ```
 #### Parameters
 
@@ -1826,7 +1826,7 @@ function getHttpsApiRestShApiVerifyAddress(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVerifyAddressResponseModel){
+	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVARModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -1835,11 +1835,11 @@ function getHttpsApiRestShApiVerifyAddress(input)
         input['sa'] = 'sa';
         input['c'] = 'c';
         input['s'] = 's';
-        input['z'] = 87;
+        input['z'] = 134;
         input['contentType'] = 'Content-Type';
 
 
-		var result = VerificationController.getHttpsApiRestShApiVerifyAddress(input);
+		var result = VerificationController.getHttpsApiRestShApiVA(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1854,7 +1854,7 @@ function getHttpsApiRestShApiVerifyAddress(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_verify_address"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVerifyAddress") createHttpsApiRestShApiVerifyAddress
+### <a name="create_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVA") createHttpsApiRestShApiVA
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1862,7 +1862,7 @@ function getHttpsApiRestShApiVerifyAddress(input)
 
 
 ```javascript
-function createHttpsApiRestShApiVerifyAddress(input)
+function createHttpsApiRestShApiVA(input)
 ```
 #### Parameters
 
@@ -1878,13 +1878,13 @@ function createHttpsApiRestShApiVerifyAddress(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVerifyAddressResponseModel){
+	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVARModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiVerifyAddressRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiVAModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = VerificationController.createHttpsApiRestShApiVerifyAddress(input);
+		var result = VerificationController.createHttpsApiRestShApiVA(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1899,7 +1899,7 @@ function createHttpsApiRestShApiVerifyAddress(input)
 
 
 
-### <a name="get_https_api_rest_sh_api_verify_user"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVerifyUser") getHttpsApiRestShApiVerifyUser
+### <a name="get_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVU") getHttpsApiRestShApiVU
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1907,7 +1907,7 @@ function createHttpsApiRestShApiVerifyAddress(input)
 
 
 ```javascript
-function getHttpsApiRestShApiVerifyUser(input)
+function getHttpsApiRestShApiVU(input)
 ```
 #### Parameters
 
@@ -1926,7 +1926,7 @@ function getHttpsApiRestShApiVerifyUser(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVerifyUserResponseModel){
+	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVURModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -1935,7 +1935,7 @@ function getHttpsApiRestShApiVerifyUser(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = VerificationController.getHttpsApiRestShApiVerifyUser(input);
+		var result = VerificationController.getHttpsApiRestShApiVU(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1950,7 +1950,7 @@ function getHttpsApiRestShApiVerifyUser(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_verify_user"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVerifyUser") createHttpsApiRestShApiVerifyUser
+### <a name="create_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVU") createHttpsApiRestShApiVU
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1958,7 +1958,7 @@ function getHttpsApiRestShApiVerifyUser(input)
 
 
 ```javascript
-function createHttpsApiRestShApiVerifyUser(input)
+function createHttpsApiRestShApiVU(input)
 ```
 #### Parameters
 
@@ -1974,13 +1974,13 @@ function createHttpsApiRestShApiVerifyUser(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVerifyUserResponseModel){
+	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVURModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiVerifyUserRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiVUModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = VerificationController.createHttpsApiRestShApiVerifyUser(input);
+		var result = VerificationController.createHttpsApiRestShApiVU(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1995,7 +1995,7 @@ function createHttpsApiRestShApiVerifyUser(input)
 
 
 
-### <a name="get_https_api_rest_sh_api_verify"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVerify") getHttpsApiRestShApiVerify
+### <a name="get_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiV") getHttpsApiRestShApiV
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2003,7 +2003,7 @@ function createHttpsApiRestShApiVerifyUser(input)
 
 
 ```javascript
-function getHttpsApiRestShApiVerify(input)
+function getHttpsApiRestShApiV(input)
 ```
 #### Parameters
 
@@ -2021,7 +2021,7 @@ function getHttpsApiRestShApiVerify(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVerifyResponseModel){
+	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -2029,7 +2029,7 @@ function getHttpsApiRestShApiVerify(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = VerificationController.getHttpsApiRestShApiVerify(input);
+		var result = VerificationController.getHttpsApiRestShApiV(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2044,7 +2044,7 @@ function getHttpsApiRestShApiVerify(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_verify"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVerify") createHttpsApiRestShApiVerify
+### <a name="create_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiV") createHttpsApiRestShApiV
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2052,7 +2052,7 @@ function getHttpsApiRestShApiVerify(input)
 
 
 ```javascript
-function createHttpsApiRestShApiVerify(input)
+function createHttpsApiRestShApiV(input)
 ```
 #### Parameters
 
@@ -2068,13 +2068,13 @@ function createHttpsApiRestShApiVerify(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVerifyResponseModel){
+	app.controller("testController", function($scope, VerificationController, HttpsApiRestShApiVRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiVerifyRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiVModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = VerificationController.createHttpsApiRestShApiVerify(input);
+		var result = VerificationController.createHttpsApiRestShApiV(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2098,11 +2098,11 @@ function createHttpsApiRestShApiVerify(input)
 The singleton instance of the ``` TwoFactorAuthenticationAPIController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faTokenResponseModel, HttpsApiRestShApi2faResponseModel){
+	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faTRModel, HttpsApiRestShApi2faRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api2fa_token"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faToken") getHttpsApiRestShApi2faToken
+### <a name="get_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faT") getHttpsApiRestShApi2faT
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2110,7 +2110,7 @@ The singleton instance of the ``` TwoFactorAuthenticationAPIController ``` class
 
 
 ```javascript
-function getHttpsApiRestShApi2faToken(input)
+function getHttpsApiRestShApi2faT(input)
 ```
 #### Parameters
 
@@ -2129,7 +2129,7 @@ function getHttpsApiRestShApi2faToken(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faTokenResponseModel){
+	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faTRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -2138,7 +2138,7 @@ function getHttpsApiRestShApi2faToken(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faToken(input);
+		var result = TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faT(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2153,7 +2153,7 @@ function getHttpsApiRestShApi2faToken(input)
 
 
 
-### <a name="create_https_api_rest_sh_api2fa_token"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faToken") createHttpsApiRestShApi2faToken
+### <a name="create_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faT") createHttpsApiRestShApi2faT
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2161,7 +2161,7 @@ function getHttpsApiRestShApi2faToken(input)
 
 
 ```javascript
-function createHttpsApiRestShApi2faToken(input)
+function createHttpsApiRestShApi2faT(input)
 ```
 #### Parameters
 
@@ -2177,13 +2177,13 @@ function createHttpsApiRestShApi2faToken(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faTokenResponseModel){
+	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faTRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApi2faTokenRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApi2faTModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faToken(input);
+		var result = TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faT(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2224,7 +2224,7 @@ function getHttpsApiRestShApi2fa(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faResponseModel){
+	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -2271,9 +2271,9 @@ function createHttpsApiRestShApi2fa(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faResponseModel){
+	app.controller("testController", function($scope, TwoFactorAuthenticationAPIController, HttpsApiRestShApi2faRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApi2faRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApi2faModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
@@ -2301,11 +2301,11 @@ function createHttpsApiRestShApi2fa(input)
 The singleton instance of the ``` UserManagementController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUserInfoResponseModel, HttpsApiRestShApiUserUpdateResponseModel, HttpsApiRestShApiUserDeleteResponseModel){
+	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUIRModel, HttpsApiRestShApiUURModel, HttpsApiRestShApiUDRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUserInfo") getHttpsApiRestShApiUserInfo
+### <a name="get_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUI") getHttpsApiRestShApiUI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2313,7 +2313,7 @@ The singleton instance of the ``` UserManagementController ``` class can be acce
 
 
 ```javascript
-function getHttpsApiRestShApiUserInfo(input)
+function getHttpsApiRestShApiUI(input)
 ```
 #### Parameters
 
@@ -2332,7 +2332,7 @@ function getHttpsApiRestShApiUserInfo(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUserInfoResponseModel){
+	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUIRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -2341,7 +2341,7 @@ function getHttpsApiRestShApiUserInfo(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = UserManagementController.getHttpsApiRestShApiUserInfo(input);
+		var result = UserManagementController.getHttpsApiRestShApiUI(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2356,7 +2356,7 @@ function getHttpsApiRestShApiUserInfo(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUserInfo") createHttpsApiRestShApiUserInfo
+### <a name="create_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUI") createHttpsApiRestShApiUI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2364,7 +2364,7 @@ function getHttpsApiRestShApiUserInfo(input)
 
 
 ```javascript
-function createHttpsApiRestShApiUserInfo(input)
+function createHttpsApiRestShApiUI(input)
 ```
 #### Parameters
 
@@ -2380,13 +2380,13 @@ function createHttpsApiRestShApiUserInfo(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUserInfoResponseModel){
+	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUIRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiUserInfoRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiUIModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = UserManagementController.createHttpsApiRestShApiUserInfo(input);
+		var result = UserManagementController.createHttpsApiRestShApiUI(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2401,7 +2401,7 @@ function createHttpsApiRestShApiUserInfo(input)
 
 
 
-### <a name="get_https_api_rest_sh_api_user_update"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUserUpdate") getHttpsApiRestShApiUserUpdate
+### <a name="get_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUU") getHttpsApiRestShApiUU
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2409,7 +2409,7 @@ function createHttpsApiRestShApiUserInfo(input)
 
 
 ```javascript
-function getHttpsApiRestShApiUserUpdate(input)
+function getHttpsApiRestShApiUU(input)
 ```
 #### Parameters
 
@@ -2430,7 +2430,7 @@ function getHttpsApiRestShApiUserUpdate(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUserUpdateResponseModel){
+	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUURModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -2441,7 +2441,7 @@ function getHttpsApiRestShApiUserUpdate(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = UserManagementController.getHttpsApiRestShApiUserUpdate(input);
+		var result = UserManagementController.getHttpsApiRestShApiUU(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2456,7 +2456,7 @@ function getHttpsApiRestShApiUserUpdate(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_user_update"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUserUpdate") createHttpsApiRestShApiUserUpdate
+### <a name="create_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUU") createHttpsApiRestShApiUU
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2464,7 +2464,7 @@ function getHttpsApiRestShApiUserUpdate(input)
 
 
 ```javascript
-function createHttpsApiRestShApiUserUpdate(input)
+function createHttpsApiRestShApiUU(input)
 ```
 #### Parameters
 
@@ -2480,13 +2480,13 @@ function createHttpsApiRestShApiUserUpdate(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUserUpdateResponseModel){
+	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUURModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiUserUpdateRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiUUModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = UserManagementController.createHttpsApiRestShApiUserUpdate(input);
+		var result = UserManagementController.createHttpsApiRestShApiUU(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2501,7 +2501,7 @@ function createHttpsApiRestShApiUserUpdate(input)
 
 
 
-### <a name="get_https_api_rest_sh_api_user_delete"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUserDelete") getHttpsApiRestShApiUserDelete
+### <a name="get_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUD") getHttpsApiRestShApiUD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2509,7 +2509,7 @@ function createHttpsApiRestShApiUserUpdate(input)
 
 
 ```javascript
-function getHttpsApiRestShApiUserDelete(input)
+function getHttpsApiRestShApiUD(input)
 ```
 #### Parameters
 
@@ -2528,7 +2528,7 @@ function getHttpsApiRestShApiUserDelete(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUserDeleteResponseModel){
+	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUDRModel){
         var input = [];
         input['api'] = 'api';
         input['uid'] = 'uid';
@@ -2537,7 +2537,7 @@ function getHttpsApiRestShApiUserDelete(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = UserManagementController.getHttpsApiRestShApiUserDelete(input);
+		var result = UserManagementController.getHttpsApiRestShApiUD(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2552,7 +2552,7 @@ function getHttpsApiRestShApiUserDelete(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_user_delete"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUserDelete") createHttpsApiRestShApiUserDelete
+### <a name="create_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUD") createHttpsApiRestShApiUD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2560,7 +2560,7 @@ function getHttpsApiRestShApiUserDelete(input)
 
 
 ```javascript
-function createHttpsApiRestShApiUserDelete(input)
+function createHttpsApiRestShApiUD(input)
 ```
 #### Parameters
 
@@ -2576,13 +2576,13 @@ function createHttpsApiRestShApiUserDelete(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUserDeleteResponseModel){
+	app.controller("testController", function($scope, UserManagementController, HttpsApiRestShApiUDRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiUserDeleteRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiUDModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = UserManagementController.createHttpsApiRestShApiUserDelete(input);
+		var result = UserManagementController.createHttpsApiRestShApiUD(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2606,11 +2606,11 @@ function createHttpsApiRestShApiUserDelete(input)
 The singleton instance of the ``` LoginAndRegistrationController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAuthUserRegisterResponseModel, HttpsApiRestShApiAuthUserLoginResponseModel){
+	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAURRModel, HttpsApiRestShApiAULRModel){
 	});
 ```
 
-### <a name="get_https_api_rest_sh_api_auth_user_register"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAuthUserRegister") getHttpsApiRestShApiAuthUserRegister
+### <a name="get_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAUR") getHttpsApiRestShApiAUR
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2618,7 +2618,7 @@ The singleton instance of the ``` LoginAndRegistrationController ``` class can b
 
 
 ```javascript
-function getHttpsApiRestShApiAuthUserRegister(input)
+function getHttpsApiRestShApiAUR(input)
 ```
 #### Parameters
 
@@ -2642,7 +2642,7 @@ function getHttpsApiRestShApiAuthUserRegister(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAuthUserRegisterResponseModel){
+	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAURRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -2650,13 +2650,13 @@ function getHttpsApiRestShApiAuthUserRegister(input)
         input['password'] = 'password';
         input['name'] = 'name';
         input['email'] = 'email';
-        input['phone'] = 87;
-        input['countrycode'] = 87;
+        input['phone'] = 226;
+        input['countrycode'] = 226;
         input['address'] = 'address';
         input['contentType'] = 'Content-Type';
 
 
-		var result = LoginAndRegistrationController.getHttpsApiRestShApiAuthUserRegister(input);
+		var result = LoginAndRegistrationController.getHttpsApiRestShApiAUR(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2671,7 +2671,7 @@ function getHttpsApiRestShApiAuthUserRegister(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_auth_user_register"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAuthUserRegister") createHttpsApiRestShApiAuthUserRegister
+### <a name="create_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAUR") createHttpsApiRestShApiAUR
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2679,7 +2679,7 @@ function getHttpsApiRestShApiAuthUserRegister(input)
 
 
 ```javascript
-function createHttpsApiRestShApiAuthUserRegister(input)
+function createHttpsApiRestShApiAUR(input)
 ```
 #### Parameters
 
@@ -2695,13 +2695,13 @@ function createHttpsApiRestShApiAuthUserRegister(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAuthUserRegisterResponseModel){
+	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAURRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiAuthUserRegisterRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiAURModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = LoginAndRegistrationController.createHttpsApiRestShApiAuthUserRegister(input);
+		var result = LoginAndRegistrationController.createHttpsApiRestShApiAUR(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2716,7 +2716,7 @@ function createHttpsApiRestShApiAuthUserRegister(input)
 
 
 
-### <a name="get_https_api_rest_sh_api_auth_user_login"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAuthUserLogin") getHttpsApiRestShApiAuthUserLogin
+### <a name="get_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAUL") getHttpsApiRestShApiAUL
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2724,7 +2724,7 @@ function createHttpsApiRestShApiAuthUserRegister(input)
 
 
 ```javascript
-function getHttpsApiRestShApiAuthUserLogin(input)
+function getHttpsApiRestShApiAUL(input)
 ```
 #### Parameters
 
@@ -2743,7 +2743,7 @@ function getHttpsApiRestShApiAuthUserLogin(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAuthUserLoginResponseModel){
+	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAULRModel){
         var input = [];
         input['key'] = 'key';
         input['uid'] = 'uid';
@@ -2752,7 +2752,7 @@ function getHttpsApiRestShApiAuthUserLogin(input)
         input['contentType'] = 'Content-Type';
 
 
-		var result = LoginAndRegistrationController.getHttpsApiRestShApiAuthUserLogin(input);
+		var result = LoginAndRegistrationController.getHttpsApiRestShApiAUL(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -2767,7 +2767,7 @@ function getHttpsApiRestShApiAuthUserLogin(input)
 
 
 
-### <a name="create_https_api_rest_sh_api_auth_user_login"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAuthUserLogin") createHttpsApiRestShApiAuthUserLogin
+### <a name="create_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAUL") createHttpsApiRestShApiAUL
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2775,7 +2775,7 @@ function getHttpsApiRestShApiAuthUserLogin(input)
 
 
 ```javascript
-function createHttpsApiRestShApiAuthUserLogin(input)
+function createHttpsApiRestShApiAUL(input)
 ```
 #### Parameters
 
@@ -2791,13 +2791,13 @@ function createHttpsApiRestShApiAuthUserLogin(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAuthUserLoginResponseModel){
+	app.controller("testController", function($scope, LoginAndRegistrationController, HttpsApiRestShApiAULRModel){
         var input = [];
-        input['body'] = new HttpsApiRestShApiAuthUserLoginRequestModel({"key":"value"});
+        input['body'] = new HttpsApiRestShApiAULModel({"key":"value"});
         input['contentType'] = 'Content-Type';
 
 
-		var result = LoginAndRegistrationController.createHttpsApiRestShApiAuthUserLogin(input);
+		var result = LoginAndRegistrationController.createHttpsApiRestShApiAUL(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case

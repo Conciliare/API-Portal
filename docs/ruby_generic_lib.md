@@ -131,9 +131,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build smash.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install smash-1.2.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install smash-1.5.0.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=SMASH-Ruby&workspaceName=SMASH-Ruby&projectName=smash&gemName=smash&gemVer=1.2.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=SMASH-Ruby&workspaceName=SMASH-Ruby&projectName=smash&gemName=smash&gemVer=1.5.0)
 
 ## How to Use
 
@@ -143,41 +143,41 @@ The following section explains how to use the SMASH Ruby Gem in a new Rails proj
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.2.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.5.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.2.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.5.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.2.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.5.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the SMASH gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'smash', '~> 1.2.0' ```
+In order to use the SMASH gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'smash', '~> 1.5.0' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.2.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.5.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.2.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.5.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.2.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.5.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.2.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.5.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.2.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.5.0)
 
 ## How to Test
 
@@ -214,7 +214,7 @@ client = Smash::SMASH.new(
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=SMASH%20-%20API-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.2.0&initLine=client%2520%253D%2520SMASH.new%2528%2527key%2527%252C%2520%2527uid%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=SMASH%20-%20API-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.5.0&initLine=client%2520%253D%2520SMASH.new%2528%2527key%2527%252C%2520%2527uid%2527%2529)
 
 
 
@@ -246,7 +246,7 @@ The singleton instance of the ``` AdvancedLoggingController ``` class can be acc
 advancedLogging = client.advanced_logging
 ```
 
-### <a name="get_https_api_rest_sh_api_security_logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.get_https_api_rest_sh_api_security_logging_info") get_https_api_rest_sh_api_security_logging_info
+### <a name="get_https_api_rest_sh_api_s_l_i"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.get_https_api_rest_sh_api_s_l_i") get_https_api_rest_sh_api_s_l_i
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -254,7 +254,7 @@ advancedLogging = client.advanced_logging
 
 
 ```ruby
-def get_https_api_rest_sh_api_security_logging_info(options = {}); end
+def get_https_api_rest_sh_api_s_l_i(options = {}); end
 ```
 
 #### Parameters
@@ -293,12 +293,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = advancedLogging.get_https_api_rest_sh_api_security_logging_info(collect)
+result = advancedLogging.get_https_api_rest_sh_api_s_l_i(collect)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_security_logging"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.get_https_api_rest_sh_api_security_logging") get_https_api_rest_sh_api_security_logging
+### <a name="get_https_api_rest_sh_api_s_l"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.get_https_api_rest_sh_api_s_l") get_https_api_rest_sh_api_s_l
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -306,7 +306,7 @@ result = advancedLogging.get_https_api_rest_sh_api_security_logging_info(collect
 
 
 ```ruby
-def get_https_api_rest_sh_api_security_logging(options = {}); end
+def get_https_api_rest_sh_api_s_l(options = {}); end
 ```
 
 #### Parameters
@@ -345,12 +345,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = advancedLogging.get_https_api_rest_sh_api_security_logging(collect)
+result = advancedLogging.get_https_api_rest_sh_api_s_l(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.create_https_api_rest_sh_api_security_logging_info") create_https_api_rest_sh_api_security_logging_info
+### <a name="create_https_api_rest_sh_api_s_l_i"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.create_https_api_rest_sh_api_s_l_i") create_https_api_rest_sh_api_s_l_i
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -358,7 +358,7 @@ result = advancedLogging.get_https_api_rest_sh_api_security_logging(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_security_logging_info(options = {}); end
+def create_https_api_rest_sh_api_s_l_i(options = {}); end
 ```
 
 #### Parameters
@@ -374,19 +374,19 @@ def create_https_api_rest_sh_api_security_logging_info(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiSecurityLoggingInfoRequestModel.new
+body = HttpsApiRestShApiSLIModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = advancedLogging.create_https_api_rest_sh_api_security_logging_info(collect)
+result = advancedLogging.create_https_api_rest_sh_api_s_l_i(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_logging"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.create_https_api_rest_sh_api_security_logging") create_https_api_rest_sh_api_security_logging
+### <a name="create_https_api_rest_sh_api_s_l"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.create_https_api_rest_sh_api_s_l") create_https_api_rest_sh_api_s_l
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -394,7 +394,7 @@ result = advancedLogging.create_https_api_rest_sh_api_security_logging_info(coll
 
 
 ```ruby
-def create_https_api_rest_sh_api_security_logging(options = {}); end
+def create_https_api_rest_sh_api_s_l(options = {}); end
 ```
 
 #### Parameters
@@ -410,14 +410,14 @@ def create_https_api_rest_sh_api_security_logging(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiSecurityLoggingRequestModel.new
+body = HttpsApiRestShApiSLModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = advancedLogging.create_https_api_rest_sh_api_security_logging(collect)
+result = advancedLogging.create_https_api_rest_sh_api_s_l(collect)
 
 ```
 
@@ -434,7 +434,7 @@ The singleton instance of the ``` WAFDDOSProtectionController ``` class can be a
 wAFDDOSProtection = client.wafddos_protection
 ```
 
-### <a name="get_https_api_rest_sh_api_security_waf_configure"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.get_https_api_rest_sh_api_security_waf_configure") get_https_api_rest_sh_api_security_waf_configure
+### <a name="get_https_api_rest_sh_api_s_w_c"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.get_https_api_rest_sh_api_s_w_c") get_https_api_rest_sh_api_s_w_c
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -442,7 +442,7 @@ wAFDDOSProtection = client.wafddos_protection
 
 
 ```ruby
-def get_https_api_rest_sh_api_security_waf_configure(options = {}); end
+def get_https_api_rest_sh_api_s_w_c(options = {}); end
 ```
 
 #### Parameters
@@ -481,12 +481,12 @@ content_type = 'application/json'
 collect['content_type'] = content_type
 
 
-result = wAFDDOSProtection.get_https_api_rest_sh_api_security_waf_configure(collect)
+result = wAFDDOSProtection.get_https_api_rest_sh_api_s_w_c(collect)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_security_waf"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.get_https_api_rest_sh_api_security_waf") get_https_api_rest_sh_api_security_waf
+### <a name="get_https_api_rest_sh_api_s_w"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.get_https_api_rest_sh_api_s_w") get_https_api_rest_sh_api_s_w
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -494,7 +494,7 @@ result = wAFDDOSProtection.get_https_api_rest_sh_api_security_waf_configure(coll
 
 
 ```ruby
-def get_https_api_rest_sh_api_security_waf(options = {}); end
+def get_https_api_rest_sh_api_s_w(options = {}); end
 ```
 
 #### Parameters
@@ -529,12 +529,12 @@ content_type = 'application/json'
 collect['content_type'] = content_type
 
 
-result = wAFDDOSProtection.get_https_api_rest_sh_api_security_waf(collect)
+result = wAFDDOSProtection.get_https_api_rest_sh_api_s_w(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_waf_configure"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.create_https_api_rest_sh_api_security_waf_configure") create_https_api_rest_sh_api_security_waf_configure
+### <a name="create_https_api_rest_sh_api_s_w_c"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.create_https_api_rest_sh_api_s_w_c") create_https_api_rest_sh_api_s_w_c
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -542,7 +542,7 @@ result = wAFDDOSProtection.get_https_api_rest_sh_api_security_waf(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_security_waf_configure(options = {}); end
+def create_https_api_rest_sh_api_s_w_c(options = {}); end
 ```
 
 #### Parameters
@@ -566,12 +566,12 @@ content_type = 'application/json'
 collect['content_type'] = content_type
 
 
-result = wAFDDOSProtection.create_https_api_rest_sh_api_security_waf_configure(collect)
+result = wAFDDOSProtection.create_https_api_rest_sh_api_s_w_c(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_waf"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.create_https_api_rest_sh_api_security_waf") create_https_api_rest_sh_api_security_waf
+### <a name="create_https_api_rest_sh_api_s_w"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.create_https_api_rest_sh_api_s_w") create_https_api_rest_sh_api_s_w
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -579,7 +579,7 @@ result = wAFDDOSProtection.create_https_api_rest_sh_api_security_waf_configure(c
 
 
 ```ruby
-def create_https_api_rest_sh_api_security_waf(options = {}); end
+def create_https_api_rest_sh_api_s_w(options = {}); end
 ```
 
 #### Parameters
@@ -603,7 +603,7 @@ content_type = 'application/json'
 collect['content_type'] = content_type
 
 
-result = wAFDDOSProtection.create_https_api_rest_sh_api_security_waf(collect)
+result = wAFDDOSProtection.create_https_api_rest_sh_api_s_w(collect)
 
 ```
 
@@ -620,7 +620,7 @@ The singleton instance of the ``` EncryptionController ``` class can be accessed
 encryption = client.encryption
 ```
 
-### <a name="get_https_api_rest_sh_api_security_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.get_https_api_rest_sh_api_security_encryption") get_https_api_rest_sh_api_security_encryption
+### <a name="get_https_api_rest_sh_api_s_e"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.get_https_api_rest_sh_api_s_e") get_https_api_rest_sh_api_s_e
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -628,7 +628,7 @@ encryption = client.encryption
 
 
 ```ruby
-def get_https_api_rest_sh_api_security_encryption(options = {}); end
+def get_https_api_rest_sh_api_s_e(options = {}); end
 ```
 
 #### Parameters
@@ -660,19 +660,19 @@ collect['data'] = data
 method = 'method'
 collect['method'] = method
 
-bit = 206
+bit = 203
 collect['bit'] = bit
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = encryption.get_https_api_rest_sh_api_security_encryption(collect)
+result = encryption.get_https_api_rest_sh_api_s_e(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.create_https_api_rest_sh_api_security_encryption") create_https_api_rest_sh_api_security_encryption
+### <a name="create_https_api_rest_sh_api_s_e"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.create_https_api_rest_sh_api_s_e") create_https_api_rest_sh_api_s_e
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -680,7 +680,7 @@ result = encryption.get_https_api_rest_sh_api_security_encryption(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_security_encryption(options = {}); end
+def create_https_api_rest_sh_api_s_e(options = {}); end
 ```
 
 #### Parameters
@@ -696,14 +696,14 @@ def create_https_api_rest_sh_api_security_encryption(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiSecurityEncryptionRequestModel.new
+body = HttpsApiRestShApiSEModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = encryption.create_https_api_rest_sh_api_security_encryption(collect)
+result = encryption.create_https_api_rest_sh_api_s_e(collect)
 
 ```
 
@@ -720,7 +720,7 @@ The singleton instance of the ``` CDNController ``` class can be accessed from t
 cDN = client.cdn
 ```
 
-### <a name="get_https_api_rest_sh_api_service_cdn_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.get_https_api_rest_sh_api_service_cdn_push") get_https_api_rest_sh_api_service_cdn_push
+### <a name="get_https_api_rest_sh_api_s_c_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.get_https_api_rest_sh_api_s_c_push") get_https_api_rest_sh_api_s_c_push
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -728,7 +728,7 @@ cDN = client.cdn
 
 
 ```ruby
-def get_https_api_rest_sh_api_service_cdn_push(options = {}); end
+def get_https_api_rest_sh_api_s_c_push(options = {}); end
 ```
 
 #### Parameters
@@ -763,12 +763,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = cDN.get_https_api_rest_sh_api_service_cdn_push(collect)
+result = cDN.get_https_api_rest_sh_api_s_c_push(collect)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_service_cdn_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.get_https_api_rest_sh_api_service_cdn_pull") get_https_api_rest_sh_api_service_cdn_pull
+### <a name="get_https_api_rest_sh_api_s_c_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.get_https_api_rest_sh_api_s_c_pull") get_https_api_rest_sh_api_s_c_pull
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -776,7 +776,7 @@ result = cDN.get_https_api_rest_sh_api_service_cdn_push(collect)
 
 
 ```ruby
-def get_https_api_rest_sh_api_service_cdn_pull(options = {}); end
+def get_https_api_rest_sh_api_s_c_pull(options = {}); end
 ```
 
 #### Parameters
@@ -811,12 +811,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = cDN.get_https_api_rest_sh_api_service_cdn_pull(collect)
+result = cDN.get_https_api_rest_sh_api_s_c_pull(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_cdn_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.create_https_api_rest_sh_api_service_cdn_push") create_https_api_rest_sh_api_service_cdn_push
+### <a name="create_https_api_rest_sh_api_s_c_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.create_https_api_rest_sh_api_s_c_push") create_https_api_rest_sh_api_s_c_push
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -824,7 +824,7 @@ result = cDN.get_https_api_rest_sh_api_service_cdn_pull(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_service_cdn_push(options = {}); end
+def create_https_api_rest_sh_api_s_c_push(options = {}); end
 ```
 
 #### Parameters
@@ -840,19 +840,19 @@ def create_https_api_rest_sh_api_service_cdn_push(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiServiceCdnPushRequestModel.new
+body = HttpsApiRestShApiSCPushModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = cDN.create_https_api_rest_sh_api_service_cdn_push(collect)
+result = cDN.create_https_api_rest_sh_api_s_c_push(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_cdn_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.create_https_api_rest_sh_api_service_cdn_pull") create_https_api_rest_sh_api_service_cdn_pull
+### <a name="create_https_api_rest_sh_api_s_c_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.create_https_api_rest_sh_api_s_c_pull") create_https_api_rest_sh_api_s_c_pull
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -860,7 +860,7 @@ result = cDN.create_https_api_rest_sh_api_service_cdn_push(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_service_cdn_pull(options = {}); end
+def create_https_api_rest_sh_api_s_c_pull(options = {}); end
 ```
 
 #### Parameters
@@ -876,14 +876,14 @@ def create_https_api_rest_sh_api_service_cdn_pull(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiServiceCdnPullRequestModel.new
+body = HttpsApiRestShApiSCPullModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = cDN.create_https_api_rest_sh_api_service_cdn_pull(collect)
+result = cDN.create_https_api_rest_sh_api_s_c_pull(collect)
 
 ```
 
@@ -900,7 +900,7 @@ The singleton instance of the ``` DNSController ``` class can be accessed from t
 dNS = client.dns
 ```
 
-### <a name="get_https_api_rest_sh_api_service_dns_configure"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.get_https_api_rest_sh_api_service_dns_configure") get_https_api_rest_sh_api_service_dns_configure
+### <a name="get_https_api_rest_sh_api_s_d_c"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.get_https_api_rest_sh_api_s_d_c") get_https_api_rest_sh_api_s_d_c
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -908,7 +908,7 @@ dNS = client.dns
 
 
 ```ruby
-def get_https_api_rest_sh_api_service_dns_configure(options = {}); end
+def get_https_api_rest_sh_api_s_d_c(options = {}); end
 ```
 
 #### Parameters
@@ -943,12 +943,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = dNS.get_https_api_rest_sh_api_service_dns_configure(collect)
+result = dNS.get_https_api_rest_sh_api_s_d_c(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_dns_configure"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.create_https_api_rest_sh_api_service_dns_configure") create_https_api_rest_sh_api_service_dns_configure
+### <a name="create_https_api_rest_sh_api_s_d_c"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.create_https_api_rest_sh_api_s_d_c") create_https_api_rest_sh_api_s_d_c
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -956,7 +956,7 @@ result = dNS.get_https_api_rest_sh_api_service_dns_configure(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_service_dns_configure(options = {}); end
+def create_https_api_rest_sh_api_s_d_c(options = {}); end
 ```
 
 #### Parameters
@@ -972,19 +972,19 @@ def create_https_api_rest_sh_api_service_dns_configure(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiServiceDnsConfigureRequestModel.new
+body = HttpsApiRestShApiSDCModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = dNS.create_https_api_rest_sh_api_service_dns_configure(collect)
+result = dNS.create_https_api_rest_sh_api_s_d_c(collect)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_service_dns_add"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.get_https_api_rest_sh_api_service_dns_add") get_https_api_rest_sh_api_service_dns_add
+### <a name="get_https_api_rest_sh_api_s_d_a"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.get_https_api_rest_sh_api_s_d_a") get_https_api_rest_sh_api_s_d_a
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -992,7 +992,7 @@ result = dNS.create_https_api_rest_sh_api_service_dns_configure(collect)
 
 
 ```ruby
-def get_https_api_rest_sh_api_service_dns_add(options = {}); end
+def get_https_api_rest_sh_api_s_d_a(options = {}); end
 ```
 
 #### Parameters
@@ -1023,12 +1023,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = dNS.get_https_api_rest_sh_api_service_dns_add(collect)
+result = dNS.get_https_api_rest_sh_api_s_d_a(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_dns_add"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.create_https_api_rest_sh_api_service_dns_add") create_https_api_rest_sh_api_service_dns_add
+### <a name="create_https_api_rest_sh_api_s_d_a"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.create_https_api_rest_sh_api_s_d_a") create_https_api_rest_sh_api_s_d_a
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1036,7 +1036,7 @@ result = dNS.get_https_api_rest_sh_api_service_dns_add(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_service_dns_add(options = {}); end
+def create_https_api_rest_sh_api_s_d_a(options = {}); end
 ```
 
 #### Parameters
@@ -1052,14 +1052,14 @@ def create_https_api_rest_sh_api_service_dns_add(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiServiceDnsAddRequestModel.new
+body = HttpsApiRestShApiSDAModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = dNS.create_https_api_rest_sh_api_service_dns_add(collect)
+result = dNS.create_https_api_rest_sh_api_s_d_a(collect)
 
 ```
 
@@ -1076,7 +1076,7 @@ The singleton instance of the ``` CodeObfuscationController ``` class can be acc
 codeObfuscation = client.code_obfuscation
 ```
 
-### <a name="get_https_api_rest_sh_api_service_obfuscation"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.get_https_api_rest_sh_api_service_obfuscation") get_https_api_rest_sh_api_service_obfuscation
+### <a name="get_https_api_rest_sh_api_s_o"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.get_https_api_rest_sh_api_s_o") get_https_api_rest_sh_api_s_o
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1084,7 +1084,7 @@ codeObfuscation = client.code_obfuscation
 
 
 ```ruby
-def get_https_api_rest_sh_api_service_obfuscation(options = {}); end
+def get_https_api_rest_sh_api_s_o(options = {}); end
 ```
 
 #### Parameters
@@ -1115,12 +1115,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = codeObfuscation.get_https_api_rest_sh_api_service_obfuscation(collect)
+result = codeObfuscation.get_https_api_rest_sh_api_s_o(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_obfuscation"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.create_https_api_rest_sh_api_service_obfuscation") create_https_api_rest_sh_api_service_obfuscation
+### <a name="create_https_api_rest_sh_api_s_o"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.create_https_api_rest_sh_api_s_o") create_https_api_rest_sh_api_s_o
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1128,7 +1128,7 @@ result = codeObfuscation.get_https_api_rest_sh_api_service_obfuscation(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_service_obfuscation(options = {}); end
+def create_https_api_rest_sh_api_s_o(options = {}); end
 ```
 
 #### Parameters
@@ -1144,14 +1144,14 @@ def create_https_api_rest_sh_api_service_obfuscation(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiServiceObfuscationRequestModel.new
+body = HttpsApiRestShApiSOModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = codeObfuscation.create_https_api_rest_sh_api_service_obfuscation(collect)
+result = codeObfuscation.create_https_api_rest_sh_api_s_o(collect)
 
 ```
 
@@ -1168,7 +1168,7 @@ The singleton instance of the ``` HostingController ``` class can be accessed fr
 hosting = client.hosting
 ```
 
-### <a name="get_https_api_rest_sh_api_service_hosting"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.get_https_api_rest_sh_api_service_hosting") get_https_api_rest_sh_api_service_hosting
+### <a name="get_https_api_rest_sh_api_s_h"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.get_https_api_rest_sh_api_s_h") get_https_api_rest_sh_api_s_h
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1176,7 +1176,7 @@ hosting = client.hosting
 
 
 ```ruby
-def get_https_api_rest_sh_api_service_hosting(options = {}); end
+def get_https_api_rest_sh_api_s_h(options = {}); end
 ```
 
 #### Parameters
@@ -1211,12 +1211,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = hosting.get_https_api_rest_sh_api_service_hosting(collect)
+result = hosting.get_https_api_rest_sh_api_s_h(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_hosting"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.create_https_api_rest_sh_api_service_hosting") create_https_api_rest_sh_api_service_hosting
+### <a name="create_https_api_rest_sh_api_s_h"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.create_https_api_rest_sh_api_s_h") create_https_api_rest_sh_api_s_h
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1224,7 +1224,7 @@ result = hosting.get_https_api_rest_sh_api_service_hosting(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_service_hosting(options = {}); end
+def create_https_api_rest_sh_api_s_h(options = {}); end
 ```
 
 #### Parameters
@@ -1240,14 +1240,14 @@ def create_https_api_rest_sh_api_service_hosting(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiServiceHostingRequestModel.new
+body = HttpsApiRestShApiSHModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = hosting.create_https_api_rest_sh_api_service_hosting(collect)
+result = hosting.create_https_api_rest_sh_api_s_h(collect)
 
 ```
 
@@ -1264,7 +1264,7 @@ The singleton instance of the ``` DataManipulationConversionSortingAndCompressio
 dataManipulationConversionSortingAndCompressionAPI = client.data_manipulation_conversion_sorting_and_compression_api
 ```
 
-### <a name="get_https_api_rest_sh_api_data"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.get_https_api_rest_sh_api_data") get_https_api_rest_sh_api_data
+### <a name="get_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.get_https_api_rest_sh_api_d") get_https_api_rest_sh_api_d
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1272,7 +1272,7 @@ dataManipulationConversionSortingAndCompressionAPI = client.data_manipulation_co
 
 
 ```ruby
-def get_https_api_rest_sh_api_data(options = {}); end
+def get_https_api_rest_sh_api_d(options = {}); end
 ```
 
 #### Parameters
@@ -1311,12 +1311,12 @@ content_type = 'application/json'
 collect['content_type'] = content_type
 
 
-result = dataManipulationConversionSortingAndCompressionAPI.get_https_api_rest_sh_api_data(collect)
+result = dataManipulationConversionSortingAndCompressionAPI.get_https_api_rest_sh_api_d(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_data"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.create_https_api_rest_sh_api_data") create_https_api_rest_sh_api_data
+### <a name="create_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.create_https_api_rest_sh_api_d") create_https_api_rest_sh_api_d
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1324,7 +1324,7 @@ result = dataManipulationConversionSortingAndCompressionAPI.get_https_api_rest_s
 
 
 ```ruby
-def create_https_api_rest_sh_api_data(options = {}); end
+def create_https_api_rest_sh_api_d(options = {}); end
 ```
 
 #### Parameters
@@ -1348,7 +1348,7 @@ content_type = 'application/json'
 collect['content_type'] = content_type
 
 
-result = dataManipulationConversionSortingAndCompressionAPI.create_https_api_rest_sh_api_data(collect)
+result = dataManipulationConversionSortingAndCompressionAPI.create_https_api_rest_sh_api_d(collect)
 
 ```
 
@@ -1365,7 +1365,7 @@ The singleton instance of the ``` ImageManipulationAndModerationAPIController ``
 imageManipulationAndModerationAPI = client.image_manipulation_and_moderation_api
 ```
 
-### <a name="get_https_api_rest_sh_api_image"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.get_https_api_rest_sh_api_image") get_https_api_rest_sh_api_image
+### <a name="get_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.get_https_api_rest_sh_api_i") get_https_api_rest_sh_api_i
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1373,7 +1373,7 @@ imageManipulationAndModerationAPI = client.image_manipulation_and_moderation_api
 
 
 ```ruby
-def get_https_api_rest_sh_api_image(options = {}); end
+def get_https_api_rest_sh_api_i(options = {}); end
 ```
 
 #### Parameters
@@ -1408,12 +1408,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = imageManipulationAndModerationAPI.get_https_api_rest_sh_api_image(collect)
+result = imageManipulationAndModerationAPI.get_https_api_rest_sh_api_i(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_image"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.create_https_api_rest_sh_api_image") create_https_api_rest_sh_api_image
+### <a name="create_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.create_https_api_rest_sh_api_i") create_https_api_rest_sh_api_i
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1421,7 +1421,7 @@ result = imageManipulationAndModerationAPI.get_https_api_rest_sh_api_image(colle
 
 
 ```ruby
-def create_https_api_rest_sh_api_image(options = {}); end
+def create_https_api_rest_sh_api_i(options = {}); end
 ```
 
 #### Parameters
@@ -1437,14 +1437,14 @@ def create_https_api_rest_sh_api_image(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiImageRequestModel.new
+body = HttpsApiRestShApiIModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = imageManipulationAndModerationAPI.create_https_api_rest_sh_api_image(collect)
+result = imageManipulationAndModerationAPI.create_https_api_rest_sh_api_i(collect)
 
 ```
 
@@ -1461,7 +1461,7 @@ The singleton instance of the ``` VerificationController ``` class can be access
 verification = client.verification
 ```
 
-### <a name="get_https_api_rest_sh_api_verify_address"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.get_https_api_rest_sh_api_verify_address") get_https_api_rest_sh_api_verify_address
+### <a name="get_https_api_rest_sh_api_v_a"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.get_https_api_rest_sh_api_v_a") get_https_api_rest_sh_api_v_a
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1469,7 +1469,7 @@ verification = client.verification
 
 
 ```ruby
-def get_https_api_rest_sh_api_verify_address(options = {}); end
+def get_https_api_rest_sh_api_v_a(options = {}); end
 ```
 
 #### Parameters
@@ -1513,19 +1513,19 @@ collect['c'] = c
 s = 's'
 collect['s'] = s
 
-z = 42
+z = 161
 collect['z'] = z
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = verification.get_https_api_rest_sh_api_verify_address(collect)
+result = verification.get_https_api_rest_sh_api_v_a(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_verify_address"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.create_https_api_rest_sh_api_verify_address") create_https_api_rest_sh_api_verify_address
+### <a name="create_https_api_rest_sh_api_v_a"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.create_https_api_rest_sh_api_v_a") create_https_api_rest_sh_api_v_a
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1533,7 +1533,7 @@ result = verification.get_https_api_rest_sh_api_verify_address(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_verify_address(options = {}); end
+def create_https_api_rest_sh_api_v_a(options = {}); end
 ```
 
 #### Parameters
@@ -1549,19 +1549,19 @@ def create_https_api_rest_sh_api_verify_address(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiVerifyAddressRequestModel.new
+body = HttpsApiRestShApiVAModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = verification.create_https_api_rest_sh_api_verify_address(collect)
+result = verification.create_https_api_rest_sh_api_v_a(collect)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_verify_user"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.get_https_api_rest_sh_api_verify_user") get_https_api_rest_sh_api_verify_user
+### <a name="get_https_api_rest_sh_api_v_u"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.get_https_api_rest_sh_api_v_u") get_https_api_rest_sh_api_v_u
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1569,7 +1569,7 @@ result = verification.create_https_api_rest_sh_api_verify_address(collect)
 
 
 ```ruby
-def get_https_api_rest_sh_api_verify_user(options = {}); end
+def get_https_api_rest_sh_api_v_u(options = {}); end
 ```
 
 #### Parameters
@@ -1604,12 +1604,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = verification.get_https_api_rest_sh_api_verify_user(collect)
+result = verification.get_https_api_rest_sh_api_v_u(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_verify_user"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.create_https_api_rest_sh_api_verify_user") create_https_api_rest_sh_api_verify_user
+### <a name="create_https_api_rest_sh_api_v_u"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.create_https_api_rest_sh_api_v_u") create_https_api_rest_sh_api_v_u
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1617,7 +1617,7 @@ result = verification.get_https_api_rest_sh_api_verify_user(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_verify_user(options = {}); end
+def create_https_api_rest_sh_api_v_u(options = {}); end
 ```
 
 #### Parameters
@@ -1633,19 +1633,19 @@ def create_https_api_rest_sh_api_verify_user(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiVerifyUserRequestModel.new
+body = HttpsApiRestShApiVUModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = verification.create_https_api_rest_sh_api_verify_user(collect)
+result = verification.create_https_api_rest_sh_api_v_u(collect)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_verify"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.get_https_api_rest_sh_api_verify") get_https_api_rest_sh_api_verify
+### <a name="get_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.get_https_api_rest_sh_api_v") get_https_api_rest_sh_api_v
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1653,7 +1653,7 @@ result = verification.create_https_api_rest_sh_api_verify_user(collect)
 
 
 ```ruby
-def get_https_api_rest_sh_api_verify(options = {}); end
+def get_https_api_rest_sh_api_v(options = {}); end
 ```
 
 #### Parameters
@@ -1684,12 +1684,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = verification.get_https_api_rest_sh_api_verify(collect)
+result = verification.get_https_api_rest_sh_api_v(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_verify"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.create_https_api_rest_sh_api_verify") create_https_api_rest_sh_api_verify
+### <a name="create_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.create_https_api_rest_sh_api_v") create_https_api_rest_sh_api_v
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1697,7 +1697,7 @@ result = verification.get_https_api_rest_sh_api_verify(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_verify(options = {}); end
+def create_https_api_rest_sh_api_v(options = {}); end
 ```
 
 #### Parameters
@@ -1713,14 +1713,14 @@ def create_https_api_rest_sh_api_verify(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiVerifyRequestModel.new
+body = HttpsApiRestShApiVModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = verification.create_https_api_rest_sh_api_verify(collect)
+result = verification.create_https_api_rest_sh_api_v(collect)
 
 ```
 
@@ -1737,7 +1737,7 @@ The singleton instance of the ``` TwoFactorAuthenticationAPIController ``` class
 twoFactorAuthenticationAPI = client.two_factor_authentication_api
 ```
 
-### <a name="get_https_api_rest_sh_api_2_fa_token"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.get_https_api_rest_sh_api_2_fa_token") get_https_api_rest_sh_api_2_fa_token
+### <a name="get_https_api_rest_sh_api_2_fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.get_https_api_rest_sh_api_2_fa_t") get_https_api_rest_sh_api_2_fa_t
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1745,7 +1745,7 @@ twoFactorAuthenticationAPI = client.two_factor_authentication_api
 
 
 ```ruby
-def get_https_api_rest_sh_api_2_fa_token(options = {}); end
+def get_https_api_rest_sh_api_2_fa_t(options = {}); end
 ```
 
 #### Parameters
@@ -1780,12 +1780,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = twoFactorAuthenticationAPI.get_https_api_rest_sh_api_2_fa_token(collect)
+result = twoFactorAuthenticationAPI.get_https_api_rest_sh_api_2_fa_t(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_2_fa_token"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.create_https_api_rest_sh_api_2_fa_token") create_https_api_rest_sh_api_2_fa_token
+### <a name="create_https_api_rest_sh_api_2_fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.create_https_api_rest_sh_api_2_fa_t") create_https_api_rest_sh_api_2_fa_t
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1793,7 +1793,7 @@ result = twoFactorAuthenticationAPI.get_https_api_rest_sh_api_2_fa_token(collect
 
 
 ```ruby
-def create_https_api_rest_sh_api_2_fa_token(options = {}); end
+def create_https_api_rest_sh_api_2_fa_t(options = {}); end
 ```
 
 #### Parameters
@@ -1809,14 +1809,14 @@ def create_https_api_rest_sh_api_2_fa_token(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApi2faTokenRequestModel.new
+body = HttpsApiRestShApi2faTModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = twoFactorAuthenticationAPI.create_https_api_rest_sh_api_2_fa_token(collect)
+result = twoFactorAuthenticationAPI.create_https_api_rest_sh_api_2_fa_t(collect)
 
 ```
 
@@ -1889,7 +1889,7 @@ def create_https_api_rest_sh_api_2_fa(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApi2faRequestModel.new
+body = HttpsApiRestShApi2faModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
@@ -1913,7 +1913,7 @@ The singleton instance of the ``` UserManagementController ``` class can be acce
 userManagement = client.user_management
 ```
 
-### <a name="get_https_api_rest_sh_api_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.get_https_api_rest_sh_api_user_info") get_https_api_rest_sh_api_user_info
+### <a name="get_https_api_rest_sh_api_u_i"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.get_https_api_rest_sh_api_u_i") get_https_api_rest_sh_api_u_i
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1921,7 +1921,7 @@ userManagement = client.user_management
 
 
 ```ruby
-def get_https_api_rest_sh_api_user_info(options = {}); end
+def get_https_api_rest_sh_api_u_i(options = {}); end
 ```
 
 #### Parameters
@@ -1956,12 +1956,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = userManagement.get_https_api_rest_sh_api_user_info(collect)
+result = userManagement.get_https_api_rest_sh_api_u_i(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.create_https_api_rest_sh_api_user_info") create_https_api_rest_sh_api_user_info
+### <a name="create_https_api_rest_sh_api_u_i"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.create_https_api_rest_sh_api_u_i") create_https_api_rest_sh_api_u_i
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1969,7 +1969,7 @@ result = userManagement.get_https_api_rest_sh_api_user_info(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_user_info(options = {}); end
+def create_https_api_rest_sh_api_u_i(options = {}); end
 ```
 
 #### Parameters
@@ -1985,19 +1985,19 @@ def create_https_api_rest_sh_api_user_info(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiUserInfoRequestModel.new
+body = HttpsApiRestShApiUIModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = userManagement.create_https_api_rest_sh_api_user_info(collect)
+result = userManagement.create_https_api_rest_sh_api_u_i(collect)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_user_update"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.get_https_api_rest_sh_api_user_update") get_https_api_rest_sh_api_user_update
+### <a name="get_https_api_rest_sh_api_u_u"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.get_https_api_rest_sh_api_u_u") get_https_api_rest_sh_api_u_u
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2005,7 +2005,7 @@ result = userManagement.create_https_api_rest_sh_api_user_info(collect)
 
 
 ```ruby
-def get_https_api_rest_sh_api_user_update(options = {}); end
+def get_https_api_rest_sh_api_u_u(options = {}); end
 ```
 
 #### Parameters
@@ -2048,12 +2048,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = userManagement.get_https_api_rest_sh_api_user_update(collect)
+result = userManagement.get_https_api_rest_sh_api_u_u(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_user_update"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.create_https_api_rest_sh_api_user_update") create_https_api_rest_sh_api_user_update
+### <a name="create_https_api_rest_sh_api_u_u"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.create_https_api_rest_sh_api_u_u") create_https_api_rest_sh_api_u_u
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2061,7 +2061,7 @@ result = userManagement.get_https_api_rest_sh_api_user_update(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_user_update(options = {}); end
+def create_https_api_rest_sh_api_u_u(options = {}); end
 ```
 
 #### Parameters
@@ -2077,19 +2077,19 @@ def create_https_api_rest_sh_api_user_update(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiUserUpdateRequestModel.new
+body = HttpsApiRestShApiUUModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = userManagement.create_https_api_rest_sh_api_user_update(collect)
+result = userManagement.create_https_api_rest_sh_api_u_u(collect)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_user_delete"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.get_https_api_rest_sh_api_user_delete") get_https_api_rest_sh_api_user_delete
+### <a name="get_https_api_rest_sh_api_u_d"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.get_https_api_rest_sh_api_u_d") get_https_api_rest_sh_api_u_d
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2097,7 +2097,7 @@ result = userManagement.create_https_api_rest_sh_api_user_update(collect)
 
 
 ```ruby
-def get_https_api_rest_sh_api_user_delete(options = {}); end
+def get_https_api_rest_sh_api_u_d(options = {}); end
 ```
 
 #### Parameters
@@ -2132,12 +2132,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = userManagement.get_https_api_rest_sh_api_user_delete(collect)
+result = userManagement.get_https_api_rest_sh_api_u_d(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_user_delete"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.create_https_api_rest_sh_api_user_delete") create_https_api_rest_sh_api_user_delete
+### <a name="create_https_api_rest_sh_api_u_d"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.create_https_api_rest_sh_api_u_d") create_https_api_rest_sh_api_u_d
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2145,7 +2145,7 @@ result = userManagement.get_https_api_rest_sh_api_user_delete(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_user_delete(options = {}); end
+def create_https_api_rest_sh_api_u_d(options = {}); end
 ```
 
 #### Parameters
@@ -2161,14 +2161,14 @@ def create_https_api_rest_sh_api_user_delete(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiUserDeleteRequestModel.new
+body = HttpsApiRestShApiUDModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = userManagement.create_https_api_rest_sh_api_user_delete(collect)
+result = userManagement.create_https_api_rest_sh_api_u_d(collect)
 
 ```
 
@@ -2185,7 +2185,7 @@ The singleton instance of the ``` LoginAndRegistrationController ``` class can b
 loginAndRegistration = client.login_and_registration
 ```
 
-### <a name="get_https_api_rest_sh_api_auth_user_register"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.get_https_api_rest_sh_api_auth_user_register") get_https_api_rest_sh_api_auth_user_register
+### <a name="get_https_api_rest_sh_api_a_u_r"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.get_https_api_rest_sh_api_a_u_r") get_https_api_rest_sh_api_a_u_r
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2193,7 +2193,7 @@ loginAndRegistration = client.login_and_registration
 
 
 ```ruby
-def get_https_api_rest_sh_api_auth_user_register(options = {}); end
+def get_https_api_rest_sh_api_a_u_r(options = {}); end
 ```
 
 #### Parameters
@@ -2235,10 +2235,10 @@ collect['name'] = name
 email = 'email'
 collect['email'] = email
 
-phone = 42
+phone = 252
 collect['phone'] = phone
 
-countrycode = 42
+countrycode = 252
 collect['countrycode'] = countrycode
 
 address = 'address'
@@ -2248,12 +2248,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = loginAndRegistration.get_https_api_rest_sh_api_auth_user_register(collect)
+result = loginAndRegistration.get_https_api_rest_sh_api_a_u_r(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_auth_user_register"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.create_https_api_rest_sh_api_auth_user_register") create_https_api_rest_sh_api_auth_user_register
+### <a name="create_https_api_rest_sh_api_a_u_r"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.create_https_api_rest_sh_api_a_u_r") create_https_api_rest_sh_api_a_u_r
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2261,7 +2261,7 @@ result = loginAndRegistration.get_https_api_rest_sh_api_auth_user_register(colle
 
 
 ```ruby
-def create_https_api_rest_sh_api_auth_user_register(options = {}); end
+def create_https_api_rest_sh_api_a_u_r(options = {}); end
 ```
 
 #### Parameters
@@ -2277,19 +2277,19 @@ def create_https_api_rest_sh_api_auth_user_register(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiAuthUserRegisterRequestModel.new
+body = HttpsApiRestShApiAURModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = loginAndRegistration.create_https_api_rest_sh_api_auth_user_register(collect)
+result = loginAndRegistration.create_https_api_rest_sh_api_a_u_r(collect)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_auth_user_login"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.get_https_api_rest_sh_api_auth_user_login") get_https_api_rest_sh_api_auth_user_login
+### <a name="get_https_api_rest_sh_api_a_u_l"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.get_https_api_rest_sh_api_a_u_l") get_https_api_rest_sh_api_a_u_l
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2297,7 +2297,7 @@ result = loginAndRegistration.create_https_api_rest_sh_api_auth_user_register(co
 
 
 ```ruby
-def get_https_api_rest_sh_api_auth_user_login(options = {}); end
+def get_https_api_rest_sh_api_a_u_l(options = {}); end
 ```
 
 #### Parameters
@@ -2332,12 +2332,12 @@ content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = loginAndRegistration.get_https_api_rest_sh_api_auth_user_login(collect)
+result = loginAndRegistration.get_https_api_rest_sh_api_a_u_l(collect)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_auth_user_login"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.create_https_api_rest_sh_api_auth_user_login") create_https_api_rest_sh_api_auth_user_login
+### <a name="create_https_api_rest_sh_api_a_u_l"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.create_https_api_rest_sh_api_a_u_l") create_https_api_rest_sh_api_a_u_l
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2345,7 +2345,7 @@ result = loginAndRegistration.get_https_api_rest_sh_api_auth_user_login(collect)
 
 
 ```ruby
-def create_https_api_rest_sh_api_auth_user_login(options = {}); end
+def create_https_api_rest_sh_api_a_u_l(options = {}); end
 ```
 
 #### Parameters
@@ -2361,14 +2361,14 @@ def create_https_api_rest_sh_api_auth_user_login(options = {}); end
 ```ruby
 collect = Hash.new
 
-body = HttpsApiRestShApiAuthUserLoginRequestModel.new
+body = HttpsApiRestShApiAULModel.new
 collect['body'] = body
 
 content_type = 'Content-Type'
 collect['content_type'] = content_type
 
 
-result = loginAndRegistration.create_https_api_rest_sh_api_auth_user_login(collect)
+result = loginAndRegistration.create_https_api_rest_sh_api_a_u_l(collect)
 
 ```
 
