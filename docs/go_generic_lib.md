@@ -229,8 +229,8 @@ In order to setup authentication of the API client, you need the following infor
 
 | Parameter | Description |
 |-----------|-------------|
-| key | Your API Key |
-| uid | Your User ID |
+| basicAuthUserName | The username to use with basic authentication |
+| basicAuthPassword | The password to use with basic authentication |
 
 
 To configure these for your generated code, open the file "Configuration.go" and edit it's contents.
@@ -264,7 +264,7 @@ Factory for the ``` ADVANCEDLOGGING ``` interface can be accessed from the packa
 advancedLogging := advancedlogging_pkg.NewADVANCEDLOGGING()
 ```
 
-### <a name="get_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.GetHttpsApiRestShApiSLI") GetHttpsApiRestShApiSLI
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingInfo") LoggingInfo
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -272,7 +272,13 @@ advancedLogging := advancedlogging_pkg.NewADVANCEDLOGGING()
 
 
 ```go
-func (me *ADVANCEDLOGGING_IMPL) GetHttpsApiRestShApiSLI(input *GetHttpsApiRestShApiSLIInput)(*models_pkg.HttpsApiRestShApiSLIRModel,error)
+func (me *ADVANCEDLOGGING_IMPL) LoggingInfo(
+            key string,
+            uid string,
+            name string,
+            origin string,
+            time string,
+            contentType string)(*models_pkg.HttpsApiRestShApiSLIR,error)
 ```
 
 #### Parameters
@@ -290,34 +296,20 @@ func (me *ADVANCEDLOGGING_IMPL) GetHttpsApiRestShApiSLI(input *GetHttpsApiRestSh
 #### Example Usage
 
 ```go
-collect := new (advancedlogging_pkg.GetHttpsApiRestShApiSLIInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 name := "name"
-collect.Name = name
-
 origin := "origin"
-collect.Origin = origin
-
 time := "time"
-collect.Time = time
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSLIRModel
-result,_ = advancedLogging.GetHttpsApiRestShApiSLI(collect)
+var result *models_pkg.HttpsApiRestShApiSLIR
+result,_ = advancedLogging.LoggingInfo(key, uid, name, origin, time, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.GetHttpsApiRestShApiSL") GetHttpsApiRestShApiSL
+### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingSetup") LoggingSetup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -325,7 +317,13 @@ result,_ = advancedLogging.GetHttpsApiRestShApiSLI(collect)
 
 
 ```go
-func (me *ADVANCEDLOGGING_IMPL) GetHttpsApiRestShApiSL(input *GetHttpsApiRestShApiSLInput)(*models_pkg.HttpsApiRestShApiSLRModel,error)
+func (me *ADVANCEDLOGGING_IMPL) LoggingSetup(
+            key string,
+            uid string,
+            name string,
+            origin string,
+            activate bool,
+            contentType string)(*models_pkg.HttpsApiRestShApiSLR,error)
 ```
 
 #### Parameters
@@ -343,34 +341,20 @@ func (me *ADVANCEDLOGGING_IMPL) GetHttpsApiRestShApiSL(input *GetHttpsApiRestShA
 #### Example Usage
 
 ```go
-collect := new (advancedlogging_pkg.GetHttpsApiRestShApiSLInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 name := "name"
-collect.Name = name
-
 origin := "origin"
-collect.Origin = origin
-
-activate := true
-collect.Activate = activate
-
+activate := false
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSLRModel
-result,_ = advancedLogging.GetHttpsApiRestShApiSL(collect)
+var result *models_pkg.HttpsApiRestShApiSLR
+result,_ = advancedLogging.LoggingSetup(key, uid, name, origin, activate, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.CreateHttpsApiRestShApiSLI") CreateHttpsApiRestShApiSLI
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingInfo") LoggingInfo
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -378,7 +362,9 @@ result,_ = advancedLogging.GetHttpsApiRestShApiSL(collect)
 
 
 ```go
-func (me *ADVANCEDLOGGING_IMPL) CreateHttpsApiRestShApiSLI(input *CreateHttpsApiRestShApiSLIInput)(*models_pkg.HttpsApiRestShApiSLIRModel,error)
+func (me *ADVANCEDLOGGING_IMPL) LoggingInfo(
+            body *models_pkg.HttpsApiRestShApiSLI,
+            contentType string)(*models_pkg.HttpsApiRestShApiSLIR,error)
 ```
 
 #### Parameters
@@ -392,22 +378,16 @@ func (me *ADVANCEDLOGGING_IMPL) CreateHttpsApiRestShApiSLI(input *CreateHttpsApi
 #### Example Usage
 
 ```go
-collect := new (advancedlogging_pkg.CreateHttpsApiRestShApiSLIInput)
-
-var body *models_pkg.HttpsApiRestShApiSLIModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiSLI
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSLIRModel
-result,_ = advancedLogging.CreateHttpsApiRestShApiSLI(collect)
+var result *models_pkg.HttpsApiRestShApiSLIR
+result,_ = advancedLogging.LoggingInfo(body, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.CreateHttpsApiRestShApiSL") CreateHttpsApiRestShApiSL
+### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingSetup") LoggingSetup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -415,7 +395,9 @@ result,_ = advancedLogging.CreateHttpsApiRestShApiSLI(collect)
 
 
 ```go
-func (me *ADVANCEDLOGGING_IMPL) CreateHttpsApiRestShApiSL(input *CreateHttpsApiRestShApiSLInput)(*models_pkg.HttpsApiRestShApiSLRModel,error)
+func (me *ADVANCEDLOGGING_IMPL) LoggingSetup(
+            body *models_pkg.HttpsApiRestShApiSL,
+            contentType string)(*models_pkg.HttpsApiRestShApiSLR,error)
 ```
 
 #### Parameters
@@ -429,17 +411,11 @@ func (me *ADVANCEDLOGGING_IMPL) CreateHttpsApiRestShApiSL(input *CreateHttpsApiR
 #### Example Usage
 
 ```go
-collect := new (advancedlogging_pkg.CreateHttpsApiRestShApiSLInput)
-
-var body *models_pkg.HttpsApiRestShApiSLModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiSL
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSLRModel
-result,_ = advancedLogging.CreateHttpsApiRestShApiSL(collect)
+var result *models_pkg.HttpsApiRestShApiSLR
+result,_ = advancedLogging.LoggingSetup(body, contentType)
 
 ```
 
@@ -456,7 +432,7 @@ Factory for the ``` WAF&DDOSPROTECTION ``` interface can be accessed from the pa
 wAFDDOSProtection := waf&ddosprotection_pkg.NewWAF&DDOSPROTECTION()
 ```
 
-### <a name="get_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.GetHttpsApiRestShApiSWC") GetHttpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -464,7 +440,13 @@ wAFDDOSProtection := waf&ddosprotection_pkg.NewWAF&DDOSPROTECTION()
 
 
 ```go
-func (me *WAFDDOSPROTECTION_IMPL) GetHttpsApiRestShApiSWC(input *GetHttpsApiRestShApiSWCInput)(*models_pkg.HttpsApiRestShApiSWCRModel,error)
+func (me *WAFDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(
+            key string,
+            uid string,
+            name string,
+            origin string,
+            rule string,
+            contentType string)(*models_pkg.HttpsApiRestShApiSWCR,error)
 ```
 
 #### Parameters
@@ -482,34 +464,20 @@ func (me *WAFDDOSPROTECTION_IMPL) GetHttpsApiRestShApiSWC(input *GetHttpsApiRest
 #### Example Usage
 
 ```go
-collect := new (waf&ddosprotection_pkg.GetHttpsApiRestShApiSWCInput)
-
 key := "API"
-collect.Key = key
-
 uid := "UID"
-collect.Uid = uid
-
 name := "origin-name"
-collect.Name = name
-
 origin := "origin.yourdomain.tld"
-collect.Origin = origin
-
 rule := "header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does"
-collect.Rule = rule
-
 contentType := "application/json"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSWCRModel
-result,_ = wAFDDOSProtection.GetHttpsApiRestShApiSWC(collect)
+var result *models_pkg.HttpsApiRestShApiSWCR
+result,_ = wAFDDOSProtection.HttpsApiRestShApiSWC(key, uid, name, origin, rule, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.GetHttpsApiRestShApiSW") GetHttpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.HttpsApiRestShApiSW") HttpsApiRestShApiSW
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -517,7 +485,12 @@ result,_ = wAFDDOSProtection.GetHttpsApiRestShApiSWC(collect)
 
 
 ```go
-func (me *WAFDDOSPROTECTION_IMPL) GetHttpsApiRestShApiSW(input *GetHttpsApiRestShApiSWInput)(*models_pkg.HttpsApiRestShApiSWRModel,error)
+func (me *WAFDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(
+            key string,
+            uid string,
+            origin string,
+            cname string,
+            contentType string)(*models_pkg.HttpsApiRestShApiSWR,error)
 ```
 
 #### Parameters
@@ -534,31 +507,19 @@ func (me *WAFDDOSPROTECTION_IMPL) GetHttpsApiRestShApiSW(input *GetHttpsApiRestS
 #### Example Usage
 
 ```go
-collect := new (waf&ddosprotection_pkg.GetHttpsApiRestShApiSWInput)
-
 key := "API"
-collect.Key = key
-
 uid := "UID"
-collect.Uid = uid
-
 origin := "origin.yourdomain.tld"
-collect.Origin = origin
-
 cname := "yourdomain.tld,www.yourdomain.tld"
-collect.Cname = cname
-
 contentType := "application/json"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSWRModel
-result,_ = wAFDDOSProtection.GetHttpsApiRestShApiSW(collect)
+var result *models_pkg.HttpsApiRestShApiSWR
+result,_ = wAFDDOSProtection.HttpsApiRestShApiSW(key, uid, origin, cname, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.CreateHttpsApiRestShApiSWC") CreateHttpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -566,7 +527,9 @@ result,_ = wAFDDOSProtection.GetHttpsApiRestShApiSW(collect)
 
 
 ```go
-func (me *WAFDDOSPROTECTION_IMPL) CreateHttpsApiRestShApiSWC(input *CreateHttpsApiRestShApiSWCInput)(*models_pkg.HttpsApiRestShApiSWCRModel,error)
+func (me *WAFDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(
+            body *models_pkg.HttpsApiRestShApiSWC,
+            contentType string)(*models_pkg.HttpsApiRestShApiSWCR,error)
 ```
 
 #### Parameters
@@ -580,24 +543,18 @@ func (me *WAFDDOSPROTECTION_IMPL) CreateHttpsApiRestShApiSWC(input *CreateHttpsA
 #### Example Usage
 
 ```go
-collect := new (waf&ddosprotection_pkg.CreateHttpsApiRestShApiSWCInput)
-
 bodyValue := []byte("{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}")
-var body *models_pkg.HttpsApiRestShApiSWCModel
+var body *models_pkg.HttpsApiRestShApiSWC
 json.Unmarshal(bodyValue,&body)
-collect.Body = body
-
 contentType := "application/json"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSWCRModel
-result,_ = wAFDDOSProtection.CreateHttpsApiRestShApiSWC(collect)
+var result *models_pkg.HttpsApiRestShApiSWCR
+result,_ = wAFDDOSProtection.HttpsApiRestShApiSWC(body, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.CreateHttpsApiRestShApiSW") CreateHttpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.HttpsApiRestShApiSW") HttpsApiRestShApiSW
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -605,7 +562,9 @@ result,_ = wAFDDOSProtection.CreateHttpsApiRestShApiSWC(collect)
 
 
 ```go
-func (me *WAFDDOSPROTECTION_IMPL) CreateHttpsApiRestShApiSW(input *CreateHttpsApiRestShApiSWInput)(*models_pkg.HttpsApiRestShApiSWRModel,error)
+func (me *WAFDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(
+            body *models_pkg.HttpsApiRestShApiSW,
+            contentType string)(*models_pkg.HttpsApiRestShApiSWR,error)
 ```
 
 #### Parameters
@@ -619,19 +578,13 @@ func (me *WAFDDOSPROTECTION_IMPL) CreateHttpsApiRestShApiSW(input *CreateHttpsAp
 #### Example Usage
 
 ```go
-collect := new (waf&ddosprotection_pkg.CreateHttpsApiRestShApiSWInput)
-
 bodyValue := []byte("{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}")
-var body *models_pkg.HttpsApiRestShApiSWModel
+var body *models_pkg.HttpsApiRestShApiSW
 json.Unmarshal(bodyValue,&body)
-collect.Body = body
-
 contentType := "application/json"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSWRModel
-result,_ = wAFDDOSProtection.CreateHttpsApiRestShApiSW(collect)
+var result *models_pkg.HttpsApiRestShApiSWR
+result,_ = wAFDDOSProtection.HttpsApiRestShApiSW(body, contentType)
 
 ```
 
@@ -648,7 +601,7 @@ Factory for the ``` ENCRYPTION ``` interface can be accessed from the package en
 encryption := encryption_pkg.NewENCRYPTION()
 ```
 
-### <a name="get_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png ".encryption_pkg.GetHttpsApiRestShApiSE") GetHttpsApiRestShApiSE
+### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".encryption_pkg.DataAndFileEncryptionAPI") DataAndFileEncryptionAPI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -656,7 +609,13 @@ encryption := encryption_pkg.NewENCRYPTION()
 
 
 ```go
-func (me *ENCRYPTION_IMPL) GetHttpsApiRestShApiSE(input *GetHttpsApiRestShApiSEInput)(*models_pkg.HttpsApiRestShApiSERModel,error)
+func (me *ENCRYPTION_IMPL) DataAndFileEncryptionAPI(
+            key string,
+            uid string,
+            data string,
+            method string,
+            bit int64,
+            contentType string)(*models_pkg.HttpsApiRestShApiSER,error)
 ```
 
 #### Parameters
@@ -674,34 +633,20 @@ func (me *ENCRYPTION_IMPL) GetHttpsApiRestShApiSE(input *GetHttpsApiRestShApiSEI
 #### Example Usage
 
 ```go
-collect := new (encryption_pkg.GetHttpsApiRestShApiSEInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 data := "data"
-collect.Data = data
-
 method := "method"
-collect.Method = method
-
-bit,_ := strconv.ParseInt("253", 10, 8)
-collect.Bit = bit
-
+bit,_ := strconv.ParseInt("178", 10, 8)
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSERModel
-result,_ = encryption.GetHttpsApiRestShApiSE(collect)
+var result *models_pkg.HttpsApiRestShApiSER
+result,_ = encryption.DataAndFileEncryptionAPI(key, uid, data, method, bit, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png ".encryption_pkg.CreateHttpsApiRestShApiSE") CreateHttpsApiRestShApiSE
+### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".encryption_pkg.DataAndFileEncryptionAPI") DataAndFileEncryptionAPI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -709,7 +654,9 @@ result,_ = encryption.GetHttpsApiRestShApiSE(collect)
 
 
 ```go
-func (me *ENCRYPTION_IMPL) CreateHttpsApiRestShApiSE(input *CreateHttpsApiRestShApiSEInput)(*models_pkg.HttpsApiRestShApiSERModel,error)
+func (me *ENCRYPTION_IMPL) DataAndFileEncryptionAPI(
+            body *models_pkg.HttpsApiRestShApiSE,
+            contentType string)(*models_pkg.HttpsApiRestShApiSER,error)
 ```
 
 #### Parameters
@@ -723,17 +670,11 @@ func (me *ENCRYPTION_IMPL) CreateHttpsApiRestShApiSE(input *CreateHttpsApiRestSh
 #### Example Usage
 
 ```go
-collect := new (encryption_pkg.CreateHttpsApiRestShApiSEInput)
-
-var body *models_pkg.HttpsApiRestShApiSEModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiSE
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSERModel
-result,_ = encryption.CreateHttpsApiRestShApiSE(collect)
+var result *models_pkg.HttpsApiRestShApiSER
+result,_ = encryption.DataAndFileEncryptionAPI(body, contentType)
 
 ```
 
@@ -750,7 +691,7 @@ Factory for the ``` CDN ``` interface can be accessed from the package cdn_pkg.
 cDN := cdn_pkg.NewCDN()
 ```
 
-### <a name="get_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.GetHttpsApiRestShApiSCPush") GetHttpsApiRestShApiSCPush
+### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPushZone") CDNPushZone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -758,7 +699,12 @@ cDN := cdn_pkg.NewCDN()
 
 
 ```go
-func (me *CDN_IMPL) GetHttpsApiRestShApiSCPush(input *GetHttpsApiRestShApiSCPushInput)(*models_pkg.HttpsApiRestShApiSCPushRModel,error)
+func (me *CDN_IMPL) CDNPushZone(
+            key string,
+            uid string,
+            cname string,
+            file string,
+            contentType string)(*models_pkg.HttpsApiRestShApiSCPushR,error)
 ```
 
 #### Parameters
@@ -775,31 +721,19 @@ func (me *CDN_IMPL) GetHttpsApiRestShApiSCPush(input *GetHttpsApiRestShApiSCPush
 #### Example Usage
 
 ```go
-collect := new (cdn_pkg.GetHttpsApiRestShApiSCPushInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 cname := "cname"
-collect.Cname = cname
-
 file := "file"
-collect.File = file
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSCPushRModel
-result,_ = cDN.GetHttpsApiRestShApiSCPush(collect)
+var result *models_pkg.HttpsApiRestShApiSCPushR
+result,_ = cDN.CDNPushZone(key, uid, cname, file, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.GetHttpsApiRestShApiSCPull") GetHttpsApiRestShApiSCPull
+### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPullZone") CDNPullZone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -807,7 +741,12 @@ result,_ = cDN.GetHttpsApiRestShApiSCPush(collect)
 
 
 ```go
-func (me *CDN_IMPL) GetHttpsApiRestShApiSCPull(input *GetHttpsApiRestShApiSCPullInput)(*models_pkg.HttpsApiRestShApiSCPullRModel,error)
+func (me *CDN_IMPL) CDNPullZone(
+            key string,
+            uid string,
+            origin string,
+            cname string,
+            contentType string)(*models_pkg.HttpsApiRestShApiSCPullR,error)
 ```
 
 #### Parameters
@@ -824,31 +763,19 @@ func (me *CDN_IMPL) GetHttpsApiRestShApiSCPull(input *GetHttpsApiRestShApiSCPull
 #### Example Usage
 
 ```go
-collect := new (cdn_pkg.GetHttpsApiRestShApiSCPullInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 origin := "origin"
-collect.Origin = origin
-
 cname := "cname"
-collect.Cname = cname
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSCPullRModel
-result,_ = cDN.GetHttpsApiRestShApiSCPull(collect)
+var result *models_pkg.HttpsApiRestShApiSCPullR
+result,_ = cDN.CDNPullZone(key, uid, origin, cname, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CreateHttpsApiRestShApiSCPush") CreateHttpsApiRestShApiSCPush
+### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPushZone") CDNPushZone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -856,7 +783,9 @@ result,_ = cDN.GetHttpsApiRestShApiSCPull(collect)
 
 
 ```go
-func (me *CDN_IMPL) CreateHttpsApiRestShApiSCPush(input *CreateHttpsApiRestShApiSCPushInput)(*models_pkg.HttpsApiRestShApiSCPushRModel,error)
+func (me *CDN_IMPL) CDNPushZone(
+            body *models_pkg.HttpsApiRestShApiSCPush,
+            contentType string)(*models_pkg.HttpsApiRestShApiSCPushR,error)
 ```
 
 #### Parameters
@@ -870,22 +799,16 @@ func (me *CDN_IMPL) CreateHttpsApiRestShApiSCPush(input *CreateHttpsApiRestShApi
 #### Example Usage
 
 ```go
-collect := new (cdn_pkg.CreateHttpsApiRestShApiSCPushInput)
-
-var body *models_pkg.HttpsApiRestShApiSCPushModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiSCPush
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSCPushRModel
-result,_ = cDN.CreateHttpsApiRestShApiSCPush(collect)
+var result *models_pkg.HttpsApiRestShApiSCPushR
+result,_ = cDN.CDNPushZone(body, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CreateHttpsApiRestShApiSCPull") CreateHttpsApiRestShApiSCPull
+### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPullZone") CDNPullZone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -893,7 +816,9 @@ result,_ = cDN.CreateHttpsApiRestShApiSCPush(collect)
 
 
 ```go
-func (me *CDN_IMPL) CreateHttpsApiRestShApiSCPull(input *CreateHttpsApiRestShApiSCPullInput)(*models_pkg.HttpsApiRestShApiSCPullRModel,error)
+func (me *CDN_IMPL) CDNPullZone(
+            body *models_pkg.HttpsApiRestShApiSCPull,
+            contentType string)(*models_pkg.HttpsApiRestShApiSCPullR,error)
 ```
 
 #### Parameters
@@ -907,17 +832,11 @@ func (me *CDN_IMPL) CreateHttpsApiRestShApiSCPull(input *CreateHttpsApiRestShApi
 #### Example Usage
 
 ```go
-collect := new (cdn_pkg.CreateHttpsApiRestShApiSCPullInput)
-
-var body *models_pkg.HttpsApiRestShApiSCPullModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiSCPull
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSCPullRModel
-result,_ = cDN.CreateHttpsApiRestShApiSCPull(collect)
+var result *models_pkg.HttpsApiRestShApiSCPullR
+result,_ = cDN.CDNPullZone(body, contentType)
 
 ```
 
@@ -934,7 +853,7 @@ Factory for the ``` DNS ``` interface can be accessed from the package dns_pkg.
 dNS := dns_pkg.NewDNS()
 ```
 
-### <a name="get_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.GetHttpsApiRestShApiSDC") GetHttpsApiRestShApiSDC
+### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSConfiguration") DNSConfiguration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -942,7 +861,12 @@ dNS := dns_pkg.NewDNS()
 
 
 ```go
-func (me *DNS_IMPL) GetHttpsApiRestShApiSDC(input *GetHttpsApiRestShApiSDCInput)(*models_pkg.HttpsApiRestShApiSDCRModel,error)
+func (me *DNS_IMPL) DNSConfiguration(
+            key string,
+            uid string,
+            domain string,
+            records string,
+            contentType string)(*models_pkg.HttpsApiRestShApiSDCR,error)
 ```
 
 #### Parameters
@@ -959,31 +883,19 @@ func (me *DNS_IMPL) GetHttpsApiRestShApiSDC(input *GetHttpsApiRestShApiSDCInput)
 #### Example Usage
 
 ```go
-collect := new (dns_pkg.GetHttpsApiRestShApiSDCInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 domain := "domain"
-collect.Domain = domain
-
 records := "records"
-collect.Records = records
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSDCRModel
-result,_ = dNS.GetHttpsApiRestShApiSDC(collect)
+var result *models_pkg.HttpsApiRestShApiSDCR
+result,_ = dNS.DNSConfiguration(key, uid, domain, records, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.CreateHttpsApiRestShApiSDC") CreateHttpsApiRestShApiSDC
+### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSConfiguration") DNSConfiguration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -991,7 +903,9 @@ result,_ = dNS.GetHttpsApiRestShApiSDC(collect)
 
 
 ```go
-func (me *DNS_IMPL) CreateHttpsApiRestShApiSDC(input *CreateHttpsApiRestShApiSDCInput)(*models_pkg.HttpsApiRestShApiSDCRModel,error)
+func (me *DNS_IMPL) DNSConfiguration(
+            body *models_pkg.HttpsApiRestShApiSDC,
+            contentType string)(*models_pkg.HttpsApiRestShApiSDCR,error)
 ```
 
 #### Parameters
@@ -1005,22 +919,16 @@ func (me *DNS_IMPL) CreateHttpsApiRestShApiSDC(input *CreateHttpsApiRestShApiSDC
 #### Example Usage
 
 ```go
-collect := new (dns_pkg.CreateHttpsApiRestShApiSDCInput)
-
-var body *models_pkg.HttpsApiRestShApiSDCModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiSDC
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSDCRModel
-result,_ = dNS.CreateHttpsApiRestShApiSDC(collect)
+var result *models_pkg.HttpsApiRestShApiSDCR
+result,_ = dNS.DNSConfiguration(body, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.GetHttpsApiRestShApiSDA") GetHttpsApiRestShApiSDA
+### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSCreation") DNSCreation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1028,7 +936,11 @@ result,_ = dNS.CreateHttpsApiRestShApiSDC(collect)
 
 
 ```go
-func (me *DNS_IMPL) GetHttpsApiRestShApiSDA(input *GetHttpsApiRestShApiSDAInput)(*models_pkg.HttpsApiRestShApiSDARModel,error)
+func (me *DNS_IMPL) DNSCreation(
+            key string,
+            uid string,
+            domain string,
+            contentType string)(*models_pkg.HttpsApiRestShApiSDAR,error)
 ```
 
 #### Parameters
@@ -1044,28 +956,18 @@ func (me *DNS_IMPL) GetHttpsApiRestShApiSDA(input *GetHttpsApiRestShApiSDAInput)
 #### Example Usage
 
 ```go
-collect := new (dns_pkg.GetHttpsApiRestShApiSDAInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 domain := "domain"
-collect.Domain = domain
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSDARModel
-result,_ = dNS.GetHttpsApiRestShApiSDA(collect)
+var result *models_pkg.HttpsApiRestShApiSDAR
+result,_ = dNS.DNSCreation(key, uid, domain, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.CreateHttpsApiRestShApiSDA") CreateHttpsApiRestShApiSDA
+### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSCreation") DNSCreation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1073,7 +975,9 @@ result,_ = dNS.GetHttpsApiRestShApiSDA(collect)
 
 
 ```go
-func (me *DNS_IMPL) CreateHttpsApiRestShApiSDA(input *CreateHttpsApiRestShApiSDAInput)(*models_pkg.HttpsApiRestShApiSDARModel,error)
+func (me *DNS_IMPL) DNSCreation(
+            body *models_pkg.HttpsApiRestShApiSDA,
+            contentType string)(*models_pkg.HttpsApiRestShApiSDAR,error)
 ```
 
 #### Parameters
@@ -1087,17 +991,11 @@ func (me *DNS_IMPL) CreateHttpsApiRestShApiSDA(input *CreateHttpsApiRestShApiSDA
 #### Example Usage
 
 ```go
-collect := new (dns_pkg.CreateHttpsApiRestShApiSDAInput)
-
-var body *models_pkg.HttpsApiRestShApiSDAModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiSDA
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSDARModel
-result,_ = dNS.CreateHttpsApiRestShApiSDA(collect)
+var result *models_pkg.HttpsApiRestShApiSDAR
+result,_ = dNS.DNSCreation(body, contentType)
 
 ```
 
@@ -1114,7 +1012,7 @@ Factory for the ``` CODEOBFUSCATION ``` interface can be accessed from the packa
 codeObfuscation := codeobfuscation_pkg.NewCODEOBFUSCATION()
 ```
 
-### <a name="get_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png ".codeobfuscation_pkg.GetHttpsApiRestShApiSO") GetHttpsApiRestShApiSO
+### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".codeobfuscation_pkg.CodeApplicationObfuscationAndAntiTampering") CodeApplicationObfuscationAndAntiTampering
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1122,7 +1020,11 @@ codeObfuscation := codeobfuscation_pkg.NewCODEOBFUSCATION()
 
 
 ```go
-func (me *CODEOBFUSCATION_IMPL) GetHttpsApiRestShApiSO(input *GetHttpsApiRestShApiSOInput)(*models_pkg.HttpsApiRestShApiSORModel,error)
+func (me *CODEOBFUSCATION_IMPL) CodeApplicationObfuscationAndAntiTampering(
+            key string,
+            uid string,
+            app string,
+            contentType string)(*models_pkg.HttpsApiRestShApiSOR,error)
 ```
 
 #### Parameters
@@ -1138,28 +1040,18 @@ func (me *CODEOBFUSCATION_IMPL) GetHttpsApiRestShApiSO(input *GetHttpsApiRestShA
 #### Example Usage
 
 ```go
-collect := new (codeobfuscation_pkg.GetHttpsApiRestShApiSOInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 app := "app"
-collect.App = app
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSORModel
-result,_ = codeObfuscation.GetHttpsApiRestShApiSO(collect)
+var result *models_pkg.HttpsApiRestShApiSOR
+result,_ = codeObfuscation.CodeApplicationObfuscationAndAntiTampering(key, uid, app, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png ".codeobfuscation_pkg.CreateHttpsApiRestShApiSO") CreateHttpsApiRestShApiSO
+### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".codeobfuscation_pkg.CodeApplicationObfuscationAndAntiTampering") CodeApplicationObfuscationAndAntiTampering
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1167,7 +1059,9 @@ result,_ = codeObfuscation.GetHttpsApiRestShApiSO(collect)
 
 
 ```go
-func (me *CODEOBFUSCATION_IMPL) CreateHttpsApiRestShApiSO(input *CreateHttpsApiRestShApiSOInput)(*models_pkg.HttpsApiRestShApiSORModel,error)
+func (me *CODEOBFUSCATION_IMPL) CodeApplicationObfuscationAndAntiTampering(
+            body *models_pkg.HttpsApiRestShApiSO,
+            contentType string)(*models_pkg.HttpsApiRestShApiSOR,error)
 ```
 
 #### Parameters
@@ -1181,17 +1075,11 @@ func (me *CODEOBFUSCATION_IMPL) CreateHttpsApiRestShApiSO(input *CreateHttpsApiR
 #### Example Usage
 
 ```go
-collect := new (codeobfuscation_pkg.CreateHttpsApiRestShApiSOInput)
-
-var body *models_pkg.HttpsApiRestShApiSOModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiSO
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSORModel
-result,_ = codeObfuscation.CreateHttpsApiRestShApiSO(collect)
+var result *models_pkg.HttpsApiRestShApiSOR
+result,_ = codeObfuscation.CodeApplicationObfuscationAndAntiTampering(body, contentType)
 
 ```
 
@@ -1208,7 +1096,7 @@ Factory for the ``` HOSTING ``` interface can be accessed from the package hosti
 hosting := hosting_pkg.NewHOSTING()
 ```
 
-### <a name="get_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png ".hosting_pkg.GetHttpsApiRestShApiSH") GetHttpsApiRestShApiSH
+### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".hosting_pkg.HostingSetup") HostingSetup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1216,7 +1104,12 @@ hosting := hosting_pkg.NewHOSTING()
 
 
 ```go
-func (me *HOSTING_IMPL) GetHttpsApiRestShApiSH(input *GetHttpsApiRestShApiSHInput)(*models_pkg.HttpsApiRestShApiSHRModel,error)
+func (me *HOSTING_IMPL) HostingSetup(
+            key string,
+            uid string,
+            app string,
+            domain string,
+            contentType string)(*models_pkg.HttpsApiRestShApiSHR,error)
 ```
 
 #### Parameters
@@ -1233,31 +1126,19 @@ func (me *HOSTING_IMPL) GetHttpsApiRestShApiSH(input *GetHttpsApiRestShApiSHInpu
 #### Example Usage
 
 ```go
-collect := new (hosting_pkg.GetHttpsApiRestShApiSHInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 app := "app"
-collect.App = app
-
 domain := "domain"
-collect.Domain = domain
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSHRModel
-result,_ = hosting.GetHttpsApiRestShApiSH(collect)
+var result *models_pkg.HttpsApiRestShApiSHR
+result,_ = hosting.HostingSetup(key, uid, app, domain, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png ".hosting_pkg.CreateHttpsApiRestShApiSH") CreateHttpsApiRestShApiSH
+### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".hosting_pkg.HostingSetup") HostingSetup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1265,7 +1146,9 @@ result,_ = hosting.GetHttpsApiRestShApiSH(collect)
 
 
 ```go
-func (me *HOSTING_IMPL) CreateHttpsApiRestShApiSH(input *CreateHttpsApiRestShApiSHInput)(*models_pkg.HttpsApiRestShApiSHRModel,error)
+func (me *HOSTING_IMPL) HostingSetup(
+            body *models_pkg.HttpsApiRestShApiSH,
+            contentType string)(*models_pkg.HttpsApiRestShApiSHR,error)
 ```
 
 #### Parameters
@@ -1279,17 +1162,11 @@ func (me *HOSTING_IMPL) CreateHttpsApiRestShApiSH(input *CreateHttpsApiRestShApi
 #### Example Usage
 
 ```go
-collect := new (hosting_pkg.CreateHttpsApiRestShApiSHInput)
-
-var body *models_pkg.HttpsApiRestShApiSHModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiSH
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiSHRModel
-result,_ = hosting.CreateHttpsApiRestShApiSH(collect)
+var result *models_pkg.HttpsApiRestShApiSHR
+result,_ = hosting.HostingSetup(body, contentType)
 
 ```
 
@@ -1306,7 +1183,7 @@ Factory for the ``` DATAMANIPULATION,CONVERSION,SORTING,ANDCOMPRESSIONAPI ``` in
 dataManipulationConversionSortingAndCompressionAPI := datamanipulation,conversion,sorting,andcompressionapi_pkg.NewDATAMANIPULATION,CONVERSION,SORTING,ANDCOMPRESSIONAPI()
 ```
 
-### <a name="get_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".datamanipulation,conversion,sorting,andcompressionapi_pkg.GetHttpsApiRestShApiD") GetHttpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".datamanipulation,conversion,sorting,andcompressionapi_pkg.HttpsApiRestShApiD") HttpsApiRestShApiD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1314,7 +1191,13 @@ dataManipulationConversionSortingAndCompressionAPI := datamanipulation,conversio
 
 
 ```go
-func (me *DATAMANIPULATIONCONVERSIONSORTINGANDCOMPRESSIONAPI_IMPL) GetHttpsApiRestShApiD(input *GetHttpsApiRestShApiDInput)(*models_pkg.HttpsApiRestShApiDRModel,error)
+func (me *DATAMANIPULATIONCONVERSIONSORTINGANDCOMPRESSIONAPI_IMPL) HttpsApiRestShApiD(
+            key string,
+            uid string,
+            user string,
+            apiuid string,
+            data string,
+            contentType string)(*models_pkg.HttpsApiRestShApiDR,error)
 ```
 
 #### Parameters
@@ -1332,34 +1215,20 @@ func (me *DATAMANIPULATIONCONVERSIONSORTINGANDCOMPRESSIONAPI_IMPL) GetHttpsApiRe
 #### Example Usage
 
 ```go
-collect := new (datamanipulation,conversion,sorting,andcompressionapi_pkg.GetHttpsApiRestShApiDInput)
-
 key := "API"
-collect.Key = key
-
 uid := "UID"
-collect.Uid = uid
-
 user := "UID"
-collect.User = user
-
 apiuid := "apiUID"
-collect.Apiuid = apiuid
-
 data := "https://static.yourcdn.com/data.file"
-collect.Data = data
-
 contentType := "application/json"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiDRModel
-result,_ = dataManipulationConversionSortingAndCompressionAPI.GetHttpsApiRestShApiD(collect)
+var result *models_pkg.HttpsApiRestShApiDR
+result,_ = dataManipulationConversionSortingAndCompressionAPI.HttpsApiRestShApiD(key, uid, user, apiuid, data, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".datamanipulation,conversion,sorting,andcompressionapi_pkg.CreateHttpsApiRestShApiD") CreateHttpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".datamanipulation,conversion,sorting,andcompressionapi_pkg.HttpsApiRestShApiD") HttpsApiRestShApiD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1367,7 +1236,9 @@ result,_ = dataManipulationConversionSortingAndCompressionAPI.GetHttpsApiRestShA
 
 
 ```go
-func (me *DATAMANIPULATIONCONVERSIONSORTINGANDCOMPRESSIONAPI_IMPL) CreateHttpsApiRestShApiD(input *CreateHttpsApiRestShApiDInput)(*models_pkg.HttpsApiRestShApiDRModel,error)
+func (me *DATAMANIPULATIONCONVERSIONSORTINGANDCOMPRESSIONAPI_IMPL) HttpsApiRestShApiD(
+            body *models_pkg.HttpsApiRestShApiD,
+            contentType string)(*models_pkg.HttpsApiRestShApiDR,error)
 ```
 
 #### Parameters
@@ -1381,19 +1252,13 @@ func (me *DATAMANIPULATIONCONVERSIONSORTINGANDCOMPRESSIONAPI_IMPL) CreateHttpsAp
 #### Example Usage
 
 ```go
-collect := new (datamanipulation,conversion,sorting,andcompressionapi_pkg.CreateHttpsApiRestShApiDInput)
-
 bodyValue := []byte("{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}")
-var body *models_pkg.HttpsApiRestShApiDModel
+var body *models_pkg.HttpsApiRestShApiD
 json.Unmarshal(bodyValue,&body)
-collect.Body = body
-
 contentType := "application/json"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiDRModel
-result,_ = dataManipulationConversionSortingAndCompressionAPI.CreateHttpsApiRestShApiD(collect)
+var result *models_pkg.HttpsApiRestShApiDR
+result,_ = dataManipulationConversionSortingAndCompressionAPI.HttpsApiRestShApiD(body, contentType)
 
 ```
 
@@ -1410,7 +1275,7 @@ Factory for the ``` IMAGEMANIPULATIONANDMODERATIONAPI ``` interface can be acces
 imageManipulationAndModerationAPI := imagemanipulationandmoderationapi_pkg.NewIMAGEMANIPULATIONANDMODERATIONAPI()
 ```
 
-### <a name="get_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".imagemanipulationandmoderationapi_pkg.GetHttpsApiRestShApiI") GetHttpsApiRestShApiI
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".imagemanipulationandmoderationapi_pkg.ImageManipulation") ImageManipulation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1418,7 +1283,12 @@ imageManipulationAndModerationAPI := imagemanipulationandmoderationapi_pkg.NewIM
 
 
 ```go
-func (me *IMAGEMANIPULATIONANDMODERATIONAPI_IMPL) GetHttpsApiRestShApiI(input *GetHttpsApiRestShApiIInput)(*models_pkg.HttpsApiRestShApiIRModel,error)
+func (me *IMAGEMANIPULATIONANDMODERATIONAPI_IMPL) ImageManipulation(
+            key string,
+            uid string,
+            image string,
+            transform string,
+            contentType string)(*models_pkg.HttpsApiRestShApiIR,error)
 ```
 
 #### Parameters
@@ -1435,31 +1305,19 @@ func (me *IMAGEMANIPULATIONANDMODERATIONAPI_IMPL) GetHttpsApiRestShApiI(input *G
 #### Example Usage
 
 ```go
-collect := new (imagemanipulationandmoderationapi_pkg.GetHttpsApiRestShApiIInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 image := "image"
-collect.Image = image
-
 transform := "transform"
-collect.Transform = transform
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiIRModel
-result,_ = imageManipulationAndModerationAPI.GetHttpsApiRestShApiI(collect)
+var result *models_pkg.HttpsApiRestShApiIR
+result,_ = imageManipulationAndModerationAPI.ImageManipulation(key, uid, image, transform, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".imagemanipulationandmoderationapi_pkg.CreateHttpsApiRestShApiI") CreateHttpsApiRestShApiI
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".imagemanipulationandmoderationapi_pkg.ImageManipulation") ImageManipulation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1467,7 +1325,9 @@ result,_ = imageManipulationAndModerationAPI.GetHttpsApiRestShApiI(collect)
 
 
 ```go
-func (me *IMAGEMANIPULATIONANDMODERATIONAPI_IMPL) CreateHttpsApiRestShApiI(input *CreateHttpsApiRestShApiIInput)(*models_pkg.HttpsApiRestShApiIRModel,error)
+func (me *IMAGEMANIPULATIONANDMODERATIONAPI_IMPL) ImageManipulation(
+            body *models_pkg.HttpsApiRestShApiI,
+            contentType string)(*models_pkg.HttpsApiRestShApiIR,error)
 ```
 
 #### Parameters
@@ -1481,17 +1341,11 @@ func (me *IMAGEMANIPULATIONANDMODERATIONAPI_IMPL) CreateHttpsApiRestShApiI(input
 #### Example Usage
 
 ```go
-collect := new (imagemanipulationandmoderationapi_pkg.CreateHttpsApiRestShApiIInput)
-
-var body *models_pkg.HttpsApiRestShApiIModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiI
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiIRModel
-result,_ = imageManipulationAndModerationAPI.CreateHttpsApiRestShApiI(collect)
+var result *models_pkg.HttpsApiRestShApiIR
+result,_ = imageManipulationAndModerationAPI.ImageManipulation(body, contentType)
 
 ```
 
@@ -1508,7 +1362,7 @@ Factory for the ``` VERIFICATION ``` interface can be accessed from the package 
 verification := verification_pkg.NewVERIFICATION()
 ```
 
-### <a name="get_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.GetHttpsApiRestShApiVA") GetHttpsApiRestShApiVA
+### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserAddressVerification") UserAddressVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1516,7 +1370,16 @@ verification := verification_pkg.NewVERIFICATION()
 
 
 ```go
-func (me *VERIFICATION_IMPL) GetHttpsApiRestShApiVA(input *GetHttpsApiRestShApiVAInput)(*models_pkg.HttpsApiRestShApiVARModel,error)
+func (me *VERIFICATION_IMPL) UserAddressVerification(
+            key string,
+            uid string,
+            user string,
+            a string,
+            sa string,
+            c string,
+            s string,
+            z int64,
+            contentType string)(*models_pkg.HttpsApiRestShApiVAR,error)
 ```
 
 #### Parameters
@@ -1537,43 +1400,23 @@ func (me *VERIFICATION_IMPL) GetHttpsApiRestShApiVA(input *GetHttpsApiRestShApiV
 #### Example Usage
 
 ```go
-collect := new (verification_pkg.GetHttpsApiRestShApiVAInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 user := "user"
-collect.User = user
-
 a := "a"
-collect.A = a
-
 sa := "sa"
-collect.Sa = sa
-
 c := "c"
-collect.C = c
-
 s := "s"
-collect.S = s
-
-z,_ := strconv.ParseInt("212", 10, 8)
-collect.Z = z
-
+z,_ := strconv.ParseInt("178", 10, 8)
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiVARModel
-result,_ = verification.GetHttpsApiRestShApiVA(collect)
+var result *models_pkg.HttpsApiRestShApiVAR
+result,_ = verification.UserAddressVerification(key, uid, user, a, sa, c, s, z, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.CreateHttpsApiRestShApiVA") CreateHttpsApiRestShApiVA
+### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserAddressVerification") UserAddressVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1581,7 +1424,9 @@ result,_ = verification.GetHttpsApiRestShApiVA(collect)
 
 
 ```go
-func (me *VERIFICATION_IMPL) CreateHttpsApiRestShApiVA(input *CreateHttpsApiRestShApiVAInput)(*models_pkg.HttpsApiRestShApiVARModel,error)
+func (me *VERIFICATION_IMPL) UserAddressVerification(
+            body *models_pkg.HttpsApiRestShApiVA,
+            contentType string)(*models_pkg.HttpsApiRestShApiVAR,error)
 ```
 
 #### Parameters
@@ -1595,22 +1440,16 @@ func (me *VERIFICATION_IMPL) CreateHttpsApiRestShApiVA(input *CreateHttpsApiRest
 #### Example Usage
 
 ```go
-collect := new (verification_pkg.CreateHttpsApiRestShApiVAInput)
-
-var body *models_pkg.HttpsApiRestShApiVAModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiVA
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiVARModel
-result,_ = verification.CreateHttpsApiRestShApiVA(collect)
+var result *models_pkg.HttpsApiRestShApiVAR
+result,_ = verification.UserAddressVerification(body, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.GetHttpsApiRestShApiVU") GetHttpsApiRestShApiVU
+### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserVerification") UserVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1618,7 +1457,12 @@ result,_ = verification.CreateHttpsApiRestShApiVA(collect)
 
 
 ```go
-func (me *VERIFICATION_IMPL) GetHttpsApiRestShApiVU(input *GetHttpsApiRestShApiVUInput)(*models_pkg.HttpsApiRestShApiVURModel,error)
+func (me *VERIFICATION_IMPL) UserVerification(
+            key string,
+            uid string,
+            user string,
+            code string,
+            contentType string)(*models_pkg.HttpsApiRestShApiVUR,error)
 ```
 
 #### Parameters
@@ -1635,31 +1479,19 @@ func (me *VERIFICATION_IMPL) GetHttpsApiRestShApiVU(input *GetHttpsApiRestShApiV
 #### Example Usage
 
 ```go
-collect := new (verification_pkg.GetHttpsApiRestShApiVUInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 user := "user"
-collect.User = user
-
 code := "code"
-collect.Code = code
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiVURModel
-result,_ = verification.GetHttpsApiRestShApiVU(collect)
+var result *models_pkg.HttpsApiRestShApiVUR
+result,_ = verification.UserVerification(key, uid, user, code, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.CreateHttpsApiRestShApiVU") CreateHttpsApiRestShApiVU
+### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserVerification") UserVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1667,7 +1499,9 @@ result,_ = verification.GetHttpsApiRestShApiVU(collect)
 
 
 ```go
-func (me *VERIFICATION_IMPL) CreateHttpsApiRestShApiVU(input *CreateHttpsApiRestShApiVUInput)(*models_pkg.HttpsApiRestShApiVURModel,error)
+func (me *VERIFICATION_IMPL) UserVerification(
+            body *models_pkg.HttpsApiRestShApiVU,
+            contentType string)(*models_pkg.HttpsApiRestShApiVUR,error)
 ```
 
 #### Parameters
@@ -1681,22 +1515,16 @@ func (me *VERIFICATION_IMPL) CreateHttpsApiRestShApiVU(input *CreateHttpsApiRest
 #### Example Usage
 
 ```go
-collect := new (verification_pkg.CreateHttpsApiRestShApiVUInput)
-
-var body *models_pkg.HttpsApiRestShApiVUModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiVU
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiVURModel
-result,_ = verification.CreateHttpsApiRestShApiVU(collect)
+var result *models_pkg.HttpsApiRestShApiVUR
+result,_ = verification.UserVerification(body, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.GetHttpsApiRestShApiV") GetHttpsApiRestShApiV
+### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.CellphoneVerification") CellphoneVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1704,7 +1532,11 @@ result,_ = verification.CreateHttpsApiRestShApiVU(collect)
 
 
 ```go
-func (me *VERIFICATION_IMPL) GetHttpsApiRestShApiV(input *GetHttpsApiRestShApiVInput)(*models_pkg.HttpsApiRestShApiVRModel,error)
+func (me *VERIFICATION_IMPL) CellphoneVerification(
+            key string,
+            uid string,
+            to string,
+            contentType string)(*models_pkg.HttpsApiRestShApiVR,error)
 ```
 
 #### Parameters
@@ -1720,28 +1552,18 @@ func (me *VERIFICATION_IMPL) GetHttpsApiRestShApiV(input *GetHttpsApiRestShApiVI
 #### Example Usage
 
 ```go
-collect := new (verification_pkg.GetHttpsApiRestShApiVInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 to := "to"
-collect.To = to
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiVRModel
-result,_ = verification.GetHttpsApiRestShApiV(collect)
+var result *models_pkg.HttpsApiRestShApiVR
+result,_ = verification.CellphoneVerification(key, uid, to, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.CreateHttpsApiRestShApiV") CreateHttpsApiRestShApiV
+### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.CellphoneVerification") CellphoneVerification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1749,7 +1571,9 @@ result,_ = verification.GetHttpsApiRestShApiV(collect)
 
 
 ```go
-func (me *VERIFICATION_IMPL) CreateHttpsApiRestShApiV(input *CreateHttpsApiRestShApiVInput)(*models_pkg.HttpsApiRestShApiVRModel,error)
+func (me *VERIFICATION_IMPL) CellphoneVerification(
+            body *models_pkg.HttpsApiRestShApiV,
+            contentType string)(*models_pkg.HttpsApiRestShApiVR,error)
 ```
 
 #### Parameters
@@ -1763,17 +1587,11 @@ func (me *VERIFICATION_IMPL) CreateHttpsApiRestShApiV(input *CreateHttpsApiRestS
 #### Example Usage
 
 ```go
-collect := new (verification_pkg.CreateHttpsApiRestShApiVInput)
-
-var body *models_pkg.HttpsApiRestShApiVModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiV
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiVRModel
-result,_ = verification.CreateHttpsApiRestShApiV(collect)
+var result *models_pkg.HttpsApiRestShApiVR
+result,_ = verification.CellphoneVerification(body, contentType)
 
 ```
 
@@ -1790,7 +1608,7 @@ Factory for the ``` TWOFACTORAUTHENTICATIONAPI ``` interface can be accessed fro
 twoFactorAuthenticationAPI := twofactorauthenticationapi_pkg.NewTWOFACTORAUTHENTICATIONAPI()
 ```
 
-### <a name="get_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.GetHttpsApiRestShApi2faT") GetHttpsApiRestShApi2faT
+### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.M2FATokenResponse") M2FATokenResponse
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1798,7 +1616,12 @@ twoFactorAuthenticationAPI := twofactorauthenticationapi_pkg.NewTWOFACTORAUTHENT
 
 
 ```go
-func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) GetHttpsApiRestShApi2faT(input *GetHttpsApiRestShApi2faTInput)(*models_pkg.HttpsApiRestShApi2faTRModel,error)
+func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) M2FATokenResponse(
+            key string,
+            uid string,
+            user string,
+            code string,
+            contentType string)(*models_pkg.HttpsApiRestShApi2faTR,error)
 ```
 
 #### Parameters
@@ -1815,31 +1638,19 @@ func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) GetHttpsApiRestShApi2faT(input *GetHt
 #### Example Usage
 
 ```go
-collect := new (twofactorauthenticationapi_pkg.GetHttpsApiRestShApi2faTInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 user := "user"
-collect.User = user
-
 code := "code"
-collect.Code = code
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApi2faTRModel
-result,_ = twoFactorAuthenticationAPI.GetHttpsApiRestShApi2faT(collect)
+var result *models_pkg.HttpsApiRestShApi2faTR
+result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(key, uid, user, code, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.CreateHttpsApiRestShApi2faT") CreateHttpsApiRestShApi2faT
+### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.M2FATokenResponse") M2FATokenResponse
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1847,7 +1658,9 @@ result,_ = twoFactorAuthenticationAPI.GetHttpsApiRestShApi2faT(collect)
 
 
 ```go
-func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) CreateHttpsApiRestShApi2faT(input *CreateHttpsApiRestShApi2faTInput)(*models_pkg.HttpsApiRestShApi2faTRModel,error)
+func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) M2FATokenResponse(
+            body *models_pkg.HttpsApiRestShApi2faT,
+            contentType string)(*models_pkg.HttpsApiRestShApi2faTR,error)
 ```
 
 #### Parameters
@@ -1861,22 +1674,16 @@ func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) CreateHttpsApiRestShApi2faT(input *Cr
 #### Example Usage
 
 ```go
-collect := new (twofactorauthenticationapi_pkg.CreateHttpsApiRestShApi2faTInput)
-
-var body *models_pkg.HttpsApiRestShApi2faTModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApi2faT
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApi2faTRModel
-result,_ = twoFactorAuthenticationAPI.CreateHttpsApiRestShApi2faT(collect)
+var result *models_pkg.HttpsApiRestShApi2faTR
+result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(body, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api2fa"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.GetHttpsApiRestShApi2fa") GetHttpsApiRestShApi2fa
+### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.TwoFactorAuthentication") TwoFactorAuthentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1884,7 +1691,11 @@ result,_ = twoFactorAuthenticationAPI.CreateHttpsApiRestShApi2faT(collect)
 
 
 ```go
-func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) GetHttpsApiRestShApi2fa(input *GetHttpsApiRestShApi2faInput)(*models_pkg.HttpsApiRestShApi2faRModel,error)
+func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) TwoFactorAuthentication(
+            key string,
+            uid string,
+            to string,
+            contentType string)(*models_pkg.HttpsApiRestShApi2faR,error)
 ```
 
 #### Parameters
@@ -1900,28 +1711,18 @@ func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) GetHttpsApiRestShApi2fa(input *GetHtt
 #### Example Usage
 
 ```go
-collect := new (twofactorauthenticationapi_pkg.GetHttpsApiRestShApi2faInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 to := "to"
-collect.To = to
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApi2faRModel
-result,_ = twoFactorAuthenticationAPI.GetHttpsApiRestShApi2fa(collect)
+var result *models_pkg.HttpsApiRestShApi2faR
+result,_ = twoFactorAuthenticationAPI.TwoFactorAuthentication(key, uid, to, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api2fa"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.CreateHttpsApiRestShApi2fa") CreateHttpsApiRestShApi2fa
+### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.TwoFactorAuthentication") TwoFactorAuthentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1929,7 +1730,9 @@ result,_ = twoFactorAuthenticationAPI.GetHttpsApiRestShApi2fa(collect)
 
 
 ```go
-func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) CreateHttpsApiRestShApi2fa(input *CreateHttpsApiRestShApi2faInput)(*models_pkg.HttpsApiRestShApi2faRModel,error)
+func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) TwoFactorAuthentication(
+            body *models_pkg.HttpsApiRestShApi2fa,
+            contentType string)(*models_pkg.HttpsApiRestShApi2faR,error)
 ```
 
 #### Parameters
@@ -1943,17 +1746,11 @@ func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) CreateHttpsApiRestShApi2fa(input *Cre
 #### Example Usage
 
 ```go
-collect := new (twofactorauthenticationapi_pkg.CreateHttpsApiRestShApi2faInput)
-
-var body *models_pkg.HttpsApiRestShApi2faModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApi2fa
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApi2faRModel
-result,_ = twoFactorAuthenticationAPI.CreateHttpsApiRestShApi2fa(collect)
+var result *models_pkg.HttpsApiRestShApi2faR
+result,_ = twoFactorAuthenticationAPI.TwoFactorAuthentication(body, contentType)
 
 ```
 
@@ -1970,7 +1767,7 @@ Factory for the ``` USERMANAGEMENT ``` interface can be accessed from the packag
 userManagement := usermanagement_pkg.NewUSERMANAGEMENT()
 ```
 
-### <a name="get_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.GetHttpsApiRestShApiUI") GetHttpsApiRestShApiUI
+### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.GetUserInfo") GetUserInfo
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1978,7 +1775,12 @@ userManagement := usermanagement_pkg.NewUSERMANAGEMENT()
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) GetHttpsApiRestShApiUI(input *GetHttpsApiRestShApiUIInput)(*models_pkg.HttpsApiRestShApiUIRModel,error)
+func (me *USERMANAGEMENT_IMPL) GetUserInfo(
+            key string,
+            uid string,
+            user string,
+            apiuid string,
+            contentType string)(*models_pkg.HttpsApiRestShApiUIR,error)
 ```
 
 #### Parameters
@@ -1995,31 +1797,19 @@ func (me *USERMANAGEMENT_IMPL) GetHttpsApiRestShApiUI(input *GetHttpsApiRestShAp
 #### Example Usage
 
 ```go
-collect := new (usermanagement_pkg.GetHttpsApiRestShApiUIInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 user := "user"
-collect.User = user
-
 apiuid := "apiuid"
-collect.Apiuid = apiuid
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiUIRModel
-result,_ = userManagement.GetHttpsApiRestShApiUI(collect)
+var result *models_pkg.HttpsApiRestShApiUIR
+result,_ = userManagement.GetUserInfo(key, uid, user, apiuid, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.CreateHttpsApiRestShApiUI") CreateHttpsApiRestShApiUI
+### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.GetUserInfo") GetUserInfo
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2027,7 +1817,9 @@ result,_ = userManagement.GetHttpsApiRestShApiUI(collect)
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) CreateHttpsApiRestShApiUI(input *CreateHttpsApiRestShApiUIInput)(*models_pkg.HttpsApiRestShApiUIRModel,error)
+func (me *USERMANAGEMENT_IMPL) GetUserInfo(
+            body *models_pkg.HttpsApiRestShApiUI,
+            contentType string)(*models_pkg.HttpsApiRestShApiUIR,error)
 ```
 
 #### Parameters
@@ -2041,22 +1833,16 @@ func (me *USERMANAGEMENT_IMPL) CreateHttpsApiRestShApiUI(input *CreateHttpsApiRe
 #### Example Usage
 
 ```go
-collect := new (usermanagement_pkg.CreateHttpsApiRestShApiUIInput)
-
-var body *models_pkg.HttpsApiRestShApiUIModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiUI
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiUIRModel
-result,_ = userManagement.CreateHttpsApiRestShApiUI(collect)
+var result *models_pkg.HttpsApiRestShApiUIR
+result,_ = userManagement.GetUserInfo(body, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.GetHttpsApiRestShApiUU") GetHttpsApiRestShApiUU
+### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.UpdateUser") UpdateUser
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2064,7 +1850,14 @@ result,_ = userManagement.CreateHttpsApiRestShApiUI(collect)
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) GetHttpsApiRestShApiUU(input *GetHttpsApiRestShApiUUInput)(*models_pkg.HttpsApiRestShApiUURModel,error)
+func (me *USERMANAGEMENT_IMPL) UpdateUser(
+            key string,
+            uid string,
+            user string,
+            apiuid string,
+            avatar string,
+            customInput string,
+            contentType string)(*models_pkg.HttpsApiRestShApiUUR,error)
 ```
 
 #### Parameters
@@ -2083,37 +1876,21 @@ func (me *USERMANAGEMENT_IMPL) GetHttpsApiRestShApiUU(input *GetHttpsApiRestShAp
 #### Example Usage
 
 ```go
-collect := new (usermanagement_pkg.GetHttpsApiRestShApiUUInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 user := "user"
-collect.User = user
-
 apiuid := "apiuid"
-collect.Apiuid = apiuid
-
 avatar := "avatar"
-collect.Avatar = avatar
-
 customInput := "custom input"
-collect.CustomInput = customInput
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiUURModel
-result,_ = userManagement.GetHttpsApiRestShApiUU(collect)
+var result *models_pkg.HttpsApiRestShApiUUR
+result,_ = userManagement.UpdateUser(key, uid, user, apiuid, avatar, customInput, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.CreateHttpsApiRestShApiUU") CreateHttpsApiRestShApiUU
+### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.UpdateUser") UpdateUser
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2121,7 +1898,9 @@ result,_ = userManagement.GetHttpsApiRestShApiUU(collect)
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) CreateHttpsApiRestShApiUU(input *CreateHttpsApiRestShApiUUInput)(*models_pkg.HttpsApiRestShApiUURModel,error)
+func (me *USERMANAGEMENT_IMPL) UpdateUser(
+            body *models_pkg.HttpsApiRestShApiUU,
+            contentType string)(*models_pkg.HttpsApiRestShApiUUR,error)
 ```
 
 #### Parameters
@@ -2135,22 +1914,16 @@ func (me *USERMANAGEMENT_IMPL) CreateHttpsApiRestShApiUU(input *CreateHttpsApiRe
 #### Example Usage
 
 ```go
-collect := new (usermanagement_pkg.CreateHttpsApiRestShApiUUInput)
-
-var body *models_pkg.HttpsApiRestShApiUUModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiUU
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiUURModel
-result,_ = userManagement.CreateHttpsApiRestShApiUU(collect)
+var result *models_pkg.HttpsApiRestShApiUUR
+result,_ = userManagement.UpdateUser(body, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.GetHttpsApiRestShApiUD") GetHttpsApiRestShApiUD
+### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.DeleteUser") DeleteUser
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2158,7 +1931,12 @@ result,_ = userManagement.CreateHttpsApiRestShApiUU(collect)
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) GetHttpsApiRestShApiUD(input *GetHttpsApiRestShApiUDInput)(*models_pkg.HttpsApiRestShApiUDRModel,error)
+func (me *USERMANAGEMENT_IMPL) DeleteUser(
+            api string,
+            uid string,
+            user string,
+            apiuid string,
+            contentType string)(*models_pkg.HttpsApiRestShApiUDR,error)
 ```
 
 #### Parameters
@@ -2175,31 +1953,19 @@ func (me *USERMANAGEMENT_IMPL) GetHttpsApiRestShApiUD(input *GetHttpsApiRestShAp
 #### Example Usage
 
 ```go
-collect := new (usermanagement_pkg.GetHttpsApiRestShApiUDInput)
-
 api := "api"
-collect.Api = api
-
 uid := "uid"
-collect.Uid = uid
-
 user := "user"
-collect.User = user
-
 apiuid := "apiuid"
-collect.Apiuid = apiuid
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiUDRModel
-result,_ = userManagement.GetHttpsApiRestShApiUD(collect)
+var result *models_pkg.HttpsApiRestShApiUDR
+result,_ = userManagement.DeleteUser(api, uid, user, apiuid, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.CreateHttpsApiRestShApiUD") CreateHttpsApiRestShApiUD
+### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.DeleteUser") DeleteUser
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2207,7 +1973,9 @@ result,_ = userManagement.GetHttpsApiRestShApiUD(collect)
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) CreateHttpsApiRestShApiUD(input *CreateHttpsApiRestShApiUDInput)(*models_pkg.HttpsApiRestShApiUDRModel,error)
+func (me *USERMANAGEMENT_IMPL) DeleteUser(
+            body *models_pkg.HttpsApiRestShApiUD,
+            contentType string)(*models_pkg.HttpsApiRestShApiUDR,error)
 ```
 
 #### Parameters
@@ -2221,17 +1989,11 @@ func (me *USERMANAGEMENT_IMPL) CreateHttpsApiRestShApiUD(input *CreateHttpsApiRe
 #### Example Usage
 
 ```go
-collect := new (usermanagement_pkg.CreateHttpsApiRestShApiUDInput)
-
-var body *models_pkg.HttpsApiRestShApiUDModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiUD
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiUDRModel
-result,_ = userManagement.CreateHttpsApiRestShApiUD(collect)
+var result *models_pkg.HttpsApiRestShApiUDR
+result,_ = userManagement.DeleteUser(body, contentType)
 
 ```
 
@@ -2248,7 +2010,7 @@ Factory for the ``` LOGINANDREGISTRATION ``` interface can be accessed from the 
 loginAndRegistration := loginandregistration_pkg.NewLOGINANDREGISTRATION()
 ```
 
-### <a name="get_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.GetHttpsApiRestShApiAUR") GetHttpsApiRestShApiAUR
+### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserRegistration") UserRegistration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2256,7 +2018,17 @@ loginAndRegistration := loginandregistration_pkg.NewLOGINANDREGISTRATION()
 
 
 ```go
-func (me *LOGINANDREGISTRATION_IMPL) GetHttpsApiRestShApiAUR(input *GetHttpsApiRestShApiAURInput)(*models_pkg.HttpsApiRestShApiAURRModel,error)
+func (me *LOGINANDREGISTRATION_IMPL) UserRegistration(
+            key string,
+            uid string,
+            user string,
+            password string,
+            name string,
+            email string,
+            phone int64,
+            countrycode int64,
+            address string,
+            contentType string)(*models_pkg.HttpsApiRestShApiAURR,error)
 ```
 
 #### Parameters
@@ -2278,46 +2050,24 @@ func (me *LOGINANDREGISTRATION_IMPL) GetHttpsApiRestShApiAUR(input *GetHttpsApiR
 #### Example Usage
 
 ```go
-collect := new (loginandregistration_pkg.GetHttpsApiRestShApiAURInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 user := "user"
-collect.User = user
-
 password := "password"
-collect.Password = password
-
 name := "name"
-collect.Name = name
-
 email := "email"
-collect.Email = email
-
-phone,_ := strconv.ParseInt("212", 10, 8)
-collect.Phone = phone
-
-countrycode,_ := strconv.ParseInt("212", 10, 8)
-collect.Countrycode = countrycode
-
+phone,_ := strconv.ParseInt("136", 10, 8)
+countrycode,_ := strconv.ParseInt("136", 10, 8)
 address := "address"
-collect.Address = address
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiAURRModel
-result,_ = loginAndRegistration.GetHttpsApiRestShApiAUR(collect)
+var result *models_pkg.HttpsApiRestShApiAURR
+result,_ = loginAndRegistration.UserRegistration(key, uid, user, password, name, email, phone, countrycode, address, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.CreateHttpsApiRestShApiAUR") CreateHttpsApiRestShApiAUR
+### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserRegistration") UserRegistration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2325,7 +2075,9 @@ result,_ = loginAndRegistration.GetHttpsApiRestShApiAUR(collect)
 
 
 ```go
-func (me *LOGINANDREGISTRATION_IMPL) CreateHttpsApiRestShApiAUR(input *CreateHttpsApiRestShApiAURInput)(*models_pkg.HttpsApiRestShApiAURRModel,error)
+func (me *LOGINANDREGISTRATION_IMPL) UserRegistration(
+            body *models_pkg.HttpsApiRestShApiAUR,
+            contentType string)(*models_pkg.HttpsApiRestShApiAURR,error)
 ```
 
 #### Parameters
@@ -2339,22 +2091,16 @@ func (me *LOGINANDREGISTRATION_IMPL) CreateHttpsApiRestShApiAUR(input *CreateHtt
 #### Example Usage
 
 ```go
-collect := new (loginandregistration_pkg.CreateHttpsApiRestShApiAURInput)
-
-var body *models_pkg.HttpsApiRestShApiAURModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiAUR
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiAURRModel
-result,_ = loginAndRegistration.CreateHttpsApiRestShApiAUR(collect)
+var result *models_pkg.HttpsApiRestShApiAURR
+result,_ = loginAndRegistration.UserRegistration(body, contentType)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.GetHttpsApiRestShApiAUL") GetHttpsApiRestShApiAUL
+### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserAuthentication") UserAuthentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2362,7 +2108,12 @@ result,_ = loginAndRegistration.CreateHttpsApiRestShApiAUR(collect)
 
 
 ```go
-func (me *LOGINANDREGISTRATION_IMPL) GetHttpsApiRestShApiAUL(input *GetHttpsApiRestShApiAULInput)(*models_pkg.HttpsApiRestShApiAULRModel,error)
+func (me *LOGINANDREGISTRATION_IMPL) UserAuthentication(
+            key string,
+            uid string,
+            user string,
+            password string,
+            contentType string)(*models_pkg.HttpsApiRestShApiAULR,error)
 ```
 
 #### Parameters
@@ -2379,31 +2130,19 @@ func (me *LOGINANDREGISTRATION_IMPL) GetHttpsApiRestShApiAUL(input *GetHttpsApiR
 #### Example Usage
 
 ```go
-collect := new (loginandregistration_pkg.GetHttpsApiRestShApiAULInput)
-
 key := "key"
-collect.Key = key
-
 uid := "uid"
-collect.Uid = uid
-
 user := "user"
-collect.User = user
-
 password := "password"
-collect.Password = password
-
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiAULRModel
-result,_ = loginAndRegistration.GetHttpsApiRestShApiAUL(collect)
+var result *models_pkg.HttpsApiRestShApiAULR
+result,_ = loginAndRegistration.UserAuthentication(key, uid, user, password, contentType)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.CreateHttpsApiRestShApiAUL") CreateHttpsApiRestShApiAUL
+### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserAuthentication") UserAuthentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2411,7 +2150,9 @@ result,_ = loginAndRegistration.GetHttpsApiRestShApiAUL(collect)
 
 
 ```go
-func (me *LOGINANDREGISTRATION_IMPL) CreateHttpsApiRestShApiAUL(input *CreateHttpsApiRestShApiAULInput)(*models_pkg.HttpsApiRestShApiAULRModel,error)
+func (me *LOGINANDREGISTRATION_IMPL) UserAuthentication(
+            body *models_pkg.HttpsApiRestShApiAUL,
+            contentType string)(*models_pkg.HttpsApiRestShApiAULR,error)
 ```
 
 #### Parameters
@@ -2425,17 +2166,11 @@ func (me *LOGINANDREGISTRATION_IMPL) CreateHttpsApiRestShApiAUL(input *CreateHtt
 #### Example Usage
 
 ```go
-collect := new (loginandregistration_pkg.CreateHttpsApiRestShApiAULInput)
-
-var body *models_pkg.HttpsApiRestShApiAULModel
-collect.Body = body
-
+var body *models_pkg.HttpsApiRestShApiAUL
 contentType := "Content-Type"
-collect.ContentType = contentType
 
-
-var result *models_pkg.HttpsApiRestShApiAULRModel
-result,_ = loginAndRegistration.CreateHttpsApiRestShApiAUL(collect)
+var result *models_pkg.HttpsApiRestShApiAULR
+result,_ = loginAndRegistration.UserAuthentication(body, contentType)
 
 ```
 

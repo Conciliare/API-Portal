@@ -211,8 +211,8 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| key | Your API Key |
-| uid | Your User ID |
+| basic_auth_user_name | The username to use with basic authentication |
+| basic_auth_password | The password to use with basic authentication |
 
 
 
@@ -220,10 +220,10 @@ API client can be initialized as following.
 
 ```python
 # Configuration parameters and credentials
-key = 'API' # Your API Key
-uid = 'UID' # Your User ID
+basic_auth_user_name = 'basic_auth_user_name' # The username to use with basic authentication
+basic_auth_password = 'basic_auth_password' # The password to use with basic authentication
 
-client = SMASH(key, uid)
+client = SMASH(basic_auth_user_name, basic_auth_password)
 ```
 
 
@@ -232,39 +232,44 @@ client = SMASH(key, uid)
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [AdvancedLoggingController](#advanced_logging_controller)
-* [WAFDDOSProtectionController](#wafddos_protection_controller)
-* [EncryptionController](#encryption_controller)
-* [CDNController](#cdn_controller)
-* [DNSController](#dns_controller)
-* [CodeObfuscationController](#code_obfuscation_controller)
-* [HostingController](#hosting_controller)
-* [DataManipulationConversionSortingAndCompressionAPIController](#data_manipulation_conversion_sorting_and_compression_api_controller)
-* [ImageManipulationAndModerationAPIController](#image_manipulation_and_moderation_api_controller)
-* [VerificationController](#verification_controller)
-* [TwoFactorAuthenticationAPIController](#two_factor_authentication_api_controller)
-* [UserManagementController](#user_management_controller)
-* [LoginAndRegistrationController](#login_and_registration_controller)
+* [AdvancedLogging](#advanced_logging)
+* [WAFDDOSProtection](#wafddos_protection)
+* [Encryption](#encryption)
+* [CDN](#cdn)
+* [DNS](#dns)
+* [CodeObfuscation](#code_obfuscation)
+* [Hosting](#hosting)
+* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
+* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [Verification](#verification)
+* [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
+* [UserManagement](#user_management)
+* [LoginAndRegistration](#login_and_registration)
 
-## <a name="advanced_logging_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AdvancedLoggingController") AdvancedLoggingController
+## <a name="advanced_logging"></a>![Class: ](https://apidocs.io/img/class.png ".AdvancedLogging") AdvancedLogging
 
 ### Get controller instance
 
-An instance of the ``` AdvancedLoggingController ``` class can be accessed from the API Client.
+An instance of the ``` AdvancedLogging ``` class can be accessed from the API Client.
 
 ```python
  advanced_logging_client = client.advanced_logging
 ```
 
-### <a name="get_https_api_rest_sh_api_s_l_i"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.get_https_api_rest_sh_api_s_l_i") get_https_api_rest_sh_api_s_l_i
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_info") logging_info
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
 ```python
-def get_https_api_rest_sh_api_s_l_i(self,
-                                        options=dict())
+def logging_info(self,
+                     key,
+                     uid,
+                     name,
+                     origin,
+                     time,
+                     content_type)
 ```
 
 #### Parameters
@@ -283,41 +288,32 @@ def get_https_api_rest_sh_api_s_l_i(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 name = 'name'
-collect['name'] = name
-
 origin = 'origin'
-collect['origin'] = origin
-
 time = 'time'
-collect['time'] = time
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = advanced_logging_client.get_https_api_rest_sh_api_s_l_i(collect)
+result = advanced_logging_client.logging_info(key, uid, name, origin, time, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_s_l"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.get_https_api_rest_sh_api_s_l") get_https_api_rest_sh_api_s_l
+### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_setup") logging_setup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
 ```python
-def get_https_api_rest_sh_api_s_l(self,
-                                      options=dict())
+def logging_setup(self,
+                      key,
+                      uid,
+                      name,
+                      origin,
+                      activate,
+                      content_type)
 ```
 
 #### Parameters
@@ -336,41 +332,28 @@ def get_https_api_rest_sh_api_s_l(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 name = 'name'
-collect['name'] = name
-
 origin = 'origin'
-collect['origin'] = origin
-
-activate = False
-collect['activate'] = activate
-
+activate = True
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = advanced_logging_client.get_https_api_rest_sh_api_s_l(collect)
+result = advanced_logging_client.logging_setup(key, uid, name, origin, activate, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_l_i"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.create_https_api_rest_sh_api_s_l_i") create_https_api_rest_sh_api_s_l_i
+### <a name="logging_info1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_info1") logging_info1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Info
 
 ```python
-def create_https_api_rest_sh_api_s_l_i(self,
-                                           options=dict())
+def logging_info1(self,
+                      body,
+                      content_type)
 ```
 
 #### Parameters
@@ -385,29 +368,24 @@ def create_https_api_rest_sh_api_s_l_i(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiSLIModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiSLI()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = advanced_logging_client.create_https_api_rest_sh_api_s_l_i(collect)
+result = advanced_logging_client.logging_info1(body, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_l"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.create_https_api_rest_sh_api_s_l") create_https_api_rest_sh_api_s_l
+### <a name="logging_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_setup1") logging_setup1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > WAF Log Setup
 
 ```python
-def create_https_api_rest_sh_api_s_l(self,
-                                         options=dict())
+def logging_setup1(self,
+                       body,
+                       content_type)
 ```
 
 #### Parameters
@@ -422,41 +400,40 @@ def create_https_api_rest_sh_api_s_l(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiSLModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiSL()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = advanced_logging_client.create_https_api_rest_sh_api_s_l(collect)
+result = advanced_logging_client.logging_setup1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtectionController") WAFDDOSProtectionController
+## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtection") WAFDDOSProtection
 
 ### Get controller instance
 
-An instance of the ``` WAFDDOSProtectionController ``` class can be accessed from the API Client.
+An instance of the ``` WAFDDOSProtection ``` class can be accessed from the API Client.
 
 ```python
  waf_ddos_protection_client = client.waf_ddos_protection
 ```
 
-### <a name="get_https_api_rest_sh_api_s_w_c"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.get_https_api_rest_sh_api_s_w_c") get_https_api_rest_sh_api_s_w_c
+### <a name="https_api_rest_sh_api_s_w_c"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.https_api_rest_sh_api_s_w_c") https_api_rest_sh_api_s_w_c
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > TODO: Add Description
 
 ```python
-def get_https_api_rest_sh_api_s_w_c(self,
-                                        options=dict())
+def https_api_rest_sh_api_s_w_c(self,
+                                    key,
+                                    uid,
+                                    name,
+                                    origin,
+                                    rule,
+                                    content_type)
 ```
 
 #### Parameters
@@ -475,41 +452,31 @@ def get_https_api_rest_sh_api_s_w_c(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'API'
-collect['key'] = key
-
 uid = 'UID'
-collect['uid'] = uid
-
 name = 'origin-name'
-collect['name'] = name
-
 origin = 'origin.yourdomain.tld'
-collect['origin'] = origin
-
 rule = 'header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does'
-collect['rule'] = rule
-
 content_type = 'application/json'
-collect['content_type'] = content_type
 
-
-result = waf_ddos_protection_client.get_https_api_rest_sh_api_s_w_c(collect)
+result = waf_ddos_protection_client.https_api_rest_sh_api_s_w_c(key, uid, name, origin, rule, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_s_w"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.get_https_api_rest_sh_api_s_w") get_https_api_rest_sh_api_s_w
+### <a name="https_api_rest_sh_api_s_w"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.https_api_rest_sh_api_s_w") https_api_rest_sh_api_s_w
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > TODO: Add Description
 
 ```python
-def get_https_api_rest_sh_api_s_w(self,
-                                      options=dict())
+def https_api_rest_sh_api_s_w(self,
+                                  key,
+                                  uid,
+                                  origin,
+                                  cname,
+                                  content_type)
 ```
 
 #### Parameters
@@ -527,38 +494,27 @@ def get_https_api_rest_sh_api_s_w(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'API'
-collect['key'] = key
-
 uid = 'UID'
-collect['uid'] = uid
-
 origin = 'origin.yourdomain.tld'
-collect['origin'] = origin
-
 cname = 'yourdomain.tld,www.yourdomain.tld'
-collect['cname'] = cname
-
 content_type = 'application/json'
-collect['content_type'] = content_type
 
-
-result = waf_ddos_protection_client.get_https_api_rest_sh_api_s_w(collect)
+result = waf_ddos_protection_client.https_api_rest_sh_api_s_w(key, uid, origin, cname, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_w_c"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.create_https_api_rest_sh_api_s_w_c") create_https_api_rest_sh_api_s_w_c
+### <a name="https_api_rest_sh_api_s_w_c1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.https_api_rest_sh_api_s_w_c1") https_api_rest_sh_api_s_w_c1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > TODO: Add Description
 
 ```python
-def create_https_api_rest_sh_api_s_w_c(self,
-                                           options=dict())
+def https_api_rest_sh_api_s_w_c1(self,
+                                     body,
+                                     content_type)
 ```
 
 #### Parameters
@@ -573,30 +529,25 @@ def create_https_api_rest_sh_api_s_w_c(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 body_value = "{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}"
 body = json.loads(body_value)
-collect['body'] = body
-
 content_type = 'application/json'
-collect['content_type'] = content_type
 
-
-result = waf_ddos_protection_client.create_https_api_rest_sh_api_s_w_c(collect)
+result = waf_ddos_protection_client.https_api_rest_sh_api_s_w_c1(body, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_w"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.create_https_api_rest_sh_api_s_w") create_https_api_rest_sh_api_s_w
+### <a name="https_api_rest_sh_api_s_w1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.https_api_rest_sh_api_s_w1") https_api_rest_sh_api_s_w1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > TODO: Add Description
 
 ```python
-def create_https_api_rest_sh_api_s_w(self,
-                                         options=dict())
+def https_api_rest_sh_api_s_w1(self,
+                                   body,
+                                   content_type)
 ```
 
 #### Parameters
@@ -611,42 +562,41 @@ def create_https_api_rest_sh_api_s_w(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 body_value = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}"
 body = json.loads(body_value)
-collect['body'] = body
-
 content_type = 'application/json'
-collect['content_type'] = content_type
 
-
-result = waf_ddos_protection_client.create_https_api_rest_sh_api_s_w(collect)
+result = waf_ddos_protection_client.https_api_rest_sh_api_s_w1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="encryption_controller"></a>![Class: ](https://apidocs.io/img/class.png ".EncryptionController") EncryptionController
+## <a name="encryption"></a>![Class: ](https://apidocs.io/img/class.png ".Encryption") Encryption
 
 ### Get controller instance
 
-An instance of the ``` EncryptionController ``` class can be accessed from the API Client.
+An instance of the ``` Encryption ``` class can be accessed from the API Client.
 
 ```python
  encryption_client = client.encryption
 ```
 
-### <a name="get_https_api_rest_sh_api_s_e"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.get_https_api_rest_sh_api_s_e") get_https_api_rest_sh_api_s_e
+### <a name="data_and_file_encryption_api"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption_api") data_and_file_encryption_api
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Data and File Encryption API
 
 ```python
-def get_https_api_rest_sh_api_s_e(self,
-                                      options=dict())
+def data_and_file_encryption_api(self,
+                                     key,
+                                     uid,
+                                     data,
+                                     method,
+                                     bit,
+                                     content_type)
 ```
 
 #### Parameters
@@ -665,41 +615,28 @@ def get_https_api_rest_sh_api_s_e(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 data = 'data'
-collect['data'] = data
-
 method = 'method'
-collect['method'] = method
-
-bit = 12
-collect['bit'] = bit
-
+bit = 191
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = encryption_client.get_https_api_rest_sh_api_s_e(collect)
+result = encryption_client.data_and_file_encryption_api(key, uid, data, method, bit, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_e"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.create_https_api_rest_sh_api_s_e") create_https_api_rest_sh_api_s_e
+### <a name="data_and_file_encryption_api1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption_api1") data_and_file_encryption_api1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Data and File Encryption API
 
 ```python
-def create_https_api_rest_sh_api_s_e(self,
-                                         options=dict())
+def data_and_file_encryption_api1(self,
+                                      body,
+                                      content_type)
 ```
 
 #### Parameters
@@ -714,41 +651,39 @@ def create_https_api_rest_sh_api_s_e(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiSEModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiSE()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = encryption_client.create_https_api_rest_sh_api_s_e(collect)
+result = encryption_client.data_and_file_encryption_api1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="cdn_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CDNController") CDNController
+## <a name="cdn"></a>![Class: ](https://apidocs.io/img/class.png ".CDN") CDN
 
 ### Get controller instance
 
-An instance of the ``` CDNController ``` class can be accessed from the API Client.
+An instance of the ``` CDN ``` class can be accessed from the API Client.
 
 ```python
  cdn_client = client.cdn
 ```
 
-### <a name="get_https_api_rest_sh_api_s_c_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.get_https_api_rest_sh_api_s_c_push") get_https_api_rest_sh_api_s_c_push
+### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_push_zone") cdn_push_zone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
 ```python
-def get_https_api_rest_sh_api_s_c_push(self,
-                                           options=dict())
+def cdn_push_zone(self,
+                      key,
+                      uid,
+                      cname,
+                      file,
+                      content_type)
 ```
 
 #### Parameters
@@ -766,38 +701,30 @@ def get_https_api_rest_sh_api_s_c_push(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 cname = 'cname'
-collect['cname'] = cname
-
 file = 'file'
-collect['file'] = file
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = cdn_client.get_https_api_rest_sh_api_s_c_push(collect)
+result = cdn_client.cdn_push_zone(key, uid, cname, file, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_s_c_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.get_https_api_rest_sh_api_s_c_pull") get_https_api_rest_sh_api_s_c_pull
+### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_pull_zone") cdn_pull_zone
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
 ```python
-def get_https_api_rest_sh_api_s_c_pull(self,
-                                           options=dict())
+def cdn_pull_zone(self,
+                      key,
+                      uid,
+                      origin,
+                      cname,
+                      content_type)
 ```
 
 #### Parameters
@@ -815,38 +742,27 @@ def get_https_api_rest_sh_api_s_c_pull(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 origin = 'origin'
-collect['origin'] = origin
-
 cname = 'cname'
-collect['cname'] = cname
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = cdn_client.get_https_api_rest_sh_api_s_c_pull(collect)
+result = cdn_client.cdn_pull_zone(key, uid, origin, cname, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_c_push"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.create_https_api_rest_sh_api_s_c_push") create_https_api_rest_sh_api_s_c_push
+### <a name="cdn_push_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_push_zone1") cdn_push_zone1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Push Zone API
 
 ```python
-def create_https_api_rest_sh_api_s_c_push(self,
-                                              options=dict())
+def cdn_push_zone1(self,
+                       body,
+                       content_type)
 ```
 
 #### Parameters
@@ -861,29 +777,24 @@ def create_https_api_rest_sh_api_s_c_push(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiSCPushModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiSCPush()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = cdn_client.create_https_api_rest_sh_api_s_c_push(collect)
+result = cdn_client.cdn_push_zone1(body, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_c_pull"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.create_https_api_rest_sh_api_s_c_pull") create_https_api_rest_sh_api_s_c_pull
+### <a name="cdn_pull_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_pull_zone1") cdn_pull_zone1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > CDN Pull Zone API
 
 ```python
-def create_https_api_rest_sh_api_s_c_pull(self,
-                                              options=dict())
+def cdn_pull_zone1(self,
+                       body,
+                       content_type)
 ```
 
 #### Parameters
@@ -898,41 +809,39 @@ def create_https_api_rest_sh_api_s_c_pull(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiSCPullModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiSCPull()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = cdn_client.create_https_api_rest_sh_api_s_c_pull(collect)
+result = cdn_client.cdn_pull_zone1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="dns_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DNSController") DNSController
+## <a name="dns"></a>![Class: ](https://apidocs.io/img/class.png ".DNS") DNS
 
 ### Get controller instance
 
-An instance of the ``` DNSController ``` class can be accessed from the API Client.
+An instance of the ``` DNS ``` class can be accessed from the API Client.
 
 ```python
  dns_client = client.dns
 ```
 
-### <a name="get_https_api_rest_sh_api_s_d_c"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.get_https_api_rest_sh_api_s_d_c") get_https_api_rest_sh_api_s_d_c
+### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_configuration") dns_configuration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Configuration API
 
 ```python
-def get_https_api_rest_sh_api_s_d_c(self,
-                                        options=dict())
+def dns_configuration(self,
+                          key,
+                          uid,
+                          domain,
+                          records,
+                          content_type)
 ```
 
 #### Parameters
@@ -950,38 +859,27 @@ def get_https_api_rest_sh_api_s_d_c(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 domain = 'domain'
-collect['domain'] = domain
-
 records = 'records'
-collect['records'] = records
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = dns_client.get_https_api_rest_sh_api_s_d_c(collect)
+result = dns_client.dns_configuration(key, uid, domain, records, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_d_c"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.create_https_api_rest_sh_api_s_d_c") create_https_api_rest_sh_api_s_d_c
+### <a name="dns_configuration1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_configuration1") dns_configuration1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Configuration API
 
 ```python
-def create_https_api_rest_sh_api_s_d_c(self,
-                                           options=dict())
+def dns_configuration1(self,
+                           body,
+                           content_type)
 ```
 
 #### Parameters
@@ -996,29 +894,26 @@ def create_https_api_rest_sh_api_s_d_c(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiSDCModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiSDC()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = dns_client.create_https_api_rest_sh_api_s_d_c(collect)
+result = dns_client.dns_configuration1(body, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_s_d_a"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.get_https_api_rest_sh_api_s_d_a") get_https_api_rest_sh_api_s_d_a
+### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_creation") dns_creation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
 ```python
-def get_https_api_rest_sh_api_s_d_a(self,
-                                        options=dict())
+def dns_creation(self,
+                     key,
+                     uid,
+                     domain,
+                     content_type)
 ```
 
 #### Parameters
@@ -1035,35 +930,26 @@ def get_https_api_rest_sh_api_s_d_a(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 domain = 'domain'
-collect['domain'] = domain
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = dns_client.get_https_api_rest_sh_api_s_d_a(collect)
+result = dns_client.dns_creation(key, uid, domain, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_d_a"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.create_https_api_rest_sh_api_s_d_a") create_https_api_rest_sh_api_s_d_a
+### <a name="dns_creation1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_creation1") dns_creation1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > DNS Creation API
 
 ```python
-def create_https_api_rest_sh_api_s_d_a(self,
-                                           options=dict())
+def dns_creation1(self,
+                      body,
+                      content_type)
 ```
 
 #### Parameters
@@ -1078,41 +964,38 @@ def create_https_api_rest_sh_api_s_d_a(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiSDAModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiSDA()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = dns_client.create_https_api_rest_sh_api_s_d_a(collect)
+result = dns_client.dns_creation1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="code_obfuscation_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CodeObfuscationController") CodeObfuscationController
+## <a name="code_obfuscation"></a>![Class: ](https://apidocs.io/img/class.png ".CodeObfuscation") CodeObfuscation
 
 ### Get controller instance
 
-An instance of the ``` CodeObfuscationController ``` class can be accessed from the API Client.
+An instance of the ``` CodeObfuscation ``` class can be accessed from the API Client.
 
 ```python
  code_obfuscation_client = client.code_obfuscation
 ```
 
-### <a name="get_https_api_rest_sh_api_s_o"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.get_https_api_rest_sh_api_s_o") get_https_api_rest_sh_api_s_o
+### <a name="code_application_obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.code_application_obfuscation_and_anti_tampering") code_application_obfuscation_and_anti_tampering
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Code/Application Obfuscation and Anti-Tampering API
 
 ```python
-def get_https_api_rest_sh_api_s_o(self,
-                                      options=dict())
+def code_application_obfuscation_and_anti_tampering(self,
+                                                        key,
+                                                        uid,
+                                                        app,
+                                                        content_type)
 ```
 
 #### Parameters
@@ -1129,35 +1012,26 @@ def get_https_api_rest_sh_api_s_o(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 app = 'app'
-collect['app'] = app
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = code_obfuscation_client.get_https_api_rest_sh_api_s_o(collect)
+result = code_obfuscation_client.code_application_obfuscation_and_anti_tampering(key, uid, app, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_o"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.create_https_api_rest_sh_api_s_o") create_https_api_rest_sh_api_s_o
+### <a name="code_application_obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.code_application_obfuscation_and_anti_tampering1") code_application_obfuscation_and_anti_tampering1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Code/Application Obfuscation and Anti-Tampering API
 
 ```python
-def create_https_api_rest_sh_api_s_o(self,
-                                         options=dict())
+def code_application_obfuscation_and_anti_tampering1(self,
+                                                         body,
+                                                         content_type)
 ```
 
 #### Parameters
@@ -1172,41 +1046,39 @@ def create_https_api_rest_sh_api_s_o(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiSOModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiSO()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = code_obfuscation_client.create_https_api_rest_sh_api_s_o(collect)
+result = code_obfuscation_client.code_application_obfuscation_and_anti_tampering1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="hosting_controller"></a>![Class: ](https://apidocs.io/img/class.png ".HostingController") HostingController
+## <a name="hosting"></a>![Class: ](https://apidocs.io/img/class.png ".Hosting") Hosting
 
 ### Get controller instance
 
-An instance of the ``` HostingController ``` class can be accessed from the API Client.
+An instance of the ``` Hosting ``` class can be accessed from the API Client.
 
 ```python
  hosting_client = client.hosting
 ```
 
-### <a name="get_https_api_rest_sh_api_s_h"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.get_https_api_rest_sh_api_s_h") get_https_api_rest_sh_api_s_h
+### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hosting_setup") hosting_setup
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Node.JS Web APP Hosting
 
 ```python
-def get_https_api_rest_sh_api_s_h(self,
-                                      options=dict())
+def hosting_setup(self,
+                      key,
+                      uid,
+                      app,
+                      domain,
+                      content_type)
 ```
 
 #### Parameters
@@ -1224,38 +1096,27 @@ def get_https_api_rest_sh_api_s_h(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 app = 'app'
-collect['app'] = app
-
 domain = 'domain'
-collect['domain'] = domain
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = hosting_client.get_https_api_rest_sh_api_s_h(collect)
+result = hosting_client.hosting_setup(key, uid, app, domain, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_s_h"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.create_https_api_rest_sh_api_s_h") create_https_api_rest_sh_api_s_h
+### <a name="hosting_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hosting_setup1") hosting_setup1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Node.JS Web APP Hosting
 
 ```python
-def create_https_api_rest_sh_api_s_h(self,
-                                         options=dict())
+def hosting_setup1(self,
+                       body,
+                       content_type)
 ```
 
 #### Parameters
@@ -1270,41 +1131,40 @@ def create_https_api_rest_sh_api_s_h(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiSHModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiSH()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = hosting_client.create_https_api_rest_sh_api_s_h(collect)
+result = hosting_client.hosting_setup1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPIController") DataManipulationConversionSortingAndCompressionAPIController
+## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
 
 ### Get controller instance
 
-An instance of the ``` DataManipulationConversionSortingAndCompressionAPIController ``` class can be accessed from the API Client.
+An instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed from the API Client.
 
 ```python
  data_manipulation_conversion_sorting_and_compression_api_client = client.data_manipulation_conversion_sorting_and_compression_api
 ```
 
-### <a name="get_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.get_https_api_rest_sh_api_d") get_https_api_rest_sh_api_d
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.https_api_rest_sh_api_d") https_api_rest_sh_api_d
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > TODO: Add Description
 
 ```python
-def get_https_api_rest_sh_api_d(self,
-                                    options=dict())
+def https_api_rest_sh_api_d(self,
+                                key,
+                                uid,
+                                user,
+                                apiuid,
+                                data,
+                                content_type)
 ```
 
 #### Parameters
@@ -1323,41 +1183,28 @@ def get_https_api_rest_sh_api_d(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'API'
-collect['key'] = key
-
 uid = 'UID'
-collect['uid'] = uid
-
 user = 'UID'
-collect['user'] = user
-
 apiuid = 'apiUID'
-collect['apiuid'] = apiuid
-
 data = 'https://static.yourcdn.com/data.file'
-collect['data'] = data
-
 content_type = 'application/json'
-collect['content_type'] = content_type
 
-
-result = data_manipulation_conversion_sorting_and_compression_api_client.get_https_api_rest_sh_api_d(collect)
+result = data_manipulation_conversion_sorting_and_compression_api_client.https_api_rest_sh_api_d(key, uid, user, apiuid, data, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.create_https_api_rest_sh_api_d") create_https_api_rest_sh_api_d
+### <a name="https_api_rest_sh_api_d1"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.https_api_rest_sh_api_d1") https_api_rest_sh_api_d1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > TODO: Add Description
 
 ```python
-def create_https_api_rest_sh_api_d(self,
-                                       options=dict())
+def https_api_rest_sh_api_d1(self,
+                                 body,
+                                 content_type)
 ```
 
 #### Parameters
@@ -1372,42 +1219,40 @@ def create_https_api_rest_sh_api_d(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 body_value = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}"
 body = json.loads(body_value)
-collect['body'] = body
-
 content_type = 'application/json'
-collect['content_type'] = content_type
 
-
-result = data_manipulation_conversion_sorting_and_compression_api_client.create_https_api_rest_sh_api_d(collect)
+result = data_manipulation_conversion_sorting_and_compression_api_client.https_api_rest_sh_api_d1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPIController") ImageManipulationAndModerationAPIController
+## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
 
 ### Get controller instance
 
-An instance of the ``` ImageManipulationAndModerationAPIController ``` class can be accessed from the API Client.
+An instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed from the API Client.
 
 ```python
  image_manipulation_and_moderation_api_client = client.image_manipulation_and_moderation_api
 ```
 
-### <a name="get_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.get_https_api_rest_sh_api_i") get_https_api_rest_sh_api_i
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.image_manipulation") image_manipulation
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
 ```python
-def get_https_api_rest_sh_api_i(self,
-                                    options=dict())
+def image_manipulation(self,
+                           key,
+                           uid,
+                           image,
+                           transform,
+                           content_type)
 ```
 
 #### Parameters
@@ -1425,38 +1270,27 @@ def get_https_api_rest_sh_api_i(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 image = 'image'
-collect['image'] = image
-
 transform = 'transform'
-collect['transform'] = transform
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = image_manipulation_and_moderation_api_client.get_https_api_rest_sh_api_i(collect)
+result = image_manipulation_and_moderation_api_client.image_manipulation(key, uid, image, transform, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.create_https_api_rest_sh_api_i") create_https_api_rest_sh_api_i
+### <a name="image_manipulation1"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.image_manipulation1") image_manipulation1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Image Manipulation API
 
 ```python
-def create_https_api_rest_sh_api_i(self,
-                                       options=dict())
+def image_manipulation1(self,
+                            body,
+                            content_type)
 ```
 
 #### Parameters
@@ -1471,41 +1305,43 @@ def create_https_api_rest_sh_api_i(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiIModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiI()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = image_manipulation_and_moderation_api_client.create_https_api_rest_sh_api_i(collect)
+result = image_manipulation_and_moderation_api_client.image_manipulation1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="verification_controller"></a>![Class: ](https://apidocs.io/img/class.png ".VerificationController") VerificationController
+## <a name="verification"></a>![Class: ](https://apidocs.io/img/class.png ".Verification") Verification
 
 ### Get controller instance
 
-An instance of the ``` VerificationController ``` class can be accessed from the API Client.
+An instance of the ``` Verification ``` class can be accessed from the API Client.
 
 ```python
  verification_client = client.verification
 ```
 
-### <a name="get_https_api_rest_sh_api_v_a"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.get_https_api_rest_sh_api_v_a") get_https_api_rest_sh_api_v_a
+### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_address_verification") user_address_verification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
 ```python
-def get_https_api_rest_sh_api_v_a(self,
-                                      options=dict())
+def user_address_verification(self,
+                                  key,
+                                  uid,
+                                  user,
+                                  a,
+                                  sa,
+                                  c,
+                                  s,
+                                  z,
+                                  content_type)
 ```
 
 #### Parameters
@@ -1527,50 +1363,31 @@ def get_https_api_rest_sh_api_v_a(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 user = 'user'
-collect['user'] = user
-
 a = 'a'
-collect['a'] = a
-
 sa = 'sa'
-collect['sa'] = sa
-
 c = 'c'
-collect['c'] = c
-
 s = 's'
-collect['s'] = s
-
-z = 225
-collect['z'] = z
-
+z = 150
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = verification_client.get_https_api_rest_sh_api_v_a(collect)
+result = verification_client.user_address_verification(key, uid, user, a, sa, c, s, z, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_v_a"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.create_https_api_rest_sh_api_v_a") create_https_api_rest_sh_api_v_a
+### <a name="user_address_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_address_verification1") user_address_verification1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > User Address Verification API
 
 ```python
-def create_https_api_rest_sh_api_v_a(self,
-                                         options=dict())
+def user_address_verification1(self,
+                                   body,
+                                   content_type)
 ```
 
 #### Parameters
@@ -1585,29 +1402,27 @@ def create_https_api_rest_sh_api_v_a(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiVAModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiVA()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = verification_client.create_https_api_rest_sh_api_v_a(collect)
+result = verification_client.user_address_verification1(body, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_v_u"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.get_https_api_rest_sh_api_v_u") get_https_api_rest_sh_api_v_u
+### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_verification") user_verification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
 ```python
-def get_https_api_rest_sh_api_v_u(self,
-                                      options=dict())
+def user_verification(self,
+                          key,
+                          uid,
+                          user,
+                          code,
+                          content_type)
 ```
 
 #### Parameters
@@ -1625,38 +1440,27 @@ def get_https_api_rest_sh_api_v_u(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 user = 'user'
-collect['user'] = user
-
 code = 'code'
-collect['code'] = code
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = verification_client.get_https_api_rest_sh_api_v_u(collect)
+result = verification_client.user_verification(key, uid, user, code, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_v_u"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.create_https_api_rest_sh_api_v_u") create_https_api_rest_sh_api_v_u
+### <a name="user_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_verification1") user_verification1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > User Verification API
 
 ```python
-def create_https_api_rest_sh_api_v_u(self,
-                                         options=dict())
+def user_verification1(self,
+                           body,
+                           content_type)
 ```
 
 #### Parameters
@@ -1671,29 +1475,26 @@ def create_https_api_rest_sh_api_v_u(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiVUModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiVU()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = verification_client.create_https_api_rest_sh_api_v_u(collect)
+result = verification_client.user_verification1(body, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.get_https_api_rest_sh_api_v") get_https_api_rest_sh_api_v
+### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphone_verification") cellphone_verification
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
 ```python
-def get_https_api_rest_sh_api_v(self,
-                                    options=dict())
+def cellphone_verification(self,
+                               key,
+                               uid,
+                               to,
+                               content_type)
 ```
 
 #### Parameters
@@ -1710,35 +1511,26 @@ def get_https_api_rest_sh_api_v(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 to = 'to'
-collect['to'] = to
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = verification_client.get_https_api_rest_sh_api_v(collect)
+result = verification_client.cellphone_verification(key, uid, to, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.create_https_api_rest_sh_api_v") create_https_api_rest_sh_api_v
+### <a name="cellphone_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphone_verification1") cellphone_verification1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Verification API
 
 ```python
-def create_https_api_rest_sh_api_v(self,
-                                       options=dict())
+def cellphone_verification1(self,
+                                body,
+                                content_type)
 ```
 
 #### Parameters
@@ -1753,41 +1545,39 @@ def create_https_api_rest_sh_api_v(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiVModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiV()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = verification_client.create_https_api_rest_sh_api_v(collect)
+result = verification_client.cellphone_verification1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="two_factor_authentication_api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".TwoFactorAuthenticationAPIController") TwoFactorAuthenticationAPIController
+## <a name="two_factor_authentication_api"></a>![Class: ](https://apidocs.io/img/class.png ".TwoFactorAuthenticationAPI") TwoFactorAuthenticationAPI
 
 ### Get controller instance
 
-An instance of the ``` TwoFactorAuthenticationAPIController ``` class can be accessed from the API Client.
+An instance of the ``` TwoFactorAuthenticationAPI ``` class can be accessed from the API Client.
 
 ```python
  two_factor_authentication_api_client = client.two_factor_authentication_api
 ```
 
-### <a name="get_https_api_rest_sh_api_2_fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.get_https_api_rest_sh_api_2_fa_t") get_https_api_rest_sh_api_2_fa_t
+### <a name="2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.2_fa_token_response") 2_fa_token_response
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication Token Reply
 
 ```python
-def get_https_api_rest_sh_api_2_fa_t(self,
-                                         options=dict())
+def 2_fa_token_response(self,
+                            key,
+                            uid,
+                            user,
+                            code,
+                            content_type)
 ```
 
 #### Parameters
@@ -1805,38 +1595,27 @@ def get_https_api_rest_sh_api_2_fa_t(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 user = 'user'
-collect['user'] = user
-
 code = 'code'
-collect['code'] = code
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = two_factor_authentication_api_client.get_https_api_rest_sh_api_2_fa_t(collect)
+result = two_factor_authentication_api_client.2_fa_token_response(key, uid, user, code, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_2_fa_t"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.create_https_api_rest_sh_api_2_fa_t") create_https_api_rest_sh_api_2_fa_t
+### <a name="2_fa_token_response1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.2_fa_token_response1") 2_fa_token_response1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication Token Reply
 
 ```python
-def create_https_api_rest_sh_api_2_fa_t(self,
-                                            options=dict())
+def 2_fa_token_response1(self,
+                             body,
+                             content_type)
 ```
 
 #### Parameters
@@ -1851,29 +1630,26 @@ def create_https_api_rest_sh_api_2_fa_t(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApi2faTModel()
-collect['body'] = body
-
+body = HttpsApiRestShApi2faT()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = two_factor_authentication_api_client.create_https_api_rest_sh_api_2_fa_t(collect)
+result = two_factor_authentication_api_client.2_fa_token_response1(body, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_2_fa"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.get_https_api_rest_sh_api_2_fa") get_https_api_rest_sh_api_2_fa
+### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.two_factor_authentication") two_factor_authentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
 ```python
-def get_https_api_rest_sh_api_2_fa(self,
-                                       options=dict())
+def two_factor_authentication(self,
+                                  key,
+                                  uid,
+                                  to,
+                                  content_type)
 ```
 
 #### Parameters
@@ -1890,35 +1666,26 @@ def get_https_api_rest_sh_api_2_fa(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 to = 'to'
-collect['to'] = to
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = two_factor_authentication_api_client.get_https_api_rest_sh_api_2_fa(collect)
+result = two_factor_authentication_api_client.two_factor_authentication(key, uid, to, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_2_fa"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.create_https_api_rest_sh_api_2_fa") create_https_api_rest_sh_api_2_fa
+### <a name="two_factor_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.two_factor_authentication1") two_factor_authentication1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Two Factor Authentication API
 
 ```python
-def create_https_api_rest_sh_api_2_fa(self,
-                                          options=dict())
+def two_factor_authentication1(self,
+                                   body,
+                                   content_type)
 ```
 
 #### Parameters
@@ -1933,41 +1700,39 @@ def create_https_api_rest_sh_api_2_fa(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApi2faModel()
-collect['body'] = body
-
+body = HttpsApiRestShApi2fa()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = two_factor_authentication_api_client.create_https_api_rest_sh_api_2_fa(collect)
+result = two_factor_authentication_api_client.two_factor_authentication1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="user_management_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UserManagementController") UserManagementController
+## <a name="user_management"></a>![Class: ](https://apidocs.io/img/class.png ".UserManagement") UserManagement
 
 ### Get controller instance
 
-An instance of the ``` UserManagementController ``` class can be accessed from the API Client.
+An instance of the ``` UserManagement ``` class can be accessed from the API Client.
 
 ```python
  user_management_client = client.user_management
 ```
 
-### <a name="get_https_api_rest_sh_api_u_i"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.get_https_api_rest_sh_api_u_i") get_https_api_rest_sh_api_u_i
+### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.get_user_info") get_user_info
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Get User Info API
 
 ```python
-def get_https_api_rest_sh_api_u_i(self,
-                                      options=dict())
+def get_user_info(self,
+                      key,
+                      uid,
+                      user,
+                      apiuid,
+                      content_type)
 ```
 
 #### Parameters
@@ -1985,38 +1750,27 @@ def get_https_api_rest_sh_api_u_i(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 user = 'user'
-collect['user'] = user
-
 apiuid = 'apiuid'
-collect['apiuid'] = apiuid
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = user_management_client.get_https_api_rest_sh_api_u_i(collect)
+result = user_management_client.get_user_info(key, uid, user, apiuid, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_u_i"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.create_https_api_rest_sh_api_u_i") create_https_api_rest_sh_api_u_i
+### <a name="get_user_info1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.get_user_info1") get_user_info1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Get User Info API
 
 ```python
-def create_https_api_rest_sh_api_u_i(self,
-                                         options=dict())
+def get_user_info1(self,
+                       body,
+                       content_type)
 ```
 
 #### Parameters
@@ -2031,29 +1785,29 @@ def create_https_api_rest_sh_api_u_i(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiUIModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiUI()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = user_management_client.create_https_api_rest_sh_api_u_i(collect)
+result = user_management_client.get_user_info1(body, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_u_u"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.get_https_api_rest_sh_api_u_u") get_https_api_rest_sh_api_u_u
+### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.update_user") update_user
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
 ```python
-def get_https_api_rest_sh_api_u_u(self,
-                                      options=dict())
+def update_user(self,
+                    key,
+                    uid,
+                    user,
+                    apiuid,
+                    avatar,
+                    custom_input,
+                    content_type)
 ```
 
 #### Parameters
@@ -2073,44 +1827,29 @@ def get_https_api_rest_sh_api_u_u(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 user = 'user'
-collect['user'] = user
-
 apiuid = 'apiuid'
-collect['apiuid'] = apiuid
-
 avatar = 'avatar'
-collect['avatar'] = avatar
-
 custom_input = 'custom input'
-collect['custom_input'] = custom_input
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = user_management_client.get_https_api_rest_sh_api_u_u(collect)
+result = user_management_client.update_user(key, uid, user, apiuid, avatar, custom_input, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_u_u"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.create_https_api_rest_sh_api_u_u") create_https_api_rest_sh_api_u_u
+### <a name="update_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.update_user1") update_user1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Update User API
 
 ```python
-def create_https_api_rest_sh_api_u_u(self,
-                                         options=dict())
+def update_user1(self,
+                     body,
+                     content_type)
 ```
 
 #### Parameters
@@ -2125,29 +1864,27 @@ def create_https_api_rest_sh_api_u_u(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiUUModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiUU()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = user_management_client.create_https_api_rest_sh_api_u_u(collect)
+result = user_management_client.update_user1(body, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_u_d"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.get_https_api_rest_sh_api_u_d") get_https_api_rest_sh_api_u_d
+### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.delete_user") delete_user
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
 ```python
-def get_https_api_rest_sh_api_u_d(self,
-                                      options=dict())
+def delete_user(self,
+                    api,
+                    uid,
+                    user,
+                    apiuid,
+                    content_type)
 ```
 
 #### Parameters
@@ -2165,38 +1902,27 @@ def get_https_api_rest_sh_api_u_d(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 api = 'api'
-collect['api'] = api
-
 uid = 'uid'
-collect['uid'] = uid
-
 user = 'user'
-collect['user'] = user
-
 apiuid = 'apiuid'
-collect['apiuid'] = apiuid
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = user_management_client.get_https_api_rest_sh_api_u_d(collect)
+result = user_management_client.delete_user(api, uid, user, apiuid, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_u_d"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.create_https_api_rest_sh_api_u_d") create_https_api_rest_sh_api_u_d
+### <a name="delete_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.delete_user1") delete_user1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > Delete User API
 
 ```python
-def create_https_api_rest_sh_api_u_d(self,
-                                         options=dict())
+def delete_user1(self,
+                     body,
+                     content_type)
 ```
 
 #### Parameters
@@ -2211,41 +1937,44 @@ def create_https_api_rest_sh_api_u_d(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiUDModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiUD()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = user_management_client.create_https_api_rest_sh_api_u_d(collect)
+result = user_management_client.delete_user1(body, content_type)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="login_and_registration_controller"></a>![Class: ](https://apidocs.io/img/class.png ".LoginAndRegistrationController") LoginAndRegistrationController
+## <a name="login_and_registration"></a>![Class: ](https://apidocs.io/img/class.png ".LoginAndRegistration") LoginAndRegistration
 
 ### Get controller instance
 
-An instance of the ``` LoginAndRegistrationController ``` class can be accessed from the API Client.
+An instance of the ``` LoginAndRegistration ``` class can be accessed from the API Client.
 
 ```python
  login_and_registration_client = client.login_and_registration
 ```
 
-### <a name="get_https_api_rest_sh_api_a_u_r"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.get_https_api_rest_sh_api_a_u_r") get_https_api_rest_sh_api_a_u_r
+### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_registration") user_registration
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
 ```python
-def get_https_api_rest_sh_api_a_u_r(self,
-                                        options=dict())
+def user_registration(self,
+                          key,
+                          uid,
+                          user,
+                          password,
+                          name,
+                          email,
+                          phone,
+                          countrycode,
+                          address,
+                          content_type)
 ```
 
 #### Parameters
@@ -2268,53 +1997,32 @@ def get_https_api_rest_sh_api_a_u_r(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 user = 'user'
-collect['user'] = user
-
 password = 'password'
-collect['password'] = password
-
 name = 'name'
-collect['name'] = name
-
 email = 'email'
-collect['email'] = email
-
-phone = 61
-collect['phone'] = phone
-
-countrycode = 61
-collect['countrycode'] = countrycode
-
+phone = 150
+countrycode = 150
 address = 'address'
-collect['address'] = address
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = login_and_registration_client.get_https_api_rest_sh_api_a_u_r(collect)
+result = login_and_registration_client.user_registration(key, uid, user, password, name, email, phone, countrycode, address, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_a_u_r"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.create_https_api_rest_sh_api_a_u_r") create_https_api_rest_sh_api_a_u_r
+### <a name="user_registration1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_registration1") user_registration1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > User Registration API
 
 ```python
-def create_https_api_rest_sh_api_a_u_r(self,
-                                           options=dict())
+def user_registration1(self,
+                           body,
+                           content_type)
 ```
 
 #### Parameters
@@ -2329,29 +2037,27 @@ def create_https_api_rest_sh_api_a_u_r(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiAURModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiAUR()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = login_and_registration_client.create_https_api_rest_sh_api_a_u_r(collect)
+result = login_and_registration_client.user_registration1(body, content_type)
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_a_u_l"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.get_https_api_rest_sh_api_a_u_l") get_https_api_rest_sh_api_a_u_l
+### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_authentication") user_authentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
 ```python
-def get_https_api_rest_sh_api_a_u_l(self,
-                                        options=dict())
+def user_authentication(self,
+                            key,
+                            uid,
+                            user,
+                            password,
+                            content_type)
 ```
 
 #### Parameters
@@ -2369,38 +2075,27 @@ def get_https_api_rest_sh_api_a_u_l(self,
 #### Example Usage
 
 ```python
-collect = {}
-
 key = 'key'
-collect['key'] = key
-
 uid = 'uid'
-collect['uid'] = uid
-
 user = 'user'
-collect['user'] = user
-
 password = 'password'
-collect['password'] = password
-
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = login_and_registration_client.get_https_api_rest_sh_api_a_u_l(collect)
+result = login_and_registration_client.user_authentication(key, uid, user, password, content_type)
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_a_u_l"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.create_https_api_rest_sh_api_a_u_l") create_https_api_rest_sh_api_a_u_l
+### <a name="user_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_authentication1") user_authentication1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
 > User Authentication API
 
 ```python
-def create_https_api_rest_sh_api_a_u_l(self,
-                                           options=dict())
+def user_authentication1(self,
+                             body,
+                             content_type)
 ```
 
 #### Parameters
@@ -2415,16 +2110,10 @@ def create_https_api_rest_sh_api_a_u_l(self,
 #### Example Usage
 
 ```python
-collect = {}
-
-body = HttpsApiRestShApiAULModel()
-collect['body'] = body
-
+body = HttpsApiRestShApiAUL()
 content_type = 'Content-Type'
-collect['content_type'] = content_type
 
-
-result = login_and_registration_client.create_https_api_rest_sh_api_a_u_l(collect)
+result = login_and_registration_client.user_authentication1(body, content_type)
 
 ```
 

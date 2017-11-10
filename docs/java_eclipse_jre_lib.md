@@ -208,8 +208,8 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| key | Your API Key |
-| uid | Your User ID |
+| basicAuthUserName | The username to use with basic authentication |
+| basicAuthPassword | The password to use with basic authentication |
 
 
 
@@ -217,10 +217,10 @@ API client can be initialized as following.
 
 ```java
 // Configuration parameters and credentials
-String key = "API"; // Your API Key
-String uid = "UID"; // Your User ID
+String basicAuthUserName = "basicAuthUserName"; // The username to use with basic authentication
+String basicAuthPassword = "basicAuthPassword"; // The password to use with basic authentication
 
-SMASHClient client = new SMASHClient(key, uid);
+SMASHClient client = new SMASHClient(basicAuthUserName, basicAuthPassword);
 ```
 
 
@@ -228,31 +228,31 @@ SMASHClient client = new SMASHClient(key, uid);
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [AdvancedLoggingController](#advanced_logging_controller)
-* [WAFDDOSProtectionController](#wafddos_protection_controller)
-* [EncryptionController](#encryption_controller)
-* [CDNController](#cdn_controller)
-* [DNSController](#dns_controller)
-* [CodeObfuscationController](#code_obfuscation_controller)
-* [HostingController](#hosting_controller)
-* [DataManipulationConversionSortingAndCompressionAPIController](#data_manipulation_conversion_sorting_and_compression_api_controller)
-* [ImageManipulationAndModerationAPIController](#image_manipulation_and_moderation_api_controller)
-* [VerificationController](#verification_controller)
-* [TwoFactorAuthenticationAPIController](#two_factor_authentication_api_controller)
-* [UserManagementController](#user_management_controller)
-* [LoginAndRegistrationController](#login_and_registration_controller)
+* [AdvancedLogging](#advanced_logging)
+* [WAFDDOSProtection](#wafddos_protection)
+* [Encryption](#encryption)
+* [CDN](#cdn)
+* [DNS](#dns)
+* [CodeObfuscation](#code_obfuscation)
+* [Hosting](#hosting)
+* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
+* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [Verification](#verification)
+* [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
+* [UserManagement](#user_management)
+* [LoginAndRegistration](#login_and_registration)
 
-## <a name="advanced_logging_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.AdvancedLoggingController") AdvancedLoggingController
+## <a name="advanced_logging"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.AdvancedLogging") AdvancedLogging
 
 ### Get singleton instance
 
-The singleton instance of the ``` AdvancedLoggingController ``` class can be accessed from the API Client.
+The singleton instance of the ``` AdvancedLogging ``` class can be accessed from the API Client.
 
 ```java
-AdvancedLoggingController advancedLogging = client.getAdvancedLogging();
+AdvancedLogging advancedLogging = client.getAdvancedLogging();
 ```
 
-### <a name="get_https_api_rest_sh_api_sli_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLoggingController.getHttpsApiRestShApiSLIAsync") getHttpsApiRestShApiSLIAsync
+### <a name="logging_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingInfoAsync") loggingInfoAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -260,9 +260,14 @@ AdvancedLoggingController advancedLogging = client.getAdvancedLogging();
 
 
 ```java
-void getHttpsApiRestShApiSLIAsync(
-        final GetHttpsApiRestShApiSLIInput input,
-        final APICallBack<HttpsApiRestShApiSLIRModel> callBack)
+void loggingInfoAsync(
+        final String key,
+        final String uid,
+        final String name,
+        final String origin,
+        final String time,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSLIR> callBack)
 ```
 
 #### Parameters
@@ -280,41 +285,26 @@ void getHttpsApiRestShApiSLIAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSLIInput collect = new GetHttpsApiRestShApiSLIInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String name = "name";
-collect.setName(name);
-
 String origin = "origin";
-collect.setOrigin(origin);
-
 String time = "time";
-collect.setTime(time);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-advancedLogging.getHttpsApiRestShApiSLIAsync(collect, new APICallBack<HttpsApiRestShApiSLIRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSLIRModel response) {
+advancedLogging.loggingInfoAsync(key, uid, name, origin, time, contentType, new APICallBack<HttpsApiRestShApiSLIR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSLIR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sl_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLoggingController.getHttpsApiRestShApiSLAsync") getHttpsApiRestShApiSLAsync
+### <a name="logging_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingSetupAsync") loggingSetupAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -322,9 +312,14 @@ advancedLogging.getHttpsApiRestShApiSLIAsync(collect, new APICallBack<HttpsApiRe
 
 
 ```java
-void getHttpsApiRestShApiSLAsync(
-        final GetHttpsApiRestShApiSLInput input,
-        final APICallBack<HttpsApiRestShApiSLRModel> callBack)
+void loggingSetupAsync(
+        final String key,
+        final String uid,
+        final String name,
+        final String origin,
+        final boolean activate,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSLR> callBack)
 ```
 
 #### Parameters
@@ -342,41 +337,26 @@ void getHttpsApiRestShApiSLAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSLInput collect = new GetHttpsApiRestShApiSLInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String name = "name";
-collect.setName(name);
-
 String origin = "origin";
-collect.setOrigin(origin);
-
-boolean activate = true;
-collect.setActivate(activate);
-
+boolean activate = false;
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-advancedLogging.getHttpsApiRestShApiSLAsync(collect, new APICallBack<HttpsApiRestShApiSLRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSLRModel response) {
+advancedLogging.loggingSetupAsync(key, uid, name, origin, activate, contentType, new APICallBack<HttpsApiRestShApiSLR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSLR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sli_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLoggingController.createHttpsApiRestShApiSLIAsync") createHttpsApiRestShApiSLIAsync
+### <a name="logging_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingInfoAsync") loggingInfoAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -384,9 +364,10 @@ advancedLogging.getHttpsApiRestShApiSLAsync(collect, new APICallBack<HttpsApiRes
 
 
 ```java
-void createHttpsApiRestShApiSLIAsync(
-        final CreateHttpsApiRestShApiSLIInput input,
-        final APICallBack<HttpsApiRestShApiSLIRModel> callBack)
+void loggingInfoAsync(
+        final HttpsApiRestShApiSLI body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSLIR> callBack)
 ```
 
 #### Parameters
@@ -401,24 +382,17 @@ void createHttpsApiRestShApiSLIAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSLIInput collect = new CreateHttpsApiRestShApiSLIInput();
-
-    HttpsApiRestShApiSLIModel body = new HttpsApiRestShApiSLIModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiSLI body = new HttpsApiRestShApiSLI();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    advancedLogging.createHttpsApiRestShApiSLIAsync(collect, new APICallBack<HttpsApiRestShApiSLIRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSLIRModel response) {
+    advancedLogging.loggingInfoAsync(body, contentType, new APICallBack<HttpsApiRestShApiSLIR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSLIR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -426,7 +400,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sl_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLoggingController.createHttpsApiRestShApiSLAsync") createHttpsApiRestShApiSLAsync
+### <a name="logging_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingSetupAsync") loggingSetupAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -434,9 +408,10 @@ collect.setContentType(contentType);
 
 
 ```java
-void createHttpsApiRestShApiSLAsync(
-        final CreateHttpsApiRestShApiSLInput input,
-        final APICallBack<HttpsApiRestShApiSLRModel> callBack)
+void loggingSetupAsync(
+        final HttpsApiRestShApiSL body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSLR> callBack)
 ```
 
 #### Parameters
@@ -451,24 +426,17 @@ void createHttpsApiRestShApiSLAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSLInput collect = new CreateHttpsApiRestShApiSLInput();
-
-    HttpsApiRestShApiSLModel body = new HttpsApiRestShApiSLModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiSL body = new HttpsApiRestShApiSL();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    advancedLogging.createHttpsApiRestShApiSLAsync(collect, new APICallBack<HttpsApiRestShApiSLRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSLRModel response) {
+    advancedLogging.loggingSetupAsync(body, contentType, new APICallBack<HttpsApiRestShApiSLR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSLR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -478,17 +446,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.WAFDDOSProtectionController") WAFDDOSProtectionController
+## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.WAFDDOSProtection") WAFDDOSProtection
 
 ### Get singleton instance
 
-The singleton instance of the ``` WAFDDOSProtectionController ``` class can be accessed from the API Client.
+The singleton instance of the ``` WAFDDOSProtection ``` class can be accessed from the API Client.
 
 ```java
-WAFDDOSProtectionController wAFDDOSProtection = client.getWAFDDOSProtection();
+WAFDDOSProtection wAFDDOSProtection = client.getWAFDDOSProtection();
 ```
 
-### <a name="get_https_api_rest_sh_api_swc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtectionController.getHttpsApiRestShApiSWCAsync") getHttpsApiRestShApiSWCAsync
+### <a name="https_api_rest_sh_api_swc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtection.httpsApiRestShApiSWCAsync") httpsApiRestShApiSWCAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -496,9 +464,14 @@ WAFDDOSProtectionController wAFDDOSProtection = client.getWAFDDOSProtection();
 
 
 ```java
-void getHttpsApiRestShApiSWCAsync(
-        final GetHttpsApiRestShApiSWCInput input,
-        final APICallBack<HttpsApiRestShApiSWCRModel> callBack)
+void httpsApiRestShApiSWCAsync(
+        final String key,
+        final String uid,
+        final String name,
+        final String origin,
+        final String rule,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSWCR> callBack)
 ```
 
 #### Parameters
@@ -516,41 +489,26 @@ void getHttpsApiRestShApiSWCAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSWCInput collect = new GetHttpsApiRestShApiSWCInput();
-
 String key = "API";
-collect.setKey(key);
-
 String uid = "UID";
-collect.setUid(uid);
-
 String name = "origin-name";
-collect.setName(name);
-
 String origin = "origin.yourdomain.tld";
-collect.setOrigin(origin);
-
 String rule = "header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does";
-collect.setRule(rule);
-
 String contentType = "application/json";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-wAFDDOSProtection.getHttpsApiRestShApiSWCAsync(collect, new APICallBack<HttpsApiRestShApiSWCRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSWCRModel response) {
+wAFDDOSProtection.httpsApiRestShApiSWCAsync(key, uid, name, origin, rule, contentType, new APICallBack<HttpsApiRestShApiSWCR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSWCR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sw_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtectionController.getHttpsApiRestShApiSWAsync") getHttpsApiRestShApiSWAsync
+### <a name="https_api_rest_sh_api_sw_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtection.httpsApiRestShApiSWAsync") httpsApiRestShApiSWAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -558,9 +516,13 @@ wAFDDOSProtection.getHttpsApiRestShApiSWCAsync(collect, new APICallBack<HttpsApi
 
 
 ```java
-void getHttpsApiRestShApiSWAsync(
-        final GetHttpsApiRestShApiSWInput input,
-        final APICallBack<HttpsApiRestShApiSWRModel> callBack)
+void httpsApiRestShApiSWAsync(
+        final String key,
+        final String uid,
+        final String origin,
+        final String cname,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSWR> callBack)
 ```
 
 #### Parameters
@@ -577,38 +539,25 @@ void getHttpsApiRestShApiSWAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSWInput collect = new GetHttpsApiRestShApiSWInput();
-
 String key = "API";
-collect.setKey(key);
-
 String uid = "UID";
-collect.setUid(uid);
-
 String origin = "origin.yourdomain.tld";
-collect.setOrigin(origin);
-
 String cname = "yourdomain.tld,www.yourdomain.tld";
-collect.setCname(cname);
-
 String contentType = "application/json";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-wAFDDOSProtection.getHttpsApiRestShApiSWAsync(collect, new APICallBack<HttpsApiRestShApiSWRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSWRModel response) {
+wAFDDOSProtection.httpsApiRestShApiSWAsync(key, uid, origin, cname, contentType, new APICallBack<HttpsApiRestShApiSWR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSWR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_swc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtectionController.createHttpsApiRestShApiSWCAsync") createHttpsApiRestShApiSWCAsync
+### <a name="https_api_rest_sh_api_swc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtection.httpsApiRestShApiSWCAsync") httpsApiRestShApiSWCAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -616,9 +565,10 @@ wAFDDOSProtection.getHttpsApiRestShApiSWAsync(collect, new APICallBack<HttpsApiR
 
 
 ```java
-void createHttpsApiRestShApiSWCAsync(
-        final CreateHttpsApiRestShApiSWCInput input,
-        final APICallBack<HttpsApiRestShApiSWCRModel> callBack)
+void httpsApiRestShApiSWCAsync(
+        final HttpsApiRestShApiSWC body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSWCR> callBack)
 ```
 
 #### Parameters
@@ -633,25 +583,18 @@ void createHttpsApiRestShApiSWCAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSWCInput collect = new CreateHttpsApiRestShApiSWCInput();
-
     String bodyValue = "{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}";
-    HttpsApiRestShApiSWCModel body = mapper.readValue(bodyValue,new TypeReference<HttpsApiRestShApiSWCModel> (){});
-collect.setBody(body);
-
+    HttpsApiRestShApiSWC body = mapper.readValue(bodyValue,new TypeReference<HttpsApiRestShApiSWC> (){});
     String contentType = "application/json";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    wAFDDOSProtection.createHttpsApiRestShApiSWCAsync(collect, new APICallBack<HttpsApiRestShApiSWCRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSWCRModel response) {
+    wAFDDOSProtection.httpsApiRestShApiSWCAsync(body, contentType, new APICallBack<HttpsApiRestShApiSWCR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSWCR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -659,7 +602,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sw_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtectionController.createHttpsApiRestShApiSWAsync") createHttpsApiRestShApiSWAsync
+### <a name="https_api_rest_sh_api_sw_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtection.httpsApiRestShApiSWAsync") httpsApiRestShApiSWAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -667,9 +610,10 @@ collect.setContentType(contentType);
 
 
 ```java
-void createHttpsApiRestShApiSWAsync(
-        final CreateHttpsApiRestShApiSWInput input,
-        final APICallBack<HttpsApiRestShApiSWRModel> callBack)
+void httpsApiRestShApiSWAsync(
+        final HttpsApiRestShApiSW body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSWR> callBack)
 ```
 
 #### Parameters
@@ -684,25 +628,18 @@ void createHttpsApiRestShApiSWAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSWInput collect = new CreateHttpsApiRestShApiSWInput();
-
     String bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}";
-    HttpsApiRestShApiSWModel body = mapper.readValue(bodyValue,new TypeReference<HttpsApiRestShApiSWModel> (){});
-collect.setBody(body);
-
+    HttpsApiRestShApiSW body = mapper.readValue(bodyValue,new TypeReference<HttpsApiRestShApiSW> (){});
     String contentType = "application/json";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    wAFDDOSProtection.createHttpsApiRestShApiSWAsync(collect, new APICallBack<HttpsApiRestShApiSWRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSWRModel response) {
+    wAFDDOSProtection.httpsApiRestShApiSWAsync(body, contentType, new APICallBack<HttpsApiRestShApiSWR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSWR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -712,17 +649,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="encryption_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.EncryptionController") EncryptionController
+## <a name="encryption"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.Encryption") Encryption
 
 ### Get singleton instance
 
-The singleton instance of the ``` EncryptionController ``` class can be accessed from the API Client.
+The singleton instance of the ``` Encryption ``` class can be accessed from the API Client.
 
 ```java
-EncryptionController encryption = client.getEncryption();
+Encryption encryption = client.getEncryption();
 ```
 
-### <a name="get_https_api_rest_sh_api_se_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.EncryptionController.getHttpsApiRestShApiSEAsync") getHttpsApiRestShApiSEAsync
+### <a name="data_and_file_encryption_api_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Encryption.dataAndFileEncryptionAPIAsync") dataAndFileEncryptionAPIAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -730,9 +667,14 @@ EncryptionController encryption = client.getEncryption();
 
 
 ```java
-void getHttpsApiRestShApiSEAsync(
-        final GetHttpsApiRestShApiSEInput input,
-        final APICallBack<HttpsApiRestShApiSERModel> callBack)
+void dataAndFileEncryptionAPIAsync(
+        final String key,
+        final String uid,
+        final String data,
+        final String method,
+        final int bit,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSER> callBack)
 ```
 
 #### Parameters
@@ -750,41 +692,26 @@ void getHttpsApiRestShApiSEAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSEInput collect = new GetHttpsApiRestShApiSEInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String data = "data";
-collect.setData(data);
-
 String method = "method";
-collect.setMethod(method);
-
-int bit = 148;
-collect.setBit(bit);
-
+int bit = 31;
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-encryption.getHttpsApiRestShApiSEAsync(collect, new APICallBack<HttpsApiRestShApiSERModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSERModel response) {
+encryption.dataAndFileEncryptionAPIAsync(key, uid, data, method, bit, contentType, new APICallBack<HttpsApiRestShApiSER>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSER response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_se_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.EncryptionController.createHttpsApiRestShApiSEAsync") createHttpsApiRestShApiSEAsync
+### <a name="data_and_file_encryption_api_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Encryption.dataAndFileEncryptionAPIAsync") dataAndFileEncryptionAPIAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -792,9 +719,10 @@ encryption.getHttpsApiRestShApiSEAsync(collect, new APICallBack<HttpsApiRestShAp
 
 
 ```java
-void createHttpsApiRestShApiSEAsync(
-        final CreateHttpsApiRestShApiSEInput input,
-        final APICallBack<HttpsApiRestShApiSERModel> callBack)
+void dataAndFileEncryptionAPIAsync(
+        final HttpsApiRestShApiSE body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSER> callBack)
 ```
 
 #### Parameters
@@ -809,24 +737,17 @@ void createHttpsApiRestShApiSEAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSEInput collect = new CreateHttpsApiRestShApiSEInput();
-
-    HttpsApiRestShApiSEModel body = new HttpsApiRestShApiSEModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiSE body = new HttpsApiRestShApiSE();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    encryption.createHttpsApiRestShApiSEAsync(collect, new APICallBack<HttpsApiRestShApiSERModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSERModel response) {
+    encryption.dataAndFileEncryptionAPIAsync(body, contentType, new APICallBack<HttpsApiRestShApiSER>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSER response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -836,17 +757,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="cdn_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.CDNController") CDNController
+## <a name="cdn"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.CDN") CDN
 
 ### Get singleton instance
 
-The singleton instance of the ``` CDNController ``` class can be accessed from the API Client.
+The singleton instance of the ``` CDN ``` class can be accessed from the API Client.
 
 ```java
-CDNController cDN = client.getCDN();
+CDN cDN = client.getCDN();
 ```
 
-### <a name="get_https_api_rest_sh_api_sc_push_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDNController.getHttpsApiRestShApiSCPushAsync") getHttpsApiRestShApiSCPushAsync
+### <a name="c_dn_push_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPushZoneAsync") cDNPushZoneAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -854,9 +775,13 @@ CDNController cDN = client.getCDN();
 
 
 ```java
-void getHttpsApiRestShApiSCPushAsync(
-        final GetHttpsApiRestShApiSCPushInput input,
-        final APICallBack<HttpsApiRestShApiSCPushRModel> callBack)
+void cDNPushZoneAsync(
+        final String key,
+        final String uid,
+        final String cname,
+        final String file,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSCPushR> callBack)
 ```
 
 #### Parameters
@@ -873,38 +798,25 @@ void getHttpsApiRestShApiSCPushAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSCPushInput collect = new GetHttpsApiRestShApiSCPushInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String cname = "cname";
-collect.setCname(cname);
-
 String file = "file";
-collect.setFile(file);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-cDN.getHttpsApiRestShApiSCPushAsync(collect, new APICallBack<HttpsApiRestShApiSCPushRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSCPushRModel response) {
+cDN.cDNPushZoneAsync(key, uid, cname, file, contentType, new APICallBack<HttpsApiRestShApiSCPushR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSCPushR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sc_pull_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDNController.getHttpsApiRestShApiSCPullAsync") getHttpsApiRestShApiSCPullAsync
+### <a name="c_dn_pull_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPullZoneAsync") cDNPullZoneAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -912,9 +824,13 @@ cDN.getHttpsApiRestShApiSCPushAsync(collect, new APICallBack<HttpsApiRestShApiSC
 
 
 ```java
-void getHttpsApiRestShApiSCPullAsync(
-        final GetHttpsApiRestShApiSCPullInput input,
-        final APICallBack<HttpsApiRestShApiSCPullRModel> callBack)
+void cDNPullZoneAsync(
+        final String key,
+        final String uid,
+        final String origin,
+        final String cname,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSCPullR> callBack)
 ```
 
 #### Parameters
@@ -931,38 +847,25 @@ void getHttpsApiRestShApiSCPullAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSCPullInput collect = new GetHttpsApiRestShApiSCPullInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String origin = "origin";
-collect.setOrigin(origin);
-
 String cname = "cname";
-collect.setCname(cname);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-cDN.getHttpsApiRestShApiSCPullAsync(collect, new APICallBack<HttpsApiRestShApiSCPullRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSCPullRModel response) {
+cDN.cDNPullZoneAsync(key, uid, origin, cname, contentType, new APICallBack<HttpsApiRestShApiSCPullR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSCPullR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sc_push_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDNController.createHttpsApiRestShApiSCPushAsync") createHttpsApiRestShApiSCPushAsync
+### <a name="c_dn_push_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPushZoneAsync") cDNPushZoneAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -970,9 +873,10 @@ cDN.getHttpsApiRestShApiSCPullAsync(collect, new APICallBack<HttpsApiRestShApiSC
 
 
 ```java
-void createHttpsApiRestShApiSCPushAsync(
-        final CreateHttpsApiRestShApiSCPushInput input,
-        final APICallBack<HttpsApiRestShApiSCPushRModel> callBack)
+void cDNPushZoneAsync(
+        final HttpsApiRestShApiSCPush body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSCPushR> callBack)
 ```
 
 #### Parameters
@@ -987,24 +891,17 @@ void createHttpsApiRestShApiSCPushAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSCPushInput collect = new CreateHttpsApiRestShApiSCPushInput();
-
-    HttpsApiRestShApiSCPushModel body = new HttpsApiRestShApiSCPushModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiSCPush body = new HttpsApiRestShApiSCPush();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    cDN.createHttpsApiRestShApiSCPushAsync(collect, new APICallBack<HttpsApiRestShApiSCPushRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSCPushRModel response) {
+    cDN.cDNPushZoneAsync(body, contentType, new APICallBack<HttpsApiRestShApiSCPushR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSCPushR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -1012,7 +909,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sc_pull_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDNController.createHttpsApiRestShApiSCPullAsync") createHttpsApiRestShApiSCPullAsync
+### <a name="c_dn_pull_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPullZoneAsync") cDNPullZoneAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1020,9 +917,10 @@ collect.setContentType(contentType);
 
 
 ```java
-void createHttpsApiRestShApiSCPullAsync(
-        final CreateHttpsApiRestShApiSCPullInput input,
-        final APICallBack<HttpsApiRestShApiSCPullRModel> callBack)
+void cDNPullZoneAsync(
+        final HttpsApiRestShApiSCPull body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSCPullR> callBack)
 ```
 
 #### Parameters
@@ -1037,24 +935,17 @@ void createHttpsApiRestShApiSCPullAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSCPullInput collect = new CreateHttpsApiRestShApiSCPullInput();
-
-    HttpsApiRestShApiSCPullModel body = new HttpsApiRestShApiSCPullModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiSCPull body = new HttpsApiRestShApiSCPull();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    cDN.createHttpsApiRestShApiSCPullAsync(collect, new APICallBack<HttpsApiRestShApiSCPullRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSCPullRModel response) {
+    cDN.cDNPullZoneAsync(body, contentType, new APICallBack<HttpsApiRestShApiSCPullR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSCPullR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -1064,17 +955,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="dns_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.DNSController") DNSController
+## <a name="dns"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.DNS") DNS
 
 ### Get singleton instance
 
-The singleton instance of the ``` DNSController ``` class can be accessed from the API Client.
+The singleton instance of the ``` DNS ``` class can be accessed from the API Client.
 
 ```java
-DNSController dNS = client.getDNS();
+DNS dNS = client.getDNS();
 ```
 
-### <a name="get_https_api_rest_sh_api_sdc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNSController.getHttpsApiRestShApiSDCAsync") getHttpsApiRestShApiSDCAsync
+### <a name="d_ns_configuration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSConfigurationAsync") dNSConfigurationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1082,9 +973,13 @@ DNSController dNS = client.getDNS();
 
 
 ```java
-void getHttpsApiRestShApiSDCAsync(
-        final GetHttpsApiRestShApiSDCInput input,
-        final APICallBack<HttpsApiRestShApiSDCRModel> callBack)
+void dNSConfigurationAsync(
+        final String key,
+        final String uid,
+        final String domain,
+        final String records,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSDCR> callBack)
 ```
 
 #### Parameters
@@ -1101,38 +996,25 @@ void getHttpsApiRestShApiSDCAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSDCInput collect = new GetHttpsApiRestShApiSDCInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String domain = "domain";
-collect.setDomain(domain);
-
 String records = "records";
-collect.setRecords(records);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-dNS.getHttpsApiRestShApiSDCAsync(collect, new APICallBack<HttpsApiRestShApiSDCRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSDCRModel response) {
+dNS.dNSConfigurationAsync(key, uid, domain, records, contentType, new APICallBack<HttpsApiRestShApiSDCR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSDCR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sdc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNSController.createHttpsApiRestShApiSDCAsync") createHttpsApiRestShApiSDCAsync
+### <a name="d_ns_configuration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSConfigurationAsync") dNSConfigurationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1140,9 +1022,10 @@ dNS.getHttpsApiRestShApiSDCAsync(collect, new APICallBack<HttpsApiRestShApiSDCRM
 
 
 ```java
-void createHttpsApiRestShApiSDCAsync(
-        final CreateHttpsApiRestShApiSDCInput input,
-        final APICallBack<HttpsApiRestShApiSDCRModel> callBack)
+void dNSConfigurationAsync(
+        final HttpsApiRestShApiSDC body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSDCR> callBack)
 ```
 
 #### Parameters
@@ -1157,24 +1040,17 @@ void createHttpsApiRestShApiSDCAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSDCInput collect = new CreateHttpsApiRestShApiSDCInput();
-
-    HttpsApiRestShApiSDCModel body = new HttpsApiRestShApiSDCModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiSDC body = new HttpsApiRestShApiSDC();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    dNS.createHttpsApiRestShApiSDCAsync(collect, new APICallBack<HttpsApiRestShApiSDCRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSDCRModel response) {
+    dNS.dNSConfigurationAsync(body, contentType, new APICallBack<HttpsApiRestShApiSDCR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSDCR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -1182,7 +1058,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="get_https_api_rest_sh_api_sda_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNSController.getHttpsApiRestShApiSDAAsync") getHttpsApiRestShApiSDAAsync
+### <a name="d_ns_creation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSCreationAsync") dNSCreationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1190,9 +1066,12 @@ collect.setContentType(contentType);
 
 
 ```java
-void getHttpsApiRestShApiSDAAsync(
-        final GetHttpsApiRestShApiSDAInput input,
-        final APICallBack<HttpsApiRestShApiSDARModel> callBack)
+void dNSCreationAsync(
+        final String key,
+        final String uid,
+        final String domain,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSDAR> callBack)
 ```
 
 #### Parameters
@@ -1208,35 +1087,24 @@ void getHttpsApiRestShApiSDAAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSDAInput collect = new GetHttpsApiRestShApiSDAInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String domain = "domain";
-collect.setDomain(domain);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-dNS.getHttpsApiRestShApiSDAAsync(collect, new APICallBack<HttpsApiRestShApiSDARModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSDARModel response) {
+dNS.dNSCreationAsync(key, uid, domain, contentType, new APICallBack<HttpsApiRestShApiSDAR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSDAR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sda_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNSController.createHttpsApiRestShApiSDAAsync") createHttpsApiRestShApiSDAAsync
+### <a name="d_ns_creation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSCreationAsync") dNSCreationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1244,9 +1112,10 @@ dNS.getHttpsApiRestShApiSDAAsync(collect, new APICallBack<HttpsApiRestShApiSDARM
 
 
 ```java
-void createHttpsApiRestShApiSDAAsync(
-        final CreateHttpsApiRestShApiSDAInput input,
-        final APICallBack<HttpsApiRestShApiSDARModel> callBack)
+void dNSCreationAsync(
+        final HttpsApiRestShApiSDA body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSDAR> callBack)
 ```
 
 #### Parameters
@@ -1261,24 +1130,17 @@ void createHttpsApiRestShApiSDAAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSDAInput collect = new CreateHttpsApiRestShApiSDAInput();
-
-    HttpsApiRestShApiSDAModel body = new HttpsApiRestShApiSDAModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiSDA body = new HttpsApiRestShApiSDA();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    dNS.createHttpsApiRestShApiSDAAsync(collect, new APICallBack<HttpsApiRestShApiSDARModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSDARModel response) {
+    dNS.dNSCreationAsync(body, contentType, new APICallBack<HttpsApiRestShApiSDAR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSDAR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -1288,17 +1150,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="code_obfuscation_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.CodeObfuscationController") CodeObfuscationController
+## <a name="code_obfuscation"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.CodeObfuscation") CodeObfuscation
 
 ### Get singleton instance
 
-The singleton instance of the ``` CodeObfuscationController ``` class can be accessed from the API Client.
+The singleton instance of the ``` CodeObfuscation ``` class can be accessed from the API Client.
 
 ```java
-CodeObfuscationController codeObfuscation = client.getCodeObfuscation();
+CodeObfuscation codeObfuscation = client.getCodeObfuscation();
 ```
 
-### <a name="get_https_api_rest_sh_api_so_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CodeObfuscationController.getHttpsApiRestShApiSOAsync") getHttpsApiRestShApiSOAsync
+### <a name="code_application_obfuscation_and_anti_tampering_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CodeObfuscation.codeApplicationObfuscationAndAntiTamperingAsync") codeApplicationObfuscationAndAntiTamperingAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1306,9 +1168,12 @@ CodeObfuscationController codeObfuscation = client.getCodeObfuscation();
 
 
 ```java
-void getHttpsApiRestShApiSOAsync(
-        final GetHttpsApiRestShApiSOInput input,
-        final APICallBack<HttpsApiRestShApiSORModel> callBack)
+void codeApplicationObfuscationAndAntiTamperingAsync(
+        final String key,
+        final String uid,
+        final String app,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSOR> callBack)
 ```
 
 #### Parameters
@@ -1324,35 +1189,24 @@ void getHttpsApiRestShApiSOAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSOInput collect = new GetHttpsApiRestShApiSOInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String app = "app";
-collect.setApp(app);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-codeObfuscation.getHttpsApiRestShApiSOAsync(collect, new APICallBack<HttpsApiRestShApiSORModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSORModel response) {
+codeObfuscation.codeApplicationObfuscationAndAntiTamperingAsync(key, uid, app, contentType, new APICallBack<HttpsApiRestShApiSOR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSOR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_so_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CodeObfuscationController.createHttpsApiRestShApiSOAsync") createHttpsApiRestShApiSOAsync
+### <a name="code_application_obfuscation_and_anti_tampering_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CodeObfuscation.codeApplicationObfuscationAndAntiTamperingAsync") codeApplicationObfuscationAndAntiTamperingAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1360,9 +1214,10 @@ codeObfuscation.getHttpsApiRestShApiSOAsync(collect, new APICallBack<HttpsApiRes
 
 
 ```java
-void createHttpsApiRestShApiSOAsync(
-        final CreateHttpsApiRestShApiSOInput input,
-        final APICallBack<HttpsApiRestShApiSORModel> callBack)
+void codeApplicationObfuscationAndAntiTamperingAsync(
+        final HttpsApiRestShApiSO body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSOR> callBack)
 ```
 
 #### Parameters
@@ -1377,24 +1232,17 @@ void createHttpsApiRestShApiSOAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSOInput collect = new CreateHttpsApiRestShApiSOInput();
-
-    HttpsApiRestShApiSOModel body = new HttpsApiRestShApiSOModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiSO body = new HttpsApiRestShApiSO();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    codeObfuscation.createHttpsApiRestShApiSOAsync(collect, new APICallBack<HttpsApiRestShApiSORModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSORModel response) {
+    codeObfuscation.codeApplicationObfuscationAndAntiTamperingAsync(body, contentType, new APICallBack<HttpsApiRestShApiSOR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSOR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -1404,17 +1252,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="hosting_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.HostingController") HostingController
+## <a name="hosting"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.Hosting") Hosting
 
 ### Get singleton instance
 
-The singleton instance of the ``` HostingController ``` class can be accessed from the API Client.
+The singleton instance of the ``` Hosting ``` class can be accessed from the API Client.
 
 ```java
-HostingController hosting = client.getHosting();
+Hosting hosting = client.getHosting();
 ```
 
-### <a name="get_https_api_rest_sh_api_sh_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.HostingController.getHttpsApiRestShApiSHAsync") getHttpsApiRestShApiSHAsync
+### <a name="hosting_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Hosting.hostingSetupAsync") hostingSetupAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1422,9 +1270,13 @@ HostingController hosting = client.getHosting();
 
 
 ```java
-void getHttpsApiRestShApiSHAsync(
-        final GetHttpsApiRestShApiSHInput input,
-        final APICallBack<HttpsApiRestShApiSHRModel> callBack)
+void hostingSetupAsync(
+        final String key,
+        final String uid,
+        final String app,
+        final String domain,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSHR> callBack)
 ```
 
 #### Parameters
@@ -1441,38 +1293,25 @@ void getHttpsApiRestShApiSHAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiSHInput collect = new GetHttpsApiRestShApiSHInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String app = "app";
-collect.setApp(app);
-
 String domain = "domain";
-collect.setDomain(domain);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-hosting.getHttpsApiRestShApiSHAsync(collect, new APICallBack<HttpsApiRestShApiSHRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSHRModel response) {
+hosting.hostingSetupAsync(key, uid, app, domain, contentType, new APICallBack<HttpsApiRestShApiSHR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSHR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_sh_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.HostingController.createHttpsApiRestShApiSHAsync") createHttpsApiRestShApiSHAsync
+### <a name="hosting_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Hosting.hostingSetupAsync") hostingSetupAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1480,9 +1319,10 @@ hosting.getHttpsApiRestShApiSHAsync(collect, new APICallBack<HttpsApiRestShApiSH
 
 
 ```java
-void createHttpsApiRestShApiSHAsync(
-        final CreateHttpsApiRestShApiSHInput input,
-        final APICallBack<HttpsApiRestShApiSHRModel> callBack)
+void hostingSetupAsync(
+        final HttpsApiRestShApiSH body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiSHR> callBack)
 ```
 
 #### Parameters
@@ -1497,24 +1337,17 @@ void createHttpsApiRestShApiSHAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiSHInput collect = new CreateHttpsApiRestShApiSHInput();
-
-    HttpsApiRestShApiSHModel body = new HttpsApiRestShApiSHModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiSH body = new HttpsApiRestShApiSH();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    hosting.createHttpsApiRestShApiSHAsync(collect, new APICallBack<HttpsApiRestShApiSHRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSHRModel response) {
+    hosting.hostingSetupAsync(body, contentType, new APICallBack<HttpsApiRestShApiSHR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiSHR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -1524,17 +1357,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.DataManipulationConversionSortingAndCompressionAPIController") DataManipulationConversionSortingAndCompressionAPIController
+## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
 
 ### Get singleton instance
 
-The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPIController ``` class can be accessed from the API Client.
+The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed from the API Client.
 
 ```java
-DataManipulationConversionSortingAndCompressionAPIController dataManipulationConversionSortingAndCompressionAPI = client.getDataManipulationConversionSortingAndCompressionAPI();
+DataManipulationConversionSortingAndCompressionAPI dataManipulationConversionSortingAndCompressionAPI = client.getDataManipulationConversionSortingAndCompressionAPI();
 ```
 
-### <a name="get_https_api_rest_sh_api_d_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DataManipulationConversionSortingAndCompressionAPIController.getHttpsApiRestShApiDAsync") getHttpsApiRestShApiDAsync
+### <a name="https_api_rest_sh_api_d_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsync") httpsApiRestShApiDAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1542,9 +1375,14 @@ DataManipulationConversionSortingAndCompressionAPIController dataManipulationCon
 
 
 ```java
-void getHttpsApiRestShApiDAsync(
-        final GetHttpsApiRestShApiDInput input,
-        final APICallBack<HttpsApiRestShApiDRModel> callBack)
+void httpsApiRestShApiDAsync(
+        final String key,
+        final String uid,
+        final String user,
+        final String apiuid,
+        final String data,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiDR> callBack)
 ```
 
 #### Parameters
@@ -1562,41 +1400,26 @@ void getHttpsApiRestShApiDAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiDInput collect = new GetHttpsApiRestShApiDInput();
-
 String key = "API";
-collect.setKey(key);
-
 String uid = "UID";
-collect.setUid(uid);
-
 String user = "UID";
-collect.setUser(user);
-
 String apiuid = "apiUID";
-collect.setApiuid(apiuid);
-
 String data = "https://static.yourcdn.com/data.file";
-collect.setData(data);
-
 String contentType = "application/json";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-dataManipulationConversionSortingAndCompressionAPI.getHttpsApiRestShApiDAsync(collect, new APICallBack<HttpsApiRestShApiDRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiDRModel response) {
+dataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsync(key, uid, user, apiuid, data, contentType, new APICallBack<HttpsApiRestShApiDR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiDR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_d_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DataManipulationConversionSortingAndCompressionAPIController.createHttpsApiRestShApiDAsync") createHttpsApiRestShApiDAsync
+### <a name="https_api_rest_sh_api_d_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsync") httpsApiRestShApiDAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1604,9 +1427,10 @@ dataManipulationConversionSortingAndCompressionAPI.getHttpsApiRestShApiDAsync(co
 
 
 ```java
-void createHttpsApiRestShApiDAsync(
-        final CreateHttpsApiRestShApiDInput input,
-        final APICallBack<HttpsApiRestShApiDRModel> callBack)
+void httpsApiRestShApiDAsync(
+        final HttpsApiRestShApiD body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiDR> callBack)
 ```
 
 #### Parameters
@@ -1621,25 +1445,18 @@ void createHttpsApiRestShApiDAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiDInput collect = new CreateHttpsApiRestShApiDInput();
-
     String bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}";
-    HttpsApiRestShApiDModel body = mapper.readValue(bodyValue,new TypeReference<HttpsApiRestShApiDModel> (){});
-collect.setBody(body);
-
+    HttpsApiRestShApiD body = mapper.readValue(bodyValue,new TypeReference<HttpsApiRestShApiD> (){});
     String contentType = "application/json";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    dataManipulationConversionSortingAndCompressionAPI.createHttpsApiRestShApiDAsync(collect, new APICallBack<HttpsApiRestShApiDRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiDRModel response) {
+    dataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsync(body, contentType, new APICallBack<HttpsApiRestShApiDR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiDR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -1649,17 +1466,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.ImageManipulationAndModerationAPIController") ImageManipulationAndModerationAPIController
+## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
 
 ### Get singleton instance
 
-The singleton instance of the ``` ImageManipulationAndModerationAPIController ``` class can be accessed from the API Client.
+The singleton instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed from the API Client.
 
 ```java
-ImageManipulationAndModerationAPIController imageManipulationAndModerationAPI = client.getImageManipulationAndModerationAPI();
+ImageManipulationAndModerationAPI imageManipulationAndModerationAPI = client.getImageManipulationAndModerationAPI();
 ```
 
-### <a name="get_https_api_rest_sh_api_i_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.ImageManipulationAndModerationAPIController.getHttpsApiRestShApiIAsync") getHttpsApiRestShApiIAsync
+### <a name="image_manipulation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.ImageManipulationAndModerationAPI.imageManipulationAsync") imageManipulationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1667,9 +1484,13 @@ ImageManipulationAndModerationAPIController imageManipulationAndModerationAPI = 
 
 
 ```java
-void getHttpsApiRestShApiIAsync(
-        final GetHttpsApiRestShApiIInput input,
-        final APICallBack<HttpsApiRestShApiIRModel> callBack)
+void imageManipulationAsync(
+        final String key,
+        final String uid,
+        final String image,
+        final String transform,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiIR> callBack)
 ```
 
 #### Parameters
@@ -1686,38 +1507,25 @@ void getHttpsApiRestShApiIAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiIInput collect = new GetHttpsApiRestShApiIInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String image = "image";
-collect.setImage(image);
-
 String transform = "transform";
-collect.setTransform(transform);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-imageManipulationAndModerationAPI.getHttpsApiRestShApiIAsync(collect, new APICallBack<HttpsApiRestShApiIRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiIRModel response) {
+imageManipulationAndModerationAPI.imageManipulationAsync(key, uid, image, transform, contentType, new APICallBack<HttpsApiRestShApiIR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiIR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_i_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.ImageManipulationAndModerationAPIController.createHttpsApiRestShApiIAsync") createHttpsApiRestShApiIAsync
+### <a name="image_manipulation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.ImageManipulationAndModerationAPI.imageManipulationAsync") imageManipulationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1725,9 +1533,10 @@ imageManipulationAndModerationAPI.getHttpsApiRestShApiIAsync(collect, new APICal
 
 
 ```java
-void createHttpsApiRestShApiIAsync(
-        final CreateHttpsApiRestShApiIInput input,
-        final APICallBack<HttpsApiRestShApiIRModel> callBack)
+void imageManipulationAsync(
+        final HttpsApiRestShApiI body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiIR> callBack)
 ```
 
 #### Parameters
@@ -1742,24 +1551,17 @@ void createHttpsApiRestShApiIAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiIInput collect = new CreateHttpsApiRestShApiIInput();
-
-    HttpsApiRestShApiIModel body = new HttpsApiRestShApiIModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiI body = new HttpsApiRestShApiI();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    imageManipulationAndModerationAPI.createHttpsApiRestShApiIAsync(collect, new APICallBack<HttpsApiRestShApiIRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiIRModel response) {
+    imageManipulationAndModerationAPI.imageManipulationAsync(body, contentType, new APICallBack<HttpsApiRestShApiIR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiIR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -1769,17 +1571,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="verification_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.VerificationController") VerificationController
+## <a name="verification"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.Verification") Verification
 
 ### Get singleton instance
 
-The singleton instance of the ``` VerificationController ``` class can be accessed from the API Client.
+The singleton instance of the ``` Verification ``` class can be accessed from the API Client.
 
 ```java
-VerificationController verification = client.getVerification();
+Verification verification = client.getVerification();
 ```
 
-### <a name="get_https_api_rest_sh_api_va_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.VerificationController.getHttpsApiRestShApiVAAsync") getHttpsApiRestShApiVAAsync
+### <a name="user_address_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userAddressVerificationAsync") userAddressVerificationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1787,9 +1589,17 @@ VerificationController verification = client.getVerification();
 
 
 ```java
-void getHttpsApiRestShApiVAAsync(
-        final GetHttpsApiRestShApiVAInput input,
-        final APICallBack<HttpsApiRestShApiVARModel> callBack)
+void userAddressVerificationAsync(
+        final String key,
+        final String uid,
+        final String user,
+        final String a,
+        final String sa,
+        final String c,
+        final String s,
+        final int z,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiVAR> callBack)
 ```
 
 #### Parameters
@@ -1810,50 +1620,29 @@ void getHttpsApiRestShApiVAAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiVAInput collect = new GetHttpsApiRestShApiVAInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String user = "user";
-collect.setUser(user);
-
 String a = "a";
-collect.setA(a);
-
 String sa = "sa";
-collect.setSa(sa);
-
 String c = "c";
-collect.setC(c);
-
 String s = "s";
-collect.setS(s);
-
-int z = 107;
-collect.setZ(z);
-
+int z = 31;
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-verification.getHttpsApiRestShApiVAAsync(collect, new APICallBack<HttpsApiRestShApiVARModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiVARModel response) {
+verification.userAddressVerificationAsync(key, uid, user, a, sa, c, s, z, contentType, new APICallBack<HttpsApiRestShApiVAR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiVAR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_va_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.VerificationController.createHttpsApiRestShApiVAAsync") createHttpsApiRestShApiVAAsync
+### <a name="user_address_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userAddressVerificationAsync") userAddressVerificationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1861,9 +1650,10 @@ verification.getHttpsApiRestShApiVAAsync(collect, new APICallBack<HttpsApiRestSh
 
 
 ```java
-void createHttpsApiRestShApiVAAsync(
-        final CreateHttpsApiRestShApiVAInput input,
-        final APICallBack<HttpsApiRestShApiVARModel> callBack)
+void userAddressVerificationAsync(
+        final HttpsApiRestShApiVA body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiVAR> callBack)
 ```
 
 #### Parameters
@@ -1878,24 +1668,17 @@ void createHttpsApiRestShApiVAAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiVAInput collect = new CreateHttpsApiRestShApiVAInput();
-
-    HttpsApiRestShApiVAModel body = new HttpsApiRestShApiVAModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiVA body = new HttpsApiRestShApiVA();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    verification.createHttpsApiRestShApiVAAsync(collect, new APICallBack<HttpsApiRestShApiVARModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiVARModel response) {
+    verification.userAddressVerificationAsync(body, contentType, new APICallBack<HttpsApiRestShApiVAR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiVAR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -1903,7 +1686,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="get_https_api_rest_sh_api_vu_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.VerificationController.getHttpsApiRestShApiVUAsync") getHttpsApiRestShApiVUAsync
+### <a name="user_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userVerificationAsync") userVerificationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1911,9 +1694,13 @@ collect.setContentType(contentType);
 
 
 ```java
-void getHttpsApiRestShApiVUAsync(
-        final GetHttpsApiRestShApiVUInput input,
-        final APICallBack<HttpsApiRestShApiVURModel> callBack)
+void userVerificationAsync(
+        final String key,
+        final String uid,
+        final String user,
+        final String code,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiVUR> callBack)
 ```
 
 #### Parameters
@@ -1930,38 +1717,25 @@ void getHttpsApiRestShApiVUAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiVUInput collect = new GetHttpsApiRestShApiVUInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String user = "user";
-collect.setUser(user);
-
 String code = "code";
-collect.setCode(code);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-verification.getHttpsApiRestShApiVUAsync(collect, new APICallBack<HttpsApiRestShApiVURModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiVURModel response) {
+verification.userVerificationAsync(key, uid, user, code, contentType, new APICallBack<HttpsApiRestShApiVUR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiVUR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_vu_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.VerificationController.createHttpsApiRestShApiVUAsync") createHttpsApiRestShApiVUAsync
+### <a name="user_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userVerificationAsync") userVerificationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1969,9 +1743,10 @@ verification.getHttpsApiRestShApiVUAsync(collect, new APICallBack<HttpsApiRestSh
 
 
 ```java
-void createHttpsApiRestShApiVUAsync(
-        final CreateHttpsApiRestShApiVUInput input,
-        final APICallBack<HttpsApiRestShApiVURModel> callBack)
+void userVerificationAsync(
+        final HttpsApiRestShApiVU body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiVUR> callBack)
 ```
 
 #### Parameters
@@ -1986,24 +1761,17 @@ void createHttpsApiRestShApiVUAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiVUInput collect = new CreateHttpsApiRestShApiVUInput();
-
-    HttpsApiRestShApiVUModel body = new HttpsApiRestShApiVUModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiVU body = new HttpsApiRestShApiVU();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    verification.createHttpsApiRestShApiVUAsync(collect, new APICallBack<HttpsApiRestShApiVURModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiVURModel response) {
+    verification.userVerificationAsync(body, contentType, new APICallBack<HttpsApiRestShApiVUR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiVUR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -2011,7 +1779,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="get_https_api_rest_sh_api_v_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.VerificationController.getHttpsApiRestShApiVAsync") getHttpsApiRestShApiVAsync
+### <a name="cellphone_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.cellphoneVerificationAsync") cellphoneVerificationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2019,9 +1787,12 @@ collect.setContentType(contentType);
 
 
 ```java
-void getHttpsApiRestShApiVAsync(
-        final GetHttpsApiRestShApiVInput input,
-        final APICallBack<HttpsApiRestShApiVRModel> callBack)
+void cellphoneVerificationAsync(
+        final String key,
+        final String uid,
+        final String to,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiVR> callBack)
 ```
 
 #### Parameters
@@ -2037,35 +1808,24 @@ void getHttpsApiRestShApiVAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiVInput collect = new GetHttpsApiRestShApiVInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String to = "to";
-collect.setTo(to);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-verification.getHttpsApiRestShApiVAsync(collect, new APICallBack<HttpsApiRestShApiVRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiVRModel response) {
+verification.cellphoneVerificationAsync(key, uid, to, contentType, new APICallBack<HttpsApiRestShApiVR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiVR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_v_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.VerificationController.createHttpsApiRestShApiVAsync") createHttpsApiRestShApiVAsync
+### <a name="cellphone_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.cellphoneVerificationAsync") cellphoneVerificationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2073,9 +1833,10 @@ verification.getHttpsApiRestShApiVAsync(collect, new APICallBack<HttpsApiRestShA
 
 
 ```java
-void createHttpsApiRestShApiVAsync(
-        final CreateHttpsApiRestShApiVInput input,
-        final APICallBack<HttpsApiRestShApiVRModel> callBack)
+void cellphoneVerificationAsync(
+        final HttpsApiRestShApiV body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiVR> callBack)
 ```
 
 #### Parameters
@@ -2090,24 +1851,17 @@ void createHttpsApiRestShApiVAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiVInput collect = new CreateHttpsApiRestShApiVInput();
-
-    HttpsApiRestShApiVModel body = new HttpsApiRestShApiVModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiV body = new HttpsApiRestShApiV();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    verification.createHttpsApiRestShApiVAsync(collect, new APICallBack<HttpsApiRestShApiVRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiVRModel response) {
+    verification.cellphoneVerificationAsync(body, contentType, new APICallBack<HttpsApiRestShApiVR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiVR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -2117,17 +1871,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="two_factor_authentication_api_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.TwoFactorAuthenticationAPIController") TwoFactorAuthenticationAPIController
+## <a name="two_factor_authentication_api"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.TwoFactorAuthenticationAPI") TwoFactorAuthenticationAPI
 
 ### Get singleton instance
 
-The singleton instance of the ``` TwoFactorAuthenticationAPIController ``` class can be accessed from the API Client.
+The singleton instance of the ``` TwoFactorAuthenticationAPI ``` class can be accessed from the API Client.
 
 ```java
-TwoFactorAuthenticationAPIController twoFactorAuthenticationAPI = client.getTwoFactorAuthenticationAPI();
+TwoFactorAuthenticationAPI twoFactorAuthenticationAPI = client.getTwoFactorAuthenticationAPI();
 ```
 
-### <a name="get_https_api_rest_sh_api2fa_t_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faTAsync") getHttpsApiRestShApi2faTAsync
+### <a name="m2_fa_token_response_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.m2FATokenResponseAsync") m2FATokenResponseAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2135,9 +1889,13 @@ TwoFactorAuthenticationAPIController twoFactorAuthenticationAPI = client.getTwoF
 
 
 ```java
-void getHttpsApiRestShApi2faTAsync(
-        final GetHttpsApiRestShApi2faTInput input,
-        final APICallBack<HttpsApiRestShApi2faTRModel> callBack)
+void m2FATokenResponseAsync(
+        final String key,
+        final String uid,
+        final String user,
+        final String code,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApi2faTR> callBack)
 ```
 
 #### Parameters
@@ -2154,38 +1912,25 @@ void getHttpsApiRestShApi2faTAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApi2faTInput collect = new GetHttpsApiRestShApi2faTInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String user = "user";
-collect.setUser(user);
-
 String code = "code";
-collect.setCode(code);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-twoFactorAuthenticationAPI.getHttpsApiRestShApi2faTAsync(collect, new APICallBack<HttpsApiRestShApi2faTRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApi2faTRModel response) {
+twoFactorAuthenticationAPI.m2FATokenResponseAsync(key, uid, user, code, contentType, new APICallBack<HttpsApiRestShApi2faTR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApi2faTR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api2fa_t_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faTAsync") createHttpsApiRestShApi2faTAsync
+### <a name="m2_fa_token_response_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.m2FATokenResponseAsync") m2FATokenResponseAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2193,9 +1938,10 @@ twoFactorAuthenticationAPI.getHttpsApiRestShApi2faTAsync(collect, new APICallBac
 
 
 ```java
-void createHttpsApiRestShApi2faTAsync(
-        final CreateHttpsApiRestShApi2faTInput input,
-        final APICallBack<HttpsApiRestShApi2faTRModel> callBack)
+void m2FATokenResponseAsync(
+        final HttpsApiRestShApi2faT body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApi2faTR> callBack)
 ```
 
 #### Parameters
@@ -2210,24 +1956,17 @@ void createHttpsApiRestShApi2faTAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApi2faTInput collect = new CreateHttpsApiRestShApi2faTInput();
-
-    HttpsApiRestShApi2faTModel body = new HttpsApiRestShApi2faTModel();
-collect.setBody(body);
-
+    HttpsApiRestShApi2faT body = new HttpsApiRestShApi2faT();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    twoFactorAuthenticationAPI.createHttpsApiRestShApi2faTAsync(collect, new APICallBack<HttpsApiRestShApi2faTRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApi2faTRModel response) {
+    twoFactorAuthenticationAPI.m2FATokenResponseAsync(body, contentType, new APICallBack<HttpsApiRestShApi2faTR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApi2faTR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -2235,7 +1974,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="get_https_api_rest_sh_api2fa_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faAsync") getHttpsApiRestShApi2faAsync
+### <a name="two_factor_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.twoFactorAuthenticationAsync") twoFactorAuthenticationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2243,9 +1982,12 @@ collect.setContentType(contentType);
 
 
 ```java
-void getHttpsApiRestShApi2faAsync(
-        final GetHttpsApiRestShApi2faInput input,
-        final APICallBack<HttpsApiRestShApi2faRModel> callBack)
+void twoFactorAuthenticationAsync(
+        final String key,
+        final String uid,
+        final String to,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApi2faR> callBack)
 ```
 
 #### Parameters
@@ -2261,35 +2003,24 @@ void getHttpsApiRestShApi2faAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApi2faInput collect = new GetHttpsApiRestShApi2faInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String to = "to";
-collect.setTo(to);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-twoFactorAuthenticationAPI.getHttpsApiRestShApi2faAsync(collect, new APICallBack<HttpsApiRestShApi2faRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApi2faRModel response) {
+twoFactorAuthenticationAPI.twoFactorAuthenticationAsync(key, uid, to, contentType, new APICallBack<HttpsApiRestShApi2faR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApi2faR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api2fa_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faAsync") createHttpsApiRestShApi2faAsync
+### <a name="two_factor_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.twoFactorAuthenticationAsync") twoFactorAuthenticationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2297,9 +2028,10 @@ twoFactorAuthenticationAPI.getHttpsApiRestShApi2faAsync(collect, new APICallBack
 
 
 ```java
-void createHttpsApiRestShApi2faAsync(
-        final CreateHttpsApiRestShApi2faInput input,
-        final APICallBack<HttpsApiRestShApi2faRModel> callBack)
+void twoFactorAuthenticationAsync(
+        final HttpsApiRestShApi2fa body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApi2faR> callBack)
 ```
 
 #### Parameters
@@ -2314,24 +2046,17 @@ void createHttpsApiRestShApi2faAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApi2faInput collect = new CreateHttpsApiRestShApi2faInput();
-
-    HttpsApiRestShApi2faModel body = new HttpsApiRestShApi2faModel();
-collect.setBody(body);
-
+    HttpsApiRestShApi2fa body = new HttpsApiRestShApi2fa();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    twoFactorAuthenticationAPI.createHttpsApiRestShApi2faAsync(collect, new APICallBack<HttpsApiRestShApi2faRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApi2faRModel response) {
+    twoFactorAuthenticationAPI.twoFactorAuthenticationAsync(body, contentType, new APICallBack<HttpsApiRestShApi2faR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApi2faR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -2341,17 +2066,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="user_management_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.UserManagementController") UserManagementController
+## <a name="user_management"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.UserManagement") UserManagement
 
 ### Get singleton instance
 
-The singleton instance of the ``` UserManagementController ``` class can be accessed from the API Client.
+The singleton instance of the ``` UserManagement ``` class can be accessed from the API Client.
 
 ```java
-UserManagementController userManagement = client.getUserManagement();
+UserManagement userManagement = client.getUserManagement();
 ```
 
-### <a name="get_https_api_rest_sh_api_ui_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagementController.getHttpsApiRestShApiUIAsync") getHttpsApiRestShApiUIAsync
+### <a name="get_user_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.getUserInfoAsync") getUserInfoAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2359,9 +2084,13 @@ UserManagementController userManagement = client.getUserManagement();
 
 
 ```java
-void getHttpsApiRestShApiUIAsync(
-        final GetHttpsApiRestShApiUIInput input,
-        final APICallBack<HttpsApiRestShApiUIRModel> callBack)
+void getUserInfoAsync(
+        final String key,
+        final String uid,
+        final String user,
+        final String apiuid,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiUIR> callBack)
 ```
 
 #### Parameters
@@ -2378,38 +2107,25 @@ void getHttpsApiRestShApiUIAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiUIInput collect = new GetHttpsApiRestShApiUIInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String user = "user";
-collect.setUser(user);
-
 String apiuid = "apiuid";
-collect.setApiuid(apiuid);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-userManagement.getHttpsApiRestShApiUIAsync(collect, new APICallBack<HttpsApiRestShApiUIRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiUIRModel response) {
+userManagement.getUserInfoAsync(key, uid, user, apiuid, contentType, new APICallBack<HttpsApiRestShApiUIR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiUIR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_ui_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagementController.createHttpsApiRestShApiUIAsync") createHttpsApiRestShApiUIAsync
+### <a name="get_user_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.getUserInfoAsync") getUserInfoAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2417,9 +2133,10 @@ userManagement.getHttpsApiRestShApiUIAsync(collect, new APICallBack<HttpsApiRest
 
 
 ```java
-void createHttpsApiRestShApiUIAsync(
-        final CreateHttpsApiRestShApiUIInput input,
-        final APICallBack<HttpsApiRestShApiUIRModel> callBack)
+void getUserInfoAsync(
+        final HttpsApiRestShApiUI body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiUIR> callBack)
 ```
 
 #### Parameters
@@ -2434,24 +2151,17 @@ void createHttpsApiRestShApiUIAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiUIInput collect = new CreateHttpsApiRestShApiUIInput();
-
-    HttpsApiRestShApiUIModel body = new HttpsApiRestShApiUIModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiUI body = new HttpsApiRestShApiUI();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    userManagement.createHttpsApiRestShApiUIAsync(collect, new APICallBack<HttpsApiRestShApiUIRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiUIRModel response) {
+    userManagement.getUserInfoAsync(body, contentType, new APICallBack<HttpsApiRestShApiUIR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiUIR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -2459,7 +2169,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="get_https_api_rest_sh_api_uu_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagementController.getHttpsApiRestShApiUUAsync") getHttpsApiRestShApiUUAsync
+### <a name="update_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.updateUserAsync") updateUserAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2467,9 +2177,15 @@ collect.setContentType(contentType);
 
 
 ```java
-void getHttpsApiRestShApiUUAsync(
-        final GetHttpsApiRestShApiUUInput input,
-        final APICallBack<HttpsApiRestShApiUURModel> callBack)
+void updateUserAsync(
+        final String key,
+        final String uid,
+        final String user,
+        final String apiuid,
+        final String avatar,
+        final String customInput,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiUUR> callBack)
 ```
 
 #### Parameters
@@ -2488,44 +2204,27 @@ void getHttpsApiRestShApiUUAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiUUInput collect = new GetHttpsApiRestShApiUUInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String user = "user";
-collect.setUser(user);
-
 String apiuid = "apiuid";
-collect.setApiuid(apiuid);
-
 String avatar = "avatar";
-collect.setAvatar(avatar);
-
 String customInput = "custom input";
-collect.setCustomInput(customInput);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-userManagement.getHttpsApiRestShApiUUAsync(collect, new APICallBack<HttpsApiRestShApiUURModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiUURModel response) {
+userManagement.updateUserAsync(key, uid, user, apiuid, avatar, customInput, contentType, new APICallBack<HttpsApiRestShApiUUR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiUUR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_uu_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagementController.createHttpsApiRestShApiUUAsync") createHttpsApiRestShApiUUAsync
+### <a name="update_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.updateUserAsync") updateUserAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2533,9 +2232,10 @@ userManagement.getHttpsApiRestShApiUUAsync(collect, new APICallBack<HttpsApiRest
 
 
 ```java
-void createHttpsApiRestShApiUUAsync(
-        final CreateHttpsApiRestShApiUUInput input,
-        final APICallBack<HttpsApiRestShApiUURModel> callBack)
+void updateUserAsync(
+        final HttpsApiRestShApiUU body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiUUR> callBack)
 ```
 
 #### Parameters
@@ -2550,24 +2250,17 @@ void createHttpsApiRestShApiUUAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiUUInput collect = new CreateHttpsApiRestShApiUUInput();
-
-    HttpsApiRestShApiUUModel body = new HttpsApiRestShApiUUModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiUU body = new HttpsApiRestShApiUU();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    userManagement.createHttpsApiRestShApiUUAsync(collect, new APICallBack<HttpsApiRestShApiUURModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiUURModel response) {
+    userManagement.updateUserAsync(body, contentType, new APICallBack<HttpsApiRestShApiUUR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiUUR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -2575,7 +2268,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="get_https_api_rest_sh_api_ud_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagementController.getHttpsApiRestShApiUDAsync") getHttpsApiRestShApiUDAsync
+### <a name="delete_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.deleteUserAsync") deleteUserAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2583,9 +2276,13 @@ collect.setContentType(contentType);
 
 
 ```java
-void getHttpsApiRestShApiUDAsync(
-        final GetHttpsApiRestShApiUDInput input,
-        final APICallBack<HttpsApiRestShApiUDRModel> callBack)
+void deleteUserAsync(
+        final String api,
+        final String uid,
+        final String user,
+        final String apiuid,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiUDR> callBack)
 ```
 
 #### Parameters
@@ -2602,38 +2299,25 @@ void getHttpsApiRestShApiUDAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiUDInput collect = new GetHttpsApiRestShApiUDInput();
-
 String api = "api";
-collect.setApi(api);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String user = "user";
-collect.setUser(user);
-
 String apiuid = "apiuid";
-collect.setApiuid(apiuid);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-userManagement.getHttpsApiRestShApiUDAsync(collect, new APICallBack<HttpsApiRestShApiUDRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiUDRModel response) {
+userManagement.deleteUserAsync(api, uid, user, apiuid, contentType, new APICallBack<HttpsApiRestShApiUDR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiUDR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_ud_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagementController.createHttpsApiRestShApiUDAsync") createHttpsApiRestShApiUDAsync
+### <a name="delete_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.deleteUserAsync") deleteUserAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2641,9 +2325,10 @@ userManagement.getHttpsApiRestShApiUDAsync(collect, new APICallBack<HttpsApiRest
 
 
 ```java
-void createHttpsApiRestShApiUDAsync(
-        final CreateHttpsApiRestShApiUDInput input,
-        final APICallBack<HttpsApiRestShApiUDRModel> callBack)
+void deleteUserAsync(
+        final HttpsApiRestShApiUD body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiUDR> callBack)
 ```
 
 #### Parameters
@@ -2658,24 +2343,17 @@ void createHttpsApiRestShApiUDAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiUDInput collect = new CreateHttpsApiRestShApiUDInput();
-
-    HttpsApiRestShApiUDModel body = new HttpsApiRestShApiUDModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiUD body = new HttpsApiRestShApiUD();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    userManagement.createHttpsApiRestShApiUDAsync(collect, new APICallBack<HttpsApiRestShApiUDRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiUDRModel response) {
+    userManagement.deleteUserAsync(body, contentType, new APICallBack<HttpsApiRestShApiUDR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiUDR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -2685,17 +2363,17 @@ collect.setContentType(contentType);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="login_and_registration_controller"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.LoginAndRegistrationController") LoginAndRegistrationController
+## <a name="login_and_registration"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.LoginAndRegistration") LoginAndRegistration
 
 ### Get singleton instance
 
-The singleton instance of the ``` LoginAndRegistrationController ``` class can be accessed from the API Client.
+The singleton instance of the ``` LoginAndRegistration ``` class can be accessed from the API Client.
 
 ```java
-LoginAndRegistrationController loginAndRegistration = client.getLoginAndRegistration();
+LoginAndRegistration loginAndRegistration = client.getLoginAndRegistration();
 ```
 
-### <a name="get_https_api_rest_sh_api_aur_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistrationController.getHttpsApiRestShApiAURAsync") getHttpsApiRestShApiAURAsync
+### <a name="user_registration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userRegistrationAsync") userRegistrationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2703,9 +2381,18 @@ LoginAndRegistrationController loginAndRegistration = client.getLoginAndRegistra
 
 
 ```java
-void getHttpsApiRestShApiAURAsync(
-        final GetHttpsApiRestShApiAURInput input,
-        final APICallBack<HttpsApiRestShApiAURRModel> callBack)
+void userRegistrationAsync(
+        final String key,
+        final String uid,
+        final String user,
+        final String password,
+        final String name,
+        final String email,
+        final int phone,
+        final int countrycode,
+        final String address,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiAURR> callBack)
 ```
 
 #### Parameters
@@ -2727,53 +2414,30 @@ void getHttpsApiRestShApiAURAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiAURInput collect = new GetHttpsApiRestShApiAURInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String user = "user";
-collect.setUser(user);
-
 String password = "password";
-collect.setPassword(password);
-
 String name = "name";
-collect.setName(name);
-
 String email = "email";
-collect.setEmail(email);
-
-int phone = 107;
-collect.setPhone(phone);
-
-int countrycode = 107;
-collect.setCountrycode(countrycode);
-
+int phone = 31;
+int countrycode = 31;
 String address = "address";
-collect.setAddress(address);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-loginAndRegistration.getHttpsApiRestShApiAURAsync(collect, new APICallBack<HttpsApiRestShApiAURRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiAURRModel response) {
+loginAndRegistration.userRegistrationAsync(key, uid, user, password, name, email, phone, countrycode, address, contentType, new APICallBack<HttpsApiRestShApiAURR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiAURR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_aur_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistrationController.createHttpsApiRestShApiAURAsync") createHttpsApiRestShApiAURAsync
+### <a name="user_registration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userRegistrationAsync") userRegistrationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2781,9 +2445,10 @@ loginAndRegistration.getHttpsApiRestShApiAURAsync(collect, new APICallBack<Https
 
 
 ```java
-void createHttpsApiRestShApiAURAsync(
-        final CreateHttpsApiRestShApiAURInput input,
-        final APICallBack<HttpsApiRestShApiAURRModel> callBack)
+void userRegistrationAsync(
+        final HttpsApiRestShApiAUR body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiAURR> callBack)
 ```
 
 #### Parameters
@@ -2798,24 +2463,17 @@ void createHttpsApiRestShApiAURAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiAURInput collect = new CreateHttpsApiRestShApiAURInput();
-
-    HttpsApiRestShApiAURModel body = new HttpsApiRestShApiAURModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiAUR body = new HttpsApiRestShApiAUR();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    loginAndRegistration.createHttpsApiRestShApiAURAsync(collect, new APICallBack<HttpsApiRestShApiAURRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiAURRModel response) {
+    loginAndRegistration.userRegistrationAsync(body, contentType, new APICallBack<HttpsApiRestShApiAURR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiAURR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
@@ -2823,7 +2481,7 @@ collect.setContentType(contentType);
 ```
 
 
-### <a name="get_https_api_rest_sh_api_aul_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistrationController.getHttpsApiRestShApiAULAsync") getHttpsApiRestShApiAULAsync
+### <a name="user_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userAuthenticationAsync") userAuthenticationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2831,9 +2489,13 @@ collect.setContentType(contentType);
 
 
 ```java
-void getHttpsApiRestShApiAULAsync(
-        final GetHttpsApiRestShApiAULInput input,
-        final APICallBack<HttpsApiRestShApiAULRModel> callBack)
+void userAuthenticationAsync(
+        final String key,
+        final String uid,
+        final String user,
+        final String password,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiAULR> callBack)
 ```
 
 #### Parameters
@@ -2850,38 +2512,25 @@ void getHttpsApiRestShApiAULAsync(
 #### Example Usage
 
 ```java
-GetHttpsApiRestShApiAULInput collect = new GetHttpsApiRestShApiAULInput();
-
 String key = "key";
-collect.setKey(key);
-
 String uid = "uid";
-collect.setUid(uid);
-
 String user = "user";
-collect.setUser(user);
-
 String password = "password";
-collect.setPassword(password);
-
 String contentType = "Content-Type";
-collect.setContentType(contentType);
-
 // Invoking the API call with sample inputs
-loginAndRegistration.getHttpsApiRestShApiAULAsync(collect, new APICallBack<HttpsApiRestShApiAULRModel>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiAULRModel response) {
+loginAndRegistration.userAuthenticationAsync(key, uid, user, password, contentType, new APICallBack<HttpsApiRestShApiAULR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiAULR response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-}
-);
+});
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_aul_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistrationController.createHttpsApiRestShApiAULAsync") createHttpsApiRestShApiAULAsync
+### <a name="user_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userAuthenticationAsync") userAuthenticationAsync
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2889,9 +2538,10 @@ loginAndRegistration.getHttpsApiRestShApiAULAsync(collect, new APICallBack<Https
 
 
 ```java
-void createHttpsApiRestShApiAULAsync(
-        final CreateHttpsApiRestShApiAULInput input,
-        final APICallBack<HttpsApiRestShApiAULRModel> callBack)
+void userAuthenticationAsync(
+        final HttpsApiRestShApiAUL body,
+        final String contentType,
+        final APICallBack<HttpsApiRestShApiAULR> callBack)
 ```
 
 #### Parameters
@@ -2906,24 +2556,17 @@ void createHttpsApiRestShApiAULAsync(
 
 ```java
 try {
-CreateHttpsApiRestShApiAULInput collect = new CreateHttpsApiRestShApiAULInput();
-
-    HttpsApiRestShApiAULModel body = new HttpsApiRestShApiAULModel();
-collect.setBody(body);
-
+    HttpsApiRestShApiAUL body = new HttpsApiRestShApiAUL();
     String contentType = "Content-Type";
-collect.setContentType(contentType);
-
     // Invoking the API call with sample inputs
-    loginAndRegistration.createHttpsApiRestShApiAULAsync(collect, new APICallBack<HttpsApiRestShApiAULRModel>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiAULRModel response) {
+    loginAndRegistration.userAuthenticationAsync(body, contentType, new APICallBack<HttpsApiRestShApiAULR>() {
+        public void onSuccess(HttpContext context, HttpsApiRestShApiAULR response) {
             // TODO success callback handler
         }
         public void onFailure(HttpContext context, Throwable error) {
             // TODO failure callback handler
         }
-    }
-);
+    });
 } catch(JsonProcessingException e) {
     // TODO Auto-generated catch block
     e.printStackTrace();
