@@ -235,7 +235,7 @@ The singleton instance of the ``` AdvancedLoggingController ``` class can be acc
 IAdvancedLoggingController advancedLogging = client.AdvancedLogging;
 ```
 
-### <a name="get_https_api_rest_sh_api_security_logging_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLoggingController.GetHttpsApiRestShApiSecurityLoggingInfo") GetHttpsApiRestShApiSecurityLoggingInfo
+### <a name="get_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLoggingController.GetHttpsApiRestShApiSLI") GetHttpsApiRestShApiSLI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -243,7 +243,7 @@ IAdvancedLoggingController advancedLogging = client.AdvancedLogging;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityLoggingInfoResponseModel> GetHttpsApiRestShApiSecurityLoggingInfo(Models.GetHttpsApiRestShApiSecurityLoggingInfoInput input)
+Task<Models.HttpsApiRestShApiSLIRModel> GetHttpsApiRestShApiSLI(Models.GetHttpsApiRestShApiSLIInput input)
 ```
 
 #### Parameters
@@ -261,7 +261,7 @@ Task<Models.HttpsApiRestShApiSecurityLoggingInfoResponseModel> GetHttpsApiRestSh
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiSecurityLoggingInfoInput collect = new GetHttpsApiRestShApiSecurityLoggingInfoInput();
+GetHttpsApiRestShApiSLIInput collect = new GetHttpsApiRestShApiSLIInput();
 
 string key = "key";
 collect.Key = key;
@@ -282,12 +282,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityLoggingInfoResponseModel result = await advancedLogging.GetHttpsApiRestShApiSecurityLoggingInfo(collect);
+Models.HttpsApiRestShApiSLIRModel result = await advancedLogging.GetHttpsApiRestShApiSLI(collect);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_security_logging"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLoggingController.GetHttpsApiRestShApiSecurityLogging") GetHttpsApiRestShApiSecurityLogging
+### <a name="get_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLoggingController.GetHttpsApiRestShApiSL") GetHttpsApiRestShApiSL
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -295,7 +295,7 @@ Models.HttpsApiRestShApiSecurityLoggingInfoResponseModel result = await advanced
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityLoggingResponseModel> GetHttpsApiRestShApiSecurityLogging(Models.GetHttpsApiRestShApiSecurityLoggingInput input)
+Task<Models.HttpsApiRestShApiSLRModel> GetHttpsApiRestShApiSL(Models.GetHttpsApiRestShApiSLInput input)
 ```
 
 #### Parameters
@@ -313,7 +313,7 @@ Task<Models.HttpsApiRestShApiSecurityLoggingResponseModel> GetHttpsApiRestShApiS
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiSecurityLoggingInput collect = new GetHttpsApiRestShApiSecurityLoggingInput();
+GetHttpsApiRestShApiSLInput collect = new GetHttpsApiRestShApiSLInput();
 
 string key = "key";
 collect.Key = key;
@@ -334,12 +334,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityLoggingResponseModel result = await advancedLogging.GetHttpsApiRestShApiSecurityLogging(collect);
+Models.HttpsApiRestShApiSLRModel result = await advancedLogging.GetHttpsApiRestShApiSL(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_logging_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLoggingController.CreateHttpsApiRestShApiSecurityLoggingInfo") CreateHttpsApiRestShApiSecurityLoggingInfo
+### <a name="create_https_api_rest_sh_api_sli"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLoggingController.CreateHttpsApiRestShApiSLI") CreateHttpsApiRestShApiSLI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -347,7 +347,7 @@ Models.HttpsApiRestShApiSecurityLoggingResponseModel result = await advancedLogg
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityLoggingInfoResponseModel> CreateHttpsApiRestShApiSecurityLoggingInfo(Models.CreateHttpsApiRestShApiSecurityLoggingInfoInput input)
+Task<Models.HttpsApiRestShApiSLIRModel> CreateHttpsApiRestShApiSLI(Models.CreateHttpsApiRestShApiSLIInput input)
 ```
 
 #### Parameters
@@ -361,21 +361,21 @@ Task<Models.HttpsApiRestShApiSecurityLoggingInfoResponseModel> CreateHttpsApiRes
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiSecurityLoggingInfoInput collect = new CreateHttpsApiRestShApiSecurityLoggingInfoInput();
+CreateHttpsApiRestShApiSLIInput collect = new CreateHttpsApiRestShApiSLIInput();
 
-var body = new Models.HttpsApiRestShApiSecurityLoggingInfoRequestModel();
+var body = new Models.HttpsApiRestShApiSLIModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityLoggingInfoResponseModel result = await advancedLogging.CreateHttpsApiRestShApiSecurityLoggingInfo(collect);
+Models.HttpsApiRestShApiSLIRModel result = await advancedLogging.CreateHttpsApiRestShApiSLI(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_logging"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLoggingController.CreateHttpsApiRestShApiSecurityLogging") CreateHttpsApiRestShApiSecurityLogging
+### <a name="create_https_api_rest_sh_api_sl"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLoggingController.CreateHttpsApiRestShApiSL") CreateHttpsApiRestShApiSL
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -383,7 +383,7 @@ Models.HttpsApiRestShApiSecurityLoggingInfoResponseModel result = await advanced
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityLoggingResponseModel> CreateHttpsApiRestShApiSecurityLogging(Models.CreateHttpsApiRestShApiSecurityLoggingInput input)
+Task<Models.HttpsApiRestShApiSLRModel> CreateHttpsApiRestShApiSL(Models.CreateHttpsApiRestShApiSLInput input)
 ```
 
 #### Parameters
@@ -397,16 +397,16 @@ Task<Models.HttpsApiRestShApiSecurityLoggingResponseModel> CreateHttpsApiRestShA
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiSecurityLoggingInput collect = new CreateHttpsApiRestShApiSecurityLoggingInput();
+CreateHttpsApiRestShApiSLInput collect = new CreateHttpsApiRestShApiSLInput();
 
-var body = new Models.HttpsApiRestShApiSecurityLoggingRequestModel();
+var body = new Models.HttpsApiRestShApiSLModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityLoggingResponseModel result = await advancedLogging.CreateHttpsApiRestShApiSecurityLogging(collect);
+Models.HttpsApiRestShApiSLRModel result = await advancedLogging.CreateHttpsApiRestShApiSL(collect);
 
 ```
 
@@ -423,7 +423,7 @@ The singleton instance of the ``` WAFDDOSProtectionController ``` class can be a
 IWAFDDOSProtectionController wAFDDOSProtection = client.WAFDDOSProtection;
 ```
 
-### <a name="get_https_api_rest_sh_api_security_waf_configure"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtectionController.GetHttpsApiRestShApiSecurityWafConfigure") GetHttpsApiRestShApiSecurityWafConfigure
+### <a name="get_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtectionController.GetHttpsApiRestShApiSWC") GetHttpsApiRestShApiSWC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -431,7 +431,7 @@ IWAFDDOSProtectionController wAFDDOSProtection = client.WAFDDOSProtection;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityWafConfigureResponseModel> GetHttpsApiRestShApiSecurityWafConfigure(Models.GetHttpsApiRestShApiSecurityWafConfigureInput input)
+Task<Models.HttpsApiRestShApiSWCRModel> GetHttpsApiRestShApiSWC(Models.GetHttpsApiRestShApiSWCInput input)
 ```
 
 #### Parameters
@@ -449,7 +449,7 @@ Task<Models.HttpsApiRestShApiSecurityWafConfigureResponseModel> GetHttpsApiRestS
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiSecurityWafConfigureInput collect = new GetHttpsApiRestShApiSecurityWafConfigureInput();
+GetHttpsApiRestShApiSWCInput collect = new GetHttpsApiRestShApiSWCInput();
 
 string key = "API";
 collect.Key = key;
@@ -470,12 +470,12 @@ string contentType = "application/json";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityWafConfigureResponseModel result = await wAFDDOSProtection.GetHttpsApiRestShApiSecurityWafConfigure(collect);
+Models.HttpsApiRestShApiSWCRModel result = await wAFDDOSProtection.GetHttpsApiRestShApiSWC(collect);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_security_waf"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtectionController.GetHttpsApiRestShApiSecurityWaf") GetHttpsApiRestShApiSecurityWaf
+### <a name="get_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtectionController.GetHttpsApiRestShApiSW") GetHttpsApiRestShApiSW
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -483,7 +483,7 @@ Models.HttpsApiRestShApiSecurityWafConfigureResponseModel result = await wAFDDOS
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityWafResponseModel> GetHttpsApiRestShApiSecurityWaf(Models.GetHttpsApiRestShApiSecurityWafInput input)
+Task<Models.HttpsApiRestShApiSWRModel> GetHttpsApiRestShApiSW(Models.GetHttpsApiRestShApiSWInput input)
 ```
 
 #### Parameters
@@ -500,7 +500,7 @@ Task<Models.HttpsApiRestShApiSecurityWafResponseModel> GetHttpsApiRestShApiSecur
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiSecurityWafInput collect = new GetHttpsApiRestShApiSecurityWafInput();
+GetHttpsApiRestShApiSWInput collect = new GetHttpsApiRestShApiSWInput();
 
 string key = "API";
 collect.Key = key;
@@ -518,12 +518,12 @@ string contentType = "application/json";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityWafResponseModel result = await wAFDDOSProtection.GetHttpsApiRestShApiSecurityWaf(collect);
+Models.HttpsApiRestShApiSWRModel result = await wAFDDOSProtection.GetHttpsApiRestShApiSW(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_waf_configure"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtectionController.CreateHttpsApiRestShApiSecurityWafConfigure") CreateHttpsApiRestShApiSecurityWafConfigure
+### <a name="create_https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtectionController.CreateHttpsApiRestShApiSWC") CreateHttpsApiRestShApiSWC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -531,7 +531,7 @@ Models.HttpsApiRestShApiSecurityWafResponseModel result = await wAFDDOSProtectio
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityWafConfigureResponseModel> CreateHttpsApiRestShApiSecurityWafConfigure(Models.CreateHttpsApiRestShApiSecurityWafConfigureInput input)
+Task<Models.HttpsApiRestShApiSWCRModel> CreateHttpsApiRestShApiSWC(Models.CreateHttpsApiRestShApiSWCInput input)
 ```
 
 #### Parameters
@@ -545,22 +545,22 @@ Task<Models.HttpsApiRestShApiSecurityWafConfigureResponseModel> CreateHttpsApiRe
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiSecurityWafConfigureInput collect = new CreateHttpsApiRestShApiSecurityWafConfigureInput();
+CreateHttpsApiRestShApiSWCInput collect = new CreateHttpsApiRestShApiSWCInput();
 
 string bodyValue = "{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}";
-var body = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.HttpsApiRestShApiSecurityWafConfigureRequestModel>(bodyValue);
+var body = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.HttpsApiRestShApiSWCModel>(bodyValue);
 collect.Body = body;
 
 string contentType = "application/json";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityWafConfigureResponseModel result = await wAFDDOSProtection.CreateHttpsApiRestShApiSecurityWafConfigure(collect);
+Models.HttpsApiRestShApiSWCRModel result = await wAFDDOSProtection.CreateHttpsApiRestShApiSWC(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_waf"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtectionController.CreateHttpsApiRestShApiSecurityWaf") CreateHttpsApiRestShApiSecurityWaf
+### <a name="create_https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtectionController.CreateHttpsApiRestShApiSW") CreateHttpsApiRestShApiSW
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -568,7 +568,7 @@ Models.HttpsApiRestShApiSecurityWafConfigureResponseModel result = await wAFDDOS
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityWafResponseModel> CreateHttpsApiRestShApiSecurityWaf(Models.CreateHttpsApiRestShApiSecurityWafInput input)
+Task<Models.HttpsApiRestShApiSWRModel> CreateHttpsApiRestShApiSW(Models.CreateHttpsApiRestShApiSWInput input)
 ```
 
 #### Parameters
@@ -582,17 +582,17 @@ Task<Models.HttpsApiRestShApiSecurityWafResponseModel> CreateHttpsApiRestShApiSe
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiSecurityWafInput collect = new CreateHttpsApiRestShApiSecurityWafInput();
+CreateHttpsApiRestShApiSWInput collect = new CreateHttpsApiRestShApiSWInput();
 
 string bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}";
-var body = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.HttpsApiRestShApiSecurityWafRequestModel>(bodyValue);
+var body = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.HttpsApiRestShApiSWModel>(bodyValue);
 collect.Body = body;
 
 string contentType = "application/json";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityWafResponseModel result = await wAFDDOSProtection.CreateHttpsApiRestShApiSecurityWaf(collect);
+Models.HttpsApiRestShApiSWRModel result = await wAFDDOSProtection.CreateHttpsApiRestShApiSW(collect);
 
 ```
 
@@ -609,7 +609,7 @@ The singleton instance of the ``` EncryptionController ``` class can be accessed
 IEncryptionController encryption = client.Encryption;
 ```
 
-### <a name="get_https_api_rest_sh_api_security_encryption"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.EncryptionController.GetHttpsApiRestShApiSecurityEncryption") GetHttpsApiRestShApiSecurityEncryption
+### <a name="get_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.EncryptionController.GetHttpsApiRestShApiSE") GetHttpsApiRestShApiSE
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -617,7 +617,7 @@ IEncryptionController encryption = client.Encryption;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityEncryptionResponseModel> GetHttpsApiRestShApiSecurityEncryption(Models.GetHttpsApiRestShApiSecurityEncryptionInput input)
+Task<Models.HttpsApiRestShApiSERModel> GetHttpsApiRestShApiSE(Models.GetHttpsApiRestShApiSEInput input)
 ```
 
 #### Parameters
@@ -635,7 +635,7 @@ Task<Models.HttpsApiRestShApiSecurityEncryptionResponseModel> GetHttpsApiRestShA
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiSecurityEncryptionInput collect = new GetHttpsApiRestShApiSecurityEncryptionInput();
+GetHttpsApiRestShApiSEInput collect = new GetHttpsApiRestShApiSEInput();
 
 string key = "key";
 collect.Key = key;
@@ -649,19 +649,19 @@ collect.Data = data;
 string method = "method";
 collect.Method = method;
 
-int bit = 65;
+int bit = 112;
 collect.Bit = bit;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityEncryptionResponseModel result = await encryption.GetHttpsApiRestShApiSecurityEncryption(collect);
+Models.HttpsApiRestShApiSERModel result = await encryption.GetHttpsApiRestShApiSE(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_encryption"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.EncryptionController.CreateHttpsApiRestShApiSecurityEncryption") CreateHttpsApiRestShApiSecurityEncryption
+### <a name="create_https_api_rest_sh_api_se"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.EncryptionController.CreateHttpsApiRestShApiSE") CreateHttpsApiRestShApiSE
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -669,7 +669,7 @@ Models.HttpsApiRestShApiSecurityEncryptionResponseModel result = await encryptio
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSecurityEncryptionResponseModel> CreateHttpsApiRestShApiSecurityEncryption(Models.CreateHttpsApiRestShApiSecurityEncryptionInput input)
+Task<Models.HttpsApiRestShApiSERModel> CreateHttpsApiRestShApiSE(Models.CreateHttpsApiRestShApiSEInput input)
 ```
 
 #### Parameters
@@ -683,16 +683,16 @@ Task<Models.HttpsApiRestShApiSecurityEncryptionResponseModel> CreateHttpsApiRest
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiSecurityEncryptionInput collect = new CreateHttpsApiRestShApiSecurityEncryptionInput();
+CreateHttpsApiRestShApiSEInput collect = new CreateHttpsApiRestShApiSEInput();
 
-var body = new Models.HttpsApiRestShApiSecurityEncryptionRequestModel();
+var body = new Models.HttpsApiRestShApiSEModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiSecurityEncryptionResponseModel result = await encryption.CreateHttpsApiRestShApiSecurityEncryption(collect);
+Models.HttpsApiRestShApiSERModel result = await encryption.CreateHttpsApiRestShApiSE(collect);
 
 ```
 
@@ -709,7 +709,7 @@ The singleton instance of the ``` CDNController ``` class can be accessed from t
 ICDNController cDN = client.CDN;
 ```
 
-### <a name="get_https_api_rest_sh_api_service_cdn_push"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDNController.GetHttpsApiRestShApiServiceCdnPush") GetHttpsApiRestShApiServiceCdnPush
+### <a name="get_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDNController.GetHttpsApiRestShApiSCPush") GetHttpsApiRestShApiSCPush
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -717,7 +717,7 @@ ICDNController cDN = client.CDN;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceCdnPushResponseModel> GetHttpsApiRestShApiServiceCdnPush(Models.GetHttpsApiRestShApiServiceCdnPushInput input)
+Task<Models.HttpsApiRestShApiSCPushRModel> GetHttpsApiRestShApiSCPush(Models.GetHttpsApiRestShApiSCPushInput input)
 ```
 
 #### Parameters
@@ -734,7 +734,7 @@ Task<Models.HttpsApiRestShApiServiceCdnPushResponseModel> GetHttpsApiRestShApiSe
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiServiceCdnPushInput collect = new GetHttpsApiRestShApiServiceCdnPushInput();
+GetHttpsApiRestShApiSCPushInput collect = new GetHttpsApiRestShApiSCPushInput();
 
 string key = "key";
 collect.Key = key;
@@ -752,12 +752,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceCdnPushResponseModel result = await cDN.GetHttpsApiRestShApiServiceCdnPush(collect);
+Models.HttpsApiRestShApiSCPushRModel result = await cDN.GetHttpsApiRestShApiSCPush(collect);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_service_cdn_pull"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDNController.GetHttpsApiRestShApiServiceCdnPull") GetHttpsApiRestShApiServiceCdnPull
+### <a name="get_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDNController.GetHttpsApiRestShApiSCPull") GetHttpsApiRestShApiSCPull
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -765,7 +765,7 @@ Models.HttpsApiRestShApiServiceCdnPushResponseModel result = await cDN.GetHttpsA
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceCdnPullResponseModel> GetHttpsApiRestShApiServiceCdnPull(Models.GetHttpsApiRestShApiServiceCdnPullInput input)
+Task<Models.HttpsApiRestShApiSCPullRModel> GetHttpsApiRestShApiSCPull(Models.GetHttpsApiRestShApiSCPullInput input)
 ```
 
 #### Parameters
@@ -782,7 +782,7 @@ Task<Models.HttpsApiRestShApiServiceCdnPullResponseModel> GetHttpsApiRestShApiSe
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiServiceCdnPullInput collect = new GetHttpsApiRestShApiServiceCdnPullInput();
+GetHttpsApiRestShApiSCPullInput collect = new GetHttpsApiRestShApiSCPullInput();
 
 string key = "key";
 collect.Key = key;
@@ -800,12 +800,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceCdnPullResponseModel result = await cDN.GetHttpsApiRestShApiServiceCdnPull(collect);
+Models.HttpsApiRestShApiSCPullRModel result = await cDN.GetHttpsApiRestShApiSCPull(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_cdn_push"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDNController.CreateHttpsApiRestShApiServiceCdnPush") CreateHttpsApiRestShApiServiceCdnPush
+### <a name="create_https_api_rest_sh_api_sc_push"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDNController.CreateHttpsApiRestShApiSCPush") CreateHttpsApiRestShApiSCPush
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -813,7 +813,7 @@ Models.HttpsApiRestShApiServiceCdnPullResponseModel result = await cDN.GetHttpsA
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceCdnPushResponseModel> CreateHttpsApiRestShApiServiceCdnPush(Models.CreateHttpsApiRestShApiServiceCdnPushInput input)
+Task<Models.HttpsApiRestShApiSCPushRModel> CreateHttpsApiRestShApiSCPush(Models.CreateHttpsApiRestShApiSCPushInput input)
 ```
 
 #### Parameters
@@ -827,21 +827,21 @@ Task<Models.HttpsApiRestShApiServiceCdnPushResponseModel> CreateHttpsApiRestShAp
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiServiceCdnPushInput collect = new CreateHttpsApiRestShApiServiceCdnPushInput();
+CreateHttpsApiRestShApiSCPushInput collect = new CreateHttpsApiRestShApiSCPushInput();
 
-var body = new Models.HttpsApiRestShApiServiceCdnPushRequestModel();
+var body = new Models.HttpsApiRestShApiSCPushModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceCdnPushResponseModel result = await cDN.CreateHttpsApiRestShApiServiceCdnPush(collect);
+Models.HttpsApiRestShApiSCPushRModel result = await cDN.CreateHttpsApiRestShApiSCPush(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_cdn_pull"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDNController.CreateHttpsApiRestShApiServiceCdnPull") CreateHttpsApiRestShApiServiceCdnPull
+### <a name="create_https_api_rest_sh_api_sc_pull"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDNController.CreateHttpsApiRestShApiSCPull") CreateHttpsApiRestShApiSCPull
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -849,7 +849,7 @@ Models.HttpsApiRestShApiServiceCdnPushResponseModel result = await cDN.CreateHtt
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceCdnPullResponseModel> CreateHttpsApiRestShApiServiceCdnPull(Models.CreateHttpsApiRestShApiServiceCdnPullInput input)
+Task<Models.HttpsApiRestShApiSCPullRModel> CreateHttpsApiRestShApiSCPull(Models.CreateHttpsApiRestShApiSCPullInput input)
 ```
 
 #### Parameters
@@ -863,16 +863,16 @@ Task<Models.HttpsApiRestShApiServiceCdnPullResponseModel> CreateHttpsApiRestShAp
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiServiceCdnPullInput collect = new CreateHttpsApiRestShApiServiceCdnPullInput();
+CreateHttpsApiRestShApiSCPullInput collect = new CreateHttpsApiRestShApiSCPullInput();
 
-var body = new Models.HttpsApiRestShApiServiceCdnPullRequestModel();
+var body = new Models.HttpsApiRestShApiSCPullModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceCdnPullResponseModel result = await cDN.CreateHttpsApiRestShApiServiceCdnPull(collect);
+Models.HttpsApiRestShApiSCPullRModel result = await cDN.CreateHttpsApiRestShApiSCPull(collect);
 
 ```
 
@@ -889,7 +889,7 @@ The singleton instance of the ``` DNSController ``` class can be accessed from t
 IDNSController dNS = client.DNS;
 ```
 
-### <a name="get_https_api_rest_sh_api_service_dns_configure"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNSController.GetHttpsApiRestShApiServiceDnsConfigure") GetHttpsApiRestShApiServiceDnsConfigure
+### <a name="get_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNSController.GetHttpsApiRestShApiSDC") GetHttpsApiRestShApiSDC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -897,7 +897,7 @@ IDNSController dNS = client.DNS;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceDnsConfigureResponseModel> GetHttpsApiRestShApiServiceDnsConfigure(Models.GetHttpsApiRestShApiServiceDnsConfigureInput input)
+Task<Models.HttpsApiRestShApiSDCRModel> GetHttpsApiRestShApiSDC(Models.GetHttpsApiRestShApiSDCInput input)
 ```
 
 #### Parameters
@@ -914,7 +914,7 @@ Task<Models.HttpsApiRestShApiServiceDnsConfigureResponseModel> GetHttpsApiRestSh
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiServiceDnsConfigureInput collect = new GetHttpsApiRestShApiServiceDnsConfigureInput();
+GetHttpsApiRestShApiSDCInput collect = new GetHttpsApiRestShApiSDCInput();
 
 string key = "key";
 collect.Key = key;
@@ -932,12 +932,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceDnsConfigureResponseModel result = await dNS.GetHttpsApiRestShApiServiceDnsConfigure(collect);
+Models.HttpsApiRestShApiSDCRModel result = await dNS.GetHttpsApiRestShApiSDC(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_dns_configure"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNSController.CreateHttpsApiRestShApiServiceDnsConfigure") CreateHttpsApiRestShApiServiceDnsConfigure
+### <a name="create_https_api_rest_sh_api_sdc"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNSController.CreateHttpsApiRestShApiSDC") CreateHttpsApiRestShApiSDC
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -945,7 +945,7 @@ Models.HttpsApiRestShApiServiceDnsConfigureResponseModel result = await dNS.GetH
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceDnsConfigureResponseModel> CreateHttpsApiRestShApiServiceDnsConfigure(Models.CreateHttpsApiRestShApiServiceDnsConfigureInput input)
+Task<Models.HttpsApiRestShApiSDCRModel> CreateHttpsApiRestShApiSDC(Models.CreateHttpsApiRestShApiSDCInput input)
 ```
 
 #### Parameters
@@ -959,21 +959,21 @@ Task<Models.HttpsApiRestShApiServiceDnsConfigureResponseModel> CreateHttpsApiRes
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiServiceDnsConfigureInput collect = new CreateHttpsApiRestShApiServiceDnsConfigureInput();
+CreateHttpsApiRestShApiSDCInput collect = new CreateHttpsApiRestShApiSDCInput();
 
-var body = new Models.HttpsApiRestShApiServiceDnsConfigureRequestModel();
+var body = new Models.HttpsApiRestShApiSDCModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceDnsConfigureResponseModel result = await dNS.CreateHttpsApiRestShApiServiceDnsConfigure(collect);
+Models.HttpsApiRestShApiSDCRModel result = await dNS.CreateHttpsApiRestShApiSDC(collect);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_service_dns_add"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNSController.GetHttpsApiRestShApiServiceDnsAdd") GetHttpsApiRestShApiServiceDnsAdd
+### <a name="get_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNSController.GetHttpsApiRestShApiSDA") GetHttpsApiRestShApiSDA
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -981,7 +981,7 @@ Models.HttpsApiRestShApiServiceDnsConfigureResponseModel result = await dNS.Crea
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceDnsAddResponseModel> GetHttpsApiRestShApiServiceDnsAdd(Models.GetHttpsApiRestShApiServiceDnsAddInput input)
+Task<Models.HttpsApiRestShApiSDARModel> GetHttpsApiRestShApiSDA(Models.GetHttpsApiRestShApiSDAInput input)
 ```
 
 #### Parameters
@@ -997,7 +997,7 @@ Task<Models.HttpsApiRestShApiServiceDnsAddResponseModel> GetHttpsApiRestShApiSer
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiServiceDnsAddInput collect = new GetHttpsApiRestShApiServiceDnsAddInput();
+GetHttpsApiRestShApiSDAInput collect = new GetHttpsApiRestShApiSDAInput();
 
 string key = "key";
 collect.Key = key;
@@ -1012,12 +1012,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceDnsAddResponseModel result = await dNS.GetHttpsApiRestShApiServiceDnsAdd(collect);
+Models.HttpsApiRestShApiSDARModel result = await dNS.GetHttpsApiRestShApiSDA(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_dns_add"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNSController.CreateHttpsApiRestShApiServiceDnsAdd") CreateHttpsApiRestShApiServiceDnsAdd
+### <a name="create_https_api_rest_sh_api_sda"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNSController.CreateHttpsApiRestShApiSDA") CreateHttpsApiRestShApiSDA
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1025,7 +1025,7 @@ Models.HttpsApiRestShApiServiceDnsAddResponseModel result = await dNS.GetHttpsAp
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceDnsAddResponseModel> CreateHttpsApiRestShApiServiceDnsAdd(Models.CreateHttpsApiRestShApiServiceDnsAddInput input)
+Task<Models.HttpsApiRestShApiSDARModel> CreateHttpsApiRestShApiSDA(Models.CreateHttpsApiRestShApiSDAInput input)
 ```
 
 #### Parameters
@@ -1039,16 +1039,16 @@ Task<Models.HttpsApiRestShApiServiceDnsAddResponseModel> CreateHttpsApiRestShApi
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiServiceDnsAddInput collect = new CreateHttpsApiRestShApiServiceDnsAddInput();
+CreateHttpsApiRestShApiSDAInput collect = new CreateHttpsApiRestShApiSDAInput();
 
-var body = new Models.HttpsApiRestShApiServiceDnsAddRequestModel();
+var body = new Models.HttpsApiRestShApiSDAModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceDnsAddResponseModel result = await dNS.CreateHttpsApiRestShApiServiceDnsAdd(collect);
+Models.HttpsApiRestShApiSDARModel result = await dNS.CreateHttpsApiRestShApiSDA(collect);
 
 ```
 
@@ -1065,7 +1065,7 @@ The singleton instance of the ``` CodeObfuscationController ``` class can be acc
 ICodeObfuscationController codeObfuscation = client.CodeObfuscation;
 ```
 
-### <a name="get_https_api_rest_sh_api_service_obfuscation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CodeObfuscationController.GetHttpsApiRestShApiServiceObfuscation") GetHttpsApiRestShApiServiceObfuscation
+### <a name="get_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CodeObfuscationController.GetHttpsApiRestShApiSO") GetHttpsApiRestShApiSO
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1073,7 +1073,7 @@ ICodeObfuscationController codeObfuscation = client.CodeObfuscation;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceObfuscationResponseModel> GetHttpsApiRestShApiServiceObfuscation(Models.GetHttpsApiRestShApiServiceObfuscationInput input)
+Task<Models.HttpsApiRestShApiSORModel> GetHttpsApiRestShApiSO(Models.GetHttpsApiRestShApiSOInput input)
 ```
 
 #### Parameters
@@ -1089,7 +1089,7 @@ Task<Models.HttpsApiRestShApiServiceObfuscationResponseModel> GetHttpsApiRestShA
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiServiceObfuscationInput collect = new GetHttpsApiRestShApiServiceObfuscationInput();
+GetHttpsApiRestShApiSOInput collect = new GetHttpsApiRestShApiSOInput();
 
 string key = "key";
 collect.Key = key;
@@ -1104,12 +1104,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceObfuscationResponseModel result = await codeObfuscation.GetHttpsApiRestShApiServiceObfuscation(collect);
+Models.HttpsApiRestShApiSORModel result = await codeObfuscation.GetHttpsApiRestShApiSO(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_obfuscation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CodeObfuscationController.CreateHttpsApiRestShApiServiceObfuscation") CreateHttpsApiRestShApiServiceObfuscation
+### <a name="create_https_api_rest_sh_api_so"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CodeObfuscationController.CreateHttpsApiRestShApiSO") CreateHttpsApiRestShApiSO
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1117,7 +1117,7 @@ Models.HttpsApiRestShApiServiceObfuscationResponseModel result = await codeObfus
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceObfuscationResponseModel> CreateHttpsApiRestShApiServiceObfuscation(Models.CreateHttpsApiRestShApiServiceObfuscationInput input)
+Task<Models.HttpsApiRestShApiSORModel> CreateHttpsApiRestShApiSO(Models.CreateHttpsApiRestShApiSOInput input)
 ```
 
 #### Parameters
@@ -1131,16 +1131,16 @@ Task<Models.HttpsApiRestShApiServiceObfuscationResponseModel> CreateHttpsApiRest
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiServiceObfuscationInput collect = new CreateHttpsApiRestShApiServiceObfuscationInput();
+CreateHttpsApiRestShApiSOInput collect = new CreateHttpsApiRestShApiSOInput();
 
-var body = new Models.HttpsApiRestShApiServiceObfuscationRequestModel();
+var body = new Models.HttpsApiRestShApiSOModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceObfuscationResponseModel result = await codeObfuscation.CreateHttpsApiRestShApiServiceObfuscation(collect);
+Models.HttpsApiRestShApiSORModel result = await codeObfuscation.CreateHttpsApiRestShApiSO(collect);
 
 ```
 
@@ -1157,7 +1157,7 @@ The singleton instance of the ``` HostingController ``` class can be accessed fr
 IHostingController hosting = client.Hosting;
 ```
 
-### <a name="get_https_api_rest_sh_api_service_hosting"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.HostingController.GetHttpsApiRestShApiServiceHosting") GetHttpsApiRestShApiServiceHosting
+### <a name="get_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.HostingController.GetHttpsApiRestShApiSH") GetHttpsApiRestShApiSH
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1165,7 +1165,7 @@ IHostingController hosting = client.Hosting;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceHostingResponseModel> GetHttpsApiRestShApiServiceHosting(Models.GetHttpsApiRestShApiServiceHostingInput input)
+Task<Models.HttpsApiRestShApiSHRModel> GetHttpsApiRestShApiSH(Models.GetHttpsApiRestShApiSHInput input)
 ```
 
 #### Parameters
@@ -1182,7 +1182,7 @@ Task<Models.HttpsApiRestShApiServiceHostingResponseModel> GetHttpsApiRestShApiSe
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiServiceHostingInput collect = new GetHttpsApiRestShApiServiceHostingInput();
+GetHttpsApiRestShApiSHInput collect = new GetHttpsApiRestShApiSHInput();
 
 string key = "key";
 collect.Key = key;
@@ -1200,12 +1200,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceHostingResponseModel result = await hosting.GetHttpsApiRestShApiServiceHosting(collect);
+Models.HttpsApiRestShApiSHRModel result = await hosting.GetHttpsApiRestShApiSH(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_hosting"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.HostingController.CreateHttpsApiRestShApiServiceHosting") CreateHttpsApiRestShApiServiceHosting
+### <a name="create_https_api_rest_sh_api_sh"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.HostingController.CreateHttpsApiRestShApiSH") CreateHttpsApiRestShApiSH
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1213,7 +1213,7 @@ Models.HttpsApiRestShApiServiceHostingResponseModel result = await hosting.GetHt
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiServiceHostingResponseModel> CreateHttpsApiRestShApiServiceHosting(Models.CreateHttpsApiRestShApiServiceHostingInput input)
+Task<Models.HttpsApiRestShApiSHRModel> CreateHttpsApiRestShApiSH(Models.CreateHttpsApiRestShApiSHInput input)
 ```
 
 #### Parameters
@@ -1227,16 +1227,16 @@ Task<Models.HttpsApiRestShApiServiceHostingResponseModel> CreateHttpsApiRestShAp
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiServiceHostingInput collect = new CreateHttpsApiRestShApiServiceHostingInput();
+CreateHttpsApiRestShApiSHInput collect = new CreateHttpsApiRestShApiSHInput();
 
-var body = new Models.HttpsApiRestShApiServiceHostingRequestModel();
+var body = new Models.HttpsApiRestShApiSHModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiServiceHostingResponseModel result = await hosting.CreateHttpsApiRestShApiServiceHosting(collect);
+Models.HttpsApiRestShApiSHRModel result = await hosting.CreateHttpsApiRestShApiSH(collect);
 
 ```
 
@@ -1253,7 +1253,7 @@ The singleton instance of the ``` DataManipulationConversionSortingAndCompressio
 IDataManipulationConversionSortingAndCompressionAPIController dataManipulationConversionSortingAndCompressionAPI = client.DataManipulationConversionSortingAndCompressionAPI;
 ```
 
-### <a name="get_https_api_rest_sh_api_data"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DataManipulationConversionSortingAndCompressionAPIController.GetHttpsApiRestShApiData") GetHttpsApiRestShApiData
+### <a name="get_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DataManipulationConversionSortingAndCompressionAPIController.GetHttpsApiRestShApiD") GetHttpsApiRestShApiD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1261,7 +1261,7 @@ IDataManipulationConversionSortingAndCompressionAPIController dataManipulationCo
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiDataResponseModel> GetHttpsApiRestShApiData(Models.GetHttpsApiRestShApiDataInput input)
+Task<Models.HttpsApiRestShApiDRModel> GetHttpsApiRestShApiD(Models.GetHttpsApiRestShApiDInput input)
 ```
 
 #### Parameters
@@ -1279,7 +1279,7 @@ Task<Models.HttpsApiRestShApiDataResponseModel> GetHttpsApiRestShApiData(Models.
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiDataInput collect = new GetHttpsApiRestShApiDataInput();
+GetHttpsApiRestShApiDInput collect = new GetHttpsApiRestShApiDInput();
 
 string key = "API";
 collect.Key = key;
@@ -1300,12 +1300,12 @@ string contentType = "application/json";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiDataResponseModel result = await dataManipulationConversionSortingAndCompressionAPI.GetHttpsApiRestShApiData(collect);
+Models.HttpsApiRestShApiDRModel result = await dataManipulationConversionSortingAndCompressionAPI.GetHttpsApiRestShApiD(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_data"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DataManipulationConversionSortingAndCompressionAPIController.CreateHttpsApiRestShApiData") CreateHttpsApiRestShApiData
+### <a name="create_https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DataManipulationConversionSortingAndCompressionAPIController.CreateHttpsApiRestShApiD") CreateHttpsApiRestShApiD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1313,7 +1313,7 @@ Models.HttpsApiRestShApiDataResponseModel result = await dataManipulationConvers
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiDataResponseModel> CreateHttpsApiRestShApiData(Models.CreateHttpsApiRestShApiDataInput input)
+Task<Models.HttpsApiRestShApiDRModel> CreateHttpsApiRestShApiD(Models.CreateHttpsApiRestShApiDInput input)
 ```
 
 #### Parameters
@@ -1327,17 +1327,17 @@ Task<Models.HttpsApiRestShApiDataResponseModel> CreateHttpsApiRestShApiData(Mode
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiDataInput collect = new CreateHttpsApiRestShApiDataInput();
+CreateHttpsApiRestShApiDInput collect = new CreateHttpsApiRestShApiDInput();
 
 string bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}";
-var body = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.HttpsApiRestShApiDataRequestModel>(bodyValue);
+var body = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.HttpsApiRestShApiDModel>(bodyValue);
 collect.Body = body;
 
 string contentType = "application/json";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiDataResponseModel result = await dataManipulationConversionSortingAndCompressionAPI.CreateHttpsApiRestShApiData(collect);
+Models.HttpsApiRestShApiDRModel result = await dataManipulationConversionSortingAndCompressionAPI.CreateHttpsApiRestShApiD(collect);
 
 ```
 
@@ -1354,7 +1354,7 @@ The singleton instance of the ``` ImageManipulationAndModerationAPIController ``
 IImageManipulationAndModerationAPIController imageManipulationAndModerationAPI = client.ImageManipulationAndModerationAPI;
 ```
 
-### <a name="get_https_api_rest_sh_api_image"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.ImageManipulationAndModerationAPIController.GetHttpsApiRestShApiImage") GetHttpsApiRestShApiImage
+### <a name="get_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.ImageManipulationAndModerationAPIController.GetHttpsApiRestShApiI") GetHttpsApiRestShApiI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1362,7 +1362,7 @@ IImageManipulationAndModerationAPIController imageManipulationAndModerationAPI =
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiImageResponseModel> GetHttpsApiRestShApiImage(Models.GetHttpsApiRestShApiImageInput input)
+Task<Models.HttpsApiRestShApiIRModel> GetHttpsApiRestShApiI(Models.GetHttpsApiRestShApiIInput input)
 ```
 
 #### Parameters
@@ -1379,7 +1379,7 @@ Task<Models.HttpsApiRestShApiImageResponseModel> GetHttpsApiRestShApiImage(Model
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiImageInput collect = new GetHttpsApiRestShApiImageInput();
+GetHttpsApiRestShApiIInput collect = new GetHttpsApiRestShApiIInput();
 
 string key = "key";
 collect.Key = key;
@@ -1397,12 +1397,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiImageResponseModel result = await imageManipulationAndModerationAPI.GetHttpsApiRestShApiImage(collect);
+Models.HttpsApiRestShApiIRModel result = await imageManipulationAndModerationAPI.GetHttpsApiRestShApiI(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_image"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.ImageManipulationAndModerationAPIController.CreateHttpsApiRestShApiImage") CreateHttpsApiRestShApiImage
+### <a name="create_https_api_rest_sh_api_i"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.ImageManipulationAndModerationAPIController.CreateHttpsApiRestShApiI") CreateHttpsApiRestShApiI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1410,7 +1410,7 @@ Models.HttpsApiRestShApiImageResponseModel result = await imageManipulationAndMo
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiImageResponseModel> CreateHttpsApiRestShApiImage(Models.CreateHttpsApiRestShApiImageInput input)
+Task<Models.HttpsApiRestShApiIRModel> CreateHttpsApiRestShApiI(Models.CreateHttpsApiRestShApiIInput input)
 ```
 
 #### Parameters
@@ -1424,16 +1424,16 @@ Task<Models.HttpsApiRestShApiImageResponseModel> CreateHttpsApiRestShApiImage(Mo
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiImageInput collect = new CreateHttpsApiRestShApiImageInput();
+CreateHttpsApiRestShApiIInput collect = new CreateHttpsApiRestShApiIInput();
 
-var body = new Models.HttpsApiRestShApiImageRequestModel();
+var body = new Models.HttpsApiRestShApiIModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiImageResponseModel result = await imageManipulationAndModerationAPI.CreateHttpsApiRestShApiImage(collect);
+Models.HttpsApiRestShApiIRModel result = await imageManipulationAndModerationAPI.CreateHttpsApiRestShApiI(collect);
 
 ```
 
@@ -1450,7 +1450,7 @@ The singleton instance of the ``` VerificationController ``` class can be access
 IVerificationController verification = client.Verification;
 ```
 
-### <a name="get_https_api_rest_sh_api_verify_address"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.GetHttpsApiRestShApiVerifyAddress") GetHttpsApiRestShApiVerifyAddress
+### <a name="get_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.GetHttpsApiRestShApiVA") GetHttpsApiRestShApiVA
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1458,7 +1458,7 @@ IVerificationController verification = client.Verification;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVerifyAddressResponseModel> GetHttpsApiRestShApiVerifyAddress(Models.GetHttpsApiRestShApiVerifyAddressInput input)
+Task<Models.HttpsApiRestShApiVARModel> GetHttpsApiRestShApiVA(Models.GetHttpsApiRestShApiVAInput input)
 ```
 
 #### Parameters
@@ -1479,7 +1479,7 @@ Task<Models.HttpsApiRestShApiVerifyAddressResponseModel> GetHttpsApiRestShApiVer
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiVerifyAddressInput collect = new GetHttpsApiRestShApiVerifyAddressInput();
+GetHttpsApiRestShApiVAInput collect = new GetHttpsApiRestShApiVAInput();
 
 string key = "key";
 collect.Key = key;
@@ -1502,19 +1502,19 @@ collect.C = c;
 string s = "s";
 collect.S = s;
 
-int z = 23;
+int z = 70;
 collect.Z = z;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiVerifyAddressResponseModel result = await verification.GetHttpsApiRestShApiVerifyAddress(collect);
+Models.HttpsApiRestShApiVARModel result = await verification.GetHttpsApiRestShApiVA(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_verify_address"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.CreateHttpsApiRestShApiVerifyAddress") CreateHttpsApiRestShApiVerifyAddress
+### <a name="create_https_api_rest_sh_api_va"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.CreateHttpsApiRestShApiVA") CreateHttpsApiRestShApiVA
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1522,7 +1522,7 @@ Models.HttpsApiRestShApiVerifyAddressResponseModel result = await verification.G
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVerifyAddressResponseModel> CreateHttpsApiRestShApiVerifyAddress(Models.CreateHttpsApiRestShApiVerifyAddressInput input)
+Task<Models.HttpsApiRestShApiVARModel> CreateHttpsApiRestShApiVA(Models.CreateHttpsApiRestShApiVAInput input)
 ```
 
 #### Parameters
@@ -1536,21 +1536,21 @@ Task<Models.HttpsApiRestShApiVerifyAddressResponseModel> CreateHttpsApiRestShApi
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiVerifyAddressInput collect = new CreateHttpsApiRestShApiVerifyAddressInput();
+CreateHttpsApiRestShApiVAInput collect = new CreateHttpsApiRestShApiVAInput();
 
-var body = new Models.HttpsApiRestShApiVerifyAddressRequestModel();
+var body = new Models.HttpsApiRestShApiVAModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiVerifyAddressResponseModel result = await verification.CreateHttpsApiRestShApiVerifyAddress(collect);
+Models.HttpsApiRestShApiVARModel result = await verification.CreateHttpsApiRestShApiVA(collect);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_verify_user"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.GetHttpsApiRestShApiVerifyUser") GetHttpsApiRestShApiVerifyUser
+### <a name="get_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.GetHttpsApiRestShApiVU") GetHttpsApiRestShApiVU
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1558,7 +1558,7 @@ Models.HttpsApiRestShApiVerifyAddressResponseModel result = await verification.C
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVerifyUserResponseModel> GetHttpsApiRestShApiVerifyUser(Models.GetHttpsApiRestShApiVerifyUserInput input)
+Task<Models.HttpsApiRestShApiVURModel> GetHttpsApiRestShApiVU(Models.GetHttpsApiRestShApiVUInput input)
 ```
 
 #### Parameters
@@ -1575,7 +1575,7 @@ Task<Models.HttpsApiRestShApiVerifyUserResponseModel> GetHttpsApiRestShApiVerify
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiVerifyUserInput collect = new GetHttpsApiRestShApiVerifyUserInput();
+GetHttpsApiRestShApiVUInput collect = new GetHttpsApiRestShApiVUInput();
 
 string key = "key";
 collect.Key = key;
@@ -1593,12 +1593,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiVerifyUserResponseModel result = await verification.GetHttpsApiRestShApiVerifyUser(collect);
+Models.HttpsApiRestShApiVURModel result = await verification.GetHttpsApiRestShApiVU(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_verify_user"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.CreateHttpsApiRestShApiVerifyUser") CreateHttpsApiRestShApiVerifyUser
+### <a name="create_https_api_rest_sh_api_vu"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.CreateHttpsApiRestShApiVU") CreateHttpsApiRestShApiVU
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1606,7 +1606,7 @@ Models.HttpsApiRestShApiVerifyUserResponseModel result = await verification.GetH
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVerifyUserResponseModel> CreateHttpsApiRestShApiVerifyUser(Models.CreateHttpsApiRestShApiVerifyUserInput input)
+Task<Models.HttpsApiRestShApiVURModel> CreateHttpsApiRestShApiVU(Models.CreateHttpsApiRestShApiVUInput input)
 ```
 
 #### Parameters
@@ -1620,21 +1620,21 @@ Task<Models.HttpsApiRestShApiVerifyUserResponseModel> CreateHttpsApiRestShApiVer
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiVerifyUserInput collect = new CreateHttpsApiRestShApiVerifyUserInput();
+CreateHttpsApiRestShApiVUInput collect = new CreateHttpsApiRestShApiVUInput();
 
-var body = new Models.HttpsApiRestShApiVerifyUserRequestModel();
+var body = new Models.HttpsApiRestShApiVUModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiVerifyUserResponseModel result = await verification.CreateHttpsApiRestShApiVerifyUser(collect);
+Models.HttpsApiRestShApiVURModel result = await verification.CreateHttpsApiRestShApiVU(collect);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_verify"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.GetHttpsApiRestShApiVerify") GetHttpsApiRestShApiVerify
+### <a name="get_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.GetHttpsApiRestShApiV") GetHttpsApiRestShApiV
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1642,7 +1642,7 @@ Models.HttpsApiRestShApiVerifyUserResponseModel result = await verification.Crea
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVerifyResponseModel> GetHttpsApiRestShApiVerify(Models.GetHttpsApiRestShApiVerifyInput input)
+Task<Models.HttpsApiRestShApiVRModel> GetHttpsApiRestShApiV(Models.GetHttpsApiRestShApiVInput input)
 ```
 
 #### Parameters
@@ -1658,7 +1658,7 @@ Task<Models.HttpsApiRestShApiVerifyResponseModel> GetHttpsApiRestShApiVerify(Mod
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiVerifyInput collect = new GetHttpsApiRestShApiVerifyInput();
+GetHttpsApiRestShApiVInput collect = new GetHttpsApiRestShApiVInput();
 
 string key = "key";
 collect.Key = key;
@@ -1673,12 +1673,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiVerifyResponseModel result = await verification.GetHttpsApiRestShApiVerify(collect);
+Models.HttpsApiRestShApiVRModel result = await verification.GetHttpsApiRestShApiV(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_verify"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.CreateHttpsApiRestShApiVerify") CreateHttpsApiRestShApiVerify
+### <a name="create_https_api_rest_sh_api_v"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.VerificationController.CreateHttpsApiRestShApiV") CreateHttpsApiRestShApiV
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1686,7 +1686,7 @@ Models.HttpsApiRestShApiVerifyResponseModel result = await verification.GetHttps
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVerifyResponseModel> CreateHttpsApiRestShApiVerify(Models.CreateHttpsApiRestShApiVerifyInput input)
+Task<Models.HttpsApiRestShApiVRModel> CreateHttpsApiRestShApiV(Models.CreateHttpsApiRestShApiVInput input)
 ```
 
 #### Parameters
@@ -1700,16 +1700,16 @@ Task<Models.HttpsApiRestShApiVerifyResponseModel> CreateHttpsApiRestShApiVerify(
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiVerifyInput collect = new CreateHttpsApiRestShApiVerifyInput();
+CreateHttpsApiRestShApiVInput collect = new CreateHttpsApiRestShApiVInput();
 
-var body = new Models.HttpsApiRestShApiVerifyRequestModel();
+var body = new Models.HttpsApiRestShApiVModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiVerifyResponseModel result = await verification.CreateHttpsApiRestShApiVerify(collect);
+Models.HttpsApiRestShApiVRModel result = await verification.CreateHttpsApiRestShApiV(collect);
 
 ```
 
@@ -1726,7 +1726,7 @@ The singleton instance of the ``` TwoFactorAuthenticationAPIController ``` class
 ITwoFactorAuthenticationAPIController twoFactorAuthenticationAPI = client.TwoFactorAuthenticationAPI;
 ```
 
-### <a name="get_https_api_rest_sh_api2fa_token"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPIController.GetHttpsApiRestShApi2faToken") GetHttpsApiRestShApi2faToken
+### <a name="get_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPIController.GetHttpsApiRestShApi2faT") GetHttpsApiRestShApi2faT
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1734,7 +1734,7 @@ ITwoFactorAuthenticationAPIController twoFactorAuthenticationAPI = client.TwoFac
 
 
 ```csharp
-Task<Models.HttpsApiRestShApi2faTokenResponseModel> GetHttpsApiRestShApi2faToken(Models.GetHttpsApiRestShApi2faTokenInput input)
+Task<Models.HttpsApiRestShApi2faTRModel> GetHttpsApiRestShApi2faT(Models.GetHttpsApiRestShApi2faTInput input)
 ```
 
 #### Parameters
@@ -1751,7 +1751,7 @@ Task<Models.HttpsApiRestShApi2faTokenResponseModel> GetHttpsApiRestShApi2faToken
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApi2faTokenInput collect = new GetHttpsApiRestShApi2faTokenInput();
+GetHttpsApiRestShApi2faTInput collect = new GetHttpsApiRestShApi2faTInput();
 
 string key = "key";
 collect.Key = key;
@@ -1769,12 +1769,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApi2faTokenResponseModel result = await twoFactorAuthenticationAPI.GetHttpsApiRestShApi2faToken(collect);
+Models.HttpsApiRestShApi2faTRModel result = await twoFactorAuthenticationAPI.GetHttpsApiRestShApi2faT(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api2fa_token"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPIController.CreateHttpsApiRestShApi2faToken") CreateHttpsApiRestShApi2faToken
+### <a name="create_https_api_rest_sh_api2fa_t"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPIController.CreateHttpsApiRestShApi2faT") CreateHttpsApiRestShApi2faT
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1782,7 +1782,7 @@ Models.HttpsApiRestShApi2faTokenResponseModel result = await twoFactorAuthentica
 
 
 ```csharp
-Task<Models.HttpsApiRestShApi2faTokenResponseModel> CreateHttpsApiRestShApi2faToken(Models.CreateHttpsApiRestShApi2faTokenInput input)
+Task<Models.HttpsApiRestShApi2faTRModel> CreateHttpsApiRestShApi2faT(Models.CreateHttpsApiRestShApi2faTInput input)
 ```
 
 #### Parameters
@@ -1796,16 +1796,16 @@ Task<Models.HttpsApiRestShApi2faTokenResponseModel> CreateHttpsApiRestShApi2faTo
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApi2faTokenInput collect = new CreateHttpsApiRestShApi2faTokenInput();
+CreateHttpsApiRestShApi2faTInput collect = new CreateHttpsApiRestShApi2faTInput();
 
-var body = new Models.HttpsApiRestShApi2faTokenRequestModel();
+var body = new Models.HttpsApiRestShApi2faTModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApi2faTokenResponseModel result = await twoFactorAuthenticationAPI.CreateHttpsApiRestShApi2faToken(collect);
+Models.HttpsApiRestShApi2faTRModel result = await twoFactorAuthenticationAPI.CreateHttpsApiRestShApi2faT(collect);
 
 ```
 
@@ -1818,7 +1818,7 @@ Models.HttpsApiRestShApi2faTokenResponseModel result = await twoFactorAuthentica
 
 
 ```csharp
-Task<Models.HttpsApiRestShApi2faResponseModel> GetHttpsApiRestShApi2fa(Models.GetHttpsApiRestShApi2faInput input)
+Task<Models.HttpsApiRestShApi2faRModel> GetHttpsApiRestShApi2fa(Models.GetHttpsApiRestShApi2faInput input)
 ```
 
 #### Parameters
@@ -1849,7 +1849,7 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApi2faResponseModel result = await twoFactorAuthenticationAPI.GetHttpsApiRestShApi2fa(collect);
+Models.HttpsApiRestShApi2faRModel result = await twoFactorAuthenticationAPI.GetHttpsApiRestShApi2fa(collect);
 
 ```
 
@@ -1862,7 +1862,7 @@ Models.HttpsApiRestShApi2faResponseModel result = await twoFactorAuthenticationA
 
 
 ```csharp
-Task<Models.HttpsApiRestShApi2faResponseModel> CreateHttpsApiRestShApi2fa(Models.CreateHttpsApiRestShApi2faInput input)
+Task<Models.HttpsApiRestShApi2faRModel> CreateHttpsApiRestShApi2fa(Models.CreateHttpsApiRestShApi2faInput input)
 ```
 
 #### Parameters
@@ -1878,14 +1878,14 @@ Task<Models.HttpsApiRestShApi2faResponseModel> CreateHttpsApiRestShApi2fa(Models
 ```csharp
 CreateHttpsApiRestShApi2faInput collect = new CreateHttpsApiRestShApi2faInput();
 
-var body = new Models.HttpsApiRestShApi2faRequestModel();
+var body = new Models.HttpsApiRestShApi2faModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApi2faResponseModel result = await twoFactorAuthenticationAPI.CreateHttpsApiRestShApi2fa(collect);
+Models.HttpsApiRestShApi2faRModel result = await twoFactorAuthenticationAPI.CreateHttpsApiRestShApi2fa(collect);
 
 ```
 
@@ -1902,7 +1902,7 @@ The singleton instance of the ``` UserManagementController ``` class can be acce
 IUserManagementController userManagement = client.UserManagement;
 ```
 
-### <a name="get_https_api_rest_sh_api_user_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.GetHttpsApiRestShApiUserInfo") GetHttpsApiRestShApiUserInfo
+### <a name="get_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.GetHttpsApiRestShApiUI") GetHttpsApiRestShApiUI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1910,7 +1910,7 @@ IUserManagementController userManagement = client.UserManagement;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUserInfoResponseModel> GetHttpsApiRestShApiUserInfo(Models.GetHttpsApiRestShApiUserInfoInput input)
+Task<Models.HttpsApiRestShApiUIRModel> GetHttpsApiRestShApiUI(Models.GetHttpsApiRestShApiUIInput input)
 ```
 
 #### Parameters
@@ -1927,7 +1927,7 @@ Task<Models.HttpsApiRestShApiUserInfoResponseModel> GetHttpsApiRestShApiUserInfo
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiUserInfoInput collect = new GetHttpsApiRestShApiUserInfoInput();
+GetHttpsApiRestShApiUIInput collect = new GetHttpsApiRestShApiUIInput();
 
 string key = "key";
 collect.Key = key;
@@ -1945,12 +1945,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiUserInfoResponseModel result = await userManagement.GetHttpsApiRestShApiUserInfo(collect);
+Models.HttpsApiRestShApiUIRModel result = await userManagement.GetHttpsApiRestShApiUI(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_user_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.CreateHttpsApiRestShApiUserInfo") CreateHttpsApiRestShApiUserInfo
+### <a name="create_https_api_rest_sh_api_ui"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.CreateHttpsApiRestShApiUI") CreateHttpsApiRestShApiUI
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1958,7 +1958,7 @@ Models.HttpsApiRestShApiUserInfoResponseModel result = await userManagement.GetH
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUserInfoResponseModel> CreateHttpsApiRestShApiUserInfo(Models.CreateHttpsApiRestShApiUserInfoInput input)
+Task<Models.HttpsApiRestShApiUIRModel> CreateHttpsApiRestShApiUI(Models.CreateHttpsApiRestShApiUIInput input)
 ```
 
 #### Parameters
@@ -1972,21 +1972,21 @@ Task<Models.HttpsApiRestShApiUserInfoResponseModel> CreateHttpsApiRestShApiUserI
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiUserInfoInput collect = new CreateHttpsApiRestShApiUserInfoInput();
+CreateHttpsApiRestShApiUIInput collect = new CreateHttpsApiRestShApiUIInput();
 
-var body = new Models.HttpsApiRestShApiUserInfoRequestModel();
+var body = new Models.HttpsApiRestShApiUIModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiUserInfoResponseModel result = await userManagement.CreateHttpsApiRestShApiUserInfo(collect);
+Models.HttpsApiRestShApiUIRModel result = await userManagement.CreateHttpsApiRestShApiUI(collect);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_user_update"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.GetHttpsApiRestShApiUserUpdate") GetHttpsApiRestShApiUserUpdate
+### <a name="get_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.GetHttpsApiRestShApiUU") GetHttpsApiRestShApiUU
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1994,7 +1994,7 @@ Models.HttpsApiRestShApiUserInfoResponseModel result = await userManagement.Crea
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUserUpdateResponseModel> GetHttpsApiRestShApiUserUpdate(Models.GetHttpsApiRestShApiUserUpdateInput input)
+Task<Models.HttpsApiRestShApiUURModel> GetHttpsApiRestShApiUU(Models.GetHttpsApiRestShApiUUInput input)
 ```
 
 #### Parameters
@@ -2013,7 +2013,7 @@ Task<Models.HttpsApiRestShApiUserUpdateResponseModel> GetHttpsApiRestShApiUserUp
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiUserUpdateInput collect = new GetHttpsApiRestShApiUserUpdateInput();
+GetHttpsApiRestShApiUUInput collect = new GetHttpsApiRestShApiUUInput();
 
 string key = "key";
 collect.Key = key;
@@ -2037,12 +2037,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiUserUpdateResponseModel result = await userManagement.GetHttpsApiRestShApiUserUpdate(collect);
+Models.HttpsApiRestShApiUURModel result = await userManagement.GetHttpsApiRestShApiUU(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_user_update"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.CreateHttpsApiRestShApiUserUpdate") CreateHttpsApiRestShApiUserUpdate
+### <a name="create_https_api_rest_sh_api_uu"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.CreateHttpsApiRestShApiUU") CreateHttpsApiRestShApiUU
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2050,7 +2050,7 @@ Models.HttpsApiRestShApiUserUpdateResponseModel result = await userManagement.Ge
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUserUpdateResponseModel> CreateHttpsApiRestShApiUserUpdate(Models.CreateHttpsApiRestShApiUserUpdateInput input)
+Task<Models.HttpsApiRestShApiUURModel> CreateHttpsApiRestShApiUU(Models.CreateHttpsApiRestShApiUUInput input)
 ```
 
 #### Parameters
@@ -2064,21 +2064,21 @@ Task<Models.HttpsApiRestShApiUserUpdateResponseModel> CreateHttpsApiRestShApiUse
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiUserUpdateInput collect = new CreateHttpsApiRestShApiUserUpdateInput();
+CreateHttpsApiRestShApiUUInput collect = new CreateHttpsApiRestShApiUUInput();
 
-var body = new Models.HttpsApiRestShApiUserUpdateRequestModel();
+var body = new Models.HttpsApiRestShApiUUModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiUserUpdateResponseModel result = await userManagement.CreateHttpsApiRestShApiUserUpdate(collect);
+Models.HttpsApiRestShApiUURModel result = await userManagement.CreateHttpsApiRestShApiUU(collect);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_user_delete"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.GetHttpsApiRestShApiUserDelete") GetHttpsApiRestShApiUserDelete
+### <a name="get_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.GetHttpsApiRestShApiUD") GetHttpsApiRestShApiUD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2086,7 +2086,7 @@ Models.HttpsApiRestShApiUserUpdateResponseModel result = await userManagement.Cr
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUserDeleteResponseModel> GetHttpsApiRestShApiUserDelete(Models.GetHttpsApiRestShApiUserDeleteInput input)
+Task<Models.HttpsApiRestShApiUDRModel> GetHttpsApiRestShApiUD(Models.GetHttpsApiRestShApiUDInput input)
 ```
 
 #### Parameters
@@ -2103,7 +2103,7 @@ Task<Models.HttpsApiRestShApiUserDeleteResponseModel> GetHttpsApiRestShApiUserDe
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiUserDeleteInput collect = new GetHttpsApiRestShApiUserDeleteInput();
+GetHttpsApiRestShApiUDInput collect = new GetHttpsApiRestShApiUDInput();
 
 string api = "api";
 collect.Api = api;
@@ -2121,12 +2121,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiUserDeleteResponseModel result = await userManagement.GetHttpsApiRestShApiUserDelete(collect);
+Models.HttpsApiRestShApiUDRModel result = await userManagement.GetHttpsApiRestShApiUD(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_user_delete"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.CreateHttpsApiRestShApiUserDelete") CreateHttpsApiRestShApiUserDelete
+### <a name="create_https_api_rest_sh_api_ud"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagementController.CreateHttpsApiRestShApiUD") CreateHttpsApiRestShApiUD
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2134,7 +2134,7 @@ Models.HttpsApiRestShApiUserDeleteResponseModel result = await userManagement.Ge
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUserDeleteResponseModel> CreateHttpsApiRestShApiUserDelete(Models.CreateHttpsApiRestShApiUserDeleteInput input)
+Task<Models.HttpsApiRestShApiUDRModel> CreateHttpsApiRestShApiUD(Models.CreateHttpsApiRestShApiUDInput input)
 ```
 
 #### Parameters
@@ -2148,16 +2148,16 @@ Task<Models.HttpsApiRestShApiUserDeleteResponseModel> CreateHttpsApiRestShApiUse
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiUserDeleteInput collect = new CreateHttpsApiRestShApiUserDeleteInput();
+CreateHttpsApiRestShApiUDInput collect = new CreateHttpsApiRestShApiUDInput();
 
-var body = new Models.HttpsApiRestShApiUserDeleteRequestModel();
+var body = new Models.HttpsApiRestShApiUDModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiUserDeleteResponseModel result = await userManagement.CreateHttpsApiRestShApiUserDelete(collect);
+Models.HttpsApiRestShApiUDRModel result = await userManagement.CreateHttpsApiRestShApiUD(collect);
 
 ```
 
@@ -2174,7 +2174,7 @@ The singleton instance of the ``` LoginAndRegistrationController ``` class can b
 ILoginAndRegistrationController loginAndRegistration = client.LoginAndRegistration;
 ```
 
-### <a name="get_https_api_rest_sh_api_auth_user_register"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistrationController.GetHttpsApiRestShApiAuthUserRegister") GetHttpsApiRestShApiAuthUserRegister
+### <a name="get_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistrationController.GetHttpsApiRestShApiAUR") GetHttpsApiRestShApiAUR
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2182,7 +2182,7 @@ ILoginAndRegistrationController loginAndRegistration = client.LoginAndRegistrati
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiAuthUserRegisterResponseModel> GetHttpsApiRestShApiAuthUserRegister(Models.GetHttpsApiRestShApiAuthUserRegisterInput input)
+Task<Models.HttpsApiRestShApiAURRModel> GetHttpsApiRestShApiAUR(Models.GetHttpsApiRestShApiAURInput input)
 ```
 
 #### Parameters
@@ -2204,7 +2204,7 @@ Task<Models.HttpsApiRestShApiAuthUserRegisterResponseModel> GetHttpsApiRestShApi
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiAuthUserRegisterInput collect = new GetHttpsApiRestShApiAuthUserRegisterInput();
+GetHttpsApiRestShApiAURInput collect = new GetHttpsApiRestShApiAURInput();
 
 string key = "key";
 collect.Key = key;
@@ -2224,10 +2224,10 @@ collect.Name = name;
 string email = "email";
 collect.Email = email;
 
-int phone = 23;
+int phone = 70;
 collect.Phone = phone;
 
-int countrycode = 23;
+int countrycode = 70;
 collect.Countrycode = countrycode;
 
 string address = "address";
@@ -2237,12 +2237,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiAuthUserRegisterResponseModel result = await loginAndRegistration.GetHttpsApiRestShApiAuthUserRegister(collect);
+Models.HttpsApiRestShApiAURRModel result = await loginAndRegistration.GetHttpsApiRestShApiAUR(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_auth_user_register"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistrationController.CreateHttpsApiRestShApiAuthUserRegister") CreateHttpsApiRestShApiAuthUserRegister
+### <a name="create_https_api_rest_sh_api_aur"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistrationController.CreateHttpsApiRestShApiAUR") CreateHttpsApiRestShApiAUR
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2250,7 +2250,7 @@ Models.HttpsApiRestShApiAuthUserRegisterResponseModel result = await loginAndReg
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiAuthUserRegisterResponseModel> CreateHttpsApiRestShApiAuthUserRegister(Models.CreateHttpsApiRestShApiAuthUserRegisterInput input)
+Task<Models.HttpsApiRestShApiAURRModel> CreateHttpsApiRestShApiAUR(Models.CreateHttpsApiRestShApiAURInput input)
 ```
 
 #### Parameters
@@ -2264,21 +2264,21 @@ Task<Models.HttpsApiRestShApiAuthUserRegisterResponseModel> CreateHttpsApiRestSh
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiAuthUserRegisterInput collect = new CreateHttpsApiRestShApiAuthUserRegisterInput();
+CreateHttpsApiRestShApiAURInput collect = new CreateHttpsApiRestShApiAURInput();
 
-var body = new Models.HttpsApiRestShApiAuthUserRegisterRequestModel();
+var body = new Models.HttpsApiRestShApiAURModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiAuthUserRegisterResponseModel result = await loginAndRegistration.CreateHttpsApiRestShApiAuthUserRegister(collect);
+Models.HttpsApiRestShApiAURRModel result = await loginAndRegistration.CreateHttpsApiRestShApiAUR(collect);
 
 ```
 
 
-### <a name="get_https_api_rest_sh_api_auth_user_login"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistrationController.GetHttpsApiRestShApiAuthUserLogin") GetHttpsApiRestShApiAuthUserLogin
+### <a name="get_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistrationController.GetHttpsApiRestShApiAUL") GetHttpsApiRestShApiAUL
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2286,7 +2286,7 @@ Models.HttpsApiRestShApiAuthUserRegisterResponseModel result = await loginAndReg
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiAuthUserLoginResponseModel> GetHttpsApiRestShApiAuthUserLogin(Models.GetHttpsApiRestShApiAuthUserLoginInput input)
+Task<Models.HttpsApiRestShApiAULRModel> GetHttpsApiRestShApiAUL(Models.GetHttpsApiRestShApiAULInput input)
 ```
 
 #### Parameters
@@ -2303,7 +2303,7 @@ Task<Models.HttpsApiRestShApiAuthUserLoginResponseModel> GetHttpsApiRestShApiAut
 #### Example Usage
 
 ```csharp
-GetHttpsApiRestShApiAuthUserLoginInput collect = new GetHttpsApiRestShApiAuthUserLoginInput();
+GetHttpsApiRestShApiAULInput collect = new GetHttpsApiRestShApiAULInput();
 
 string key = "key";
 collect.Key = key;
@@ -2321,12 +2321,12 @@ string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiAuthUserLoginResponseModel result = await loginAndRegistration.GetHttpsApiRestShApiAuthUserLogin(collect);
+Models.HttpsApiRestShApiAULRModel result = await loginAndRegistration.GetHttpsApiRestShApiAUL(collect);
 
 ```
 
 
-### <a name="create_https_api_rest_sh_api_auth_user_login"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistrationController.CreateHttpsApiRestShApiAuthUserLogin") CreateHttpsApiRestShApiAuthUserLogin
+### <a name="create_https_api_rest_sh_api_aul"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistrationController.CreateHttpsApiRestShApiAUL") CreateHttpsApiRestShApiAUL
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2334,7 +2334,7 @@ Models.HttpsApiRestShApiAuthUserLoginResponseModel result = await loginAndRegist
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiAuthUserLoginResponseModel> CreateHttpsApiRestShApiAuthUserLogin(Models.CreateHttpsApiRestShApiAuthUserLoginInput input)
+Task<Models.HttpsApiRestShApiAULRModel> CreateHttpsApiRestShApiAUL(Models.CreateHttpsApiRestShApiAULInput input)
 ```
 
 #### Parameters
@@ -2348,16 +2348,16 @@ Task<Models.HttpsApiRestShApiAuthUserLoginResponseModel> CreateHttpsApiRestShApi
 #### Example Usage
 
 ```csharp
-CreateHttpsApiRestShApiAuthUserLoginInput collect = new CreateHttpsApiRestShApiAuthUserLoginInput();
+CreateHttpsApiRestShApiAULInput collect = new CreateHttpsApiRestShApiAULInput();
 
-var body = new Models.HttpsApiRestShApiAuthUserLoginRequestModel();
+var body = new Models.HttpsApiRestShApiAULModel();
 collect.Body = body;
 
 string contentType = "Content-Type";
 collect.ContentType = contentType;
 
 
-Models.HttpsApiRestShApiAuthUserLoginResponseModel result = await loginAndRegistration.CreateHttpsApiRestShApiAuthUserLogin(collect);
+Models.HttpsApiRestShApiAULRModel result = await loginAndRegistration.CreateHttpsApiRestShApiAUL(collect);
 
 ```
 

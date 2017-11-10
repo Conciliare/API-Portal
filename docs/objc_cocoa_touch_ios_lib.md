@@ -227,7 +227,7 @@ Configuration_Uid = "UID"; // Your User ID
 AdvancedLogging* advancedLogging = [[AdvancedLogging alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_security_logging_info_async_with_get_https_api_rest_sh_api_security_logging_info_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSecurityLoggingInfoAsyncWithGetHttpsApiRestShApiSecurityLoggingInfoInput") getHttpsApiRestShApiSecurityLoggingInfoAsyncWithGetHttpsApiRestShApiSecurityLoggingInfoInput
+### <a name="get_https_api_rest_sh_api_sli_async_with_get_https_api_rest_sh_api_sli_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSLIAsyncWithGetHttpsApiRestShApiSLIInput") getHttpsApiRestShApiSLIAsyncWithGetHttpsApiRestShApiSLIInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -235,8 +235,8 @@ AdvancedLogging* advancedLogging = [[AdvancedLogging alloc]init] ;
 
 
 ```objc
-function getHttpsApiRestShApiSecurityLoggingInfoAsyncWithGetHttpsApiRestShApiSecurityLoggingInfoInput:(GetHttpsApiRestShApiSecurityLoggingInfoInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiSecurityLoggingInfo) onCompleted(input)
+function getHttpsApiRestShApiSLIAsyncWithGetHttpsApiRestShApiSLIInput:(GetHttpsApiRestShApiSLIInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSLI) onCompleted(input)
 ```
 
 #### Parameters
@@ -258,7 +258,7 @@ function getHttpsApiRestShApiSecurityLoggingInfoAsyncWithGetHttpsApiRestShApiSec
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiSecurityLoggingInfoInput *input = [[GetHttpsApiRestShApiSecurityLoggingInfoInput alloc]init];
+    GetHttpsApiRestShApiSLIInput *input = [[GetHttpsApiRestShApiSLIInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.name = @"name";
@@ -266,13 +266,13 @@ function getHttpsApiRestShApiSecurityLoggingInfoAsyncWithGetHttpsApiRestShApiSec
     input.time = @"time";
     input.contentType = @"Content-Type";
 
-    [self.advancedLogging getHttpsApiRestShApiSecurityLoggingInfoAsyncWithGetHttpsApiRestShApiSecurityLoggingInfoInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityLoggingInfoResponseModel* response, NSError* error) { 
+    [self.advancedLogging getHttpsApiRestShApiSLIAsyncWithGetHttpsApiRestShApiSLIInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLIRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_https_api_rest_sh_api_security_logging_async_with_get_https_api_rest_sh_api_security_logging_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSecurityLoggingAsyncWithGetHttpsApiRestShApiSecurityLoggingInput") getHttpsApiRestShApiSecurityLoggingAsyncWithGetHttpsApiRestShApiSecurityLoggingInput
+### <a name="get_https_api_rest_sh_api_sl_async_with_get_https_api_rest_sh_api_sl_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.getHttpsApiRestShApiSLAsyncWithGetHttpsApiRestShApiSLInput") getHttpsApiRestShApiSLAsyncWithGetHttpsApiRestShApiSLInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -280,8 +280,8 @@ function getHttpsApiRestShApiSecurityLoggingInfoAsyncWithGetHttpsApiRestShApiSec
 
 
 ```objc
-function getHttpsApiRestShApiSecurityLoggingAsyncWithGetHttpsApiRestShApiSecurityLoggingInput:(GetHttpsApiRestShApiSecurityLoggingInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiSecurityLogging) onCompleted(input)
+function getHttpsApiRestShApiSLAsyncWithGetHttpsApiRestShApiSLInput:(GetHttpsApiRestShApiSLInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSL) onCompleted(input)
 ```
 
 #### Parameters
@@ -303,21 +303,21 @@ function getHttpsApiRestShApiSecurityLoggingAsyncWithGetHttpsApiRestShApiSecurit
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiSecurityLoggingInput *input = [[GetHttpsApiRestShApiSecurityLoggingInput alloc]init];
+    GetHttpsApiRestShApiSLInput *input = [[GetHttpsApiRestShApiSLInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.name = @"name";
     input.origin = @"origin";
-    input.activate = false;
+    input.activate = true;
     input.contentType = @"Content-Type";
 
-    [self.advancedLogging getHttpsApiRestShApiSecurityLoggingAsyncWithGetHttpsApiRestShApiSecurityLoggingInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityLoggingResponseModel* response, NSError* error) { 
+    [self.advancedLogging getHttpsApiRestShApiSLAsyncWithGetHttpsApiRestShApiSLInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_logging_info_async_with_create_https_api_rest_sh_api_security_logging_info_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSecurityLoggingInfoAsyncWithCreateHttpsApiRestShApiSecurityLoggingInfoInput") createHttpsApiRestShApiSecurityLoggingInfoAsyncWithCreateHttpsApiRestShApiSecurityLoggingInfoInput
+### <a name="create_https_api_rest_sh_api_sli_async_with_create_https_api_rest_sh_api_sli_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSLIAsyncWithCreateHttpsApiRestShApiSLIInput") createHttpsApiRestShApiSLIAsyncWithCreateHttpsApiRestShApiSLIInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -325,8 +325,8 @@ function getHttpsApiRestShApiSecurityLoggingAsyncWithGetHttpsApiRestShApiSecurit
 
 
 ```objc
-function createHttpsApiRestShApiSecurityLoggingInfoAsyncWithCreateHttpsApiRestShApiSecurityLoggingInfoInput:(CreateHttpsApiRestShApiSecurityLoggingInfoInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiSecurityLoggingInfo) onCompleted(input)
+function createHttpsApiRestShApiSLIAsyncWithCreateHttpsApiRestShApiSLIInput:(CreateHttpsApiRestShApiSLIInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSLI) onCompleted(input)
 ```
 
 #### Parameters
@@ -344,17 +344,17 @@ function createHttpsApiRestShApiSecurityLoggingInfoAsyncWithCreateHttpsApiRestSh
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiSecurityLoggingInfoInput *input = [[CreateHttpsApiRestShApiSecurityLoggingInfoInput alloc]init];
-    input.body = [[HttpsApiRestShApiSecurityLoggingInfoRequestModel alloc]init];
+    CreateHttpsApiRestShApiSLIInput *input = [[CreateHttpsApiRestShApiSLIInput alloc]init];
+    input.body = [[HttpsApiRestShApiSLIModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.advancedLogging createHttpsApiRestShApiSecurityLoggingInfoAsyncWithCreateHttpsApiRestShApiSecurityLoggingInfoInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityLoggingInfoResponseModel* response, NSError* error) { 
+    [self.advancedLogging createHttpsApiRestShApiSLIAsyncWithCreateHttpsApiRestShApiSLIInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLIRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_logging_async_with_create_https_api_rest_sh_api_security_logging_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSecurityLoggingAsyncWithCreateHttpsApiRestShApiSecurityLoggingInput") createHttpsApiRestShApiSecurityLoggingAsyncWithCreateHttpsApiRestShApiSecurityLoggingInput
+### <a name="create_https_api_rest_sh_api_sl_async_with_create_https_api_rest_sh_api_sl_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLoggingController.createHttpsApiRestShApiSLAsyncWithCreateHttpsApiRestShApiSLInput") createHttpsApiRestShApiSLAsyncWithCreateHttpsApiRestShApiSLInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -362,8 +362,8 @@ function createHttpsApiRestShApiSecurityLoggingInfoAsyncWithCreateHttpsApiRestSh
 
 
 ```objc
-function createHttpsApiRestShApiSecurityLoggingAsyncWithCreateHttpsApiRestShApiSecurityLoggingInput:(CreateHttpsApiRestShApiSecurityLoggingInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiSecurityLogging) onCompleted(input)
+function createHttpsApiRestShApiSLAsyncWithCreateHttpsApiRestShApiSLInput:(CreateHttpsApiRestShApiSLInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSL) onCompleted(input)
 ```
 
 #### Parameters
@@ -381,11 +381,11 @@ function createHttpsApiRestShApiSecurityLoggingAsyncWithCreateHttpsApiRestShApiS
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiSecurityLoggingInput *input = [[CreateHttpsApiRestShApiSecurityLoggingInput alloc]init];
-    input.body = [[HttpsApiRestShApiSecurityLoggingRequestModel alloc]init];
+    CreateHttpsApiRestShApiSLInput *input = [[CreateHttpsApiRestShApiSLInput alloc]init];
+    input.body = [[HttpsApiRestShApiSLModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.advancedLogging createHttpsApiRestShApiSecurityLoggingAsyncWithCreateHttpsApiRestShApiSecurityLoggingInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityLoggingResponseModel* response, NSError* error) { 
+    [self.advancedLogging createHttpsApiRestShApiSLAsyncWithCreateHttpsApiRestShApiSLInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -400,7 +400,7 @@ function createHttpsApiRestShApiSecurityLoggingAsyncWithCreateHttpsApiRestShApiS
 WAFDDOSProtection* wAFDDOSProtection = [[WAFDDOSProtection alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_security_waf_configure_async_with_get_https_api_rest_sh_api_security_waf_configure_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSecurityWafConfigureAsyncWithGetHttpsApiRestShApiSecurityWafConfigureInput") getHttpsApiRestShApiSecurityWafConfigureAsyncWithGetHttpsApiRestShApiSecurityWafConfigureInput
+### <a name="get_https_api_rest_sh_api_swc_async_with_get_https_api_rest_sh_api_swc_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSWCAsyncWithGetHttpsApiRestShApiSWCInput") getHttpsApiRestShApiSWCAsyncWithGetHttpsApiRestShApiSWCInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -408,8 +408,8 @@ WAFDDOSProtection* wAFDDOSProtection = [[WAFDDOSProtection alloc]init] ;
 
 
 ```objc
-function getHttpsApiRestShApiSecurityWafConfigureAsyncWithGetHttpsApiRestShApiSecurityWafConfigureInput:(GetHttpsApiRestShApiSecurityWafConfigureInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiSecurityWafConfigure) onCompleted(input)
+function getHttpsApiRestShApiSWCAsyncWithGetHttpsApiRestShApiSWCInput:(GetHttpsApiRestShApiSWCInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSWC) onCompleted(input)
 ```
 
 #### Parameters
@@ -431,7 +431,7 @@ function getHttpsApiRestShApiSecurityWafConfigureAsyncWithGetHttpsApiRestShApiSe
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiSecurityWafConfigureInput *input = [[GetHttpsApiRestShApiSecurityWafConfigureInput alloc]init];
+    GetHttpsApiRestShApiSWCInput *input = [[GetHttpsApiRestShApiSWCInput alloc]init];
     input.key = @"API";
     input.uid = @"UID";
     input.name = @"origin-name";
@@ -439,13 +439,13 @@ function getHttpsApiRestShApiSecurityWafConfigureAsyncWithGetHttpsApiRestShApiSe
     input.rule = @"header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does";
     input.contentType = @"application/json";
 
-    [self.wAFDDOSProtection getHttpsApiRestShApiSecurityWafConfigureAsyncWithGetHttpsApiRestShApiSecurityWafConfigureInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityWafConfigureResponseModel* response, NSError* error) { 
+    [self.wAFDDOSProtection getHttpsApiRestShApiSWCAsyncWithGetHttpsApiRestShApiSWCInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWCRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_https_api_rest_sh_api_security_waf_async_with_get_https_api_rest_sh_api_security_waf_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSecurityWafAsyncWithGetHttpsApiRestShApiSecurityWafInput") getHttpsApiRestShApiSecurityWafAsyncWithGetHttpsApiRestShApiSecurityWafInput
+### <a name="get_https_api_rest_sh_api_sw_async_with_get_https_api_rest_sh_api_sw_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.getHttpsApiRestShApiSWAsyncWithGetHttpsApiRestShApiSWInput") getHttpsApiRestShApiSWAsyncWithGetHttpsApiRestShApiSWInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -453,8 +453,8 @@ function getHttpsApiRestShApiSecurityWafConfigureAsyncWithGetHttpsApiRestShApiSe
 
 
 ```objc
-function getHttpsApiRestShApiSecurityWafAsyncWithGetHttpsApiRestShApiSecurityWafInput:(GetHttpsApiRestShApiSecurityWafInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiSecurityWaf) onCompleted(input)
+function getHttpsApiRestShApiSWAsyncWithGetHttpsApiRestShApiSWInput:(GetHttpsApiRestShApiSWInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSW) onCompleted(input)
 ```
 
 #### Parameters
@@ -475,20 +475,20 @@ function getHttpsApiRestShApiSecurityWafAsyncWithGetHttpsApiRestShApiSecurityWaf
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiSecurityWafInput *input = [[GetHttpsApiRestShApiSecurityWafInput alloc]init];
+    GetHttpsApiRestShApiSWInput *input = [[GetHttpsApiRestShApiSWInput alloc]init];
     input.key = @"API";
     input.uid = @"UID";
     input.origin = @"origin.yourdomain.tld";
     input.cname = @"yourdomain.tld,www.yourdomain.tld";
     input.contentType = @"application/json";
 
-    [self.wAFDDOSProtection getHttpsApiRestShApiSecurityWafAsyncWithGetHttpsApiRestShApiSecurityWafInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityWafResponseModel* response, NSError* error) { 
+    [self.wAFDDOSProtection getHttpsApiRestShApiSWAsyncWithGetHttpsApiRestShApiSWInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_waf_configure_async_with_create_https_api_rest_sh_api_security_waf_configure_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSecurityWafConfigureAsyncWithCreateHttpsApiRestShApiSecurityWafConfigureInput") createHttpsApiRestShApiSecurityWafConfigureAsyncWithCreateHttpsApiRestShApiSecurityWafConfigureInput
+### <a name="create_https_api_rest_sh_api_swc_async_with_create_https_api_rest_sh_api_swc_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSWCAsyncWithCreateHttpsApiRestShApiSWCInput") createHttpsApiRestShApiSWCAsyncWithCreateHttpsApiRestShApiSWCInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -496,8 +496,8 @@ function getHttpsApiRestShApiSecurityWafAsyncWithGetHttpsApiRestShApiSecurityWaf
 
 
 ```objc
-function createHttpsApiRestShApiSecurityWafConfigureAsyncWithCreateHttpsApiRestShApiSecurityWafConfigureInput:(CreateHttpsApiRestShApiSecurityWafConfigureInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiSecurityWafConfigure) onCompleted(input)
+function createHttpsApiRestShApiSWCAsyncWithCreateHttpsApiRestShApiSWCInput:(CreateHttpsApiRestShApiSWCInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSWC) onCompleted(input)
 ```
 
 #### Parameters
@@ -515,24 +515,24 @@ function createHttpsApiRestShApiSecurityWafConfigureAsyncWithCreateHttpsApiRestS
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiSecurityWafConfigureInput *input = [[CreateHttpsApiRestShApiSecurityWafConfigureInput alloc]init];
-    input.body = (HttpsApiRestShApiSecurityWafConfigureRequestModel*) [APIHelper jsonDeserialize: @"{
+    CreateHttpsApiRestShApiSWCInput *input = [[CreateHttpsApiRestShApiSWCInput alloc]init];
+    input.body = (HttpsApiRestShApiSWCModel*) [APIHelper jsonDeserialize: @"{
   \"key\": \"YOUR API KEY\",
   \"uid\": \"YOUR USER ID\",
   \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",
   \"origin\": \"ORIGIN YOU WISH TO PROTECT\",
   \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"
 }"
-                toClass: HttpsApiRestShApiSecurityWafConfigureRequestModel.class];
+                toClass: HttpsApiRestShApiSWCModel.class];
     input.contentType = @"application/json";
 
-    [self.wAFDDOSProtection createHttpsApiRestShApiSecurityWafConfigureAsyncWithCreateHttpsApiRestShApiSecurityWafConfigureInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityWafConfigureResponseModel* response, NSError* error) { 
+    [self.wAFDDOSProtection createHttpsApiRestShApiSWCAsyncWithCreateHttpsApiRestShApiSWCInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWCRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_waf_async_with_create_https_api_rest_sh_api_security_waf_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSecurityWafAsyncWithCreateHttpsApiRestShApiSecurityWafInput") createHttpsApiRestShApiSecurityWafAsyncWithCreateHttpsApiRestShApiSecurityWafInput
+### <a name="create_https_api_rest_sh_api_sw_async_with_create_https_api_rest_sh_api_sw_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtectionController.createHttpsApiRestShApiSWAsyncWithCreateHttpsApiRestShApiSWInput") createHttpsApiRestShApiSWAsyncWithCreateHttpsApiRestShApiSWInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -540,8 +540,8 @@ function createHttpsApiRestShApiSecurityWafConfigureAsyncWithCreateHttpsApiRestS
 
 
 ```objc
-function createHttpsApiRestShApiSecurityWafAsyncWithCreateHttpsApiRestShApiSecurityWafInput:(CreateHttpsApiRestShApiSecurityWafInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiSecurityWaf) onCompleted(input)
+function createHttpsApiRestShApiSWAsyncWithCreateHttpsApiRestShApiSWInput:(CreateHttpsApiRestShApiSWInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSW) onCompleted(input)
 ```
 
 #### Parameters
@@ -559,17 +559,17 @@ function createHttpsApiRestShApiSecurityWafAsyncWithCreateHttpsApiRestShApiSecur
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiSecurityWafInput *input = [[CreateHttpsApiRestShApiSecurityWafInput alloc]init];
-    input.body = (HttpsApiRestShApiSecurityWafRequestModel*) [APIHelper jsonDeserialize: @"{
+    CreateHttpsApiRestShApiSWInput *input = [[CreateHttpsApiRestShApiSWInput alloc]init];
+    input.body = (HttpsApiRestShApiSWModel*) [APIHelper jsonDeserialize: @"{
   \"key\": \"YOUR API KEY\",
   \"uid\": \"YOUR USER ID\",
   \"origin\": \"ORIGIN YOU WISH TO PROTECT\",
   \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"
 }"
-                toClass: HttpsApiRestShApiSecurityWafRequestModel.class];
+                toClass: HttpsApiRestShApiSWModel.class];
     input.contentType = @"application/json";
 
-    [self.wAFDDOSProtection createHttpsApiRestShApiSecurityWafAsyncWithCreateHttpsApiRestShApiSecurityWafInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityWafResponseModel* response, NSError* error) { 
+    [self.wAFDDOSProtection createHttpsApiRestShApiSWAsyncWithCreateHttpsApiRestShApiSWInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -584,7 +584,7 @@ function createHttpsApiRestShApiSecurityWafAsyncWithCreateHttpsApiRestShApiSecur
 Encryption* encryption = [[Encryption alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_security_encryption_async_with_get_https_api_rest_sh_api_security_encryption_input"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.getHttpsApiRestShApiSecurityEncryptionAsyncWithGetHttpsApiRestShApiSecurityEncryptionInput") getHttpsApiRestShApiSecurityEncryptionAsyncWithGetHttpsApiRestShApiSecurityEncryptionInput
+### <a name="get_https_api_rest_sh_api_se_async_with_get_https_api_rest_sh_api_se_input"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.getHttpsApiRestShApiSEAsyncWithGetHttpsApiRestShApiSEInput") getHttpsApiRestShApiSEAsyncWithGetHttpsApiRestShApiSEInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -592,8 +592,8 @@ Encryption* encryption = [[Encryption alloc]init] ;
 
 
 ```objc
-function getHttpsApiRestShApiSecurityEncryptionAsyncWithGetHttpsApiRestShApiSecurityEncryptionInput:(GetHttpsApiRestShApiSecurityEncryptionInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiSecurityEncryption) onCompleted(input)
+function getHttpsApiRestShApiSEAsyncWithGetHttpsApiRestShApiSEInput:(GetHttpsApiRestShApiSEInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSE) onCompleted(input)
 ```
 
 #### Parameters
@@ -615,21 +615,21 @@ function getHttpsApiRestShApiSecurityEncryptionAsyncWithGetHttpsApiRestShApiSecu
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiSecurityEncryptionInput *input = [[GetHttpsApiRestShApiSecurityEncryptionInput alloc]init];
+    GetHttpsApiRestShApiSEInput *input = [[GetHttpsApiRestShApiSEInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.data = @"data";
     input.method = @"method";
-    input.bit = 101;
+    input.bit = 148;
     input.contentType = @"Content-Type";
 
-    [self.encryption getHttpsApiRestShApiSecurityEncryptionAsyncWithGetHttpsApiRestShApiSecurityEncryptionInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityEncryptionResponseModel* response, NSError* error) { 
+    [self.encryption getHttpsApiRestShApiSEAsyncWithGetHttpsApiRestShApiSEInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSERModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_security_encryption_async_with_create_https_api_rest_sh_api_security_encryption_input"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.createHttpsApiRestShApiSecurityEncryptionAsyncWithCreateHttpsApiRestShApiSecurityEncryptionInput") createHttpsApiRestShApiSecurityEncryptionAsyncWithCreateHttpsApiRestShApiSecurityEncryptionInput
+### <a name="create_https_api_rest_sh_api_se_async_with_create_https_api_rest_sh_api_se_input"></a>![Method: ](https://apidocs.io/img/method.png ".EncryptionController.createHttpsApiRestShApiSEAsyncWithCreateHttpsApiRestShApiSEInput") createHttpsApiRestShApiSEAsyncWithCreateHttpsApiRestShApiSEInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -637,8 +637,8 @@ function getHttpsApiRestShApiSecurityEncryptionAsyncWithGetHttpsApiRestShApiSecu
 
 
 ```objc
-function createHttpsApiRestShApiSecurityEncryptionAsyncWithCreateHttpsApiRestShApiSecurityEncryptionInput:(CreateHttpsApiRestShApiSecurityEncryptionInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiSecurityEncryption) onCompleted(input)
+function createHttpsApiRestShApiSEAsyncWithCreateHttpsApiRestShApiSEInput:(CreateHttpsApiRestShApiSEInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSE) onCompleted(input)
 ```
 
 #### Parameters
@@ -656,11 +656,11 @@ function createHttpsApiRestShApiSecurityEncryptionAsyncWithCreateHttpsApiRestShA
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiSecurityEncryptionInput *input = [[CreateHttpsApiRestShApiSecurityEncryptionInput alloc]init];
-    input.body = [[HttpsApiRestShApiSecurityEncryptionRequestModel alloc]init];
+    CreateHttpsApiRestShApiSEInput *input = [[CreateHttpsApiRestShApiSEInput alloc]init];
+    input.body = [[HttpsApiRestShApiSEModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.encryption createHttpsApiRestShApiSecurityEncryptionAsyncWithCreateHttpsApiRestShApiSecurityEncryptionInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSecurityEncryptionResponseModel* response, NSError* error) { 
+    [self.encryption createHttpsApiRestShApiSEAsyncWithCreateHttpsApiRestShApiSEInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSERModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -675,7 +675,7 @@ function createHttpsApiRestShApiSecurityEncryptionAsyncWithCreateHttpsApiRestShA
 CDN* cDN = [[CDN alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_service_cdn_push_async_with_get_https_api_rest_sh_api_service_cdn_push_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiServiceCdnPushAsyncWithGetHttpsApiRestShApiServiceCdnPushInput") getHttpsApiRestShApiServiceCdnPushAsyncWithGetHttpsApiRestShApiServiceCdnPushInput
+### <a name="get_https_api_rest_sh_api_sc_push_async_with_get_https_api_rest_sh_api_sc_push_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiSCPushAsyncWithGetHttpsApiRestShApiSCPushInput") getHttpsApiRestShApiSCPushAsyncWithGetHttpsApiRestShApiSCPushInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -683,8 +683,8 @@ CDN* cDN = [[CDN alloc]init] ;
 
 
 ```objc
-function getHttpsApiRestShApiServiceCdnPushAsyncWithGetHttpsApiRestShApiServiceCdnPushInput:(GetHttpsApiRestShApiServiceCdnPushInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiServiceCdnPush) onCompleted(input)
+function getHttpsApiRestShApiSCPushAsyncWithGetHttpsApiRestShApiSCPushInput:(GetHttpsApiRestShApiSCPushInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSCPush) onCompleted(input)
 ```
 
 #### Parameters
@@ -705,20 +705,20 @@ function getHttpsApiRestShApiServiceCdnPushAsyncWithGetHttpsApiRestShApiServiceC
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiServiceCdnPushInput *input = [[GetHttpsApiRestShApiServiceCdnPushInput alloc]init];
+    GetHttpsApiRestShApiSCPushInput *input = [[GetHttpsApiRestShApiSCPushInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.cname = @"cname";
     input.file = @"file";
     input.contentType = @"Content-Type";
 
-    [self.cDN getHttpsApiRestShApiServiceCdnPushAsyncWithGetHttpsApiRestShApiServiceCdnPushInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceCdnPushResponseModel* response, NSError* error) { 
+    [self.cDN getHttpsApiRestShApiSCPushAsyncWithGetHttpsApiRestShApiSCPushInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPushRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_https_api_rest_sh_api_service_cdn_pull_async_with_get_https_api_rest_sh_api_service_cdn_pull_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiServiceCdnPullAsyncWithGetHttpsApiRestShApiServiceCdnPullInput") getHttpsApiRestShApiServiceCdnPullAsyncWithGetHttpsApiRestShApiServiceCdnPullInput
+### <a name="get_https_api_rest_sh_api_sc_pull_async_with_get_https_api_rest_sh_api_sc_pull_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.getHttpsApiRestShApiSCPullAsyncWithGetHttpsApiRestShApiSCPullInput") getHttpsApiRestShApiSCPullAsyncWithGetHttpsApiRestShApiSCPullInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -726,8 +726,8 @@ function getHttpsApiRestShApiServiceCdnPushAsyncWithGetHttpsApiRestShApiServiceC
 
 
 ```objc
-function getHttpsApiRestShApiServiceCdnPullAsyncWithGetHttpsApiRestShApiServiceCdnPullInput:(GetHttpsApiRestShApiServiceCdnPullInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiServiceCdnPull) onCompleted(input)
+function getHttpsApiRestShApiSCPullAsyncWithGetHttpsApiRestShApiSCPullInput:(GetHttpsApiRestShApiSCPullInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSCPull) onCompleted(input)
 ```
 
 #### Parameters
@@ -748,20 +748,20 @@ function getHttpsApiRestShApiServiceCdnPullAsyncWithGetHttpsApiRestShApiServiceC
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiServiceCdnPullInput *input = [[GetHttpsApiRestShApiServiceCdnPullInput alloc]init];
+    GetHttpsApiRestShApiSCPullInput *input = [[GetHttpsApiRestShApiSCPullInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.origin = @"origin";
     input.cname = @"cname";
     input.contentType = @"Content-Type";
 
-    [self.cDN getHttpsApiRestShApiServiceCdnPullAsyncWithGetHttpsApiRestShApiServiceCdnPullInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceCdnPullResponseModel* response, NSError* error) { 
+    [self.cDN getHttpsApiRestShApiSCPullAsyncWithGetHttpsApiRestShApiSCPullInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPullRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_cdn_push_async_with_create_https_api_rest_sh_api_service_cdn_push_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiServiceCdnPushAsyncWithCreateHttpsApiRestShApiServiceCdnPushInput") createHttpsApiRestShApiServiceCdnPushAsyncWithCreateHttpsApiRestShApiServiceCdnPushInput
+### <a name="create_https_api_rest_sh_api_sc_push_async_with_create_https_api_rest_sh_api_sc_push_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiSCPushAsyncWithCreateHttpsApiRestShApiSCPushInput") createHttpsApiRestShApiSCPushAsyncWithCreateHttpsApiRestShApiSCPushInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -769,8 +769,8 @@ function getHttpsApiRestShApiServiceCdnPullAsyncWithGetHttpsApiRestShApiServiceC
 
 
 ```objc
-function createHttpsApiRestShApiServiceCdnPushAsyncWithCreateHttpsApiRestShApiServiceCdnPushInput:(CreateHttpsApiRestShApiServiceCdnPushInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiServiceCdnPush) onCompleted(input)
+function createHttpsApiRestShApiSCPushAsyncWithCreateHttpsApiRestShApiSCPushInput:(CreateHttpsApiRestShApiSCPushInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSCPush) onCompleted(input)
 ```
 
 #### Parameters
@@ -788,17 +788,17 @@ function createHttpsApiRestShApiServiceCdnPushAsyncWithCreateHttpsApiRestShApiSe
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiServiceCdnPushInput *input = [[CreateHttpsApiRestShApiServiceCdnPushInput alloc]init];
-    input.body = [[HttpsApiRestShApiServiceCdnPushRequestModel alloc]init];
+    CreateHttpsApiRestShApiSCPushInput *input = [[CreateHttpsApiRestShApiSCPushInput alloc]init];
+    input.body = [[HttpsApiRestShApiSCPushModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.cDN createHttpsApiRestShApiServiceCdnPushAsyncWithCreateHttpsApiRestShApiServiceCdnPushInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceCdnPushResponseModel* response, NSError* error) { 
+    [self.cDN createHttpsApiRestShApiSCPushAsyncWithCreateHttpsApiRestShApiSCPushInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPushRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_cdn_pull_async_with_create_https_api_rest_sh_api_service_cdn_pull_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiServiceCdnPullAsyncWithCreateHttpsApiRestShApiServiceCdnPullInput") createHttpsApiRestShApiServiceCdnPullAsyncWithCreateHttpsApiRestShApiServiceCdnPullInput
+### <a name="create_https_api_rest_sh_api_sc_pull_async_with_create_https_api_rest_sh_api_sc_pull_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDNController.createHttpsApiRestShApiSCPullAsyncWithCreateHttpsApiRestShApiSCPullInput") createHttpsApiRestShApiSCPullAsyncWithCreateHttpsApiRestShApiSCPullInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -806,8 +806,8 @@ function createHttpsApiRestShApiServiceCdnPushAsyncWithCreateHttpsApiRestShApiSe
 
 
 ```objc
-function createHttpsApiRestShApiServiceCdnPullAsyncWithCreateHttpsApiRestShApiServiceCdnPullInput:(CreateHttpsApiRestShApiServiceCdnPullInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiServiceCdnPull) onCompleted(input)
+function createHttpsApiRestShApiSCPullAsyncWithCreateHttpsApiRestShApiSCPullInput:(CreateHttpsApiRestShApiSCPullInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSCPull) onCompleted(input)
 ```
 
 #### Parameters
@@ -825,11 +825,11 @@ function createHttpsApiRestShApiServiceCdnPullAsyncWithCreateHttpsApiRestShApiSe
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiServiceCdnPullInput *input = [[CreateHttpsApiRestShApiServiceCdnPullInput alloc]init];
-    input.body = [[HttpsApiRestShApiServiceCdnPullRequestModel alloc]init];
+    CreateHttpsApiRestShApiSCPullInput *input = [[CreateHttpsApiRestShApiSCPullInput alloc]init];
+    input.body = [[HttpsApiRestShApiSCPullModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.cDN createHttpsApiRestShApiServiceCdnPullAsyncWithCreateHttpsApiRestShApiServiceCdnPullInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceCdnPullResponseModel* response, NSError* error) { 
+    [self.cDN createHttpsApiRestShApiSCPullAsyncWithCreateHttpsApiRestShApiSCPullInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPullRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -844,7 +844,7 @@ function createHttpsApiRestShApiServiceCdnPullAsyncWithCreateHttpsApiRestShApiSe
 DNS* dNS = [[DNS alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_service_dns_configure_async_with_get_https_api_rest_sh_api_service_dns_configure_input"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiServiceDnsConfigureAsyncWithGetHttpsApiRestShApiServiceDnsConfigureInput") getHttpsApiRestShApiServiceDnsConfigureAsyncWithGetHttpsApiRestShApiServiceDnsConfigureInput
+### <a name="get_https_api_rest_sh_api_sdc_async_with_get_https_api_rest_sh_api_sdc_input"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiSDCAsyncWithGetHttpsApiRestShApiSDCInput") getHttpsApiRestShApiSDCAsyncWithGetHttpsApiRestShApiSDCInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -852,8 +852,8 @@ DNS* dNS = [[DNS alloc]init] ;
 
 
 ```objc
-function getHttpsApiRestShApiServiceDnsConfigureAsyncWithGetHttpsApiRestShApiServiceDnsConfigureInput:(GetHttpsApiRestShApiServiceDnsConfigureInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiServiceDnsConfigure) onCompleted(input)
+function getHttpsApiRestShApiSDCAsyncWithGetHttpsApiRestShApiSDCInput:(GetHttpsApiRestShApiSDCInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSDC) onCompleted(input)
 ```
 
 #### Parameters
@@ -874,20 +874,20 @@ function getHttpsApiRestShApiServiceDnsConfigureAsyncWithGetHttpsApiRestShApiSer
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiServiceDnsConfigureInput *input = [[GetHttpsApiRestShApiServiceDnsConfigureInput alloc]init];
+    GetHttpsApiRestShApiSDCInput *input = [[GetHttpsApiRestShApiSDCInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.domain = @"domain";
     input.records = @"records";
     input.contentType = @"Content-Type";
 
-    [self.dNS getHttpsApiRestShApiServiceDnsConfigureAsyncWithGetHttpsApiRestShApiServiceDnsConfigureInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceDnsConfigureResponseModel* response, NSError* error) { 
+    [self.dNS getHttpsApiRestShApiSDCAsyncWithGetHttpsApiRestShApiSDCInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDCRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_dns_configure_async_with_create_https_api_rest_sh_api_service_dns_configure_input"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiServiceDnsConfigureAsyncWithCreateHttpsApiRestShApiServiceDnsConfigureInput") createHttpsApiRestShApiServiceDnsConfigureAsyncWithCreateHttpsApiRestShApiServiceDnsConfigureInput
+### <a name="create_https_api_rest_sh_api_sdc_async_with_create_https_api_rest_sh_api_sdc_input"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiSDCAsyncWithCreateHttpsApiRestShApiSDCInput") createHttpsApiRestShApiSDCAsyncWithCreateHttpsApiRestShApiSDCInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -895,8 +895,8 @@ function getHttpsApiRestShApiServiceDnsConfigureAsyncWithGetHttpsApiRestShApiSer
 
 
 ```objc
-function createHttpsApiRestShApiServiceDnsConfigureAsyncWithCreateHttpsApiRestShApiServiceDnsConfigureInput:(CreateHttpsApiRestShApiServiceDnsConfigureInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiServiceDnsConfigure) onCompleted(input)
+function createHttpsApiRestShApiSDCAsyncWithCreateHttpsApiRestShApiSDCInput:(CreateHttpsApiRestShApiSDCInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSDC) onCompleted(input)
 ```
 
 #### Parameters
@@ -914,17 +914,17 @@ function createHttpsApiRestShApiServiceDnsConfigureAsyncWithCreateHttpsApiRestSh
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiServiceDnsConfigureInput *input = [[CreateHttpsApiRestShApiServiceDnsConfigureInput alloc]init];
-    input.body = [[HttpsApiRestShApiServiceDnsConfigureRequestModel alloc]init];
+    CreateHttpsApiRestShApiSDCInput *input = [[CreateHttpsApiRestShApiSDCInput alloc]init];
+    input.body = [[HttpsApiRestShApiSDCModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.dNS createHttpsApiRestShApiServiceDnsConfigureAsyncWithCreateHttpsApiRestShApiServiceDnsConfigureInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceDnsConfigureResponseModel* response, NSError* error) { 
+    [self.dNS createHttpsApiRestShApiSDCAsyncWithCreateHttpsApiRestShApiSDCInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDCRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_https_api_rest_sh_api_service_dns_add_async_with_get_https_api_rest_sh_api_service_dns_add_input"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiServiceDnsAddAsyncWithGetHttpsApiRestShApiServiceDnsAddInput") getHttpsApiRestShApiServiceDnsAddAsyncWithGetHttpsApiRestShApiServiceDnsAddInput
+### <a name="get_https_api_rest_sh_api_sda_async_with_get_https_api_rest_sh_api_sda_input"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.getHttpsApiRestShApiSDAAsyncWithGetHttpsApiRestShApiSDAInput") getHttpsApiRestShApiSDAAsyncWithGetHttpsApiRestShApiSDAInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -932,8 +932,8 @@ function createHttpsApiRestShApiServiceDnsConfigureAsyncWithCreateHttpsApiRestSh
 
 
 ```objc
-function getHttpsApiRestShApiServiceDnsAddAsyncWithGetHttpsApiRestShApiServiceDnsAddInput:(GetHttpsApiRestShApiServiceDnsAddInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiServiceDnsAdd) onCompleted(input)
+function getHttpsApiRestShApiSDAAsyncWithGetHttpsApiRestShApiSDAInput:(GetHttpsApiRestShApiSDAInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSDA) onCompleted(input)
 ```
 
 #### Parameters
@@ -953,19 +953,19 @@ function getHttpsApiRestShApiServiceDnsAddAsyncWithGetHttpsApiRestShApiServiceDn
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiServiceDnsAddInput *input = [[GetHttpsApiRestShApiServiceDnsAddInput alloc]init];
+    GetHttpsApiRestShApiSDAInput *input = [[GetHttpsApiRestShApiSDAInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.domain = @"domain";
     input.contentType = @"Content-Type";
 
-    [self.dNS getHttpsApiRestShApiServiceDnsAddAsyncWithGetHttpsApiRestShApiServiceDnsAddInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceDnsAddResponseModel* response, NSError* error) { 
+    [self.dNS getHttpsApiRestShApiSDAAsyncWithGetHttpsApiRestShApiSDAInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDARModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_dns_add_async_with_create_https_api_rest_sh_api_service_dns_add_input"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiServiceDnsAddAsyncWithCreateHttpsApiRestShApiServiceDnsAddInput") createHttpsApiRestShApiServiceDnsAddAsyncWithCreateHttpsApiRestShApiServiceDnsAddInput
+### <a name="create_https_api_rest_sh_api_sda_async_with_create_https_api_rest_sh_api_sda_input"></a>![Method: ](https://apidocs.io/img/method.png ".DNSController.createHttpsApiRestShApiSDAAsyncWithCreateHttpsApiRestShApiSDAInput") createHttpsApiRestShApiSDAAsyncWithCreateHttpsApiRestShApiSDAInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -973,8 +973,8 @@ function getHttpsApiRestShApiServiceDnsAddAsyncWithGetHttpsApiRestShApiServiceDn
 
 
 ```objc
-function createHttpsApiRestShApiServiceDnsAddAsyncWithCreateHttpsApiRestShApiServiceDnsAddInput:(CreateHttpsApiRestShApiServiceDnsAddInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiServiceDnsAdd) onCompleted(input)
+function createHttpsApiRestShApiSDAAsyncWithCreateHttpsApiRestShApiSDAInput:(CreateHttpsApiRestShApiSDAInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSDA) onCompleted(input)
 ```
 
 #### Parameters
@@ -992,11 +992,11 @@ function createHttpsApiRestShApiServiceDnsAddAsyncWithCreateHttpsApiRestShApiSer
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiServiceDnsAddInput *input = [[CreateHttpsApiRestShApiServiceDnsAddInput alloc]init];
-    input.body = [[HttpsApiRestShApiServiceDnsAddRequestModel alloc]init];
+    CreateHttpsApiRestShApiSDAInput *input = [[CreateHttpsApiRestShApiSDAInput alloc]init];
+    input.body = [[HttpsApiRestShApiSDAModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.dNS createHttpsApiRestShApiServiceDnsAddAsyncWithCreateHttpsApiRestShApiServiceDnsAddInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceDnsAddResponseModel* response, NSError* error) { 
+    [self.dNS createHttpsApiRestShApiSDAAsyncWithCreateHttpsApiRestShApiSDAInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDARModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1011,7 +1011,7 @@ function createHttpsApiRestShApiServiceDnsAddAsyncWithCreateHttpsApiRestShApiSer
 CodeObfuscation* codeObfuscation = [[CodeObfuscation alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_service_obfuscation_async_with_get_https_api_rest_sh_api_service_obfuscation_input"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.getHttpsApiRestShApiServiceObfuscationAsyncWithGetHttpsApiRestShApiServiceObfuscationInput") getHttpsApiRestShApiServiceObfuscationAsyncWithGetHttpsApiRestShApiServiceObfuscationInput
+### <a name="get_https_api_rest_sh_api_so_async_with_get_https_api_rest_sh_api_so_input"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.getHttpsApiRestShApiSOAsyncWithGetHttpsApiRestShApiSOInput") getHttpsApiRestShApiSOAsyncWithGetHttpsApiRestShApiSOInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1019,8 +1019,8 @@ CodeObfuscation* codeObfuscation = [[CodeObfuscation alloc]init] ;
 
 
 ```objc
-function getHttpsApiRestShApiServiceObfuscationAsyncWithGetHttpsApiRestShApiServiceObfuscationInput:(GetHttpsApiRestShApiServiceObfuscationInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiServiceObfuscation) onCompleted(input)
+function getHttpsApiRestShApiSOAsyncWithGetHttpsApiRestShApiSOInput:(GetHttpsApiRestShApiSOInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSO) onCompleted(input)
 ```
 
 #### Parameters
@@ -1040,19 +1040,19 @@ function getHttpsApiRestShApiServiceObfuscationAsyncWithGetHttpsApiRestShApiServ
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiServiceObfuscationInput *input = [[GetHttpsApiRestShApiServiceObfuscationInput alloc]init];
+    GetHttpsApiRestShApiSOInput *input = [[GetHttpsApiRestShApiSOInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.app = @"app";
     input.contentType = @"Content-Type";
 
-    [self.codeObfuscation getHttpsApiRestShApiServiceObfuscationAsyncWithGetHttpsApiRestShApiServiceObfuscationInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceObfuscationResponseModel* response, NSError* error) { 
+    [self.codeObfuscation getHttpsApiRestShApiSOAsyncWithGetHttpsApiRestShApiSOInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSORModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_obfuscation_async_with_create_https_api_rest_sh_api_service_obfuscation_input"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.createHttpsApiRestShApiServiceObfuscationAsyncWithCreateHttpsApiRestShApiServiceObfuscationInput") createHttpsApiRestShApiServiceObfuscationAsyncWithCreateHttpsApiRestShApiServiceObfuscationInput
+### <a name="create_https_api_rest_sh_api_so_async_with_create_https_api_rest_sh_api_so_input"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscationController.createHttpsApiRestShApiSOAsyncWithCreateHttpsApiRestShApiSOInput") createHttpsApiRestShApiSOAsyncWithCreateHttpsApiRestShApiSOInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1060,8 +1060,8 @@ function getHttpsApiRestShApiServiceObfuscationAsyncWithGetHttpsApiRestShApiServ
 
 
 ```objc
-function createHttpsApiRestShApiServiceObfuscationAsyncWithCreateHttpsApiRestShApiServiceObfuscationInput:(CreateHttpsApiRestShApiServiceObfuscationInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiServiceObfuscation) onCompleted(input)
+function createHttpsApiRestShApiSOAsyncWithCreateHttpsApiRestShApiSOInput:(CreateHttpsApiRestShApiSOInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSO) onCompleted(input)
 ```
 
 #### Parameters
@@ -1079,11 +1079,11 @@ function createHttpsApiRestShApiServiceObfuscationAsyncWithCreateHttpsApiRestShA
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiServiceObfuscationInput *input = [[CreateHttpsApiRestShApiServiceObfuscationInput alloc]init];
-    input.body = [[HttpsApiRestShApiServiceObfuscationRequestModel alloc]init];
+    CreateHttpsApiRestShApiSOInput *input = [[CreateHttpsApiRestShApiSOInput alloc]init];
+    input.body = [[HttpsApiRestShApiSOModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.codeObfuscation createHttpsApiRestShApiServiceObfuscationAsyncWithCreateHttpsApiRestShApiServiceObfuscationInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceObfuscationResponseModel* response, NSError* error) { 
+    [self.codeObfuscation createHttpsApiRestShApiSOAsyncWithCreateHttpsApiRestShApiSOInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSORModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1098,7 +1098,7 @@ function createHttpsApiRestShApiServiceObfuscationAsyncWithCreateHttpsApiRestShA
 Hosting* hosting = [[Hosting alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_service_hosting_async_with_get_https_api_rest_sh_api_service_hosting_input"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.getHttpsApiRestShApiServiceHostingAsyncWithGetHttpsApiRestShApiServiceHostingInput") getHttpsApiRestShApiServiceHostingAsyncWithGetHttpsApiRestShApiServiceHostingInput
+### <a name="get_https_api_rest_sh_api_sh_async_with_get_https_api_rest_sh_api_sh_input"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.getHttpsApiRestShApiSHAsyncWithGetHttpsApiRestShApiSHInput") getHttpsApiRestShApiSHAsyncWithGetHttpsApiRestShApiSHInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1106,8 +1106,8 @@ Hosting* hosting = [[Hosting alloc]init] ;
 
 
 ```objc
-function getHttpsApiRestShApiServiceHostingAsyncWithGetHttpsApiRestShApiServiceHostingInput:(GetHttpsApiRestShApiServiceHostingInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiServiceHosting) onCompleted(input)
+function getHttpsApiRestShApiSHAsyncWithGetHttpsApiRestShApiSHInput:(GetHttpsApiRestShApiSHInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSH) onCompleted(input)
 ```
 
 #### Parameters
@@ -1128,20 +1128,20 @@ function getHttpsApiRestShApiServiceHostingAsyncWithGetHttpsApiRestShApiServiceH
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiServiceHostingInput *input = [[GetHttpsApiRestShApiServiceHostingInput alloc]init];
+    GetHttpsApiRestShApiSHInput *input = [[GetHttpsApiRestShApiSHInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.app = @"app";
     input.domain = @"domain";
     input.contentType = @"Content-Type";
 
-    [self.hosting getHttpsApiRestShApiServiceHostingAsyncWithGetHttpsApiRestShApiServiceHostingInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceHostingResponseModel* response, NSError* error) { 
+    [self.hosting getHttpsApiRestShApiSHAsyncWithGetHttpsApiRestShApiSHInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSHRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_service_hosting_async_with_create_https_api_rest_sh_api_service_hosting_input"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.createHttpsApiRestShApiServiceHostingAsyncWithCreateHttpsApiRestShApiServiceHostingInput") createHttpsApiRestShApiServiceHostingAsyncWithCreateHttpsApiRestShApiServiceHostingInput
+### <a name="create_https_api_rest_sh_api_sh_async_with_create_https_api_rest_sh_api_sh_input"></a>![Method: ](https://apidocs.io/img/method.png ".HostingController.createHttpsApiRestShApiSHAsyncWithCreateHttpsApiRestShApiSHInput") createHttpsApiRestShApiSHAsyncWithCreateHttpsApiRestShApiSHInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1149,8 +1149,8 @@ function getHttpsApiRestShApiServiceHostingAsyncWithGetHttpsApiRestShApiServiceH
 
 
 ```objc
-function createHttpsApiRestShApiServiceHostingAsyncWithCreateHttpsApiRestShApiServiceHostingInput:(CreateHttpsApiRestShApiServiceHostingInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiServiceHosting) onCompleted(input)
+function createHttpsApiRestShApiSHAsyncWithCreateHttpsApiRestShApiSHInput:(CreateHttpsApiRestShApiSHInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiSH) onCompleted(input)
 ```
 
 #### Parameters
@@ -1168,11 +1168,11 @@ function createHttpsApiRestShApiServiceHostingAsyncWithCreateHttpsApiRestShApiSe
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiServiceHostingInput *input = [[CreateHttpsApiRestShApiServiceHostingInput alloc]init];
-    input.body = [[HttpsApiRestShApiServiceHostingRequestModel alloc]init];
+    CreateHttpsApiRestShApiSHInput *input = [[CreateHttpsApiRestShApiSHInput alloc]init];
+    input.body = [[HttpsApiRestShApiSHModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.hosting createHttpsApiRestShApiServiceHostingAsyncWithCreateHttpsApiRestShApiServiceHostingInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiServiceHostingResponseModel* response, NSError* error) { 
+    [self.hosting createHttpsApiRestShApiSHAsyncWithCreateHttpsApiRestShApiSHInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSHRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1187,7 +1187,7 @@ function createHttpsApiRestShApiServiceHostingAsyncWithCreateHttpsApiRestShApiSe
 DataManipulationConversionSortingAndCompressionAPI* dataManipulationConversionSortingAndCompressionAPI = [[DataManipulationConversionSortingAndCompressionAPI alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_data_async_with_get_https_api_rest_sh_api_data_input"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.getHttpsApiRestShApiDataAsyncWithGetHttpsApiRestShApiDataInput") getHttpsApiRestShApiDataAsyncWithGetHttpsApiRestShApiDataInput
+### <a name="get_https_api_rest_sh_api_d_async_with_get_https_api_rest_sh_api_d_input"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.getHttpsApiRestShApiDAsyncWithGetHttpsApiRestShApiDInput") getHttpsApiRestShApiDAsyncWithGetHttpsApiRestShApiDInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1195,8 +1195,8 @@ DataManipulationConversionSortingAndCompressionAPI* dataManipulationConversionSo
 
 
 ```objc
-function getHttpsApiRestShApiDataAsyncWithGetHttpsApiRestShApiDataInput:(GetHttpsApiRestShApiDataInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiData) onCompleted(input)
+function getHttpsApiRestShApiDAsyncWithGetHttpsApiRestShApiDInput:(GetHttpsApiRestShApiDInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiD) onCompleted(input)
 ```
 
 #### Parameters
@@ -1218,7 +1218,7 @@ function getHttpsApiRestShApiDataAsyncWithGetHttpsApiRestShApiDataInput:(GetHttp
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiDataInput *input = [[GetHttpsApiRestShApiDataInput alloc]init];
+    GetHttpsApiRestShApiDInput *input = [[GetHttpsApiRestShApiDInput alloc]init];
     input.key = @"API";
     input.uid = @"UID";
     input.user = @"UID";
@@ -1226,13 +1226,13 @@ function getHttpsApiRestShApiDataAsyncWithGetHttpsApiRestShApiDataInput:(GetHttp
     input.data = @"https://static.yourcdn.com/data.file";
     input.contentType = @"application/json";
 
-    [self.dataManipulationConversionSortingAndCompressionAPI getHttpsApiRestShApiDataAsyncWithGetHttpsApiRestShApiDataInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiDataResponseModel* response, NSError* error) { 
+    [self.dataManipulationConversionSortingAndCompressionAPI getHttpsApiRestShApiDAsyncWithGetHttpsApiRestShApiDInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiDRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_data_async_with_create_https_api_rest_sh_api_data_input"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.createHttpsApiRestShApiDataAsyncWithCreateHttpsApiRestShApiDataInput") createHttpsApiRestShApiDataAsyncWithCreateHttpsApiRestShApiDataInput
+### <a name="create_https_api_rest_sh_api_d_async_with_create_https_api_rest_sh_api_d_input"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPIController.createHttpsApiRestShApiDAsyncWithCreateHttpsApiRestShApiDInput") createHttpsApiRestShApiDAsyncWithCreateHttpsApiRestShApiDInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1240,8 +1240,8 @@ function getHttpsApiRestShApiDataAsyncWithGetHttpsApiRestShApiDataInput:(GetHttp
 
 
 ```objc
-function createHttpsApiRestShApiDataAsyncWithCreateHttpsApiRestShApiDataInput:(CreateHttpsApiRestShApiDataInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiData) onCompleted(input)
+function createHttpsApiRestShApiDAsyncWithCreateHttpsApiRestShApiDInput:(CreateHttpsApiRestShApiDInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiD) onCompleted(input)
 ```
 
 #### Parameters
@@ -1259,8 +1259,8 @@ function createHttpsApiRestShApiDataAsyncWithCreateHttpsApiRestShApiDataInput:(C
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiDataInput *input = [[CreateHttpsApiRestShApiDataInput alloc]init];
-    input.body = (HttpsApiRestShApiDataRequestModel*) [APIHelper jsonDeserialize: @"{
+    CreateHttpsApiRestShApiDInput *input = [[CreateHttpsApiRestShApiDInput alloc]init];
+    input.body = (HttpsApiRestShApiDModel*) [APIHelper jsonDeserialize: @"{
   \"key\": \"YOUR API KEY\",
   \"uid\": \"YOUR USER ID\",
   \"user\": \"USERS EMAIL OR USERNAME\",
@@ -1271,10 +1271,10 @@ function createHttpsApiRestShApiDataAsyncWithCreateHttpsApiRestShApiDataInput:(C
   \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",
   \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"
 }"
-                toClass: HttpsApiRestShApiDataRequestModel.class];
+                toClass: HttpsApiRestShApiDModel.class];
     input.contentType = @"application/json";
 
-    [self.dataManipulationConversionSortingAndCompressionAPI createHttpsApiRestShApiDataAsyncWithCreateHttpsApiRestShApiDataInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiDataResponseModel* response, NSError* error) { 
+    [self.dataManipulationConversionSortingAndCompressionAPI createHttpsApiRestShApiDAsyncWithCreateHttpsApiRestShApiDInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiDRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1289,7 +1289,7 @@ function createHttpsApiRestShApiDataAsyncWithCreateHttpsApiRestShApiDataInput:(C
 ImageManipulationAndModerationAPI* imageManipulationAndModerationAPI = [[ImageManipulationAndModerationAPI alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_image_async_with_get_https_api_rest_sh_api_image_input"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.getHttpsApiRestShApiImageAsyncWithGetHttpsApiRestShApiImageInput") getHttpsApiRestShApiImageAsyncWithGetHttpsApiRestShApiImageInput
+### <a name="get_https_api_rest_sh_api_i_async_with_get_https_api_rest_sh_api_i_input"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.getHttpsApiRestShApiIAsyncWithGetHttpsApiRestShApiIInput") getHttpsApiRestShApiIAsyncWithGetHttpsApiRestShApiIInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1297,8 +1297,8 @@ ImageManipulationAndModerationAPI* imageManipulationAndModerationAPI = [[ImageMa
 
 
 ```objc
-function getHttpsApiRestShApiImageAsyncWithGetHttpsApiRestShApiImageInput:(GetHttpsApiRestShApiImageInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiImage) onCompleted(input)
+function getHttpsApiRestShApiIAsyncWithGetHttpsApiRestShApiIInput:(GetHttpsApiRestShApiIInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiI) onCompleted(input)
 ```
 
 #### Parameters
@@ -1319,20 +1319,20 @@ function getHttpsApiRestShApiImageAsyncWithGetHttpsApiRestShApiImageInput:(GetHt
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiImageInput *input = [[GetHttpsApiRestShApiImageInput alloc]init];
+    GetHttpsApiRestShApiIInput *input = [[GetHttpsApiRestShApiIInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.image = @"image";
     input.transform = @"transform";
     input.contentType = @"Content-Type";
 
-    [self.imageManipulationAndModerationAPI getHttpsApiRestShApiImageAsyncWithGetHttpsApiRestShApiImageInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiImageResponseModel* response, NSError* error) { 
+    [self.imageManipulationAndModerationAPI getHttpsApiRestShApiIAsyncWithGetHttpsApiRestShApiIInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiIRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_image_async_with_create_https_api_rest_sh_api_image_input"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.createHttpsApiRestShApiImageAsyncWithCreateHttpsApiRestShApiImageInput") createHttpsApiRestShApiImageAsyncWithCreateHttpsApiRestShApiImageInput
+### <a name="create_https_api_rest_sh_api_i_async_with_create_https_api_rest_sh_api_i_input"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPIController.createHttpsApiRestShApiIAsyncWithCreateHttpsApiRestShApiIInput") createHttpsApiRestShApiIAsyncWithCreateHttpsApiRestShApiIInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1340,8 +1340,8 @@ function getHttpsApiRestShApiImageAsyncWithGetHttpsApiRestShApiImageInput:(GetHt
 
 
 ```objc
-function createHttpsApiRestShApiImageAsyncWithCreateHttpsApiRestShApiImageInput:(CreateHttpsApiRestShApiImageInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiImage) onCompleted(input)
+function createHttpsApiRestShApiIAsyncWithCreateHttpsApiRestShApiIInput:(CreateHttpsApiRestShApiIInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiI) onCompleted(input)
 ```
 
 #### Parameters
@@ -1359,11 +1359,11 @@ function createHttpsApiRestShApiImageAsyncWithCreateHttpsApiRestShApiImageInput:
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiImageInput *input = [[CreateHttpsApiRestShApiImageInput alloc]init];
-    input.body = [[HttpsApiRestShApiImageRequestModel alloc]init];
+    CreateHttpsApiRestShApiIInput *input = [[CreateHttpsApiRestShApiIInput alloc]init];
+    input.body = [[HttpsApiRestShApiIModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.imageManipulationAndModerationAPI createHttpsApiRestShApiImageAsyncWithCreateHttpsApiRestShApiImageInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiImageResponseModel* response, NSError* error) { 
+    [self.imageManipulationAndModerationAPI createHttpsApiRestShApiIAsyncWithCreateHttpsApiRestShApiIInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiIRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1378,7 +1378,7 @@ function createHttpsApiRestShApiImageAsyncWithCreateHttpsApiRestShApiImageInput:
 Verification* verification = [[Verification alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_verify_address_async_with_get_https_api_rest_sh_api_verify_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVerifyAddressAsyncWithGetHttpsApiRestShApiVerifyAddressInput") getHttpsApiRestShApiVerifyAddressAsyncWithGetHttpsApiRestShApiVerifyAddressInput
+### <a name="get_https_api_rest_sh_api_va_async_with_get_https_api_rest_sh_api_va_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVAAsyncWithGetHttpsApiRestShApiVAInput") getHttpsApiRestShApiVAAsyncWithGetHttpsApiRestShApiVAInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1386,8 +1386,8 @@ Verification* verification = [[Verification alloc]init] ;
 
 
 ```objc
-function getHttpsApiRestShApiVerifyAddressAsyncWithGetHttpsApiRestShApiVerifyAddressInput:(GetHttpsApiRestShApiVerifyAddressInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiVerifyAddress) onCompleted(input)
+function getHttpsApiRestShApiVAAsyncWithGetHttpsApiRestShApiVAInput:(GetHttpsApiRestShApiVAInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiVA) onCompleted(input)
 ```
 
 #### Parameters
@@ -1412,7 +1412,7 @@ function getHttpsApiRestShApiVerifyAddressAsyncWithGetHttpsApiRestShApiVerifyAdd
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiVerifyAddressInput *input = [[GetHttpsApiRestShApiVerifyAddressInput alloc]init];
+    GetHttpsApiRestShApiVAInput *input = [[GetHttpsApiRestShApiVAInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.user = @"user";
@@ -1420,16 +1420,16 @@ function getHttpsApiRestShApiVerifyAddressAsyncWithGetHttpsApiRestShApiVerifyAdd
     input.sa = @"sa";
     input.c = @"c";
     input.s = @"s";
-    input.z = 192;
+    input.z = 148;
     input.contentType = @"Content-Type";
 
-    [self.verification getHttpsApiRestShApiVerifyAddressAsyncWithGetHttpsApiRestShApiVerifyAddressInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVerifyAddressResponseModel* response, NSError* error) { 
+    [self.verification getHttpsApiRestShApiVAAsyncWithGetHttpsApiRestShApiVAInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVARModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_verify_address_async_with_create_https_api_rest_sh_api_verify_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVerifyAddressAsyncWithCreateHttpsApiRestShApiVerifyAddressInput") createHttpsApiRestShApiVerifyAddressAsyncWithCreateHttpsApiRestShApiVerifyAddressInput
+### <a name="create_https_api_rest_sh_api_va_async_with_create_https_api_rest_sh_api_va_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVAAsyncWithCreateHttpsApiRestShApiVAInput") createHttpsApiRestShApiVAAsyncWithCreateHttpsApiRestShApiVAInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1437,8 +1437,8 @@ function getHttpsApiRestShApiVerifyAddressAsyncWithGetHttpsApiRestShApiVerifyAdd
 
 
 ```objc
-function createHttpsApiRestShApiVerifyAddressAsyncWithCreateHttpsApiRestShApiVerifyAddressInput:(CreateHttpsApiRestShApiVerifyAddressInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiVerifyAddress) onCompleted(input)
+function createHttpsApiRestShApiVAAsyncWithCreateHttpsApiRestShApiVAInput:(CreateHttpsApiRestShApiVAInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiVA) onCompleted(input)
 ```
 
 #### Parameters
@@ -1456,17 +1456,17 @@ function createHttpsApiRestShApiVerifyAddressAsyncWithCreateHttpsApiRestShApiVer
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiVerifyAddressInput *input = [[CreateHttpsApiRestShApiVerifyAddressInput alloc]init];
-    input.body = [[HttpsApiRestShApiVerifyAddressRequestModel alloc]init];
+    CreateHttpsApiRestShApiVAInput *input = [[CreateHttpsApiRestShApiVAInput alloc]init];
+    input.body = [[HttpsApiRestShApiVAModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.verification createHttpsApiRestShApiVerifyAddressAsyncWithCreateHttpsApiRestShApiVerifyAddressInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVerifyAddressResponseModel* response, NSError* error) { 
+    [self.verification createHttpsApiRestShApiVAAsyncWithCreateHttpsApiRestShApiVAInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVARModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_https_api_rest_sh_api_verify_user_async_with_get_https_api_rest_sh_api_verify_user_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVerifyUserAsyncWithGetHttpsApiRestShApiVerifyUserInput") getHttpsApiRestShApiVerifyUserAsyncWithGetHttpsApiRestShApiVerifyUserInput
+### <a name="get_https_api_rest_sh_api_vu_async_with_get_https_api_rest_sh_api_vu_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVUAsyncWithGetHttpsApiRestShApiVUInput") getHttpsApiRestShApiVUAsyncWithGetHttpsApiRestShApiVUInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1474,8 +1474,8 @@ function createHttpsApiRestShApiVerifyAddressAsyncWithCreateHttpsApiRestShApiVer
 
 
 ```objc
-function getHttpsApiRestShApiVerifyUserAsyncWithGetHttpsApiRestShApiVerifyUserInput:(GetHttpsApiRestShApiVerifyUserInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiVerifyUser) onCompleted(input)
+function getHttpsApiRestShApiVUAsyncWithGetHttpsApiRestShApiVUInput:(GetHttpsApiRestShApiVUInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiVU) onCompleted(input)
 ```
 
 #### Parameters
@@ -1496,20 +1496,20 @@ function getHttpsApiRestShApiVerifyUserAsyncWithGetHttpsApiRestShApiVerifyUserIn
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiVerifyUserInput *input = [[GetHttpsApiRestShApiVerifyUserInput alloc]init];
+    GetHttpsApiRestShApiVUInput *input = [[GetHttpsApiRestShApiVUInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.user = @"user";
     input.code = @"code";
     input.contentType = @"Content-Type";
 
-    [self.verification getHttpsApiRestShApiVerifyUserAsyncWithGetHttpsApiRestShApiVerifyUserInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVerifyUserResponseModel* response, NSError* error) { 
+    [self.verification getHttpsApiRestShApiVUAsyncWithGetHttpsApiRestShApiVUInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVURModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_verify_user_async_with_create_https_api_rest_sh_api_verify_user_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVerifyUserAsyncWithCreateHttpsApiRestShApiVerifyUserInput") createHttpsApiRestShApiVerifyUserAsyncWithCreateHttpsApiRestShApiVerifyUserInput
+### <a name="create_https_api_rest_sh_api_vu_async_with_create_https_api_rest_sh_api_vu_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVUAsyncWithCreateHttpsApiRestShApiVUInput") createHttpsApiRestShApiVUAsyncWithCreateHttpsApiRestShApiVUInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1517,8 +1517,8 @@ function getHttpsApiRestShApiVerifyUserAsyncWithGetHttpsApiRestShApiVerifyUserIn
 
 
 ```objc
-function createHttpsApiRestShApiVerifyUserAsyncWithCreateHttpsApiRestShApiVerifyUserInput:(CreateHttpsApiRestShApiVerifyUserInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiVerifyUser) onCompleted(input)
+function createHttpsApiRestShApiVUAsyncWithCreateHttpsApiRestShApiVUInput:(CreateHttpsApiRestShApiVUInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiVU) onCompleted(input)
 ```
 
 #### Parameters
@@ -1536,17 +1536,17 @@ function createHttpsApiRestShApiVerifyUserAsyncWithCreateHttpsApiRestShApiVerify
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiVerifyUserInput *input = [[CreateHttpsApiRestShApiVerifyUserInput alloc]init];
-    input.body = [[HttpsApiRestShApiVerifyUserRequestModel alloc]init];
+    CreateHttpsApiRestShApiVUInput *input = [[CreateHttpsApiRestShApiVUInput alloc]init];
+    input.body = [[HttpsApiRestShApiVUModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.verification createHttpsApiRestShApiVerifyUserAsyncWithCreateHttpsApiRestShApiVerifyUserInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVerifyUserResponseModel* response, NSError* error) { 
+    [self.verification createHttpsApiRestShApiVUAsyncWithCreateHttpsApiRestShApiVUInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVURModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_https_api_rest_sh_api_verify_async_with_get_https_api_rest_sh_api_verify_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVerifyAsyncWithGetHttpsApiRestShApiVerifyInput") getHttpsApiRestShApiVerifyAsyncWithGetHttpsApiRestShApiVerifyInput
+### <a name="get_https_api_rest_sh_api_v_async_with_get_https_api_rest_sh_api_v_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.getHttpsApiRestShApiVAsyncWithGetHttpsApiRestShApiVInput") getHttpsApiRestShApiVAsyncWithGetHttpsApiRestShApiVInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1554,8 +1554,8 @@ function createHttpsApiRestShApiVerifyUserAsyncWithCreateHttpsApiRestShApiVerify
 
 
 ```objc
-function getHttpsApiRestShApiVerifyAsyncWithGetHttpsApiRestShApiVerifyInput:(GetHttpsApiRestShApiVerifyInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiVerify) onCompleted(input)
+function getHttpsApiRestShApiVAsyncWithGetHttpsApiRestShApiVInput:(GetHttpsApiRestShApiVInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiV) onCompleted(input)
 ```
 
 #### Parameters
@@ -1575,19 +1575,19 @@ function getHttpsApiRestShApiVerifyAsyncWithGetHttpsApiRestShApiVerifyInput:(Get
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiVerifyInput *input = [[GetHttpsApiRestShApiVerifyInput alloc]init];
+    GetHttpsApiRestShApiVInput *input = [[GetHttpsApiRestShApiVInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.to = @"to";
     input.contentType = @"Content-Type";
 
-    [self.verification getHttpsApiRestShApiVerifyAsyncWithGetHttpsApiRestShApiVerifyInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVerifyResponseModel* response, NSError* error) { 
+    [self.verification getHttpsApiRestShApiVAsyncWithGetHttpsApiRestShApiVInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_verify_async_with_create_https_api_rest_sh_api_verify_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVerifyAsyncWithCreateHttpsApiRestShApiVerifyInput") createHttpsApiRestShApiVerifyAsyncWithCreateHttpsApiRestShApiVerifyInput
+### <a name="create_https_api_rest_sh_api_v_async_with_create_https_api_rest_sh_api_v_input"></a>![Method: ](https://apidocs.io/img/method.png ".VerificationController.createHttpsApiRestShApiVAsyncWithCreateHttpsApiRestShApiVInput") createHttpsApiRestShApiVAsyncWithCreateHttpsApiRestShApiVInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1595,8 +1595,8 @@ function getHttpsApiRestShApiVerifyAsyncWithGetHttpsApiRestShApiVerifyInput:(Get
 
 
 ```objc
-function createHttpsApiRestShApiVerifyAsyncWithCreateHttpsApiRestShApiVerifyInput:(CreateHttpsApiRestShApiVerifyInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiVerify) onCompleted(input)
+function createHttpsApiRestShApiVAsyncWithCreateHttpsApiRestShApiVInput:(CreateHttpsApiRestShApiVInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiV) onCompleted(input)
 ```
 
 #### Parameters
@@ -1614,11 +1614,11 @@ function createHttpsApiRestShApiVerifyAsyncWithCreateHttpsApiRestShApiVerifyInpu
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiVerifyInput *input = [[CreateHttpsApiRestShApiVerifyInput alloc]init];
-    input.body = [[HttpsApiRestShApiVerifyRequestModel alloc]init];
+    CreateHttpsApiRestShApiVInput *input = [[CreateHttpsApiRestShApiVInput alloc]init];
+    input.body = [[HttpsApiRestShApiVModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.verification createHttpsApiRestShApiVerifyAsyncWithCreateHttpsApiRestShApiVerifyInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVerifyResponseModel* response, NSError* error) { 
+    [self.verification createHttpsApiRestShApiVAsyncWithCreateHttpsApiRestShApiVInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1633,7 +1633,7 @@ function createHttpsApiRestShApiVerifyAsyncWithCreateHttpsApiRestShApiVerifyInpu
 TwoFactorAuthenticationAPI* twoFactorAuthenticationAPI = [[TwoFactorAuthenticationAPI alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api2fa_token_async_with_get_https_api_rest_sh_api2fa_token_input"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faTokenAsyncWithGetHttpsApiRestShApi2faTokenInput") getHttpsApiRestShApi2faTokenAsyncWithGetHttpsApiRestShApi2faTokenInput
+### <a name="get_https_api_rest_sh_api2fa_t_async_with_get_https_api_rest_sh_api2fa_t_input"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.getHttpsApiRestShApi2faTAsyncWithGetHttpsApiRestShApi2faTInput") getHttpsApiRestShApi2faTAsyncWithGetHttpsApiRestShApi2faTInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1641,8 +1641,8 @@ TwoFactorAuthenticationAPI* twoFactorAuthenticationAPI = [[TwoFactorAuthenticati
 
 
 ```objc
-function getHttpsApiRestShApi2faTokenAsyncWithGetHttpsApiRestShApi2faTokenInput:(GetHttpsApiRestShApi2faTokenInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApi2faToken) onCompleted(input)
+function getHttpsApiRestShApi2faTAsyncWithGetHttpsApiRestShApi2faTInput:(GetHttpsApiRestShApi2faTInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApi2faT) onCompleted(input)
 ```
 
 #### Parameters
@@ -1663,20 +1663,20 @@ function getHttpsApiRestShApi2faTokenAsyncWithGetHttpsApiRestShApi2faTokenInput:
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApi2faTokenInput *input = [[GetHttpsApiRestShApi2faTokenInput alloc]init];
+    GetHttpsApiRestShApi2faTInput *input = [[GetHttpsApiRestShApi2faTInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.user = @"user";
     input.code = @"code";
     input.contentType = @"Content-Type";
 
-    [self.twoFactorAuthenticationAPI getHttpsApiRestShApi2faTokenAsyncWithGetHttpsApiRestShApi2faTokenInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faTokenResponseModel* response, NSError* error) { 
+    [self.twoFactorAuthenticationAPI getHttpsApiRestShApi2faTAsyncWithGetHttpsApiRestShApi2faTInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faTRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api2fa_token_async_with_create_https_api_rest_sh_api2fa_token_input"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faTokenAsyncWithCreateHttpsApiRestShApi2faTokenInput") createHttpsApiRestShApi2faTokenAsyncWithCreateHttpsApiRestShApi2faTokenInput
+### <a name="create_https_api_rest_sh_api2fa_t_async_with_create_https_api_rest_sh_api2fa_t_input"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPIController.createHttpsApiRestShApi2faTAsyncWithCreateHttpsApiRestShApi2faTInput") createHttpsApiRestShApi2faTAsyncWithCreateHttpsApiRestShApi2faTInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1684,8 +1684,8 @@ function getHttpsApiRestShApi2faTokenAsyncWithGetHttpsApiRestShApi2faTokenInput:
 
 
 ```objc
-function createHttpsApiRestShApi2faTokenAsyncWithCreateHttpsApiRestShApi2faTokenInput:(CreateHttpsApiRestShApi2faTokenInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApi2faToken) onCompleted(input)
+function createHttpsApiRestShApi2faTAsyncWithCreateHttpsApiRestShApi2faTInput:(CreateHttpsApiRestShApi2faTInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApi2faT) onCompleted(input)
 ```
 
 #### Parameters
@@ -1703,11 +1703,11 @@ function createHttpsApiRestShApi2faTokenAsyncWithCreateHttpsApiRestShApi2faToken
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApi2faTokenInput *input = [[CreateHttpsApiRestShApi2faTokenInput alloc]init];
-    input.body = [[HttpsApiRestShApi2faTokenRequestModel alloc]init];
+    CreateHttpsApiRestShApi2faTInput *input = [[CreateHttpsApiRestShApi2faTInput alloc]init];
+    input.body = [[HttpsApiRestShApi2faTModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.twoFactorAuthenticationAPI createHttpsApiRestShApi2faTokenAsyncWithCreateHttpsApiRestShApi2faTokenInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faTokenResponseModel* response, NSError* error) { 
+    [self.twoFactorAuthenticationAPI createHttpsApiRestShApi2faTAsyncWithCreateHttpsApiRestShApi2faTInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faTRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1748,7 +1748,7 @@ function getHttpsApiRestShApi2faAsyncWithGetHttpsApiRestShApi2faInput:(GetHttpsA
     input.to = @"to";
     input.contentType = @"Content-Type";
 
-    [self.twoFactorAuthenticationAPI getHttpsApiRestShApi2faAsyncWithGetHttpsApiRestShApi2faInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faResponseModel* response, NSError* error) { 
+    [self.twoFactorAuthenticationAPI getHttpsApiRestShApi2faAsyncWithGetHttpsApiRestShApi2faInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1782,10 +1782,10 @@ function createHttpsApiRestShApi2faAsyncWithCreateHttpsApiRestShApi2faInput:(Cre
 ```objc
     // Parameters for the API call
     CreateHttpsApiRestShApi2faInput *input = [[CreateHttpsApiRestShApi2faInput alloc]init];
-    input.body = [[HttpsApiRestShApi2faRequestModel alloc]init];
+    input.body = [[HttpsApiRestShApi2faModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.twoFactorAuthenticationAPI createHttpsApiRestShApi2faAsyncWithCreateHttpsApiRestShApi2faInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faResponseModel* response, NSError* error) { 
+    [self.twoFactorAuthenticationAPI createHttpsApiRestShApi2faAsyncWithCreateHttpsApiRestShApi2faInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1800,7 +1800,7 @@ function createHttpsApiRestShApi2faAsyncWithCreateHttpsApiRestShApi2faInput:(Cre
 UserManagement* userManagement = [[UserManagement alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_user_info_async_with_get_https_api_rest_sh_api_user_info_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUserInfoAsyncWithGetHttpsApiRestShApiUserInfoInput") getHttpsApiRestShApiUserInfoAsyncWithGetHttpsApiRestShApiUserInfoInput
+### <a name="get_https_api_rest_sh_api_ui_async_with_get_https_api_rest_sh_api_ui_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUIAsyncWithGetHttpsApiRestShApiUIInput") getHttpsApiRestShApiUIAsyncWithGetHttpsApiRestShApiUIInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1808,8 +1808,8 @@ UserManagement* userManagement = [[UserManagement alloc]init] ;
 
 
 ```objc
-function getHttpsApiRestShApiUserInfoAsyncWithGetHttpsApiRestShApiUserInfoInput:(GetHttpsApiRestShApiUserInfoInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiUserInfo) onCompleted(input)
+function getHttpsApiRestShApiUIAsyncWithGetHttpsApiRestShApiUIInput:(GetHttpsApiRestShApiUIInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiUI) onCompleted(input)
 ```
 
 #### Parameters
@@ -1830,20 +1830,20 @@ function getHttpsApiRestShApiUserInfoAsyncWithGetHttpsApiRestShApiUserInfoInput:
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiUserInfoInput *input = [[GetHttpsApiRestShApiUserInfoInput alloc]init];
+    GetHttpsApiRestShApiUIInput *input = [[GetHttpsApiRestShApiUIInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.user = @"user";
     input.apiuid = @"apiuid";
     input.contentType = @"Content-Type";
 
-    [self.userManagement getHttpsApiRestShApiUserInfoAsyncWithGetHttpsApiRestShApiUserInfoInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUserInfoResponseModel* response, NSError* error) { 
+    [self.userManagement getHttpsApiRestShApiUIAsyncWithGetHttpsApiRestShApiUIInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUIRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_user_info_async_with_create_https_api_rest_sh_api_user_info_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUserInfoAsyncWithCreateHttpsApiRestShApiUserInfoInput") createHttpsApiRestShApiUserInfoAsyncWithCreateHttpsApiRestShApiUserInfoInput
+### <a name="create_https_api_rest_sh_api_ui_async_with_create_https_api_rest_sh_api_ui_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUIAsyncWithCreateHttpsApiRestShApiUIInput") createHttpsApiRestShApiUIAsyncWithCreateHttpsApiRestShApiUIInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1851,8 +1851,8 @@ function getHttpsApiRestShApiUserInfoAsyncWithGetHttpsApiRestShApiUserInfoInput:
 
 
 ```objc
-function createHttpsApiRestShApiUserInfoAsyncWithCreateHttpsApiRestShApiUserInfoInput:(CreateHttpsApiRestShApiUserInfoInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiUserInfo) onCompleted(input)
+function createHttpsApiRestShApiUIAsyncWithCreateHttpsApiRestShApiUIInput:(CreateHttpsApiRestShApiUIInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiUI) onCompleted(input)
 ```
 
 #### Parameters
@@ -1870,17 +1870,17 @@ function createHttpsApiRestShApiUserInfoAsyncWithCreateHttpsApiRestShApiUserInfo
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiUserInfoInput *input = [[CreateHttpsApiRestShApiUserInfoInput alloc]init];
-    input.body = [[HttpsApiRestShApiUserInfoRequestModel alloc]init];
+    CreateHttpsApiRestShApiUIInput *input = [[CreateHttpsApiRestShApiUIInput alloc]init];
+    input.body = [[HttpsApiRestShApiUIModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.userManagement createHttpsApiRestShApiUserInfoAsyncWithCreateHttpsApiRestShApiUserInfoInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUserInfoResponseModel* response, NSError* error) { 
+    [self.userManagement createHttpsApiRestShApiUIAsyncWithCreateHttpsApiRestShApiUIInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUIRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_https_api_rest_sh_api_user_update_async_with_get_https_api_rest_sh_api_user_update_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUserUpdateAsyncWithGetHttpsApiRestShApiUserUpdateInput") getHttpsApiRestShApiUserUpdateAsyncWithGetHttpsApiRestShApiUserUpdateInput
+### <a name="get_https_api_rest_sh_api_uu_async_with_get_https_api_rest_sh_api_uu_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUUAsyncWithGetHttpsApiRestShApiUUInput") getHttpsApiRestShApiUUAsyncWithGetHttpsApiRestShApiUUInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1888,8 +1888,8 @@ function createHttpsApiRestShApiUserInfoAsyncWithCreateHttpsApiRestShApiUserInfo
 
 
 ```objc
-function getHttpsApiRestShApiUserUpdateAsyncWithGetHttpsApiRestShApiUserUpdateInput:(GetHttpsApiRestShApiUserUpdateInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiUserUpdate) onCompleted(input)
+function getHttpsApiRestShApiUUAsyncWithGetHttpsApiRestShApiUUInput:(GetHttpsApiRestShApiUUInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiUU) onCompleted(input)
 ```
 
 #### Parameters
@@ -1912,7 +1912,7 @@ function getHttpsApiRestShApiUserUpdateAsyncWithGetHttpsApiRestShApiUserUpdateIn
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiUserUpdateInput *input = [[GetHttpsApiRestShApiUserUpdateInput alloc]init];
+    GetHttpsApiRestShApiUUInput *input = [[GetHttpsApiRestShApiUUInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.user = @"user";
@@ -1921,13 +1921,13 @@ function getHttpsApiRestShApiUserUpdateAsyncWithGetHttpsApiRestShApiUserUpdateIn
     input.customInput = @"custom input";
     input.contentType = @"Content-Type";
 
-    [self.userManagement getHttpsApiRestShApiUserUpdateAsyncWithGetHttpsApiRestShApiUserUpdateInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUserUpdateResponseModel* response, NSError* error) { 
+    [self.userManagement getHttpsApiRestShApiUUAsyncWithGetHttpsApiRestShApiUUInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUURModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_user_update_async_with_create_https_api_rest_sh_api_user_update_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUserUpdateAsyncWithCreateHttpsApiRestShApiUserUpdateInput") createHttpsApiRestShApiUserUpdateAsyncWithCreateHttpsApiRestShApiUserUpdateInput
+### <a name="create_https_api_rest_sh_api_uu_async_with_create_https_api_rest_sh_api_uu_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUUAsyncWithCreateHttpsApiRestShApiUUInput") createHttpsApiRestShApiUUAsyncWithCreateHttpsApiRestShApiUUInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1935,8 +1935,8 @@ function getHttpsApiRestShApiUserUpdateAsyncWithGetHttpsApiRestShApiUserUpdateIn
 
 
 ```objc
-function createHttpsApiRestShApiUserUpdateAsyncWithCreateHttpsApiRestShApiUserUpdateInput:(CreateHttpsApiRestShApiUserUpdateInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiUserUpdate) onCompleted(input)
+function createHttpsApiRestShApiUUAsyncWithCreateHttpsApiRestShApiUUInput:(CreateHttpsApiRestShApiUUInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiUU) onCompleted(input)
 ```
 
 #### Parameters
@@ -1954,17 +1954,17 @@ function createHttpsApiRestShApiUserUpdateAsyncWithCreateHttpsApiRestShApiUserUp
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiUserUpdateInput *input = [[CreateHttpsApiRestShApiUserUpdateInput alloc]init];
-    input.body = [[HttpsApiRestShApiUserUpdateRequestModel alloc]init];
+    CreateHttpsApiRestShApiUUInput *input = [[CreateHttpsApiRestShApiUUInput alloc]init];
+    input.body = [[HttpsApiRestShApiUUModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.userManagement createHttpsApiRestShApiUserUpdateAsyncWithCreateHttpsApiRestShApiUserUpdateInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUserUpdateResponseModel* response, NSError* error) { 
+    [self.userManagement createHttpsApiRestShApiUUAsyncWithCreateHttpsApiRestShApiUUInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUURModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_https_api_rest_sh_api_user_delete_async_with_get_https_api_rest_sh_api_user_delete_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUserDeleteAsyncWithGetHttpsApiRestShApiUserDeleteInput") getHttpsApiRestShApiUserDeleteAsyncWithGetHttpsApiRestShApiUserDeleteInput
+### <a name="get_https_api_rest_sh_api_ud_async_with_get_https_api_rest_sh_api_ud_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.getHttpsApiRestShApiUDAsyncWithGetHttpsApiRestShApiUDInput") getHttpsApiRestShApiUDAsyncWithGetHttpsApiRestShApiUDInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -1972,8 +1972,8 @@ function createHttpsApiRestShApiUserUpdateAsyncWithCreateHttpsApiRestShApiUserUp
 
 
 ```objc
-function getHttpsApiRestShApiUserDeleteAsyncWithGetHttpsApiRestShApiUserDeleteInput:(GetHttpsApiRestShApiUserDeleteInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiUserDelete) onCompleted(input)
+function getHttpsApiRestShApiUDAsyncWithGetHttpsApiRestShApiUDInput:(GetHttpsApiRestShApiUDInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiUD) onCompleted(input)
 ```
 
 #### Parameters
@@ -1994,20 +1994,20 @@ function getHttpsApiRestShApiUserDeleteAsyncWithGetHttpsApiRestShApiUserDeleteIn
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiUserDeleteInput *input = [[GetHttpsApiRestShApiUserDeleteInput alloc]init];
+    GetHttpsApiRestShApiUDInput *input = [[GetHttpsApiRestShApiUDInput alloc]init];
     input.api = @"api";
     input.uid = @"uid";
     input.user = @"user";
     input.apiuid = @"apiuid";
     input.contentType = @"Content-Type";
 
-    [self.userManagement getHttpsApiRestShApiUserDeleteAsyncWithGetHttpsApiRestShApiUserDeleteInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUserDeleteResponseModel* response, NSError* error) { 
+    [self.userManagement getHttpsApiRestShApiUDAsyncWithGetHttpsApiRestShApiUDInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUDRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_user_delete_async_with_create_https_api_rest_sh_api_user_delete_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUserDeleteAsyncWithCreateHttpsApiRestShApiUserDeleteInput") createHttpsApiRestShApiUserDeleteAsyncWithCreateHttpsApiRestShApiUserDeleteInput
+### <a name="create_https_api_rest_sh_api_ud_async_with_create_https_api_rest_sh_api_ud_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagementController.createHttpsApiRestShApiUDAsyncWithCreateHttpsApiRestShApiUDInput") createHttpsApiRestShApiUDAsyncWithCreateHttpsApiRestShApiUDInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2015,8 +2015,8 @@ function getHttpsApiRestShApiUserDeleteAsyncWithGetHttpsApiRestShApiUserDeleteIn
 
 
 ```objc
-function createHttpsApiRestShApiUserDeleteAsyncWithCreateHttpsApiRestShApiUserDeleteInput:(CreateHttpsApiRestShApiUserDeleteInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiUserDelete) onCompleted(input)
+function createHttpsApiRestShApiUDAsyncWithCreateHttpsApiRestShApiUDInput:(CreateHttpsApiRestShApiUDInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiUD) onCompleted(input)
 ```
 
 #### Parameters
@@ -2034,11 +2034,11 @@ function createHttpsApiRestShApiUserDeleteAsyncWithCreateHttpsApiRestShApiUserDe
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiUserDeleteInput *input = [[CreateHttpsApiRestShApiUserDeleteInput alloc]init];
-    input.body = [[HttpsApiRestShApiUserDeleteRequestModel alloc]init];
+    CreateHttpsApiRestShApiUDInput *input = [[CreateHttpsApiRestShApiUDInput alloc]init];
+    input.body = [[HttpsApiRestShApiUDModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.userManagement createHttpsApiRestShApiUserDeleteAsyncWithCreateHttpsApiRestShApiUserDeleteInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUserDeleteResponseModel* response, NSError* error) { 
+    [self.userManagement createHttpsApiRestShApiUDAsyncWithCreateHttpsApiRestShApiUDInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUDRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -2053,7 +2053,7 @@ function createHttpsApiRestShApiUserDeleteAsyncWithCreateHttpsApiRestShApiUserDe
 LoginAndRegistration* loginAndRegistration = [[LoginAndRegistration alloc]init] ;
 ```
 
-### <a name="get_https_api_rest_sh_api_auth_user_register_async_with_get_https_api_rest_sh_api_auth_user_register_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAuthUserRegisterAsyncWithGetHttpsApiRestShApiAuthUserRegisterInput") getHttpsApiRestShApiAuthUserRegisterAsyncWithGetHttpsApiRestShApiAuthUserRegisterInput
+### <a name="get_https_api_rest_sh_api_aur_async_with_get_https_api_rest_sh_api_aur_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAURAsyncWithGetHttpsApiRestShApiAURInput") getHttpsApiRestShApiAURAsyncWithGetHttpsApiRestShApiAURInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2061,8 +2061,8 @@ LoginAndRegistration* loginAndRegistration = [[LoginAndRegistration alloc]init] 
 
 
 ```objc
-function getHttpsApiRestShApiAuthUserRegisterAsyncWithGetHttpsApiRestShApiAuthUserRegisterInput:(GetHttpsApiRestShApiAuthUserRegisterInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiAuthUserRegister) onCompleted(input)
+function getHttpsApiRestShApiAURAsyncWithGetHttpsApiRestShApiAURInput:(GetHttpsApiRestShApiAURInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiAUR) onCompleted(input)
 ```
 
 #### Parameters
@@ -2088,25 +2088,25 @@ function getHttpsApiRestShApiAuthUserRegisterAsyncWithGetHttpsApiRestShApiAuthUs
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiAuthUserRegisterInput *input = [[GetHttpsApiRestShApiAuthUserRegisterInput alloc]init];
+    GetHttpsApiRestShApiAURInput *input = [[GetHttpsApiRestShApiAURInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.user = @"user";
     input.password = @"password";
     input.name = @"name";
     input.email = @"email";
-    input.phone = 192;
-    input.countrycode = 192;
+    input.phone = 239;
+    input.countrycode = 239;
     input.address = @"address";
     input.contentType = @"Content-Type";
 
-    [self.loginAndRegistration getHttpsApiRestShApiAuthUserRegisterAsyncWithGetHttpsApiRestShApiAuthUserRegisterInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAuthUserRegisterResponseModel* response, NSError* error) { 
+    [self.loginAndRegistration getHttpsApiRestShApiAURAsyncWithGetHttpsApiRestShApiAURInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAURRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_auth_user_register_async_with_create_https_api_rest_sh_api_auth_user_register_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAuthUserRegisterAsyncWithCreateHttpsApiRestShApiAuthUserRegisterInput") createHttpsApiRestShApiAuthUserRegisterAsyncWithCreateHttpsApiRestShApiAuthUserRegisterInput
+### <a name="create_https_api_rest_sh_api_aur_async_with_create_https_api_rest_sh_api_aur_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAURAsyncWithCreateHttpsApiRestShApiAURInput") createHttpsApiRestShApiAURAsyncWithCreateHttpsApiRestShApiAURInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2114,8 +2114,8 @@ function getHttpsApiRestShApiAuthUserRegisterAsyncWithGetHttpsApiRestShApiAuthUs
 
 
 ```objc
-function createHttpsApiRestShApiAuthUserRegisterAsyncWithCreateHttpsApiRestShApiAuthUserRegisterInput:(CreateHttpsApiRestShApiAuthUserRegisterInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiAuthUserRegister) onCompleted(input)
+function createHttpsApiRestShApiAURAsyncWithCreateHttpsApiRestShApiAURInput:(CreateHttpsApiRestShApiAURInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiAUR) onCompleted(input)
 ```
 
 #### Parameters
@@ -2133,17 +2133,17 @@ function createHttpsApiRestShApiAuthUserRegisterAsyncWithCreateHttpsApiRestShApi
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiAuthUserRegisterInput *input = [[CreateHttpsApiRestShApiAuthUserRegisterInput alloc]init];
-    input.body = [[HttpsApiRestShApiAuthUserRegisterRequestModel alloc]init];
+    CreateHttpsApiRestShApiAURInput *input = [[CreateHttpsApiRestShApiAURInput alloc]init];
+    input.body = [[HttpsApiRestShApiAURModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.loginAndRegistration createHttpsApiRestShApiAuthUserRegisterAsyncWithCreateHttpsApiRestShApiAuthUserRegisterInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAuthUserRegisterResponseModel* response, NSError* error) { 
+    [self.loginAndRegistration createHttpsApiRestShApiAURAsyncWithCreateHttpsApiRestShApiAURInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAURRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_https_api_rest_sh_api_auth_user_login_async_with_get_https_api_rest_sh_api_auth_user_login_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAuthUserLoginAsyncWithGetHttpsApiRestShApiAuthUserLoginInput") getHttpsApiRestShApiAuthUserLoginAsyncWithGetHttpsApiRestShApiAuthUserLoginInput
+### <a name="get_https_api_rest_sh_api_aul_async_with_get_https_api_rest_sh_api_aul_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.getHttpsApiRestShApiAULAsyncWithGetHttpsApiRestShApiAULInput") getHttpsApiRestShApiAULAsyncWithGetHttpsApiRestShApiAULInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2151,8 +2151,8 @@ function createHttpsApiRestShApiAuthUserRegisterAsyncWithCreateHttpsApiRestShApi
 
 
 ```objc
-function getHttpsApiRestShApiAuthUserLoginAsyncWithGetHttpsApiRestShApiAuthUserLoginInput:(GetHttpsApiRestShApiAuthUserLoginInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiAuthUserLogin) onCompleted(input)
+function getHttpsApiRestShApiAULAsyncWithGetHttpsApiRestShApiAULInput:(GetHttpsApiRestShApiAULInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiAUL) onCompleted(input)
 ```
 
 #### Parameters
@@ -2173,20 +2173,20 @@ function getHttpsApiRestShApiAuthUserLoginAsyncWithGetHttpsApiRestShApiAuthUserL
 
 ```objc
     // Parameters for the API call
-    GetHttpsApiRestShApiAuthUserLoginInput *input = [[GetHttpsApiRestShApiAuthUserLoginInput alloc]init];
+    GetHttpsApiRestShApiAULInput *input = [[GetHttpsApiRestShApiAULInput alloc]init];
     input.key = @"key";
     input.uid = @"uid";
     input.user = @"user";
     input.password = @"password";
     input.contentType = @"Content-Type";
 
-    [self.loginAndRegistration getHttpsApiRestShApiAuthUserLoginAsyncWithGetHttpsApiRestShApiAuthUserLoginInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAuthUserLoginResponseModel* response, NSError* error) { 
+    [self.loginAndRegistration getHttpsApiRestShApiAULAsyncWithGetHttpsApiRestShApiAULInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAULRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_https_api_rest_sh_api_auth_user_login_async_with_create_https_api_rest_sh_api_auth_user_login_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAuthUserLoginAsyncWithCreateHttpsApiRestShApiAuthUserLoginInput") createHttpsApiRestShApiAuthUserLoginAsyncWithCreateHttpsApiRestShApiAuthUserLoginInput
+### <a name="create_https_api_rest_sh_api_aul_async_with_create_https_api_rest_sh_api_aul_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistrationController.createHttpsApiRestShApiAULAsyncWithCreateHttpsApiRestShApiAULInput") createHttpsApiRestShApiAULAsyncWithCreateHttpsApiRestShApiAULInput
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -2194,8 +2194,8 @@ function getHttpsApiRestShApiAuthUserLoginAsyncWithGetHttpsApiRestShApiAuthUserL
 
 
 ```objc
-function createHttpsApiRestShApiAuthUserLoginAsyncWithCreateHttpsApiRestShApiAuthUserLoginInput:(CreateHttpsApiRestShApiAuthUserLoginInput*) input
-                completionBlock:(CompletedPostHttpsApiRestShApiAuthUserLogin) onCompleted(input)
+function createHttpsApiRestShApiAULAsyncWithCreateHttpsApiRestShApiAULInput:(CreateHttpsApiRestShApiAULInput*) input
+                completionBlock:(CompletedPostHttpsApiRestShApiAUL) onCompleted(input)
 ```
 
 #### Parameters
@@ -2213,11 +2213,11 @@ function createHttpsApiRestShApiAuthUserLoginAsyncWithCreateHttpsApiRestShApiAut
 
 ```objc
     // Parameters for the API call
-    CreateHttpsApiRestShApiAuthUserLoginInput *input = [[CreateHttpsApiRestShApiAuthUserLoginInput alloc]init];
-    input.body = [[HttpsApiRestShApiAuthUserLoginRequestModel alloc]init];
+    CreateHttpsApiRestShApiAULInput *input = [[CreateHttpsApiRestShApiAULInput alloc]init];
+    input.body = [[HttpsApiRestShApiAULModel alloc]init];
     input.contentType = @"Content-Type";
 
-    [self.loginAndRegistration createHttpsApiRestShApiAuthUserLoginAsyncWithCreateHttpsApiRestShApiAuthUserLoginInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAuthUserLoginResponseModel* response, NSError* error) { 
+    [self.loginAndRegistration createHttpsApiRestShApiAULAsyncWithCreateHttpsApiRestShApiAULInput: input completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAULRModel* response, NSError* error) { 
        //Add code here
     }];
 ```
