@@ -34,7 +34,7 @@
     * Encryption
     * Code Obfuscation
     * Platform Identification
-    * WAF & DDOS Protection (Web Application Firewall)
+    * WAF and DDOS Protection (Web Application Firewall)
       * Advanced Logging
 
 # Overview
@@ -242,14 +242,14 @@ SMASHClient client = new SMASHClient(uid, secret, key);
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [AdvancedLogging](#advanced_logging)
-* [WAFDDOSProtection](#wafddos_protection)
+* [WAFAndDDOSProtection](#waf_and_ddos_protection)
 * [Encryption](#encryption)
 * [CDN](#cdn)
 * [DNS](#dns)
 * [CodeObfuscation](#code_obfuscation)
 * [Hosting](#hosting)
-* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
-* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [DataManipulation](#data_manipulation)
+* [ImageManipulation](#image_manipulation)
 * [Verification](#verification)
 * [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
 * [UserManagement](#user_management)
@@ -264,47 +264,6 @@ The singleton instance of the ``` AdvancedLogging ``` class can be accessed from
 ```java
 AdvancedLogging advancedLogging = client.getAdvancedLogging();
 ```
-
-### <a name="logging_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingInfoAsync") loggingInfoAsync
-
-> WAF Log Info
-
-
-```java
-void loggingInfoAsync(
-        final String name,
-        final String origin,
-        final String time,
-        final APICallBack<HttpsApiRestShApiSLIR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| name |  ``` Required ```  | Name of your WAF zone |
-| origin |  ``` Required ```  | IP Address of the Web Application |
-| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
-
-
-#### Example Usage
-
-```java
-String name = "name";
-String origin = "origin";
-String time = "time";
-// Invoking the API call with sample inputs
-advancedLogging.loggingInfoAsync(name, origin, time, new APICallBack<HttpsApiRestShApiSLIR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSLIR response) {
-        // TODO success callback handler
-    }
-    public void onFailure(HttpContext context, Throwable error) {
-        // TODO failure callback handler
-    }
-});
-
-```
-
 
 ### <a name="logging_configuration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingConfigurationAsync") loggingConfigurationAsync
 
@@ -325,7 +284,7 @@ void loggingConfigurationAsync(
 |-----------|------|-------------|
 | name |  ``` Required ```  | Name of the WAF zone |
 | origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
-| activate |  ``` Required ```  | True or False |
+| activate |  ``` Required ```  | Activate or Disable |
 
 
 #### Example Usage
@@ -347,33 +306,68 @@ advancedLogging.loggingConfigurationAsync(name, origin, activate, new APICallBac
 ```
 
 
+### <a name="logging_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingInfoAsync") loggingInfoAsync
+
+> WAF Log Info
+
+
+```java
+void loggingInfoAsync(
+        final String name,
+        final String origin,
+        final String time,
+        final APICallBack<HttpsApiRestShApiSLIR> callBack)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01/01/0101;24:59:01]) |
+
+
+#### Example Usage
+
+```java
+String name = "name";
+String origin = "origin";
+String time = "time";
+// Invoking the API call with sample inputs
+advancedLogging.loggingInfoAsync(name, origin, time, new APICallBack<HttpsApiRestShApiSLIR>() {
+    public void onSuccess(HttpContext context, HttpsApiRestShApiSLIR response) {
+        // TODO success callback handler
+    }
+    public void onFailure(HttpContext context, Throwable error) {
+        // TODO failure callback handler
+    }
+});
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.WAFDDOSProtection") WAFDDOSProtection
+## <a name="waf_and_ddos_protection"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.WAFAndDDOSProtection") WAFAndDDOSProtection
 
 ### Get singleton instance
 
-The singleton instance of the ``` WAFDDOSProtection ``` class can be accessed from the API Client.
+The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed from the API Client.
 
 ```java
-WAFDDOSProtection wAFDDOSProtection = client.getWAFDDOSProtection();
+WAFAndDDOSProtection wAFAndDDOSProtection = client.getWAFAndDDOSProtection();
 ```
 
-### <a name="https_api_rest_sh_api_swc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtection.httpsApiRestShApiSWCAsync") httpsApiRestShApiSWCAsync
+### <a name="https_api_rest_sh_api_swc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFAndDDOSProtection.httpsApiRestShApiSWCAsync") httpsApiRestShApiSWCAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Configuration
 
 
 ```java
 void httpsApiRestShApiSWCAsync(
-        final String key,
-        final String uid,
         final String name,
-        final String origin,
         final String rule,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSWCR> callBack)
 ```
 
@@ -381,25 +375,17 @@ void httpsApiRestShApiSWCAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| rule |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| rule |  ``` Required ```  | Rule or rules to add or update separated by a comma |
 
 
 #### Example Usage
 
 ```java
-String key = "API";
-String uid = "UID";
-String name = "origin-name";
-String origin = "origin.yourdomain.tld";
-String rule = "header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does";
-String contentType = "application/json";
+String name = "name";
+String rule = "rule";
 // Invoking the API call with sample inputs
-wAFDDOSProtection.httpsApiRestShApiSWCAsync(key, uid, name, origin, rule, contentType, new APICallBack<HttpsApiRestShApiSWCR>() {
+wAFAndDDOSProtection.httpsApiRestShApiSWCAsync(name, rule, new APICallBack<HttpsApiRestShApiSWCR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSWCR response) {
         // TODO success callback handler
     }
@@ -411,20 +397,15 @@ wAFDDOSProtection.httpsApiRestShApiSWCAsync(key, uid, name, origin, rule, conten
 ```
 
 
-### <a name="https_api_rest_sh_api_sw_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtection.httpsApiRestShApiSWAsync") httpsApiRestShApiSWAsync
+### <a name="https_api_rest_sh_api_sw_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFAndDDOSProtection.httpsApiRestShApiSWAsync") httpsApiRestShApiSWAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Creation
 
 
 ```java
 void httpsApiRestShApiSWAsync(
-        final String key,
-        final String uid,
         final String origin,
         final String cname,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSWR> callBack)
 ```
 
@@ -432,23 +413,17 @@ void httpsApiRestShApiSWAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | IP of the Web server you wish to protect |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 #### Example Usage
 
 ```java
-String key = "API";
-String uid = "UID";
-String origin = "origin.yourdomain.tld";
-String cname = "yourdomain.tld,www.yourdomain.tld";
-String contentType = "application/json";
+String origin = "origin";
+String cname = "cname";
 // Invoking the API call with sample inputs
-wAFDDOSProtection.httpsApiRestShApiSWAsync(key, uid, origin, cname, contentType, new APICallBack<HttpsApiRestShApiSWR>() {
+wAFAndDDOSProtection.httpsApiRestShApiSWAsync(origin, cname, new APICallBack<HttpsApiRestShApiSWR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSWR response) {
         // TODO success callback handler
     }
@@ -457,96 +432,6 @@ wAFDDOSProtection.httpsApiRestShApiSWAsync(key, uid, origin, cname, contentType,
     }
 });
 
-```
-
-
-### <a name="https_api_rest_sh_api_swc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtection.httpsApiRestShApiSWCAsync") httpsApiRestShApiSWCAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```java
-void httpsApiRestShApiSWCAsync(
-        final HttpsApiRestShApiSWC body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSWCR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    String bodyValue = "{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}";
-    HttpsApiRestShApiSWC body = mapper.readValue(bodyValue,new TypeReference<HttpsApiRestShApiSWC> (){});
-    String contentType = "application/json";
-    // Invoking the API call with sample inputs
-    wAFDDOSProtection.httpsApiRestShApiSWCAsync(body, contentType, new APICallBack<HttpsApiRestShApiSWCR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSWCR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
-### <a name="https_api_rest_sh_api_sw_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFDDOSProtection.httpsApiRestShApiSWAsync") httpsApiRestShApiSWAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```java
-void httpsApiRestShApiSWAsync(
-        final HttpsApiRestShApiSW body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSWR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    String bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}";
-    HttpsApiRestShApiSW body = mapper.readValue(bodyValue,new TypeReference<HttpsApiRestShApiSW> (){});
-    String contentType = "application/json";
-    // Invoking the API call with sample inputs
-    wAFDDOSProtection.httpsApiRestShApiSWAsync(body, contentType, new APICallBack<HttpsApiRestShApiSWR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSWR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -589,7 +474,7 @@ void dataAndFileEncryptionAsync(
 ```java
 String data = "data";
 String method = "method";
-int bit = 171;
+int bit = 1;
 // Invoking the API call with sample inputs
 encryption.dataAndFileEncryptionAsync(data, method, bit, new APICallBack<HttpsApiRestShApiSER>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSER response) {
@@ -875,31 +760,25 @@ hosting.hostingSetupAsync(app, domain, new APICallBack<HttpsApiRestShApiSHR>() {
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
+## <a name="data_manipulation"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.DataManipulation") DataManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed from the API Client.
+The singleton instance of the ``` DataManipulation ``` class can be accessed from the API Client.
 
 ```java
-DataManipulationConversionSortingAndCompressionAPI dataManipulationConversionSortingAndCompressionAPI = client.getDataManipulationConversionSortingAndCompressionAPI();
+DataManipulation dataManipulation = client.getDataManipulation();
 ```
 
-### <a name="https_api_rest_sh_api_d_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsync") httpsApiRestShApiDAsync
+### <a name="https_api_rest_sh_api_d_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DataManipulation.httpsApiRestShApiDAsync") httpsApiRestShApiDAsync
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> Data Manipulation API
 
 
 ```java
 void httpsApiRestShApiDAsync(
-        final String key,
-        final String uid,
-        final String user,
-        final String apiuid,
         final String data,
-        final String contentType,
+        final String transform,
         final APICallBack<HttpsApiRestShApiDR> callBack)
 ```
 
@@ -907,25 +786,17 @@ void httpsApiRestShApiDAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | Data URL, data as a query string, or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 #### Example Usage
 
 ```java
-String key = "API";
-String uid = "UID";
-String user = "UID";
-String apiuid = "apiUID";
-String data = "https://static.yourcdn.com/data.file";
-String contentType = "application/json";
+String data = "data";
+String transform = "transform";
 // Invoking the API call with sample inputs
-dataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsync(key, uid, user, apiuid, data, contentType, new APICallBack<HttpsApiRestShApiDR>() {
+dataManipulation.httpsApiRestShApiDAsync(data, transform, new APICallBack<HttpsApiRestShApiDR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiDR response) {
         // TODO success callback handler
     }
@@ -937,64 +808,19 @@ dataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsync(key, 
 ```
 
 
-### <a name="https_api_rest_sh_api_d_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsync") httpsApiRestShApiDAsync
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```java
-void httpsApiRestShApiDAsync(
-        final HttpsApiRestShApiD body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiDR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    String bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}";
-    HttpsApiRestShApiD body = mapper.readValue(bodyValue,new TypeReference<HttpsApiRestShApiD> (){});
-    String contentType = "application/json";
-    // Invoking the API call with sample inputs
-    dataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsync(body, contentType, new APICallBack<HttpsApiRestShApiDR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiDR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
+## <a name="image_manipulation"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.controllers.ImageManipulation") ImageManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed from the API Client.
+The singleton instance of the ``` ImageManipulation ``` class can be accessed from the API Client.
 
 ```java
-ImageManipulationAndModerationAPI imageManipulationAndModerationAPI = client.getImageManipulationAndModerationAPI();
+ImageManipulation imageManipulation = client.getImageManipulation();
 ```
 
-### <a name="image_manipulation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.ImageManipulationAndModerationAPI.imageManipulationAsync") imageManipulationAsync
+### <a name="image_manipulation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.ImageManipulation.imageManipulationAsync") imageManipulationAsync
 
 > Image Manipulation API
 
@@ -1020,7 +846,7 @@ void imageManipulationAsync(
 String image = "image";
 String transform = "transform";
 // Invoking the API call with sample inputs
-imageManipulationAndModerationAPI.imageManipulationAsync(image, transform, new APICallBack<HttpsApiRestShApiIR>() {
+imageManipulation.imageManipulationAsync(image, transform, new APICallBack<HttpsApiRestShApiIR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiIR response) {
         // TODO success callback handler
     }
@@ -1082,7 +908,7 @@ String a = "a";
 String sa = "sa";
 String c = "c";
 String s = "s";
-int z = 171;
+int z = 1;
 String address = "address";
 // Invoking the API call with sample inputs
 verification.userAddressVerificationAsync(user, a, sa, c, s, z, address, new APICallBack<HttpsApiRestShApiVAR>() {
@@ -1433,8 +1259,8 @@ String email = "email";
 String user = "user";
 String password = "password";
 String name = "name";
-Integer phone = 171;
-Integer countrycode = 171;
+Integer phone = 1;
+Integer countrycode = 1;
 String address = "address";
 // key-value map for optional query parameters
 Map<String, Object> queryParams = new LinkedHashMap<String, Object>();

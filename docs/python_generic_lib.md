@@ -34,7 +34,7 @@
     * Encryption
     * Code Obfuscation
     * Platform Identification
-    * WAF & DDOS Protection (Web Application Firewall)
+    * WAF and DDOS Protection (Web Application Firewall)
       * Advanced Logging
 
 # Overview
@@ -235,14 +235,14 @@ client = SMASH(uid, secret, key)
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [AdvancedLogging](#advanced_logging)
-* [WAFDDOSProtection](#wafddos_protection)
+* [WAFAndDDOSProtection](#waf_and_ddos_protection)
 * [Encryption](#encryption)
 * [CDN](#cdn)
 * [DNS](#dns)
 * [CodeObfuscation](#code_obfuscation)
 * [Hosting](#hosting)
-* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
-* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [DataManipulation](#data_manipulation)
+* [ImageManipulation](#image_manipulation)
 * [Verification](#verification)
 * [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
 * [UserManagement](#user_management)
@@ -257,39 +257,6 @@ An instance of the ``` AdvancedLogging ``` class can be accessed from the API Cl
 ```python
  advanced_logging_client = client.advanced_logging
 ```
-
-### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_info") logging_info
-
-> WAF Log Info
-
-```python
-def logging_info(self,
-                     name,
-                     origin,
-                     time=None)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| name |  ``` Required ```  | Name of your WAF zone |
-| origin |  ``` Required ```  | IP Address of the Web Application |
-| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
-
-
-
-#### Example Usage
-
-```python
-name = 'name'
-origin = 'origin'
-time = 'time'
-
-result = advanced_logging_client.logging_info(name, origin, time)
-
-```
-
 
 ### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_configuration") logging_configuration
 
@@ -308,7 +275,7 @@ def logging_configuration(self,
 |-----------|------|-------------|
 | name |  ``` Required ```  | Name of the WAF zone |
 | origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
-| activate |  ``` Required ```  | True or False |
+| activate |  ``` Required ```  | Activate or Disable |
 
 
 
@@ -324,165 +291,107 @@ result = advanced_logging_client.logging_configuration(name, origin, activate)
 ```
 
 
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_info") logging_info
+
+> WAF Log Info
+
+```python
+def logging_info(self,
+                     name,
+                     origin,
+                     time=None)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01/01/0101;24:59:01]) |
+
+
+
+#### Example Usage
+
+```python
+name = 'name'
+origin = 'origin'
+time = 'time'
+
+result = advanced_logging_client.logging_info(name, origin, time)
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtection") WAFDDOSProtection
+## <a name="waf_and_ddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFAndDDOSProtection") WAFAndDDOSProtection
 
 ### Get controller instance
 
-An instance of the ``` WAFDDOSProtection ``` class can be accessed from the API Client.
+An instance of the ``` WAFAndDDOSProtection ``` class can be accessed from the API Client.
 
 ```python
- waf_ddos_protection_client = client.waf_ddos_protection
+ waf_and_ddos_protection_client = client.waf_and_ddos_protection
 ```
 
-### <a name="https_api_rest_sh_api_s_w_c"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.https_api_rest_sh_api_s_w_c") https_api_rest_sh_api_s_w_c
+### <a name="https_api_rest_sh_api_s_w_c"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.https_api_rest_sh_api_s_w_c") https_api_rest_sh_api_s_w_c
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Configuration
 
 ```python
 def https_api_rest_sh_api_s_w_c(self,
-                                    key,
-                                    uid,
                                     name,
-                                    origin,
-                                    rule,
-                                    content_type)
+                                    rule)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| rule |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| rule |  ``` Required ```  | Rule or rules to add or update separated by a comma |
 
 
 
 #### Example Usage
 
 ```python
-key = 'API'
-uid = 'UID'
-name = 'origin-name'
-origin = 'origin.yourdomain.tld'
-rule = 'header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does'
-content_type = 'application/json'
+name = 'name'
+rule = 'rule'
 
-result = waf_ddos_protection_client.https_api_rest_sh_api_s_w_c(key, uid, name, origin, rule, content_type)
+result = waf_and_ddos_protection_client.https_api_rest_sh_api_s_w_c(name, rule)
 
 ```
 
 
-### <a name="https_api_rest_sh_api_s_w"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.https_api_rest_sh_api_s_w") https_api_rest_sh_api_s_w
+### <a name="https_api_rest_sh_api_s_w"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.https_api_rest_sh_api_s_w") https_api_rest_sh_api_s_w
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Creation
 
 ```python
 def https_api_rest_sh_api_s_w(self,
-                                  key,
-                                  uid,
                                   origin,
-                                  cname,
-                                  content_type)
+                                  cname)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | IP of the Web server you wish to protect |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 
 #### Example Usage
 
 ```python
-key = 'API'
-uid = 'UID'
-origin = 'origin.yourdomain.tld'
-cname = 'yourdomain.tld,www.yourdomain.tld'
-content_type = 'application/json'
+origin = 'origin'
+cname = 'cname'
 
-result = waf_ddos_protection_client.https_api_rest_sh_api_s_w(key, uid, origin, cname, content_type)
-
-```
-
-
-### <a name="https_api_rest_sh_api_s_w_c1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.https_api_rest_sh_api_s_w_c1") https_api_rest_sh_api_s_w_c1
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-```python
-def https_api_rest_sh_api_s_w_c1(self,
-                                     body,
-                                     content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body_value = "{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}"
-body = json.loads(body_value)
-content_type = 'application/json'
-
-result = waf_ddos_protection_client.https_api_rest_sh_api_s_w_c1(body, content_type)
-
-```
-
-
-### <a name="https_api_rest_sh_api_s_w1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.https_api_rest_sh_api_s_w1") https_api_rest_sh_api_s_w1
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-```python
-def https_api_rest_sh_api_s_w1(self,
-                                   body,
-                                   content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body_value = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}"
-body = json.loads(body_value)
-content_type = 'application/json'
-
-result = waf_ddos_protection_client.https_api_rest_sh_api_s_w1(body, content_type)
+result = waf_and_ddos_protection_client.https_api_rest_sh_api_s_w(origin, cname)
 
 ```
 
@@ -525,7 +434,7 @@ def data_and_file_encryption(self,
 ```python
 data = 'data'
 method = 'method'
-bit = 71
+bit = 155
 
 result = encryption_client.data_and_file_encryption(data, method, bit)
 
@@ -756,106 +665,59 @@ result = hosting_client.hosting_setup(app, domain)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
+## <a name="data_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulation") DataManipulation
 
 ### Get controller instance
 
-An instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed from the API Client.
+An instance of the ``` DataManipulation ``` class can be accessed from the API Client.
 
 ```python
- data_manipulation_conversion_sorting_and_compression_api_client = client.data_manipulation_conversion_sorting_and_compression_api
+ data_manipulation_client = client.data_manipulation
 ```
 
-### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.https_api_rest_sh_api_d") https_api_rest_sh_api_d
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulation.https_api_rest_sh_api_d") https_api_rest_sh_api_d
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> Data Manipulation API
 
 ```python
 def https_api_rest_sh_api_d(self,
-                                key,
-                                uid,
-                                user,
-                                apiuid,
                                 data,
-                                content_type)
+                                transform)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | Data URL, data as a query string, or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 
 #### Example Usage
 
 ```python
-key = 'API'
-uid = 'UID'
-user = 'UID'
-apiuid = 'apiUID'
-data = 'https://static.yourcdn.com/data.file'
-content_type = 'application/json'
+data = 'data'
+transform = 'transform'
 
-result = data_manipulation_conversion_sorting_and_compression_api_client.https_api_rest_sh_api_d(key, uid, user, apiuid, data, content_type)
-
-```
-
-
-### <a name="https_api_rest_sh_api_d1"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.https_api_rest_sh_api_d1") https_api_rest_sh_api_d1
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-```python
-def https_api_rest_sh_api_d1(self,
-                                 body,
-                                 content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body_value = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}"
-body = json.loads(body_value)
-content_type = 'application/json'
-
-result = data_manipulation_conversion_sorting_and_compression_api_client.https_api_rest_sh_api_d1(body, content_type)
+result = data_manipulation_client.https_api_rest_sh_api_d(data, transform)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
+## <a name="image_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulation") ImageManipulation
 
 ### Get controller instance
 
-An instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed from the API Client.
+An instance of the ``` ImageManipulation ``` class can be accessed from the API Client.
 
 ```python
- image_manipulation_and_moderation_api_client = client.image_manipulation_and_moderation_api
+ image_manipulation_client = client.image_manipulation
 ```
 
-### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.image_manipulation") image_manipulation
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulation.image_manipulation") image_manipulation
 
 > Image Manipulation API
 
@@ -880,7 +742,7 @@ def image_manipulation(self,
 image = 'image'
 transform = 'transform'
 
-result = image_manipulation_and_moderation_api_client.image_manipulation(image, transform)
+result = image_manipulation_client.image_manipulation(image, transform)
 
 ```
 
@@ -934,7 +796,7 @@ a = 'a'
 sa = 'sa'
 c = 'c'
 s = 's'
-z = 162
+z = 247
 address = 'address'
 
 result = verification_client.user_address_verification(user, a, sa, c, s, z, address)
@@ -1222,8 +1084,8 @@ email = 'email'
 user = 'user'
 password = 'password'
 name = 'name'
-phone = 162
-countrycode = 162
+phone = 247
+countrycode = 247
 address = 'address'
 # key-value map for optional query parameters
 optional_query_parameters = { }

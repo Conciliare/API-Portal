@@ -34,7 +34,7 @@
     * Encryption
     * Code Obfuscation
     * Platform Identification
-    * WAF & DDOS Protection (Web Application Firewall)
+    * WAF and DDOS Protection (Web Application Firewall)
       * Advanced Logging
 
 # Overview
@@ -258,14 +258,14 @@ $client = new SMASHLib\SMASHClient($uid, $secret, $key);
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [AdvancedLogging](#advanced_logging)
-* [WAFDDOSProtection](#wafddos_protection)
+* [WAFAndDDOSProtection](#waf_and_ddos_protection)
 * [Encryption](#encryption)
 * [CDN](#cdn)
 * [DNS](#dns)
 * [CodeObfuscation](#code_obfuscation)
 * [Hosting](#hosting)
-* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
-* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [DataManipulation](#data_manipulation)
+* [ImageManipulation](#image_manipulation)
 * [Verification](#verification)
 * [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
 * [UserManagement](#user_management)
@@ -280,40 +280,6 @@ The singleton instance of the ``` AdvancedLogging ``` class can be accessed from
 ```php
 $advancedLogging = $client->getAdvancedLogging();
 ```
-
-### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
-
-> WAF Log Info
-
-
-```php
-function loggingInfo(
-        $name,
-        $origin,
-        $time = null)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| name |  ``` Required ```  | Name of your WAF zone |
-| origin |  ``` Required ```  | IP Address of the Web Application |
-| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
-
-
-
-#### Example Usage
-
-```php
-$name = 'name';
-$origin = 'origin';
-$time = 'time';
-
-$result = $advancedLogging->loggingInfo($name, $origin, $time);
-
-```
-
 
 ### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingConfiguration") loggingConfiguration
 
@@ -333,7 +299,7 @@ function loggingConfiguration(
 |-----------|------|-------------|
 | name |  ``` Required ```  | Name of the WAF zone |
 | origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
-| activate |  ``` Required ```  | True or False |
+| activate |  ``` Required ```  | Activate or Disable |
 
 
 
@@ -349,169 +315,110 @@ $result = $advancedLogging->loggingConfiguration($name, $origin, $activate);
 ```
 
 
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
+
+> WAF Log Info
+
+
+```php
+function loggingInfo(
+        $name,
+        $origin,
+        $time = null)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01/01/0101;24:59:01]) |
+
+
+
+#### Example Usage
+
+```php
+$name = 'name';
+$origin = 'origin';
+$time = 'time';
+
+$result = $advancedLogging->loggingInfo($name, $origin, $time);
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtection") WAFDDOSProtection
+## <a name="waf_and_ddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFAndDDOSProtection") WAFAndDDOSProtection
 
 ### Get singleton instance
 
-The singleton instance of the ``` WAFDDOSProtection ``` class can be accessed from the API Client.
+The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed from the API Client.
 
 ```php
-$wAFDDOSProtection = $client->getWAFDDOSProtection();
+$wAFAndDDOSProtection = $client->getWAFAndDDOSProtection();
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Configuration
 
 
 ```php
 function httpsApiRestShApiSWC(
-        $key,
-        $uid,
         $name,
-        $origin,
-        $rule,
-        $contentType)
+        $rule)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| rule |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| rule |  ``` Required ```  | Rule or rules to add or update separated by a comma |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'API';
-$uid = 'UID';
-$name = 'origin-name';
-$origin = 'origin.yourdomain.tld';
-$rule = 'header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does';
-$contentType = 'application/json';
+$name = 'name';
+$rule = 'rule';
 
-$result = $wAFDDOSProtection->httpsApiRestShApiSWC($key, $uid, $name, $origin, $rule, $contentType);
+$result = $wAFAndDDOSProtection->httpsApiRestShApiSWC($name, $rule);
 
 ```
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Creation
 
 
 ```php
 function httpsApiRestShApiSW(
-        $key,
-        $uid,
         $origin,
-        $cname,
-        $contentType)
+        $cname)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | IP of the Web server you wish to protect |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'API';
-$uid = 'UID';
-$origin = 'origin.yourdomain.tld';
-$cname = 'yourdomain.tld,www.yourdomain.tld';
-$contentType = 'application/json';
+$origin = 'origin';
+$cname = 'cname';
 
-$result = $wAFDDOSProtection->httpsApiRestShApiSW($key, $uid, $origin, $cname, $contentType);
-
-```
-
-
-### <a name="https_api_rest_sh_api_swc1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC1") httpsApiRestShApiSWC1
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```php
-function httpsApiRestShApiSWC1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$bodyValue = "{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}";
-$body = APIHelper::deserialize($bodyValue);
-$contentType = 'application/json';
-
-$result = $wAFDDOSProtection->httpsApiRestShApiSWC1($body, $contentType);
-
-```
-
-
-### <a name="https_api_rest_sh_api_sw1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW1") httpsApiRestShApiSW1
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```php
-function httpsApiRestShApiSW1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}";
-$body = APIHelper::deserialize($bodyValue);
-$contentType = 'application/json';
-
-$result = $wAFDDOSProtection->httpsApiRestShApiSW1($body, $contentType);
+$result = $wAFAndDDOSProtection->httpsApiRestShApiSW($origin, $cname);
 
 ```
 
@@ -555,7 +462,7 @@ function dataAndFileEncryption(
 ```php
 $data = 'data';
 $method = 'method';
-$bit = 184;
+$bit = 106;
 
 $result = $encryption->dataAndFileEncryption($data, $method, $bit);
 
@@ -790,108 +697,60 @@ $result = $hosting->hostingSetup($app, $domain);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
+## <a name="data_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulation") DataManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed from the API Client.
+The singleton instance of the ``` DataManipulation ``` class can be accessed from the API Client.
 
 ```php
-$dataManipulationConversionSortingAndCompressionAPI = $client->getDataManipulationConversionSortingAndCompressionAPI();
+$dataManipulation = $client->getDataManipulation();
 ```
 
-### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD") httpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulation.httpsApiRestShApiD") httpsApiRestShApiD
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> Data Manipulation API
 
 
 ```php
 function httpsApiRestShApiD(
-        $key,
-        $uid,
-        $user,
-        $apiuid,
         $data,
-        $contentType)
+        $transform)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | Data URL, data as a query string, or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'API';
-$uid = 'UID';
-$user = 'UID';
-$apiuid = 'apiUID';
-$data = 'https://static.yourcdn.com/data.file';
-$contentType = 'application/json';
+$data = 'data';
+$transform = 'transform';
 
-$result = $dataManipulationConversionSortingAndCompressionAPI->httpsApiRestShApiD($key, $uid, $user, $apiuid, $data, $contentType);
-
-```
-
-
-### <a name="https_api_rest_sh_api_d1"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD1") httpsApiRestShApiD1
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```php
-function httpsApiRestShApiD1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}";
-$body = APIHelper::deserialize($bodyValue);
-$contentType = 'application/json';
-
-$result = $dataManipulationConversionSortingAndCompressionAPI->httpsApiRestShApiD1($body, $contentType);
+$result = $dataManipulation->httpsApiRestShApiD($data, $transform);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
+## <a name="image_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulation") ImageManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed from the API Client.
+The singleton instance of the ``` ImageManipulation ``` class can be accessed from the API Client.
 
 ```php
-$imageManipulationAndModerationAPI = $client->getImageManipulationAndModerationAPI();
+$imageManipulation = $client->getImageManipulation();
 ```
 
-### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation") imageManipulation
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulation.imageManipulation") imageManipulation
 
 > Image Manipulation API
 
@@ -917,7 +776,7 @@ function imageManipulation(
 $image = 'image';
 $transform = 'transform';
 
-$result = $imageManipulationAndModerationAPI->imageManipulation($image, $transform);
+$result = $imageManipulation->imageManipulation($image, $transform);
 
 ```
 
@@ -972,7 +831,7 @@ $a = 'a';
 $sa = 'sa';
 $c = 'c';
 $s = 's';
-$z = 21;
+$z = 106;
 $address = 'address';
 
 $result = $verification->userAddressVerification($user, $a, $sa, $c, $s, $z, $address);
@@ -1264,8 +1123,8 @@ $email = 'email';
 $user = 'user';
 $password = 'password';
 $name = 'name';
-$phone = 21;
-$countrycode = 21;
+$phone = 197;
+$countrycode = 197;
 $address = 'address';
 // key-value map for optional query parameters
 $queryParams = array('key' => 'value');
