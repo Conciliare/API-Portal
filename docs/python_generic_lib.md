@@ -264,9 +264,7 @@ An instance of the ``` AdvancedLogging ``` class can be accessed from the API Cl
 
 ```python
 def logging_configuration(self,
-                              name,
-                              origin,
-                              activate)
+                              options=dict())
 ```
 
 #### Parameters
@@ -282,11 +280,19 @@ def logging_configuration(self,
 #### Example Usage
 
 ```python
-name = 'name'
-origin = 'origin'
-activate = 'activate'
+collect = {}
 
-result = advanced_logging_client.logging_configuration(name, origin, activate)
+name = 'name'
+collect['name'] = name
+
+origin = 'origin'
+collect['origin'] = origin
+
+activate = 'activate'
+collect['activate'] = activate
+
+
+result = advanced_logging_client.logging_configuration(collect)
 
 ```
 
@@ -297,9 +303,7 @@ result = advanced_logging_client.logging_configuration(name, origin, activate)
 
 ```python
 def logging_info(self,
-                     name,
-                     origin,
-                     time=None)
+                     options=dict())
 ```
 
 #### Parameters
@@ -315,11 +319,19 @@ def logging_info(self,
 #### Example Usage
 
 ```python
-name = 'name'
-origin = 'origin'
-time = 'time'
+collect = {}
 
-result = advanced_logging_client.logging_info(name, origin, time)
+name = 'name'
+collect['name'] = name
+
+origin = 'origin'
+collect['origin'] = origin
+
+time = 'time'
+collect['time'] = time
+
+
+result = advanced_logging_client.logging_info(collect)
 
 ```
 
@@ -342,8 +354,7 @@ An instance of the ``` WAFAndDDOSProtection ``` class can be accessed from the A
 
 ```python
 def https_api_rest_sh_api_s_w_c(self,
-                                    name,
-                                    rule)
+                                    options=dict())
 ```
 
 #### Parameters
@@ -358,10 +369,16 @@ def https_api_rest_sh_api_s_w_c(self,
 #### Example Usage
 
 ```python
-name = 'name'
-rule = 'rule'
+collect = {}
 
-result = waf_and_ddos_protection_client.https_api_rest_sh_api_s_w_c(name, rule)
+name = 'name'
+collect['name'] = name
+
+rule = 'rule'
+collect['rule'] = rule
+
+
+result = waf_and_ddos_protection_client.https_api_rest_sh_api_s_w_c(collect)
 
 ```
 
@@ -372,8 +389,7 @@ result = waf_and_ddos_protection_client.https_api_rest_sh_api_s_w_c(name, rule)
 
 ```python
 def https_api_rest_sh_api_s_w(self,
-                                  origin,
-                                  cname)
+                                  options=dict())
 ```
 
 #### Parameters
@@ -388,10 +404,16 @@ def https_api_rest_sh_api_s_w(self,
 #### Example Usage
 
 ```python
-origin = 'origin'
-cname = 'cname'
+collect = {}
 
-result = waf_and_ddos_protection_client.https_api_rest_sh_api_s_w(origin, cname)
+origin = 'origin'
+collect['origin'] = origin
+
+cname = 'cname'
+collect['cname'] = cname
+
+
+result = waf_and_ddos_protection_client.https_api_rest_sh_api_s_w(collect)
 
 ```
 
@@ -414,9 +436,7 @@ An instance of the ``` Encryption ``` class can be accessed from the API Client.
 
 ```python
 def data_and_file_encryption(self,
-                                 data,
-                                 method,
-                                 bit)
+                                 options=dict())
 ```
 
 #### Parameters
@@ -432,11 +452,19 @@ def data_and_file_encryption(self,
 #### Example Usage
 
 ```python
-data = 'data'
-method = 'method'
-bit = 155
+collect = {}
 
-result = encryption_client.data_and_file_encryption(data, method, bit)
+data = 'data'
+collect['data'] = data
+
+method = 'method'
+collect['method'] = method
+
+bit = 104
+collect['bit'] = bit
+
+
+result = encryption_client.data_and_file_encryption(collect)
 
 ```
 
@@ -459,8 +487,7 @@ An instance of the ``` CDN ``` class can be accessed from the API Client.
 
 ```python
 def cdn_push_zone(self,
-                      cname,
-                      file)
+                      options=dict())
 ```
 
 #### Parameters
@@ -475,10 +502,16 @@ def cdn_push_zone(self,
 #### Example Usage
 
 ```python
-cname = 'cname'
-file = 'file'
+collect = {}
 
-result = cdn_client.cdn_push_zone(cname, file)
+cname = 'cname'
+collect['cname'] = cname
+
+file = 'file'
+collect['file'] = file
+
+
+result = cdn_client.cdn_push_zone(collect)
 
 ```
 
@@ -489,8 +522,7 @@ result = cdn_client.cdn_push_zone(cname, file)
 
 ```python
 def cdn_pull_zone(self,
-                      origin,
-                      cname)
+                      options=dict())
 ```
 
 #### Parameters
@@ -505,10 +537,16 @@ def cdn_pull_zone(self,
 #### Example Usage
 
 ```python
-origin = 'origin'
-cname = 'cname'
+collect = {}
 
-result = cdn_client.cdn_pull_zone(origin, cname)
+origin = 'origin'
+collect['origin'] = origin
+
+cname = 'cname'
+collect['cname'] = cname
+
+
+result = cdn_client.cdn_pull_zone(collect)
 
 ```
 
@@ -531,8 +569,7 @@ An instance of the ``` DNS ``` class can be accessed from the API Client.
 
 ```python
 def dns_configuration(self,
-                          domain,
-                          records)
+                          options=dict())
 ```
 
 #### Parameters
@@ -547,10 +584,16 @@ def dns_configuration(self,
 #### Example Usage
 
 ```python
-domain = 'domain'
-records = 'records'
+collect = {}
 
-result = dns_client.dns_configuration(domain, records)
+domain = 'domain'
+collect['domain'] = domain
+
+records = 'records'
+collect['records'] = records
+
+
+result = dns_client.dns_configuration(collect)
 
 ```
 
@@ -639,8 +682,7 @@ An instance of the ``` Hosting ``` class can be accessed from the API Client.
 
 ```python
 def hosting_setup(self,
-                      app,
-                      domain)
+                      options=dict())
 ```
 
 #### Parameters
@@ -655,10 +697,16 @@ def hosting_setup(self,
 #### Example Usage
 
 ```python
-app = 'app'
-domain = 'domain'
+collect = {}
 
-result = hosting_client.hosting_setup(app, domain)
+app = 'app'
+collect['app'] = app
+
+domain = 'domain'
+collect['domain'] = domain
+
+
+result = hosting_client.hosting_setup(collect)
 
 ```
 
@@ -681,8 +729,7 @@ An instance of the ``` DataManipulation ``` class can be accessed from the API C
 
 ```python
 def https_api_rest_sh_api_d(self,
-                                data,
-                                transform)
+                                options=dict())
 ```
 
 #### Parameters
@@ -697,10 +744,16 @@ def https_api_rest_sh_api_d(self,
 #### Example Usage
 
 ```python
-data = 'data'
-transform = 'transform'
+collect = {}
 
-result = data_manipulation_client.https_api_rest_sh_api_d(data, transform)
+data = 'data'
+collect['data'] = data
+
+transform = 'transform'
+collect['transform'] = transform
+
+
+result = data_manipulation_client.https_api_rest_sh_api_d(collect)
 
 ```
 
@@ -723,8 +776,7 @@ An instance of the ``` ImageManipulation ``` class can be accessed from the API 
 
 ```python
 def image_manipulation(self,
-                           image,
-                           transform)
+                           options=dict())
 ```
 
 #### Parameters
@@ -739,10 +791,16 @@ def image_manipulation(self,
 #### Example Usage
 
 ```python
-image = 'image'
-transform = 'transform'
+collect = {}
 
-result = image_manipulation_client.image_manipulation(image, transform)
+image = 'image'
+collect['image'] = image
+
+transform = 'transform'
+collect['transform'] = transform
+
+
+result = image_manipulation_client.image_manipulation(collect)
 
 ```
 
@@ -765,13 +823,7 @@ An instance of the ``` Verification ``` class can be accessed from the API Clien
 
 ```python
 def user_address_verification(self,
-                                  user,
-                                  a,
-                                  sa,
-                                  c,
-                                  s,
-                                  z,
-                                  address=None)
+                                  options=dict())
 ```
 
 #### Parameters
@@ -791,15 +843,31 @@ def user_address_verification(self,
 #### Example Usage
 
 ```python
-user = 'user'
-a = 'a'
-sa = 'sa'
-c = 'c'
-s = 's'
-z = 247
-address = 'address'
+collect = {}
 
-result = verification_client.user_address_verification(user, a, sa, c, s, z, address)
+user = 'user'
+collect['user'] = user
+
+a = 'a'
+collect['a'] = a
+
+sa = 'sa'
+collect['sa'] = sa
+
+c = 'c'
+collect['c'] = c
+
+s = 's'
+collect['s'] = s
+
+z = 104
+collect['z'] = z
+
+address = 'address'
+collect['address'] = address
+
+
+result = verification_client.user_address_verification(collect)
 
 ```
 
@@ -810,8 +878,7 @@ result = verification_client.user_address_verification(user, a, sa, c, s, z, add
 
 ```python
 def user_verification_response(self,
-                                   user,
-                                   code)
+                                   options=dict())
 ```
 
 #### Parameters
@@ -826,10 +893,16 @@ def user_verification_response(self,
 #### Example Usage
 
 ```python
-user = 'user'
-code = 'code'
+collect = {}
 
-result = verification_client.user_verification_response(user, code)
+user = 'user'
+collect['user'] = user
+
+code = 'code'
+collect['code'] = code
+
+
+result = verification_client.user_verification_response(collect)
 
 ```
 
@@ -879,8 +952,7 @@ An instance of the ``` TwoFactorAuthenticationAPI ``` class can be accessed from
 
 ```python
 def 2_fa_token_response(self,
-                            user,
-                            code)
+                            options=dict())
 ```
 
 #### Parameters
@@ -895,10 +967,16 @@ def 2_fa_token_response(self,
 #### Example Usage
 
 ```python
-user = 'user'
-code = 'code'
+collect = {}
 
-result = two_factor_authentication_api_client.2_fa_token_response(user, code)
+user = 'user'
+collect['user'] = user
+
+code = 'code'
+collect['code'] = code
+
+
+result = two_factor_authentication_api_client.2_fa_token_response(collect)
 
 ```
 
@@ -975,9 +1053,7 @@ result = user_management_client.get_user_info(user)
 
 ```python
 def update_user(self,
-                    user,
-                    avatar,
-                    custom_input,
+                    options=dict(),
                     _optional_query_parameters=None)
 ```
 
@@ -995,14 +1071,22 @@ def update_user(self,
 #### Example Usage
 
 ```python
+collect = {}
+
 user = 'user'
+collect['user'] = user
+
 avatar = 'avatar'
+collect['avatar'] = avatar
+
 custom_input = 'custom input'
+collect['custom_input'] = custom_input
+
 # key-value map for optional query parameters
 optional_query_parameters = { }
 
 
-result = user_management_client.update_user(user, avatar, custom_input, optional_query_parameters)
+result = user_management_client.update_user(collect, optional_query_parameters, )
 
 ```
 
@@ -1052,13 +1136,7 @@ An instance of the ``` LoginAndRegistration ``` class can be accessed from the A
 
 ```python
 def user_registration(self,
-                          email,
-                          user,
-                          password,
-                          name=None,
-                          phone=None,
-                          countrycode=None,
-                          address=None,
+                          options=dict(),
                           _optional_query_parameters=None)
 ```
 
@@ -1080,18 +1158,34 @@ def user_registration(self,
 #### Example Usage
 
 ```python
+collect = {}
+
 email = 'email'
+collect['email'] = email
+
 user = 'user'
+collect['user'] = user
+
 password = 'password'
+collect['password'] = password
+
 name = 'name'
-phone = 247
-countrycode = 247
+collect['name'] = name
+
+phone = 104
+collect['phone'] = phone
+
+countrycode = 104
+collect['countrycode'] = countrycode
+
 address = 'address'
+collect['address'] = address
+
 # key-value map for optional query parameters
 optional_query_parameters = { }
 
 
-result = login_and_registration_client.user_registration(email, user, password, name, phone, countrycode, address, optional_query_parameters)
+result = login_and_registration_client.user_registration(collect, optional_query_parameters, )
 
 ```
 
@@ -1102,8 +1196,7 @@ result = login_and_registration_client.user_registration(email, user, password, 
 
 ```python
 def user_authentication(self,
-                            user,
-                            password)
+                            options=dict())
 ```
 
 #### Parameters
@@ -1118,10 +1211,16 @@ def user_authentication(self,
 #### Example Usage
 
 ```python
-user = 'user'
-password = 'password'
+collect = {}
 
-result = login_and_registration_client.user_authentication(user, password)
+user = 'user'
+collect['user'] = user
+
+password = 'password'
+collect['password'] = password
+
+
+result = login_and_registration_client.user_authentication(collect)
 
 ```
 

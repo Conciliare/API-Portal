@@ -131,9 +131,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build smash.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install smash-1.15.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install smash-1.18.0.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=SMASH-Ruby&workspaceName=SMASH-Ruby&projectName=smash&gemName=smash&gemVer=1.15.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=SMASH-Ruby&workspaceName=SMASH-Ruby&projectName=smash&gemName=smash&gemVer=1.18.0)
 
 ## How to Use
 
@@ -143,41 +143,41 @@ The following section explains how to use the SMASH Ruby Gem in a new Rails proj
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.15.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.15.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.15.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the SMASH gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'smash', '~> 1.15.0' ```
+In order to use the SMASH gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'smash', '~> 1.18.0' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.15.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.15.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.15.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.15.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.15.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
 
 ## How to Test
 
@@ -217,7 +217,7 @@ client = Smash::SMASH.new(
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=SMASH%20-%20API-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.15.0&initLine=client%2520%253D%2520SMASH.new%2528%2527uid%2527%252C%2520%2527secret%2527%252C%2520%2527key%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=SMASH%20-%20API-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0&initLine=client%2520%253D%2520SMASH.new%2528%2527uid%2527%252C%2520%2527secret%2527%252C%2520%2527key%2527%2529)
 
 
 
@@ -255,9 +255,7 @@ advancedLogging = client.advanced_logging
 
 
 ```ruby
-def logging_configuration(name,
-                              origin,
-                              activate); end
+def logging_configuration(options = {}); end
 ```
 
 #### Parameters
@@ -272,11 +270,19 @@ def logging_configuration(name,
 #### Example Usage
 
 ```ruby
-name = 'name'
-origin = 'origin'
-activate = 'activate'
+collect = Hash.new
 
-result = advancedLogging.logging_configuration(name, origin, activate)
+name = 'name'
+collect['name'] = name
+
+origin = 'origin'
+collect['origin'] = origin
+
+activate = 'activate'
+collect['activate'] = activate
+
+
+result = advancedLogging.logging_configuration(collect)
 
 ```
 
@@ -287,9 +293,7 @@ result = advancedLogging.logging_configuration(name, origin, activate)
 
 
 ```ruby
-def logging_info(name,
-                     origin,
-                     time = nil); end
+def logging_info(options = {}); end
 ```
 
 #### Parameters
@@ -304,11 +308,19 @@ def logging_info(name,
 #### Example Usage
 
 ```ruby
-name = 'name'
-origin = 'origin'
-time = 'time'
+collect = Hash.new
 
-result = advancedLogging.logging_info(name, origin, time)
+name = 'name'
+collect['name'] = name
+
+origin = 'origin'
+collect['origin'] = origin
+
+time = 'time'
+collect['time'] = time
+
+
+result = advancedLogging.logging_info(collect)
 
 ```
 
@@ -331,8 +343,7 @@ wAFAndDDOSProtection = client.waf_and_ddos_protection
 
 
 ```ruby
-def https_api_rest_sh_api_s_w_c(name,
-                                    rule); end
+def https_api_rest_sh_api_s_w_c(options = {}); end
 ```
 
 #### Parameters
@@ -346,10 +357,16 @@ def https_api_rest_sh_api_s_w_c(name,
 #### Example Usage
 
 ```ruby
-name = 'name'
-rule = 'rule'
+collect = Hash.new
 
-result = wAFAndDDOSProtection.https_api_rest_sh_api_s_w_c(name, rule)
+name = 'name'
+collect['name'] = name
+
+rule = 'rule'
+collect['rule'] = rule
+
+
+result = wAFAndDDOSProtection.https_api_rest_sh_api_s_w_c(collect)
 
 ```
 
@@ -360,8 +377,7 @@ result = wAFAndDDOSProtection.https_api_rest_sh_api_s_w_c(name, rule)
 
 
 ```ruby
-def https_api_rest_sh_api_s_w(origin,
-                                  cname); end
+def https_api_rest_sh_api_s_w(options = {}); end
 ```
 
 #### Parameters
@@ -375,10 +391,16 @@ def https_api_rest_sh_api_s_w(origin,
 #### Example Usage
 
 ```ruby
-origin = 'origin'
-cname = 'cname'
+collect = Hash.new
 
-result = wAFAndDDOSProtection.https_api_rest_sh_api_s_w(origin, cname)
+origin = 'origin'
+collect['origin'] = origin
+
+cname = 'cname'
+collect['cname'] = cname
+
+
+result = wAFAndDDOSProtection.https_api_rest_sh_api_s_w(collect)
 
 ```
 
@@ -401,9 +423,7 @@ encryption = client.encryption
 
 
 ```ruby
-def data_and_file_encryption(data,
-                                 method,
-                                 bit); end
+def data_and_file_encryption(options = {}); end
 ```
 
 #### Parameters
@@ -418,11 +438,19 @@ def data_and_file_encryption(data,
 #### Example Usage
 
 ```ruby
-data = 'data'
-method = 'method'
-bit = 133
+collect = Hash.new
 
-result = encryption.data_and_file_encryption(data, method, bit)
+data = 'data'
+collect['data'] = data
+
+method = 'method'
+collect['method'] = method
+
+bit = 81
+collect['bit'] = bit
+
+
+result = encryption.data_and_file_encryption(collect)
 
 ```
 
@@ -445,8 +473,7 @@ cDN = client.cdn
 
 
 ```ruby
-def cdn_push_zone(cname,
-                      file); end
+def cdn_push_zone(options = {}); end
 ```
 
 #### Parameters
@@ -460,10 +487,16 @@ def cdn_push_zone(cname,
 #### Example Usage
 
 ```ruby
-cname = 'cname'
-file = 'file'
+collect = Hash.new
 
-result = cDN.cdn_push_zone(cname, file)
+cname = 'cname'
+collect['cname'] = cname
+
+file = 'file'
+collect['file'] = file
+
+
+result = cDN.cdn_push_zone(collect)
 
 ```
 
@@ -474,8 +507,7 @@ result = cDN.cdn_push_zone(cname, file)
 
 
 ```ruby
-def cdn_pull_zone(origin,
-                      cname); end
+def cdn_pull_zone(options = {}); end
 ```
 
 #### Parameters
@@ -489,10 +521,16 @@ def cdn_pull_zone(origin,
 #### Example Usage
 
 ```ruby
-origin = 'origin'
-cname = 'cname'
+collect = Hash.new
 
-result = cDN.cdn_pull_zone(origin, cname)
+origin = 'origin'
+collect['origin'] = origin
+
+cname = 'cname'
+collect['cname'] = cname
+
+
+result = cDN.cdn_pull_zone(collect)
 
 ```
 
@@ -515,8 +553,7 @@ dNS = client.dns
 
 
 ```ruby
-def dns_configuration(domain,
-                          records); end
+def dns_configuration(options = {}); end
 ```
 
 #### Parameters
@@ -530,10 +567,16 @@ def dns_configuration(domain,
 #### Example Usage
 
 ```ruby
-domain = 'domain'
-records = 'records'
+collect = Hash.new
 
-result = dNS.dns_configuration(domain, records)
+domain = 'domain'
+collect['domain'] = domain
+
+records = 'records'
+collect['records'] = records
+
+
+result = dNS.dns_configuration(collect)
 
 ```
 
@@ -620,8 +663,7 @@ hosting = client.hosting
 
 
 ```ruby
-def hosting_setup(app,
-                      domain); end
+def hosting_setup(options = {}); end
 ```
 
 #### Parameters
@@ -635,10 +677,16 @@ def hosting_setup(app,
 #### Example Usage
 
 ```ruby
-app = 'app'
-domain = 'domain'
+collect = Hash.new
 
-result = hosting.hosting_setup(app, domain)
+app = 'app'
+collect['app'] = app
+
+domain = 'domain'
+collect['domain'] = domain
+
+
+result = hosting.hosting_setup(collect)
 
 ```
 
@@ -661,8 +709,7 @@ dataManipulation = client.data_manipulation
 
 
 ```ruby
-def https_api_rest_sh_api_d(data,
-                                transform); end
+def https_api_rest_sh_api_d(options = {}); end
 ```
 
 #### Parameters
@@ -676,10 +723,16 @@ def https_api_rest_sh_api_d(data,
 #### Example Usage
 
 ```ruby
-data = 'data'
-transform = 'transform'
+collect = Hash.new
 
-result = dataManipulation.https_api_rest_sh_api_d(data, transform)
+data = 'data'
+collect['data'] = data
+
+transform = 'transform'
+collect['transform'] = transform
+
+
+result = dataManipulation.https_api_rest_sh_api_d(collect)
 
 ```
 
@@ -702,8 +755,7 @@ imageManipulation = client.image_manipulation
 
 
 ```ruby
-def image_manipulation(image,
-                           transform); end
+def image_manipulation(options = {}); end
 ```
 
 #### Parameters
@@ -717,10 +769,16 @@ def image_manipulation(image,
 #### Example Usage
 
 ```ruby
-image = 'image'
-transform = 'transform'
+collect = Hash.new
 
-result = imageManipulation.image_manipulation(image, transform)
+image = 'image'
+collect['image'] = image
+
+transform = 'transform'
+collect['transform'] = transform
+
+
+result = imageManipulation.image_manipulation(collect)
 
 ```
 
@@ -743,13 +801,7 @@ verification = client.verification
 
 
 ```ruby
-def user_address_verification(user,
-                                  a,
-                                  sa,
-                                  c,
-                                  s,
-                                  z,
-                                  address = nil); end
+def user_address_verification(options = {}); end
 ```
 
 #### Parameters
@@ -768,15 +820,31 @@ def user_address_verification(user,
 #### Example Usage
 
 ```ruby
-user = 'user'
-a = 'a'
-sa = 'sa'
-c = 'c'
-s = 's'
-z = 133
-address = 'address'
+collect = Hash.new
 
-result = verification.user_address_verification(user, a, sa, c, s, z, address)
+user = 'user'
+collect['user'] = user
+
+a = 'a'
+collect['a'] = a
+
+sa = 'sa'
+collect['sa'] = sa
+
+c = 'c'
+collect['c'] = c
+
+s = 's'
+collect['s'] = s
+
+z = 81
+collect['z'] = z
+
+address = 'address'
+collect['address'] = address
+
+
+result = verification.user_address_verification(collect)
 
 ```
 
@@ -787,8 +855,7 @@ result = verification.user_address_verification(user, a, sa, c, s, z, address)
 
 
 ```ruby
-def user_verification_response(user,
-                                   code); end
+def user_verification_response(options = {}); end
 ```
 
 #### Parameters
@@ -802,10 +869,16 @@ def user_verification_response(user,
 #### Example Usage
 
 ```ruby
-user = 'user'
-code = 'code'
+collect = Hash.new
 
-result = verification.user_verification_response(user, code)
+user = 'user'
+collect['user'] = user
+
+code = 'code'
+collect['code'] = code
+
+
+result = verification.user_verification_response(collect)
 
 ```
 
@@ -854,8 +927,7 @@ twoFactorAuthenticationAPI = client.two_factor_authentication_api
 
 
 ```ruby
-def 2_fa_token_response(user,
-                            code); end
+def 2_fa_token_response(options = {}); end
 ```
 
 #### Parameters
@@ -869,10 +941,16 @@ def 2_fa_token_response(user,
 #### Example Usage
 
 ```ruby
-user = 'user'
-code = 'code'
+collect = Hash.new
 
-result = twoFactorAuthenticationAPI.2_fa_token_response(user, code)
+user = 'user'
+collect['user'] = user
+
+code = 'code'
+collect['code'] = code
+
+
+result = twoFactorAuthenticationAPI.2_fa_token_response(collect)
 
 ```
 
@@ -947,9 +1025,7 @@ result = userManagement.get_user_info(user)
 
 
 ```ruby
-def update_user(user,
-                    avatar,
-                    custom_input,
+def update_user(options = {},
                     _query_parameters = nil); end
 ```
 
@@ -966,13 +1042,21 @@ def update_user(user,
 #### Example Usage
 
 ```ruby
+collect = Hash.new
+
 user = 'user'
+collect['user'] = user
+
 avatar = 'avatar'
+collect['avatar'] = avatar
+
 custom_input = 'custom input'
+collect['custom_input'] = custom_input
+
 # key-value map for optional query parameters
 queryParams = { 'key' => 'value' }
 
-result = userManagement.update_user(user, avatar, custom_input, queryParams)
+result = userManagement.update_user(collect, queryParams, )
 
 ```
 
@@ -1021,13 +1105,7 @@ loginAndRegistration = client.login_and_registration
 
 
 ```ruby
-def user_registration(email,
-                          user,
-                          password,
-                          name = nil,
-                          phone = nil,
-                          countrycode = nil,
-                          address = nil,
+def user_registration(options = {},
                           _query_parameters = nil); end
 ```
 
@@ -1048,17 +1126,33 @@ def user_registration(email,
 #### Example Usage
 
 ```ruby
+collect = Hash.new
+
 email = 'email'
+collect['email'] = email
+
 user = 'user'
+collect['user'] = user
+
 password = 'password'
+collect['password'] = password
+
 name = 'name'
-phone = 225
-countrycode = 225
+collect['name'] = name
+
+phone = 81
+collect['phone'] = phone
+
+countrycode = 81
+collect['countrycode'] = countrycode
+
 address = 'address'
+collect['address'] = address
+
 # key-value map for optional query parameters
 queryParams = { 'key' => 'value' }
 
-result = loginAndRegistration.user_registration(email, user, password, name, phone, countrycode, address, queryParams)
+result = loginAndRegistration.user_registration(collect, queryParams, )
 
 ```
 
@@ -1069,8 +1163,7 @@ result = loginAndRegistration.user_registration(email, user, password, name, pho
 
 
 ```ruby
-def user_authentication(user,
-                            password); end
+def user_authentication(options = {}); end
 ```
 
 #### Parameters
@@ -1084,10 +1177,16 @@ def user_authentication(user,
 #### Example Usage
 
 ```ruby
-user = 'user'
-password = 'password'
+collect = Hash.new
 
-result = loginAndRegistration.user_authentication(user, password)
+user = 'user'
+collect['user'] = user
+
+password = 'password'
+collect['password'] = password
+
+
+result = loginAndRegistration.user_authentication(collect)
 
 ```
 

@@ -235,60 +235,60 @@ Import the reference to the generated SDK files inside your html file like:
 
     <!-- Models -->
     <script src="scripts/SMASH/Models/BaseModel.js"></script>
-    <script src="scripts/SMASH/Models/MMDDYYYYHHMMSS.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLIR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiD.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVA.js"></script>
-    <script src="scripts/SMASH/Models/Info17.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUU.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAUR.js"></script>
-    <script src="scripts/SMASH/Models/Info.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLI.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSL.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWC.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSW.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSER.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSE.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPush.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPull.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDC.js"></script>
-    <script src="scripts/SMASH/Models/Nameservers.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSHR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSH.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiDR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiIR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiI.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faT.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2fa.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVU.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUD.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUIR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUI.js"></script>
-    <script src="scripts/SMASH/Models/Info12.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUUR.js"></script>
-    <script src="scripts/SMASH/Models/Info7.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAURR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAULR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAUL.js"></script>
-    <script src="scripts/SMASH/Models/Data.js"></script>
-    <script src="scripts/SMASH/Models/Log.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWCR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSOR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSO.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPushR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPullR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDCR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDAR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDA.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faTR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVAR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVUR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiV.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUDR.js"></script>
+    <script src="scripts/SMASH/Models/MMDDYYYYHHMMSSModel.js"></script>
+    <script src="scripts/SMASH/Models/LoggingLogsModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/LoggingSetupModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/DataManipulationModel.js"></script>
+    <script src="scripts/SMASH/Models/VerifyAddress.js"></script>
+    <script src="scripts/SMASH/Models/UserInformationModel.js"></script>
+    <script src="scripts/SMASH/Models/UserUpdateModel.js"></script>
+    <script src="scripts/SMASH/Models/UserRegistrationModel.js"></script>
+    <script src="scripts/SMASH/Models/InfoModel.js"></script>
+    <script src="scripts/SMASH/Models/LoggingLogsModel.js"></script>
+    <script src="scripts/SMASH/Models/LoggingSetupModel.js"></script>
+    <script src="scripts/SMASH/Models/WAFConfigurationModel.js"></script>
+    <script src="scripts/SMASH/Models/WAFCreationModel.js"></script>
+    <script src="scripts/SMASH/Models/EncryptionModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/EncryptionModel.js"></script>
+    <script src="scripts/SMASH/Models/CDNPushModel.js"></script>
+    <script src="scripts/SMASH/Models/CDNPullModel.js"></script>
+    <script src="scripts/SMASH/Models/DNSConfigurationModel.js"></script>
+    <script src="scripts/SMASH/Models/NameserversModel.js"></script>
+    <script src="scripts/SMASH/Models/HostingModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/HostingModel.js"></script>
+    <script src="scripts/SMASH/Models/DataManipulationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/ImageManipulationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/ImageManipulationModel.js"></script>
+    <script src="scripts/SMASH/Models/TwoFactorAuthenticationTokenModel.js"></script>
+    <script src="scripts/SMASH/Models/TwoFactorAuthenticationModel.js"></script>
+    <script src="scripts/SMASH/Models/VerifyUserModel.js"></script>
+    <script src="scripts/SMASH/Models/VerifyModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/UserDeletionModel.js"></script>
+    <script src="scripts/SMASH/Models/UserInformationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/UserInformationSecondaryModel.js"></script>
+    <script src="scripts/SMASH/Models/UserCustomUpdateModel.js"></script>
+    <script src="scripts/SMASH/Models/UserUpdateModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/UserProfileInformationModel.js"></script>
+    <script src="scripts/SMASH/Models/UserRegistrationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/UserAuthenticationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/UserAuthenticationModel.js"></script>
+    <script src="scripts/SMASH/Models/DataModel.js"></script>
+    <script src="scripts/SMASH/Models/LogModel.js"></script>
+    <script src="scripts/SMASH/Models/WAFConfigurationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/WAFCreationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/CodeProtectionModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/CodeProtectionModel.js"></script>
+    <script src="scripts/SMASH/Models/CDNPushModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/CDNPullModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/DNSConfigurationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/DNSCreationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/DNSCreationModel.js"></script>
+    <script src="scripts/SMASH/Models/TwoFactorAuthenticationTokenModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/TwoFactorAuthenticationModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/VerifyAddressResponse.js"></script>
+    <script src="scripts/SMASH/Models/VerifyUserModelResponse.js"></script>
+    <script src="scripts/SMASH/Models/VerifyModel.js"></script>
+    <script src="scripts/SMASH/Models/UserDeletionResponseModel.js"></script>
 
     ...
 </head>
@@ -401,7 +401,7 @@ app.factory('config', function($scope, Configuration)
 The singleton instance of the ``` AdvancedLogging ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, AdvancedLogging, HttpsApiRestShApiSLR, HttpsApiRestShApiSLIR){
+	app.controller("testController", function($scope, AdvancedLogging, LoggingSetupModelResponse, LoggingLogsModelResponse){
 	});
 ```
 
@@ -411,7 +411,7 @@ The singleton instance of the ``` AdvancedLogging ``` class can be accessed via 
 
 
 ```javascript
-function loggingConfiguration(name, origin, activate)
+function loggingConfiguration(input)
 ```
 #### Parameters
 
@@ -428,13 +428,14 @@ function loggingConfiguration(name, origin, activate)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvancedLogging, HttpsApiRestShApiSLR){
-        var name = 'name';
-        var origin = 'origin';
-        var activate = 'activate';
+	app.controller("testController", function($scope, AdvancedLogging, LoggingSetupModelResponse){
+        var input = [];
+        input['name'] = 'name';
+        input['origin'] = 'origin';
+        input['activate'] = 'activate';
 
 
-		var result = AdvancedLogging.loggingConfiguration(name, origin, activate);
+		var result = AdvancedLogging.loggingConfiguration(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -455,7 +456,7 @@ function loggingConfiguration(name, origin, activate)
 
 
 ```javascript
-function loggingInfo(name, origin, time)
+function loggingInfo(input)
 ```
 #### Parameters
 
@@ -472,13 +473,14 @@ function loggingInfo(name, origin, time)
 ```javascript
 
 
-	app.controller("testController", function($scope, AdvancedLogging, HttpsApiRestShApiSLIR){
-        var name = 'name';
-        var origin = 'origin';
-        var time = 'time';
+	app.controller("testController", function($scope, AdvancedLogging, LoggingLogsModelResponse){
+        var input = [];
+        input['name'] = 'name';
+        input['origin'] = 'origin';
+        input['time'] = 'time';
 
 
-		var result = AdvancedLogging.loggingInfo(name, origin, time);
+		var result = AdvancedLogging.loggingInfo(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -502,7 +504,7 @@ function loggingInfo(name, origin, time)
 The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, WAFAndDDOSProtection, HttpsApiRestShApiSWCR, HttpsApiRestShApiSWR){
+	app.controller("testController", function($scope, WAFAndDDOSProtection, WAFConfigurationModelResponse, WAFCreationModelResponse){
 	});
 ```
 
@@ -512,7 +514,7 @@ The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed
 
 
 ```javascript
-function httpsApiRestShApiSWC(name, rule)
+function httpsApiRestShApiSWC(input)
 ```
 #### Parameters
 
@@ -528,12 +530,13 @@ function httpsApiRestShApiSWC(name, rule)
 ```javascript
 
 
-	app.controller("testController", function($scope, WAFAndDDOSProtection, HttpsApiRestShApiSWCR){
-        var name = 'name';
-        var rule = 'rule';
+	app.controller("testController", function($scope, WAFAndDDOSProtection, WAFConfigurationModelResponse){
+        var input = [];
+        input['name'] = 'name';
+        input['rule'] = 'rule';
 
 
-		var result = WAFAndDDOSProtection.httpsApiRestShApiSWC(name, rule);
+		var result = WAFAndDDOSProtection.httpsApiRestShApiSWC(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -554,7 +557,7 @@ function httpsApiRestShApiSWC(name, rule)
 
 
 ```javascript
-function httpsApiRestShApiSW(origin, cname)
+function httpsApiRestShApiSW(input)
 ```
 #### Parameters
 
@@ -570,12 +573,13 @@ function httpsApiRestShApiSW(origin, cname)
 ```javascript
 
 
-	app.controller("testController", function($scope, WAFAndDDOSProtection, HttpsApiRestShApiSWR){
-        var origin = 'origin';
-        var cname = 'cname';
+	app.controller("testController", function($scope, WAFAndDDOSProtection, WAFCreationModelResponse){
+        var input = [];
+        input['origin'] = 'origin';
+        input['cname'] = 'cname';
 
 
-		var result = WAFAndDDOSProtection.httpsApiRestShApiSW(origin, cname);
+		var result = WAFAndDDOSProtection.httpsApiRestShApiSW(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -599,7 +603,7 @@ function httpsApiRestShApiSW(origin, cname)
 The singleton instance of the ``` Encryption ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, Encryption, HttpsApiRestShApiSER){
+	app.controller("testController", function($scope, Encryption, EncryptionModelResponse){
 	});
 ```
 
@@ -609,7 +613,7 @@ The singleton instance of the ``` Encryption ``` class can be accessed via Depen
 
 
 ```javascript
-function dataAndFileEncryption(data, method, bit)
+function dataAndFileEncryption(input)
 ```
 #### Parameters
 
@@ -626,13 +630,14 @@ function dataAndFileEncryption(data, method, bit)
 ```javascript
 
 
-	app.controller("testController", function($scope, Encryption, HttpsApiRestShApiSER){
-        var data = 'data';
-        var method = 'method';
-        var bit = 184;
+	app.controller("testController", function($scope, Encryption, EncryptionModelResponse){
+        var input = [];
+        input['data'] = 'data';
+        input['method'] = 'method';
+        input['bit'] = 90;
 
 
-		var result = Encryption.dataAndFileEncryption(data, method, bit);
+		var result = Encryption.dataAndFileEncryption(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -656,7 +661,7 @@ function dataAndFileEncryption(data, method, bit)
 The singleton instance of the ``` CDN ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, CDN, HttpsApiRestShApiSCPushR, HttpsApiRestShApiSCPullR){
+	app.controller("testController", function($scope, CDN, CDNPushModelResponse, CDNPullModelResponse){
 	});
 ```
 
@@ -666,7 +671,7 @@ The singleton instance of the ``` CDN ``` class can be accessed via Dependency I
 
 
 ```javascript
-function cDNPushZone(cname, file)
+function cDNPushZone(input)
 ```
 #### Parameters
 
@@ -682,12 +687,13 @@ function cDNPushZone(cname, file)
 ```javascript
 
 
-	app.controller("testController", function($scope, CDN, HttpsApiRestShApiSCPushR){
-        var cname = 'cname';
-        var file = 'file';
+	app.controller("testController", function($scope, CDN, CDNPushModelResponse){
+        var input = [];
+        input['cname'] = 'cname';
+        input['file'] = 'file';
 
 
-		var result = CDN.cDNPushZone(cname, file);
+		var result = CDN.cDNPushZone(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -708,7 +714,7 @@ function cDNPushZone(cname, file)
 
 
 ```javascript
-function cDNPullZone(origin, cname)
+function cDNPullZone(input)
 ```
 #### Parameters
 
@@ -724,12 +730,13 @@ function cDNPullZone(origin, cname)
 ```javascript
 
 
-	app.controller("testController", function($scope, CDN, HttpsApiRestShApiSCPullR){
-        var origin = 'origin';
-        var cname = 'cname';
+	app.controller("testController", function($scope, CDN, CDNPullModelResponse){
+        var input = [];
+        input['origin'] = 'origin';
+        input['cname'] = 'cname';
 
 
-		var result = CDN.cDNPullZone(origin, cname);
+		var result = CDN.cDNPullZone(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -753,7 +760,7 @@ function cDNPullZone(origin, cname)
 The singleton instance of the ``` DNS ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, DNS, HttpsApiRestShApiSDCR, HttpsApiRestShApiSDAR){
+	app.controller("testController", function($scope, DNS, DNSConfigurationModelResponse, DNSCreationModelResponse){
 	});
 ```
 
@@ -763,7 +770,7 @@ The singleton instance of the ``` DNS ``` class can be accessed via Dependency I
 
 
 ```javascript
-function dNSConfiguration(domain, records)
+function dNSConfiguration(input)
 ```
 #### Parameters
 
@@ -779,12 +786,13 @@ function dNSConfiguration(domain, records)
 ```javascript
 
 
-	app.controller("testController", function($scope, DNS, HttpsApiRestShApiSDCR){
-        var domain = 'domain';
-        var records = 'records';
+	app.controller("testController", function($scope, DNS, DNSConfigurationModelResponse){
+        var input = [];
+        input['domain'] = 'domain';
+        input['records'] = 'records';
 
 
-		var result = DNS.dNSConfiguration(domain, records);
+		var result = DNS.dNSConfiguration(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -820,7 +828,7 @@ function dNSCreation(domain)
 ```javascript
 
 
-	app.controller("testController", function($scope, DNS, HttpsApiRestShApiSDAR){
+	app.controller("testController", function($scope, DNS, DNSCreationModelResponse){
         var domain = 'domain';
 
 
@@ -848,7 +856,7 @@ function dNSCreation(domain)
 The singleton instance of the ``` CodeObfuscation ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, CodeObfuscation, HttpsApiRestShApiSOR){
+	app.controller("testController", function($scope, CodeObfuscation, CodeProtectionModelResponse){
 	});
 ```
 
@@ -873,7 +881,7 @@ function obfuscationAndAntiTampering(app)
 ```javascript
 
 
-	app.controller("testController", function($scope, CodeObfuscation, HttpsApiRestShApiSOR){
+	app.controller("testController", function($scope, CodeObfuscation, CodeProtectionModelResponse){
         var app = 'app';
 
 
@@ -901,7 +909,7 @@ function obfuscationAndAntiTampering(app)
 The singleton instance of the ``` Hosting ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, Hosting, HttpsApiRestShApiSHR){
+	app.controller("testController", function($scope, Hosting, HostingModelResponse){
 	});
 ```
 
@@ -911,7 +919,7 @@ The singleton instance of the ``` Hosting ``` class can be accessed via Dependen
 
 
 ```javascript
-function hostingSetup(app, domain)
+function hostingSetup(input)
 ```
 #### Parameters
 
@@ -927,12 +935,13 @@ function hostingSetup(app, domain)
 ```javascript
 
 
-	app.controller("testController", function($scope, Hosting, HttpsApiRestShApiSHR){
-        var app = 'app';
-        var domain = 'domain';
+	app.controller("testController", function($scope, Hosting, HostingModelResponse){
+        var input = [];
+        input['app'] = 'app';
+        input['domain'] = 'domain';
 
 
-		var result = Hosting.hostingSetup(app, domain);
+		var result = Hosting.hostingSetup(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -956,7 +965,7 @@ function hostingSetup(app, domain)
 The singleton instance of the ``` DataManipulation ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, DataManipulation, HttpsApiRestShApiDR){
+	app.controller("testController", function($scope, DataManipulation, DataManipulationModelResponse){
 	});
 ```
 
@@ -966,7 +975,7 @@ The singleton instance of the ``` DataManipulation ``` class can be accessed via
 
 
 ```javascript
-function httpsApiRestShApiD(data, transform)
+function httpsApiRestShApiD(input)
 ```
 #### Parameters
 
@@ -982,12 +991,13 @@ function httpsApiRestShApiD(data, transform)
 ```javascript
 
 
-	app.controller("testController", function($scope, DataManipulation, HttpsApiRestShApiDR){
-        var data = 'data';
-        var transform = 'transform';
+	app.controller("testController", function($scope, DataManipulation, DataManipulationModelResponse){
+        var input = [];
+        input['data'] = 'data';
+        input['transform'] = 'transform';
 
 
-		var result = DataManipulation.httpsApiRestShApiD(data, transform);
+		var result = DataManipulation.httpsApiRestShApiD(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1011,7 +1021,7 @@ function httpsApiRestShApiD(data, transform)
 The singleton instance of the ``` ImageManipulation ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, ImageManipulation, HttpsApiRestShApiIR){
+	app.controller("testController", function($scope, ImageManipulation, ImageManipulationModelResponse){
 	});
 ```
 
@@ -1021,7 +1031,7 @@ The singleton instance of the ``` ImageManipulation ``` class can be accessed vi
 
 
 ```javascript
-function imageManipulation(image, transform)
+function imageManipulation(input)
 ```
 #### Parameters
 
@@ -1037,12 +1047,13 @@ function imageManipulation(image, transform)
 ```javascript
 
 
-	app.controller("testController", function($scope, ImageManipulation, HttpsApiRestShApiIR){
-        var image = 'image';
-        var transform = 'transform';
+	app.controller("testController", function($scope, ImageManipulation, ImageManipulationModelResponse){
+        var input = [];
+        input['image'] = 'image';
+        input['transform'] = 'transform';
 
 
-		var result = ImageManipulation.imageManipulation(image, transform);
+		var result = ImageManipulation.imageManipulation(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1066,7 +1077,7 @@ function imageManipulation(image, transform)
 The singleton instance of the ``` Verification ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, Verification, HttpsApiRestShApiVAR, HttpsApiRestShApiVUR, HttpsApiRestShApiVR){
+	app.controller("testController", function($scope, Verification, VerifyAddressResponse, VerifyUserModelResponse, VerifyModelResponse){
 	});
 ```
 
@@ -1076,7 +1087,7 @@ The singleton instance of the ``` Verification ``` class can be accessed via Dep
 
 
 ```javascript
-function userAddressVerification(user, a, sa, c, s, z, address)
+function userAddressVerification(input)
 ```
 #### Parameters
 
@@ -1097,17 +1108,18 @@ function userAddressVerification(user, a, sa, c, s, z, address)
 ```javascript
 
 
-	app.controller("testController", function($scope, Verification, HttpsApiRestShApiVAR){
-        var user = 'user';
-        var a = 'a';
-        var sa = 'sa';
-        var c = 'c';
-        var s = 's';
-        var z = 184;
-        var address = 'address';
+	app.controller("testController", function($scope, Verification, VerifyAddressResponse){
+        var input = [];
+        input['user'] = 'user';
+        input['a'] = 'a';
+        input['sa'] = 'sa';
+        input['c'] = 'c';
+        input['s'] = 's';
+        input['z'] = 90;
+        input['address'] = 'address';
 
 
-		var result = Verification.userAddressVerification(user, a, sa, c, s, z, address);
+		var result = Verification.userAddressVerification(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1128,7 +1140,7 @@ function userAddressVerification(user, a, sa, c, s, z, address)
 
 
 ```javascript
-function userVerificationResponse(user, code)
+function userVerificationResponse(input)
 ```
 #### Parameters
 
@@ -1144,12 +1156,13 @@ function userVerificationResponse(user, code)
 ```javascript
 
 
-	app.controller("testController", function($scope, Verification, HttpsApiRestShApiVUR){
-        var user = 'user';
-        var code = 'code';
+	app.controller("testController", function($scope, Verification, VerifyUserModelResponse){
+        var input = [];
+        input['user'] = 'user';
+        input['code'] = 'code';
 
 
-		var result = Verification.userVerificationResponse(user, code);
+		var result = Verification.userVerificationResponse(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1185,7 +1198,7 @@ function userVerification(user)
 ```javascript
 
 
-	app.controller("testController", function($scope, Verification, HttpsApiRestShApiVR){
+	app.controller("testController", function($scope, Verification, VerifyModelResponse){
         var user = 'user';
 
 
@@ -1213,7 +1226,7 @@ function userVerification(user)
 The singleton instance of the ``` TwoFactorAuthenticationAPI ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, TwoFactorAuthenticationAPI, HttpsApiRestShApi2faTR, HttpsApiRestShApi2faR){
+	app.controller("testController", function($scope, TwoFactorAuthenticationAPI, TwoFactorAuthenticationTokenModelResponse, TwoFactorAuthenticationModelResponse){
 	});
 ```
 
@@ -1223,7 +1236,7 @@ The singleton instance of the ``` TwoFactorAuthenticationAPI ``` class can be ac
 
 
 ```javascript
-function m2FATokenResponse(user, code)
+function m2FATokenResponse(input)
 ```
 #### Parameters
 
@@ -1239,12 +1252,13 @@ function m2FATokenResponse(user, code)
 ```javascript
 
 
-	app.controller("testController", function($scope, TwoFactorAuthenticationAPI, HttpsApiRestShApi2faTR){
-        var user = 'user';
-        var code = 'code';
+	app.controller("testController", function($scope, TwoFactorAuthenticationAPI, TwoFactorAuthenticationTokenModelResponse){
+        var input = [];
+        input['user'] = 'user';
+        input['code'] = 'code';
 
 
-		var result = TwoFactorAuthenticationAPI.m2FATokenResponse(user, code);
+		var result = TwoFactorAuthenticationAPI.m2FATokenResponse(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1280,7 +1294,7 @@ function twoFactorAuthentication(to)
 ```javascript
 
 
-	app.controller("testController", function($scope, TwoFactorAuthenticationAPI, HttpsApiRestShApi2faR){
+	app.controller("testController", function($scope, TwoFactorAuthenticationAPI, TwoFactorAuthenticationModelResponse){
         var to = 'to';
 
 
@@ -1308,7 +1322,7 @@ function twoFactorAuthentication(to)
 The singleton instance of the ``` UserManagement ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, UserManagement, HttpsApiRestShApiUIR, HttpsApiRestShApiUUR, HttpsApiRestShApiUDR){
+	app.controller("testController", function($scope, UserManagement, UserInformationModelResponse, UserUpdateModelResponse, UserDeletionResponseModel){
 	});
 ```
 
@@ -1333,7 +1347,7 @@ function getUserInfo(user)
 ```javascript
 
 
-	app.controller("testController", function($scope, UserManagement, HttpsApiRestShApiUIR){
+	app.controller("testController", function($scope, UserManagement, UserInformationModelResponse){
         var user = 'user';
 
 
@@ -1358,7 +1372,7 @@ function getUserInfo(user)
 
 
 ```javascript
-function updateUser(user, avatar, customInput, queryParameters)
+function updateUser(input, queryParameters)
 ```
 #### Parameters
 
@@ -1376,16 +1390,17 @@ function updateUser(user, avatar, customInput, queryParameters)
 ```javascript
 
 
-	app.controller("testController", function($scope, UserManagement, HttpsApiRestShApiUUR){
-        var user = 'user';
-        var avatar = 'avatar';
-        var customInput = custom input;
+	app.controller("testController", function($scope, UserManagement, UserUpdateModelResponse){
+        var input = [];
+        input['user'] = 'user';
+        input['avatar'] = 'avatar';
+        input['customInput'] = custom input;
 
         // key-value map for optional query parameters
         var queryParameters = [];
 
 
-		var result = UserManagement.updateUser(user, avatar, customInput, queryParameters);
+		var result = UserManagement.updateUser(input, queryParameters);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1421,7 +1436,7 @@ function deleteUser(user)
 ```javascript
 
 
-	app.controller("testController", function($scope, UserManagement, HttpsApiRestShApiUDR){
+	app.controller("testController", function($scope, UserManagement, UserDeletionResponseModel){
         var user = 'user';
 
 
@@ -1449,7 +1464,7 @@ function deleteUser(user)
 The singleton instance of the ``` LoginAndRegistration ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, LoginAndRegistration, HttpsApiRestShApiAURR, HttpsApiRestShApiAULR){
+	app.controller("testController", function($scope, LoginAndRegistration, UserRegistrationModelResponse, UserAuthenticationModelResponse){
 	});
 ```
 
@@ -1459,7 +1474,7 @@ The singleton instance of the ``` LoginAndRegistration ``` class can be accessed
 
 
 ```javascript
-function userRegistration(email, user, password, name, phone, countrycode, address, queryParameters)
+function userRegistration(input, queryParameters)
 ```
 #### Parameters
 
@@ -1481,20 +1496,21 @@ function userRegistration(email, user, password, name, phone, countrycode, addre
 ```javascript
 
 
-	app.controller("testController", function($scope, LoginAndRegistration, HttpsApiRestShApiAURR){
-        var email = 'email';
-        var user = 'user';
-        var password = 'password';
-        var name = 'name';
-        var phone = 184;
-        var countrycode = 184;
-        var address = 'address';
+	app.controller("testController", function($scope, LoginAndRegistration, UserRegistrationModelResponse){
+        var input = [];
+        input['email'] = 'email';
+        input['user'] = 'user';
+        input['password'] = 'password';
+        input['name'] = 'name';
+        input['phone'] = 90;
+        input['countrycode'] = 90;
+        input['address'] = 'address';
 
         // key-value map for optional query parameters
         var queryParameters = [];
 
 
-		var result = LoginAndRegistration.userRegistration(email, user, password, name, phone, countrycode, address, queryParameters);
+		var result = LoginAndRegistration.userRegistration(input, queryParameters);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1515,7 +1531,7 @@ function userRegistration(email, user, password, name, phone, countrycode, addre
 
 
 ```javascript
-function userAuthentication(user, password)
+function userAuthentication(input)
 ```
 #### Parameters
 
@@ -1531,12 +1547,13 @@ function userAuthentication(user, password)
 ```javascript
 
 
-	app.controller("testController", function($scope, LoginAndRegistration, HttpsApiRestShApiAULR){
-        var user = 'user';
-        var password = 'password';
+	app.controller("testController", function($scope, LoginAndRegistration, UserAuthenticationModelResponse){
+        var input = [];
+        input['user'] = 'user';
+        input['password'] = 'password';
 
 
-		var result = LoginAndRegistration.userAuthentication(user, password);
+		var result = LoginAndRegistration.userAuthentication(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case

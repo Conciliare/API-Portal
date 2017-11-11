@@ -261,10 +261,8 @@ AdvancedLogging advancedLogging = client.getAdvancedLogging();
 
 ```java
 void loggingConfigurationAsync(
-        final String name,
-        final String origin,
-        final String activate,
-        final APICallBack<HttpsApiRestShApiSLR> callBack)
+        final LoggingConfigurationInput input,
+        final APICallBack<LoggingSetupModelResponse> callBack)
 ```
 
 #### Parameters
@@ -279,18 +277,27 @@ void loggingConfigurationAsync(
 #### Example Usage
 
 ```java
+LoggingConfigurationInput collect = new LoggingConfigurationInput();
+
 String name = "name";
+collect.setName(name);
+
 String origin = "origin";
+collect.setOrigin(origin);
+
 String activate = "activate";
+collect.setActivate(activate);
+
 // Invoking the API call with sample inputs
-advancedLogging.loggingConfigurationAsync(name, origin, activate, new APICallBack<HttpsApiRestShApiSLR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSLR response) {
+advancedLogging.loggingConfigurationAsync(collect, new APICallBack<LoggingSetupModelResponse>() {
+    public void onSuccess(HttpContext context, LoggingSetupModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -302,10 +309,8 @@ advancedLogging.loggingConfigurationAsync(name, origin, activate, new APICallBac
 
 ```java
 void loggingInfoAsync(
-        final String name,
-        final String origin,
-        final String time,
-        final APICallBack<HttpsApiRestShApiSLIR> callBack)
+        final LoggingInfoInput input,
+        final APICallBack<LoggingLogsModelResponse> callBack)
 ```
 
 #### Parameters
@@ -320,18 +325,27 @@ void loggingInfoAsync(
 #### Example Usage
 
 ```java
+LoggingInfoInput collect = new LoggingInfoInput();
+
 String name = "name";
+collect.setName(name);
+
 String origin = "origin";
+collect.setOrigin(origin);
+
 String time = "time";
+collect.setTime(time);
+
 // Invoking the API call with sample inputs
-advancedLogging.loggingInfoAsync(name, origin, time, new APICallBack<HttpsApiRestShApiSLIR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSLIR response) {
+advancedLogging.loggingInfoAsync(collect, new APICallBack<LoggingLogsModelResponse>() {
+    public void onSuccess(HttpContext context, LoggingLogsModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -355,9 +369,8 @@ WAFAndDDOSProtection wAFAndDDOSProtection = client.getWAFAndDDOSProtection();
 
 ```java
 void httpsApiRestShApiSWCAsync(
-        final String name,
-        final String rule,
-        final APICallBack<HttpsApiRestShApiSWCR> callBack)
+        final HttpsApiRestShApiSWCInput input,
+        final APICallBack<WAFConfigurationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -371,17 +384,24 @@ void httpsApiRestShApiSWCAsync(
 #### Example Usage
 
 ```java
+HttpsApiRestShApiSWCInput collect = new HttpsApiRestShApiSWCInput();
+
 String name = "name";
+collect.setName(name);
+
 String rule = "rule";
+collect.setRule(rule);
+
 // Invoking the API call with sample inputs
-wAFAndDDOSProtection.httpsApiRestShApiSWCAsync(name, rule, new APICallBack<HttpsApiRestShApiSWCR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSWCR response) {
+wAFAndDDOSProtection.httpsApiRestShApiSWCAsync(collect, new APICallBack<WAFConfigurationModelResponse>() {
+    public void onSuccess(HttpContext context, WAFConfigurationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -393,9 +413,8 @@ wAFAndDDOSProtection.httpsApiRestShApiSWCAsync(name, rule, new APICallBack<Https
 
 ```java
 void httpsApiRestShApiSWAsync(
-        final String origin,
-        final String cname,
-        final APICallBack<HttpsApiRestShApiSWR> callBack)
+        final HttpsApiRestShApiSWInput input,
+        final APICallBack<WAFCreationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -409,17 +428,24 @@ void httpsApiRestShApiSWAsync(
 #### Example Usage
 
 ```java
+HttpsApiRestShApiSWInput collect = new HttpsApiRestShApiSWInput();
+
 String origin = "origin";
+collect.setOrigin(origin);
+
 String cname = "cname";
+collect.setCname(cname);
+
 // Invoking the API call with sample inputs
-wAFAndDDOSProtection.httpsApiRestShApiSWAsync(origin, cname, new APICallBack<HttpsApiRestShApiSWR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSWR response) {
+wAFAndDDOSProtection.httpsApiRestShApiSWAsync(collect, new APICallBack<WAFCreationModelResponse>() {
+    public void onSuccess(HttpContext context, WAFCreationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -443,10 +469,8 @@ Encryption encryption = client.getEncryption();
 
 ```java
 void dataAndFileEncryptionAsync(
-        final String data,
-        final String method,
-        final int bit,
-        final APICallBack<HttpsApiRestShApiSER> callBack)
+        final DataAndFileEncryptionInput input,
+        final APICallBack<EncryptionModelResponse> callBack)
 ```
 
 #### Parameters
@@ -461,18 +485,27 @@ void dataAndFileEncryptionAsync(
 #### Example Usage
 
 ```java
+DataAndFileEncryptionInput collect = new DataAndFileEncryptionInput();
+
 String data = "data";
+collect.setData(data);
+
 String method = "method";
-int bit = 206;
+collect.setMethod(method);
+
+int bit = 154;
+collect.setBit(bit);
+
 // Invoking the API call with sample inputs
-encryption.dataAndFileEncryptionAsync(data, method, bit, new APICallBack<HttpsApiRestShApiSER>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSER response) {
+encryption.dataAndFileEncryptionAsync(collect, new APICallBack<EncryptionModelResponse>() {
+    public void onSuccess(HttpContext context, EncryptionModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -496,9 +529,8 @@ CDN cDN = client.getCDN();
 
 ```java
 void cDNPushZoneAsync(
-        final String cname,
-        final String file,
-        final APICallBack<HttpsApiRestShApiSCPushR> callBack)
+        final CDNPushZoneInput input,
+        final APICallBack<CDNPushModelResponse> callBack)
 ```
 
 #### Parameters
@@ -512,17 +544,24 @@ void cDNPushZoneAsync(
 #### Example Usage
 
 ```java
+CDNPushZoneInput collect = new CDNPushZoneInput();
+
 String cname = "cname";
+collect.setCname(cname);
+
 String file = "file";
+collect.setFile(file);
+
 // Invoking the API call with sample inputs
-cDN.cDNPushZoneAsync(cname, file, new APICallBack<HttpsApiRestShApiSCPushR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSCPushR response) {
+cDN.cDNPushZoneAsync(collect, new APICallBack<CDNPushModelResponse>() {
+    public void onSuccess(HttpContext context, CDNPushModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -534,9 +573,8 @@ cDN.cDNPushZoneAsync(cname, file, new APICallBack<HttpsApiRestShApiSCPushR>() {
 
 ```java
 void cDNPullZoneAsync(
-        final String origin,
-        final String cname,
-        final APICallBack<HttpsApiRestShApiSCPullR> callBack)
+        final CDNPullZoneInput input,
+        final APICallBack<CDNPullModelResponse> callBack)
 ```
 
 #### Parameters
@@ -550,17 +588,24 @@ void cDNPullZoneAsync(
 #### Example Usage
 
 ```java
+CDNPullZoneInput collect = new CDNPullZoneInput();
+
 String origin = "origin";
+collect.setOrigin(origin);
+
 String cname = "cname";
+collect.setCname(cname);
+
 // Invoking the API call with sample inputs
-cDN.cDNPullZoneAsync(origin, cname, new APICallBack<HttpsApiRestShApiSCPullR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSCPullR response) {
+cDN.cDNPullZoneAsync(collect, new APICallBack<CDNPullModelResponse>() {
+    public void onSuccess(HttpContext context, CDNPullModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -584,9 +629,8 @@ DNS dNS = client.getDNS();
 
 ```java
 void dNSConfigurationAsync(
-        final String domain,
-        final String records,
-        final APICallBack<HttpsApiRestShApiSDCR> callBack)
+        final DNSConfigurationInput input,
+        final APICallBack<DNSConfigurationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -600,17 +644,24 @@ void dNSConfigurationAsync(
 #### Example Usage
 
 ```java
+DNSConfigurationInput collect = new DNSConfigurationInput();
+
 String domain = "domain";
+collect.setDomain(domain);
+
 String records = "records";
+collect.setRecords(records);
+
 // Invoking the API call with sample inputs
-dNS.dNSConfigurationAsync(domain, records, new APICallBack<HttpsApiRestShApiSDCR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSDCR response) {
+dNS.dNSConfigurationAsync(collect, new APICallBack<DNSConfigurationModelResponse>() {
+    public void onSuccess(HttpContext context, DNSConfigurationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -623,7 +674,7 @@ dNS.dNSConfigurationAsync(domain, records, new APICallBack<HttpsApiRestShApiSDCR
 ```java
 void dNSCreationAsync(
         final String domain,
-        final APICallBack<HttpsApiRestShApiSDAR> callBack)
+        final APICallBack<DNSCreationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -638,8 +689,8 @@ void dNSCreationAsync(
 ```java
 String domain = "domain";
 // Invoking the API call with sample inputs
-dNS.dNSCreationAsync(domain, new APICallBack<HttpsApiRestShApiSDAR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSDAR response) {
+dNS.dNSCreationAsync(domain, new APICallBack<DNSCreationModelResponse>() {
+    public void onSuccess(HttpContext context, DNSCreationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
@@ -670,7 +721,7 @@ CodeObfuscation codeObfuscation = client.getCodeObfuscation();
 ```java
 void obfuscationAndAntiTamperingAsync(
         final String app,
-        final APICallBack<HttpsApiRestShApiSOR> callBack)
+        final APICallBack<CodeProtectionModelResponse> callBack)
 ```
 
 #### Parameters
@@ -685,8 +736,8 @@ void obfuscationAndAntiTamperingAsync(
 ```java
 String app = "app";
 // Invoking the API call with sample inputs
-codeObfuscation.obfuscationAndAntiTamperingAsync(app, new APICallBack<HttpsApiRestShApiSOR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSOR response) {
+codeObfuscation.obfuscationAndAntiTamperingAsync(app, new APICallBack<CodeProtectionModelResponse>() {
+    public void onSuccess(HttpContext context, CodeProtectionModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
@@ -716,9 +767,8 @@ Hosting hosting = client.getHosting();
 
 ```java
 void hostingSetupAsync(
-        final String app,
-        final String domain,
-        final APICallBack<HttpsApiRestShApiSHR> callBack)
+        final HostingSetupInput input,
+        final APICallBack<HostingModelResponse> callBack)
 ```
 
 #### Parameters
@@ -732,17 +782,24 @@ void hostingSetupAsync(
 #### Example Usage
 
 ```java
+HostingSetupInput collect = new HostingSetupInput();
+
 String app = "app";
+collect.setApp(app);
+
 String domain = "domain";
+collect.setDomain(domain);
+
 // Invoking the API call with sample inputs
-hosting.hostingSetupAsync(app, domain, new APICallBack<HttpsApiRestShApiSHR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiSHR response) {
+hosting.hostingSetupAsync(collect, new APICallBack<HostingModelResponse>() {
+    public void onSuccess(HttpContext context, HostingModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -766,9 +823,8 @@ DataManipulation dataManipulation = client.getDataManipulation();
 
 ```java
 void httpsApiRestShApiDAsync(
-        final String data,
-        final String transform,
-        final APICallBack<HttpsApiRestShApiDR> callBack)
+        final HttpsApiRestShApiDInput input,
+        final APICallBack<DataManipulationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -782,17 +838,24 @@ void httpsApiRestShApiDAsync(
 #### Example Usage
 
 ```java
+HttpsApiRestShApiDInput collect = new HttpsApiRestShApiDInput();
+
 String data = "data";
+collect.setData(data);
+
 String transform = "transform";
+collect.setTransform(transform);
+
 // Invoking the API call with sample inputs
-dataManipulation.httpsApiRestShApiDAsync(data, transform, new APICallBack<HttpsApiRestShApiDR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiDR response) {
+dataManipulation.httpsApiRestShApiDAsync(collect, new APICallBack<DataManipulationModelResponse>() {
+    public void onSuccess(HttpContext context, DataManipulationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -816,9 +879,8 @@ ImageManipulation imageManipulation = client.getImageManipulation();
 
 ```java
 void imageManipulationAsync(
-        final String image,
-        final String transform,
-        final APICallBack<HttpsApiRestShApiIR> callBack)
+        final ImageManipulationInput input,
+        final APICallBack<ImageManipulationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -832,17 +894,24 @@ void imageManipulationAsync(
 #### Example Usage
 
 ```java
+ImageManipulationInput collect = new ImageManipulationInput();
+
 String image = "image";
+collect.setImage(image);
+
 String transform = "transform";
+collect.setTransform(transform);
+
 // Invoking the API call with sample inputs
-imageManipulation.imageManipulationAsync(image, transform, new APICallBack<HttpsApiRestShApiIR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiIR response) {
+imageManipulation.imageManipulationAsync(collect, new APICallBack<ImageManipulationModelResponse>() {
+    public void onSuccess(HttpContext context, ImageManipulationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -866,14 +935,8 @@ Verification verification = client.getVerification();
 
 ```java
 void userAddressVerificationAsync(
-        final String user,
-        final String a,
-        final String sa,
-        final String c,
-        final String s,
-        final int z,
-        final String address,
-        final APICallBack<HttpsApiRestShApiVAR> callBack)
+        final UserAddressVerificationInput input,
+        final APICallBack<VerifyAddressResponse> callBack)
 ```
 
 #### Parameters
@@ -892,22 +955,39 @@ void userAddressVerificationAsync(
 #### Example Usage
 
 ```java
+UserAddressVerificationInput collect = new UserAddressVerificationInput();
+
 String user = "user";
+collect.setUser(user);
+
 String a = "a";
+collect.setA(a);
+
 String sa = "sa";
+collect.setSa(sa);
+
 String c = "c";
+collect.setC(c);
+
 String s = "s";
-int z = 206;
+collect.setS(s);
+
+int z = 154;
+collect.setZ(z);
+
 String address = "address";
+collect.setAddress(address);
+
 // Invoking the API call with sample inputs
-verification.userAddressVerificationAsync(user, a, sa, c, s, z, address, new APICallBack<HttpsApiRestShApiVAR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiVAR response) {
+verification.userAddressVerificationAsync(collect, new APICallBack<VerifyAddressResponse>() {
+    public void onSuccess(HttpContext context, VerifyAddressResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -919,9 +999,8 @@ verification.userAddressVerificationAsync(user, a, sa, c, s, z, address, new API
 
 ```java
 void userVerificationResponseAsync(
-        final String user,
-        final String code,
-        final APICallBack<HttpsApiRestShApiVUR> callBack)
+        final UserVerificationResponseInput input,
+        final APICallBack<VerifyUserModelResponse> callBack)
 ```
 
 #### Parameters
@@ -935,17 +1014,24 @@ void userVerificationResponseAsync(
 #### Example Usage
 
 ```java
+UserVerificationResponseInput collect = new UserVerificationResponseInput();
+
 String user = "user";
+collect.setUser(user);
+
 String code = "code";
+collect.setCode(code);
+
 // Invoking the API call with sample inputs
-verification.userVerificationResponseAsync(user, code, new APICallBack<HttpsApiRestShApiVUR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiVUR response) {
+verification.userVerificationResponseAsync(collect, new APICallBack<VerifyUserModelResponse>() {
+    public void onSuccess(HttpContext context, VerifyUserModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -958,7 +1044,7 @@ verification.userVerificationResponseAsync(user, code, new APICallBack<HttpsApiR
 ```java
 void userVerificationAsync(
         final String user,
-        final APICallBack<HttpsApiRestShApiVR> callBack)
+        final APICallBack<VerifyModelResponse> callBack)
 ```
 
 #### Parameters
@@ -973,8 +1059,8 @@ void userVerificationAsync(
 ```java
 String user = "user";
 // Invoking the API call with sample inputs
-verification.userVerificationAsync(user, new APICallBack<HttpsApiRestShApiVR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiVR response) {
+verification.userVerificationAsync(user, new APICallBack<VerifyModelResponse>() {
+    public void onSuccess(HttpContext context, VerifyModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
@@ -1004,9 +1090,8 @@ TwoFactorAuthenticationAPI twoFactorAuthenticationAPI = client.getTwoFactorAuthe
 
 ```java
 void m2FATokenResponseAsync(
-        final String user,
-        final String code,
-        final APICallBack<HttpsApiRestShApi2faTR> callBack)
+        final M2FATokenResponseInput input,
+        final APICallBack<TwoFactorAuthenticationTokenModelResponse> callBack)
 ```
 
 #### Parameters
@@ -1020,17 +1105,24 @@ void m2FATokenResponseAsync(
 #### Example Usage
 
 ```java
+M2FATokenResponseInput collect = new M2FATokenResponseInput();
+
 String user = "user";
+collect.setUser(user);
+
 String code = "code";
+collect.setCode(code);
+
 // Invoking the API call with sample inputs
-twoFactorAuthenticationAPI.m2FATokenResponseAsync(user, code, new APICallBack<HttpsApiRestShApi2faTR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApi2faTR response) {
+twoFactorAuthenticationAPI.m2FATokenResponseAsync(collect, new APICallBack<TwoFactorAuthenticationTokenModelResponse>() {
+    public void onSuccess(HttpContext context, TwoFactorAuthenticationTokenModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -1043,7 +1135,7 @@ twoFactorAuthenticationAPI.m2FATokenResponseAsync(user, code, new APICallBack<Ht
 ```java
 void twoFactorAuthenticationAsync(
         final String to,
-        final APICallBack<HttpsApiRestShApi2faR> callBack)
+        final APICallBack<TwoFactorAuthenticationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -1058,8 +1150,8 @@ void twoFactorAuthenticationAsync(
 ```java
 String to = "to";
 // Invoking the API call with sample inputs
-twoFactorAuthenticationAPI.twoFactorAuthenticationAsync(to, new APICallBack<HttpsApiRestShApi2faR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApi2faR response) {
+twoFactorAuthenticationAPI.twoFactorAuthenticationAsync(to, new APICallBack<TwoFactorAuthenticationModelResponse>() {
+    public void onSuccess(HttpContext context, TwoFactorAuthenticationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
@@ -1090,7 +1182,7 @@ UserManagement userManagement = client.getUserManagement();
 ```java
 void getUserInfoAsync(
         final String user,
-        final APICallBack<HttpsApiRestShApiUIR> callBack)
+        final APICallBack<UserInformationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -1105,8 +1197,8 @@ void getUserInfoAsync(
 ```java
 String user = "user";
 // Invoking the API call with sample inputs
-userManagement.getUserInfoAsync(user, new APICallBack<HttpsApiRestShApiUIR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiUIR response) {
+userManagement.getUserInfoAsync(user, new APICallBack<UserInformationModelResponse>() {
+    public void onSuccess(HttpContext context, UserInformationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
@@ -1124,11 +1216,9 @@ userManagement.getUserInfoAsync(user, new APICallBack<HttpsApiRestShApiUIR>() {
 
 ```java
 void updateUserAsync(
-        final String user,
-        final String avatar,
-        final String customInput,
+        final UpdateUserInput input,
         Map<String, Object> queryParameters,
-        final APICallBack<HttpsApiRestShApiUUR> callBack)
+        final APICallBack<UserUpdateModelResponse> callBack)
 ```
 
 #### Parameters
@@ -1144,20 +1234,29 @@ void updateUserAsync(
 #### Example Usage
 
 ```java
+UpdateUserInput collect = new UpdateUserInput();
+
 String user = "user";
+collect.setUser(user);
+
 String avatar = "avatar";
+collect.setAvatar(avatar);
+
 String customInput = "custom input";
+collect.setCustomInput(customInput);
+
 // key-value map for optional query parameters
 Map<String, Object> queryParams = new LinkedHashMap<String, Object>();
 // Invoking the API call with sample inputs
-userManagement.updateUserAsync(user, avatar, customInput, queryParams, new APICallBack<HttpsApiRestShApiUUR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiUUR response) {
+userManagement.updateUserAsync(collect, , queryParams, new APICallBack<UserUpdateModelResponse>() {
+    public void onSuccess(HttpContext context, UserUpdateModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -1170,7 +1269,7 @@ userManagement.updateUserAsync(user, avatar, customInput, queryParams, new APICa
 ```java
 void deleteUserAsync(
         final String user,
-        final APICallBack<HttpsApiRestShApiUDR> callBack)
+        final APICallBack<UserDeletionResponseModel> callBack)
 ```
 
 #### Parameters
@@ -1185,8 +1284,8 @@ void deleteUserAsync(
 ```java
 String user = "user";
 // Invoking the API call with sample inputs
-userManagement.deleteUserAsync(user, new APICallBack<HttpsApiRestShApiUDR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiUDR response) {
+userManagement.deleteUserAsync(user, new APICallBack<UserDeletionResponseModel>() {
+    public void onSuccess(HttpContext context, UserDeletionResponseModel response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
@@ -1216,15 +1315,9 @@ LoginAndRegistration loginAndRegistration = client.getLoginAndRegistration();
 
 ```java
 void userRegistrationAsync(
-        final String email,
-        final String user,
-        final String password,
-        final String name,
-        final Integer phone,
-        final Integer countrycode,
-        final String address,
+        final UserRegistrationInput input,
         Map<String, Object> queryParameters,
-        final APICallBack<HttpsApiRestShApiAURR> callBack)
+        final APICallBack<UserRegistrationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -1244,24 +1337,41 @@ void userRegistrationAsync(
 #### Example Usage
 
 ```java
+UserRegistrationInput collect = new UserRegistrationInput();
+
 String email = "email";
+collect.setEmail(email);
+
 String user = "user";
+collect.setUser(user);
+
 String password = "password";
+collect.setPassword(password);
+
 String name = "name";
-Integer phone = 206;
-Integer countrycode = 206;
+collect.setName(name);
+
+Integer phone = 246;
+collect.setPhone(phone);
+
+Integer countrycode = 246;
+collect.setCountrycode(countrycode);
+
 String address = "address";
+collect.setAddress(address);
+
 // key-value map for optional query parameters
 Map<String, Object> queryParams = new LinkedHashMap<String, Object>();
 // Invoking the API call with sample inputs
-loginAndRegistration.userRegistrationAsync(email, user, password, name, phone, countrycode, address, queryParams, new APICallBack<HttpsApiRestShApiAURR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiAURR response) {
+loginAndRegistration.userRegistrationAsync(collect, , queryParams, new APICallBack<UserRegistrationModelResponse>() {
+    public void onSuccess(HttpContext context, UserRegistrationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 
@@ -1273,9 +1383,8 @@ loginAndRegistration.userRegistrationAsync(email, user, password, name, phone, c
 
 ```java
 void userAuthenticationAsync(
-        final String user,
-        final String password,
-        final APICallBack<HttpsApiRestShApiAULR> callBack)
+        final UserAuthenticationInput input,
+        final APICallBack<UserAuthenticationModelResponse> callBack)
 ```
 
 #### Parameters
@@ -1289,17 +1398,24 @@ void userAuthenticationAsync(
 #### Example Usage
 
 ```java
+UserAuthenticationInput collect = new UserAuthenticationInput();
+
 String user = "user";
+collect.setUser(user);
+
 String password = "password";
+collect.setPassword(password);
+
 // Invoking the API call with sample inputs
-loginAndRegistration.userAuthenticationAsync(user, password, new APICallBack<HttpsApiRestShApiAULR>() {
-    public void onSuccess(HttpContext context, HttpsApiRestShApiAULR response) {
+loginAndRegistration.userAuthenticationAsync(collect, new APICallBack<UserAuthenticationModelResponse>() {
+    public void onSuccess(HttpContext context, UserAuthenticationModelResponse response) {
         // TODO success callback handler
     }
     public void onFailure(HttpContext context, Throwable error) {
         // TODO failure callback handler
     }
-});
+}
+);
 
 ```
 

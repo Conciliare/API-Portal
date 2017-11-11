@@ -229,16 +229,14 @@ Configuration_Key = "KEY"; // Your Public API Key
 AdvancedLogging* advancedLogging = [[AdvancedLogging alloc]init] ;
 ```
 
-### <a name="logging_configuration_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingConfigurationAsyncWithName") loggingConfigurationAsyncWithName
+### <a name="logging_configuration_async_with_logging_configuration_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingConfigurationAsyncWithLoggingConfigurationInput") loggingConfigurationAsyncWithLoggingConfigurationInput
 
 > WAF Log Configuration
 
 
 ```objc
-function loggingConfigurationAsyncWithName:(NSString*) name
-                origin:(NSString*) origin
-                activate:(NSString*) activate
-                completionBlock:(CompletedGetLoggingConfiguration) onCompleted(name origin : origin activate : activate)
+function loggingConfigurationAsyncWithLoggingConfigurationInput:(LoggingConfigurationInput*) input
+                completionBlock:(CompletedGetLoggingConfiguration) onCompleted(input)
 ```
 
 #### Parameters
@@ -257,26 +255,25 @@ function loggingConfigurationAsyncWithName:(NSString*) name
 
 ```objc
     // Parameters for the API call
-    NSString* name = @"name";
-    NSString* origin = @"origin";
-    NSString* activate = @"activate";
+    LoggingConfigurationInput *input = [[LoggingConfigurationInput alloc]init];
+    input.name = @"name";
+    input.origin = @"origin";
+    input.activate = @"activate";
 
-    [self.advancedLogging loggingConfigurationAsyncWithName: name origin : origin activate : activate  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLR* response, NSError* error) { 
+    [self.advancedLogging loggingConfigurationAsyncWithLoggingConfigurationInput: input completionBlock:^(BOOL success, HttpContext* context, LoggingSetupModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="logging_info_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfoAsyncWithName") loggingInfoAsyncWithName
+### <a name="logging_info_async_with_logging_info_input"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfoAsyncWithLoggingInfoInput") loggingInfoAsyncWithLoggingInfoInput
 
 > WAF Log Info
 
 
 ```objc
-function loggingInfoAsyncWithName:(NSString*) name
-                origin:(NSString*) origin
-                time:(NSString*) time
-                completionBlock:(CompletedGetLoggingInfo) onCompleted(name origin : origin time : time)
+function loggingInfoAsyncWithLoggingInfoInput:(LoggingInfoInput*) input
+                completionBlock:(CompletedGetLoggingInfo) onCompleted(input)
 ```
 
 #### Parameters
@@ -295,11 +292,12 @@ function loggingInfoAsyncWithName:(NSString*) name
 
 ```objc
     // Parameters for the API call
-    NSString* name = @"name";
-    NSString* origin = @"origin";
-    NSString* time = @"time";
+    LoggingInfoInput *input = [[LoggingInfoInput alloc]init];
+    input.name = @"name";
+    input.origin = @"origin";
+    input.time = @"time";
 
-    [self.advancedLogging loggingInfoAsyncWithName: name origin : origin time : time  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLIR* response, NSError* error) { 
+    [self.advancedLogging loggingInfoAsyncWithLoggingInfoInput: input completionBlock:^(BOOL success, HttpContext* context, LoggingLogsModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -314,15 +312,14 @@ function loggingInfoAsyncWithName:(NSString*) name
 WAFAndDDOSProtection* wAFAndDDOSProtection = [[WAFAndDDOSProtection alloc]init] ;
 ```
 
-### <a name="https_api_rest_sh_api_swc_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWCAsyncWithName") httpsApiRestShApiSWCAsyncWithName
+### <a name="https_api_rest_sh_api_swc_async_with_https_api_rest_sh_api_swc_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWCAsyncWithHttpsApiRestShApiSWCInput") httpsApiRestShApiSWCAsyncWithHttpsApiRestShApiSWCInput
 
 > WAF and DDOS Configuration
 
 
 ```objc
-function httpsApiRestShApiSWCAsyncWithName:(NSString*) name
-                rule:(NSString*) rule
-                completionBlock:(CompletedGetHttpsApiRestShApiSWC) onCompleted(name rule : rule)
+function httpsApiRestShApiSWCAsyncWithHttpsApiRestShApiSWCInput:(HttpsApiRestShApiSWCInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSWC) onCompleted(input)
 ```
 
 #### Parameters
@@ -340,24 +337,24 @@ function httpsApiRestShApiSWCAsyncWithName:(NSString*) name
 
 ```objc
     // Parameters for the API call
-    NSString* name = @"name";
-    NSString* rule = @"rule";
+    HttpsApiRestShApiSWCInput *input = [[HttpsApiRestShApiSWCInput alloc]init];
+    input.name = @"name";
+    input.rule = @"rule";
 
-    [self.wAFAndDDOSProtection httpsApiRestShApiSWCAsyncWithName: name rule : rule  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWCR* response, NSError* error) { 
+    [self.wAFAndDDOSProtection httpsApiRestShApiSWCAsyncWithHttpsApiRestShApiSWCInput: input completionBlock:^(BOOL success, HttpContext* context, WAFConfigurationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="https_api_rest_sh_api_sw_async_with_origin"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWAsyncWithOrigin") httpsApiRestShApiSWAsyncWithOrigin
+### <a name="https_api_rest_sh_api_sw_async_with_https_api_rest_sh_api_sw_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWAsyncWithHttpsApiRestShApiSWInput") httpsApiRestShApiSWAsyncWithHttpsApiRestShApiSWInput
 
 > WAF and DDOS Creation
 
 
 ```objc
-function httpsApiRestShApiSWAsyncWithOrigin:(NSString*) origin
-                cname:(NSString*) cname
-                completionBlock:(CompletedGetHttpsApiRestShApiSW) onCompleted(origin cname : cname)
+function httpsApiRestShApiSWAsyncWithHttpsApiRestShApiSWInput:(HttpsApiRestShApiSWInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiSW) onCompleted(input)
 ```
 
 #### Parameters
@@ -375,10 +372,11 @@ function httpsApiRestShApiSWAsyncWithOrigin:(NSString*) origin
 
 ```objc
     // Parameters for the API call
-    NSString* origin = @"origin";
-    NSString* cname = @"cname";
+    HttpsApiRestShApiSWInput *input = [[HttpsApiRestShApiSWInput alloc]init];
+    input.origin = @"origin";
+    input.cname = @"cname";
 
-    [self.wAFAndDDOSProtection httpsApiRestShApiSWAsyncWithOrigin: origin cname : cname  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWR* response, NSError* error) { 
+    [self.wAFAndDDOSProtection httpsApiRestShApiSWAsyncWithHttpsApiRestShApiSWInput: input completionBlock:^(BOOL success, HttpContext* context, WAFCreationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -393,16 +391,14 @@ function httpsApiRestShApiSWAsyncWithOrigin:(NSString*) origin
 Encryption* encryption = [[Encryption alloc]init] ;
 ```
 
-### <a name="data_and_file_encryption_async_with_data"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAsyncWithData") dataAndFileEncryptionAsyncWithData
+### <a name="data_and_file_encryption_async_with_data_and_file_encryption_input"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAsyncWithDataAndFileEncryptionInput") dataAndFileEncryptionAsyncWithDataAndFileEncryptionInput
 
 > Data and File Encryption API
 
 
 ```objc
-function dataAndFileEncryptionAsyncWithData:(NSString*) data
-                method:(NSString*) method
-                bit:(int) bit
-                completionBlock:(CompletedGetDataAndFileEncryption) onCompleted(data method : method bit : bit)
+function dataAndFileEncryptionAsyncWithDataAndFileEncryptionInput:(DataAndFileEncryptionInput*) input
+                completionBlock:(CompletedGetDataAndFileEncryption) onCompleted(input)
 ```
 
 #### Parameters
@@ -421,11 +417,12 @@ function dataAndFileEncryptionAsyncWithData:(NSString*) data
 
 ```objc
     // Parameters for the API call
-    NSString* data = @"data";
-    NSString* method = @"method";
-    int bit = 219;
+    DataAndFileEncryptionInput *input = [[DataAndFileEncryptionInput alloc]init];
+    input.data = @"data";
+    input.method = @"method";
+    input.bit = 168;
 
-    [self.encryption dataAndFileEncryptionAsyncWithData: data method : method bit : bit  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
+    [self.encryption dataAndFileEncryptionAsyncWithDataAndFileEncryptionInput: input completionBlock:^(BOOL success, HttpContext* context, EncryptionModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -440,15 +437,14 @@ function dataAndFileEncryptionAsyncWithData:(NSString*) data
 CDN* cDN = [[CDN alloc]init] ;
 ```
 
-### <a name="c_dn_push_zone_async_with_cname"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZoneAsyncWithCname") cDNPushZoneAsyncWithCname
+### <a name="c_dn_push_zone_async_with_cdn_push_zone_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZoneAsyncWithCDNPushZoneInput") cDNPushZoneAsyncWithCDNPushZoneInput
 
 > CDN Push Zone API
 
 
 ```objc
-function cDNPushZoneAsyncWithCname:(NSString*) cname
-                file:(NSString*) file
-                completionBlock:(CompletedGetCDNPushZone) onCompleted(cname file : file)
+function cDNPushZoneAsyncWithCDNPushZoneInput:(CDNPushZoneInput*) input
+                completionBlock:(CompletedGetCDNPushZone) onCompleted(input)
 ```
 
 #### Parameters
@@ -466,24 +462,24 @@ function cDNPushZoneAsyncWithCname:(NSString*) cname
 
 ```objc
     // Parameters for the API call
-    NSString* cname = @"cname";
-    NSString* file = @"file";
+    CDNPushZoneInput *input = [[CDNPushZoneInput alloc]init];
+    input.cname = @"cname";
+    input.file = @"file";
 
-    [self.cDN cDNPushZoneAsyncWithCname: cname file : file  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPushR* response, NSError* error) { 
+    [self.cDN cDNPushZoneAsyncWithCDNPushZoneInput: input completionBlock:^(BOOL success, HttpContext* context, CDNPushModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="c_dn_pull_zone_async_with_origin"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZoneAsyncWithOrigin") cDNPullZoneAsyncWithOrigin
+### <a name="c_dn_pull_zone_async_with_cdn_pull_zone_input"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZoneAsyncWithCDNPullZoneInput") cDNPullZoneAsyncWithCDNPullZoneInput
 
 > CDN Pull Zone API
 
 
 ```objc
-function cDNPullZoneAsyncWithOrigin:(NSString*) origin
-                cname:(NSString*) cname
-                completionBlock:(CompletedGetCDNPullZone) onCompleted(origin cname : cname)
+function cDNPullZoneAsyncWithCDNPullZoneInput:(CDNPullZoneInput*) input
+                completionBlock:(CompletedGetCDNPullZone) onCompleted(input)
 ```
 
 #### Parameters
@@ -501,10 +497,11 @@ function cDNPullZoneAsyncWithOrigin:(NSString*) origin
 
 ```objc
     // Parameters for the API call
-    NSString* origin = @"origin";
-    NSString* cname = @"cname";
+    CDNPullZoneInput *input = [[CDNPullZoneInput alloc]init];
+    input.origin = @"origin";
+    input.cname = @"cname";
 
-    [self.cDN cDNPullZoneAsyncWithOrigin: origin cname : cname  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPullR* response, NSError* error) { 
+    [self.cDN cDNPullZoneAsyncWithCDNPullZoneInput: input completionBlock:^(BOOL success, HttpContext* context, CDNPullModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -519,15 +516,14 @@ function cDNPullZoneAsyncWithOrigin:(NSString*) origin
 DNS* dNS = [[DNS alloc]init] ;
 ```
 
-### <a name="d_ns_configuration_async_with_domain"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfigurationAsyncWithDomain") dNSConfigurationAsyncWithDomain
+### <a name="d_ns_configuration_async_with_dns_configuration_input"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfigurationAsyncWithDNSConfigurationInput") dNSConfigurationAsyncWithDNSConfigurationInput
 
 > DNS Configuration API
 
 
 ```objc
-function dNSConfigurationAsyncWithDomain:(NSString*) domain
-                records:(NSString*) records
-                completionBlock:(CompletedGetDNSConfiguration) onCompleted(domain records : records)
+function dNSConfigurationAsyncWithDNSConfigurationInput:(DNSConfigurationInput*) input
+                completionBlock:(CompletedGetDNSConfiguration) onCompleted(input)
 ```
 
 #### Parameters
@@ -545,10 +541,11 @@ function dNSConfigurationAsyncWithDomain:(NSString*) domain
 
 ```objc
     // Parameters for the API call
-    NSString* domain = @"domain";
-    NSString* records = @"records";
+    DNSConfigurationInput *input = [[DNSConfigurationInput alloc]init];
+    input.domain = @"domain";
+    input.records = @"records";
 
-    [self.dNS dNSConfigurationAsyncWithDomain: domain records : records  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDCR* response, NSError* error) { 
+    [self.dNS dNSConfigurationAsyncWithDNSConfigurationInput: input completionBlock:^(BOOL success, HttpContext* context, DNSConfigurationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -580,7 +577,7 @@ function dNSCreationAsyncWithDomain:(NSString*) domain
     // Parameters for the API call
     NSString* domain = @"domain";
 
-    [self.dNS dNSCreationAsyncWithDomain: domain  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDAR* response, NSError* error) { 
+    [self.dNS dNSCreationAsyncWithDomain: domain  completionBlock:^(BOOL success, HttpContext* context, DNSCreationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -621,7 +618,7 @@ function obfuscationAndAntiTamperingAsyncWithApp:(NSString*) app
     // Parameters for the API call
     NSString* app = @"app";
 
-    [self.codeObfuscation obfuscationAndAntiTamperingAsyncWithApp: app  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSOR* response, NSError* error) { 
+    [self.codeObfuscation obfuscationAndAntiTamperingAsyncWithApp: app  completionBlock:^(BOOL success, HttpContext* context, CodeProtectionModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -636,15 +633,14 @@ function obfuscationAndAntiTamperingAsyncWithApp:(NSString*) app
 Hosting* hosting = [[Hosting alloc]init] ;
 ```
 
-### <a name="hosting_setup_async_with_app"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetupAsyncWithApp") hostingSetupAsyncWithApp
+### <a name="hosting_setup_async_with_hosting_setup_input"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetupAsyncWithHostingSetupInput") hostingSetupAsyncWithHostingSetupInput
 
 > Node.JS and Static Web APP Hosting
 
 
 ```objc
-function hostingSetupAsyncWithApp:(NSString*) app
-                domain:(NSString*) domain
-                completionBlock:(CompletedGetHostingSetup) onCompleted(app domain : domain)
+function hostingSetupAsyncWithHostingSetupInput:(HostingSetupInput*) input
+                completionBlock:(CompletedGetHostingSetup) onCompleted(input)
 ```
 
 #### Parameters
@@ -662,10 +658,11 @@ function hostingSetupAsyncWithApp:(NSString*) app
 
 ```objc
     // Parameters for the API call
-    NSString* app = @"app";
-    NSString* domain = @"domain";
+    HostingSetupInput *input = [[HostingSetupInput alloc]init];
+    input.app = @"app";
+    input.domain = @"domain";
 
-    [self.hosting hostingSetupAsyncWithApp: app domain : domain  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSHR* response, NSError* error) { 
+    [self.hosting hostingSetupAsyncWithHostingSetupInput: input completionBlock:^(BOOL success, HttpContext* context, HostingModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -680,15 +677,14 @@ function hostingSetupAsyncWithApp:(NSString*) app
 DataManipulation* dataManipulation = [[DataManipulation alloc]init] ;
 ```
 
-### <a name="https_api_rest_sh_api_d_async_with_data"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulation.httpsApiRestShApiDAsyncWithData") httpsApiRestShApiDAsyncWithData
+### <a name="https_api_rest_sh_api_d_async_with_https_api_rest_sh_api_d_input"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulation.httpsApiRestShApiDAsyncWithHttpsApiRestShApiDInput") httpsApiRestShApiDAsyncWithHttpsApiRestShApiDInput
 
 > Data Manipulation API
 
 
 ```objc
-function httpsApiRestShApiDAsyncWithData:(NSString*) data
-                transform:(NSString*) transform
-                completionBlock:(CompletedGetHttpsApiRestShApiD) onCompleted(data transform : transform)
+function httpsApiRestShApiDAsyncWithHttpsApiRestShApiDInput:(HttpsApiRestShApiDInput*) input
+                completionBlock:(CompletedGetHttpsApiRestShApiD) onCompleted(input)
 ```
 
 #### Parameters
@@ -706,10 +702,11 @@ function httpsApiRestShApiDAsyncWithData:(NSString*) data
 
 ```objc
     // Parameters for the API call
-    NSString* data = @"data";
-    NSString* transform = @"transform";
+    HttpsApiRestShApiDInput *input = [[HttpsApiRestShApiDInput alloc]init];
+    input.data = @"data";
+    input.transform = @"transform";
 
-    [self.dataManipulation httpsApiRestShApiDAsyncWithData: data transform : transform  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiDR* response, NSError* error) { 
+    [self.dataManipulation httpsApiRestShApiDAsyncWithHttpsApiRestShApiDInput: input completionBlock:^(BOOL success, HttpContext* context, DataManipulationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -724,15 +721,14 @@ function httpsApiRestShApiDAsyncWithData:(NSString*) data
 ImageManipulation* imageManipulation = [[ImageManipulation alloc]init] ;
 ```
 
-### <a name="image_manipulation_async_with_image"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulation.imageManipulationAsyncWithImage") imageManipulationAsyncWithImage
+### <a name="image_manipulation_async_with_image_manipulation_input"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulation.imageManipulationAsyncWithImageManipulationInput") imageManipulationAsyncWithImageManipulationInput
 
 > Image Manipulation API
 
 
 ```objc
-function imageManipulationAsyncWithImage:(NSString*) image
-                transform:(NSString*) transform
-                completionBlock:(CompletedGetImageManipulation) onCompleted(image transform : transform)
+function imageManipulationAsyncWithImageManipulationInput:(ImageManipulationInput*) input
+                completionBlock:(CompletedGetImageManipulation) onCompleted(input)
 ```
 
 #### Parameters
@@ -750,10 +746,11 @@ function imageManipulationAsyncWithImage:(NSString*) image
 
 ```objc
     // Parameters for the API call
-    NSString* image = @"image";
-    NSString* transform = @"transform";
+    ImageManipulationInput *input = [[ImageManipulationInput alloc]init];
+    input.image = @"image";
+    input.transform = @"transform";
 
-    [self.imageManipulation imageManipulationAsyncWithImage: image transform : transform  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiIR* response, NSError* error) { 
+    [self.imageManipulation imageManipulationAsyncWithImageManipulationInput: input completionBlock:^(BOOL success, HttpContext* context, ImageManipulationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -768,20 +765,14 @@ function imageManipulationAsyncWithImage:(NSString*) image
 Verification* verification = [[Verification alloc]init] ;
 ```
 
-### <a name="user_address_verification_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerificationAsyncWithUser") userAddressVerificationAsyncWithUser
+### <a name="user_address_verification_async_with_user_address_verification_input"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerificationAsyncWithUserAddressVerificationInput") userAddressVerificationAsyncWithUserAddressVerificationInput
 
 > User Address Verification API
 
 
 ```objc
-function userAddressVerificationAsyncWithUser:(NSString*) user
-                a:(NSString*) a
-                sa:(NSString*) sa
-                c:(NSString*) c
-                s:(NSString*) s
-                z:(int) z
-                address:(NSString*) address
-                completionBlock:(CompletedGetUserAddressVerification) onCompleted(user a : a sa : sa c : c s : s z : z address : address)
+function userAddressVerificationAsyncWithUserAddressVerificationInput:(UserAddressVerificationInput*) input
+                completionBlock:(CompletedGetUserAddressVerification) onCompleted(input)
 ```
 
 #### Parameters
@@ -804,29 +795,29 @@ function userAddressVerificationAsyncWithUser:(NSString*) user
 
 ```objc
     // Parameters for the API call
-    NSString* user = @"user";
-    NSString* a = @"a";
-    NSString* sa = @"sa";
-    NSString* c = @"c";
-    NSString* s = @"s";
-    int z = 56;
-    NSString* address = @"address";
+    UserAddressVerificationInput *input = [[UserAddressVerificationInput alloc]init];
+    input.user = @"user";
+    input.a = @"a";
+    input.sa = @"sa";
+    input.c = @"c";
+    input.s = @"s";
+    input.z = 168;
+    input.address = @"address";
 
-    [self.verification userAddressVerificationAsyncWithUser: user a : a sa : sa c : c s : s z : z address : address  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVAR* response, NSError* error) { 
+    [self.verification userAddressVerificationAsyncWithUserAddressVerificationInput: input completionBlock:^(BOOL success, HttpContext* context, VerifyAddressResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="user_verification_response_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerificationResponseAsyncWithUser") userVerificationResponseAsyncWithUser
+### <a name="user_verification_response_async_with_user_verification_response_input"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerificationResponseAsyncWithUserVerificationResponseInput") userVerificationResponseAsyncWithUserVerificationResponseInput
 
 > Users Verification Response API
 
 
 ```objc
-function userVerificationResponseAsyncWithUser:(NSString*) user
-                code:(NSString*) code
-                completionBlock:(CompletedGetUserVerificationResponse) onCompleted(user code : code)
+function userVerificationResponseAsyncWithUserVerificationResponseInput:(UserVerificationResponseInput*) input
+                completionBlock:(CompletedGetUserVerificationResponse) onCompleted(input)
 ```
 
 #### Parameters
@@ -844,10 +835,11 @@ function userVerificationResponseAsyncWithUser:(NSString*) user
 
 ```objc
     // Parameters for the API call
-    NSString* user = @"user";
-    NSString* code = @"code";
+    UserVerificationResponseInput *input = [[UserVerificationResponseInput alloc]init];
+    input.user = @"user";
+    input.code = @"code";
 
-    [self.verification userVerificationResponseAsyncWithUser: user code : code  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVUR* response, NSError* error) { 
+    [self.verification userVerificationResponseAsyncWithUserVerificationResponseInput: input completionBlock:^(BOOL success, HttpContext* context, VerifyUserModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -879,7 +871,7 @@ function userVerificationAsyncWithUser:(NSString*) user
     // Parameters for the API call
     NSString* user = @"user";
 
-    [self.verification userVerificationAsyncWithUser: user  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVR* response, NSError* error) { 
+    [self.verification userVerificationAsyncWithUser: user  completionBlock:^(BOOL success, HttpContext* context, VerifyModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -894,15 +886,14 @@ function userVerificationAsyncWithUser:(NSString*) user
 TwoFactorAuthenticationAPI* twoFactorAuthenticationAPI = [[TwoFactorAuthenticationAPI alloc]init] ;
 ```
 
-### <a name="m2_fa_token_response_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponseAsyncWithUser") m2FATokenResponseAsyncWithUser
+### <a name="m2_fa_token_response_async_with_m2_fa_token_response_input"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponseAsyncWithM2FATokenResponseInput") m2FATokenResponseAsyncWithM2FATokenResponseInput
 
 > Two Factor Authentication Token Reply
 
 
 ```objc
-function m2FATokenResponseAsyncWithUser:(NSString*) user
-                code:(NSString*) code
-                completionBlock:(CompletedGetM2FATokenResponse) onCompleted(user code : code)
+function m2FATokenResponseAsyncWithM2FATokenResponseInput:(M2FATokenResponseInput*) input
+                completionBlock:(CompletedGetM2FATokenResponse) onCompleted(input)
 ```
 
 #### Parameters
@@ -920,10 +911,11 @@ function m2FATokenResponseAsyncWithUser:(NSString*) user
 
 ```objc
     // Parameters for the API call
-    NSString* user = @"user";
-    NSString* code = @"code";
+    M2FATokenResponseInput *input = [[M2FATokenResponseInput alloc]init];
+    input.user = @"user";
+    input.code = @"code";
 
-    [self.twoFactorAuthenticationAPI m2FATokenResponseAsyncWithUser: user code : code  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faTR* response, NSError* error) { 
+    [self.twoFactorAuthenticationAPI m2FATokenResponseAsyncWithM2FATokenResponseInput: input completionBlock:^(BOOL success, HttpContext* context, TwoFactorAuthenticationTokenModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -955,7 +947,7 @@ function twoFactorAuthenticationAsyncWithTo:(NSString*) to
     // Parameters for the API call
     NSString* to = @"to";
 
-    [self.twoFactorAuthenticationAPI twoFactorAuthenticationAsyncWithTo: to  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faR* response, NSError* error) { 
+    [self.twoFactorAuthenticationAPI twoFactorAuthenticationAsyncWithTo: to  completionBlock:^(BOOL success, HttpContext* context, TwoFactorAuthenticationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -996,23 +988,21 @@ function getUserInfoAsyncWithUser:(NSString*) user
     // Parameters for the API call
     NSString* user = @"user";
 
-    [self.userManagement getUserInfoAsyncWithUser: user  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUIR* response, NSError* error) { 
+    [self.userManagement getUserInfoAsyncWithUser: user  completionBlock:^(BOOL success, HttpContext* context, UserInformationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="update_user_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUserAsyncWithUser") updateUserAsyncWithUser
+### <a name="update_user_async_with_update_user_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUserAsyncWithUpdateUserInput") updateUserAsyncWithUpdateUserInput
 
 > Update User API
 
 
 ```objc
-function updateUserAsyncWithUser:(NSString*) user
-                avatar:(NSString*) avatar
-                customInput:(NSString*) customInput
+function updateUserAsyncWithUpdateUserInput:(UpdateUserInput*) input
                 queryParameters:(NSDictionary*) queryParameters
-                completionBlock:(CompletedGetUpdateUser) onCompleted(user avatar : avatar customInput : customInput  queryParameters : queryParams)
+                completionBlock:(CompletedGetUpdateUser) onCompleted(input queryParameters : queryParams)
 ```
 
 #### Parameters
@@ -1032,14 +1022,15 @@ function updateUserAsyncWithUser:(NSString*) user
 
 ```objc
     // Parameters for the API call
-    NSString* user = @"user";
-    NSString* avatar = @"avatar";
-    NSString* customInput = @"custom input";
+    UpdateUserInput *input = [[UpdateUserInput alloc]init];
+    input.user = @"user";
+    input.avatar = @"avatar";
+    input.customInput = @"custom input";
     // Dictionary for optional query parameters
     NSMutableDictionary* queryParamsMutable = [[NSMutableDictionary alloc] init];
     NSDictionary *queryParams= [queryParamsMutable copy];
 
-    [self.userManagement updateUserAsyncWithUser: user avatar : avatar customInput : customInput  queryParameters : queryParams  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUUR* response, NSError* error) { 
+    [self.userManagement updateUserAsyncWithUpdateUserInput: input queryParameters : queryParams  completionBlock:^(BOOL success, HttpContext* context, UserUpdateModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1071,7 +1062,7 @@ function deleteUserAsyncWithUser:(NSString*) user
     // Parameters for the API call
     NSString* user = @"user";
 
-    [self.userManagement deleteUserAsyncWithUser: user  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUDR* response, NSError* error) { 
+    [self.userManagement deleteUserAsyncWithUser: user  completionBlock:^(BOOL success, HttpContext* context, UserDeletionResponseModel* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1086,21 +1077,15 @@ function deleteUserAsyncWithUser:(NSString*) user
 LoginAndRegistration* loginAndRegistration = [[LoginAndRegistration alloc]init] ;
 ```
 
-### <a name="user_registration_async_with_email"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistrationAsyncWithEmail") userRegistrationAsyncWithEmail
+### <a name="user_registration_async_with_user_registration_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistrationAsyncWithUserRegistrationInput") userRegistrationAsyncWithUserRegistrationInput
 
 > User Registration API
 
 
 ```objc
-function userRegistrationAsyncWithEmail:(NSString*) email
-                user:(NSString*) user
-                password:(NSString*) password
-                name:(NSString*) name
-                phone:(NSNumber*) phone
-                countrycode:(NSNumber*) countrycode
-                address:(NSString*) address
+function userRegistrationAsyncWithUserRegistrationInput:(UserRegistrationInput*) input
                 queryParameters:(NSDictionary*) queryParameters
-                completionBlock:(CompletedGetUserRegistration) onCompleted(email user : user password : password name : name phone : phone countrycode : countrycode address : address  queryParameters : queryParams)
+                completionBlock:(CompletedGetUserRegistration) onCompleted(input queryParameters : queryParams)
 ```
 
 #### Parameters
@@ -1124,32 +1109,32 @@ function userRegistrationAsyncWithEmail:(NSString*) email
 
 ```objc
     // Parameters for the API call
-    NSString* email = @"email";
-    NSString* user = @"user";
-    NSString* password = @"password";
-    NSString* name = @"name";
-    NSNumber* phone = 56;
-    NSNumber* countrycode = 56;
-    NSString* address = @"address";
+    UserRegistrationInput *input = [[UserRegistrationInput alloc]init];
+    input.email = @"email";
+    input.user = @"user";
+    input.password = @"password";
+    input.name = @"name";
+    input.phone = 4;
+    input.countrycode = 4;
+    input.address = @"address";
     // Dictionary for optional query parameters
     NSMutableDictionary* queryParamsMutable = [[NSMutableDictionary alloc] init];
     NSDictionary *queryParams= [queryParamsMutable copy];
 
-    [self.loginAndRegistration userRegistrationAsyncWithEmail: email user : user password : password name : name phone : phone countrycode : countrycode address : address  queryParameters : queryParams  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAURR* response, NSError* error) { 
+    [self.loginAndRegistration userRegistrationAsyncWithUserRegistrationInput: input queryParameters : queryParams  completionBlock:^(BOOL success, HttpContext* context, UserRegistrationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="user_authentication_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthenticationAsyncWithUser") userAuthenticationAsyncWithUser
+### <a name="user_authentication_async_with_user_authentication_input"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthenticationAsyncWithUserAuthenticationInput") userAuthenticationAsyncWithUserAuthenticationInput
 
 > User Authentication API
 
 
 ```objc
-function userAuthenticationAsyncWithUser:(NSString*) user
-                password:(NSString*) password
-                completionBlock:(CompletedGetUserAuthentication) onCompleted(user password : password)
+function userAuthenticationAsyncWithUserAuthenticationInput:(UserAuthenticationInput*) input
+                completionBlock:(CompletedGetUserAuthentication) onCompleted(input)
 ```
 
 #### Parameters
@@ -1167,10 +1152,11 @@ function userAuthenticationAsyncWithUser:(NSString*) user
 
 ```objc
     // Parameters for the API call
-    NSString* user = @"user";
-    NSString* password = @"password";
+    UserAuthenticationInput *input = [[UserAuthenticationInput alloc]init];
+    input.user = @"user";
+    input.password = @"password";
 
-    [self.loginAndRegistration userAuthenticationAsyncWithUser: user password : password  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAULR* response, NSError* error) { 
+    [self.loginAndRegistration userAuthenticationAsyncWithUserAuthenticationInput: input completionBlock:^(BOOL success, HttpContext* context, UserAuthenticationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```

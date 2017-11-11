@@ -287,10 +287,7 @@ $advancedLogging = $client->getAdvancedLogging();
 
 
 ```php
-function loggingConfiguration(
-        $name,
-        $origin,
-        $activate)
+function loggingConfiguration($options)
 ```
 
 #### Parameters
@@ -307,10 +304,16 @@ function loggingConfiguration(
 
 ```php
 $name = 'name';
-$origin = 'origin';
-$activate = 'activate';
+$collect['name'] = $name;
 
-$result = $advancedLogging->loggingConfiguration($name, $origin, $activate);
+$origin = 'origin';
+$collect['origin'] = $origin;
+
+$activate = 'activate';
+$collect['activate'] = $activate;
+
+
+$result = $advancedLogging->loggingConfiguration($collect);
 
 ```
 
@@ -321,10 +324,7 @@ $result = $advancedLogging->loggingConfiguration($name, $origin, $activate);
 
 
 ```php
-function loggingInfo(
-        $name,
-        $origin,
-        $time = null)
+function loggingInfo($options)
 ```
 
 #### Parameters
@@ -341,10 +341,16 @@ function loggingInfo(
 
 ```php
 $name = 'name';
-$origin = 'origin';
-$time = 'time';
+$collect['name'] = $name;
 
-$result = $advancedLogging->loggingInfo($name, $origin, $time);
+$origin = 'origin';
+$collect['origin'] = $origin;
+
+$time = 'time';
+$collect['time'] = $time;
+
+
+$result = $advancedLogging->loggingInfo($collect);
 
 ```
 
@@ -367,9 +373,7 @@ $wAFAndDDOSProtection = $client->getWAFAndDDOSProtection();
 
 
 ```php
-function httpsApiRestShApiSWC(
-        $name,
-        $rule)
+function httpsApiRestShApiSWC($options)
 ```
 
 #### Parameters
@@ -385,9 +389,13 @@ function httpsApiRestShApiSWC(
 
 ```php
 $name = 'name';
-$rule = 'rule';
+$collect['name'] = $name;
 
-$result = $wAFAndDDOSProtection->httpsApiRestShApiSWC($name, $rule);
+$rule = 'rule';
+$collect['rule'] = $rule;
+
+
+$result = $wAFAndDDOSProtection->httpsApiRestShApiSWC($collect);
 
 ```
 
@@ -398,9 +406,7 @@ $result = $wAFAndDDOSProtection->httpsApiRestShApiSWC($name, $rule);
 
 
 ```php
-function httpsApiRestShApiSW(
-        $origin,
-        $cname)
+function httpsApiRestShApiSW($options)
 ```
 
 #### Parameters
@@ -416,9 +422,13 @@ function httpsApiRestShApiSW(
 
 ```php
 $origin = 'origin';
-$cname = 'cname';
+$collect['origin'] = $origin;
 
-$result = $wAFAndDDOSProtection->httpsApiRestShApiSW($origin, $cname);
+$cname = 'cname';
+$collect['cname'] = $cname;
+
+
+$result = $wAFAndDDOSProtection->httpsApiRestShApiSW($collect);
 
 ```
 
@@ -441,10 +451,7 @@ $encryption = $client->getEncryption();
 
 
 ```php
-function dataAndFileEncryption(
-        $data,
-        $method,
-        $bit)
+function dataAndFileEncryption($options)
 ```
 
 #### Parameters
@@ -461,10 +468,16 @@ function dataAndFileEncryption(
 
 ```php
 $data = 'data';
-$method = 'method';
-$bit = 106;
+$collect['data'] = $data;
 
-$result = $encryption->dataAndFileEncryption($data, $method, $bit);
+$method = 'method';
+$collect['method'] = $method;
+
+$bit = 217;
+$collect['bit'] = $bit;
+
+
+$result = $encryption->dataAndFileEncryption($collect);
 
 ```
 
@@ -487,9 +500,7 @@ $cDN = $client->getCDN();
 
 
 ```php
-function cDNPushZone(
-        $cname,
-        $file)
+function cDNPushZone($options)
 ```
 
 #### Parameters
@@ -505,9 +516,13 @@ function cDNPushZone(
 
 ```php
 $cname = 'cname';
-$file = 'file';
+$collect['cname'] = $cname;
 
-$result = $cDN->cDNPushZone($cname, $file);
+$file = 'file';
+$collect['file'] = $file;
+
+
+$result = $cDN->cDNPushZone($collect);
 
 ```
 
@@ -518,9 +533,7 @@ $result = $cDN->cDNPushZone($cname, $file);
 
 
 ```php
-function cDNPullZone(
-        $origin,
-        $cname)
+function cDNPullZone($options)
 ```
 
 #### Parameters
@@ -536,9 +549,13 @@ function cDNPullZone(
 
 ```php
 $origin = 'origin';
-$cname = 'cname';
+$collect['origin'] = $origin;
 
-$result = $cDN->cDNPullZone($origin, $cname);
+$cname = 'cname';
+$collect['cname'] = $cname;
+
+
+$result = $cDN->cDNPullZone($collect);
 
 ```
 
@@ -561,9 +578,7 @@ $dNS = $client->getDNS();
 
 
 ```php
-function dNSConfiguration(
-        $domain,
-        $records)
+function dNSConfiguration($options)
 ```
 
 #### Parameters
@@ -579,9 +594,13 @@ function dNSConfiguration(
 
 ```php
 $domain = 'domain';
-$records = 'records';
+$collect['domain'] = $domain;
 
-$result = $dNS->dNSConfiguration($domain, $records);
+$records = 'records';
+$collect['records'] = $records;
+
+
+$result = $dNS->dNSConfiguration($collect);
 
 ```
 
@@ -670,9 +689,7 @@ $hosting = $client->getHosting();
 
 
 ```php
-function hostingSetup(
-        $app,
-        $domain)
+function hostingSetup($options)
 ```
 
 #### Parameters
@@ -688,9 +705,13 @@ function hostingSetup(
 
 ```php
 $app = 'app';
-$domain = 'domain';
+$collect['app'] = $app;
 
-$result = $hosting->hostingSetup($app, $domain);
+$domain = 'domain';
+$collect['domain'] = $domain;
+
+
+$result = $hosting->hostingSetup($collect);
 
 ```
 
@@ -713,9 +734,7 @@ $dataManipulation = $client->getDataManipulation();
 
 
 ```php
-function httpsApiRestShApiD(
-        $data,
-        $transform)
+function httpsApiRestShApiD($options)
 ```
 
 #### Parameters
@@ -731,9 +750,13 @@ function httpsApiRestShApiD(
 
 ```php
 $data = 'data';
-$transform = 'transform';
+$collect['data'] = $data;
 
-$result = $dataManipulation->httpsApiRestShApiD($data, $transform);
+$transform = 'transform';
+$collect['transform'] = $transform;
+
+
+$result = $dataManipulation->httpsApiRestShApiD($collect);
 
 ```
 
@@ -756,9 +779,7 @@ $imageManipulation = $client->getImageManipulation();
 
 
 ```php
-function imageManipulation(
-        $image,
-        $transform)
+function imageManipulation($options)
 ```
 
 #### Parameters
@@ -774,9 +795,13 @@ function imageManipulation(
 
 ```php
 $image = 'image';
-$transform = 'transform';
+$collect['image'] = $image;
 
-$result = $imageManipulation->imageManipulation($image, $transform);
+$transform = 'transform';
+$collect['transform'] = $transform;
+
+
+$result = $imageManipulation->imageManipulation($collect);
 
 ```
 
@@ -799,14 +824,7 @@ $verification = $client->getVerification();
 
 
 ```php
-function userAddressVerification(
-        $user,
-        $a,
-        $sa,
-        $c,
-        $s,
-        $z,
-        $address = null)
+function userAddressVerification($options)
 ```
 
 #### Parameters
@@ -827,14 +845,28 @@ function userAddressVerification(
 
 ```php
 $user = 'user';
-$a = 'a';
-$sa = 'sa';
-$c = 'c';
-$s = 's';
-$z = 106;
-$address = 'address';
+$collect['user'] = $user;
 
-$result = $verification->userAddressVerification($user, $a, $sa, $c, $s, $z, $address);
+$a = 'a';
+$collect['a'] = $a;
+
+$sa = 'sa';
+$collect['sa'] = $sa;
+
+$c = 'c';
+$collect['c'] = $c;
+
+$s = 's';
+$collect['s'] = $s;
+
+$z = 54;
+$collect['z'] = $z;
+
+$address = 'address';
+$collect['address'] = $address;
+
+
+$result = $verification->userAddressVerification($collect);
 
 ```
 
@@ -845,9 +877,7 @@ $result = $verification->userAddressVerification($user, $a, $sa, $c, $s, $z, $ad
 
 
 ```php
-function userVerificationResponse(
-        $user,
-        $code)
+function userVerificationResponse($options)
 ```
 
 #### Parameters
@@ -863,9 +893,13 @@ function userVerificationResponse(
 
 ```php
 $user = 'user';
-$code = 'code';
+$collect['user'] = $user;
 
-$result = $verification->userVerificationResponse($user, $code);
+$code = 'code';
+$collect['code'] = $code;
+
+
+$result = $verification->userVerificationResponse($collect);
 
 ```
 
@@ -915,9 +949,7 @@ $twoFactorAuthenticationAPI = $client->getTwoFactorAuthenticationAPI();
 
 
 ```php
-function m2FATokenResponse(
-        $user,
-        $code)
+function m2FATokenResponse($options)
 ```
 
 #### Parameters
@@ -933,9 +965,13 @@ function m2FATokenResponse(
 
 ```php
 $user = 'user';
-$code = 'code';
+$collect['user'] = $user;
 
-$result = $twoFactorAuthenticationAPI->m2FATokenResponse($user, $code);
+$code = 'code';
+$collect['code'] = $code;
+
+
+$result = $twoFactorAuthenticationAPI->m2FATokenResponse($collect);
 
 ```
 
@@ -1013,9 +1049,7 @@ $result = $userManagement->getUserInfo($user);
 
 ```php
 function updateUser(
-        $user,
-        $avatar,
-        $customInput,
+        $options,
         $queryParameters = null)
 ```
 
@@ -1034,13 +1068,19 @@ function updateUser(
 
 ```php
 $user = 'user';
+$collect['user'] = $user;
+
 $avatar = 'avatar';
+$collect['avatar'] = $avatar;
+
 $customInput = 'custom input';
+$collect['customInput'] = $customInput;
+
 // key-value map for optional query parameters
 $queryParams = array('key' => 'value');
 
 
-$result = $userManagement->updateUser($user, $avatar, $customInput, $queryParams);
+$result = $userManagement->updateUser($collect, $queryParams, );
 
 ```
 
@@ -1091,13 +1131,7 @@ $loginAndRegistration = $client->getLoginAndRegistration();
 
 ```php
 function userRegistration(
-        $email,
-        $user,
-        $password,
-        $name = null,
-        $phone = null,
-        $countrycode = null,
-        $address = null,
+        $options,
         $queryParameters = null)
 ```
 
@@ -1120,17 +1154,31 @@ function userRegistration(
 
 ```php
 $email = 'email';
+$collect['email'] = $email;
+
 $user = 'user';
+$collect['user'] = $user;
+
 $password = 'password';
+$collect['password'] = $password;
+
 $name = 'name';
-$phone = 197;
-$countrycode = 197;
+$collect['name'] = $name;
+
+$phone = 54;
+$collect['phone'] = $phone;
+
+$countrycode = 54;
+$collect['countrycode'] = $countrycode;
+
 $address = 'address';
+$collect['address'] = $address;
+
 // key-value map for optional query parameters
 $queryParams = array('key' => 'value');
 
 
-$result = $loginAndRegistration->userRegistration($email, $user, $password, $name, $phone, $countrycode, $address, $queryParams);
+$result = $loginAndRegistration->userRegistration($collect, $queryParams, );
 
 ```
 
@@ -1141,9 +1189,7 @@ $result = $loginAndRegistration->userRegistration($email, $user, $password, $nam
 
 
 ```php
-function userAuthentication(
-        $user,
-        $password)
+function userAuthentication($options)
 ```
 
 #### Parameters
@@ -1159,9 +1205,13 @@ function userAuthentication(
 
 ```php
 $user = 'user';
-$password = 'password';
+$collect['user'] = $user;
 
-$result = $loginAndRegistration->userAuthentication($user, $password);
+$password = 'password';
+$collect['password'] = $password;
+
+
+$result = $loginAndRegistration->userAuthentication($collect);
 
 ```
 

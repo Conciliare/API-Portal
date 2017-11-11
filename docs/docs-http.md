@@ -1,6 +1,6 @@
 # 
 
-**`API Version:`** `1.15`
+**`API Version:`** `1.18`
 
 # Introduction
 * ## Multi-use Flexible API for: 
@@ -165,13 +165,6 @@ This environment comprises of the following servers:
 
 
 
-### Base URL Parameters
-The following parameters are used by the listed base URLs:
-
-| Name | Type | Tags | Description | Default Value | 
-|------|------| ---- | ----------- | ------------- |
-| protocol | string |  ``` Optional ```  | Protocol to be used. | `"HTTPS"` |
-
 
 ## Authentication
 This API uses `custom authentication`.
@@ -275,6 +268,8 @@ Global API errors are applied across all endpoints.
 > WAF Log Configuration
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -288,7 +283,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/l/r](#https://api.rest.sh/api/s/l/r)**) 
+ *Example Body* (**[Logging Setup Model Response](#logging_setup_model_response)**) 
 
 ```
 {
@@ -305,6 +300,8 @@ Global API errors are applied across all endpoints.
 > WAF Log Info
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -318,7 +315,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/l/i/r](#https://api.rest.sh/api/s/l/i/r)**) 
+ *Example Body* (**[Logging Logs Model Response](#logging_logs_model_response)**) 
 
 ```
 {
@@ -355,6 +352,8 @@ Global API errors are applied across all endpoints.
 > WAF and DDOS Configuration
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -367,7 +366,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/w/c/r](#https://api.rest.sh/api/s/w/c/r)**) 
+ *Example Body* (**[WAF Configuration Model Response](#waf_configuration_model_response)**) 
 
 ```
 {
@@ -385,6 +384,8 @@ Global API errors are applied across all endpoints.
 > WAF and DDOS Creation
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -397,7 +398,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/w/r](#https://api.rest.sh/api/s/w/r)**) 
+ *Example Body* (**[WAF Creation Model Response](#waf_creation_model_response)**) 
 
 ```
 {
@@ -420,6 +421,8 @@ Global API errors are applied across all endpoints.
 > Data and File Encryption API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -433,7 +436,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/e/r](#https://api.rest.sh/api/s/e/r)**) 
+ *Example Body* (**[Encryption Model Response](#encryption_model_response)**) 
 
 ```
 {
@@ -459,6 +462,8 @@ Global API errors are applied across all endpoints.
 > CDN Push Zone API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -471,7 +476,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/c/push/r](#https://api.rest.sh/api/s/c/push/r)**) 
+ *Example Body* (**[CDN Push Model Response](#cdn_push_model_response)**) 
 
 ```
 {
@@ -490,6 +495,8 @@ Global API errors are applied across all endpoints.
 > CDN Pull Zone API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -502,7 +509,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/c/pull/r](#https://api.rest.sh/api/s/c/pull/r)**) 
+ *Example Body* (**[CDN Pull Model Response](#cdn_pull_model_response)**) 
 
 ```
 {
@@ -525,6 +532,8 @@ Global API errors are applied across all endpoints.
 > DNS Configuration API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -537,7 +546,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/d/c/r](#https://api.rest.sh/api/s/d/c/r)**) 
+ *Example Body* (**[DNS Configuration Model Response](#dns_configuration_model_response)**) 
 
 ```
 {
@@ -556,6 +565,8 @@ Global API errors are applied across all endpoints.
 > DNS Creation API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -567,7 +578,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/d/a/r](#https://api.rest.sh/api/s/d/a/r)**) 
+ *Example Body* (**[DNS Creation Model Response](#dns_creation_model_response)**) 
 
 ```
 {
@@ -595,6 +606,8 @@ Global API errors are applied across all endpoints.
 > Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -606,7 +619,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/o/r](#https://api.rest.sh/api/s/o/r)**) 
+ *Example Body* (**[Code Protection Model Response](#code_protection_model_response)**) 
 
 ```
 {
@@ -629,6 +642,8 @@ Global API errors are applied across all endpoints.
 > Node.JS and Static Web APP Hosting
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -641,7 +656,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/s/h/r](#https://api.rest.sh/api/s/h/r)**) 
+ *Example Body* (**[Hosting Model Response](#hosting_model_response)**) 
 
 ```
 {
@@ -666,6 +681,8 @@ Global API errors are applied across all endpoints.
 > Data Manipulation API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -678,7 +695,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/d/r](#https://api.rest.sh/api/d/r)**) 
+ *Example Body* (**[Data Manipulation Model Response](#data_manipulation_model_response)**) 
 
 ```
 {
@@ -703,6 +720,8 @@ Global API errors are applied across all endpoints.
 > Image Manipulation API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -715,7 +734,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/i/r](#https://api.rest.sh/api/i/r)**) 
+ *Example Body* (**[Image Manipulation Model Response](#image_manipulation_model_response)**) 
 
 ```
 {
@@ -741,6 +760,8 @@ Global API errors are applied across all endpoints.
 > User Address Verification API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -758,7 +779,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/v/a/r](#https://api.rest.sh/api/v/a/r)**) 
+ *Example Body* (**[Verify Address Response](#verify_address_response)**) 
 
 ```
 {
@@ -777,6 +798,8 @@ Global API errors are applied across all endpoints.
 > Users Verification Response API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -789,7 +812,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/v/u/r](#https://api.rest.sh/api/v/u/r)**) 
+ *Example Body* (**[Verify User Model Response](#verify_user_model_response)**) 
 
 ```
 {
@@ -808,6 +831,8 @@ Global API errors are applied across all endpoints.
 > User Verification API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -819,7 +844,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/v/r](#https://api.rest.sh/api/v/r)**) 
+ *Example Body* (**[Verify Model Response](#verify_model_response)**) 
 
 ```
 {
@@ -844,6 +869,8 @@ Global API errors are applied across all endpoints.
 > Two Factor Authentication Token Reply
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -856,7 +883,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/2fa/t/r](#https://api.rest.sh/api/2fa/t/r)**) 
+ *Example Body* (**[Two Factor Authentication Token Model Response](#two_factor_authentication_token_model_response)**) 
 
 ```
 {
@@ -875,6 +902,8 @@ Global API errors are applied across all endpoints.
 > Two Factor Authentication API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -886,7 +915,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/2fa/r](#https://api.rest.sh/api/2fa/r)**) 
+ *Example Body* (**[Two Factor Authentication Model Response](#two_factor_authentication_model_response)**) 
 
 ```
 {
@@ -911,6 +940,8 @@ Global API errors are applied across all endpoints.
 > Get User Info API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -922,7 +953,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/u/i/r](#https://api.rest.sh/api/u/i/r)**) 
+ *Example Body* (**[User Information Model Response](#user_information_model_response)**) 
 
 ```
 {
@@ -960,6 +991,8 @@ Global API errors are applied across all endpoints.
 > Update User API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -975,7 +1008,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/u/u/r](#https://api.rest.sh/api/u/u/r)**) 
+ *Example Body* (**[User Update Model Response](#user_update_model_response)**) 
 
 ```
 {
@@ -1000,6 +1033,8 @@ Global API errors are applied across all endpoints.
 > Delete User API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -1011,7 +1046,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/u/d/r](#https://api.rest.sh/api/u/d/r)**) 
+ *Example Body* (**[User Deletion Response Model](#user_deletion_response_model)**) 
 
 ```
 {
@@ -1035,6 +1070,8 @@ Global API errors are applied across all endpoints.
 > User Registration API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -1054,7 +1091,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/a/u/r/r](#https://api.rest.sh/api/a/u/r/r)**) 
+ *Example Body* (**[User Registration Model Response](#user_registration_model_response)**) 
 
 ```
 {
@@ -1082,6 +1119,8 @@ Global API errors are applied across all endpoints.
 > User Authentication API
 
 
+#### Base URL
+This endpoint uses server `PATH`.
 
 
 #### Query Parameters
@@ -1094,7 +1133,7 @@ Global API errors are applied across all endpoints.
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/a/u/l/r](#https://api.rest.sh/api/a/u/l/r)**) 
+ *Example Body* (**[User Authentication Model Response](#user_authentication_model_response)**) 
 
 ```
 {
@@ -1126,61 +1165,61 @@ Global API errors are applied across all endpoints.
 
 ### List of Models
 
-* [MMDDYYYYHHMMSS](#mmddyyyyhhmmss)
-* [https://api.rest.sh/api/s/l/i/r](#https://api.rest.sh/api/s/l/i/r)
-* [https://api.rest.sh/api/s/l/r](#https://api.rest.sh/api/s/l/r)
-* [https://api.rest.sh/api/d](#https://api.rest.sh/api/d)
-* [https://api.rest.sh/api/v/a](#https://api.rest.sh/api/v/a)
-* [Info17](#info17)
-* [https://api.rest.sh/api/u/u](#https://api.rest.sh/api/u/u)
-* [https://api.rest.sh/api/a/u/r](#https://api.rest.sh/api/a/u/r)
-* [Info](#info)
-* [https://api.rest.sh/api/s/l/i](#https://api.rest.sh/api/s/l/i)
-* [https://api.rest.sh/api/s/l](#https://api.rest.sh/api/s/l)
-* [https://api.rest.sh/api/s/w/c](#https://api.rest.sh/api/s/w/c)
-* [https://api.rest.sh/api/s/w](#https://api.rest.sh/api/s/w)
-* [https://api.rest.sh/api/s/e/r](#https://api.rest.sh/api/s/e/r)
-* [https://api.rest.sh/api/s/e](#https://api.rest.sh/api/s/e)
-* [https://api.rest.sh/api/s/c/push](#https://api.rest.sh/api/s/c/push)
-* [https://api.rest.sh/api/s/c/pull](#https://api.rest.sh/api/s/c/pull)
-* [https://api.rest.sh/api/s/d/c](#https://api.rest.sh/api/s/d/c)
-* [Nameservers](#nameservers)
-* [https://api.rest.sh/api/s/h/r](#https://api.rest.sh/api/s/h/r)
-* [https://api.rest.sh/api/s/h](#https://api.rest.sh/api/s/h)
-* [https://api.rest.sh/api/d/r](#https://api.rest.sh/api/d/r)
-* [https://api.rest.sh/api/i/r](#https://api.rest.sh/api/i/r)
-* [https://api.rest.sh/api/i](#https://api.rest.sh/api/i)
-* [https://api.rest.sh/api/2fa/t](#https://api.rest.sh/api/2fa/t)
-* [https://api.rest.sh/api/2fa](#https://api.rest.sh/api/2fa)
-* [https://api.rest.sh/api/v/u](#https://api.rest.sh/api/v/u)
-* [https://api.rest.sh/api/v/r](#https://api.rest.sh/api/v/r)
-* [https://api.rest.sh/api/u/d](#https://api.rest.sh/api/u/d)
-* [https://api.rest.sh/api/u/i/r](#https://api.rest.sh/api/u/i/r)
-* [https://api.rest.sh/api/u/i](#https://api.rest.sh/api/u/i)
-* [Info12](#info12)
-* [https://api.rest.sh/api/u/u/r](#https://api.rest.sh/api/u/u/r)
-* [Info7](#info7)
-* [https://api.rest.sh/api/a/u/r/r](#https://api.rest.sh/api/a/u/r/r)
-* [https://api.rest.sh/api/a/u/l/r](#https://api.rest.sh/api/a/u/l/r)
-* [https://api.rest.sh/api/a/u/l](#https://api.rest.sh/api/a/u/l)
-* [Data](#data)
-* [Log](#log)
-* [https://api.rest.sh/api/s/w/c/r](#https://api.rest.sh/api/s/w/c/r)
-* [https://api.rest.sh/api/s/w/r](#https://api.rest.sh/api/s/w/r)
-* [https://api.rest.sh/api/s/o/r](#https://api.rest.sh/api/s/o/r)
-* [https://api.rest.sh/api/s/o](#https://api.rest.sh/api/s/o)
-* [https://api.rest.sh/api/s/c/push/r](#https://api.rest.sh/api/s/c/push/r)
-* [https://api.rest.sh/api/s/c/pull/r](#https://api.rest.sh/api/s/c/pull/r)
-* [https://api.rest.sh/api/s/d/c/r](#https://api.rest.sh/api/s/d/c/r)
-* [https://api.rest.sh/api/s/d/a/r](#https://api.rest.sh/api/s/d/a/r)
-* [https://api.rest.sh/api/s/d/a](#https://api.rest.sh/api/s/d/a)
-* [https://api.rest.sh/api/2fa/t/r](#https://api.rest.sh/api/2fa/t/r)
-* [https://api.rest.sh/api/2fa/r](#https://api.rest.sh/api/2fa/r)
-* [https://api.rest.sh/api/v/a/r](#https://api.rest.sh/api/v/a/r)
-* [https://api.rest.sh/api/v/u/r](#https://api.rest.sh/api/v/u/r)
-* [https://api.rest.sh/api/v](#https://api.rest.sh/api/v)
-* [https://api.rest.sh/api/u/d/r](#https://api.rest.sh/api/u/d/r)
-## <a name="mmddyyyyhhmmss"></a>![Type: ](https://apidocs.io/img/method.png "MMDDYYYYHHMMSS") MMDDYYYYHHMMSS
+* [MMDDYYYYHHMMSS Model](#mmddyyyyhhmmss_model)
+* [Logging Logs Model Response](#logging_logs_model_response)
+* [Logging Setup Model Response](#logging_setup_model_response)
+* [Data Manipulation Model](#data_manipulation_model)
+* [Verify Address](#verify_address)
+* [User Information Model](#user_information_model)
+* [User Update Model](#user_update_model)
+* [User Registration Model](#user_registration_model)
+* [Info Model](#info_model)
+* [Logging Logs Model](#logging_logs_model)
+* [Logging Setup Model](#logging_setup_model)
+* [WAF Configuration Model](#waf_configuration_model)
+* [WAF Creation Model](#waf_creation_model)
+* [Encryption Model Response](#encryption_model_response)
+* [Encryption Model](#encryption_model)
+* [CDN Push Model](#cdn_push_model)
+* [CDN Pull Model](#cdn_pull_model)
+* [DNS Configuration Model](#dns_configuration_model)
+* [Nameservers Model](#nameservers_model)
+* [Hosting Model Response](#hosting_model_response)
+* [Hosting Model](#hosting_model)
+* [Data Manipulation Model Response](#data_manipulation_model_response)
+* [Image Manipulation Model Response](#image_manipulation_model_response)
+* [Image Manipulation Model](#image_manipulation_model)
+* [Two Factor Authentication Token Model](#two_factor_authentication_token_model)
+* [Two Factor Authentication Model](#two_factor_authentication_model)
+* [Verify User Model](#verify_user_model)
+* [Verify Model Response](#verify_model_response)
+* [User Deletion Model](#user_deletion_model)
+* [User Information Model Response](#user_information_model_response)
+* [User Information Secondary Model](#user_information_secondary_model)
+* [User Custom Update Model](#user_custom_update_model)
+* [User Update Model Response](#user_update_model_response)
+* [User Profile Information Model](#user_profile_information_model)
+* [User Registration Model Response](#user_registration_model_response)
+* [User Authentication Model Response](#user_authentication_model_response)
+* [User Authentication Model](#user_authentication_model)
+* [Data Model](#data_model)
+* [Log Model](#log_model)
+* [WAF Configuration Model Response](#waf_configuration_model_response)
+* [WAF Creation Model Response](#waf_creation_model_response)
+* [Code Protection Model Response](#code_protection_model_response)
+* [Code Protection Model](#code_protection_model)
+* [CDN Push Model Response](#cdn_push_model_response)
+* [CDN Pull Model Response](#cdn_pull_model_response)
+* [DNS Configuration Model Response](#dns_configuration_model_response)
+* [DNS Creation Model Response](#dns_creation_model_response)
+* [DNS Creation Model](#dns_creation_model)
+* [Two Factor Authentication Token Model Response](#two_factor_authentication_token_model_response)
+* [Two Factor Authentication Model Response](#two_factor_authentication_model_response)
+* [Verify Address Response](#verify_address_response)
+* [Verify User Model Response](#verify_user_model_response)
+* [Verify Model](#verify_model)
+* [User Deletion Response Model](#user_deletion_response_model)
+## <a name="mmddyyyyhhmmss_model"></a>![Type: ](https://apidocs.io/img/method.png "MMDDYYYYHHMMSS Model") MMDDYYYYHHMMSS Model
 
 
 
@@ -1191,7 +1230,7 @@ Global API errors are applied across all endpoints.
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| data | [Data](#data) |  ``` Required ```  | - | 
+| data | [Data Model](#data_model) |  ``` Required ```  | - | 
 
 
 
@@ -1208,7 +1247,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/l/i/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/i/r") https://api.rest.sh/api/s/l/i/r
+## <a name="logging_logs_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Logging Logs Model Response") Logging Logs Model Response
 
 
 
@@ -1219,7 +1258,7 @@ Global API errors are applied across all endpoints.
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| log | [Log](#log) |  ``` Required ```  | - | 
+| log | [Log Model](#log_model) |  ``` Required ```  | - | 
 
 
 
@@ -1247,7 +1286,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/l/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/r") https://api.rest.sh/api/s/l/r
+## <a name="logging_setup_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Logging Setup Model Response") Logging Setup Model Response
 
 
 
@@ -1271,7 +1310,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/d"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/d") https://api.rest.sh/api/d
+## <a name="data_manipulation_model"></a>![Type: ](https://apidocs.io/img/method.png "Data Manipulation Model") Data Manipulation Model
 
 
 
@@ -1311,7 +1350,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/v/a"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/a") https://api.rest.sh/api/v/a
+## <a name="verify_address"></a>![Type: ](https://apidocs.io/img/method.png "Verify Address") Verify Address
 
 
 
@@ -1351,7 +1390,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="info17"></a>![Type: ](https://apidocs.io/img/method.png "Info17") Info17
+## <a name="user_information_model"></a>![Type: ](https://apidocs.io/img/method.png "User Information Model") User Information Model
 
 
 
@@ -1403,7 +1442,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/u/u"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/u") https://api.rest.sh/api/u/u
+## <a name="user_update_model"></a>![Type: ](https://apidocs.io/img/method.png "User Update Model") User Update Model
 
 
 
@@ -1461,7 +1500,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/a/u/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/r") https://api.rest.sh/api/a/u/r
+## <a name="user_registration_model"></a>![Type: ](https://apidocs.io/img/method.png "User Registration Model") User Registration Model
 
 
 
@@ -1511,7 +1550,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="info"></a>![Type: ](https://apidocs.io/img/method.png "Info") Info
+## <a name="info_model"></a>![Type: ](https://apidocs.io/img/method.png "Info Model") Info Model
 
 
 
@@ -1557,7 +1596,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/l/i"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l/i") https://api.rest.sh/api/s/l/i
+## <a name="logging_logs_model"></a>![Type: ](https://apidocs.io/img/method.png "Logging Logs Model") Logging Logs Model
 
 
 
@@ -1589,7 +1628,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/l"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/l") https://api.rest.sh/api/s/l
+## <a name="logging_setup_model"></a>![Type: ](https://apidocs.io/img/method.png "Logging Setup Model") Logging Setup Model
 
 
 
@@ -1621,7 +1660,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/w/c"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/c") https://api.rest.sh/api/s/w/c
+## <a name="waf_configuration_model"></a>![Type: ](https://apidocs.io/img/method.png "WAF Configuration Model") WAF Configuration Model
 
 
 
@@ -1653,7 +1692,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/w"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w") https://api.rest.sh/api/s/w
+## <a name="waf_creation_model"></a>![Type: ](https://apidocs.io/img/method.png "WAF Creation Model") WAF Creation Model
 
 
 
@@ -1683,7 +1722,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/e/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/e/r") https://api.rest.sh/api/s/e/r
+## <a name="encryption_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Encryption Model Response") Encryption Model Response
 
 
 
@@ -1715,7 +1754,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/e"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/e") https://api.rest.sh/api/s/e
+## <a name="encryption_model"></a>![Type: ](https://apidocs.io/img/method.png "Encryption Model") Encryption Model
 
 
 
@@ -1749,7 +1788,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/c/push"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/push") https://api.rest.sh/api/s/c/push
+## <a name="cdn_push_model"></a>![Type: ](https://apidocs.io/img/method.png "CDN Push Model") CDN Push Model
 
 
 
@@ -1779,7 +1818,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/c/pull"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/pull") https://api.rest.sh/api/s/c/pull
+## <a name="cdn_pull_model"></a>![Type: ](https://apidocs.io/img/method.png "CDN Pull Model") CDN Pull Model
 
 
 
@@ -1809,7 +1848,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/d/c"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/c") https://api.rest.sh/api/s/d/c
+## <a name="dns_configuration_model"></a>![Type: ](https://apidocs.io/img/method.png "DNS Configuration Model") DNS Configuration Model
 
 
 
@@ -1839,7 +1878,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="nameservers"></a>![Type: ](https://apidocs.io/img/method.png "Nameservers") Nameservers
+## <a name="nameservers_model"></a>![Type: ](https://apidocs.io/img/method.png "Nameservers Model") Nameservers Model
 
 
 
@@ -1869,7 +1908,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/h/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/h/r") https://api.rest.sh/api/s/h/r
+## <a name="hosting_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Hosting Model Response") Hosting Model Response
 
 
 
@@ -1899,7 +1938,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/h"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/h") https://api.rest.sh/api/s/h
+## <a name="hosting_model"></a>![Type: ](https://apidocs.io/img/method.png "Hosting Model") Hosting Model
 
 
 
@@ -1929,7 +1968,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/d/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/d/r") https://api.rest.sh/api/d/r
+## <a name="data_manipulation_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Data Manipulation Model Response") Data Manipulation Model Response
 
 
 
@@ -1959,7 +1998,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/i/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/i/r") https://api.rest.sh/api/i/r
+## <a name="image_manipulation_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Image Manipulation Model Response") Image Manipulation Model Response
 
 
 
@@ -1991,7 +2030,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/i"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/i") https://api.rest.sh/api/i
+## <a name="image_manipulation_model"></a>![Type: ](https://apidocs.io/img/method.png "Image Manipulation Model") Image Manipulation Model
 
 
 
@@ -2023,7 +2062,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/2fa/t"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/t") https://api.rest.sh/api/2fa/t
+## <a name="two_factor_authentication_token_model"></a>![Type: ](https://apidocs.io/img/method.png "Two Factor Authentication Token Model") Two Factor Authentication Token Model
 
 
 
@@ -2053,7 +2092,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/2fa"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa") https://api.rest.sh/api/2fa
+## <a name="two_factor_authentication_model"></a>![Type: ](https://apidocs.io/img/method.png "Two Factor Authentication Model") Two Factor Authentication Model
 
 
 
@@ -2083,7 +2122,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/v/u"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/u") https://api.rest.sh/api/v/u
+## <a name="verify_user_model"></a>![Type: ](https://apidocs.io/img/method.png "Verify User Model") Verify User Model
 
 
 
@@ -2113,7 +2152,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/v/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/r") https://api.rest.sh/api/v/r
+## <a name="verify_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Verify Model Response") Verify Model Response
 
 
 
@@ -2143,7 +2182,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/u/d"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/d") https://api.rest.sh/api/u/d
+## <a name="user_deletion_model"></a>![Type: ](https://apidocs.io/img/method.png "User Deletion Model") User Deletion Model
 
 
 
@@ -2173,7 +2212,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/u/i/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/i/r") https://api.rest.sh/api/u/i/r
+## <a name="user_information_model_response"></a>![Type: ](https://apidocs.io/img/method.png "User Information Model Response") User Information Model Response
 
 
 
@@ -2184,12 +2223,10 @@ Global API errors are applied across all endpoints.
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| request | string |  ``` Required ```  | - | 
-| uid | string |  ``` Required ```  | - | 
-| apiuid | string |  ``` Required ```  | - | 
-| verified | string |  ``` Required ```  | - | 
-| id | string |  ``` Required ```  | - | 
-| info | [Info17](#info17) |  ``` Required ```  | - | 
+| user | string |  ``` Required ```  | - | 
+| key | string |  ``` Required ```  | Users API Private Key | 
+| api | string |  ``` Required ```  | Users API Public Key | 
+| info | [User Information Secondary Model](#user_information_secondary_model) |  ``` Required ```  | Users Profile Information | 
 
 
 
@@ -2223,7 +2260,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/u/i"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/i") https://api.rest.sh/api/u/i
+## <a name="user_information_secondary_model"></a>![Type: ](https://apidocs.io/img/method.png "User Information Secondary Model") User Information Secondary Model
 
 
 
@@ -2253,7 +2290,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="info12"></a>![Type: ](https://apidocs.io/img/method.png "Info12") Info12
+## <a name="user_custom_update_model"></a>![Type: ](https://apidocs.io/img/method.png "User Custom Update Model") User Custom Update Model
 
 
 
@@ -2283,7 +2320,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/u/u/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/u/r") https://api.rest.sh/api/u/u/r
+## <a name="user_update_model_response"></a>![Type: ](https://apidocs.io/img/method.png "User Update Model Response") User Update Model Response
 
 
 
@@ -2297,7 +2334,7 @@ Global API errors are applied across all endpoints.
 | request | string |  ``` Required ```  | - | 
 | updated | string |  ``` Required ```  | - | 
 | id | string |  ``` Required ```  | - | 
-| info | [Info12](#info12) |  ``` Required ```  | - | 
+| info | [User Custom Update Model](#user_custom_update_model) |  ``` Required ```  | - | 
 
 
 
@@ -2318,7 +2355,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="info7"></a>![Type: ](https://apidocs.io/img/method.png "Info7") Info7
+## <a name="user_profile_information_model"></a>![Type: ](https://apidocs.io/img/method.png "User Profile Information Model") User Profile Information Model
 
 
 
@@ -2354,7 +2391,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/a/u/r/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/r/r") https://api.rest.sh/api/a/u/r/r
+## <a name="user_registration_model_response"></a>![Type: ](https://apidocs.io/img/method.png "User Registration Model Response") User Registration Model Response
 
 
 
@@ -2368,7 +2405,7 @@ Global API errors are applied across all endpoints.
 | request | string |  ``` Required ```  | - | 
 | active | string |  ``` Required ```  | - | 
 | id | string |  ``` Required ```  | - | 
-| info | [Info7](#info7) |  ``` Required ```  | - | 
+| info | [User Profile Information Model](#user_profile_information_model) |  ``` Required ```  | - | 
 
 
 
@@ -2392,7 +2429,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/a/u/l/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/l/r") https://api.rest.sh/api/a/u/l/r
+## <a name="user_authentication_model_response"></a>![Type: ](https://apidocs.io/img/method.png "User Authentication Model Response") User Authentication Model Response
 
 
 
@@ -2407,7 +2444,7 @@ Global API errors are applied across all endpoints.
 | uid | string |  ``` Required ```  | - | 
 | valid | string |  ``` Required ```  | - | 
 | id | string |  ``` Required ```  | - | 
-| info | [Info](#info) |  ``` Required ```  | - | 
+| info | [Info Model](#info_model) |  ``` Required ```  | - | 
 
 
 
@@ -2437,7 +2474,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/a/u/l"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/a/u/l") https://api.rest.sh/api/a/u/l
+## <a name="user_authentication_model"></a>![Type: ](https://apidocs.io/img/method.png "User Authentication Model") User Authentication Model
 
 
 
@@ -2467,7 +2504,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="data"></a>![Type: ](https://apidocs.io/img/method.png "Data") Data
+## <a name="data_model"></a>![Type: ](https://apidocs.io/img/method.png "Data Model") Data Model
 
 
 
@@ -2495,7 +2532,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="log"></a>![Type: ](https://apidocs.io/img/method.png "Log") Log
+## <a name="log_model"></a>![Type: ](https://apidocs.io/img/method.png "Log Model") Log Model
 
 
 
@@ -2506,8 +2543,8 @@ Global API errors are applied across all endpoints.
 
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
-| MMDDYYYYHHMMSSX | [MMDDYYYYHHMMSS](#mmddyyyyhhmmss) |  ``` Required ```  | - | 
-| MMDDYYYYHHMMSSY | [MMDDYYYYHHMMSS](#mmddyyyyhhmmss) |  ``` Required ```  | - | 
+| MMDDYYYYHHMMSSX | [MMDDYYYYHHMMSS Model](#mmddyyyyhhmmss_model) |  ``` Required ```  | - | 
+| MMDDYYYYHHMMSSY | [MMDDYYYYHHMMSS Model](#mmddyyyyhhmmss_model) |  ``` Required ```  | - | 
 
 
 
@@ -2533,7 +2570,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/w/c/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/c/r") https://api.rest.sh/api/s/w/c/r
+## <a name="waf_configuration_model_response"></a>![Type: ](https://apidocs.io/img/method.png "WAF Configuration Model Response") WAF Configuration Model Response
 
 
 
@@ -2559,7 +2596,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/w/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/r") https://api.rest.sh/api/s/w/r
+## <a name="waf_creation_model_response"></a>![Type: ](https://apidocs.io/img/method.png "WAF Creation Model Response") WAF Creation Model Response
 
 
 
@@ -2585,7 +2622,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/o/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/o/r") https://api.rest.sh/api/s/o/r
+## <a name="code_protection_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Code Protection Model Response") Code Protection Model Response
 
 
 
@@ -2611,7 +2648,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/o"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/o") https://api.rest.sh/api/s/o
+## <a name="code_protection_model"></a>![Type: ](https://apidocs.io/img/method.png "Code Protection Model") Code Protection Model
 
 
 
@@ -2639,7 +2676,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/c/push/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/push/r") https://api.rest.sh/api/s/c/push/r
+## <a name="cdn_push_model_response"></a>![Type: ](https://apidocs.io/img/method.png "CDN Push Model Response") CDN Push Model Response
 
 
 
@@ -2667,7 +2704,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/c/pull/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/c/pull/r") https://api.rest.sh/api/s/c/pull/r
+## <a name="cdn_pull_model_response"></a>![Type: ](https://apidocs.io/img/method.png "CDN Pull Model Response") CDN Pull Model Response
 
 
 
@@ -2693,7 +2730,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/d/c/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/c/r") https://api.rest.sh/api/s/d/c/r
+## <a name="dns_configuration_model_response"></a>![Type: ](https://apidocs.io/img/method.png "DNS Configuration Model Response") DNS Configuration Model Response
 
 
 
@@ -2721,7 +2758,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/d/a/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/a/r") https://api.rest.sh/api/s/d/a/r
+## <a name="dns_creation_model_response"></a>![Type: ](https://apidocs.io/img/method.png "DNS Creation Model Response") DNS Creation Model Response
 
 
 
@@ -2733,7 +2770,7 @@ Global API errors are applied across all endpoints.
 | Name | Type | Tags | Description |
 |-----------|------| ---- |-------------| 
 | domain | string |  ``` Required ```  | - | 
-| nameservers | [Nameservers](#nameservers) |  ``` Required ```  | - | 
+| nameservers | [Nameservers Model](#nameservers_model) |  ``` Required ```  | - | 
 
 
 
@@ -2752,7 +2789,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/s/d/a"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/d/a") https://api.rest.sh/api/s/d/a
+## <a name="dns_creation_model"></a>![Type: ](https://apidocs.io/img/method.png "DNS Creation Model") DNS Creation Model
 
 
 
@@ -2780,7 +2817,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/2fa/t/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/t/r") https://api.rest.sh/api/2fa/t/r
+## <a name="two_factor_authentication_token_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Two Factor Authentication Token Model Response") Two Factor Authentication Token Model Response
 
 
 
@@ -2808,7 +2845,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/2fa/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/2fa/r") https://api.rest.sh/api/2fa/r
+## <a name="two_factor_authentication_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Two Factor Authentication Model Response") Two Factor Authentication Model Response
 
 
 
@@ -2837,7 +2874,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/v/a/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/a/r") https://api.rest.sh/api/v/a/r
+## <a name="verify_address_response"></a>![Type: ](https://apidocs.io/img/method.png "Verify Address Response") Verify Address Response
 
 
 
@@ -2865,7 +2902,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/v/u/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v/u/r") https://api.rest.sh/api/v/u/r
+## <a name="verify_user_model_response"></a>![Type: ](https://apidocs.io/img/method.png "Verify User Model Response") Verify User Model Response
 
 
 
@@ -2893,7 +2930,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/v"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/v") https://api.rest.sh/api/v
+## <a name="verify_model"></a>![Type: ](https://apidocs.io/img/method.png "Verify Model") Verify Model
 
 
 
@@ -2921,7 +2958,7 @@ Global API errors are applied across all endpoints.
 
 
 
-## <a name="https://api.rest.sh/api/u/d/r"></a>![Type: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/u/d/r") https://api.rest.sh/api/u/d/r
+## <a name="user_deletion_response_model"></a>![Type: ](https://apidocs.io/img/method.png "User Deletion Response Model") User Deletion Response Model
 
 
 
