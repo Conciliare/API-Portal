@@ -189,16 +189,18 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| basicAuthUserName | The username to use with basic authentication |
-| basicAuthPassword | The password to use with basic authentication |
+| uid | Your user ID |
+| secret | Your Private API Key |
+| key | Your Public API Key |
 
 
 
 Configuration variables can be set as following.
 ```Objc
 // Configuration parameters and credentials
-Configuration_BasicAuthUserName = "Configuration_BasicAuthUserName"; // The username to use with basic authentication
-Configuration_BasicAuthPassword = "Configuration_BasicAuthPassword"; // The password to use with basic authentication
+Configuration_Uid = "UID"; // Your user ID
+Configuration_Secret = "SECRET"; // Your Private API Key
+Configuration_Key = "KEY"; // Your Public API Key
 
 ```
 
@@ -312,7 +314,7 @@ function loggingSetupAsyncWithKey:(NSString*) key
     NSString* uid = @"uid";
     NSString* name = @"name";
     NSString* origin = @"origin";
-    BOOL activate = true;
+    BOOL activate = false;
     NSString* contentType = @"Content-Type";
 
     [self.advancedLogging loggingSetupAsyncWithKey: key uid : uid name : name origin : origin activate : activate contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLR* response, NSError* error) { 
@@ -629,7 +631,7 @@ function dataAndFileEncryptionAsyncWithKey:(NSString*) key
     NSString* uid = @"uid";
     NSString* data = @"data";
     NSString* method = @"method";
-    int bit = 24;
+    int bit = 153;
     NSString* contentType = @"Content-Type";
 
     [self.encryption dataAndFileEncryptionAsyncWithKey: key uid : uid data : data method : method bit : bit contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
@@ -1427,7 +1429,7 @@ function userAddressVerificationAsyncWithKey:(NSString*) key
     NSString* sa = @"sa";
     NSString* c = @"c";
     NSString* s = @"s";
-    int z = 237;
+    int z = 153;
     NSString* contentType = @"Content-Type";
 
     [self.verification userAddressVerificationAsyncWithKey: key uid : uid user : user a : a sa : sa c : c s : s z : z contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVAR* response, NSError* error) { 
@@ -2099,8 +2101,8 @@ function userRegistrationAsyncWithKey:(NSString*) key
     NSString* password = @"password";
     NSString* name = @"name";
     NSString* email = @"email";
-    int phone = 237;
-    int countrycode = 237;
+    int phone = 203;
+    int countrycode = 203;
     NSString* address = @"address";
     NSString* contentType = @"Content-Type";
 

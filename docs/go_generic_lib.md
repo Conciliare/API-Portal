@@ -229,8 +229,9 @@ In order to setup authentication of the API client, you need the following infor
 
 | Parameter | Description |
 |-----------|-------------|
-| basicAuthUserName | The username to use with basic authentication |
-| basicAuthPassword | The password to use with basic authentication |
+| uid | Your user ID |
+| secret | Your Private API Key |
+| key | Your Public API Key |
 
 
 To configure these for your generated code, open the file "Configuration.go" and edit it's contents.
@@ -341,7 +342,7 @@ key := "key"
 uid := "uid"
 name := "name"
 origin := "origin"
-activate := true
+activate := false
 contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSLR
@@ -627,7 +628,7 @@ key := "key"
 uid := "uid"
 data := "data"
 method := "method"
-bit,_ := strconv.ParseInt("251", 10, 8)
+bit,_ := strconv.ParseInt("126", 10, 8)
 contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSER
@@ -1365,7 +1366,7 @@ a := "a"
 sa := "sa"
 c := "c"
 s := "s"
-z,_ := strconv.ParseInt("251", 10, 8)
+z,_ := strconv.ParseInt("126", 10, 8)
 contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiVAR
@@ -1982,8 +1983,8 @@ user := "user"
 password := "password"
 name := "name"
 email := "email"
-phone,_ := strconv.ParseInt("210", 10, 8)
-countrycode,_ := strconv.ParseInt("210", 10, 8)
+phone,_ := strconv.ParseInt("126", 10, 8)
+countrycode,_ := strconv.ParseInt("126", 10, 8)
 address := "address"
 contentType := "Content-Type"
 

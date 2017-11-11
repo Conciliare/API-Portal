@@ -211,8 +211,9 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| basic_auth_user_name | The username to use with basic authentication |
-| basic_auth_password | The password to use with basic authentication |
+| uid | Your user ID |
+| secret | Your Private API Key |
+| key | Your Public API Key |
 
 
 
@@ -220,10 +221,11 @@ API client can be initialized as following.
 
 ```python
 # Configuration parameters and credentials
-basic_auth_user_name = 'basic_auth_user_name' # The username to use with basic authentication
-basic_auth_password = 'basic_auth_password' # The password to use with basic authentication
+uid = 'UID' # Your user ID
+secret = 'SECRET' # Your Private API Key
+key = 'KEY' # Your Public API Key
 
-client = SMASH(basic_auth_user_name, basic_auth_password)
+client = SMASH(uid, secret, key)
 ```
 
 
@@ -332,7 +334,7 @@ key = 'key'
 uid = 'uid'
 name = 'name'
 origin = 'origin'
-activate = False
+activate = True
 content_type = 'Content-Type'
 
 result = advanced_logging_client.logging_setup(key, uid, name, origin, activate, content_type)
@@ -609,7 +611,7 @@ key = 'key'
 uid = 'uid'
 data = 'data'
 method = 'method'
-bit = 10
+bit = 167
 content_type = 'Content-Type'
 
 result = encryption_client.data_and_file_encryption(key, uid, data, method, bit, content_type)
@@ -1328,7 +1330,7 @@ a = 'a'
 sa = 'sa'
 c = 'c'
 s = 's'
-z = 101
+z = 125
 content_type = 'Content-Type'
 
 result = verification_client.user_address_verification(key, uid, user, a, sa, c, s, z, content_type)
@@ -1929,8 +1931,8 @@ user = 'user'
 password = 'password'
 name = 'name'
 email = 'email'
-phone = 101
-countrycode = 101
+phone = 216
+countrycode = 216
 address = 'address'
 content_type = 'Content-Type'
 

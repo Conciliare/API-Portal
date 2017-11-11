@@ -190,8 +190,9 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| basicAuthUserName | The username to use with basic authentication |
-| basicAuthPassword | The password to use with basic authentication |
+| uid | Your user ID |
+| secret | Your Private API Key |
+| key | Your Public API Key |
 
 
 
@@ -199,10 +200,11 @@ API client can be initialized as following.
 
 ```csharp
 // Configuration parameters and credentials
-string basicAuthUserName = "basicAuthUserName"; // The username to use with basic authentication
-string basicAuthPassword = "basicAuthPassword"; // The password to use with basic authentication
+string uid = "UID"; // Your user ID
+string secret = "SECRET"; // Your Private API Key
+string key = "KEY"; // Your Public API Key
 
-SMASHClient client = new SMASHClient(basicAuthUserName, basicAuthPassword);
+SMASHClient client = new SMASHClient(uid, secret, key);
 ```
 
 
@@ -311,7 +313,7 @@ string key = "key";
 string uid = "uid";
 string name = "name";
 string origin = "origin";
-bool activate = false;
+bool activate = true;
 string contentType = "Content-Type";
 
 Models.HttpsApiRestShApiSLR result = await advancedLogging.LoggingSetup(key, uid, name, origin, activate, contentType);
@@ -580,7 +582,7 @@ string key = "key";
 string uid = "uid";
 string data = "data";
 string method = "method";
-int bit = 110;
+int bit = 148;
 string contentType = "Content-Type";
 
 Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryption(key, uid, data, method, bit, contentType);
@@ -1281,7 +1283,7 @@ string a = "a";
 string sa = "sa";
 string c = "c";
 string s = "s";
-int z = 110;
+int z = 239;
 string contentType = "Content-Type";
 
 Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(key, uid, user, a, sa, c, s, z, contentType);
@@ -1866,8 +1868,8 @@ string user = "user";
 string password = "password";
 string name = "name";
 string email = "email";
-int phone = 202;
-int countrycode = 202;
+int phone = 239;
+int countrycode = 239;
 string address = "address";
 string contentType = "Content-Type";
 
