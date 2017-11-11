@@ -218,8 +218,9 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| basicAuthUserName | The username to use with basic authentication |
-| basicAuthPassword | The password to use with basic authentication |
+| uid | Your user ID |
+| secret | Your Private API Key |
+| key | Your Public API Key |
 
 
 
@@ -227,11 +228,12 @@ API client can be initialized as following. The `appContext` being passed is the
 
 ```java
 // Configuration parameters and credentials
-String basicAuthUserName = "basicAuthUserName"; // The username to use with basic authentication
-String basicAuthPassword = "basicAuthPassword"; // The password to use with basic authentication
+String uid = "UID"; // Your user ID
+String secret = "SECRET"; // Your Private API Key
+String key = "KEY"; // Your Public API Key
 
 SMASH.Configuration.initialize(appContext);
-SMASHClient client = new SMASHClient(basicAuthUserName, basicAuthPassword);
+SMASHClient client = new SMASHClient(uid, secret, key);
 ```
 
 
@@ -348,7 +350,7 @@ String key = "key";
 String uid = "uid";
 String name = "name";
 String origin = "origin";
-boolean activate = false;
+boolean activate = true;
 String contentType = "Content-Type";
 // Invoking the API call with sample inputs
 advancedLogging.loggingSetupAsync(key, uid, name, origin, activate, contentType, new APICallBack<HttpsApiRestShApiSLR>() {
@@ -697,7 +699,7 @@ String key = "key";
 String uid = "uid";
 String data = "data";
 String method = "method";
-int bit = 33;
+int bit = 162;
 String contentType = "Content-Type";
 // Invoking the API call with sample inputs
 encryption.dataAndFileEncryptionAsync(key, uid, data, method, bit, contentType, new APICallBack<HttpsApiRestShApiSER>() {
@@ -1596,7 +1598,7 @@ String a = "a";
 String sa = "sa";
 String c = "c";
 String s = "s";
-int z = 124;
+int z = 254;
 String contentType = "Content-Type";
 // Invoking the API call with sample inputs
 verification.userAddressVerificationAsync(key, uid, user, a, sa, c, s, z, contentType, new APICallBack<HttpsApiRestShApiVAR>() {
@@ -2357,8 +2359,8 @@ String user = "user";
 String password = "password";
 String name = "name";
 String email = "email";
-int phone = 83;
-int countrycode = 83;
+int phone = 254;
+int countrycode = 254;
 String address = "address";
 String contentType = "Content-Type";
 // Invoking the API call with sample inputs

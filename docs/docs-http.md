@@ -1,6 +1,6 @@
 # 
 
-**`API Version:`** `1.08`
+**`API Version:`** `1.09`
 
 # Introduction
 * ## Multi-use Flexible API for: 
@@ -174,7 +174,7 @@ The following parameters are used by the listed base URLs:
 
 
 ## Authentication
-This API uses `basic authentication`.
+This API uses `custom authentication`.
 
 
 
@@ -184,7 +184,7 @@ The parameters required for authentication are listed below:
 
 | Parameter | Description | Example | 
 |-----------|-------------| ------- |
-| UID | Your user ID | `"UID"` |
+| uid | Your user ID | `"UID"` |
 | secret | Your Private API Key | `"SECRET"` |
 | key | Your Public API Key | `"KEY"` |
 

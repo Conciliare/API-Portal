@@ -352,8 +352,9 @@ In order to setup authentication and initialization of the Angular App, you need
 
 | Parameter | Description |
 |-----------|-------------|
-| basicAuthUserName | The username to use with basic authentication |
-| basicAuthPassword | The password to use with basic authentication |
+| uid | Your user ID |
+| secret | Your Private API Key |
+| key | Your Public API Key |
 
 
 
@@ -364,8 +365,9 @@ app.factory('config', function($scope, Configuration)
     return {
         setConfigVars: function() {
             // Configuration parameters and credentials
-            Configuration.basicAuthUserName = 'basicAuthUserName'; // The username to use with basic authentication
-            Configuration.basicAuthPassword = 'basicAuthPassword'; // The password to use with basic authentication
+            Configuration.uid = 'UID'; // Your user ID
+            Configuration.secret = 'SECRET'; // Your Private API Key
+            Configuration.key = 'KEY'; // Your Public API Key
             
         }
     };
@@ -484,7 +486,7 @@ function loggingSetup(key, uid, name, origin, activate, contentType)
         var uid = 'uid';
         var name = 'name';
         var origin = 'origin';
-        var activate = true;
+        var activate = false;
         var contentType = 'Content-Type';
 
 
@@ -845,7 +847,7 @@ function dataAndFileEncryption(key, uid, data, method, bit, contentType)
         var uid = 'uid';
         var data = 'data';
         var method = 'method';
-        var bit = 132;
+        var bit = 48;
         var contentType = 'Content-Type';
 
 
@@ -1766,7 +1768,7 @@ function userAddressVerification(key, uid, user, a, sa, c, s, z, contentType)
         var sa = 'sa';
         var c = 'c';
         var s = 's';
-        var z = 132;
+        var z = 140;
         var contentType = 'Content-Type';
 
 
@@ -2533,8 +2535,8 @@ function userRegistration(key, uid, user, password, name, email, phone, countryc
         var password = 'password';
         var name = 'name';
         var email = 'email';
-        var phone = 132;
-        var countrycode = 132;
+        var phone = 140;
+        var countrycode = 140;
         var address = 'address';
         var contentType = 'Content-Type';
 

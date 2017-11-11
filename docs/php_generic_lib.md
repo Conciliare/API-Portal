@@ -236,18 +236,20 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| basicAuthUserName | The username to use with basic authentication |
-| basicAuthPassword | The password to use with basic authentication |
+| uid | Your user ID |
+| secret | Your Private API Key |
+| key | Your Public API Key |
 
 
 
 API client can be initialized as following.
 
 ```php
-$basicAuthUserName = 'basicAuthUserName'; // The username to use with basic authentication
-$basicAuthPassword = 'basicAuthPassword'; // The password to use with basic authentication
+$uid = 'UID'; // Your user ID
+$secret = 'SECRET'; // Your Private API Key
+$key = 'KEY'; // Your Public API Key
 
-$client = new SMASHLib\SMASHClient($basicAuthUserName, $basicAuthPassword);
+$client = new SMASHLib\SMASHClient($uid, $secret, $key);
 ```
 
 
@@ -357,7 +359,7 @@ $key = 'key';
 $uid = 'uid';
 $name = 'name';
 $origin = 'origin';
-$activate = false;
+$activate = true;
 $contentType = 'Content-Type';
 
 $result = $advancedLogging->loggingSetup($key, $uid, $name, $origin, $activate, $contentType);
@@ -641,7 +643,7 @@ $key = 'key';
 $uid = 'uid';
 $data = 'data';
 $method = 'method';
-$bit = 32;
+$bit = 25;
 $contentType = 'Content-Type';
 
 $result = $encryption->dataAndFileEncryption($key, $uid, $data, $method, $bit, $contentType);
@@ -1378,7 +1380,7 @@ $a = 'a';
 $sa = 'sa';
 $c = 'c';
 $s = 's';
-$z = 124;
+$z = 25;
 $contentType = 'Content-Type';
 
 $result = $verification->userAddressVerification($key, $uid, $user, $a, $sa, $c, $s, $z, $contentType);
@@ -1995,8 +1997,8 @@ $user = 'user';
 $password = 'password';
 $name = 'name';
 $email = 'email';
-$phone = 215;
-$countrycode = 215;
+$phone = 117;
+$countrycode = 117;
 $address = 'address';
 $contentType = 'Content-Type';
 

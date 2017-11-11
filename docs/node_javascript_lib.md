@@ -223,8 +223,9 @@ In order to setup authentication in the API client, you need the following infor
 
 | Parameter | Description |
 |-----------|-------------|
-| basicAuthUserName | The username to use with basic authentication |
-| basicAuthPassword | The password to use with basic authentication |
+| uid | Your user ID |
+| secret | Your Private API Key |
+| key | Your Public API Key |
 
 
 
@@ -234,8 +235,9 @@ API client can be initialized as following:
 const lib = require('lib');
 
 // Configuration parameters and credentials
-lib.Configuration.basicAuthUserName = "basicAuthUserName"; // The username to use with basic authentication
-lib.Configuration.basicAuthPassword = "basicAuthPassword"; // The password to use with basic authentication
+lib.Configuration.uid = "UID"; // Your user ID
+lib.Configuration.secret = "SECRET"; // Your Private API Key
+lib.Configuration.key = "KEY"; // Your Public API Key
 
 ```
 
@@ -627,7 +629,7 @@ function dataAndFileEncryption(key, uid, data, method, bit, contentType, callbac
     var uid = 'uid';
     var data = 'data';
     var method = 'method';
-    var bit = 138;
+    var bit = 175;
     var contentType = 'Content-Type';
 
     controller.dataAndFileEncryption(key, uid, data, method, bit, contentType, function(error, response, context) {
@@ -1361,7 +1363,7 @@ function userAddressVerification(key, uid, user, a, sa, c, s, z, contentType, ca
     var sa = 'sa';
     var c = 'c';
     var s = 's';
-    var z = 138;
+    var z = 12;
     var contentType = 'Content-Type';
 
     controller.userAddressVerification(key, uid, user, a, sa, c, s, z, contentType, function(error, response, context) {
@@ -1965,8 +1967,8 @@ function userRegistration(key, uid, user, password, name, email, phone, countryc
     var password = 'password';
     var name = 'name';
     var email = 'email';
-    var phone = 138;
-    var countrycode = 138;
+    var phone = 12;
+    var countrycode = 12;
     var address = 'address';
     var contentType = 'Content-Type';
 
