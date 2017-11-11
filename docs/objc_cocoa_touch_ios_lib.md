@@ -34,7 +34,7 @@
     * Encryption
     * Code Obfuscation
     * Platform Identification
-    * WAF & DDOS Protection (Web Application Firewall)
+    * WAF and DDOS Protection (Web Application Firewall)
       * Advanced Logging
 
 # Overview
@@ -209,14 +209,14 @@ Configuration_Key = "KEY"; // Your Public API Key
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [AdvancedLogging](#advanced_logging)
-* [WAFDDOSProtection](#wafddos_protection)
+* [WAFAndDDOSProtection](#waf_and_ddos_protection)
 * [Encryption](#encryption)
 * [CDN](#cdn)
 * [DNS](#dns)
 * [CodeObfuscation](#code_obfuscation)
 * [Hosting](#hosting)
-* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
-* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [DataManipulation](#data_manipulation)
+* [ImageManipulation](#image_manipulation)
 * [Verification](#verification)
 * [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
 * [UserManagement](#user_management)
@@ -228,44 +228,6 @@ Configuration_Key = "KEY"; // Your Public API Key
 ```objc
 AdvancedLogging* advancedLogging = [[AdvancedLogging alloc]init] ;
 ```
-
-### <a name="logging_info_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfoAsyncWithName") loggingInfoAsyncWithName
-
-> WAF Log Info
-
-
-```objc
-function loggingInfoAsyncWithName:(NSString*) name
-                origin:(NSString*) origin
-                time:(NSString*) time
-                completionBlock:(CompletedGetLoggingInfo) onCompleted(name origin : origin time : time)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| name |  ``` Required ```  | Name of your WAF zone |
-| origin |  ``` Required ```  | IP Address of the Web Application |
-| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    NSString* name = @"name";
-    NSString* origin = @"origin";
-    NSString* time = @"time";
-
-    [self.advancedLogging loggingInfoAsyncWithName: name origin : origin time : time  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLIR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
 
 ### <a name="logging_configuration_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingConfigurationAsyncWithName") loggingConfigurationAsyncWithName
 
@@ -285,7 +247,7 @@ function loggingConfigurationAsyncWithName:(NSString*) name
 |-----------|------|-------------|
 | name |  ``` Required ```  | Name of the WAF zone |
 | origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
-| activate |  ``` Required ```  | True or False |
+| activate |  ``` Required ```  | Activate or Disable |
 
 
 
@@ -305,42 +267,70 @@ function loggingConfigurationAsyncWithName:(NSString*) name
 ```
 
 
+### <a name="logging_info_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfoAsyncWithName") loggingInfoAsyncWithName
+
+> WAF Log Info
+
+
+```objc
+function loggingInfoAsyncWithName:(NSString*) name
+                origin:(NSString*) origin
+                time:(NSString*) time
+                completionBlock:(CompletedGetLoggingInfo) onCompleted(name origin : origin time : time)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01/01/0101;24:59:01]) |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    NSString* name = @"name";
+    NSString* origin = @"origin";
+    NSString* time = @"time";
+
+    [self.advancedLogging loggingInfoAsyncWithName: name origin : origin time : time  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLIR* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtection") WAFDDOSProtection
+## <a name="waf_and_ddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFAndDDOSProtection") WAFAndDDOSProtection
 
 ### Get singleton instance
 ```objc
-WAFDDOSProtection* wAFDDOSProtection = [[WAFDDOSProtection alloc]init] ;
+WAFAndDDOSProtection* wAFAndDDOSProtection = [[WAFAndDDOSProtection alloc]init] ;
 ```
 
-### <a name="https_api_rest_sh_api_swc_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWCAsyncWithKey") httpsApiRestShApiSWCAsyncWithKey
+### <a name="https_api_rest_sh_api_swc_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWCAsyncWithName") httpsApiRestShApiSWCAsyncWithName
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Configuration
 
 
 ```objc
-function httpsApiRestShApiSWCAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                name:(NSString*) name
-                origin:(NSString*) origin
+function httpsApiRestShApiSWCAsyncWithName:(NSString*) name
                 rule:(NSString*) rule
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetHttpsApiRestShApiSWC) onCompleted(key uid : uid name : name origin : origin rule : rule contentType : contentType)
+                completionBlock:(CompletedGetHttpsApiRestShApiSWC) onCompleted(name rule : rule)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| rule |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| rule |  ``` Required ```  | Rule or rules to add or update separated by a comma |
 
 
 
@@ -350,44 +340,32 @@ function httpsApiRestShApiSWCAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"API";
-    NSString* uid = @"UID";
-    NSString* name = @"origin-name";
-    NSString* origin = @"origin.yourdomain.tld";
-    NSString* rule = @"header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does";
-    NSString* contentType = @"application/json";
+    NSString* name = @"name";
+    NSString* rule = @"rule";
 
-    [self.wAFDDOSProtection httpsApiRestShApiSWCAsyncWithKey: key uid : uid name : name origin : origin rule : rule contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWCR* response, NSError* error) { 
+    [self.wAFAndDDOSProtection httpsApiRestShApiSWCAsyncWithName: name rule : rule  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWCR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="https_api_rest_sh_api_sw_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWAsyncWithKey") httpsApiRestShApiSWAsyncWithKey
+### <a name="https_api_rest_sh_api_sw_async_with_origin"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWAsyncWithOrigin") httpsApiRestShApiSWAsyncWithOrigin
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Creation
 
 
 ```objc
-function httpsApiRestShApiSWAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                origin:(NSString*) origin
+function httpsApiRestShApiSWAsyncWithOrigin:(NSString*) origin
                 cname:(NSString*) cname
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetHttpsApiRestShApiSW) onCompleted(key uid : uid origin : origin cname : cname contentType : contentType)
+                completionBlock:(CompletedGetHttpsApiRestShApiSW) onCompleted(origin cname : cname)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | IP of the Web server you wish to protect |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 
@@ -397,100 +375,10 @@ function httpsApiRestShApiSWAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"API";
-    NSString* uid = @"UID";
-    NSString* origin = @"origin.yourdomain.tld";
-    NSString* cname = @"yourdomain.tld,www.yourdomain.tld";
-    NSString* contentType = @"application/json";
+    NSString* origin = @"origin";
+    NSString* cname = @"cname";
 
-    [self.wAFDDOSProtection httpsApiRestShApiSWAsyncWithKey: key uid : uid origin : origin cname : cname contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="https_api_rest_sh_api_swc1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC1AsyncWithBody") httpsApiRestShApiSWC1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```objc
-function httpsApiRestShApiSWC1AsyncWithBody:(HttpsApiRestShApiSWC*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostHttpsApiRestShApiSWC1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSWC* body = (HttpsApiRestShApiSWC*) [APIHelper jsonDeserialize: @"{
-  \"key\": \"YOUR API KEY\",
-  \"uid\": \"YOUR USER ID\",
-  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",
-  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",
-  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"
-}"
-                toClass: HttpsApiRestShApiSWC.class];
-    NSString* contentType = @"application/json";
-
-    [self.wAFDDOSProtection httpsApiRestShApiSWC1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWCR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="https_api_rest_sh_api_sw1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW1AsyncWithBody") httpsApiRestShApiSW1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```objc
-function httpsApiRestShApiSW1AsyncWithBody:(HttpsApiRestShApiSW*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostHttpsApiRestShApiSW1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSW* body = (HttpsApiRestShApiSW*) [APIHelper jsonDeserialize: @"{
-  \"key\": \"YOUR API KEY\",
-  \"uid\": \"YOUR USER ID\",
-  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",
-  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"
-}"
-                toClass: HttpsApiRestShApiSW.class];
-    NSString* contentType = @"application/json";
-
-    [self.wAFDDOSProtection httpsApiRestShApiSW1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWR* response, NSError* error) { 
+    [self.wAFAndDDOSProtection httpsApiRestShApiSWAsyncWithOrigin: origin cname : cname  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSWR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -535,7 +423,7 @@ function dataAndFileEncryptionAsyncWithData:(NSString*) data
     // Parameters for the API call
     NSString* data = @"data";
     NSString* method = @"method";
-    int bit = 135;
+    int bit = 219;
 
     [self.encryption dataAndFileEncryptionAsyncWithData: data method : method bit : bit  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
        //Add code here
@@ -785,40 +673,30 @@ function hostingSetupAsyncWithApp:(NSString*) app
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
+## <a name="data_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulation") DataManipulation
 
 ### Get singleton instance
 ```objc
-DataManipulationConversionSortingAndCompressionAPI* dataManipulationConversionSortingAndCompressionAPI = [[DataManipulationConversionSortingAndCompressionAPI alloc]init] ;
+DataManipulation* dataManipulation = [[DataManipulation alloc]init] ;
 ```
 
-### <a name="https_api_rest_sh_api_d_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiDAsyncWithKey") httpsApiRestShApiDAsyncWithKey
+### <a name="https_api_rest_sh_api_d_async_with_data"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulation.httpsApiRestShApiDAsyncWithData") httpsApiRestShApiDAsyncWithData
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> Data Manipulation API
 
 
 ```objc
-function httpsApiRestShApiDAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                user:(NSString*) user
-                apiuid:(NSString*) apiuid
-                data:(NSString*) data
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetHttpsApiRestShApiD) onCompleted(key uid : uid user : user apiuid : apiuid data : data contentType : contentType)
+function httpsApiRestShApiDAsyncWithData:(NSString*) data
+                transform:(NSString*) transform
+                completionBlock:(CompletedGetHttpsApiRestShApiD) onCompleted(data transform : transform)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | Data URL, data as a query string, or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 
@@ -828,62 +706,10 @@ function httpsApiRestShApiDAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"API";
-    NSString* uid = @"UID";
-    NSString* user = @"UID";
-    NSString* apiuid = @"apiUID";
-    NSString* data = @"https://static.yourcdn.com/data.file";
-    NSString* contentType = @"application/json";
+    NSString* data = @"data";
+    NSString* transform = @"transform";
 
-    [self.dataManipulationConversionSortingAndCompressionAPI httpsApiRestShApiDAsyncWithKey: key uid : uid user : user apiuid : apiuid data : data contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiDR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="https_api_rest_sh_api_d1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD1AsyncWithBody") httpsApiRestShApiD1AsyncWithBody
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```objc
-function httpsApiRestShApiD1AsyncWithBody:(HttpsApiRestShApiD*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostHttpsApiRestShApiD1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiD* body = (HttpsApiRestShApiD*) [APIHelper jsonDeserialize: @"{
-  \"key\": \"YOUR API KEY\",
-  \"uid\": \"YOUR USER ID\",
-  \"user\": \"USERS EMAIL OR USERNAME\",
-  \"apiuid\": \"USERS API SIDE USER ID\",
-  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",
-  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",
-  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",
-  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",
-  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"
-}"
-                toClass: HttpsApiRestShApiD.class];
-    NSString* contentType = @"application/json";
-
-    [self.dataManipulationConversionSortingAndCompressionAPI httpsApiRestShApiD1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiDR* response, NSError* error) { 
+    [self.dataManipulation httpsApiRestShApiDAsyncWithData: data transform : transform  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiDR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -891,14 +717,14 @@ function httpsApiRestShApiD1AsyncWithBody:(HttpsApiRestShApiD*) body
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
+## <a name="image_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulation") ImageManipulation
 
 ### Get singleton instance
 ```objc
-ImageManipulationAndModerationAPI* imageManipulationAndModerationAPI = [[ImageManipulationAndModerationAPI alloc]init] ;
+ImageManipulation* imageManipulation = [[ImageManipulation alloc]init] ;
 ```
 
-### <a name="image_manipulation_async_with_image"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulationAsyncWithImage") imageManipulationAsyncWithImage
+### <a name="image_manipulation_async_with_image"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulation.imageManipulationAsyncWithImage") imageManipulationAsyncWithImage
 
 > Image Manipulation API
 
@@ -927,7 +753,7 @@ function imageManipulationAsyncWithImage:(NSString*) image
     NSString* image = @"image";
     NSString* transform = @"transform";
 
-    [self.imageManipulationAndModerationAPI imageManipulationAsyncWithImage: image transform : transform  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiIR* response, NSError* error) { 
+    [self.imageManipulation imageManipulationAsyncWithImage: image transform : transform  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiIR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -983,7 +809,7 @@ function userAddressVerificationAsyncWithUser:(NSString*) user
     NSString* sa = @"sa";
     NSString* c = @"c";
     NSString* s = @"s";
-    int z = 135;
+    int z = 56;
     NSString* address = @"address";
 
     [self.verification userAddressVerificationAsyncWithUser: user a : a sa : sa c : c s : s z : z address : address  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVAR* response, NSError* error) { 
@@ -1302,8 +1128,8 @@ function userRegistrationAsyncWithEmail:(NSString*) email
     NSString* user = @"user";
     NSString* password = @"password";
     NSString* name = @"name";
-    NSNumber* phone = 135;
-    NSNumber* countrycode = 135;
+    NSNumber* phone = 56;
+    NSNumber* countrycode = 56;
     NSString* address = @"address";
     // Dictionary for optional query parameters
     NSMutableDictionary* queryParamsMutable = [[NSMutableDictionary alloc] init];

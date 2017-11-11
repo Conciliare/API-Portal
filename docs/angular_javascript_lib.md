@@ -34,7 +34,7 @@
     * Encryption
     * Code Obfuscation
     * Platform Identification
-    * WAF & DDOS Protection (Web Application Firewall)
+    * WAF and DDOS Protection (Web Application Firewall)
       * Advanced Logging
 
 # Overview
@@ -219,14 +219,14 @@ Import the reference to the generated SDK files inside your html file like:
     <!-- API Controllers -->
     <script src="scripts/SMASH/Controllers/BaseController.js"></script>
     <script src="scripts/SMASH/Controllers/AdvancedLogging.js"></script>
-    <script src="scripts/SMASH/Controllers/WAFDDOSProtection.js"></script>
+    <script src="scripts/SMASH/Controllers/WAFAndDDOSProtection.js"></script>
     <script src="scripts/SMASH/Controllers/Encryption.js"></script>
     <script src="scripts/SMASH/Controllers/CDN.js"></script>
     <script src="scripts/SMASH/Controllers/DNS.js"></script>
     <script src="scripts/SMASH/Controllers/CodeObfuscation.js"></script>
     <script src="scripts/SMASH/Controllers/Hosting.js"></script>
-    <script src="scripts/SMASH/Controllers/DataManipulationConversionSortingAndCompressionAPI.js"></script>
-    <script src="scripts/SMASH/Controllers/ImageManipulationAndModerationAPI.js"></script>
+    <script src="scripts/SMASH/Controllers/DataManipulation.js"></script>
+    <script src="scripts/SMASH/Controllers/ImageManipulation.js"></script>
     <script src="scripts/SMASH/Controllers/Verification.js"></script>
     <script src="scripts/SMASH/Controllers/TwoFactorAuthenticationAPI.js"></script>
     <script src="scripts/SMASH/Controllers/UserManagement.js"></script>
@@ -235,60 +235,60 @@ Import the reference to the generated SDK files inside your html file like:
 
     <!-- Models -->
     <script src="scripts/SMASH/Models/BaseModel.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLIR.js"></script>
     <script src="scripts/SMASH/Models/MMDDYYYYHHMMSS.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAUL.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAULR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAURR.js"></script>
-    <script src="scripts/SMASH/Models/Info7.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUUR.js"></script>
-    <script src="scripts/SMASH/Models/Info12.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUI.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUIR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUD.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVU.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2fa.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faT.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiI.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiIR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiDR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSH.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSHR.js"></script>
-    <script src="scripts/SMASH/Models/Nameservers.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDC.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPull.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPush.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSE.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSER.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSW.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWC.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSL.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLI.js"></script>
-    <script src="scripts/SMASH/Models/Info.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiAUR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUU.js"></script>
-    <script src="scripts/SMASH/Models/Info17.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVA.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLIR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLR.js"></script>
     <script src="scripts/SMASH/Models/HttpsApiRestShApiD.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiUDR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiV.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVUR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiVAR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faTR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDA.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDAR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDCR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPullR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPushR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSO.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSOR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWR.js"></script>
-    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWCR.js"></script>
-    <script src="scripts/SMASH/Models/Log.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVA.js"></script>
+    <script src="scripts/SMASH/Models/Info17.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUU.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiAUR.js"></script>
+    <script src="scripts/SMASH/Models/Info.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSLI.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSL.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWC.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSW.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSER.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSE.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPush.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPull.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDC.js"></script>
+    <script src="scripts/SMASH/Models/Nameservers.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSHR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSH.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiDR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiIR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiI.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faT.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApi2fa.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVU.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUD.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUIR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUI.js"></script>
+    <script src="scripts/SMASH/Models/Info12.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUUR.js"></script>
+    <script src="scripts/SMASH/Models/Info7.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiAURR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiAULR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiAUL.js"></script>
     <script src="scripts/SMASH/Models/Data.js"></script>
+    <script src="scripts/SMASH/Models/Log.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWCR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSWR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSOR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSO.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPushR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSCPullR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDCR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDAR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiSDA.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faTR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApi2faR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVAR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiVUR.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiV.js"></script>
+    <script src="scripts/SMASH/Models/HttpsApiRestShApiUDR.js"></script>
 
     ...
 </head>
@@ -381,14 +381,14 @@ app.factory('config', function($scope, Configuration)
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [AdvancedLogging](#advanced_logging)
-* [WAFDDOSProtection](#wafddos_protection)
+* [WAFAndDDOSProtection](#waf_and_ddos_protection)
 * [Encryption](#encryption)
 * [CDN](#cdn)
 * [DNS](#dns)
 * [CodeObfuscation](#code_obfuscation)
 * [Hosting](#hosting)
-* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
-* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [DataManipulation](#data_manipulation)
+* [ImageManipulation](#image_manipulation)
 * [Verification](#verification)
 * [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
 * [UserManagement](#user_management)
@@ -401,53 +401,9 @@ app.factory('config', function($scope, Configuration)
 The singleton instance of the ``` AdvancedLogging ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, AdvancedLogging, HttpsApiRestShApiSLIR, HttpsApiRestShApiSLR){
+	app.controller("testController", function($scope, AdvancedLogging, HttpsApiRestShApiSLR, HttpsApiRestShApiSLIR){
 	});
 ```
-
-### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
-
-> WAF Log Info
-
-
-```javascript
-function loggingInfo(name, origin, time)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| name |  ``` Required ```  | Name of your WAF zone |
-| origin |  ``` Required ```  | IP Address of the Web Application |
-| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
-
-
-
-#### Example Usage
-
-```javascript
-
-
-	app.controller("testController", function($scope, AdvancedLogging, HttpsApiRestShApiSLIR){
-        var name = 'name';
-        var origin = 'origin';
-        var time = 'time';
-
-
-		var result = AdvancedLogging.loggingInfo(name, origin, time);
-        //Function call returns a promise
-        result.then(function(success){
-			//success case
-			//getting context of response
-			console.log(success.getContext());
-		},function(err){
-			//failure case
-		});
-
-	});
-```
-
-
 
 ### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingConfiguration") loggingConfiguration
 
@@ -463,7 +419,7 @@ function loggingConfiguration(name, origin, activate)
 |-----------|------|-------------|
 | name |  ``` Required ```  | Name of the WAF zone |
 | origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
-| activate |  ``` Required ```  | True or False |
+| activate |  ``` Required ```  | Activate or Disable |
 
 
 
@@ -493,39 +449,77 @@ function loggingConfiguration(name, origin, activate)
 
 
 
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
+
+> WAF Log Info
+
+
+```javascript
+function loggingInfo(name, origin, time)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01/01/0101;24:59:01]) |
+
+
+
+#### Example Usage
+
+```javascript
+
+
+	app.controller("testController", function($scope, AdvancedLogging, HttpsApiRestShApiSLIR){
+        var name = 'name';
+        var origin = 'origin';
+        var time = 'time';
+
+
+		var result = AdvancedLogging.loggingInfo(name, origin, time);
+        //Function call returns a promise
+        result.then(function(success){
+			//success case
+			//getting context of response
+			console.log(success.getContext());
+		},function(err){
+			//failure case
+		});
+
+	});
+```
+
+
+
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtection") WAFDDOSProtection
+## <a name="waf_and_ddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFAndDDOSProtection") WAFAndDDOSProtection
 
 ### Get singleton instance
 
-The singleton instance of the ``` WAFDDOSProtection ``` class can be accessed via Dependency Injection.
+The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, WAFDDOSProtection, HttpsApiRestShApiSWCR, HttpsApiRestShApiSWR){
+	app.controller("testController", function($scope, WAFAndDDOSProtection, HttpsApiRestShApiSWCR, HttpsApiRestShApiSWR){
 	});
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Configuration
 
 
 ```javascript
-function httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType)
+function httpsApiRestShApiSWC(name, rule)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| rule |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| rule |  ``` Required ```  | Rule or rules to add or update separated by a comma |
 
 
 
@@ -534,16 +528,12 @@ function httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType)
 ```javascript
 
 
-	app.controller("testController", function($scope, WAFDDOSProtection, HttpsApiRestShApiSWCR){
-        var key = 'API';
-        var uid = 'UID';
-        var name = 'origin-name';
-        var origin = 'origin.yourdomain.tld';
-        var rule = 'header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does';
-        var contentType = 'application/json';
+	app.controller("testController", function($scope, WAFAndDDOSProtection, HttpsApiRestShApiSWCR){
+        var name = 'name';
+        var rule = 'rule';
 
 
-		var result = WAFDDOSProtection.httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType);
+		var result = WAFAndDDOSProtection.httpsApiRestShApiSWC(name, rule);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -558,25 +548,20 @@ function httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType)
 
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Creation
 
 
 ```javascript
-function httpsApiRestShApiSW(key, uid, origin, cname, contentType)
+function httpsApiRestShApiSW(origin, cname)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | IP of the Web server you wish to protect |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 
@@ -585,114 +570,12 @@ function httpsApiRestShApiSW(key, uid, origin, cname, contentType)
 ```javascript
 
 
-	app.controller("testController", function($scope, WAFDDOSProtection, HttpsApiRestShApiSWR){
-        var key = 'API';
-        var uid = 'UID';
-        var origin = 'origin.yourdomain.tld';
-        var cname = 'yourdomain.tld,www.yourdomain.tld';
-        var contentType = 'application/json';
+	app.controller("testController", function($scope, WAFAndDDOSProtection, HttpsApiRestShApiSWR){
+        var origin = 'origin';
+        var cname = 'cname';
 
 
-		var result = WAFDDOSProtection.httpsApiRestShApiSW(key, uid, origin, cname, contentType);
-        //Function call returns a promise
-        result.then(function(success){
-			//success case
-			//getting context of response
-			console.log(success.getContext());
-		},function(err){
-			//failure case
-		});
-
-	});
-```
-
-
-
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```javascript
-function httpsApiRestShApiSWC(body, contentType)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-
-	app.controller("testController", function($scope, WAFDDOSProtection, HttpsApiRestShApiSWCR){
-        var body = new HttpsApiRestShApiSWC({
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "name": "WHAT YOU WISH TO NAME YOUR WAF",
-  "origin": "ORIGIN YOU WISH TO PROTECT",
-  "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
-});
-        var contentType = 'application/json';
-
-
-		var result = WAFDDOSProtection.httpsApiRestShApiSWC(body, contentType);
-        //Function call returns a promise
-        result.then(function(success){
-			//success case
-			//getting context of response
-			console.log(success.getContext());
-		},function(err){
-			//failure case
-		});
-
-	});
-```
-
-
-
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```javascript
-function httpsApiRestShApiSW(body, contentType)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-
-	app.controller("testController", function($scope, WAFDDOSProtection, HttpsApiRestShApiSWR){
-        var body = new HttpsApiRestShApiSW({
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "origin": "ORIGIN YOU WISH TO PROTECT",
-  "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
-});
-        var contentType = 'application/json';
-
-
-		var result = WAFDDOSProtection.httpsApiRestShApiSW(body, contentType);
+		var result = WAFAndDDOSProtection.httpsApiRestShApiSW(origin, cname);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -746,7 +629,7 @@ function dataAndFileEncryption(data, method, bit)
 	app.controller("testController", function($scope, Encryption, HttpsApiRestShApiSER){
         var data = 'data';
         var method = 'method';
-        var bit = 99;
+        var bit = 184;
 
 
 		var result = Encryption.dataAndFileEncryption(data, method, bit);
@@ -1066,37 +949,31 @@ function hostingSetup(app, domain)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
+## <a name="data_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulation") DataManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed via Dependency Injection.
+The singleton instance of the ``` DataManipulation ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, DataManipulationConversionSortingAndCompressionAPI, HttpsApiRestShApiDR){
+	app.controller("testController", function($scope, DataManipulation, HttpsApiRestShApiDR){
 	});
 ```
 
-### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD") httpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulation.httpsApiRestShApiD") httpsApiRestShApiD
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> Data Manipulation API
 
 
 ```javascript
-function httpsApiRestShApiD(key, uid, user, apiuid, data, contentType)
+function httpsApiRestShApiD(data, transform)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | Data URL, data as a query string, or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 
@@ -1105,70 +982,12 @@ function httpsApiRestShApiD(key, uid, user, apiuid, data, contentType)
 ```javascript
 
 
-	app.controller("testController", function($scope, DataManipulationConversionSortingAndCompressionAPI, HttpsApiRestShApiDR){
-        var key = 'API';
-        var uid = 'UID';
-        var user = 'UID';
-        var apiuid = 'apiUID';
-        var data = 'https://static.yourcdn.com/data.file';
-        var contentType = 'application/json';
+	app.controller("testController", function($scope, DataManipulation, HttpsApiRestShApiDR){
+        var data = 'data';
+        var transform = 'transform';
 
 
-		var result = DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD(key, uid, user, apiuid, data, contentType);
-        //Function call returns a promise
-        result.then(function(success){
-			//success case
-			//getting context of response
-			console.log(success.getContext());
-		},function(err){
-			//failure case
-		});
-
-	});
-```
-
-
-
-### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD") httpsApiRestShApiD
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```javascript
-function httpsApiRestShApiD(body, contentType)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-
-	app.controller("testController", function($scope, DataManipulationConversionSortingAndCompressionAPI, HttpsApiRestShApiDR){
-        var body = new HttpsApiRestShApiD({
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID",
-  "url": "DATA URL OR DIRECT FILE UPLOAD FROM CLIENT",
-  "manipulation": "DATA MANIPULATION DIRECTIVES",
-  "conversion": "CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)",
-  "sorting": "SORT BY (NAME, DATE, TYPE, SIZE)",
-  "compression": "COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)"
-});
-        var contentType = 'application/json';
-
-
-		var result = DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD(body, contentType);
+		var result = DataManipulation.httpsApiRestShApiD(data, transform);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1185,18 +1004,18 @@ function httpsApiRestShApiD(body, contentType)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
+## <a name="image_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulation") ImageManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed via Dependency Injection.
+The singleton instance of the ``` ImageManipulation ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, ImageManipulationAndModerationAPI, HttpsApiRestShApiIR){
+	app.controller("testController", function($scope, ImageManipulation, HttpsApiRestShApiIR){
 	});
 ```
 
-### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation") imageManipulation
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulation.imageManipulation") imageManipulation
 
 > Image Manipulation API
 
@@ -1218,12 +1037,12 @@ function imageManipulation(image, transform)
 ```javascript
 
 
-	app.controller("testController", function($scope, ImageManipulationAndModerationAPI, HttpsApiRestShApiIR){
+	app.controller("testController", function($scope, ImageManipulation, HttpsApiRestShApiIR){
         var image = 'image';
         var transform = 'transform';
 
 
-		var result = ImageManipulationAndModerationAPI.imageManipulation(image, transform);
+		var result = ImageManipulation.imageManipulation(image, transform);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -1284,7 +1103,7 @@ function userAddressVerification(user, a, sa, c, s, z, address)
         var sa = 'sa';
         var c = 'c';
         var s = 's';
-        var z = 99;
+        var z = 184;
         var address = 'address';
 
 
@@ -1667,8 +1486,8 @@ function userRegistration(email, user, password, name, phone, countrycode, addre
         var user = 'user';
         var password = 'password';
         var name = 'name';
-        var phone = 99;
-        var countrycode = 99;
+        var phone = 184;
+        var countrycode = 184;
         var address = 'address';
 
         // key-value map for optional query parameters

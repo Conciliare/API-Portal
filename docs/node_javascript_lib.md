@@ -34,7 +34,7 @@
     * Encryption
     * Code Obfuscation
     * Platform Identification
-    * WAF & DDOS Protection (Web Application Firewall)
+    * WAF and DDOS Protection (Web Application Firewall)
       * Advanced Logging
 
 # Overview
@@ -248,14 +248,14 @@ lib.Configuration.key = "KEY"; // Your Public API Key
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [AdvancedLogging](#advanced_logging)
-* [WAFDDOSProtection](#wafddos_protection)
+* [WAFAndDDOSProtection](#waf_and_ddos_protection)
 * [Encryption](#encryption)
 * [CDN](#cdn)
 * [DNS](#dns)
 * [CodeObfuscation](#code_obfuscation)
 * [Hosting](#hosting)
-* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
-* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [DataManipulation](#data_manipulation)
+* [ImageManipulation](#image_manipulation)
 * [Verification](#verification)
 * [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
 * [UserManagement](#user_management)
@@ -271,40 +271,6 @@ The singleton instance of the ``` AdvancedLogging ``` class can be accessed from
 var controller = lib.AdvancedLogging;
 ```
 
-### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
-
-> WAF Log Info
-
-
-```javascript
-function loggingInfo(name, origin, time, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| name |  ``` Required ```  | Name of your WAF zone |
-| origin |  ``` Required ```  | IP Address of the Web Application |
-| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var name = 'name';
-    var origin = 'origin';
-    var time = 'time';
-
-    controller.loggingInfo(name, origin, time, function(error, response, context) {
-
-    
-    });
-```
-
-
-
 ### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingConfiguration") loggingConfiguration
 
 > WAF Log Configuration
@@ -319,7 +285,7 @@ function loggingConfiguration(name, origin, activate, callback)
 |-----------|------|-------------|
 | name |  ``` Required ```  | Name of the WAF zone |
 | origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
-| activate |  ``` Required ```  | True or False |
+| activate |  ``` Required ```  | Activate or Disable |
 
 
 
@@ -339,38 +305,66 @@ function loggingConfiguration(name, origin, activate, callback)
 
 
 
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo") loggingInfo
+
+> WAF Log Info
+
+
+```javascript
+function loggingInfo(name, origin, time, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01/01/0101;24:59:01]) |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var name = 'name';
+    var origin = 'origin';
+    var time = 'time';
+
+    controller.loggingInfo(name, origin, time, function(error, response, context) {
+
+    
+    });
+```
+
+
+
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFDDOSProtection") WAFDDOSProtection
+## <a name="waf_and_ddos_protection"></a>![Class: ](https://apidocs.io/img/class.png ".WAFAndDDOSProtection") WAFAndDDOSProtection
 
 ### Get singleton instance
 
-The singleton instance of the ``` WAFDDOSProtection ``` class can be accessed from the API Client.
+The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.WAFDDOSProtection;
+var controller = lib.WAFAndDDOSProtection;
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Configuration
 
 
 ```javascript
-function httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType, callback)
+function httpsApiRestShApiSWC(name, rule, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| rule |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| rule |  ``` Required ```  | Rule or rules to add or update separated by a comma |
 
 
 
@@ -378,14 +372,10 @@ function httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType, callbac
 
 ```javascript
 
-    var key = 'API';
-    var uid = 'UID';
-    var name = 'origin-name';
-    var origin = 'origin.yourdomain.tld';
-    var rule = 'header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does';
-    var contentType = 'application/json';
+    var name = 'name';
+    var rule = 'rule';
 
-    controller.httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType, function(error, response, context) {
+    controller.httpsApiRestShApiSWC(name, rule, function(error, response, context) {
 
     
     });
@@ -393,25 +383,20 @@ function httpsApiRestShApiSWC(key, uid, name, origin, rule, contentType, callbac
 
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Creation
 
 
 ```javascript
-function httpsApiRestShApiSW(key, uid, origin, cname, contentType, callback)
+function httpsApiRestShApiSW(origin, cname, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | IP of the Web server you wish to protect |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 
@@ -419,92 +404,10 @@ function httpsApiRestShApiSW(key, uid, origin, cname, contentType, callback)
 
 ```javascript
 
-    var key = 'API';
-    var uid = 'UID';
-    var origin = 'origin.yourdomain.tld';
-    var cname = 'yourdomain.tld,www.yourdomain.tld';
-    var contentType = 'application/json';
+    var origin = 'origin';
+    var cname = 'cname';
 
-    controller.httpsApiRestShApiSW(key, uid, origin, cname, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="https_api_rest_sh_api_swc1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSWC1") httpsApiRestShApiSWC1
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```javascript
-function httpsApiRestShApiSWC1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSWC({
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "name": "WHAT YOU WISH TO NAME YOUR WAF",
-  "origin": "ORIGIN YOU WISH TO PROTECT",
-  "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
-});
-    var contentType = 'application/json';
-
-    controller.httpsApiRestShApiSWC1(body, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="https_api_rest_sh_api_sw1"></a>![Method: ](https://apidocs.io/img/method.png ".WAFDDOSProtection.httpsApiRestShApiSW1") httpsApiRestShApiSW1
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```javascript
-function httpsApiRestShApiSW1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSW({
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "origin": "ORIGIN YOU WISH TO PROTECT",
-  "cname": "CNAMES YOU WISH TO USE WITH YOUR WAF"
-});
-    var contentType = 'application/json';
-
-    controller.httpsApiRestShApiSW1(body, contentType, function(error, response, context) {
+    controller.httpsApiRestShApiSW(origin, cname, function(error, response, context) {
 
     
     });
@@ -548,7 +451,7 @@ function dataAndFileEncryption(data, method, bit, callback)
 
     var data = 'data';
     var method = 'method';
-    var bit = 85;
+    var bit = 170;
 
     controller.dataAndFileEncryption(data, method, bit, function(error, response, context) {
 
@@ -796,36 +699,30 @@ function hostingSetup(app, domain, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
+## <a name="data_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".DataManipulation") DataManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed from the API Client.
+The singleton instance of the ``` DataManipulation ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.DataManipulationConversionSortingAndCompressionAPI;
+var controller = lib.DataManipulation;
 ```
 
-### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD") httpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulation.httpsApiRestShApiD") httpsApiRestShApiD
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> Data Manipulation API
 
 
 ```javascript
-function httpsApiRestShApiD(key, uid, user, apiuid, data, contentType, callback)
+function httpsApiRestShApiD(data, transform, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | Data URL, data as a query string, or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 
@@ -833,58 +730,10 @@ function httpsApiRestShApiD(key, uid, user, apiuid, data, contentType, callback)
 
 ```javascript
 
-    var key = 'API';
-    var uid = 'UID';
-    var user = 'UID';
-    var apiuid = 'apiUID';
-    var data = 'https://static.yourcdn.com/data.file';
-    var contentType = 'application/json';
+    var data = 'data';
+    var transform = 'transform';
 
-    controller.httpsApiRestShApiD(key, uid, user, apiuid, data, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="https_api_rest_sh_api_d1"></a>![Method: ](https://apidocs.io/img/method.png ".DataManipulationConversionSortingAndCompressionAPI.httpsApiRestShApiD1") httpsApiRestShApiD1
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```javascript
-function httpsApiRestShApiD1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiD({
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID",
-  "url": "DATA URL OR DIRECT FILE UPLOAD FROM CLIENT",
-  "manipulation": "DATA MANIPULATION DIRECTIVES",
-  "conversion": "CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)",
-  "sorting": "SORT BY (NAME, DATE, TYPE, SIZE)",
-  "compression": "COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)"
-});
-    var contentType = 'application/json';
-
-    controller.httpsApiRestShApiD1(body, contentType, function(error, response, context) {
+    controller.httpsApiRestShApiD(data, transform, function(error, response, context) {
 
     
     });
@@ -894,17 +743,17 @@ function httpsApiRestShApiD1(body, contentType, callback)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
+## <a name="image_manipulation"></a>![Class: ](https://apidocs.io/img/class.png ".ImageManipulation") ImageManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed from the API Client.
+The singleton instance of the ``` ImageManipulation ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.ImageManipulationAndModerationAPI;
+var controller = lib.ImageManipulation;
 ```
 
-### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation") imageManipulation
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulation.imageManipulation") imageManipulation
 
 > Image Manipulation API
 
@@ -979,7 +828,7 @@ function userAddressVerification(user, a, sa, c, s, z, address, callback)
     var sa = 'sa';
     var c = 'c';
     var s = 's';
-    var z = 85;
+    var z = 170;
     var address = 'address';
 
     controller.userAddressVerification(user, a, sa, c, s, z, address, function(error, response, context) {
@@ -1279,8 +1128,8 @@ function userRegistration(email, user, password, name, phone, countrycode, addre
     var user = 'user';
     var password = 'password';
     var name = 'name';
-    var phone = 85;
-    var countrycode = 85;
+    var phone = 6;
+    var countrycode = 6;
     var address = 'address';
 
     // key-value map for optional query parameters

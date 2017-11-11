@@ -34,7 +34,7 @@
     * Encryption
     * Code Obfuscation
     * Platform Identification
-    * WAF & DDOS Protection (Web Application Firewall)
+    * WAF and DDOS Protection (Web Application Firewall)
       * Advanced Logging
 
 # Overview
@@ -214,14 +214,14 @@ SMASHClient client = new SMASHClient(uid, secret, key);
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [AdvancedLogging](#advanced_logging)
-* [WAFDDOSProtection](#wafddos_protection)
+* [WAFAndDDOSProtection](#waf_and_ddos_protection)
 * [Encryption](#encryption)
 * [CDN](#cdn)
 * [DNS](#dns)
 * [CodeObfuscation](#code_obfuscation)
 * [Hosting](#hosting)
-* [DataManipulationConversionSortingAndCompressionAPI](#data_manipulation_conversion_sorting_and_compression_api)
-* [ImageManipulationAndModerationAPI](#image_manipulation_and_moderation_api)
+* [DataManipulation](#data_manipulation)
+* [ImageManipulation](#image_manipulation)
 * [Verification](#verification)
 * [TwoFactorAuthenticationAPI](#two_factor_authentication_api)
 * [UserManagement](#user_management)
@@ -236,36 +236,6 @@ The singleton instance of the ``` AdvancedLogging ``` class can be accessed from
 ```csharp
 IAdvancedLogging advancedLogging = client.AdvancedLogging;
 ```
-
-### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingInfo") LoggingInfo
-
-> WAF Log Info
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSLIR> LoggingInfo(string name, string origin, string time = null)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| name |  ``` Required ```  | Name of your WAF zone |
-| origin |  ``` Required ```  | IP Address of the Web Application |
-| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
-
-
-#### Example Usage
-
-```csharp
-string name = "name";
-string origin = "origin";
-string time = "time";
-
-Models.HttpsApiRestShApiSLIR result = await advancedLogging.LoggingInfo(name, origin, time);
-
-```
-
 
 ### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingConfiguration") LoggingConfiguration
 
@@ -282,7 +252,7 @@ Task<Models.HttpsApiRestShApiSLR> LoggingConfiguration(string name, string origi
 |-----------|------|-------------|
 | name |  ``` Required ```  | Name of the WAF zone |
 | origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
-| activate |  ``` Required ```  | True or False |
+| activate |  ``` Required ```  | Activate or Disable |
 
 
 #### Example Usage
@@ -297,161 +267,100 @@ Models.HttpsApiRestShApiSLR result = await advancedLogging.LoggingConfiguration(
 ```
 
 
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingInfo") LoggingInfo
+
+> WAF Log Info
+
+
+```csharp
+Task<Models.HttpsApiRestShApiSLIR> LoggingInfo(string name, string origin, string time = null)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01/01/0101;24:59:01]) |
+
+
+#### Example Usage
+
+```csharp
+string name = "name";
+string origin = "origin";
+string time = "time";
+
+Models.HttpsApiRestShApiSLIR result = await advancedLogging.LoggingInfo(name, origin, time);
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wafddos_protection"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.Controllers.WAFDDOSProtection") WAFDDOSProtection
+## <a name="waf_and_ddos_protection"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.Controllers.WAFAndDDOSProtection") WAFAndDDOSProtection
 
 ### Get singleton instance
 
-The singleton instance of the ``` WAFDDOSProtection ``` class can be accessed from the API Client.
+The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed from the API Client.
 
 ```csharp
-IWAFDDOSProtection wAFDDOSProtection = client.WAFDDOSProtection;
+IWAFAndDDOSProtection wAFAndDDOSProtection = client.WAFAndDDOSProtection;
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtection.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFAndDDOSProtection.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Configuration
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSWCR> HttpsApiRestShApiSWC(
-        string key,
-        string uid,
-        string name,
-        string origin,
-        string rule,
-        string contentType)
+Task<Models.HttpsApiRestShApiSWCR> HttpsApiRestShApiSWC(string name, string rule)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| rule |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| rule |  ``` Required ```  | Rule or rules to add or update separated by a comma |
 
 
 #### Example Usage
 
 ```csharp
-string key = "API";
-string uid = "UID";
-string name = "origin-name";
-string origin = "origin.yourdomain.tld";
-string rule = "header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does";
-string contentType = "application/json";
+string name = "name";
+string rule = "rule";
 
-Models.HttpsApiRestShApiSWCR result = await wAFDDOSProtection.HttpsApiRestShApiSWC(key, uid, name, origin, rule, contentType);
+Models.HttpsApiRestShApiSWCR result = await wAFAndDDOSProtection.HttpsApiRestShApiSWC(name, rule);
 
 ```
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtection.HttpsApiRestShApiSW") HttpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFAndDDOSProtection.HttpsApiRestShApiSW") HttpsApiRestShApiSW
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Creation
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSWR> HttpsApiRestShApiSW(
-        string key,
-        string uid,
-        string origin,
-        string cname,
-        string contentType)
+Task<Models.HttpsApiRestShApiSWR> HttpsApiRestShApiSW(string origin, string cname)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | IP of the Web server you wish to protect |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 #### Example Usage
 
 ```csharp
-string key = "API";
-string uid = "UID";
-string origin = "origin.yourdomain.tld";
-string cname = "yourdomain.tld,www.yourdomain.tld";
-string contentType = "application/json";
+string origin = "origin";
+string cname = "cname";
 
-Models.HttpsApiRestShApiSWR result = await wAFDDOSProtection.HttpsApiRestShApiSW(key, uid, origin, cname, contentType);
-
-```
-
-
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtection.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSWCR> HttpsApiRestShApiSWC(Models.HttpsApiRestShApiSWC body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-string bodyValue = "{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}";
-var body = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.HttpsApiRestShApiSWC>(bodyValue);
-string contentType = "application/json";
-
-Models.HttpsApiRestShApiSWCR result = await wAFDDOSProtection.HttpsApiRestShApiSWC(body, contentType);
-
-```
-
-
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFDDOSProtection.HttpsApiRestShApiSW") HttpsApiRestShApiSW
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSWR> HttpsApiRestShApiSW(Models.HttpsApiRestShApiSW body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-string bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}";
-var body = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.HttpsApiRestShApiSW>(bodyValue);
-string contentType = "application/json";
-
-Models.HttpsApiRestShApiSWR result = await wAFDDOSProtection.HttpsApiRestShApiSW(body, contentType);
+Models.HttpsApiRestShApiSWR result = await wAFAndDDOSProtection.HttpsApiRestShApiSW(origin, cname);
 
 ```
 
@@ -491,7 +400,7 @@ Task<Models.HttpsApiRestShApiSER> DataAndFileEncryption(string data, string meth
 ```csharp
 string data = "data";
 string method = "method";
-int bit = 107;
+int bit = 70;
 
 Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryption(data, method, bit);
 
@@ -712,104 +621,57 @@ Models.HttpsApiRestShApiSHR result = await hosting.HostingSetup(app, domain);
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="data_manipulation_conversion_sorting_and_compression_api"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.Controllers.DataManipulationConversionSortingAndCompressionAPI") DataManipulationConversionSortingAndCompressionAPI
+## <a name="data_manipulation"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.Controllers.DataManipulation") DataManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` DataManipulationConversionSortingAndCompressionAPI ``` class can be accessed from the API Client.
+The singleton instance of the ``` DataManipulation ``` class can be accessed from the API Client.
 
 ```csharp
-IDataManipulationConversionSortingAndCompressionAPI dataManipulationConversionSortingAndCompressionAPI = client.DataManipulationConversionSortingAndCompressionAPI;
+IDataManipulation dataManipulation = client.DataManipulation;
 ```
 
-### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DataManipulationConversionSortingAndCompressionAPI.HttpsApiRestShApiD") HttpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DataManipulation.HttpsApiRestShApiD") HttpsApiRestShApiD
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> Data Manipulation API
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiDR> HttpsApiRestShApiD(
-        string key,
-        string uid,
-        string user,
-        string apiuid,
-        string data,
-        string contentType)
+Task<Models.HttpsApiRestShApiDR> HttpsApiRestShApiD(string data, string transform)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | Data URL, data as a query string, or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 #### Example Usage
 
 ```csharp
-string key = "API";
-string uid = "UID";
-string user = "UID";
-string apiuid = "apiUID";
-string data = "https://static.yourcdn.com/data.file";
-string contentType = "application/json";
+string data = "data";
+string transform = "transform";
 
-Models.HttpsApiRestShApiDR result = await dataManipulationConversionSortingAndCompressionAPI.HttpsApiRestShApiD(key, uid, user, apiuid, data, contentType);
-
-```
-
-
-### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DataManipulationConversionSortingAndCompressionAPI.HttpsApiRestShApiD") HttpsApiRestShApiD
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```csharp
-Task<Models.HttpsApiRestShApiDR> HttpsApiRestShApiD(Models.HttpsApiRestShApiD body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-string bodyValue = "{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}";
-var body = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.HttpsApiRestShApiD>(bodyValue);
-string contentType = "application/json";
-
-Models.HttpsApiRestShApiDR result = await dataManipulationConversionSortingAndCompressionAPI.HttpsApiRestShApiD(body, contentType);
+Models.HttpsApiRestShApiDR result = await dataManipulation.HttpsApiRestShApiD(data, transform);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="image_manipulation_and_moderation_api"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.Controllers.ImageManipulationAndModerationAPI") ImageManipulationAndModerationAPI
+## <a name="image_manipulation"></a>![Class: ](https://apidocs.io/img/class.png "SMASH.Controllers.ImageManipulation") ImageManipulation
 
 ### Get singleton instance
 
-The singleton instance of the ``` ImageManipulationAndModerationAPI ``` class can be accessed from the API Client.
+The singleton instance of the ``` ImageManipulation ``` class can be accessed from the API Client.
 
 ```csharp
-IImageManipulationAndModerationAPI imageManipulationAndModerationAPI = client.ImageManipulationAndModerationAPI;
+IImageManipulation imageManipulation = client.ImageManipulation;
 ```
 
-### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.ImageManipulationAndModerationAPI.ImageManipulation") ImageManipulation
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.ImageManipulation.ImageManipulation") ImageManipulation
 
 > Image Manipulation API
 
@@ -832,7 +694,7 @@ Task<Models.HttpsApiRestShApiIR> ImageManipulation(string image, string transfor
 string image = "image";
 string transform = "transform";
 
-Models.HttpsApiRestShApiIR result = await imageManipulationAndModerationAPI.ImageManipulation(image, transform);
+Models.HttpsApiRestShApiIR result = await imageManipulation.ImageManipulation(image, transform);
 
 ```
 
@@ -886,7 +748,7 @@ string a = "a";
 string sa = "sa";
 string c = "c";
 string s = "s";
-int z = 107;
+int z = 70;
 string address = "address";
 
 Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(user, a, sa, c, s, z, address);
@@ -1166,8 +1028,8 @@ string email = "email";
 string user = "user";
 string password = "password";
 string name = "name";
-int? phone = 107;
-int? countrycode = 107;
+int? phone = 28;
+int? countrycode = 28;
 string address = "address";
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();

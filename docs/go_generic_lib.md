@@ -34,7 +34,7 @@
     * Encryption
     * Code Obfuscation
     * Platform Identification
-    * WAF & DDOS Protection (Web Application Firewall)
+    * WAF and DDOS Protection (Web Application Firewall)
       * Advanced Logging
 
 # Overview
@@ -242,14 +242,14 @@ To configure these for your generated code, open the file "Configuration.go" and
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [advancedlogging_pkg](#advancedlogging_pkg)
-* [waf&ddosprotection_pkg](#waf&ddosprotection_pkg)
+* [wafandddosprotection_pkg](#wafandddosprotection_pkg)
 * [encryption_pkg](#encryption_pkg)
 * [cdn_pkg](#cdn_pkg)
 * [dns_pkg](#dns_pkg)
 * [codeobfuscation_pkg](#codeobfuscation_pkg)
 * [hosting_pkg](#hosting_pkg)
-* [datamanipulation,conversion,sorting,andcompressionapi_pkg](#datamanipulation,conversion,sorting,andcompressionapi_pkg)
-* [imagemanipulationandmoderationapi_pkg](#imagemanipulationandmoderationapi_pkg)
+* [datamanipulation_pkg](#datamanipulation_pkg)
+* [imagemanipulation_pkg](#imagemanipulation_pkg)
 * [verification_pkg](#verification_pkg)
 * [twofactorauthenticationapi_pkg](#twofactorauthenticationapi_pkg)
 * [usermanagement_pkg](#usermanagement_pkg)
@@ -264,40 +264,6 @@ Factory for the ``` ADVANCEDLOGGING ``` interface can be accessed from the packa
 ```go
 advancedLogging := advancedlogging_pkg.NewADVANCEDLOGGING()
 ```
-
-### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingInfo") LoggingInfo
-
-> WAF Log Info
-
-
-```go
-func (me *ADVANCEDLOGGING_IMPL) LoggingInfo(
-            name string,
-            origin string,
-            time *string)(*models_pkg.HttpsApiRestShApiSLIR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| name |  ``` Required ```  | Name of your WAF zone |
-| origin |  ``` Required ```  | IP Address of the Web Application |
-| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
-
-
-#### Example Usage
-
-```go
-name := "name"
-origin := "origin"
-time := "time"
-
-var result *models_pkg.HttpsApiRestShApiSLIR
-result,_ = advancedLogging.LoggingInfo(name, origin, time)
-
-```
-
 
 ### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingConfiguration") LoggingConfiguration
 
@@ -317,7 +283,7 @@ func (me *ADVANCEDLOGGING_IMPL) LoggingConfiguration(
 |-----------|------|-------------|
 | name |  ``` Required ```  | Name of the WAF zone |
 | origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
-| activate |  ``` Required ```  | True or False |
+| activate |  ``` Required ```  | Activate or Disable |
 
 
 #### Example Usage
@@ -333,171 +299,110 @@ result,_ = advancedLogging.LoggingConfiguration(name, origin, activate)
 ```
 
 
+### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingInfo") LoggingInfo
+
+> WAF Log Info
+
+
+```go
+func (me *ADVANCEDLOGGING_IMPL) LoggingInfo(
+            name string,
+            origin string,
+            time *string)(*models_pkg.HttpsApiRestShApiSLIR,error)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01/01/0101;24:59:01]) |
+
+
+#### Example Usage
+
+```go
+name := "name"
+origin := "origin"
+time := "time"
+
+var result *models_pkg.HttpsApiRestShApiSLIR
+result,_ = advancedLogging.LoggingInfo(name, origin, time)
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="waf&ddosprotection_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".waf&ddosprotection_pkg") waf&ddosprotection_pkg
+## <a name="wafandddosprotection_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".wafandddosprotection_pkg") wafandddosprotection_pkg
 
 ### Get instance
 
-Factory for the ``` WAF&DDOSPROTECTION ``` interface can be accessed from the package waf&ddosprotection_pkg.
+Factory for the ``` WAFANDDDOSPROTECTION ``` interface can be accessed from the package wafandddosprotection_pkg.
 
 ```go
-wAFDDOSProtection := waf&ddosprotection_pkg.NewWAF&DDOSPROTECTION()
+wAFAndDDOSProtection := wafandddosprotection_pkg.NewWAFANDDDOSPROTECTION()
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
+### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".wafandddosprotection_pkg.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Configuration
 
 
 ```go
-func (me *WAFDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(
-            key string,
-            uid string,
+func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(
             name string,
-            origin string,
-            rule string,
-            contentType string)(*models_pkg.HttpsApiRestShApiSWCR,error)
+            rule string)(*models_pkg.HttpsApiRestShApiSWCR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| rule |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| rule |  ``` Required ```  | Rule or rules to add or update separated by a comma |
 
 
 #### Example Usage
 
 ```go
-key := "API"
-uid := "UID"
-name := "origin-name"
-origin := "origin.yourdomain.tld"
-rule := "header:Access-Control-Allow-Origin;yourdomain.tld;seconddomain.tld,match:ip;127.0.0.1;does"
-contentType := "application/json"
+name := "name"
+rule := "rule"
 
 var result *models_pkg.HttpsApiRestShApiSWCR
-result,_ = wAFDDOSProtection.HttpsApiRestShApiSWC(key, uid, name, origin, rule, contentType)
+result,_ = wAFAndDDOSProtection.HttpsApiRestShApiSWC(name, rule)
 
 ```
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.HttpsApiRestShApiSW") HttpsApiRestShApiSW
+### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".wafandddosprotection_pkg.HttpsApiRestShApiSW") HttpsApiRestShApiSW
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> WAF and DDOS Creation
 
 
 ```go
-func (me *WAFDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(
-            key string,
-            uid string,
+func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(
             origin string,
-            cname string,
-            contentType string)(*models_pkg.HttpsApiRestShApiSWR,error)
+            cname string)(*models_pkg.HttpsApiRestShApiSWR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | IP of the Web server you wish to protect |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 #### Example Usage
 
 ```go
-key := "API"
-uid := "UID"
-origin := "origin.yourdomain.tld"
-cname := "yourdomain.tld,www.yourdomain.tld"
-contentType := "application/json"
+origin := "origin"
+cname := "cname"
 
 var result *models_pkg.HttpsApiRestShApiSWR
-result,_ = wAFDDOSProtection.HttpsApiRestShApiSW(key, uid, origin, cname, contentType)
-
-```
-
-
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```go
-func (me *WAFDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(
-            body *models_pkg.HttpsApiRestShApiSWC,
-            contentType string)(*models_pkg.HttpsApiRestShApiSWCR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-bodyValue := []byte("{\n  \"key\": \"YOUR API KEY\",\n  \"uid\": \"YOUR USER ID\",\n  \"name\": \"WHAT YOU WISH TO NAME YOUR WAF\",\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\n}")
-var body *models_pkg.HttpsApiRestShApiSWC
-json.Unmarshal(bodyValue,&body)
-contentType := "application/json"
-
-var result *models_pkg.HttpsApiRestShApiSWCR
-result,_ = wAFDDOSProtection.HttpsApiRestShApiSWC(body, contentType)
-
-```
-
-
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".waf&ddosprotection_pkg.HttpsApiRestShApiSW") HttpsApiRestShApiSW
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```go
-func (me *WAFDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(
-            body *models_pkg.HttpsApiRestShApiSW,
-            contentType string)(*models_pkg.HttpsApiRestShApiSWR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-bodyValue := []byte("{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"origin\": \"ORIGIN YOU WISH TO PROTECT\",\r\n  \"cname\": \"CNAMES YOU WISH TO USE WITH YOUR WAF\"\r\n}")
-var body *models_pkg.HttpsApiRestShApiSW
-json.Unmarshal(bodyValue,&body)
-contentType := "application/json"
-
-var result *models_pkg.HttpsApiRestShApiSWR
-result,_ = wAFDDOSProtection.HttpsApiRestShApiSW(body, contentType)
+result,_ = wAFAndDDOSProtection.HttpsApiRestShApiSW(origin, cname)
 
 ```
 
@@ -540,7 +445,7 @@ func (me *ENCRYPTION_IMPL) DataAndFileEncryption(
 ```go
 data := "data"
 method := "method"
-bit,_ := strconv.ParseInt("35", 10, 8)
+bit,_ := strconv.ParseInt("120", 10, 8)
 
 var result *models_pkg.HttpsApiRestShApiSER
 result,_ = encryption.DataAndFileEncryption(data, method, bit)
@@ -776,115 +681,66 @@ result,_ = hosting.HostingSetup(app, domain)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="datamanipulation,conversion,sorting,andcompressionapi_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".datamanipulation,conversion,sorting,andcompressionapi_pkg") datamanipulation,conversion,sorting,andcompressionapi_pkg
+## <a name="datamanipulation_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".datamanipulation_pkg") datamanipulation_pkg
 
 ### Get instance
 
-Factory for the ``` DATAMANIPULATION,CONVERSION,SORTING,ANDCOMPRESSIONAPI ``` interface can be accessed from the package datamanipulation,conversion,sorting,andcompressionapi_pkg.
+Factory for the ``` DATAMANIPULATION ``` interface can be accessed from the package datamanipulation_pkg.
 
 ```go
-dataManipulationConversionSortingAndCompressionAPI := datamanipulation,conversion,sorting,andcompressionapi_pkg.NewDATAMANIPULATION,CONVERSION,SORTING,ANDCOMPRESSIONAPI()
+dataManipulation := datamanipulation_pkg.NewDATAMANIPULATION()
 ```
 
-### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".datamanipulation,conversion,sorting,andcompressionapi_pkg.HttpsApiRestShApiD") HttpsApiRestShApiD
+### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".datamanipulation_pkg.HttpsApiRestShApiD") HttpsApiRestShApiD
 
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
+> Data Manipulation API
 
 
 ```go
-func (me *DATAMANIPULATIONCONVERSIONSORTINGANDCOMPRESSIONAPI_IMPL) HttpsApiRestShApiD(
-            key string,
-            uid string,
-            user string,
-            apiuid string,
+func (me *DATAMANIPULATION_IMPL) HttpsApiRestShApiD(
             data string,
-            contentType string)(*models_pkg.HttpsApiRestShApiDR,error)
+            transform string)(*models_pkg.HttpsApiRestShApiDR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | Data URL, data as a query string, or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 #### Example Usage
 
 ```go
-key := "API"
-uid := "UID"
-user := "UID"
-apiuid := "apiUID"
-data := "https://static.yourcdn.com/data.file"
-contentType := "application/json"
+data := "data"
+transform := "transform"
 
 var result *models_pkg.HttpsApiRestShApiDR
-result,_ = dataManipulationConversionSortingAndCompressionAPI.HttpsApiRestShApiD(key, uid, user, apiuid, data, contentType)
-
-```
-
-
-### <a name="https_api_rest_sh_api_d"></a>![Method: ](https://apidocs.io/img/method.png ".datamanipulation,conversion,sorting,andcompressionapi_pkg.HttpsApiRestShApiD") HttpsApiRestShApiD
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> TODO: Add Description
-
-
-```go
-func (me *DATAMANIPULATIONCONVERSIONSORTINGANDCOMPRESSIONAPI_IMPL) HttpsApiRestShApiD(
-            body *models_pkg.HttpsApiRestShApiD,
-            contentType string)(*models_pkg.HttpsApiRestShApiDR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-bodyValue := []byte("{\r\n  \"key\": \"YOUR API KEY\",\r\n  \"uid\": \"YOUR USER ID\",\r\n  \"user\": \"USERS EMAIL OR USERNAME\",\r\n  \"apiuid\": \"USERS API SIDE USER ID\",\r\n  \"url\": \"DATA URL OR DIRECT FILE UPLOAD FROM CLIENT\",\r\n  \"manipulation\": \"DATA MANIPULATION DIRECTIVES\",\r\n  \"conversion\": \"CONVERT DATA TYPE TO (JSON, XML, HTML, RAW, BINARY, TEXT)\",\r\n  \"sorting\": \"SORT BY (NAME, DATE, TYPE, SIZE)\",\r\n  \"compression\": \"COMPRESS DATA IF SET TO TRUE (TYPES = GZIP, ZIP, 7Z, MINIFICATION, REWRITE)\"\r\n}")
-var body *models_pkg.HttpsApiRestShApiD
-json.Unmarshal(bodyValue,&body)
-contentType := "application/json"
-
-var result *models_pkg.HttpsApiRestShApiDR
-result,_ = dataManipulationConversionSortingAndCompressionAPI.HttpsApiRestShApiD(body, contentType)
+result,_ = dataManipulation.HttpsApiRestShApiD(data, transform)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="imagemanipulationandmoderationapi_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".imagemanipulationandmoderationapi_pkg") imagemanipulationandmoderationapi_pkg
+## <a name="imagemanipulation_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".imagemanipulation_pkg") imagemanipulation_pkg
 
 ### Get instance
 
-Factory for the ``` IMAGEMANIPULATIONANDMODERATIONAPI ``` interface can be accessed from the package imagemanipulationandmoderationapi_pkg.
+Factory for the ``` IMAGEMANIPULATION ``` interface can be accessed from the package imagemanipulation_pkg.
 
 ```go
-imageManipulationAndModerationAPI := imagemanipulationandmoderationapi_pkg.NewIMAGEMANIPULATIONANDMODERATIONAPI()
+imageManipulation := imagemanipulation_pkg.NewIMAGEMANIPULATION()
 ```
 
-### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".imagemanipulationandmoderationapi_pkg.ImageManipulation") ImageManipulation
+### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".imagemanipulation_pkg.ImageManipulation") ImageManipulation
 
 > Image Manipulation API
 
 
 ```go
-func (me *IMAGEMANIPULATIONANDMODERATIONAPI_IMPL) ImageManipulation(
+func (me *IMAGEMANIPULATION_IMPL) ImageManipulation(
             image string,
             transform string)(*models_pkg.HttpsApiRestShApiIR,error)
 ```
@@ -904,7 +760,7 @@ image := "image"
 transform := "transform"
 
 var result *models_pkg.HttpsApiRestShApiIR
-result,_ = imageManipulationAndModerationAPI.ImageManipulation(image, transform)
+result,_ = imageManipulation.ImageManipulation(image, transform)
 
 ```
 
@@ -958,7 +814,7 @@ a := "a"
 sa := "sa"
 c := "c"
 s := "s"
-z,_ := strconv.ParseInt("35", 10, 8)
+z,_ := strconv.ParseInt("78", 10, 8)
 address := "address"
 
 var result *models_pkg.HttpsApiRestShApiVAR
@@ -1250,8 +1106,8 @@ email := "email"
 user := "user"
 password := "password"
 name := "name"
-phone,_ := strconv.ParseInt("35", 10, 8)
-countrycode,_ := strconv.ParseInt("35", 10, 8)
+phone,_ := strconv.ParseInt("78", 10, 8)
+countrycode,_ := strconv.ParseInt("78", 10, 8)
 address := "address"
 // key-value map for optional query parameters
 	queryParams := map[string]interface{}{"key" : "value"}
