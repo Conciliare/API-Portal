@@ -277,7 +277,7 @@ var controller = lib.AdvancedLogging;
 
 
 ```javascript
-function loggingConfiguration(name, origin, activate, callback)
+function loggingConfiguration(input, callback)
 ```
 #### Parameters
 
@@ -293,11 +293,12 @@ function loggingConfiguration(name, origin, activate, callback)
 
 ```javascript
 
-    var name = 'name';
-    var origin = 'origin';
-    var activate = 'activate';
+    var input = [];
+        input['name'] = 'name';
+        input['origin'] = 'origin';
+        input['activate'] = 'activate';
 
-    controller.loggingConfiguration(name, origin, activate, function(error, response, context) {
+    controller.loggingConfiguration(input, function(error, response, context) {
 
     
     });
@@ -311,7 +312,7 @@ function loggingConfiguration(name, origin, activate, callback)
 
 
 ```javascript
-function loggingInfo(name, origin, time, callback)
+function loggingInfo(input, callback)
 ```
 #### Parameters
 
@@ -327,11 +328,12 @@ function loggingInfo(name, origin, time, callback)
 
 ```javascript
 
-    var name = 'name';
-    var origin = 'origin';
-    var time = 'time';
+    var input = [];
+        input['name'] = 'name';
+        input['origin'] = 'origin';
+        input['time'] = 'time';
 
-    controller.loggingInfo(name, origin, time, function(error, response, context) {
+    controller.loggingInfo(input, function(error, response, context) {
 
     
     });
@@ -357,7 +359,7 @@ var controller = lib.WAFAndDDOSProtection;
 
 
 ```javascript
-function httpsApiRestShApiSWC(name, rule, callback)
+function httpsApiRestShApiSWC(input, callback)
 ```
 #### Parameters
 
@@ -372,10 +374,11 @@ function httpsApiRestShApiSWC(name, rule, callback)
 
 ```javascript
 
-    var name = 'name';
-    var rule = 'rule';
+    var input = [];
+        input['name'] = 'name';
+        input['rule'] = 'rule';
 
-    controller.httpsApiRestShApiSWC(name, rule, function(error, response, context) {
+    controller.httpsApiRestShApiSWC(input, function(error, response, context) {
 
     
     });
@@ -389,7 +392,7 @@ function httpsApiRestShApiSWC(name, rule, callback)
 
 
 ```javascript
-function httpsApiRestShApiSW(origin, cname, callback)
+function httpsApiRestShApiSW(input, callback)
 ```
 #### Parameters
 
@@ -404,10 +407,11 @@ function httpsApiRestShApiSW(origin, cname, callback)
 
 ```javascript
 
-    var origin = 'origin';
-    var cname = 'cname';
+    var input = [];
+        input['origin'] = 'origin';
+        input['cname'] = 'cname';
 
-    controller.httpsApiRestShApiSW(origin, cname, function(error, response, context) {
+    controller.httpsApiRestShApiSW(input, function(error, response, context) {
 
     
     });
@@ -433,7 +437,7 @@ var controller = lib.Encryption;
 
 
 ```javascript
-function dataAndFileEncryption(data, method, bit, callback)
+function dataAndFileEncryption(input, callback)
 ```
 #### Parameters
 
@@ -449,11 +453,12 @@ function dataAndFileEncryption(data, method, bit, callback)
 
 ```javascript
 
-    var data = 'data';
-    var method = 'method';
-    var bit = 170;
+    var input = [];
+        input['data'] = 'data';
+        input['method'] = 'method';
+        input['bit'] = 118;
 
-    controller.dataAndFileEncryption(data, method, bit, function(error, response, context) {
+    controller.dataAndFileEncryption(input, function(error, response, context) {
 
     
     });
@@ -479,7 +484,7 @@ var controller = lib.CDN;
 
 
 ```javascript
-function cDNPushZone(cname, file, callback)
+function cDNPushZone(input, callback)
 ```
 #### Parameters
 
@@ -494,10 +499,11 @@ function cDNPushZone(cname, file, callback)
 
 ```javascript
 
-    var cname = 'cname';
-    var file = 'file';
+    var input = [];
+        input['cname'] = 'cname';
+        input['file'] = 'file';
 
-    controller.cDNPushZone(cname, file, function(error, response, context) {
+    controller.cDNPushZone(input, function(error, response, context) {
 
     
     });
@@ -511,7 +517,7 @@ function cDNPushZone(cname, file, callback)
 
 
 ```javascript
-function cDNPullZone(origin, cname, callback)
+function cDNPullZone(input, callback)
 ```
 #### Parameters
 
@@ -526,10 +532,11 @@ function cDNPullZone(origin, cname, callback)
 
 ```javascript
 
-    var origin = 'origin';
-    var cname = 'cname';
+    var input = [];
+        input['origin'] = 'origin';
+        input['cname'] = 'cname';
 
-    controller.cDNPullZone(origin, cname, function(error, response, context) {
+    controller.cDNPullZone(input, function(error, response, context) {
 
     
     });
@@ -555,7 +562,7 @@ var controller = lib.DNS;
 
 
 ```javascript
-function dNSConfiguration(domain, records, callback)
+function dNSConfiguration(input, callback)
 ```
 #### Parameters
 
@@ -570,10 +577,11 @@ function dNSConfiguration(domain, records, callback)
 
 ```javascript
 
-    var domain = 'domain';
-    var records = 'records';
+    var input = [];
+        input['domain'] = 'domain';
+        input['records'] = 'records';
 
-    controller.dNSConfiguration(domain, records, function(error, response, context) {
+    controller.dNSConfiguration(input, function(error, response, context) {
 
     
     });
@@ -671,7 +679,7 @@ var controller = lib.Hosting;
 
 
 ```javascript
-function hostingSetup(app, domain, callback)
+function hostingSetup(input, callback)
 ```
 #### Parameters
 
@@ -686,10 +694,11 @@ function hostingSetup(app, domain, callback)
 
 ```javascript
 
-    var app = 'app';
-    var domain = 'domain';
+    var input = [];
+        input['app'] = 'app';
+        input['domain'] = 'domain';
 
-    controller.hostingSetup(app, domain, function(error, response, context) {
+    controller.hostingSetup(input, function(error, response, context) {
 
     
     });
@@ -715,7 +724,7 @@ var controller = lib.DataManipulation;
 
 
 ```javascript
-function httpsApiRestShApiD(data, transform, callback)
+function httpsApiRestShApiD(input, callback)
 ```
 #### Parameters
 
@@ -730,10 +739,11 @@ function httpsApiRestShApiD(data, transform, callback)
 
 ```javascript
 
-    var data = 'data';
-    var transform = 'transform';
+    var input = [];
+        input['data'] = 'data';
+        input['transform'] = 'transform';
 
-    controller.httpsApiRestShApiD(data, transform, function(error, response, context) {
+    controller.httpsApiRestShApiD(input, function(error, response, context) {
 
     
     });
@@ -759,7 +769,7 @@ var controller = lib.ImageManipulation;
 
 
 ```javascript
-function imageManipulation(image, transform, callback)
+function imageManipulation(input, callback)
 ```
 #### Parameters
 
@@ -774,10 +784,11 @@ function imageManipulation(image, transform, callback)
 
 ```javascript
 
-    var image = 'image';
-    var transform = 'transform';
+    var input = [];
+        input['image'] = 'image';
+        input['transform'] = 'transform';
 
-    controller.imageManipulation(image, transform, function(error, response, context) {
+    controller.imageManipulation(input, function(error, response, context) {
 
     
     });
@@ -803,7 +814,7 @@ var controller = lib.Verification;
 
 
 ```javascript
-function userAddressVerification(user, a, sa, c, s, z, address, callback)
+function userAddressVerification(input, callback)
 ```
 #### Parameters
 
@@ -823,15 +834,16 @@ function userAddressVerification(user, a, sa, c, s, z, address, callback)
 
 ```javascript
 
-    var user = 'user';
-    var a = 'a';
-    var sa = 'sa';
-    var c = 'c';
-    var s = 's';
-    var z = 170;
-    var address = 'address';
+    var input = [];
+        input['user'] = 'user';
+        input['a'] = 'a';
+        input['sa'] = 'sa';
+        input['c'] = 'c';
+        input['s'] = 's';
+        input['z'] = 118;
+        input['address'] = 'address';
 
-    controller.userAddressVerification(user, a, sa, c, s, z, address, function(error, response, context) {
+    controller.userAddressVerification(input, function(error, response, context) {
 
     
     });
@@ -845,7 +857,7 @@ function userAddressVerification(user, a, sa, c, s, z, address, callback)
 
 
 ```javascript
-function userVerificationResponse(user, code, callback)
+function userVerificationResponse(input, callback)
 ```
 #### Parameters
 
@@ -860,10 +872,11 @@ function userVerificationResponse(user, code, callback)
 
 ```javascript
 
-    var user = 'user';
-    var code = 'code';
+    var input = [];
+        input['user'] = 'user';
+        input['code'] = 'code';
 
-    controller.userVerificationResponse(user, code, function(error, response, context) {
+    controller.userVerificationResponse(input, function(error, response, context) {
 
     
     });
@@ -919,7 +932,7 @@ var controller = lib.TwoFactorAuthenticationAPI;
 
 
 ```javascript
-function m2FATokenResponse(user, code, callback)
+function m2FATokenResponse(input, callback)
 ```
 #### Parameters
 
@@ -934,10 +947,11 @@ function m2FATokenResponse(user, code, callback)
 
 ```javascript
 
-    var user = 'user';
-    var code = 'code';
+    var input = [];
+        input['user'] = 'user';
+        input['code'] = 'code';
 
-    controller.m2FATokenResponse(user, code, function(error, response, context) {
+    controller.m2FATokenResponse(input, function(error, response, context) {
 
     
     });
@@ -1023,7 +1037,7 @@ function getUserInfo(user, callback)
 
 
 ```javascript
-function updateUser(user, avatar, customInput, queryParams, callback)
+function updateUser(input, queryParams, callback)
 ```
 #### Parameters
 
@@ -1040,14 +1054,15 @@ function updateUser(user, avatar, customInput, queryParams, callback)
 
 ```javascript
 
-    var user = 'user';
-    var avatar = 'avatar';
-    var customInput = custom input;
+    var input = [];
+        input['user'] = 'user';
+        input['avatar'] = 'avatar';
+        input['customInput'] = custom input;
 
     // key-value map for optional query parameters
     var queryParams = [];
 
-    controller.updateUser(user, avatar, customInput, queryParams, function(error, response, context) {
+    controller.updateUser(input, queryParams, function(error, response, context) {
 
     
     });
@@ -1103,7 +1118,7 @@ var controller = lib.LoginAndRegistration;
 
 
 ```javascript
-function userRegistration(email, user, password, name, phone, countrycode, address, queryParams, callback)
+function userRegistration(input, queryParams, callback)
 ```
 #### Parameters
 
@@ -1124,18 +1139,19 @@ function userRegistration(email, user, password, name, phone, countrycode, addre
 
 ```javascript
 
-    var email = 'email';
-    var user = 'user';
-    var password = 'password';
-    var name = 'name';
-    var phone = 6;
-    var countrycode = 6;
-    var address = 'address';
+    var input = [];
+        input['email'] = 'email';
+        input['user'] = 'user';
+        input['password'] = 'password';
+        input['name'] = 'name';
+        input['phone'] = 118;
+        input['countrycode'] = 118;
+        input['address'] = 'address';
 
     // key-value map for optional query parameters
     var queryParams = [];
 
-    controller.userRegistration(email, user, password, name, phone, countrycode, address, queryParams, function(error, response, context) {
+    controller.userRegistration(input, queryParams, function(error, response, context) {
 
     
     });
@@ -1149,7 +1165,7 @@ function userRegistration(email, user, password, name, phone, countrycode, addre
 
 
 ```javascript
-function userAuthentication(user, password, callback)
+function userAuthentication(input, callback)
 ```
 #### Parameters
 
@@ -1164,10 +1180,11 @@ function userAuthentication(user, password, callback)
 
 ```javascript
 
-    var user = 'user';
-    var password = 'password';
+    var input = [];
+        input['user'] = 'user';
+        input['password'] = 'password';
 
-    controller.userAuthentication(user, password, function(error, response, context) {
+    controller.userAuthentication(input, function(error, response, context) {
 
     
     });

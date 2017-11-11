@@ -243,7 +243,7 @@ IAdvancedLogging advancedLogging = client.AdvancedLogging;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSLR> LoggingConfiguration(string name, string origin, string activate)
+Task<Models.LoggingSetupModelResponse> LoggingConfiguration(Models.LoggingConfigurationInput input)
 ```
 
 #### Parameters
@@ -258,11 +258,19 @@ Task<Models.HttpsApiRestShApiSLR> LoggingConfiguration(string name, string origi
 #### Example Usage
 
 ```csharp
-string name = "name";
-string origin = "origin";
-string activate = "activate";
+LoggingConfigurationInput collect = new LoggingConfigurationInput();
 
-Models.HttpsApiRestShApiSLR result = await advancedLogging.LoggingConfiguration(name, origin, activate);
+string name = "name";
+collect.Name = name;
+
+string origin = "origin";
+collect.Origin = origin;
+
+string activate = "activate";
+collect.Activate = activate;
+
+
+Models.LoggingSetupModelResponse result = await advancedLogging.LoggingConfiguration(collect);
 
 ```
 
@@ -273,7 +281,7 @@ Models.HttpsApiRestShApiSLR result = await advancedLogging.LoggingConfiguration(
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSLIR> LoggingInfo(string name, string origin, string time = null)
+Task<Models.LoggingLogsModelResponse> LoggingInfo(Models.LoggingInfoInput input)
 ```
 
 #### Parameters
@@ -288,11 +296,19 @@ Task<Models.HttpsApiRestShApiSLIR> LoggingInfo(string name, string origin, strin
 #### Example Usage
 
 ```csharp
-string name = "name";
-string origin = "origin";
-string time = "time";
+LoggingInfoInput collect = new LoggingInfoInput();
 
-Models.HttpsApiRestShApiSLIR result = await advancedLogging.LoggingInfo(name, origin, time);
+string name = "name";
+collect.Name = name;
+
+string origin = "origin";
+collect.Origin = origin;
+
+string time = "time";
+collect.Time = time;
+
+
+Models.LoggingLogsModelResponse result = await advancedLogging.LoggingInfo(collect);
 
 ```
 
@@ -315,7 +331,7 @@ IWAFAndDDOSProtection wAFAndDDOSProtection = client.WAFAndDDOSProtection;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSWCR> HttpsApiRestShApiSWC(string name, string rule)
+Task<Models.WAFConfigurationModelResponse> HttpsApiRestShApiSWC(Models.HttpsApiRestShApiSWCInput input)
 ```
 
 #### Parameters
@@ -329,10 +345,16 @@ Task<Models.HttpsApiRestShApiSWCR> HttpsApiRestShApiSWC(string name, string rule
 #### Example Usage
 
 ```csharp
-string name = "name";
-string rule = "rule";
+HttpsApiRestShApiSWCInput collect = new HttpsApiRestShApiSWCInput();
 
-Models.HttpsApiRestShApiSWCR result = await wAFAndDDOSProtection.HttpsApiRestShApiSWC(name, rule);
+string name = "name";
+collect.Name = name;
+
+string rule = "rule";
+collect.Rule = rule;
+
+
+Models.WAFConfigurationModelResponse result = await wAFAndDDOSProtection.HttpsApiRestShApiSWC(collect);
 
 ```
 
@@ -343,7 +365,7 @@ Models.HttpsApiRestShApiSWCR result = await wAFAndDDOSProtection.HttpsApiRestShA
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSWR> HttpsApiRestShApiSW(string origin, string cname)
+Task<Models.WAFCreationModelResponse> HttpsApiRestShApiSW(Models.HttpsApiRestShApiSWInput input)
 ```
 
 #### Parameters
@@ -357,10 +379,16 @@ Task<Models.HttpsApiRestShApiSWR> HttpsApiRestShApiSW(string origin, string cnam
 #### Example Usage
 
 ```csharp
-string origin = "origin";
-string cname = "cname";
+HttpsApiRestShApiSWInput collect = new HttpsApiRestShApiSWInput();
 
-Models.HttpsApiRestShApiSWR result = await wAFAndDDOSProtection.HttpsApiRestShApiSW(origin, cname);
+string origin = "origin";
+collect.Origin = origin;
+
+string cname = "cname";
+collect.Cname = cname;
+
+
+Models.WAFCreationModelResponse result = await wAFAndDDOSProtection.HttpsApiRestShApiSW(collect);
 
 ```
 
@@ -383,7 +411,7 @@ IEncryption encryption = client.Encryption;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSER> DataAndFileEncryption(string data, string method, int bit)
+Task<Models.EncryptionModelResponse> DataAndFileEncryption(Models.DataAndFileEncryptionInput input)
 ```
 
 #### Parameters
@@ -398,11 +426,19 @@ Task<Models.HttpsApiRestShApiSER> DataAndFileEncryption(string data, string meth
 #### Example Usage
 
 ```csharp
-string data = "data";
-string method = "method";
-int bit = 70;
+DataAndFileEncryptionInput collect = new DataAndFileEncryptionInput();
 
-Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryption(data, method, bit);
+string data = "data";
+collect.Data = data;
+
+string method = "method";
+collect.Method = method;
+
+int bit = 140;
+collect.Bit = bit;
+
+
+Models.EncryptionModelResponse result = await encryption.DataAndFileEncryption(collect);
 
 ```
 
@@ -425,7 +461,7 @@ ICDN cDN = client.CDN;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSCPushR> CDNPushZone(string cname, string file)
+Task<Models.CDNPushModelResponse> CDNPushZone(Models.CDNPushZoneInput input)
 ```
 
 #### Parameters
@@ -439,10 +475,16 @@ Task<Models.HttpsApiRestShApiSCPushR> CDNPushZone(string cname, string file)
 #### Example Usage
 
 ```csharp
-string cname = "cname";
-string file = "file";
+CDNPushZoneInput collect = new CDNPushZoneInput();
 
-Models.HttpsApiRestShApiSCPushR result = await cDN.CDNPushZone(cname, file);
+string cname = "cname";
+collect.Cname = cname;
+
+string file = "file";
+collect.File = file;
+
+
+Models.CDNPushModelResponse result = await cDN.CDNPushZone(collect);
 
 ```
 
@@ -453,7 +495,7 @@ Models.HttpsApiRestShApiSCPushR result = await cDN.CDNPushZone(cname, file);
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSCPullR> CDNPullZone(string origin, string cname)
+Task<Models.CDNPullModelResponse> CDNPullZone(Models.CDNPullZoneInput input)
 ```
 
 #### Parameters
@@ -467,10 +509,16 @@ Task<Models.HttpsApiRestShApiSCPullR> CDNPullZone(string origin, string cname)
 #### Example Usage
 
 ```csharp
-string origin = "origin";
-string cname = "cname";
+CDNPullZoneInput collect = new CDNPullZoneInput();
 
-Models.HttpsApiRestShApiSCPullR result = await cDN.CDNPullZone(origin, cname);
+string origin = "origin";
+collect.Origin = origin;
+
+string cname = "cname";
+collect.Cname = cname;
+
+
+Models.CDNPullModelResponse result = await cDN.CDNPullZone(collect);
 
 ```
 
@@ -493,7 +541,7 @@ IDNS dNS = client.DNS;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSDCR> DNSConfiguration(string domain, string records)
+Task<Models.DNSConfigurationModelResponse> DNSConfiguration(Models.DNSConfigurationInput input)
 ```
 
 #### Parameters
@@ -507,10 +555,16 @@ Task<Models.HttpsApiRestShApiSDCR> DNSConfiguration(string domain, string record
 #### Example Usage
 
 ```csharp
-string domain = "domain";
-string records = "records";
+DNSConfigurationInput collect = new DNSConfigurationInput();
 
-Models.HttpsApiRestShApiSDCR result = await dNS.DNSConfiguration(domain, records);
+string domain = "domain";
+collect.Domain = domain;
+
+string records = "records";
+collect.Records = records;
+
+
+Models.DNSConfigurationModelResponse result = await dNS.DNSConfiguration(collect);
 
 ```
 
@@ -521,7 +575,7 @@ Models.HttpsApiRestShApiSDCR result = await dNS.DNSConfiguration(domain, records
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSDAR> DNSCreation(string domain)
+Task<Models.DNSCreationModelResponse> DNSCreation(string domain)
 ```
 
 #### Parameters
@@ -536,7 +590,7 @@ Task<Models.HttpsApiRestShApiSDAR> DNSCreation(string domain)
 ```csharp
 string domain = "domain";
 
-Models.HttpsApiRestShApiSDAR result = await dNS.DNSCreation(domain);
+Models.DNSCreationModelResponse result = await dNS.DNSCreation(domain);
 
 ```
 
@@ -559,7 +613,7 @@ ICodeObfuscation codeObfuscation = client.CodeObfuscation;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSOR> ObfuscationAndAntiTampering(string app)
+Task<Models.CodeProtectionModelResponse> ObfuscationAndAntiTampering(string app)
 ```
 
 #### Parameters
@@ -574,7 +628,7 @@ Task<Models.HttpsApiRestShApiSOR> ObfuscationAndAntiTampering(string app)
 ```csharp
 string app = "app";
 
-Models.HttpsApiRestShApiSOR result = await codeObfuscation.ObfuscationAndAntiTampering(app);
+Models.CodeProtectionModelResponse result = await codeObfuscation.ObfuscationAndAntiTampering(app);
 
 ```
 
@@ -597,7 +651,7 @@ IHosting hosting = client.Hosting;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSHR> HostingSetup(string app, string domain)
+Task<Models.HostingModelResponse> HostingSetup(Models.HostingSetupInput input)
 ```
 
 #### Parameters
@@ -611,10 +665,16 @@ Task<Models.HttpsApiRestShApiSHR> HostingSetup(string app, string domain)
 #### Example Usage
 
 ```csharp
-string app = "app";
-string domain = "domain";
+HostingSetupInput collect = new HostingSetupInput();
 
-Models.HttpsApiRestShApiSHR result = await hosting.HostingSetup(app, domain);
+string app = "app";
+collect.App = app;
+
+string domain = "domain";
+collect.Domain = domain;
+
+
+Models.HostingModelResponse result = await hosting.HostingSetup(collect);
 
 ```
 
@@ -637,7 +697,7 @@ IDataManipulation dataManipulation = client.DataManipulation;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiDR> HttpsApiRestShApiD(string data, string transform)
+Task<Models.DataManipulationModelResponse> HttpsApiRestShApiD(Models.HttpsApiRestShApiDInput input)
 ```
 
 #### Parameters
@@ -651,10 +711,16 @@ Task<Models.HttpsApiRestShApiDR> HttpsApiRestShApiD(string data, string transfor
 #### Example Usage
 
 ```csharp
-string data = "data";
-string transform = "transform";
+HttpsApiRestShApiDInput collect = new HttpsApiRestShApiDInput();
 
-Models.HttpsApiRestShApiDR result = await dataManipulation.HttpsApiRestShApiD(data, transform);
+string data = "data";
+collect.Data = data;
+
+string transform = "transform";
+collect.Transform = transform;
+
+
+Models.DataManipulationModelResponse result = await dataManipulation.HttpsApiRestShApiD(collect);
 
 ```
 
@@ -677,7 +743,7 @@ IImageManipulation imageManipulation = client.ImageManipulation;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiIR> ImageManipulation(string image, string transform)
+Task<Models.ImageManipulationModelResponse> ImageManipulation(Models.ImageManipulationInput input)
 ```
 
 #### Parameters
@@ -691,10 +757,16 @@ Task<Models.HttpsApiRestShApiIR> ImageManipulation(string image, string transfor
 #### Example Usage
 
 ```csharp
-string image = "image";
-string transform = "transform";
+ImageManipulationInput collect = new ImageManipulationInput();
 
-Models.HttpsApiRestShApiIR result = await imageManipulation.ImageManipulation(image, transform);
+string image = "image";
+collect.Image = image;
+
+string transform = "transform";
+collect.Transform = transform;
+
+
+Models.ImageManipulationModelResponse result = await imageManipulation.ImageManipulation(collect);
 
 ```
 
@@ -717,14 +789,7 @@ IVerification verification = client.Verification;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVAR> UserAddressVerification(
-        string user,
-        string a,
-        string sa,
-        string c,
-        string s,
-        int z,
-        string address = null)
+Task<Models.VerifyAddressResponse> UserAddressVerification(Models.UserAddressVerificationInput input)
 ```
 
 #### Parameters
@@ -743,15 +808,31 @@ Task<Models.HttpsApiRestShApiVAR> UserAddressVerification(
 #### Example Usage
 
 ```csharp
-string user = "user";
-string a = "a";
-string sa = "sa";
-string c = "c";
-string s = "s";
-int z = 70;
-string address = "address";
+UserAddressVerificationInput collect = new UserAddressVerificationInput();
 
-Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(user, a, sa, c, s, z, address);
+string user = "user";
+collect.User = user;
+
+string a = "a";
+collect.A = a;
+
+string sa = "sa";
+collect.Sa = sa;
+
+string c = "c";
+collect.C = c;
+
+string s = "s";
+collect.S = s;
+
+int z = 232;
+collect.Z = z;
+
+string address = "address";
+collect.Address = address;
+
+
+Models.VerifyAddressResponse result = await verification.UserAddressVerification(collect);
 
 ```
 
@@ -762,7 +843,7 @@ Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVUR> UserVerificationResponse(string user, string code)
+Task<Models.VerifyUserModelResponse> UserVerificationResponse(Models.UserVerificationResponseInput input)
 ```
 
 #### Parameters
@@ -776,10 +857,16 @@ Task<Models.HttpsApiRestShApiVUR> UserVerificationResponse(string user, string c
 #### Example Usage
 
 ```csharp
-string user = "user";
-string code = "code";
+UserVerificationResponseInput collect = new UserVerificationResponseInput();
 
-Models.HttpsApiRestShApiVUR result = await verification.UserVerificationResponse(user, code);
+string user = "user";
+collect.User = user;
+
+string code = "code";
+collect.Code = code;
+
+
+Models.VerifyUserModelResponse result = await verification.UserVerificationResponse(collect);
 
 ```
 
@@ -790,7 +877,7 @@ Models.HttpsApiRestShApiVUR result = await verification.UserVerificationResponse
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVR> UserVerification(string user)
+Task<Models.VerifyModelResponse> UserVerification(string user)
 ```
 
 #### Parameters
@@ -805,7 +892,7 @@ Task<Models.HttpsApiRestShApiVR> UserVerification(string user)
 ```csharp
 string user = "user";
 
-Models.HttpsApiRestShApiVR result = await verification.UserVerification(user);
+Models.VerifyModelResponse result = await verification.UserVerification(user);
 
 ```
 
@@ -828,7 +915,7 @@ ITwoFactorAuthenticationAPI twoFactorAuthenticationAPI = client.TwoFactorAuthent
 
 
 ```csharp
-Task<Models.HttpsApiRestShApi2faTR> M2FATokenResponse(string user, string code)
+Task<Models.TwoFactorAuthenticationTokenModelResponse> M2FATokenResponse(Models.M2FATokenResponseInput input)
 ```
 
 #### Parameters
@@ -842,10 +929,16 @@ Task<Models.HttpsApiRestShApi2faTR> M2FATokenResponse(string user, string code)
 #### Example Usage
 
 ```csharp
-string user = "user";
-string code = "code";
+M2FATokenResponseInput collect = new M2FATokenResponseInput();
 
-Models.HttpsApiRestShApi2faTR result = await twoFactorAuthenticationAPI.M2FATokenResponse(user, code);
+string user = "user";
+collect.User = user;
+
+string code = "code";
+collect.Code = code;
+
+
+Models.TwoFactorAuthenticationTokenModelResponse result = await twoFactorAuthenticationAPI.M2FATokenResponse(collect);
 
 ```
 
@@ -856,7 +949,7 @@ Models.HttpsApiRestShApi2faTR result = await twoFactorAuthenticationAPI.M2FAToke
 
 
 ```csharp
-Task<Models.HttpsApiRestShApi2faR> TwoFactorAuthentication(string to)
+Task<Models.TwoFactorAuthenticationModelResponse> TwoFactorAuthentication(string to)
 ```
 
 #### Parameters
@@ -871,7 +964,7 @@ Task<Models.HttpsApiRestShApi2faR> TwoFactorAuthentication(string to)
 ```csharp
 string to = "to";
 
-Models.HttpsApiRestShApi2faR result = await twoFactorAuthenticationAPI.TwoFactorAuthentication(to);
+Models.TwoFactorAuthenticationModelResponse result = await twoFactorAuthenticationAPI.TwoFactorAuthentication(to);
 
 ```
 
@@ -894,7 +987,7 @@ IUserManagement userManagement = client.UserManagement;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUIR> GetUserInfo(string user)
+Task<Models.UserInformationModelResponse> GetUserInfo(string user)
 ```
 
 #### Parameters
@@ -909,7 +1002,7 @@ Task<Models.HttpsApiRestShApiUIR> GetUserInfo(string user)
 ```csharp
 string user = "user";
 
-Models.HttpsApiRestShApiUIR result = await userManagement.GetUserInfo(user);
+Models.UserInformationModelResponse result = await userManagement.GetUserInfo(user);
 
 ```
 
@@ -920,11 +1013,7 @@ Models.HttpsApiRestShApiUIR result = await userManagement.GetUserInfo(user);
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUUR> UpdateUser(
-        string user,
-        string avatar,
-        string customInput,
-        Dictionary<string, object> queryParameters = null)
+Task<Models.UserUpdateModelResponse> UpdateUser(Models.UpdateUserInput input, Dictionary<string, object> queryParameters = null)
 ```
 
 #### Parameters
@@ -940,14 +1029,22 @@ Task<Models.HttpsApiRestShApiUUR> UpdateUser(
 #### Example Usage
 
 ```csharp
+UpdateUserInput collect = new UpdateUserInput();
+
 string user = "user";
+collect.User = user;
+
 string avatar = "avatar";
+collect.Avatar = avatar;
+
 string customInput = "custom input";
+collect.CustomInput = customInput;
+
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
 
-Models.HttpsApiRestShApiUUR result = await userManagement.UpdateUser(user, avatar, customInput, queryParams);
+Models.UserUpdateModelResponse result = await userManagement.UpdateUser(collect, queryParams, );
 
 ```
 
@@ -958,7 +1055,7 @@ Models.HttpsApiRestShApiUUR result = await userManagement.UpdateUser(user, avata
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUDR> DeleteUser(string user)
+Task<Models.UserDeletionResponseModel> DeleteUser(string user)
 ```
 
 #### Parameters
@@ -973,7 +1070,7 @@ Task<Models.HttpsApiRestShApiUDR> DeleteUser(string user)
 ```csharp
 string user = "user";
 
-Models.HttpsApiRestShApiUDR result = await userManagement.DeleteUser(user);
+Models.UserDeletionResponseModel result = await userManagement.DeleteUser(user);
 
 ```
 
@@ -996,15 +1093,7 @@ ILoginAndRegistration loginAndRegistration = client.LoginAndRegistration;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiAURR> UserRegistration(
-        string email,
-        string user,
-        string password,
-        string name = null,
-        int? phone = null,
-        int? countrycode = null,
-        string address = null,
-        Dictionary<string, object> queryParameters = null)
+Task<Models.UserRegistrationModelResponse> UserRegistration(Models.UserRegistrationInput input, Dictionary<string, object> queryParameters = null)
 ```
 
 #### Parameters
@@ -1024,18 +1113,34 @@ Task<Models.HttpsApiRestShApiAURR> UserRegistration(
 #### Example Usage
 
 ```csharp
+UserRegistrationInput collect = new UserRegistrationInput();
+
 string email = "email";
+collect.Email = email;
+
 string user = "user";
+collect.User = user;
+
 string password = "password";
+collect.Password = password;
+
 string name = "name";
-int? phone = 28;
-int? countrycode = 28;
+collect.Name = name;
+
+int? phone = 232;
+collect.Phone = phone;
+
+int? countrycode = 232;
+collect.Countrycode = countrycode;
+
 string address = "address";
+collect.Address = address;
+
 // key-value map for optional query parameters
 var queryParams = new Dictionary<string, object>();
 
 
-Models.HttpsApiRestShApiAURR result = await loginAndRegistration.UserRegistration(email, user, password, name, phone, countrycode, address, queryParams);
+Models.UserRegistrationModelResponse result = await loginAndRegistration.UserRegistration(collect, queryParams, );
 
 ```
 
@@ -1046,7 +1151,7 @@ Models.HttpsApiRestShApiAURR result = await loginAndRegistration.UserRegistratio
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiAULR> UserAuthentication(string user, string password)
+Task<Models.UserAuthenticationModelResponse> UserAuthentication(Models.UserAuthenticationInput input)
 ```
 
 #### Parameters
@@ -1060,10 +1165,16 @@ Task<Models.HttpsApiRestShApiAULR> UserAuthentication(string user, string passwo
 #### Example Usage
 
 ```csharp
-string user = "user";
-string password = "password";
+UserAuthenticationInput collect = new UserAuthenticationInput();
 
-Models.HttpsApiRestShApiAULR result = await loginAndRegistration.UserAuthentication(user, password);
+string user = "user";
+collect.User = user;
+
+string password = "password";
+collect.Password = password;
+
+
+Models.UserAuthenticationModelResponse result = await loginAndRegistration.UserAuthentication(collect);
 
 ```
 

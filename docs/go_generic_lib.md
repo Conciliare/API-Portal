@@ -271,10 +271,7 @@ advancedLogging := advancedlogging_pkg.NewADVANCEDLOGGING()
 
 
 ```go
-func (me *ADVANCEDLOGGING_IMPL) LoggingConfiguration(
-            name string,
-            origin string,
-            activate string)(*models_pkg.HttpsApiRestShApiSLR,error)
+func (me *ADVANCEDLOGGING_IMPL) LoggingConfiguration(input *LoggingConfigurationInput)(*models_pkg.LoggingSetupModelResponse,error)
 ```
 
 #### Parameters
@@ -289,12 +286,20 @@ func (me *ADVANCEDLOGGING_IMPL) LoggingConfiguration(
 #### Example Usage
 
 ```go
-name := "name"
-origin := "origin"
-activate := "activate"
+collect := new (advancedlogging_pkg.LoggingConfigurationInput)
 
-var result *models_pkg.HttpsApiRestShApiSLR
-result,_ = advancedLogging.LoggingConfiguration(name, origin, activate)
+name := "name"
+collect.Name = name
+
+origin := "origin"
+collect.Origin = origin
+
+activate := "activate"
+collect.Activate = activate
+
+
+var result *models_pkg.LoggingSetupModelResponse
+result,_ = advancedLogging.LoggingConfiguration(collect)
 
 ```
 
@@ -305,10 +310,7 @@ result,_ = advancedLogging.LoggingConfiguration(name, origin, activate)
 
 
 ```go
-func (me *ADVANCEDLOGGING_IMPL) LoggingInfo(
-            name string,
-            origin string,
-            time *string)(*models_pkg.HttpsApiRestShApiSLIR,error)
+func (me *ADVANCEDLOGGING_IMPL) LoggingInfo(input *LoggingInfoInput)(*models_pkg.LoggingLogsModelResponse,error)
 ```
 
 #### Parameters
@@ -323,12 +325,20 @@ func (me *ADVANCEDLOGGING_IMPL) LoggingInfo(
 #### Example Usage
 
 ```go
-name := "name"
-origin := "origin"
-time := "time"
+collect := new (advancedlogging_pkg.LoggingInfoInput)
 
-var result *models_pkg.HttpsApiRestShApiSLIR
-result,_ = advancedLogging.LoggingInfo(name, origin, time)
+name := "name"
+collect.Name = name
+
+origin := "origin"
+collect.Origin = origin
+
+time := "time"
+collect.Time = time
+
+
+var result *models_pkg.LoggingLogsModelResponse
+result,_ = advancedLogging.LoggingInfo(collect)
 
 ```
 
@@ -351,9 +361,7 @@ wAFAndDDOSProtection := wafandddosprotection_pkg.NewWAFANDDDOSPROTECTION()
 
 
 ```go
-func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(
-            name string,
-            rule string)(*models_pkg.HttpsApiRestShApiSWCR,error)
+func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(input *HttpsApiRestShApiSWCInput)(*models_pkg.WAFConfigurationModelResponse,error)
 ```
 
 #### Parameters
@@ -367,11 +375,17 @@ func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(
 #### Example Usage
 
 ```go
-name := "name"
-rule := "rule"
+collect := new (wafandddosprotection_pkg.HttpsApiRestShApiSWCInput)
 
-var result *models_pkg.HttpsApiRestShApiSWCR
-result,_ = wAFAndDDOSProtection.HttpsApiRestShApiSWC(name, rule)
+name := "name"
+collect.Name = name
+
+rule := "rule"
+collect.Rule = rule
+
+
+var result *models_pkg.WAFConfigurationModelResponse
+result,_ = wAFAndDDOSProtection.HttpsApiRestShApiSWC(collect)
 
 ```
 
@@ -382,9 +396,7 @@ result,_ = wAFAndDDOSProtection.HttpsApiRestShApiSWC(name, rule)
 
 
 ```go
-func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(
-            origin string,
-            cname string)(*models_pkg.HttpsApiRestShApiSWR,error)
+func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(input *HttpsApiRestShApiSWInput)(*models_pkg.WAFCreationModelResponse,error)
 ```
 
 #### Parameters
@@ -398,11 +410,17 @@ func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(
 #### Example Usage
 
 ```go
-origin := "origin"
-cname := "cname"
+collect := new (wafandddosprotection_pkg.HttpsApiRestShApiSWInput)
 
-var result *models_pkg.HttpsApiRestShApiSWR
-result,_ = wAFAndDDOSProtection.HttpsApiRestShApiSW(origin, cname)
+origin := "origin"
+collect.Origin = origin
+
+cname := "cname"
+collect.Cname = cname
+
+
+var result *models_pkg.WAFCreationModelResponse
+result,_ = wAFAndDDOSProtection.HttpsApiRestShApiSW(collect)
 
 ```
 
@@ -425,10 +443,7 @@ encryption := encryption_pkg.NewENCRYPTION()
 
 
 ```go
-func (me *ENCRYPTION_IMPL) DataAndFileEncryption(
-            data string,
-            method string,
-            bit int64)(*models_pkg.HttpsApiRestShApiSER,error)
+func (me *ENCRYPTION_IMPL) DataAndFileEncryption(input *DataAndFileEncryptionInput)(*models_pkg.EncryptionModelResponse,error)
 ```
 
 #### Parameters
@@ -443,12 +458,20 @@ func (me *ENCRYPTION_IMPL) DataAndFileEncryption(
 #### Example Usage
 
 ```go
-data := "data"
-method := "method"
-bit,_ := strconv.ParseInt("120", 10, 8)
+collect := new (encryption_pkg.DataAndFileEncryptionInput)
 
-var result *models_pkg.HttpsApiRestShApiSER
-result,_ = encryption.DataAndFileEncryption(data, method, bit)
+data := "data"
+collect.Data = data
+
+method := "method"
+collect.Method = method
+
+bit,_ := strconv.ParseInt("68", 10, 8)
+collect.Bit = bit
+
+
+var result *models_pkg.EncryptionModelResponse
+result,_ = encryption.DataAndFileEncryption(collect)
 
 ```
 
@@ -471,9 +494,7 @@ cDN := cdn_pkg.NewCDN()
 
 
 ```go
-func (me *CDN_IMPL) CDNPushZone(
-            cname string,
-            file string)(*models_pkg.HttpsApiRestShApiSCPushR,error)
+func (me *CDN_IMPL) CDNPushZone(input *CDNPushZoneInput)(*models_pkg.CDNPushModelResponse,error)
 ```
 
 #### Parameters
@@ -487,11 +508,17 @@ func (me *CDN_IMPL) CDNPushZone(
 #### Example Usage
 
 ```go
-cname := "cname"
-file := "file"
+collect := new (cdn_pkg.CDNPushZoneInput)
 
-var result *models_pkg.HttpsApiRestShApiSCPushR
-result,_ = cDN.CDNPushZone(cname, file)
+cname := "cname"
+collect.Cname = cname
+
+file := "file"
+collect.File = file
+
+
+var result *models_pkg.CDNPushModelResponse
+result,_ = cDN.CDNPushZone(collect)
 
 ```
 
@@ -502,9 +529,7 @@ result,_ = cDN.CDNPushZone(cname, file)
 
 
 ```go
-func (me *CDN_IMPL) CDNPullZone(
-            origin string,
-            cname string)(*models_pkg.HttpsApiRestShApiSCPullR,error)
+func (me *CDN_IMPL) CDNPullZone(input *CDNPullZoneInput)(*models_pkg.CDNPullModelResponse,error)
 ```
 
 #### Parameters
@@ -518,11 +543,17 @@ func (me *CDN_IMPL) CDNPullZone(
 #### Example Usage
 
 ```go
-origin := "origin"
-cname := "cname"
+collect := new (cdn_pkg.CDNPullZoneInput)
 
-var result *models_pkg.HttpsApiRestShApiSCPullR
-result,_ = cDN.CDNPullZone(origin, cname)
+origin := "origin"
+collect.Origin = origin
+
+cname := "cname"
+collect.Cname = cname
+
+
+var result *models_pkg.CDNPullModelResponse
+result,_ = cDN.CDNPullZone(collect)
 
 ```
 
@@ -545,9 +576,7 @@ dNS := dns_pkg.NewDNS()
 
 
 ```go
-func (me *DNS_IMPL) DNSConfiguration(
-            domain string,
-            records string)(*models_pkg.HttpsApiRestShApiSDCR,error)
+func (me *DNS_IMPL) DNSConfiguration(input *DNSConfigurationInput)(*models_pkg.DNSConfigurationModelResponse,error)
 ```
 
 #### Parameters
@@ -561,11 +590,17 @@ func (me *DNS_IMPL) DNSConfiguration(
 #### Example Usage
 
 ```go
-domain := "domain"
-records := "records"
+collect := new (dns_pkg.DNSConfigurationInput)
 
-var result *models_pkg.HttpsApiRestShApiSDCR
-result,_ = dNS.DNSConfiguration(domain, records)
+domain := "domain"
+collect.Domain = domain
+
+records := "records"
+collect.Records = records
+
+
+var result *models_pkg.DNSConfigurationModelResponse
+result,_ = dNS.DNSConfiguration(collect)
 
 ```
 
@@ -576,7 +611,7 @@ result,_ = dNS.DNSConfiguration(domain, records)
 
 
 ```go
-func (me *DNS_IMPL) DNSCreation(domain string)(*models_pkg.HttpsApiRestShApiSDAR,error)
+func (me *DNS_IMPL) DNSCreation(domain string)(*models_pkg.DNSCreationModelResponse,error)
 ```
 
 #### Parameters
@@ -591,7 +626,7 @@ func (me *DNS_IMPL) DNSCreation(domain string)(*models_pkg.HttpsApiRestShApiSDAR
 ```go
 domain := "domain"
 
-var result *models_pkg.HttpsApiRestShApiSDAR
+var result *models_pkg.DNSCreationModelResponse
 result,_ = dNS.DNSCreation(domain)
 
 ```
@@ -615,7 +650,7 @@ codeObfuscation := codeobfuscation_pkg.NewCODEOBFUSCATION()
 
 
 ```go
-func (me *CODEOBFUSCATION_IMPL) ObfuscationAndAntiTampering(app string)(*models_pkg.HttpsApiRestShApiSOR,error)
+func (me *CODEOBFUSCATION_IMPL) ObfuscationAndAntiTampering(app string)(*models_pkg.CodeProtectionModelResponse,error)
 ```
 
 #### Parameters
@@ -630,7 +665,7 @@ func (me *CODEOBFUSCATION_IMPL) ObfuscationAndAntiTampering(app string)(*models_
 ```go
 app := "app"
 
-var result *models_pkg.HttpsApiRestShApiSOR
+var result *models_pkg.CodeProtectionModelResponse
 result,_ = codeObfuscation.ObfuscationAndAntiTampering(app)
 
 ```
@@ -654,9 +689,7 @@ hosting := hosting_pkg.NewHOSTING()
 
 
 ```go
-func (me *HOSTING_IMPL) HostingSetup(
-            app string,
-            domain string)(*models_pkg.HttpsApiRestShApiSHR,error)
+func (me *HOSTING_IMPL) HostingSetup(input *HostingSetupInput)(*models_pkg.HostingModelResponse,error)
 ```
 
 #### Parameters
@@ -670,11 +703,17 @@ func (me *HOSTING_IMPL) HostingSetup(
 #### Example Usage
 
 ```go
-app := "app"
-domain := "domain"
+collect := new (hosting_pkg.HostingSetupInput)
 
-var result *models_pkg.HttpsApiRestShApiSHR
-result,_ = hosting.HostingSetup(app, domain)
+app := "app"
+collect.App = app
+
+domain := "domain"
+collect.Domain = domain
+
+
+var result *models_pkg.HostingModelResponse
+result,_ = hosting.HostingSetup(collect)
 
 ```
 
@@ -697,9 +736,7 @@ dataManipulation := datamanipulation_pkg.NewDATAMANIPULATION()
 
 
 ```go
-func (me *DATAMANIPULATION_IMPL) HttpsApiRestShApiD(
-            data string,
-            transform string)(*models_pkg.HttpsApiRestShApiDR,error)
+func (me *DATAMANIPULATION_IMPL) HttpsApiRestShApiD(input *HttpsApiRestShApiDInput)(*models_pkg.DataManipulationModelResponse,error)
 ```
 
 #### Parameters
@@ -713,11 +750,17 @@ func (me *DATAMANIPULATION_IMPL) HttpsApiRestShApiD(
 #### Example Usage
 
 ```go
-data := "data"
-transform := "transform"
+collect := new (datamanipulation_pkg.HttpsApiRestShApiDInput)
 
-var result *models_pkg.HttpsApiRestShApiDR
-result,_ = dataManipulation.HttpsApiRestShApiD(data, transform)
+data := "data"
+collect.Data = data
+
+transform := "transform"
+collect.Transform = transform
+
+
+var result *models_pkg.DataManipulationModelResponse
+result,_ = dataManipulation.HttpsApiRestShApiD(collect)
 
 ```
 
@@ -740,9 +783,7 @@ imageManipulation := imagemanipulation_pkg.NewIMAGEMANIPULATION()
 
 
 ```go
-func (me *IMAGEMANIPULATION_IMPL) ImageManipulation(
-            image string,
-            transform string)(*models_pkg.HttpsApiRestShApiIR,error)
+func (me *IMAGEMANIPULATION_IMPL) ImageManipulation(input *ImageManipulationInput)(*models_pkg.ImageManipulationModelResponse,error)
 ```
 
 #### Parameters
@@ -756,11 +797,17 @@ func (me *IMAGEMANIPULATION_IMPL) ImageManipulation(
 #### Example Usage
 
 ```go
-image := "image"
-transform := "transform"
+collect := new (imagemanipulation_pkg.ImageManipulationInput)
 
-var result *models_pkg.HttpsApiRestShApiIR
-result,_ = imageManipulation.ImageManipulation(image, transform)
+image := "image"
+collect.Image = image
+
+transform := "transform"
+collect.Transform = transform
+
+
+var result *models_pkg.ImageManipulationModelResponse
+result,_ = imageManipulation.ImageManipulation(collect)
 
 ```
 
@@ -783,14 +830,7 @@ verification := verification_pkg.NewVERIFICATION()
 
 
 ```go
-func (me *VERIFICATION_IMPL) UserAddressVerification(
-            user string,
-            a string,
-            sa string,
-            c string,
-            s string,
-            z int64,
-            address *string)(*models_pkg.HttpsApiRestShApiVAR,error)
+func (me *VERIFICATION_IMPL) UserAddressVerification(input *UserAddressVerificationInput)(*models_pkg.VerifyAddressResponse,error)
 ```
 
 #### Parameters
@@ -809,16 +849,32 @@ func (me *VERIFICATION_IMPL) UserAddressVerification(
 #### Example Usage
 
 ```go
-user := "user"
-a := "a"
-sa := "sa"
-c := "c"
-s := "s"
-z,_ := strconv.ParseInt("78", 10, 8)
-address := "address"
+collect := new (verification_pkg.UserAddressVerificationInput)
 
-var result *models_pkg.HttpsApiRestShApiVAR
-result,_ = verification.UserAddressVerification(user, a, sa, c, s, z, address)
+user := "user"
+collect.User = user
+
+a := "a"
+collect.A = a
+
+sa := "sa"
+collect.Sa = sa
+
+c := "c"
+collect.C = c
+
+s := "s"
+collect.S = s
+
+z,_ := strconv.ParseInt("26", 10, 8)
+collect.Z = z
+
+address := "address"
+collect.Address = address
+
+
+var result *models_pkg.VerifyAddressResponse
+result,_ = verification.UserAddressVerification(collect)
 
 ```
 
@@ -829,9 +885,7 @@ result,_ = verification.UserAddressVerification(user, a, sa, c, s, z, address)
 
 
 ```go
-func (me *VERIFICATION_IMPL) UserVerificationResponse(
-            user string,
-            code string)(*models_pkg.HttpsApiRestShApiVUR,error)
+func (me *VERIFICATION_IMPL) UserVerificationResponse(input *UserVerificationResponseInput)(*models_pkg.VerifyUserModelResponse,error)
 ```
 
 #### Parameters
@@ -845,11 +899,17 @@ func (me *VERIFICATION_IMPL) UserVerificationResponse(
 #### Example Usage
 
 ```go
-user := "user"
-code := "code"
+collect := new (verification_pkg.UserVerificationResponseInput)
 
-var result *models_pkg.HttpsApiRestShApiVUR
-result,_ = verification.UserVerificationResponse(user, code)
+user := "user"
+collect.User = user
+
+code := "code"
+collect.Code = code
+
+
+var result *models_pkg.VerifyUserModelResponse
+result,_ = verification.UserVerificationResponse(collect)
 
 ```
 
@@ -860,7 +920,7 @@ result,_ = verification.UserVerificationResponse(user, code)
 
 
 ```go
-func (me *VERIFICATION_IMPL) UserVerification(user string)(*models_pkg.HttpsApiRestShApiVR,error)
+func (me *VERIFICATION_IMPL) UserVerification(user string)(*models_pkg.VerifyModelResponse,error)
 ```
 
 #### Parameters
@@ -875,7 +935,7 @@ func (me *VERIFICATION_IMPL) UserVerification(user string)(*models_pkg.HttpsApiR
 ```go
 user := "user"
 
-var result *models_pkg.HttpsApiRestShApiVR
+var result *models_pkg.VerifyModelResponse
 result,_ = verification.UserVerification(user)
 
 ```
@@ -899,9 +959,7 @@ twoFactorAuthenticationAPI := twofactorauthenticationapi_pkg.NewTWOFACTORAUTHENT
 
 
 ```go
-func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) M2FATokenResponse(
-            user string,
-            code string)(*models_pkg.HttpsApiRestShApi2faTR,error)
+func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) M2FATokenResponse(input *M2FATokenResponseInput)(*models_pkg.TwoFactorAuthenticationTokenModelResponse,error)
 ```
 
 #### Parameters
@@ -915,11 +973,17 @@ func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) M2FATokenResponse(
 #### Example Usage
 
 ```go
-user := "user"
-code := "code"
+collect := new (twofactorauthenticationapi_pkg.M2FATokenResponseInput)
 
-var result *models_pkg.HttpsApiRestShApi2faTR
-result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(user, code)
+user := "user"
+collect.User = user
+
+code := "code"
+collect.Code = code
+
+
+var result *models_pkg.TwoFactorAuthenticationTokenModelResponse
+result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(collect)
 
 ```
 
@@ -930,7 +994,7 @@ result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(user, code)
 
 
 ```go
-func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) TwoFactorAuthentication(to string)(*models_pkg.HttpsApiRestShApi2faR,error)
+func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) TwoFactorAuthentication(to string)(*models_pkg.TwoFactorAuthenticationModelResponse,error)
 ```
 
 #### Parameters
@@ -945,7 +1009,7 @@ func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) TwoFactorAuthentication(to string)(*m
 ```go
 to := "to"
 
-var result *models_pkg.HttpsApiRestShApi2faR
+var result *models_pkg.TwoFactorAuthenticationModelResponse
 result,_ = twoFactorAuthenticationAPI.TwoFactorAuthentication(to)
 
 ```
@@ -969,7 +1033,7 @@ userManagement := usermanagement_pkg.NewUSERMANAGEMENT()
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) GetUserInfo(user string)(*models_pkg.HttpsApiRestShApiUIR,error)
+func (me *USERMANAGEMENT_IMPL) GetUserInfo(user string)(*models_pkg.UserInformationModelResponse,error)
 ```
 
 #### Parameters
@@ -984,7 +1048,7 @@ func (me *USERMANAGEMENT_IMPL) GetUserInfo(user string)(*models_pkg.HttpsApiRest
 ```go
 user := "user"
 
-var result *models_pkg.HttpsApiRestShApiUIR
+var result *models_pkg.UserInformationModelResponse
 result,_ = userManagement.GetUserInfo(user)
 
 ```
@@ -996,11 +1060,7 @@ result,_ = userManagement.GetUserInfo(user)
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) UpdateUser(
-            user string,
-            avatar string,
-            customInput string,
-                queryParameters map[string]interface{})(*models_pkg.HttpsApiRestShApiUUR,error)
+func (me *USERMANAGEMENT_IMPL) UpdateUser(input *UpdateUserInput, queryParameters map[string]interface{})(*models_pkg.UserUpdateModelResponse,error)
 ```
 
 #### Parameters
@@ -1016,15 +1076,23 @@ func (me *USERMANAGEMENT_IMPL) UpdateUser(
 #### Example Usage
 
 ```go
+collect := new (usermanagement_pkg.UpdateUserInput)
+
 user := "user"
+collect.User = user
+
 avatar := "avatar"
+collect.Avatar = avatar
+
 customInput := "custom input"
+collect.CustomInput = customInput
+
 // key-value map for optional query parameters
 	queryParams := map[string]interface{}{"key" : "value"}
 
 
-var result *models_pkg.HttpsApiRestShApiUUR
-result,_ = userManagement.UpdateUser(user, avatar, customInput, queryParams)
+var result *models_pkg.UserUpdateModelResponse
+result,_ = userManagement.UpdateUser(collect, queryParams, )
 
 ```
 
@@ -1035,7 +1103,7 @@ result,_ = userManagement.UpdateUser(user, avatar, customInput, queryParams)
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) DeleteUser(user string)(*models_pkg.HttpsApiRestShApiUDR,error)
+func (me *USERMANAGEMENT_IMPL) DeleteUser(user string)(*models_pkg.UserDeletionResponseModel,error)
 ```
 
 #### Parameters
@@ -1050,7 +1118,7 @@ func (me *USERMANAGEMENT_IMPL) DeleteUser(user string)(*models_pkg.HttpsApiRestS
 ```go
 user := "user"
 
-var result *models_pkg.HttpsApiRestShApiUDR
+var result *models_pkg.UserDeletionResponseModel
 result,_ = userManagement.DeleteUser(user)
 
 ```
@@ -1074,15 +1142,7 @@ loginAndRegistration := loginandregistration_pkg.NewLOGINANDREGISTRATION()
 
 
 ```go
-func (me *LOGINANDREGISTRATION_IMPL) UserRegistration(
-            email string,
-            user string,
-            password string,
-            name *string,
-            phone *int64,
-            countrycode *int64,
-            address *string,
-                queryParameters map[string]interface{})(*models_pkg.HttpsApiRestShApiAURR,error)
+func (me *LOGINANDREGISTRATION_IMPL) UserRegistration(input *UserRegistrationInput, queryParameters map[string]interface{})(*models_pkg.UserRegistrationModelResponse,error)
 ```
 
 #### Parameters
@@ -1102,19 +1162,35 @@ func (me *LOGINANDREGISTRATION_IMPL) UserRegistration(
 #### Example Usage
 
 ```go
+collect := new (loginandregistration_pkg.UserRegistrationInput)
+
 email := "email"
+collect.Email = email
+
 user := "user"
+collect.User = user
+
 password := "password"
+collect.Password = password
+
 name := "name"
-phone,_ := strconv.ParseInt("78", 10, 8)
-countrycode,_ := strconv.ParseInt("78", 10, 8)
+collect.Name = name
+
+phone,_ := strconv.ParseInt("26", 10, 8)
+collect.Phone = phone
+
+countrycode,_ := strconv.ParseInt("26", 10, 8)
+collect.Countrycode = countrycode
+
 address := "address"
+collect.Address = address
+
 // key-value map for optional query parameters
 	queryParams := map[string]interface{}{"key" : "value"}
 
 
-var result *models_pkg.HttpsApiRestShApiAURR
-result,_ = loginAndRegistration.UserRegistration(email, user, password, name, phone, countrycode, address, queryParams)
+var result *models_pkg.UserRegistrationModelResponse
+result,_ = loginAndRegistration.UserRegistration(collect, queryParams, )
 
 ```
 
@@ -1125,9 +1201,7 @@ result,_ = loginAndRegistration.UserRegistration(email, user, password, name, ph
 
 
 ```go
-func (me *LOGINANDREGISTRATION_IMPL) UserAuthentication(
-            user string,
-            password string)(*models_pkg.HttpsApiRestShApiAULR,error)
+func (me *LOGINANDREGISTRATION_IMPL) UserAuthentication(input *UserAuthenticationInput)(*models_pkg.UserAuthenticationModelResponse,error)
 ```
 
 #### Parameters
@@ -1141,11 +1215,17 @@ func (me *LOGINANDREGISTRATION_IMPL) UserAuthentication(
 #### Example Usage
 
 ```go
-user := "user"
-password := "password"
+collect := new (loginandregistration_pkg.UserAuthenticationInput)
 
-var result *models_pkg.HttpsApiRestShApiAULR
-result,_ = loginAndRegistration.UserAuthentication(user, password)
+user := "user"
+collect.User = user
+
+password := "password"
+collect.Password = password
+
+
+var result *models_pkg.UserAuthenticationModelResponse
+result,_ = loginAndRegistration.UserAuthentication(collect)
 
 ```
 
