@@ -312,14 +312,14 @@ function loggingInfoAsyncWithLoggingInfoInput:(LoggingInfoInput*) input
 WAFAndDDOSProtection* wAFAndDDOSProtection = [[WAFAndDDOSProtection alloc]init] ;
 ```
 
-### <a name="https_api_rest_sh_api_swc_async_with_https_api_rest_sh_api_swc_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWCAsyncWithHttpsApiRestShApiSWCInput") httpsApiRestShApiSWCAsyncWithHttpsApiRestShApiSWCInput
+### <a name="w_af_configuration_async_with_waf_configuration_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.wAFConfigurationAsyncWithWAFConfigurationInput") wAFConfigurationAsyncWithWAFConfigurationInput
 
 > WAF and DDOS Configuration
 
 
 ```objc
-function httpsApiRestShApiSWCAsyncWithHttpsApiRestShApiSWCInput:(HttpsApiRestShApiSWCInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiSWC) onCompleted(input)
+function wAFConfigurationAsyncWithWAFConfigurationInput:(WAFConfigurationInput*) input
+                completionBlock:(CompletedGetWAFConfiguration) onCompleted(input)
 ```
 
 #### Parameters
@@ -337,24 +337,24 @@ function httpsApiRestShApiSWCAsyncWithHttpsApiRestShApiSWCInput:(HttpsApiRestShA
 
 ```objc
     // Parameters for the API call
-    HttpsApiRestShApiSWCInput *input = [[HttpsApiRestShApiSWCInput alloc]init];
+    WAFConfigurationInput *input = [[WAFConfigurationInput alloc]init];
     input.name = @"name";
     input.rule = @"rule";
 
-    [self.wAFAndDDOSProtection httpsApiRestShApiSWCAsyncWithHttpsApiRestShApiSWCInput: input completionBlock:^(BOOL success, HttpContext* context, WAFConfigurationModelResponse* response, NSError* error) { 
+    [self.wAFAndDDOSProtection wAFConfigurationAsyncWithWAFConfigurationInput: input completionBlock:^(BOOL success, HttpContext* context, WAFConfigurationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="https_api_rest_sh_api_sw_async_with_https_api_rest_sh_api_sw_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWAsyncWithHttpsApiRestShApiSWInput") httpsApiRestShApiSWAsyncWithHttpsApiRestShApiSWInput
+### <a name="w_af_creation_async_with_waf_creation_input"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.wAFCreationAsyncWithWAFCreationInput") wAFCreationAsyncWithWAFCreationInput
 
 > WAF and DDOS Creation
 
 
 ```objc
-function httpsApiRestShApiSWAsyncWithHttpsApiRestShApiSWInput:(HttpsApiRestShApiSWInput*) input
-                completionBlock:(CompletedGetHttpsApiRestShApiSW) onCompleted(input)
+function wAFCreationAsyncWithWAFCreationInput:(WAFCreationInput*) input
+                completionBlock:(CompletedGetWAFCreation) onCompleted(input)
 ```
 
 #### Parameters
@@ -372,11 +372,11 @@ function httpsApiRestShApiSWAsyncWithHttpsApiRestShApiSWInput:(HttpsApiRestShApi
 
 ```objc
     // Parameters for the API call
-    HttpsApiRestShApiSWInput *input = [[HttpsApiRestShApiSWInput alloc]init];
+    WAFCreationInput *input = [[WAFCreationInput alloc]init];
     input.origin = @"origin";
     input.cname = @"cname";
 
-    [self.wAFAndDDOSProtection httpsApiRestShApiSWAsyncWithHttpsApiRestShApiSWInput: input completionBlock:^(BOOL success, HttpContext* context, WAFCreationModelResponse* response, NSError* error) { 
+    [self.wAFAndDDOSProtection wAFCreationAsyncWithWAFCreationInput: input completionBlock:^(BOOL success, HttpContext* context, WAFCreationModelResponse* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -420,7 +420,7 @@ function dataAndFileEncryptionAsyncWithDataAndFileEncryptionInput:(DataAndFileEn
     DataAndFileEncryptionInput *input = [[DataAndFileEncryptionInput alloc]init];
     input.data = @"data";
     input.method = @"method";
-    input.bit = 168;
+    input.bit = 20;
 
     [self.encryption dataAndFileEncryptionAsyncWithDataAndFileEncryptionInput: input completionBlock:^(BOOL success, HttpContext* context, EncryptionModelResponse* response, NSError* error) { 
        //Add code here
@@ -801,7 +801,7 @@ function userAddressVerificationAsyncWithUserAddressVerificationInput:(UserAddre
     input.sa = @"sa";
     input.c = @"c";
     input.s = @"s";
-    input.z = 168;
+    input.z = 20;
     input.address = @"address";
 
     [self.verification userAddressVerificationAsyncWithUserAddressVerificationInput: input completionBlock:^(BOOL success, HttpContext* context, VerifyAddressResponse* response, NSError* error) { 
@@ -1114,8 +1114,8 @@ function userRegistrationAsyncWithUserRegistrationInput:(UserRegistrationInput*)
     input.user = @"user";
     input.password = @"password";
     input.name = @"name";
-    input.phone = 4;
-    input.countrycode = 4;
+    input.phone = 112;
+    input.countrycode = 112;
     input.address = @"address";
     // Dictionary for optional query parameters
     NSMutableDictionary* queryParamsMutable = [[NSMutableDictionary alloc] init];

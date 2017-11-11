@@ -373,14 +373,14 @@ The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed
 WAFAndDDOSProtection wAFAndDDOSProtection = client.getWAFAndDDOSProtection();
 ```
 
-### <a name="https_api_rest_sh_api_swc_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFAndDDOSProtection.httpsApiRestShApiSWCAsync") httpsApiRestShApiSWCAsync
+### <a name="w_af_configuration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFAndDDOSProtection.wAFConfigurationAsync") wAFConfigurationAsync
 
 > WAF and DDOS Configuration
 
 
 ```java
-void httpsApiRestShApiSWCAsync(
-        final HttpsApiRestShApiSWCInput input,
+void wAFConfigurationAsync(
+        final WAFConfigurationInput input,
         final APICallBack<WAFConfigurationModelResponse> callBack)
 ```
 
@@ -395,7 +395,7 @@ void httpsApiRestShApiSWCAsync(
 #### Example Usage
 
 ```java
-HttpsApiRestShApiSWCInput collect = new HttpsApiRestShApiSWCInput();
+WAFConfigurationInput collect = new WAFConfigurationInput();
 
 String name = "name";
 collect.setName(name);
@@ -404,7 +404,7 @@ String rule = "rule";
 collect.setRule(rule);
 
 // Invoking the API call with sample inputs
-wAFAndDDOSProtection.httpsApiRestShApiSWCAsync(collect, new APICallBack<WAFConfigurationModelResponse>() {
+wAFAndDDOSProtection.wAFConfigurationAsync(collect, new APICallBack<WAFConfigurationModelResponse>() {
     public void onSuccess(HttpContext context, WAFConfigurationModelResponse response) {
         // TODO success callback handler
     }
@@ -417,14 +417,14 @@ wAFAndDDOSProtection.httpsApiRestShApiSWCAsync(collect, new APICallBack<WAFConfi
 ```
 
 
-### <a name="https_api_rest_sh_api_sw_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFAndDDOSProtection.httpsApiRestShApiSWAsync") httpsApiRestShApiSWAsync
+### <a name="w_af_creation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.WAFAndDDOSProtection.wAFCreationAsync") wAFCreationAsync
 
 > WAF and DDOS Creation
 
 
 ```java
-void httpsApiRestShApiSWAsync(
-        final HttpsApiRestShApiSWInput input,
+void wAFCreationAsync(
+        final WAFCreationInput input,
         final APICallBack<WAFCreationModelResponse> callBack)
 ```
 
@@ -439,7 +439,7 @@ void httpsApiRestShApiSWAsync(
 #### Example Usage
 
 ```java
-HttpsApiRestShApiSWInput collect = new HttpsApiRestShApiSWInput();
+WAFCreationInput collect = new WAFCreationInput();
 
 String origin = "origin";
 collect.setOrigin(origin);
@@ -448,7 +448,7 @@ String cname = "cname";
 collect.setCname(cname);
 
 // Invoking the API call with sample inputs
-wAFAndDDOSProtection.httpsApiRestShApiSWAsync(collect, new APICallBack<WAFCreationModelResponse>() {
+wAFAndDDOSProtection.wAFCreationAsync(collect, new APICallBack<WAFCreationModelResponse>() {
     public void onSuccess(HttpContext context, WAFCreationModelResponse response) {
         // TODO success callback handler
     }
@@ -504,7 +504,7 @@ collect.setData(data);
 String method = "method";
 collect.setMethod(method);
 
-int bit = 204;
+int bit = 57;
 collect.setBit(bit);
 
 // Invoking the API call with sample inputs
@@ -983,7 +983,7 @@ collect.setC(c);
 String s = "s";
 collect.setS(s);
 
-int z = 41;
+int z = 57;
 collect.setZ(z);
 
 String address = "address";
@@ -1362,10 +1362,10 @@ collect.setPassword(password);
 String name = "name";
 collect.setName(name);
 
-Integer phone = 41;
+Integer phone = 57;
 collect.setPhone(phone);
 
-Integer countrycode = 41;
+Integer countrycode = 57;
 collect.setCountrycode(countrycode);
 
 String address = "address";

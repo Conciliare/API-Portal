@@ -325,13 +325,13 @@ The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed
 IWAFAndDDOSProtection wAFAndDDOSProtection = client.WAFAndDDOSProtection;
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFAndDDOSProtection.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
+### <a name="waf_configuration"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFAndDDOSProtection.WAFConfiguration") WAFConfiguration
 
 > WAF and DDOS Configuration
 
 
 ```csharp
-Task<Models.WAFConfigurationModelResponse> HttpsApiRestShApiSWC(Models.HttpsApiRestShApiSWCInput input)
+Task<Models.WAFConfigurationModelResponse> WAFConfiguration(Models.WAFConfigurationInput input)
 ```
 
 #### Parameters
@@ -345,7 +345,7 @@ Task<Models.WAFConfigurationModelResponse> HttpsApiRestShApiSWC(Models.HttpsApiR
 #### Example Usage
 
 ```csharp
-HttpsApiRestShApiSWCInput collect = new HttpsApiRestShApiSWCInput();
+WAFConfigurationInput collect = new WAFConfigurationInput();
 
 string name = "name";
 collect.Name = name;
@@ -354,18 +354,18 @@ string rule = "rule";
 collect.Rule = rule;
 
 
-Models.WAFConfigurationModelResponse result = await wAFAndDDOSProtection.HttpsApiRestShApiSWC(collect);
+Models.WAFConfigurationModelResponse result = await wAFAndDDOSProtection.WAFConfiguration(collect);
 
 ```
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFAndDDOSProtection.HttpsApiRestShApiSW") HttpsApiRestShApiSW
+### <a name="waf_creation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.WAFAndDDOSProtection.WAFCreation") WAFCreation
 
 > WAF and DDOS Creation
 
 
 ```csharp
-Task<Models.WAFCreationModelResponse> HttpsApiRestShApiSW(Models.HttpsApiRestShApiSWInput input)
+Task<Models.WAFCreationModelResponse> WAFCreation(Models.WAFCreationInput input)
 ```
 
 #### Parameters
@@ -379,7 +379,7 @@ Task<Models.WAFCreationModelResponse> HttpsApiRestShApiSW(Models.HttpsApiRestShA
 #### Example Usage
 
 ```csharp
-HttpsApiRestShApiSWInput collect = new HttpsApiRestShApiSWInput();
+WAFCreationInput collect = new WAFCreationInput();
 
 string origin = "origin";
 collect.Origin = origin;
@@ -388,7 +388,7 @@ string cname = "cname";
 collect.Cname = cname;
 
 
-Models.WAFCreationModelResponse result = await wAFAndDDOSProtection.HttpsApiRestShApiSW(collect);
+Models.WAFCreationModelResponse result = await wAFAndDDOSProtection.WAFCreation(collect);
 
 ```
 
@@ -434,7 +434,7 @@ collect.Data = data;
 string method = "method";
 collect.Method = method;
 
-int bit = 140;
+int bit = 248;
 collect.Bit = bit;
 
 
@@ -825,7 +825,7 @@ collect.C = c;
 string s = "s";
 collect.S = s;
 
-int z = 232;
+int z = 248;
 collect.Z = z;
 
 string address = "address";
@@ -1127,10 +1127,10 @@ collect.Password = password;
 string name = "name";
 collect.Name = name;
 
-int? phone = 232;
+int? phone = 248;
 collect.Phone = phone;
 
-int? countrycode = 232;
+int? countrycode = 248;
 collect.Countrycode = countrycode;
 
 string address = "address";

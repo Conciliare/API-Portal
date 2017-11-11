@@ -348,13 +348,13 @@ An instance of the ``` WAFAndDDOSProtection ``` class can be accessed from the A
  waf_and_ddos_protection_client = client.waf_and_ddos_protection
 ```
 
-### <a name="https_api_rest_sh_api_s_w_c"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.https_api_rest_sh_api_s_w_c") https_api_rest_sh_api_s_w_c
+### <a name="waf_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.waf_configuration") waf_configuration
 
 > WAF and DDOS Configuration
 
 ```python
-def https_api_rest_sh_api_s_w_c(self,
-                                    options=dict())
+def waf_configuration(self,
+                          options=dict())
 ```
 
 #### Parameters
@@ -378,18 +378,18 @@ rule = 'rule'
 collect['rule'] = rule
 
 
-result = waf_and_ddos_protection_client.https_api_rest_sh_api_s_w_c(collect)
+result = waf_and_ddos_protection_client.waf_configuration(collect)
 
 ```
 
 
-### <a name="https_api_rest_sh_api_s_w"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.https_api_rest_sh_api_s_w") https_api_rest_sh_api_s_w
+### <a name="waf_creation"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.waf_creation") waf_creation
 
 > WAF and DDOS Creation
 
 ```python
-def https_api_rest_sh_api_s_w(self,
-                                  options=dict())
+def waf_creation(self,
+                     options=dict())
 ```
 
 #### Parameters
@@ -413,7 +413,7 @@ cname = 'cname'
 collect['cname'] = cname
 
 
-result = waf_and_ddos_protection_client.https_api_rest_sh_api_s_w(collect)
+result = waf_and_ddos_protection_client.waf_creation(collect)
 
 ```
 
@@ -460,7 +460,7 @@ collect['data'] = data
 method = 'method'
 collect['method'] = method
 
-bit = 104
+bit = 212
 collect['bit'] = bit
 
 
@@ -860,7 +860,7 @@ collect['c'] = c
 s = 's'
 collect['s'] = s
 
-z = 104
+z = 212
 collect['z'] = z
 
 address = 'address'
@@ -1172,10 +1172,10 @@ collect['password'] = password
 name = 'name'
 collect['name'] = name
 
-phone = 104
+phone = 212
 collect['phone'] = phone
 
-countrycode = 104
+countrycode = 212
 collect['countrycode'] = countrycode
 
 address = 'address'

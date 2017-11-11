@@ -367,13 +367,13 @@ The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed
 $wAFAndDDOSProtection = $client->getWAFAndDDOSProtection();
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
+### <a name="w_af_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.wAFConfiguration") wAFConfiguration
 
 > WAF and DDOS Configuration
 
 
 ```php
-function httpsApiRestShApiSWC($options)
+function wAFConfiguration($options)
 ```
 
 #### Parameters
@@ -395,18 +395,18 @@ $rule = 'rule';
 $collect['rule'] = $rule;
 
 
-$result = $wAFAndDDOSProtection->httpsApiRestShApiSWC($collect);
+$result = $wAFAndDDOSProtection->wAFConfiguration($collect);
 
 ```
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
+### <a name="w_af_creation"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.wAFCreation") wAFCreation
 
 > WAF and DDOS Creation
 
 
 ```php
-function httpsApiRestShApiSW($options)
+function wAFCreation($options)
 ```
 
 #### Parameters
@@ -428,7 +428,7 @@ $cname = 'cname';
 $collect['cname'] = $cname;
 
 
-$result = $wAFAndDDOSProtection->httpsApiRestShApiSW($collect);
+$result = $wAFAndDDOSProtection->wAFCreation($collect);
 
 ```
 
@@ -473,7 +473,7 @@ $collect['data'] = $data;
 $method = 'method';
 $collect['method'] = $method;
 
-$bit = 217;
+$bit = 70;
 $collect['bit'] = $bit;
 
 
@@ -859,7 +859,7 @@ $collect['c'] = $c;
 $s = 's';
 $collect['s'] = $s;
 
-$z = 54;
+$z = 162;
 $collect['z'] = $z;
 
 $address = 'address';
@@ -1165,10 +1165,10 @@ $collect['password'] = $password;
 $name = 'name';
 $collect['name'] = $name;
 
-$phone = 54;
+$phone = 162;
 $collect['phone'] = $phone;
 
-$countrycode = 54;
+$countrycode = 162;
 $collect['countrycode'] = $countrycode;
 
 $address = 'address';

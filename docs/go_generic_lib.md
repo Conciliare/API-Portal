@@ -355,13 +355,13 @@ Factory for the ``` WAFANDDDOSPROTECTION ``` interface can be accessed from the 
 wAFAndDDOSProtection := wafandddosprotection_pkg.NewWAFANDDDOSPROTECTION()
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".wafandddosprotection_pkg.HttpsApiRestShApiSWC") HttpsApiRestShApiSWC
+### <a name="waf_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".wafandddosprotection_pkg.WAFConfiguration") WAFConfiguration
 
 > WAF and DDOS Configuration
 
 
 ```go
-func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(input *HttpsApiRestShApiSWCInput)(*models_pkg.WAFConfigurationModelResponse,error)
+func (me *WAFANDDDOSPROTECTION_IMPL) WAFConfiguration(input *WAFConfigurationInput)(*models_pkg.WAFConfigurationModelResponse,error)
 ```
 
 #### Parameters
@@ -375,7 +375,7 @@ func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSWC(input *HttpsApiRestShA
 #### Example Usage
 
 ```go
-collect := new (wafandddosprotection_pkg.HttpsApiRestShApiSWCInput)
+collect := new (wafandddosprotection_pkg.WAFConfigurationInput)
 
 name := "name"
 collect.Name = name
@@ -385,18 +385,18 @@ collect.Rule = rule
 
 
 var result *models_pkg.WAFConfigurationModelResponse
-result,_ = wAFAndDDOSProtection.HttpsApiRestShApiSWC(collect)
+result,_ = wAFAndDDOSProtection.WAFConfiguration(collect)
 
 ```
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".wafandddosprotection_pkg.HttpsApiRestShApiSW") HttpsApiRestShApiSW
+### <a name="waf_creation"></a>![Method: ](https://apidocs.io/img/method.png ".wafandddosprotection_pkg.WAFCreation") WAFCreation
 
 > WAF and DDOS Creation
 
 
 ```go
-func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(input *HttpsApiRestShApiSWInput)(*models_pkg.WAFCreationModelResponse,error)
+func (me *WAFANDDDOSPROTECTION_IMPL) WAFCreation(input *WAFCreationInput)(*models_pkg.WAFCreationModelResponse,error)
 ```
 
 #### Parameters
@@ -410,7 +410,7 @@ func (me *WAFANDDDOSPROTECTION_IMPL) HttpsApiRestShApiSW(input *HttpsApiRestShAp
 #### Example Usage
 
 ```go
-collect := new (wafandddosprotection_pkg.HttpsApiRestShApiSWInput)
+collect := new (wafandddosprotection_pkg.WAFCreationInput)
 
 origin := "origin"
 collect.Origin = origin
@@ -420,7 +420,7 @@ collect.Cname = cname
 
 
 var result *models_pkg.WAFCreationModelResponse
-result,_ = wAFAndDDOSProtection.HttpsApiRestShApiSW(collect)
+result,_ = wAFAndDDOSProtection.WAFCreation(collect)
 
 ```
 
@@ -466,7 +466,7 @@ collect.Data = data
 method := "method"
 collect.Method = method
 
-bit,_ := strconv.ParseInt("68", 10, 8)
+bit,_ := strconv.ParseInt("43", 10, 8)
 collect.Bit = bit
 
 
@@ -866,7 +866,7 @@ collect.C = c
 s := "s"
 collect.S = s
 
-z,_ := strconv.ParseInt("26", 10, 8)
+z,_ := strconv.ParseInt("43", 10, 8)
 collect.Z = z
 
 address := "address"
@@ -1176,10 +1176,10 @@ collect.Password = password
 name := "name"
 collect.Name = name
 
-phone,_ := strconv.ParseInt("26", 10, 8)
+phone,_ := strconv.ParseInt("43", 10, 8)
 collect.Phone = phone
 
-countrycode,_ := strconv.ParseInt("26", 10, 8)
+countrycode,_ := strconv.ParseInt("43", 10, 8)
 collect.Countrycode = countrycode
 
 address := "address"

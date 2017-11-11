@@ -131,9 +131,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build smash.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install smash-1.18.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install smash-1.19.0.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=SMASH-Ruby&workspaceName=SMASH-Ruby&projectName=smash&gemName=smash&gemVer=1.18.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=SMASH-Ruby&workspaceName=SMASH-Ruby&projectName=smash&gemName=smash&gemVer=1.19.0)
 
 ## How to Use
 
@@ -143,41 +143,41 @@ The following section explains how to use the SMASH Ruby Gem in a new Rails proj
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.19.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.19.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.19.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the SMASH gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'smash', '~> 1.18.0' ```
+In order to use the SMASH gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'smash', '~> 1.19.0' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.19.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.19.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.19.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.19.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=SMASH-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.19.0)
 
 ## How to Test
 
@@ -217,7 +217,7 @@ client = Smash::SMASH.new(
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=SMASH%20-%20API-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.18.0&initLine=client%2520%253D%2520SMASH.new%2528%2527uid%2527%252C%2520%2527secret%2527%252C%2520%2527key%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=SMASH%20-%20API-Ruby&workspaceName=SMASH&projectName=smash&gemName=smash&gemVer=1.19.0&initLine=client%2520%253D%2520SMASH.new%2528%2527uid%2527%252C%2520%2527secret%2527%252C%2520%2527key%2527%2529)
 
 
 
@@ -337,13 +337,13 @@ The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed
 wAFAndDDOSProtection = client.waf_and_ddos_protection
 ```
 
-### <a name="https_api_rest_sh_api_s_w_c"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.https_api_rest_sh_api_s_w_c") https_api_rest_sh_api_s_w_c
+### <a name="waf_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.waf_configuration") waf_configuration
 
 > WAF and DDOS Configuration
 
 
 ```ruby
-def https_api_rest_sh_api_s_w_c(options = {}); end
+def waf_configuration(options = {}); end
 ```
 
 #### Parameters
@@ -366,18 +366,18 @@ rule = 'rule'
 collect['rule'] = rule
 
 
-result = wAFAndDDOSProtection.https_api_rest_sh_api_s_w_c(collect)
+result = wAFAndDDOSProtection.waf_configuration(collect)
 
 ```
 
 
-### <a name="https_api_rest_sh_api_s_w"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.https_api_rest_sh_api_s_w") https_api_rest_sh_api_s_w
+### <a name="waf_creation"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.waf_creation") waf_creation
 
 > WAF and DDOS Creation
 
 
 ```ruby
-def https_api_rest_sh_api_s_w(options = {}); end
+def waf_creation(options = {}); end
 ```
 
 #### Parameters
@@ -400,7 +400,7 @@ cname = 'cname'
 collect['cname'] = cname
 
 
-result = wAFAndDDOSProtection.https_api_rest_sh_api_s_w(collect)
+result = wAFAndDDOSProtection.waf_creation(collect)
 
 ```
 
@@ -446,7 +446,7 @@ collect['data'] = data
 method = 'method'
 collect['method'] = method
 
-bit = 81
+bit = 189
 collect['bit'] = bit
 
 
@@ -837,7 +837,7 @@ collect['c'] = c
 s = 's'
 collect['s'] = s
 
-z = 81
+z = 189
 collect['z'] = z
 
 address = 'address'
@@ -1140,10 +1140,10 @@ collect['password'] = password
 name = 'name'
 collect['name'] = name
 
-phone = 81
+phone = 189
 collect['phone'] = phone
 
-countrycode = 81
+countrycode = 189
 collect['countrycode'] = countrycode
 
 address = 'address'
