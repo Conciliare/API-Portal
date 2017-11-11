@@ -272,143 +272,63 @@ advancedLogging := advancedlogging_pkg.NewADVANCEDLOGGING()
 
 ```go
 func (me *ADVANCEDLOGGING_IMPL) LoggingInfo(
-            key string,
-            uid string,
             name string,
             origin string,
-            time string,
-            contentType string)(*models_pkg.HttpsApiRestShApiSLIR,error)
+            time *string)(*models_pkg.HttpsApiRestShApiSLIR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| time |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 name := "name"
 origin := "origin"
 time := "time"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSLIR
-result,_ = advancedLogging.LoggingInfo(key, uid, name, origin, time, contentType)
+result,_ = advancedLogging.LoggingInfo(name, origin, time)
 
 ```
 
 
-### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingSetup") LoggingSetup
+### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingConfiguration") LoggingConfiguration
 
-> WAF Log Setup
+> WAF Log Configuration
 
 
 ```go
-func (me *ADVANCEDLOGGING_IMPL) LoggingSetup(
-            key string,
-            uid string,
+func (me *ADVANCEDLOGGING_IMPL) LoggingConfiguration(
             name string,
             origin string,
-            activate bool,
-            contentType string)(*models_pkg.HttpsApiRestShApiSLR,error)
+            activate string)(*models_pkg.HttpsApiRestShApiSLR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| activate |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of the WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
+| activate |  ``` Required ```  | True or False |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 name := "name"
 origin := "origin"
-activate := false
-contentType := "Content-Type"
+activate := "activate"
 
 var result *models_pkg.HttpsApiRestShApiSLR
-result,_ = advancedLogging.LoggingSetup(key, uid, name, origin, activate, contentType)
-
-```
-
-
-### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingInfo") LoggingInfo
-
-> WAF Log Info
-
-
-```go
-func (me *ADVANCEDLOGGING_IMPL) LoggingInfo(
-            body *models_pkg.HttpsApiRestShApiSLI,
-            contentType string)(*models_pkg.HttpsApiRestShApiSLIR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiSLI
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiSLIR
-result,_ = advancedLogging.LoggingInfo(body, contentType)
-
-```
-
-
-### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".advancedlogging_pkg.LoggingSetup") LoggingSetup
-
-> WAF Log Setup
-
-
-```go
-func (me *ADVANCEDLOGGING_IMPL) LoggingSetup(
-            body *models_pkg.HttpsApiRestShApiSL,
-            contentType string)(*models_pkg.HttpsApiRestShApiSLR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiSL
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiSLR
-result,_ = advancedLogging.LoggingSetup(body, contentType)
+result,_ = advancedLogging.LoggingConfiguration(name, origin, activate)
 
 ```
 
@@ -601,69 +521,29 @@ encryption := encryption_pkg.NewENCRYPTION()
 
 ```go
 func (me *ENCRYPTION_IMPL) DataAndFileEncryption(
-            key string,
-            uid string,
             data string,
             method string,
-            bit int64,
-            contentType string)(*models_pkg.HttpsApiRestShApiSER,error)
+            bit int64)(*models_pkg.HttpsApiRestShApiSER,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| method |  ``` Required ```  | TODO: Add a parameter description |
-| bit |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | GIT URL, file URL, direct upload of file, or data as a query string |
+| method |  ``` Required ```  | Single or multiple encryption types to apply to data or files separated by a comma (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP) |
+| bit |  ``` Required ```  | Encryption key size (4096) |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 data := "data"
 method := "method"
-bit,_ := strconv.ParseInt("126", 10, 8)
-contentType := "Content-Type"
+bit,_ := strconv.ParseInt("35", 10, 8)
 
 var result *models_pkg.HttpsApiRestShApiSER
-result,_ = encryption.DataAndFileEncryption(key, uid, data, method, bit, contentType)
-
-```
-
-
-### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png ".encryption_pkg.DataAndFileEncryption") DataAndFileEncryption
-
-> Data and File Encryption API
-
-
-```go
-func (me *ENCRYPTION_IMPL) DataAndFileEncryption(
-            body *models_pkg.HttpsApiRestShApiSE,
-            contentType string)(*models_pkg.HttpsApiRestShApiSER,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiSE
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiSER
-result,_ = encryption.DataAndFileEncryption(body, contentType)
+result,_ = encryption.DataAndFileEncryption(data, method, bit)
 
 ```
 
@@ -687,35 +567,26 @@ cDN := cdn_pkg.NewCDN()
 
 ```go
 func (me *CDN_IMPL) CDNPushZone(
-            key string,
-            uid string,
             cname string,
-            file string,
-            contentType string)(*models_pkg.HttpsApiRestShApiSCPushR,error)
+            file string)(*models_pkg.HttpsApiRestShApiSCPushR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| file |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
+| file |  ``` Required ```  | GIT URL, file URL, or direct upload of file |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 cname := "cname"
 file := "file"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSCPushR
-result,_ = cDN.CDNPushZone(key, uid, cname, file, contentType)
+result,_ = cDN.CDNPushZone(cname, file)
 
 ```
 
@@ -727,97 +598,26 @@ result,_ = cDN.CDNPushZone(key, uid, cname, file, contentType)
 
 ```go
 func (me *CDN_IMPL) CDNPullZone(
-            key string,
-            uid string,
             origin string,
-            cname string,
-            contentType string)(*models_pkg.HttpsApiRestShApiSCPullR,error)
+            cname string)(*models_pkg.HttpsApiRestShApiSCPullR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | Domain or domain names separated by a comma |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 origin := "origin"
 cname := "cname"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSCPullR
-result,_ = cDN.CDNPullZone(key, uid, origin, cname, contentType)
-
-```
-
-
-### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPushZone") CDNPushZone
-
-> CDN Push Zone API
-
-
-```go
-func (me *CDN_IMPL) CDNPushZone(
-            body *models_pkg.HttpsApiRestShApiSCPush,
-            contentType string)(*models_pkg.HttpsApiRestShApiSCPushR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiSCPush
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiSCPushR
-result,_ = cDN.CDNPushZone(body, contentType)
-
-```
-
-
-### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png ".cdn_pkg.CDNPullZone") CDNPullZone
-
-> CDN Pull Zone API
-
-
-```go
-func (me *CDN_IMPL) CDNPullZone(
-            body *models_pkg.HttpsApiRestShApiSCPull,
-            contentType string)(*models_pkg.HttpsApiRestShApiSCPullR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiSCPull
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiSCPullR
-result,_ = cDN.CDNPullZone(body, contentType)
+result,_ = cDN.CDNPullZone(origin, cname)
 
 ```
 
@@ -841,66 +641,26 @@ dNS := dns_pkg.NewDNS()
 
 ```go
 func (me *DNS_IMPL) DNSConfiguration(
-            key string,
-            uid string,
             domain string,
-            records string,
-            contentType string)(*models_pkg.HttpsApiRestShApiSDCR,error)
+            records string)(*models_pkg.HttpsApiRestShApiSDCR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| records |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
+| records |  ``` Required ```  | Records to append to domain separated by a comma (a;www.mydomain.com;127.0.0.0,cname;mydomain.com;otherdomain.com) |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 domain := "domain"
 records := "records"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSDCR
-result,_ = dNS.DNSConfiguration(key, uid, domain, records, contentType)
-
-```
-
-
-### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSConfiguration") DNSConfiguration
-
-> DNS Configuration API
-
-
-```go
-func (me *DNS_IMPL) DNSConfiguration(
-            body *models_pkg.HttpsApiRestShApiSDC,
-            contentType string)(*models_pkg.HttpsApiRestShApiSDCR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiSDC
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiSDCR
-result,_ = dNS.DNSConfiguration(body, contentType)
+result,_ = dNS.DNSConfiguration(domain, records)
 
 ```
 
@@ -911,64 +671,23 @@ result,_ = dNS.DNSConfiguration(body, contentType)
 
 
 ```go
-func (me *DNS_IMPL) DNSCreation(
-            key string,
-            uid string,
-            domain string,
-            contentType string)(*models_pkg.HttpsApiRestShApiSDAR,error)
+func (me *DNS_IMPL) DNSCreation(domain string)(*models_pkg.HttpsApiRestShApiSDAR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 domain := "domain"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSDAR
-result,_ = dNS.DNSCreation(key, uid, domain, contentType)
-
-```
-
-
-### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png ".dns_pkg.DNSCreation") DNSCreation
-
-> DNS Creation API
-
-
-```go
-func (me *DNS_IMPL) DNSCreation(
-            body *models_pkg.HttpsApiRestShApiSDA,
-            contentType string)(*models_pkg.HttpsApiRestShApiSDAR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiSDA
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiSDAR
-result,_ = dNS.DNSCreation(body, contentType)
+result,_ = dNS.DNSCreation(domain)
 
 ```
 
@@ -991,64 +710,23 @@ codeObfuscation := codeobfuscation_pkg.NewCODEOBFUSCATION()
 
 
 ```go
-func (me *CODEOBFUSCATION_IMPL) ObfuscationAndAntiTampering(
-            key string,
-            uid string,
-            app string,
-            contentType string)(*models_pkg.HttpsApiRestShApiSOR,error)
+func (me *CODEOBFUSCATION_IMPL) ObfuscationAndAntiTampering(app string)(*models_pkg.HttpsApiRestShApiSOR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 app := "app"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSOR
-result,_ = codeObfuscation.ObfuscationAndAntiTampering(key, uid, app, contentType)
-
-```
-
-
-### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png ".codeobfuscation_pkg.ObfuscationAndAntiTampering") ObfuscationAndAntiTampering
-
-> Javascript and Node.JS Obfuscation and Anti-Tampering API
-
-
-```go
-func (me *CODEOBFUSCATION_IMPL) ObfuscationAndAntiTampering(
-            body *models_pkg.HttpsApiRestShApiSO,
-            contentType string)(*models_pkg.HttpsApiRestShApiSOR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiSO
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiSOR
-result,_ = codeObfuscation.ObfuscationAndAntiTampering(body, contentType)
+result,_ = codeObfuscation.ObfuscationAndAntiTampering(app)
 
 ```
 
@@ -1072,66 +750,26 @@ hosting := hosting_pkg.NewHOSTING()
 
 ```go
 func (me *HOSTING_IMPL) HostingSetup(
-            key string,
-            uid string,
             app string,
-            domain string,
-            contentType string)(*models_pkg.HttpsApiRestShApiSHR,error)
+            domain string)(*models_pkg.HttpsApiRestShApiSHR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 app := "app"
 domain := "domain"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiSHR
-result,_ = hosting.HostingSetup(key, uid, app, domain, contentType)
-
-```
-
-
-### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png ".hosting_pkg.HostingSetup") HostingSetup
-
-> Node.JS and Static Web APP Hosting
-
-
-```go
-func (me *HOSTING_IMPL) HostingSetup(
-            body *models_pkg.HttpsApiRestShApiSH,
-            contentType string)(*models_pkg.HttpsApiRestShApiSHR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiSH
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiSHR
-result,_ = hosting.HostingSetup(body, contentType)
+result,_ = hosting.HostingSetup(app, domain)
 
 ```
 
@@ -1247,66 +885,26 @@ imageManipulationAndModerationAPI := imagemanipulationandmoderationapi_pkg.NewIM
 
 ```go
 func (me *IMAGEMANIPULATIONANDMODERATIONAPI_IMPL) ImageManipulation(
-            key string,
-            uid string,
             image string,
-            transform string,
-            contentType string)(*models_pkg.HttpsApiRestShApiIR,error)
+            transform string)(*models_pkg.HttpsApiRestShApiIR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| image |  ``` Required ```  | TODO: Add a parameter description |
-| transform |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| image |  ``` Required ```  | Image URL or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 image := "image"
 transform := "transform"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiIR
-result,_ = imageManipulationAndModerationAPI.ImageManipulation(key, uid, image, transform, contentType)
-
-```
-
-
-### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png ".imagemanipulationandmoderationapi_pkg.ImageManipulation") ImageManipulation
-
-> Image Manipulation API
-
-
-```go
-func (me *IMAGEMANIPULATIONANDMODERATIONAPI_IMPL) ImageManipulation(
-            body *models_pkg.HttpsApiRestShApiI,
-            contentType string)(*models_pkg.HttpsApiRestShApiIR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiI
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiIR
-result,_ = imageManipulationAndModerationAPI.ImageManipulation(body, contentType)
+result,_ = imageManipulationAndModerationAPI.ImageManipulation(image, transform)
 
 ```
 
@@ -1330,118 +928,72 @@ verification := verification_pkg.NewVERIFICATION()
 
 ```go
 func (me *VERIFICATION_IMPL) UserAddressVerification(
-            key string,
-            uid string,
             user string,
             a string,
             sa string,
             c string,
             s string,
             z int64,
-            contentType string)(*models_pkg.HttpsApiRestShApiVAR,error)
+            address *string)(*models_pkg.HttpsApiRestShApiVAR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| a |  ``` Required ```  | TODO: Add a parameter description |
-| sa |  ``` Required ```  | TODO: Add a parameter description |
-| c |  ``` Required ```  | TODO: Add a parameter description |
-| s |  ``` Required ```  | TODO: Add a parameter description |
-| z |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
+| a |  ``` Required ```  | Address Line One |
+| sa |  ``` Required ```  | Address Line Two |
+| c |  ``` Required ```  | Address City |
+| s |  ``` Required ```  | Address State or Province |
+| z |  ``` Required ```  | Address Zipcode |
+| address |  ``` Optional ```  | Address as a one line input separated by commas |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 user := "user"
 a := "a"
 sa := "sa"
 c := "c"
 s := "s"
-z,_ := strconv.ParseInt("126", 10, 8)
-contentType := "Content-Type"
+z,_ := strconv.ParseInt("35", 10, 8)
+address := "address"
 
 var result *models_pkg.HttpsApiRestShApiVAR
-result,_ = verification.UserAddressVerification(key, uid, user, a, sa, c, s, z, contentType)
+result,_ = verification.UserAddressVerification(user, a, sa, c, s, z, address)
 
 ```
 
 
-### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserAddressVerification") UserAddressVerification
+### <a name="user_verification_response"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserVerificationResponse") UserVerificationResponse
 
-> User Address Verification API
-
-
-```go
-func (me *VERIFICATION_IMPL) UserAddressVerification(
-            body *models_pkg.HttpsApiRestShApiVA,
-            contentType string)(*models_pkg.HttpsApiRestShApiVAR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiVA
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiVAR
-result,_ = verification.UserAddressVerification(body, contentType)
-
-```
-
-
-### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.UserVerification") UserVerification
-
-> User Verification API
+> Users Verification Response API
 
 
 ```go
-func (me *VERIFICATION_IMPL) UserVerification(
-            key string,
-            uid string,
+func (me *VERIFICATION_IMPL) UserVerificationResponse(
             user string,
-            code string,
-            contentType string)(*models_pkg.HttpsApiRestShApiVUR,error)
+            code string)(*models_pkg.HttpsApiRestShApiVUR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| code |  ``` Required ```  | Verification code entered by the user |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 user := "user"
 code := "code"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiVUR
-result,_ = verification.UserVerification(key, uid, user, code, contentType)
+result,_ = verification.UserVerificationResponse(user, code)
 
 ```
 
@@ -1452,95 +1004,23 @@ result,_ = verification.UserVerification(key, uid, user, code, contentType)
 
 
 ```go
-func (me *VERIFICATION_IMPL) UserVerification(
-            body *models_pkg.HttpsApiRestShApiVU,
-            contentType string)(*models_pkg.HttpsApiRestShApiVUR,error)
+func (me *VERIFICATION_IMPL) UserVerification(user string)(*models_pkg.HttpsApiRestShApiVR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
 
 
 #### Example Usage
 
 ```go
-var body *models_pkg.HttpsApiRestShApiVU
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiVUR
-result,_ = verification.UserVerification(body, contentType)
-
-```
-
-
-### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.CellphoneVerification") CellphoneVerification
-
-> Verification API
-
-
-```go
-func (me *VERIFICATION_IMPL) CellphoneVerification(
-            key string,
-            uid string,
-            to string,
-            contentType string)(*models_pkg.HttpsApiRestShApiVR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-key := "key"
-uid := "uid"
-to := "to"
-contentType := "Content-Type"
+user := "user"
 
 var result *models_pkg.HttpsApiRestShApiVR
-result,_ = verification.CellphoneVerification(key, uid, to, contentType)
-
-```
-
-
-### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".verification_pkg.CellphoneVerification") CellphoneVerification
-
-> Verification API
-
-
-```go
-func (me *VERIFICATION_IMPL) CellphoneVerification(
-            body *models_pkg.HttpsApiRestShApiV,
-            contentType string)(*models_pkg.HttpsApiRestShApiVR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiV
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiVR
-result,_ = verification.CellphoneVerification(body, contentType)
+result,_ = verification.UserVerification(user)
 
 ```
 
@@ -1564,66 +1044,26 @@ twoFactorAuthenticationAPI := twofactorauthenticationapi_pkg.NewTWOFACTORAUTHENT
 
 ```go
 func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) M2FATokenResponse(
-            key string,
-            uid string,
             user string,
-            code string,
-            contentType string)(*models_pkg.HttpsApiRestShApi2faTR,error)
+            code string)(*models_pkg.HttpsApiRestShApi2faTR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username or Email |
+| code |  ``` Required ```  | Response From User Containing 2FA Code |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 user := "user"
 code := "code"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApi2faTR
-result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(key, uid, user, code, contentType)
-
-```
-
-
-### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.M2FATokenResponse") M2FATokenResponse
-
-> Two Factor Authentication Token Reply
-
-
-```go
-func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) M2FATokenResponse(
-            body *models_pkg.HttpsApiRestShApi2faT,
-            contentType string)(*models_pkg.HttpsApiRestShApi2faTR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApi2faT
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApi2faTR
-result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(body, contentType)
+result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(user, code)
 
 ```
 
@@ -1634,64 +1074,23 @@ result,_ = twoFactorAuthenticationAPI.M2FATokenResponse(body, contentType)
 
 
 ```go
-func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) TwoFactorAuthentication(
-            key string,
-            uid string,
-            to string,
-            contentType string)(*models_pkg.HttpsApiRestShApi2faR,error)
+func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) TwoFactorAuthentication(to string)(*models_pkg.HttpsApiRestShApi2faR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| to |  ``` Required ```  | Users UID, Username, Email, Or Cellphone number |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 to := "to"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApi2faR
-result,_ = twoFactorAuthenticationAPI.TwoFactorAuthentication(key, uid, to, contentType)
-
-```
-
-
-### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".twofactorauthenticationapi_pkg.TwoFactorAuthentication") TwoFactorAuthentication
-
-> Two Factor Authentication API
-
-
-```go
-func (me *TWOFACTORAUTHENTICATIONAPI_IMPL) TwoFactorAuthentication(
-            body *models_pkg.HttpsApiRestShApi2fa,
-            contentType string)(*models_pkg.HttpsApiRestShApi2faR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApi2fa
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApi2faR
-result,_ = twoFactorAuthenticationAPI.TwoFactorAuthentication(body, contentType)
+result,_ = twoFactorAuthenticationAPI.TwoFactorAuthentication(to)
 
 ```
 
@@ -1714,67 +1113,23 @@ userManagement := usermanagement_pkg.NewUSERMANAGEMENT()
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) GetUserInfo(
-            key string,
-            uid string,
-            user string,
-            apiuid string,
-            contentType string)(*models_pkg.HttpsApiRestShApiUIR,error)
+func (me *USERMANAGEMENT_IMPL) GetUserInfo(user string)(*models_pkg.HttpsApiRestShApiUIR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users User ID |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 user := "user"
-apiuid := "apiuid"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiUIR
-result,_ = userManagement.GetUserInfo(key, uid, user, apiuid, contentType)
-
-```
-
-
-### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.GetUserInfo") GetUserInfo
-
-> Get User Info API
-
-
-```go
-func (me *USERMANAGEMENT_IMPL) GetUserInfo(
-            body *models_pkg.HttpsApiRestShApiUI,
-            contentType string)(*models_pkg.HttpsApiRestShApiUIR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiUI
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiUIR
-result,_ = userManagement.GetUserInfo(body, contentType)
+result,_ = userManagement.GetUserInfo(user)
 
 ```
 
@@ -1786,72 +1141,34 @@ result,_ = userManagement.GetUserInfo(body, contentType)
 
 ```go
 func (me *USERMANAGEMENT_IMPL) UpdateUser(
-            key string,
-            uid string,
             user string,
-            apiuid string,
             avatar string,
             customInput string,
-            contentType string)(*models_pkg.HttpsApiRestShApiUUR,error)
+                queryParameters map[string]interface{})(*models_pkg.HttpsApiRestShApiUUR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| avatar |  ``` Required ```  | TODO: Add a parameter description |
-| customInput |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| avatar |  ``` Required ```  | Avatar Image URL |
+| customInput |  ``` Required ```  | Custom input variable for users profile |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 user := "user"
-apiuid := "apiuid"
 avatar := "avatar"
 customInput := "custom input"
-contentType := "Content-Type"
+// key-value map for optional query parameters
+	queryParams := map[string]interface{}{"key" : "value"}
+
 
 var result *models_pkg.HttpsApiRestShApiUUR
-result,_ = userManagement.UpdateUser(key, uid, user, apiuid, avatar, customInput, contentType)
-
-```
-
-
-### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.UpdateUser") UpdateUser
-
-> Update User API
-
-
-```go
-func (me *USERMANAGEMENT_IMPL) UpdateUser(
-            body *models_pkg.HttpsApiRestShApiUU,
-            contentType string)(*models_pkg.HttpsApiRestShApiUUR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiUU
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiUUR
-result,_ = userManagement.UpdateUser(body, contentType)
+result,_ = userManagement.UpdateUser(user, avatar, customInput, queryParams)
 
 ```
 
@@ -1862,67 +1179,23 @@ result,_ = userManagement.UpdateUser(body, contentType)
 
 
 ```go
-func (me *USERMANAGEMENT_IMPL) DeleteUser(
-            api string,
-            uid string,
-            user string,
-            apiuid string,
-            contentType string)(*models_pkg.HttpsApiRestShApiUDR,error)
+func (me *USERMANAGEMENT_IMPL) DeleteUser(user string)(*models_pkg.HttpsApiRestShApiUDR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| api |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
 
 
 #### Example Usage
 
 ```go
-api := "api"
-uid := "uid"
 user := "user"
-apiuid := "apiuid"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiUDR
-result,_ = userManagement.DeleteUser(api, uid, user, apiuid, contentType)
-
-```
-
-
-### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".usermanagement_pkg.DeleteUser") DeleteUser
-
-> Delete User API
-
-
-```go
-func (me *USERMANAGEMENT_IMPL) DeleteUser(
-            body *models_pkg.HttpsApiRestShApiUD,
-            contentType string)(*models_pkg.HttpsApiRestShApiUDR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiUD
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiUDR
-result,_ = userManagement.DeleteUser(body, contentType)
+result,_ = userManagement.DeleteUser(user)
 
 ```
 
@@ -1946,81 +1219,46 @@ loginAndRegistration := loginandregistration_pkg.NewLOGINANDREGISTRATION()
 
 ```go
 func (me *LOGINANDREGISTRATION_IMPL) UserRegistration(
-            key string,
-            uid string,
+            email string,
             user string,
             password string,
-            name string,
-            email string,
-            phone int64,
-            countrycode int64,
-            address string,
-            contentType string)(*models_pkg.HttpsApiRestShApiAURR,error)
+            name *string,
+            phone *int64,
+            countrycode *int64,
+            address *string,
+                queryParameters map[string]interface{})(*models_pkg.HttpsApiRestShApiAURR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| phone |  ``` Required ```  | TODO: Add a parameter description |
-| countrycode |  ``` Required ```  | TODO: Add a parameter description |
-| address |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| email |  ``` Required ```  | Users Email |
+| user |  ``` Required ```  | Users Username |
+| password |  ``` Required ```  | Users Password |
+| name |  ``` Optional ```  | Users Name |
+| phone |  ``` Optional ```  | Users Cellphone Number |
+| countrycode |  ``` Optional ```  | Users Country Code (US = 1) |
+| address |  ``` Optional ```  | Users Address |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
+email := "email"
 user := "user"
 password := "password"
 name := "name"
-email := "email"
-phone,_ := strconv.ParseInt("126", 10, 8)
-countrycode,_ := strconv.ParseInt("126", 10, 8)
+phone,_ := strconv.ParseInt("35", 10, 8)
+countrycode,_ := strconv.ParseInt("35", 10, 8)
 address := "address"
-contentType := "Content-Type"
+// key-value map for optional query parameters
+	queryParams := map[string]interface{}{"key" : "value"}
+
 
 var result *models_pkg.HttpsApiRestShApiAURR
-result,_ = loginAndRegistration.UserRegistration(key, uid, user, password, name, email, phone, countrycode, address, contentType)
-
-```
-
-
-### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserRegistration") UserRegistration
-
-> User Registration API
-
-
-```go
-func (me *LOGINANDREGISTRATION_IMPL) UserRegistration(
-            body *models_pkg.HttpsApiRestShApiAUR,
-            contentType string)(*models_pkg.HttpsApiRestShApiAURR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiAUR
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiAURR
-result,_ = loginAndRegistration.UserRegistration(body, contentType)
+result,_ = loginAndRegistration.UserRegistration(email, user, password, name, phone, countrycode, address, queryParams)
 
 ```
 
@@ -2032,66 +1270,26 @@ result,_ = loginAndRegistration.UserRegistration(body, contentType)
 
 ```go
 func (me *LOGINANDREGISTRATION_IMPL) UserAuthentication(
-            key string,
-            uid string,
             user string,
-            password string,
-            contentType string)(*models_pkg.HttpsApiRestShApiAULR,error)
+            password string)(*models_pkg.HttpsApiRestShApiAULR,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users Username or Email |
+| password |  ``` Required ```  | Users Password |
 
 
 #### Example Usage
 
 ```go
-key := "key"
-uid := "uid"
 user := "user"
 password := "password"
-contentType := "Content-Type"
 
 var result *models_pkg.HttpsApiRestShApiAULR
-result,_ = loginAndRegistration.UserAuthentication(key, uid, user, password, contentType)
-
-```
-
-
-### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".loginandregistration_pkg.UserAuthentication") UserAuthentication
-
-> User Authentication API
-
-
-```go
-func (me *LOGINANDREGISTRATION_IMPL) UserAuthentication(
-            body *models_pkg.HttpsApiRestShApiAUL,
-            contentType string)(*models_pkg.HttpsApiRestShApiAULR,error)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```go
-var body *models_pkg.HttpsApiRestShApiAUL
-contentType := "Content-Type"
-
-var result *models_pkg.HttpsApiRestShApiAULR
-result,_ = loginAndRegistration.UserAuthentication(body, contentType)
+result,_ = loginAndRegistration.UserAuthentication(user, password)
 
 ```
 

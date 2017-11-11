@@ -277,18 +277,15 @@ var controller = lib.AdvancedLogging;
 
 
 ```javascript
-function loggingInfo(key, uid, name, origin, time, contentType, callback)
+function loggingInfo(name, origin, time, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| time |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
 
 
 
@@ -296,14 +293,11 @@ function loggingInfo(key, uid, name, origin, time, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var name = 'name';
     var origin = 'origin';
     var time = 'time';
-    var contentType = 'Content-Type';
 
-    controller.loggingInfo(key, uid, name, origin, time, contentType, function(error, response, context) {
+    controller.loggingInfo(name, origin, time, function(error, response, context) {
 
     
     });
@@ -311,24 +305,21 @@ function loggingInfo(key, uid, name, origin, time, contentType, callback)
 
 
 
-### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup") loggingSetup
+### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingConfiguration") loggingConfiguration
 
-> WAF Log Setup
+> WAF Log Configuration
 
 
 ```javascript
-function loggingSetup(key, uid, name, origin, activate, contentType, callback)
+function loggingConfiguration(name, origin, activate, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| activate |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of the WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
+| activate |  ``` Required ```  | True or False |
 
 
 
@@ -336,78 +327,11 @@ function loggingSetup(key, uid, name, origin, activate, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var name = 'name';
     var origin = 'origin';
-    var activate = true;
-    var contentType = 'Content-Type';
+    var activate = 'activate';
 
-    controller.loggingSetup(key, uid, name, origin, activate, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="logging_info1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo1") loggingInfo1
-
-> WAF Log Info
-
-
-```javascript
-function loggingInfo1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSLI({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.loggingInfo1(body, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="logging_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup1") loggingSetup1
-
-> WAF Log Setup
-
-
-```javascript
-function loggingSetup1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSL({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.loggingSetup1(body, contentType, function(error, response, context) {
+    controller.loggingConfiguration(name, origin, activate, function(error, response, context) {
 
     
     });
@@ -606,18 +530,15 @@ var controller = lib.Encryption;
 
 
 ```javascript
-function dataAndFileEncryption(key, uid, data, method, bit, contentType, callback)
+function dataAndFileEncryption(data, method, bit, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| method |  ``` Required ```  | TODO: Add a parameter description |
-| bit |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | GIT URL, file URL, direct upload of file, or data as a query string |
+| method |  ``` Required ```  | Single or multiple encryption types to apply to data or files separated by a comma (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP) |
+| bit |  ``` Required ```  | Encryption key size (4096) |
 
 
 
@@ -625,46 +546,11 @@ function dataAndFileEncryption(key, uid, data, method, bit, contentType, callbac
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var data = 'data';
     var method = 'method';
-    var bit = 175;
-    var contentType = 'Content-Type';
+    var bit = 85;
 
-    controller.dataAndFileEncryption(key, uid, data, method, bit, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="data_and_file_encryption1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryption1") dataAndFileEncryption1
-
-> Data and File Encryption API
-
-
-```javascript
-function dataAndFileEncryption1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSE({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.dataAndFileEncryption1(body, contentType, function(error, response, context) {
+    controller.dataAndFileEncryption(data, method, bit, function(error, response, context) {
 
     
     });
@@ -690,17 +576,14 @@ var controller = lib.CDN;
 
 
 ```javascript
-function cDNPushZone(key, uid, cname, file, contentType, callback)
+function cDNPushZone(cname, file, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| file |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
+| file |  ``` Required ```  | GIT URL, file URL, or direct upload of file |
 
 
 
@@ -708,13 +591,10 @@ function cDNPushZone(key, uid, cname, file, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var cname = 'cname';
     var file = 'file';
-    var contentType = 'Content-Type';
 
-    controller.cDNPushZone(key, uid, cname, file, contentType, function(error, response, context) {
+    controller.cDNPushZone(cname, file, function(error, response, context) {
 
     
     });
@@ -728,17 +608,14 @@ function cDNPushZone(key, uid, cname, file, contentType, callback)
 
 
 ```javascript
-function cDNPullZone(key, uid, origin, cname, contentType, callback)
+function cDNPullZone(origin, cname, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | Domain or domain names separated by a comma |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 
@@ -746,77 +623,10 @@ function cDNPullZone(key, uid, origin, cname, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var origin = 'origin';
     var cname = 'cname';
-    var contentType = 'Content-Type';
 
-    controller.cDNPullZone(key, uid, origin, cname, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="c_dn_push_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone1") cDNPushZone1
-
-> CDN Push Zone API
-
-
-```javascript
-function cDNPushZone1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSCPush({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.cDNPushZone1(body, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="c_dn_pull_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone1") cDNPullZone1
-
-> CDN Pull Zone API
-
-
-```javascript
-function cDNPullZone1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSCPull({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.cDNPullZone1(body, contentType, function(error, response, context) {
+    controller.cDNPullZone(origin, cname, function(error, response, context) {
 
     
     });
@@ -842,17 +652,14 @@ var controller = lib.DNS;
 
 
 ```javascript
-function dNSConfiguration(key, uid, domain, records, contentType, callback)
+function dNSConfiguration(domain, records, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| records |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
+| records |  ``` Required ```  | Records to append to domain separated by a comma (a;www.mydomain.com;127.0.0.0,cname;mydomain.com;otherdomain.com) |
 
 
 
@@ -860,45 +667,10 @@ function dNSConfiguration(key, uid, domain, records, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var domain = 'domain';
     var records = 'records';
-    var contentType = 'Content-Type';
 
-    controller.dNSConfiguration(key, uid, domain, records, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="d_ns_configuration1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration1") dNSConfiguration1
-
-> DNS Configuration API
-
-
-```javascript
-function dNSConfiguration1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSDC({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.dNSConfiguration1(body, contentType, function(error, response, context) {
+    controller.dNSConfiguration(domain, records, function(error, response, context) {
 
     
     });
@@ -912,16 +684,13 @@ function dNSConfiguration1(body, contentType, callback)
 
 
 ```javascript
-function dNSCreation(key, uid, domain, contentType, callback)
+function dNSCreation(domain, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 
@@ -929,44 +698,9 @@ function dNSCreation(key, uid, domain, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var domain = 'domain';
-    var contentType = 'Content-Type';
 
-    controller.dNSCreation(key, uid, domain, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="d_ns_creation1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation1") dNSCreation1
-
-> DNS Creation API
-
-
-```javascript
-function dNSCreation1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSDA({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.dNSCreation1(body, contentType, function(error, response, context) {
+    controller.dNSCreation(domain, function(error, response, context) {
 
     
     });
@@ -992,16 +726,13 @@ var controller = lib.CodeObfuscation;
 
 
 ```javascript
-function obfuscationAndAntiTampering(key, uid, app, contentType, callback)
+function obfuscationAndAntiTampering(app, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
 
 
 
@@ -1009,44 +740,9 @@ function obfuscationAndAntiTampering(key, uid, app, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var app = 'app';
-    var contentType = 'Content-Type';
 
-    controller.obfuscationAndAntiTampering(key, uid, app, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTampering1") obfuscationAndAntiTampering1
-
-> Javascript and Node.JS Obfuscation and Anti-Tampering API
-
-
-```javascript
-function obfuscationAndAntiTampering1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSO({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.obfuscationAndAntiTampering1(body, contentType, function(error, response, context) {
+    controller.obfuscationAndAntiTampering(app, function(error, response, context) {
 
     
     });
@@ -1072,17 +768,14 @@ var controller = lib.Hosting;
 
 
 ```javascript
-function hostingSetup(key, uid, app, domain, contentType, callback)
+function hostingSetup(app, domain, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 
@@ -1090,45 +783,10 @@ function hostingSetup(key, uid, app, domain, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var app = 'app';
     var domain = 'domain';
-    var contentType = 'Content-Type';
 
-    controller.hostingSetup(key, uid, app, domain, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="hosting_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup1") hostingSetup1
-
-> Node.JS and Static Web APP Hosting
-
-
-```javascript
-function hostingSetup1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiSH({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.hostingSetup1(body, contentType, function(error, response, context) {
+    controller.hostingSetup(app, domain, function(error, response, context) {
 
     
     });
@@ -1252,17 +910,14 @@ var controller = lib.ImageManipulationAndModerationAPI;
 
 
 ```javascript
-function imageManipulation(key, uid, image, transform, contentType, callback)
+function imageManipulation(image, transform, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| image |  ``` Required ```  | TODO: Add a parameter description |
-| transform |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| image |  ``` Required ```  | Image URL or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 
@@ -1270,45 +925,10 @@ function imageManipulation(key, uid, image, transform, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var image = 'image';
     var transform = 'transform';
-    var contentType = 'Content-Type';
 
-    controller.imageManipulation(key, uid, image, transform, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="image_manipulation1"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation1") imageManipulation1
-
-> Image Manipulation API
-
-
-```javascript
-function imageManipulation1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiI({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.imageManipulation1(body, contentType, function(error, response, context) {
+    controller.imageManipulation(image, transform, function(error, response, context) {
 
     
     });
@@ -1334,21 +954,19 @@ var controller = lib.Verification;
 
 
 ```javascript
-function userAddressVerification(key, uid, user, a, sa, c, s, z, contentType, callback)
+function userAddressVerification(user, a, sa, c, s, z, address, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| a |  ``` Required ```  | TODO: Add a parameter description |
-| sa |  ``` Required ```  | TODO: Add a parameter description |
-| c |  ``` Required ```  | TODO: Add a parameter description |
-| s |  ``` Required ```  | TODO: Add a parameter description |
-| z |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
+| a |  ``` Required ```  | Address Line One |
+| sa |  ``` Required ```  | Address Line Two |
+| c |  ``` Required ```  | Address City |
+| s |  ``` Required ```  | Address State or Province |
+| z |  ``` Required ```  | Address Zipcode |
+| address |  ``` Optional ```  | Address as a one line input separated by commas |
 
 
 
@@ -1356,17 +974,15 @@ function userAddressVerification(key, uid, user, a, sa, c, s, z, contentType, ca
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var user = 'user';
     var a = 'a';
     var sa = 'sa';
     var c = 'c';
     var s = 's';
-    var z = 12;
-    var contentType = 'Content-Type';
+    var z = 85;
+    var address = 'address';
 
-    controller.userAddressVerification(key, uid, user, a, sa, c, s, z, contentType, function(error, response, context) {
+    controller.userAddressVerification(user, a, sa, c, s, z, address, function(error, response, context) {
 
     
     });
@@ -1374,20 +990,20 @@ function userAddressVerification(key, uid, user, a, sa, c, s, z, contentType, ca
 
 
 
-### <a name="user_address_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification1") userAddressVerification1
+### <a name="user_verification_response"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerificationResponse") userVerificationResponse
 
-> User Address Verification API
+> Users Verification Response API
 
 
 ```javascript
-function userAddressVerification1(body, contentType, callback)
+function userVerificationResponse(user, code, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| code |  ``` Required ```  | Verification code entered by the user |
 
 
 
@@ -1395,10 +1011,10 @@ function userAddressVerification1(body, contentType, callback)
 
 ```javascript
 
-    var body = new HttpsApiRestShApiVA({"key":"value"});
-    var contentType = 'Content-Type';
+    var user = 'user';
+    var code = 'code';
 
-    controller.userAddressVerification1(body, contentType, function(error, response, context) {
+    controller.userVerificationResponse(user, code, function(error, response, context) {
 
     
     });
@@ -1412,17 +1028,13 @@ function userAddressVerification1(body, contentType, callback)
 
 
 ```javascript
-function userVerification(key, uid, user, code, contentType, callback)
+function userVerification(user, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
 
 
 
@@ -1430,113 +1042,9 @@ function userVerification(key, uid, user, code, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var user = 'user';
-    var code = 'code';
-    var contentType = 'Content-Type';
 
-    controller.userVerification(key, uid, user, code, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="user_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification1") userVerification1
-
-> User Verification API
-
-
-```javascript
-function userVerification1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiVU({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.userVerification1(body, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification") cellphoneVerification
-
-> Verification API
-
-
-```javascript
-function cellphoneVerification(key, uid, to, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var key = 'key';
-    var uid = 'uid';
-    var to = 'to';
-    var contentType = 'Content-Type';
-
-    controller.cellphoneVerification(key, uid, to, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="cellphone_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification1") cellphoneVerification1
-
-> Verification API
-
-
-```javascript
-function cellphoneVerification1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiV({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.cellphoneVerification1(body, contentType, function(error, response, context) {
+    controller.userVerification(user, function(error, response, context) {
 
     
     });
@@ -1562,17 +1070,14 @@ var controller = lib.TwoFactorAuthenticationAPI;
 
 
 ```javascript
-function m2FATokenResponse(key, uid, user, code, contentType, callback)
+function m2FATokenResponse(user, code, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username or Email |
+| code |  ``` Required ```  | Response From User Containing 2FA Code |
 
 
 
@@ -1580,45 +1085,10 @@ function m2FATokenResponse(key, uid, user, code, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var user = 'user';
     var code = 'code';
-    var contentType = 'Content-Type';
 
-    controller.m2FATokenResponse(key, uid, user, code, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="m2_fa_token_response1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse1") m2FATokenResponse1
-
-> Two Factor Authentication Token Reply
-
-
-```javascript
-function m2FATokenResponse1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApi2faT({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.m2FATokenResponse1(body, contentType, function(error, response, context) {
+    controller.m2FATokenResponse(user, code, function(error, response, context) {
 
     
     });
@@ -1632,16 +1102,13 @@ function m2FATokenResponse1(body, contentType, callback)
 
 
 ```javascript
-function twoFactorAuthentication(key, uid, to, contentType, callback)
+function twoFactorAuthentication(to, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| to |  ``` Required ```  | Users UID, Username, Email, Or Cellphone number |
 
 
 
@@ -1649,44 +1116,9 @@ function twoFactorAuthentication(key, uid, to, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var to = 'to';
-    var contentType = 'Content-Type';
 
-    controller.twoFactorAuthentication(key, uid, to, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="two_factor_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication1") twoFactorAuthentication1
-
-> Two Factor Authentication API
-
-
-```javascript
-function twoFactorAuthentication1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApi2fa({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.twoFactorAuthentication1(body, contentType, function(error, response, context) {
+    controller.twoFactorAuthentication(to, function(error, response, context) {
 
     
     });
@@ -1712,17 +1144,13 @@ var controller = lib.UserManagement;
 
 
 ```javascript
-function getUserInfo(key, uid, user, apiuid, contentType, callback)
+function getUserInfo(user, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users User ID |
 
 
 
@@ -1730,45 +1158,9 @@ function getUserInfo(key, uid, user, apiuid, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var user = 'user';
-    var apiuid = 'apiuid';
-    var contentType = 'Content-Type';
 
-    controller.getUserInfo(key, uid, user, apiuid, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="get_user_info1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo1") getUserInfo1
-
-> Get User Info API
-
-
-```javascript
-function getUserInfo1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiUI({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.getUserInfo1(body, contentType, function(error, response, context) {
+    controller.getUserInfo(user, function(error, response, context) {
 
     
     });
@@ -1782,19 +1174,16 @@ function getUserInfo1(body, contentType, callback)
 
 
 ```javascript
-function updateUser(key, uid, user, apiuid, avatar, customInput, contentType, callback)
+function updateUser(user, avatar, customInput, queryParams, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| avatar |  ``` Required ```  | TODO: Add a parameter description |
-| customInput |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| avatar |  ``` Required ```  | Avatar Image URL |
+| customInput |  ``` Required ```  | Custom input variable for users profile |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 
@@ -1802,47 +1191,14 @@ function updateUser(key, uid, user, apiuid, avatar, customInput, contentType, ca
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var user = 'user';
-    var apiuid = 'apiuid';
     var avatar = 'avatar';
     var customInput = custom input;
-    var contentType = 'Content-Type';
 
-    controller.updateUser(key, uid, user, apiuid, avatar, customInput, contentType, function(error, response, context) {
+    // key-value map for optional query parameters
+    var queryParams = [];
 
-    
-    });
-```
-
-
-
-### <a name="update_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser1") updateUser1
-
-> Update User API
-
-
-```javascript
-function updateUser1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiUU({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.updateUser1(body, contentType, function(error, response, context) {
+    controller.updateUser(user, avatar, customInput, queryParams, function(error, response, context) {
 
     
     });
@@ -1856,17 +1212,13 @@ function updateUser1(body, contentType, callback)
 
 
 ```javascript
-function deleteUser(api, uid, user, apiuid, contentType, callback)
+function deleteUser(user, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| api |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
 
 
 
@@ -1874,45 +1226,9 @@ function deleteUser(api, uid, user, apiuid, contentType, callback)
 
 ```javascript
 
-    var api = 'api';
-    var uid = 'uid';
     var user = 'user';
-    var apiuid = 'apiuid';
-    var contentType = 'Content-Type';
 
-    controller.deleteUser(api, uid, user, apiuid, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="delete_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser1") deleteUser1
-
-> Delete User API
-
-
-```javascript
-function deleteUser1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiUD({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.deleteUser1(body, contentType, function(error, response, context) {
+    controller.deleteUser(user, function(error, response, context) {
 
     
     });
@@ -1938,22 +1254,20 @@ var controller = lib.LoginAndRegistration;
 
 
 ```javascript
-function userRegistration(key, uid, user, password, name, email, phone, countrycode, address, contentType, callback)
+function userRegistration(email, user, password, name, phone, countrycode, address, queryParams, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| phone |  ``` Required ```  | TODO: Add a parameter description |
-| countrycode |  ``` Required ```  | TODO: Add a parameter description |
-| address |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| email |  ``` Required ```  | Users Email |
+| user |  ``` Required ```  | Users Username |
+| password |  ``` Required ```  | Users Password |
+| name |  ``` Optional ```  | Users Name |
+| phone |  ``` Optional ```  | Users Cellphone Number |
+| countrycode |  ``` Optional ```  | Users Country Code (US = 1) |
+| address |  ``` Optional ```  | Users Address |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 
@@ -1961,50 +1275,18 @@ function userRegistration(key, uid, user, password, name, email, phone, countryc
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
+    var email = 'email';
     var user = 'user';
     var password = 'password';
     var name = 'name';
-    var email = 'email';
-    var phone = 12;
-    var countrycode = 12;
+    var phone = 85;
+    var countrycode = 85;
     var address = 'address';
-    var contentType = 'Content-Type';
 
-    controller.userRegistration(key, uid, user, password, name, email, phone, countrycode, address, contentType, function(error, response, context) {
+    // key-value map for optional query parameters
+    var queryParams = [];
 
-    
-    });
-```
-
-
-
-### <a name="user_registration1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration1") userRegistration1
-
-> User Registration API
-
-
-```javascript
-function userRegistration1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiAUR({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.userRegistration1(body, contentType, function(error, response, context) {
+    controller.userRegistration(email, user, password, name, phone, countrycode, address, queryParams, function(error, response, context) {
 
     
     });
@@ -2018,17 +1300,14 @@ function userRegistration1(body, contentType, callback)
 
 
 ```javascript
-function userAuthentication(key, uid, user, password, contentType, callback)
+function userAuthentication(user, password, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users Username or Email |
+| password |  ``` Required ```  | Users Password |
 
 
 
@@ -2036,45 +1315,10 @@ function userAuthentication(key, uid, user, password, contentType, callback)
 
 ```javascript
 
-    var key = 'key';
-    var uid = 'uid';
     var user = 'user';
     var password = 'password';
-    var contentType = 'Content-Type';
 
-    controller.userAuthentication(key, uid, user, password, contentType, function(error, response, context) {
-
-    
-    });
-```
-
-
-
-### <a name="user_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication1") userAuthentication1
-
-> User Authentication API
-
-
-```javascript
-function userAuthentication1(body, contentType, callback)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```javascript
-
-    var body = new HttpsApiRestShApiAUL({"key":"value"});
-    var contentType = 'Content-Type';
-
-    controller.userAuthentication1(body, contentType, function(error, response, context) {
+    controller.userAuthentication(user, password, function(error, response, context) {
 
     
     });

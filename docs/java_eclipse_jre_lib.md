@@ -261,12 +261,9 @@ AdvancedLogging advancedLogging = client.getAdvancedLogging();
 
 ```java
 void loggingInfoAsync(
-        final String key,
-        final String uid,
         final String name,
         final String origin,
         final String time,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSLIR> callBack)
 ```
 
@@ -274,25 +271,19 @@ void loggingInfoAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| time |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String name = "name";
 String origin = "origin";
 String time = "time";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-advancedLogging.loggingInfoAsync(key, uid, name, origin, time, contentType, new APICallBack<HttpsApiRestShApiSLIR>() {
+advancedLogging.loggingInfoAsync(name, origin, time, new APICallBack<HttpsApiRestShApiSLIR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSLIR response) {
         // TODO success callback handler
     }
@@ -304,19 +295,16 @@ advancedLogging.loggingInfoAsync(key, uid, name, origin, time, contentType, new 
 ```
 
 
-### <a name="logging_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingSetupAsync") loggingSetupAsync
+### <a name="logging_configuration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingConfigurationAsync") loggingConfigurationAsync
 
-> WAF Log Setup
+> WAF Log Configuration
 
 
 ```java
-void loggingSetupAsync(
-        final String key,
-        final String uid,
+void loggingConfigurationAsync(
         final String name,
         final String origin,
-        final boolean activate,
-        final String contentType,
+        final String activate,
         final APICallBack<HttpsApiRestShApiSLR> callBack)
 ```
 
@@ -324,25 +312,19 @@ void loggingSetupAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| activate |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of the WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
+| activate |  ``` Required ```  | True or False |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String name = "name";
 String origin = "origin";
-boolean activate = false;
-String contentType = "Content-Type";
+String activate = "activate";
 // Invoking the API call with sample inputs
-advancedLogging.loggingSetupAsync(key, uid, name, origin, activate, contentType, new APICallBack<HttpsApiRestShApiSLR>() {
+advancedLogging.loggingConfigurationAsync(name, origin, activate, new APICallBack<HttpsApiRestShApiSLR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSLR response) {
         // TODO success callback handler
     }
@@ -351,90 +333,6 @@ advancedLogging.loggingSetupAsync(key, uid, name, origin, activate, contentType,
     }
 });
 
-```
-
-
-### <a name="logging_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingInfoAsync") loggingInfoAsync
-
-> WAF Log Info
-
-
-```java
-void loggingInfoAsync(
-        final HttpsApiRestShApiSLI body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSLIR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiSLI body = new HttpsApiRestShApiSLI();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    advancedLogging.loggingInfoAsync(body, contentType, new APICallBack<HttpsApiRestShApiSLIR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSLIR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
-### <a name="logging_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.AdvancedLogging.loggingSetupAsync") loggingSetupAsync
-
-> WAF Log Setup
-
-
-```java
-void loggingSetupAsync(
-        final HttpsApiRestShApiSL body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSLR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiSL body = new HttpsApiRestShApiSL();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    advancedLogging.loggingSetupAsync(body, contentType, new APICallBack<HttpsApiRestShApiSLR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSLR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -660,12 +558,9 @@ Encryption encryption = client.getEncryption();
 
 ```java
 void dataAndFileEncryptionAsync(
-        final String key,
-        final String uid,
         final String data,
         final String method,
         final int bit,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSER> callBack)
 ```
 
@@ -673,25 +568,19 @@ void dataAndFileEncryptionAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| method |  ``` Required ```  | TODO: Add a parameter description |
-| bit |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | GIT URL, file URL, direct upload of file, or data as a query string |
+| method |  ``` Required ```  | Single or multiple encryption types to apply to data or files separated by a comma (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP) |
+| bit |  ``` Required ```  | Encryption key size (4096) |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String data = "data";
 String method = "method";
-int bit = 21;
-String contentType = "Content-Type";
+int bit = 121;
 // Invoking the API call with sample inputs
-encryption.dataAndFileEncryptionAsync(key, uid, data, method, bit, contentType, new APICallBack<HttpsApiRestShApiSER>() {
+encryption.dataAndFileEncryptionAsync(data, method, bit, new APICallBack<HttpsApiRestShApiSER>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSER response) {
         // TODO success callback handler
     }
@@ -700,48 +589,6 @@ encryption.dataAndFileEncryptionAsync(key, uid, data, method, bit, contentType, 
     }
 });
 
-```
-
-
-### <a name="data_and_file_encryption_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Encryption.dataAndFileEncryptionAsync") dataAndFileEncryptionAsync
-
-> Data and File Encryption API
-
-
-```java
-void dataAndFileEncryptionAsync(
-        final HttpsApiRestShApiSE body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSER> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiSE body = new HttpsApiRestShApiSE();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    encryption.dataAndFileEncryptionAsync(body, contentType, new APICallBack<HttpsApiRestShApiSER>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSER response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -764,11 +611,8 @@ CDN cDN = client.getCDN();
 
 ```java
 void cDNPushZoneAsync(
-        final String key,
-        final String uid,
         final String cname,
         final String file,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSCPushR> callBack)
 ```
 
@@ -776,23 +620,17 @@ void cDNPushZoneAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| file |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
+| file |  ``` Required ```  | GIT URL, file URL, or direct upload of file |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String cname = "cname";
 String file = "file";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-cDN.cDNPushZoneAsync(key, uid, cname, file, contentType, new APICallBack<HttpsApiRestShApiSCPushR>() {
+cDN.cDNPushZoneAsync(cname, file, new APICallBack<HttpsApiRestShApiSCPushR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSCPushR response) {
         // TODO success callback handler
     }
@@ -811,11 +649,8 @@ cDN.cDNPushZoneAsync(key, uid, cname, file, contentType, new APICallBack<HttpsAp
 
 ```java
 void cDNPullZoneAsync(
-        final String key,
-        final String uid,
         final String origin,
         final String cname,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSCPullR> callBack)
 ```
 
@@ -823,23 +658,17 @@ void cDNPullZoneAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | Domain or domain names separated by a comma |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String origin = "origin";
 String cname = "cname";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-cDN.cDNPullZoneAsync(key, uid, origin, cname, contentType, new APICallBack<HttpsApiRestShApiSCPullR>() {
+cDN.cDNPullZoneAsync(origin, cname, new APICallBack<HttpsApiRestShApiSCPullR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSCPullR response) {
         // TODO success callback handler
     }
@@ -848,90 +677,6 @@ cDN.cDNPullZoneAsync(key, uid, origin, cname, contentType, new APICallBack<Https
     }
 });
 
-```
-
-
-### <a name="c_dn_push_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPushZoneAsync") cDNPushZoneAsync
-
-> CDN Push Zone API
-
-
-```java
-void cDNPushZoneAsync(
-        final HttpsApiRestShApiSCPush body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSCPushR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiSCPush body = new HttpsApiRestShApiSCPush();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    cDN.cDNPushZoneAsync(body, contentType, new APICallBack<HttpsApiRestShApiSCPushR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSCPushR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
-### <a name="c_dn_pull_zone_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CDN.cDNPullZoneAsync") cDNPullZoneAsync
-
-> CDN Pull Zone API
-
-
-```java
-void cDNPullZoneAsync(
-        final HttpsApiRestShApiSCPull body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSCPullR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiSCPull body = new HttpsApiRestShApiSCPull();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    cDN.cDNPullZoneAsync(body, contentType, new APICallBack<HttpsApiRestShApiSCPullR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSCPullR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -954,11 +699,8 @@ DNS dNS = client.getDNS();
 
 ```java
 void dNSConfigurationAsync(
-        final String key,
-        final String uid,
         final String domain,
         final String records,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSDCR> callBack)
 ```
 
@@ -966,23 +708,17 @@ void dNSConfigurationAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| records |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
+| records |  ``` Required ```  | Records to append to domain separated by a comma (a;www.mydomain.com;127.0.0.0,cname;mydomain.com;otherdomain.com) |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String domain = "domain";
 String records = "records";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-dNS.dNSConfigurationAsync(key, uid, domain, records, contentType, new APICallBack<HttpsApiRestShApiSDCR>() {
+dNS.dNSConfigurationAsync(domain, records, new APICallBack<HttpsApiRestShApiSDCR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSDCR response) {
         // TODO success callback handler
     }
@@ -994,48 +730,6 @@ dNS.dNSConfigurationAsync(key, uid, domain, records, contentType, new APICallBac
 ```
 
 
-### <a name="d_ns_configuration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSConfigurationAsync") dNSConfigurationAsync
-
-> DNS Configuration API
-
-
-```java
-void dNSConfigurationAsync(
-        final HttpsApiRestShApiSDC body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSDCR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiSDC body = new HttpsApiRestShApiSDC();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    dNS.dNSConfigurationAsync(body, contentType, new APICallBack<HttpsApiRestShApiSDCR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSDCR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
 ### <a name="d_ns_creation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSCreationAsync") dNSCreationAsync
 
 > DNS Creation API
@@ -1043,10 +737,7 @@ try {
 
 ```java
 void dNSCreationAsync(
-        final String key,
-        final String uid,
         final String domain,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSDAR> callBack)
 ```
 
@@ -1054,21 +745,15 @@ void dNSCreationAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String domain = "domain";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-dNS.dNSCreationAsync(key, uid, domain, contentType, new APICallBack<HttpsApiRestShApiSDAR>() {
+dNS.dNSCreationAsync(domain, new APICallBack<HttpsApiRestShApiSDAR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSDAR response) {
         // TODO success callback handler
     }
@@ -1077,48 +762,6 @@ dNS.dNSCreationAsync(key, uid, domain, contentType, new APICallBack<HttpsApiRest
     }
 });
 
-```
-
-
-### <a name="d_ns_creation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.DNS.dNSCreationAsync") dNSCreationAsync
-
-> DNS Creation API
-
-
-```java
-void dNSCreationAsync(
-        final HttpsApiRestShApiSDA body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSDAR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiSDA body = new HttpsApiRestShApiSDA();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    dNS.dNSCreationAsync(body, contentType, new APICallBack<HttpsApiRestShApiSDAR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSDAR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -1141,10 +784,7 @@ CodeObfuscation codeObfuscation = client.getCodeObfuscation();
 
 ```java
 void obfuscationAndAntiTamperingAsync(
-        final String key,
-        final String uid,
         final String app,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSOR> callBack)
 ```
 
@@ -1152,21 +792,15 @@ void obfuscationAndAntiTamperingAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String app = "app";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-codeObfuscation.obfuscationAndAntiTamperingAsync(key, uid, app, contentType, new APICallBack<HttpsApiRestShApiSOR>() {
+codeObfuscation.obfuscationAndAntiTamperingAsync(app, new APICallBack<HttpsApiRestShApiSOR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSOR response) {
         // TODO success callback handler
     }
@@ -1175,48 +809,6 @@ codeObfuscation.obfuscationAndAntiTamperingAsync(key, uid, app, contentType, new
     }
 });
 
-```
-
-
-### <a name="obfuscation_and_anti_tampering_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.CodeObfuscation.obfuscationAndAntiTamperingAsync") obfuscationAndAntiTamperingAsync
-
-> Javascript and Node.JS Obfuscation and Anti-Tampering API
-
-
-```java
-void obfuscationAndAntiTamperingAsync(
-        final HttpsApiRestShApiSO body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSOR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiSO body = new HttpsApiRestShApiSO();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    codeObfuscation.obfuscationAndAntiTamperingAsync(body, contentType, new APICallBack<HttpsApiRestShApiSOR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSOR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -1239,11 +831,8 @@ Hosting hosting = client.getHosting();
 
 ```java
 void hostingSetupAsync(
-        final String key,
-        final String uid,
         final String app,
         final String domain,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiSHR> callBack)
 ```
 
@@ -1251,23 +840,17 @@ void hostingSetupAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String app = "app";
 String domain = "domain";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-hosting.hostingSetupAsync(key, uid, app, domain, contentType, new APICallBack<HttpsApiRestShApiSHR>() {
+hosting.hostingSetupAsync(app, domain, new APICallBack<HttpsApiRestShApiSHR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiSHR response) {
         // TODO success callback handler
     }
@@ -1276,48 +859,6 @@ hosting.hostingSetupAsync(key, uid, app, domain, contentType, new APICallBack<Ht
     }
 });
 
-```
-
-
-### <a name="hosting_setup_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Hosting.hostingSetupAsync") hostingSetupAsync
-
-> Node.JS and Static Web APP Hosting
-
-
-```java
-void hostingSetupAsync(
-        final HttpsApiRestShApiSH body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiSHR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiSH body = new HttpsApiRestShApiSH();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    hosting.hostingSetupAsync(body, contentType, new APICallBack<HttpsApiRestShApiSHR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiSHR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -1449,11 +990,8 @@ ImageManipulationAndModerationAPI imageManipulationAndModerationAPI = client.get
 
 ```java
 void imageManipulationAsync(
-        final String key,
-        final String uid,
         final String image,
         final String transform,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiIR> callBack)
 ```
 
@@ -1461,23 +999,17 @@ void imageManipulationAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| image |  ``` Required ```  | TODO: Add a parameter description |
-| transform |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| image |  ``` Required ```  | Image URL or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String image = "image";
 String transform = "transform";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-imageManipulationAndModerationAPI.imageManipulationAsync(key, uid, image, transform, contentType, new APICallBack<HttpsApiRestShApiIR>() {
+imageManipulationAndModerationAPI.imageManipulationAsync(image, transform, new APICallBack<HttpsApiRestShApiIR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiIR response) {
         // TODO success callback handler
     }
@@ -1486,48 +1018,6 @@ imageManipulationAndModerationAPI.imageManipulationAsync(key, uid, image, transf
     }
 });
 
-```
-
-
-### <a name="image_manipulation_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.ImageManipulationAndModerationAPI.imageManipulationAsync") imageManipulationAsync
-
-> Image Manipulation API
-
-
-```java
-void imageManipulationAsync(
-        final HttpsApiRestShApiI body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiIR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiI body = new HttpsApiRestShApiI();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    imageManipulationAndModerationAPI.imageManipulationAsync(body, contentType, new APICallBack<HttpsApiRestShApiIR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiIR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -1550,15 +1040,13 @@ Verification verification = client.getVerification();
 
 ```java
 void userAddressVerificationAsync(
-        final String key,
-        final String uid,
         final String user,
         final String a,
         final String sa,
         final String c,
         final String s,
         final int z,
-        final String contentType,
+        final String address,
         final APICallBack<HttpsApiRestShApiVAR> callBack)
 ```
 
@@ -1566,31 +1054,27 @@ void userAddressVerificationAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| a |  ``` Required ```  | TODO: Add a parameter description |
-| sa |  ``` Required ```  | TODO: Add a parameter description |
-| c |  ``` Required ```  | TODO: Add a parameter description |
-| s |  ``` Required ```  | TODO: Add a parameter description |
-| z |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
+| a |  ``` Required ```  | Address Line One |
+| sa |  ``` Required ```  | Address Line Two |
+| c |  ``` Required ```  | Address City |
+| s |  ``` Required ```  | Address State or Province |
+| z |  ``` Required ```  | Address Zipcode |
+| address |  ``` Optional ```  | Address as a one line input separated by commas |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String user = "user";
 String a = "a";
 String sa = "sa";
 String c = "c";
 String s = "s";
-int z = 112;
-String contentType = "Content-Type";
+int z = 121;
+String address = "address";
 // Invoking the API call with sample inputs
-verification.userAddressVerificationAsync(key, uid, user, a, sa, c, s, z, contentType, new APICallBack<HttpsApiRestShApiVAR>() {
+verification.userAddressVerificationAsync(user, a, sa, c, s, z, address, new APICallBack<HttpsApiRestShApiVAR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiVAR response) {
         // TODO success callback handler
     }
@@ -1602,60 +1086,15 @@ verification.userAddressVerificationAsync(key, uid, user, a, sa, c, s, z, conten
 ```
 
 
-### <a name="user_address_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userAddressVerificationAsync") userAddressVerificationAsync
+### <a name="user_verification_response_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userVerificationResponseAsync") userVerificationResponseAsync
 
-> User Address Verification API
-
-
-```java
-void userAddressVerificationAsync(
-        final HttpsApiRestShApiVA body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiVAR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiVA body = new HttpsApiRestShApiVA();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    verification.userAddressVerificationAsync(body, contentType, new APICallBack<HttpsApiRestShApiVAR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiVAR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
-### <a name="user_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.userVerificationAsync") userVerificationAsync
-
-> User Verification API
+> Users Verification Response API
 
 
 ```java
-void userVerificationAsync(
-        final String key,
-        final String uid,
+void userVerificationResponseAsync(
         final String user,
         final String code,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiVUR> callBack)
 ```
 
@@ -1663,23 +1102,17 @@ void userVerificationAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| code |  ``` Required ```  | Verification code entered by the user |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String user = "user";
 String code = "code";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-verification.userVerificationAsync(key, uid, user, code, contentType, new APICallBack<HttpsApiRestShApiVUR>() {
+verification.userVerificationResponseAsync(user, code, new APICallBack<HttpsApiRestShApiVUR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiVUR response) {
         // TODO success callback handler
     }
@@ -1698,52 +1131,7 @@ verification.userVerificationAsync(key, uid, user, code, contentType, new APICal
 
 ```java
 void userVerificationAsync(
-        final HttpsApiRestShApiVU body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiVUR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiVU body = new HttpsApiRestShApiVU();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    verification.userVerificationAsync(body, contentType, new APICallBack<HttpsApiRestShApiVUR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiVUR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
-### <a name="cellphone_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.cellphoneVerificationAsync") cellphoneVerificationAsync
-
-> Verification API
-
-
-```java
-void cellphoneVerificationAsync(
-        final String key,
-        final String uid,
-        final String to,
-        final String contentType,
+        final String user,
         final APICallBack<HttpsApiRestShApiVR> callBack)
 ```
 
@@ -1751,21 +1139,15 @@ void cellphoneVerificationAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
-String to = "to";
-String contentType = "Content-Type";
+String user = "user";
 // Invoking the API call with sample inputs
-verification.cellphoneVerificationAsync(key, uid, to, contentType, new APICallBack<HttpsApiRestShApiVR>() {
+verification.userVerificationAsync(user, new APICallBack<HttpsApiRestShApiVR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiVR response) {
         // TODO success callback handler
     }
@@ -1774,48 +1156,6 @@ verification.cellphoneVerificationAsync(key, uid, to, contentType, new APICallBa
     }
 });
 
-```
-
-
-### <a name="cellphone_verification_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.Verification.cellphoneVerificationAsync") cellphoneVerificationAsync
-
-> Verification API
-
-
-```java
-void cellphoneVerificationAsync(
-        final HttpsApiRestShApiV body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiVR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiV body = new HttpsApiRestShApiV();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    verification.cellphoneVerificationAsync(body, contentType, new APICallBack<HttpsApiRestShApiVR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiVR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -1838,11 +1178,8 @@ TwoFactorAuthenticationAPI twoFactorAuthenticationAPI = client.getTwoFactorAuthe
 
 ```java
 void m2FATokenResponseAsync(
-        final String key,
-        final String uid,
         final String user,
         final String code,
-        final String contentType,
         final APICallBack<HttpsApiRestShApi2faTR> callBack)
 ```
 
@@ -1850,23 +1187,17 @@ void m2FATokenResponseAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username or Email |
+| code |  ``` Required ```  | Response From User Containing 2FA Code |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String user = "user";
 String code = "code";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-twoFactorAuthenticationAPI.m2FATokenResponseAsync(key, uid, user, code, contentType, new APICallBack<HttpsApiRestShApi2faTR>() {
+twoFactorAuthenticationAPI.m2FATokenResponseAsync(user, code, new APICallBack<HttpsApiRestShApi2faTR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApi2faTR response) {
         // TODO success callback handler
     }
@@ -1878,48 +1209,6 @@ twoFactorAuthenticationAPI.m2FATokenResponseAsync(key, uid, user, code, contentT
 ```
 
 
-### <a name="m2_fa_token_response_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.m2FATokenResponseAsync") m2FATokenResponseAsync
-
-> Two Factor Authentication Token Reply
-
-
-```java
-void m2FATokenResponseAsync(
-        final HttpsApiRestShApi2faT body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApi2faTR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApi2faT body = new HttpsApiRestShApi2faT();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    twoFactorAuthenticationAPI.m2FATokenResponseAsync(body, contentType, new APICallBack<HttpsApiRestShApi2faTR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApi2faTR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
 ### <a name="two_factor_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.twoFactorAuthenticationAsync") twoFactorAuthenticationAsync
 
 > Two Factor Authentication API
@@ -1927,10 +1216,7 @@ try {
 
 ```java
 void twoFactorAuthenticationAsync(
-        final String key,
-        final String uid,
         final String to,
-        final String contentType,
         final APICallBack<HttpsApiRestShApi2faR> callBack)
 ```
 
@@ -1938,21 +1224,15 @@ void twoFactorAuthenticationAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| to |  ``` Required ```  | Users UID, Username, Email, Or Cellphone number |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String to = "to";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-twoFactorAuthenticationAPI.twoFactorAuthenticationAsync(key, uid, to, contentType, new APICallBack<HttpsApiRestShApi2faR>() {
+twoFactorAuthenticationAPI.twoFactorAuthenticationAsync(to, new APICallBack<HttpsApiRestShApi2faR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApi2faR response) {
         // TODO success callback handler
     }
@@ -1961,48 +1241,6 @@ twoFactorAuthenticationAPI.twoFactorAuthenticationAsync(key, uid, to, contentTyp
     }
 });
 
-```
-
-
-### <a name="two_factor_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.TwoFactorAuthenticationAPI.twoFactorAuthenticationAsync") twoFactorAuthenticationAsync
-
-> Two Factor Authentication API
-
-
-```java
-void twoFactorAuthenticationAsync(
-        final HttpsApiRestShApi2fa body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApi2faR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApi2fa body = new HttpsApiRestShApi2fa();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    twoFactorAuthenticationAPI.twoFactorAuthenticationAsync(body, contentType, new APICallBack<HttpsApiRestShApi2faR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApi2faR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -2025,11 +1263,7 @@ UserManagement userManagement = client.getUserManagement();
 
 ```java
 void getUserInfoAsync(
-        final String key,
-        final String uid,
         final String user,
-        final String apiuid,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiUIR> callBack)
 ```
 
@@ -2037,23 +1271,15 @@ void getUserInfoAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users User ID |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String user = "user";
-String apiuid = "apiuid";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-userManagement.getUserInfoAsync(key, uid, user, apiuid, contentType, new APICallBack<HttpsApiRestShApiUIR>() {
+userManagement.getUserInfoAsync(user, new APICallBack<HttpsApiRestShApiUIR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiUIR response) {
         // TODO success callback handler
     }
@@ -2065,48 +1291,6 @@ userManagement.getUserInfoAsync(key, uid, user, apiuid, contentType, new APICall
 ```
 
 
-### <a name="get_user_info_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.getUserInfoAsync") getUserInfoAsync
-
-> Get User Info API
-
-
-```java
-void getUserInfoAsync(
-        final HttpsApiRestShApiUI body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiUIR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiUI body = new HttpsApiRestShApiUI();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    userManagement.getUserInfoAsync(body, contentType, new APICallBack<HttpsApiRestShApiUIR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiUIR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
 ### <a name="update_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.updateUserAsync") updateUserAsync
 
 > Update User API
@@ -2114,13 +1298,10 @@ try {
 
 ```java
 void updateUserAsync(
-        final String key,
-        final String uid,
         final String user,
-        final String apiuid,
         final String avatar,
         final String customInput,
-        final String contentType,
+        Map<String, Object> queryParameters,
         final APICallBack<HttpsApiRestShApiUUR> callBack)
 ```
 
@@ -2128,27 +1309,22 @@ void updateUserAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| avatar |  ``` Required ```  | TODO: Add a parameter description |
-| customInput |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| avatar |  ``` Required ```  | Avatar Image URL |
+| customInput |  ``` Required ```  | Custom input variable for users profile |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String user = "user";
-String apiuid = "apiuid";
 String avatar = "avatar";
 String customInput = "custom input";
-String contentType = "Content-Type";
+// key-value map for optional query parameters
+Map<String, Object> queryParams = new LinkedHashMap<String, Object>();
 // Invoking the API call with sample inputs
-userManagement.updateUserAsync(key, uid, user, apiuid, avatar, customInput, contentType, new APICallBack<HttpsApiRestShApiUUR>() {
+userManagement.updateUserAsync(user, avatar, customInput, queryParams, new APICallBack<HttpsApiRestShApiUUR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiUUR response) {
         // TODO success callback handler
     }
@@ -2160,48 +1336,6 @@ userManagement.updateUserAsync(key, uid, user, apiuid, avatar, customInput, cont
 ```
 
 
-### <a name="update_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.updateUserAsync") updateUserAsync
-
-> Update User API
-
-
-```java
-void updateUserAsync(
-        final HttpsApiRestShApiUU body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiUUR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiUU body = new HttpsApiRestShApiUU();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    userManagement.updateUserAsync(body, contentType, new APICallBack<HttpsApiRestShApiUUR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiUUR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
 ### <a name="delete_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.deleteUserAsync") deleteUserAsync
 
 > Delete User API
@@ -2209,11 +1343,7 @@ try {
 
 ```java
 void deleteUserAsync(
-        final String api,
-        final String uid,
         final String user,
-        final String apiuid,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiUDR> callBack)
 ```
 
@@ -2221,23 +1351,15 @@ void deleteUserAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| api |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
 
 
 #### Example Usage
 
 ```java
-String api = "api";
-String uid = "uid";
 String user = "user";
-String apiuid = "apiuid";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-userManagement.deleteUserAsync(api, uid, user, apiuid, contentType, new APICallBack<HttpsApiRestShApiUDR>() {
+userManagement.deleteUserAsync(user, new APICallBack<HttpsApiRestShApiUDR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiUDR response) {
         // TODO success callback handler
     }
@@ -2246,48 +1368,6 @@ userManagement.deleteUserAsync(api, uid, user, apiuid, contentType, new APICallB
     }
 });
 
-```
-
-
-### <a name="delete_user_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.UserManagement.deleteUserAsync") deleteUserAsync
-
-> Delete User API
-
-
-```java
-void deleteUserAsync(
-        final HttpsApiRestShApiUD body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiUDR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiUD body = new HttpsApiRestShApiUD();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    userManagement.deleteUserAsync(body, contentType, new APICallBack<HttpsApiRestShApiUDR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiUDR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 
@@ -2310,16 +1390,14 @@ LoginAndRegistration loginAndRegistration = client.getLoginAndRegistration();
 
 ```java
 void userRegistrationAsync(
-        final String key,
-        final String uid,
+        final String email,
         final String user,
         final String password,
         final String name,
-        final String email,
-        final int phone,
-        final int countrycode,
+        final Integer phone,
+        final Integer countrycode,
         final String address,
-        final String contentType,
+        Map<String, Object> queryParameters,
         final APICallBack<HttpsApiRestShApiAURR> callBack)
 ```
 
@@ -2327,33 +1405,30 @@ void userRegistrationAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| phone |  ``` Required ```  | TODO: Add a parameter description |
-| countrycode |  ``` Required ```  | TODO: Add a parameter description |
-| address |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| email |  ``` Required ```  | Users Email |
+| user |  ``` Required ```  | Users Username |
+| password |  ``` Required ```  | Users Password |
+| name |  ``` Optional ```  | Users Name |
+| phone |  ``` Optional ```  | Users Cellphone Number |
+| countrycode |  ``` Optional ```  | Users Country Code (US = 1) |
+| address |  ``` Optional ```  | Users Address |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
+String email = "email";
 String user = "user";
 String password = "password";
 String name = "name";
-String email = "email";
-int phone = 112;
-int countrycode = 112;
+Integer phone = 121;
+Integer countrycode = 121;
 String address = "address";
-String contentType = "Content-Type";
+// key-value map for optional query parameters
+Map<String, Object> queryParams = new LinkedHashMap<String, Object>();
 // Invoking the API call with sample inputs
-loginAndRegistration.userRegistrationAsync(key, uid, user, password, name, email, phone, countrycode, address, contentType, new APICallBack<HttpsApiRestShApiAURR>() {
+loginAndRegistration.userRegistrationAsync(email, user, password, name, phone, countrycode, address, queryParams, new APICallBack<HttpsApiRestShApiAURR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiAURR response) {
         // TODO success callback handler
     }
@@ -2365,48 +1440,6 @@ loginAndRegistration.userRegistrationAsync(key, uid, user, password, name, email
 ```
 
 
-### <a name="user_registration_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userRegistrationAsync") userRegistrationAsync
-
-> User Registration API
-
-
-```java
-void userRegistrationAsync(
-        final HttpsApiRestShApiAUR body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiAURR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiAUR body = new HttpsApiRestShApiAUR();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    loginAndRegistration.userRegistrationAsync(body, contentType, new APICallBack<HttpsApiRestShApiAURR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiAURR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-```
-
-
 ### <a name="user_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userAuthenticationAsync") userAuthenticationAsync
 
 > User Authentication API
@@ -2414,11 +1447,8 @@ try {
 
 ```java
 void userAuthenticationAsync(
-        final String key,
-        final String uid,
         final String user,
         final String password,
-        final String contentType,
         final APICallBack<HttpsApiRestShApiAULR> callBack)
 ```
 
@@ -2426,23 +1456,17 @@ void userAuthenticationAsync(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users Username or Email |
+| password |  ``` Required ```  | Users Password |
 
 
 #### Example Usage
 
 ```java
-String key = "key";
-String uid = "uid";
 String user = "user";
 String password = "password";
-String contentType = "Content-Type";
 // Invoking the API call with sample inputs
-loginAndRegistration.userAuthenticationAsync(key, uid, user, password, contentType, new APICallBack<HttpsApiRestShApiAULR>() {
+loginAndRegistration.userAuthenticationAsync(user, password, new APICallBack<HttpsApiRestShApiAULR>() {
     public void onSuccess(HttpContext context, HttpsApiRestShApiAULR response) {
         // TODO success callback handler
     }
@@ -2451,48 +1475,6 @@ loginAndRegistration.userAuthenticationAsync(key, uid, user, password, contentTy
     }
 });
 
-```
-
-
-### <a name="user_authentication_async"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.controllers.LoginAndRegistration.userAuthenticationAsync") userAuthenticationAsync
-
-> User Authentication API
-
-
-```java
-void userAuthenticationAsync(
-        final HttpsApiRestShApiAUL body,
-        final String contentType,
-        final APICallBack<HttpsApiRestShApiAULR> callBack)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```java
-try {
-    HttpsApiRestShApiAUL body = new HttpsApiRestShApiAUL();
-    String contentType = "Content-Type";
-    // Invoking the API call with sample inputs
-    loginAndRegistration.userAuthenticationAsync(body, contentType, new APICallBack<HttpsApiRestShApiAULR>() {
-        public void onSuccess(HttpContext context, HttpsApiRestShApiAULR response) {
-            // TODO success callback handler
-        }
-        public void onFailure(HttpContext context, Throwable error) {
-            // TODO failure callback handler
-        }
-    });
-} catch(JsonProcessingException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
 ```
 
 

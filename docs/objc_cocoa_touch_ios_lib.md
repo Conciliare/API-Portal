@@ -229,31 +229,25 @@ Configuration_Key = "KEY"; // Your Public API Key
 AdvancedLogging* advancedLogging = [[AdvancedLogging alloc]init] ;
 ```
 
-### <a name="logging_info_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfoAsyncWithKey") loggingInfoAsyncWithKey
+### <a name="logging_info_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfoAsyncWithName") loggingInfoAsyncWithName
 
 > WAF Log Info
 
 
 ```objc
-function loggingInfoAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                name:(NSString*) name
+function loggingInfoAsyncWithName:(NSString*) name
                 origin:(NSString*) origin
                 time:(NSString*) time
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetLoggingInfo) onCompleted(key uid : uid name : name origin : origin time : time contentType : contentType)
+                completionBlock:(CompletedGetLoggingInfo) onCompleted(name origin : origin time : time)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| time |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
 
 
 
@@ -263,44 +257,35 @@ function loggingInfoAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* name = @"name";
     NSString* origin = @"origin";
     NSString* time = @"time";
-    NSString* contentType = @"Content-Type";
 
-    [self.advancedLogging loggingInfoAsyncWithKey: key uid : uid name : name origin : origin time : time contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLIR* response, NSError* error) { 
+    [self.advancedLogging loggingInfoAsyncWithName: name origin : origin time : time  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLIR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="logging_setup_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetupAsyncWithKey") loggingSetupAsyncWithKey
+### <a name="logging_configuration_async_with_name"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingConfigurationAsyncWithName") loggingConfigurationAsyncWithName
 
-> WAF Log Setup
+> WAF Log Configuration
 
 
 ```objc
-function loggingSetupAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                name:(NSString*) name
+function loggingConfigurationAsyncWithName:(NSString*) name
                 origin:(NSString*) origin
-                activate:(BOOL) activate
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetLoggingSetup) onCompleted(key uid : uid name : name origin : origin activate : activate contentType : contentType)
+                activate:(NSString*) activate
+                completionBlock:(CompletedGetLoggingConfiguration) onCompleted(name origin : origin activate : activate)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| activate |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of the WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
+| activate |  ``` Required ```  | True or False |
 
 
 
@@ -310,84 +295,11 @@ function loggingSetupAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* name = @"name";
     NSString* origin = @"origin";
-    BOOL activate = false;
-    NSString* contentType = @"Content-Type";
+    NSString* activate = @"activate";
 
-    [self.advancedLogging loggingSetupAsyncWithKey: key uid : uid name : name origin : origin activate : activate contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="logging_info1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo1AsyncWithBody") loggingInfo1AsyncWithBody
-
-> WAF Log Info
-
-
-```objc
-function loggingInfo1AsyncWithBody:(HttpsApiRestShApiSLI*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostLoggingInfo1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSLI* body = [[HttpsApiRestShApiSLI alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.advancedLogging loggingInfo1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLIR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="logging_setup1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup1AsyncWithBody") loggingSetup1AsyncWithBody
-
-> WAF Log Setup
-
-
-```objc
-function loggingSetup1AsyncWithBody:(HttpsApiRestShApiSL*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostLoggingSetup1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSL* body = [[HttpsApiRestShApiSL alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.advancedLogging loggingSetup1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLR* response, NSError* error) { 
+    [self.advancedLogging loggingConfigurationAsyncWithName: name origin : origin activate : activate  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSLR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -593,31 +505,25 @@ function httpsApiRestShApiSW1AsyncWithBody:(HttpsApiRestShApiSW*) body
 Encryption* encryption = [[Encryption alloc]init] ;
 ```
 
-### <a name="data_and_file_encryption_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAsyncWithKey") dataAndFileEncryptionAsyncWithKey
+### <a name="data_and_file_encryption_async_with_data"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryptionAsyncWithData") dataAndFileEncryptionAsyncWithData
 
 > Data and File Encryption API
 
 
 ```objc
-function dataAndFileEncryptionAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                data:(NSString*) data
+function dataAndFileEncryptionAsyncWithData:(NSString*) data
                 method:(NSString*) method
                 bit:(int) bit
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetDataAndFileEncryption) onCompleted(key uid : uid data : data method : method bit : bit contentType : contentType)
+                completionBlock:(CompletedGetDataAndFileEncryption) onCompleted(data method : method bit : bit)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| method |  ``` Required ```  | TODO: Add a parameter description |
-| bit |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | GIT URL, file URL, direct upload of file, or data as a query string |
+| method |  ``` Required ```  | Single or multiple encryption types to apply to data or files separated by a comma (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP) |
+| bit |  ``` Required ```  | Encryption key size (4096) |
 
 
 
@@ -627,49 +533,11 @@ function dataAndFileEncryptionAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* data = @"data";
     NSString* method = @"method";
-    int bit = 153;
-    NSString* contentType = @"Content-Type";
+    int bit = 135;
 
-    [self.encryption dataAndFileEncryptionAsyncWithKey: key uid : uid data : data method : method bit : bit contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="data_and_file_encryption1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryption1AsyncWithBody") dataAndFileEncryption1AsyncWithBody
-
-> Data and File Encryption API
-
-
-```objc
-function dataAndFileEncryption1AsyncWithBody:(HttpsApiRestShApiSE*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostDataAndFileEncryption1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSE* body = [[HttpsApiRestShApiSE alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.encryption dataAndFileEncryption1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
+    [self.encryption dataAndFileEncryptionAsyncWithData: data method : method bit : bit  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSER* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -684,29 +552,23 @@ function dataAndFileEncryption1AsyncWithBody:(HttpsApiRestShApiSE*) body
 CDN* cDN = [[CDN alloc]init] ;
 ```
 
-### <a name="c_dn_push_zone_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZoneAsyncWithKey") cDNPushZoneAsyncWithKey
+### <a name="c_dn_push_zone_async_with_cname"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZoneAsyncWithCname") cDNPushZoneAsyncWithCname
 
 > CDN Push Zone API
 
 
 ```objc
-function cDNPushZoneAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                cname:(NSString*) cname
+function cDNPushZoneAsyncWithCname:(NSString*) cname
                 file:(NSString*) file
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetCDNPushZone) onCompleted(key uid : uid cname : cname file : file contentType : contentType)
+                completionBlock:(CompletedGetCDNPushZone) onCompleted(cname file : file)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| file |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
+| file |  ``` Required ```  | GIT URL, file URL, or direct upload of file |
 
 
 
@@ -716,41 +578,32 @@ function cDNPushZoneAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* cname = @"cname";
     NSString* file = @"file";
-    NSString* contentType = @"Content-Type";
 
-    [self.cDN cDNPushZoneAsyncWithKey: key uid : uid cname : cname file : file contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPushR* response, NSError* error) { 
+    [self.cDN cDNPushZoneAsyncWithCname: cname file : file  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPushR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="c_dn_pull_zone_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZoneAsyncWithKey") cDNPullZoneAsyncWithKey
+### <a name="c_dn_pull_zone_async_with_origin"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZoneAsyncWithOrigin") cDNPullZoneAsyncWithOrigin
 
 > CDN Pull Zone API
 
 
 ```objc
-function cDNPullZoneAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                origin:(NSString*) origin
+function cDNPullZoneAsyncWithOrigin:(NSString*) origin
                 cname:(NSString*) cname
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetCDNPullZone) onCompleted(key uid : uid origin : origin cname : cname contentType : contentType)
+                completionBlock:(CompletedGetCDNPullZone) onCompleted(origin cname : cname)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | Domain or domain names separated by a comma |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 
@@ -760,83 +613,10 @@ function cDNPullZoneAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* origin = @"origin";
     NSString* cname = @"cname";
-    NSString* contentType = @"Content-Type";
 
-    [self.cDN cDNPullZoneAsyncWithKey: key uid : uid origin : origin cname : cname contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPullR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="c_dn_push_zone1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone1AsyncWithBody") cDNPushZone1AsyncWithBody
-
-> CDN Push Zone API
-
-
-```objc
-function cDNPushZone1AsyncWithBody:(HttpsApiRestShApiSCPush*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostCDNPushZone1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSCPush* body = [[HttpsApiRestShApiSCPush alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.cDN cDNPushZone1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPushR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="c_dn_pull_zone1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone1AsyncWithBody") cDNPullZone1AsyncWithBody
-
-> CDN Pull Zone API
-
-
-```objc
-function cDNPullZone1AsyncWithBody:(HttpsApiRestShApiSCPull*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostCDNPullZone1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSCPull* body = [[HttpsApiRestShApiSCPull alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.cDN cDNPullZone1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPullR* response, NSError* error) { 
+    [self.cDN cDNPullZoneAsyncWithOrigin: origin cname : cname  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSCPullR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -851,29 +631,23 @@ function cDNPullZone1AsyncWithBody:(HttpsApiRestShApiSCPull*) body
 DNS* dNS = [[DNS alloc]init] ;
 ```
 
-### <a name="d_ns_configuration_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfigurationAsyncWithKey") dNSConfigurationAsyncWithKey
+### <a name="d_ns_configuration_async_with_domain"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfigurationAsyncWithDomain") dNSConfigurationAsyncWithDomain
 
 > DNS Configuration API
 
 
 ```objc
-function dNSConfigurationAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                domain:(NSString*) domain
+function dNSConfigurationAsyncWithDomain:(NSString*) domain
                 records:(NSString*) records
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetDNSConfiguration) onCompleted(key uid : uid domain : domain records : records contentType : contentType)
+                completionBlock:(CompletedGetDNSConfiguration) onCompleted(domain records : records)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| records |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
+| records |  ``` Required ```  | Records to append to domain separated by a comma (a;www.mydomain.com;127.0.0.0,cname;mydomain.com;otherdomain.com) |
 
 
 
@@ -883,74 +657,30 @@ function dNSConfigurationAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* domain = @"domain";
     NSString* records = @"records";
-    NSString* contentType = @"Content-Type";
 
-    [self.dNS dNSConfigurationAsyncWithKey: key uid : uid domain : domain records : records contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDCR* response, NSError* error) { 
+    [self.dNS dNSConfigurationAsyncWithDomain: domain records : records  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDCR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="d_ns_configuration1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration1AsyncWithBody") dNSConfiguration1AsyncWithBody
-
-> DNS Configuration API
-
-
-```objc
-function dNSConfiguration1AsyncWithBody:(HttpsApiRestShApiSDC*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostDNSConfiguration1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSDC* body = [[HttpsApiRestShApiSDC alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.dNS dNSConfiguration1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDCR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="d_ns_creation_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreationAsyncWithKey") dNSCreationAsyncWithKey
+### <a name="d_ns_creation_async_with_domain"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreationAsyncWithDomain") dNSCreationAsyncWithDomain
 
 > DNS Creation API
 
 
 ```objc
-function dNSCreationAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                domain:(NSString*) domain
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetDNSCreation) onCompleted(key uid : uid domain : domain contentType : contentType)
+function dNSCreationAsyncWithDomain:(NSString*) domain
+                completionBlock:(CompletedGetDNSCreation) onCompleted(domain)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 
@@ -960,47 +690,9 @@ function dNSCreationAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* domain = @"domain";
-    NSString* contentType = @"Content-Type";
 
-    [self.dNS dNSCreationAsyncWithKey: key uid : uid domain : domain contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDAR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="d_ns_creation1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation1AsyncWithBody") dNSCreation1AsyncWithBody
-
-> DNS Creation API
-
-
-```objc
-function dNSCreation1AsyncWithBody:(HttpsApiRestShApiSDA*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostDNSCreation1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSDA* body = [[HttpsApiRestShApiSDA alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.dNS dNSCreation1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDAR* response, NSError* error) { 
+    [self.dNS dNSCreationAsyncWithDomain: domain  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSDAR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1015,27 +707,21 @@ function dNSCreation1AsyncWithBody:(HttpsApiRestShApiSDA*) body
 CodeObfuscation* codeObfuscation = [[CodeObfuscation alloc]init] ;
 ```
 
-### <a name="obfuscation_and_anti_tampering_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTamperingAsyncWithKey") obfuscationAndAntiTamperingAsyncWithKey
+### <a name="obfuscation_and_anti_tampering_async_with_app"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTamperingAsyncWithApp") obfuscationAndAntiTamperingAsyncWithApp
 
 > Javascript and Node.JS Obfuscation and Anti-Tampering API
 
 
 ```objc
-function obfuscationAndAntiTamperingAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                app:(NSString*) app
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetObfuscationAndAntiTampering) onCompleted(key uid : uid app : app contentType : contentType)
+function obfuscationAndAntiTamperingAsyncWithApp:(NSString*) app
+                completionBlock:(CompletedGetObfuscationAndAntiTampering) onCompleted(app)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
 
 
 
@@ -1045,47 +731,9 @@ function obfuscationAndAntiTamperingAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* app = @"app";
-    NSString* contentType = @"Content-Type";
 
-    [self.codeObfuscation obfuscationAndAntiTamperingAsyncWithKey: key uid : uid app : app contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSOR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="obfuscation_and_anti_tampering1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTampering1AsyncWithBody") obfuscationAndAntiTampering1AsyncWithBody
-
-> Javascript and Node.JS Obfuscation and Anti-Tampering API
-
-
-```objc
-function obfuscationAndAntiTampering1AsyncWithBody:(HttpsApiRestShApiSO*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostObfuscationAndAntiTampering1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSO* body = [[HttpsApiRestShApiSO alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.codeObfuscation obfuscationAndAntiTampering1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSOR* response, NSError* error) { 
+    [self.codeObfuscation obfuscationAndAntiTamperingAsyncWithApp: app  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSOR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1100,29 +748,23 @@ function obfuscationAndAntiTampering1AsyncWithBody:(HttpsApiRestShApiSO*) body
 Hosting* hosting = [[Hosting alloc]init] ;
 ```
 
-### <a name="hosting_setup_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetupAsyncWithKey") hostingSetupAsyncWithKey
+### <a name="hosting_setup_async_with_app"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetupAsyncWithApp") hostingSetupAsyncWithApp
 
 > Node.JS and Static Web APP Hosting
 
 
 ```objc
-function hostingSetupAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                app:(NSString*) app
+function hostingSetupAsyncWithApp:(NSString*) app
                 domain:(NSString*) domain
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetHostingSetup) onCompleted(key uid : uid app : app domain : domain contentType : contentType)
+                completionBlock:(CompletedGetHostingSetup) onCompleted(app domain : domain)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 
@@ -1132,48 +774,10 @@ function hostingSetupAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* app = @"app";
     NSString* domain = @"domain";
-    NSString* contentType = @"Content-Type";
 
-    [self.hosting hostingSetupAsyncWithKey: key uid : uid app : app domain : domain contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSHR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="hosting_setup1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup1AsyncWithBody") hostingSetup1AsyncWithBody
-
-> Node.JS and Static Web APP Hosting
-
-
-```objc
-function hostingSetup1AsyncWithBody:(HttpsApiRestShApiSH*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostHostingSetup1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiSH* body = [[HttpsApiRestShApiSH alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.hosting hostingSetup1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSHR* response, NSError* error) { 
+    [self.hosting hostingSetupAsyncWithApp: app domain : domain  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiSHR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1294,29 +898,23 @@ function httpsApiRestShApiD1AsyncWithBody:(HttpsApiRestShApiD*) body
 ImageManipulationAndModerationAPI* imageManipulationAndModerationAPI = [[ImageManipulationAndModerationAPI alloc]init] ;
 ```
 
-### <a name="image_manipulation_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulationAsyncWithKey") imageManipulationAsyncWithKey
+### <a name="image_manipulation_async_with_image"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulationAsyncWithImage") imageManipulationAsyncWithImage
 
 > Image Manipulation API
 
 
 ```objc
-function imageManipulationAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                image:(NSString*) image
+function imageManipulationAsyncWithImage:(NSString*) image
                 transform:(NSString*) transform
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetImageManipulation) onCompleted(key uid : uid image : image transform : transform contentType : contentType)
+                completionBlock:(CompletedGetImageManipulation) onCompleted(image transform : transform)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| image |  ``` Required ```  | TODO: Add a parameter description |
-| transform |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| image |  ``` Required ```  | Image URL or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 
@@ -1326,48 +924,10 @@ function imageManipulationAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* image = @"image";
     NSString* transform = @"transform";
-    NSString* contentType = @"Content-Type";
 
-    [self.imageManipulationAndModerationAPI imageManipulationAsyncWithKey: key uid : uid image : image transform : transform contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiIR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="image_manipulation1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation1AsyncWithBody") imageManipulation1AsyncWithBody
-
-> Image Manipulation API
-
-
-```objc
-function imageManipulation1AsyncWithBody:(HttpsApiRestShApiI*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostImageManipulation1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiI* body = [[HttpsApiRestShApiI alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.imageManipulationAndModerationAPI imageManipulation1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiIR* response, NSError* error) { 
+    [self.imageManipulationAndModerationAPI imageManipulationAsyncWithImage: image transform : transform  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiIR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1382,37 +942,33 @@ function imageManipulation1AsyncWithBody:(HttpsApiRestShApiI*) body
 Verification* verification = [[Verification alloc]init] ;
 ```
 
-### <a name="user_address_verification_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerificationAsyncWithKey") userAddressVerificationAsyncWithKey
+### <a name="user_address_verification_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerificationAsyncWithUser") userAddressVerificationAsyncWithUser
 
 > User Address Verification API
 
 
 ```objc
-function userAddressVerificationAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                user:(NSString*) user
+function userAddressVerificationAsyncWithUser:(NSString*) user
                 a:(NSString*) a
                 sa:(NSString*) sa
                 c:(NSString*) c
                 s:(NSString*) s
                 z:(int) z
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetUserAddressVerification) onCompleted(key uid : uid user : user a : a sa : sa c : c s : s z : z contentType : contentType)
+                address:(NSString*) address
+                completionBlock:(CompletedGetUserAddressVerification) onCompleted(user a : a sa : sa c : c s : s z : z address : address)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| a |  ``` Required ```  | TODO: Add a parameter description |
-| sa |  ``` Required ```  | TODO: Add a parameter description |
-| c |  ``` Required ```  | TODO: Add a parameter description |
-| s |  ``` Required ```  | TODO: Add a parameter description |
-| z |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
+| a |  ``` Required ```  | Address Line One |
+| sa |  ``` Required ```  | Address Line Two |
+| c |  ``` Required ```  | Address City |
+| s |  ``` Required ```  | Address State or Province |
+| z |  ``` Required ```  | Address Zipcode |
+| address |  ``` Optional ```  | Address as a one line input separated by commas |
 
 
 
@@ -1422,80 +978,37 @@ function userAddressVerificationAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* user = @"user";
     NSString* a = @"a";
     NSString* sa = @"sa";
     NSString* c = @"c";
     NSString* s = @"s";
-    int z = 153;
-    NSString* contentType = @"Content-Type";
+    int z = 135;
+    NSString* address = @"address";
 
-    [self.verification userAddressVerificationAsyncWithKey: key uid : uid user : user a : a sa : sa c : c s : s z : z contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVAR* response, NSError* error) { 
+    [self.verification userAddressVerificationAsyncWithUser: user a : a sa : sa c : c s : s z : z address : address  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVAR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="user_address_verification1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification1AsyncWithBody") userAddressVerification1AsyncWithBody
+### <a name="user_verification_response_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerificationResponseAsyncWithUser") userVerificationResponseAsyncWithUser
 
-> User Address Verification API
-
-
-```objc
-function userAddressVerification1AsyncWithBody:(HttpsApiRestShApiVA*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostUserAddressVerification1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiVA* body = [[HttpsApiRestShApiVA alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.verification userAddressVerification1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVAR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="user_verification_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerificationAsyncWithKey") userVerificationAsyncWithKey
-
-> User Verification API
+> Users Verification Response API
 
 
 ```objc
-function userVerificationAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                user:(NSString*) user
+function userVerificationResponseAsyncWithUser:(NSString*) user
                 code:(NSString*) code
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetUserVerification) onCompleted(key uid : uid user : user code : code contentType : contentType)
+                completionBlock:(CompletedGetUserVerificationResponse) onCompleted(user code : code)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| code |  ``` Required ```  | Verification code entered by the user |
 
 
 
@@ -1505,35 +1018,30 @@ function userVerificationAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* user = @"user";
     NSString* code = @"code";
-    NSString* contentType = @"Content-Type";
 
-    [self.verification userVerificationAsyncWithKey: key uid : uid user : user code : code contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVUR* response, NSError* error) { 
+    [self.verification userVerificationResponseAsyncWithUser: user code : code  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVUR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="user_verification1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification1AsyncWithBody") userVerification1AsyncWithBody
+### <a name="user_verification_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerificationAsyncWithUser") userVerificationAsyncWithUser
 
 > User Verification API
 
 
 ```objc
-function userVerification1AsyncWithBody:(HttpsApiRestShApiVU*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostUserVerification1) onCompleted(body contentType : contentType)
+function userVerificationAsyncWithUser:(NSString*) user
+                completionBlock:(CompletedGetUserVerification) onCompleted(user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
 
 
 
@@ -1543,86 +1051,9 @@ function userVerification1AsyncWithBody:(HttpsApiRestShApiVU*) body
 
 ```objc
     // Parameters for the API call
-    HttpsApiRestShApiVU* body = [[HttpsApiRestShApiVU alloc]init];
-    NSString* contentType = @"Content-Type";
+    NSString* user = @"user";
 
-    [self.verification userVerification1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVUR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="cellphone_verification_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerificationAsyncWithKey") cellphoneVerificationAsyncWithKey
-
-> Verification API
-
-
-```objc
-function cellphoneVerificationAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                to:(NSString*) to
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetCellphoneVerification) onCompleted(key uid : uid to : to contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
-    NSString* to = @"to";
-    NSString* contentType = @"Content-Type";
-
-    [self.verification cellphoneVerificationAsyncWithKey: key uid : uid to : to contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="cellphone_verification1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification1AsyncWithBody") cellphoneVerification1AsyncWithBody
-
-> Verification API
-
-
-```objc
-function cellphoneVerification1AsyncWithBody:(HttpsApiRestShApiV*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostCellphoneVerification1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiV* body = [[HttpsApiRestShApiV alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.verification cellphoneVerification1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVR* response, NSError* error) { 
+    [self.verification userVerificationAsyncWithUser: user  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiVR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1637,29 +1068,23 @@ function cellphoneVerification1AsyncWithBody:(HttpsApiRestShApiV*) body
 TwoFactorAuthenticationAPI* twoFactorAuthenticationAPI = [[TwoFactorAuthenticationAPI alloc]init] ;
 ```
 
-### <a name="m2_fa_token_response_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponseAsyncWithKey") m2FATokenResponseAsyncWithKey
+### <a name="m2_fa_token_response_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponseAsyncWithUser") m2FATokenResponseAsyncWithUser
 
 > Two Factor Authentication Token Reply
 
 
 ```objc
-function m2FATokenResponseAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                user:(NSString*) user
+function m2FATokenResponseAsyncWithUser:(NSString*) user
                 code:(NSString*) code
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetM2FATokenResponse) onCompleted(key uid : uid user : user code : code contentType : contentType)
+                completionBlock:(CompletedGetM2FATokenResponse) onCompleted(user code : code)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username or Email |
+| code |  ``` Required ```  | Response From User Containing 2FA Code |
 
 
 
@@ -1669,74 +1094,30 @@ function m2FATokenResponseAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* user = @"user";
     NSString* code = @"code";
-    NSString* contentType = @"Content-Type";
 
-    [self.twoFactorAuthenticationAPI m2FATokenResponseAsyncWithKey: key uid : uid user : user code : code contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faTR* response, NSError* error) { 
+    [self.twoFactorAuthenticationAPI m2FATokenResponseAsyncWithUser: user code : code  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faTR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="m2_fa_token_response1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse1AsyncWithBody") m2FATokenResponse1AsyncWithBody
-
-> Two Factor Authentication Token Reply
-
-
-```objc
-function m2FATokenResponse1AsyncWithBody:(HttpsApiRestShApi2faT*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostM2FATokenResponse1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApi2faT* body = [[HttpsApiRestShApi2faT alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.twoFactorAuthenticationAPI m2FATokenResponse1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faTR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="two_factor_authentication_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthenticationAsyncWithKey") twoFactorAuthenticationAsyncWithKey
+### <a name="two_factor_authentication_async_with_to"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthenticationAsyncWithTo") twoFactorAuthenticationAsyncWithTo
 
 > Two Factor Authentication API
 
 
 ```objc
-function twoFactorAuthenticationAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                to:(NSString*) to
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetTwoFactorAuthentication) onCompleted(key uid : uid to : to contentType : contentType)
+function twoFactorAuthenticationAsyncWithTo:(NSString*) to
+                completionBlock:(CompletedGetTwoFactorAuthentication) onCompleted(to)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| to |  ``` Required ```  | Users UID, Username, Email, Or Cellphone number |
 
 
 
@@ -1746,47 +1127,9 @@ function twoFactorAuthenticationAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* to = @"to";
-    NSString* contentType = @"Content-Type";
 
-    [self.twoFactorAuthenticationAPI twoFactorAuthenticationAsyncWithKey: key uid : uid to : to contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="two_factor_authentication1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication1AsyncWithBody") twoFactorAuthentication1AsyncWithBody
-
-> Two Factor Authentication API
-
-
-```objc
-function twoFactorAuthentication1AsyncWithBody:(HttpsApiRestShApi2fa*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostTwoFactorAuthentication1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApi2fa* body = [[HttpsApiRestShApi2fa alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.twoFactorAuthenticationAPI twoFactorAuthentication1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faR* response, NSError* error) { 
+    [self.twoFactorAuthenticationAPI twoFactorAuthenticationAsyncWithTo: to  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApi2faR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1801,29 +1144,21 @@ function twoFactorAuthentication1AsyncWithBody:(HttpsApiRestShApi2fa*) body
 UserManagement* userManagement = [[UserManagement alloc]init] ;
 ```
 
-### <a name="get_user_info_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfoAsyncWithKey") getUserInfoAsyncWithKey
+### <a name="get_user_info_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfoAsyncWithUser") getUserInfoAsyncWithUser
 
 > Get User Info API
 
 
 ```objc
-function getUserInfoAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                user:(NSString*) user
-                apiuid:(NSString*) apiuid
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetUserInfo) onCompleted(key uid : uid user : user apiuid : apiuid contentType : contentType)
+function getUserInfoAsyncWithUser:(NSString*) user
+                completionBlock:(CompletedGetUserInfo) onCompleted(user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users User ID |
 
 
 
@@ -1833,80 +1168,35 @@ function getUserInfoAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* user = @"user";
-    NSString* apiuid = @"apiuid";
-    NSString* contentType = @"Content-Type";
 
-    [self.userManagement getUserInfoAsyncWithKey: key uid : uid user : user apiuid : apiuid contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUIR* response, NSError* error) { 
+    [self.userManagement getUserInfoAsyncWithUser: user  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUIR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="get_user_info1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo1AsyncWithBody") getUserInfo1AsyncWithBody
-
-> Get User Info API
-
-
-```objc
-function getUserInfo1AsyncWithBody:(HttpsApiRestShApiUI*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostGetUserInfo1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiUI* body = [[HttpsApiRestShApiUI alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.userManagement getUserInfo1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUIR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="update_user_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUserAsyncWithKey") updateUserAsyncWithKey
+### <a name="update_user_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUserAsyncWithUser") updateUserAsyncWithUser
 
 > Update User API
 
 
 ```objc
-function updateUserAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                user:(NSString*) user
-                apiuid:(NSString*) apiuid
+function updateUserAsyncWithUser:(NSString*) user
                 avatar:(NSString*) avatar
                 customInput:(NSString*) customInput
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetUpdateUser) onCompleted(key uid : uid user : user apiuid : apiuid avatar : avatar customInput : customInput contentType : contentType)
+                queryParameters:(NSDictionary*) queryParameters
+                completionBlock:(CompletedGetUpdateUser) onCompleted(user avatar : avatar customInput : customInput  queryParameters : queryParams)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| avatar |  ``` Required ```  | TODO: Add a parameter description |
-| customInput |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| avatar |  ``` Required ```  | Avatar Image URL |
+| customInput |  ``` Required ```  | Custom input variable for users profile |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 
@@ -1916,78 +1206,34 @@ function updateUserAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* user = @"user";
-    NSString* apiuid = @"apiuid";
     NSString* avatar = @"avatar";
     NSString* customInput = @"custom input";
-    NSString* contentType = @"Content-Type";
+    // Dictionary for optional query parameters
+    NSMutableDictionary* queryParamsMutable = [[NSMutableDictionary alloc] init];
+    NSDictionary *queryParams= [queryParamsMutable copy];
 
-    [self.userManagement updateUserAsyncWithKey: key uid : uid user : user apiuid : apiuid avatar : avatar customInput : customInput contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUUR* response, NSError* error) { 
+    [self.userManagement updateUserAsyncWithUser: user avatar : avatar customInput : customInput  queryParameters : queryParams  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUUR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="update_user1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser1AsyncWithBody") updateUser1AsyncWithBody
-
-> Update User API
-
-
-```objc
-function updateUser1AsyncWithBody:(HttpsApiRestShApiUU*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostUpdateUser1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiUU* body = [[HttpsApiRestShApiUU alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.userManagement updateUser1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUUR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="delete_user_async_with_api"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUserAsyncWithApi") deleteUserAsyncWithApi
+### <a name="delete_user_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUserAsyncWithUser") deleteUserAsyncWithUser
 
 > Delete User API
 
 
 ```objc
-function deleteUserAsyncWithApi:(NSString*) api
-                uid:(NSString*) uid
-                user:(NSString*) user
-                apiuid:(NSString*) apiuid
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetDeleteUser) onCompleted(api uid : uid user : user apiuid : apiuid contentType : contentType)
+function deleteUserAsyncWithUser:(NSString*) user
+                completionBlock:(CompletedGetDeleteUser) onCompleted(user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| api |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
 
 
 
@@ -1997,48 +1243,9 @@ function deleteUserAsyncWithApi:(NSString*) api
 
 ```objc
     // Parameters for the API call
-    NSString* api = @"api";
-    NSString* uid = @"uid";
     NSString* user = @"user";
-    NSString* apiuid = @"apiuid";
-    NSString* contentType = @"Content-Type";
 
-    [self.userManagement deleteUserAsyncWithApi: api uid : uid user : user apiuid : apiuid contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUDR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="delete_user1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser1AsyncWithBody") deleteUser1AsyncWithBody
-
-> Delete User API
-
-
-```objc
-function deleteUser1AsyncWithBody:(HttpsApiRestShApiUD*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostDeleteUser1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiUD* body = [[HttpsApiRestShApiUD alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.userManagement deleteUser1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUDR* response, NSError* error) { 
+    [self.userManagement deleteUserAsyncWithUser: user  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiUDR* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -2053,39 +1260,35 @@ function deleteUser1AsyncWithBody:(HttpsApiRestShApiUD*) body
 LoginAndRegistration* loginAndRegistration = [[LoginAndRegistration alloc]init] ;
 ```
 
-### <a name="user_registration_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistrationAsyncWithKey") userRegistrationAsyncWithKey
+### <a name="user_registration_async_with_email"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistrationAsyncWithEmail") userRegistrationAsyncWithEmail
 
 > User Registration API
 
 
 ```objc
-function userRegistrationAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
+function userRegistrationAsyncWithEmail:(NSString*) email
                 user:(NSString*) user
                 password:(NSString*) password
                 name:(NSString*) name
-                email:(NSString*) email
-                phone:(int) phone
-                countrycode:(int) countrycode
+                phone:(NSNumber*) phone
+                countrycode:(NSNumber*) countrycode
                 address:(NSString*) address
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetUserRegistration) onCompleted(key uid : uid user : user password : password name : name email : email phone : phone countrycode : countrycode address : address contentType : contentType)
+                queryParameters:(NSDictionary*) queryParameters
+                completionBlock:(CompletedGetUserRegistration) onCompleted(email user : user password : password name : name phone : phone countrycode : countrycode address : address  queryParameters : queryParams)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| phone |  ``` Required ```  | TODO: Add a parameter description |
-| countrycode |  ``` Required ```  | TODO: Add a parameter description |
-| address |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| email |  ``` Required ```  | Users Email |
+| user |  ``` Required ```  | Users Username |
+| password |  ``` Required ```  | Users Password |
+| name |  ``` Optional ```  | Users Name |
+| phone |  ``` Optional ```  | Users Cellphone Number |
+| countrycode |  ``` Optional ```  | Users Country Code (US = 1) |
+| address |  ``` Optional ```  | Users Address |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 
@@ -2095,81 +1298,40 @@ function userRegistrationAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
+    NSString* email = @"email";
     NSString* user = @"user";
     NSString* password = @"password";
     NSString* name = @"name";
-    NSString* email = @"email";
-    int phone = 203;
-    int countrycode = 203;
+    NSNumber* phone = 135;
+    NSNumber* countrycode = 135;
     NSString* address = @"address";
-    NSString* contentType = @"Content-Type";
+    // Dictionary for optional query parameters
+    NSMutableDictionary* queryParamsMutable = [[NSMutableDictionary alloc] init];
+    NSDictionary *queryParams= [queryParamsMutable copy];
 
-    [self.loginAndRegistration userRegistrationAsyncWithKey: key uid : uid user : user password : password name : name email : email phone : phone countrycode : countrycode address : address contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAURR* response, NSError* error) { 
+    [self.loginAndRegistration userRegistrationAsyncWithEmail: email user : user password : password name : name phone : phone countrycode : countrycode address : address  queryParameters : queryParams  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAURR* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="user_registration1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration1AsyncWithBody") userRegistration1AsyncWithBody
-
-> User Registration API
-
-
-```objc
-function userRegistration1AsyncWithBody:(HttpsApiRestShApiAUR*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostUserRegistration1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiAUR* body = [[HttpsApiRestShApiAUR alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.loginAndRegistration userRegistration1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAURR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="user_authentication_async_with_key"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthenticationAsyncWithKey") userAuthenticationAsyncWithKey
+### <a name="user_authentication_async_with_user"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthenticationAsyncWithUser") userAuthenticationAsyncWithUser
 
 > User Authentication API
 
 
 ```objc
-function userAuthenticationAsyncWithKey:(NSString*) key
-                uid:(NSString*) uid
-                user:(NSString*) user
+function userAuthenticationAsyncWithUser:(NSString*) user
                 password:(NSString*) password
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedGetUserAuthentication) onCompleted(key uid : uid user : user password : password contentType : contentType)
+                completionBlock:(CompletedGetUserAuthentication) onCompleted(user password : password)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users Username or Email |
+| password |  ``` Required ```  | Users Password |
 
 
 
@@ -2179,48 +1341,10 @@ function userAuthenticationAsyncWithKey:(NSString*) key
 
 ```objc
     // Parameters for the API call
-    NSString* key = @"key";
-    NSString* uid = @"uid";
     NSString* user = @"user";
     NSString* password = @"password";
-    NSString* contentType = @"Content-Type";
 
-    [self.loginAndRegistration userAuthenticationAsyncWithKey: key uid : uid user : user password : password contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAULR* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="user_authentication1_async_with_body"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication1AsyncWithBody") userAuthentication1AsyncWithBody
-
-> User Authentication API
-
-
-```objc
-function userAuthentication1AsyncWithBody:(HttpsApiRestShApiAUL*) body
-                contentType:(NSString*) contentType
-                completionBlock:(CompletedPostUserAuthentication1) onCompleted(body contentType : contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    HttpsApiRestShApiAUL* body = [[HttpsApiRestShApiAUL alloc]init];
-    NSString* contentType = @"Content-Type";
-
-    [self.loginAndRegistration userAuthentication1AsyncWithBody: body contentType : contentType  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAULR* response, NSError* error) { 
+    [self.loginAndRegistration userAuthenticationAsyncWithUser: user password : password  completionBlock:^(BOOL success, HttpContext* context, HttpsApiRestShApiAULR* response, NSError* error) { 
        //Add code here
     }];
 ```
