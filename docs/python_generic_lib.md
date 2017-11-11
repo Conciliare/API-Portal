@@ -264,140 +264,62 @@ An instance of the ``` AdvancedLogging ``` class can be accessed from the API Cl
 
 ```python
 def logging_info(self,
-                     key,
-                     uid,
                      name,
                      origin,
-                     time,
-                     content_type)
+                     time=None)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| time |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 name = 'name'
 origin = 'origin'
 time = 'time'
-content_type = 'Content-Type'
 
-result = advanced_logging_client.logging_info(key, uid, name, origin, time, content_type)
+result = advanced_logging_client.logging_info(name, origin, time)
 
 ```
 
 
-### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_setup") logging_setup
+### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_configuration") logging_configuration
 
-> WAF Log Setup
+> WAF Log Configuration
 
 ```python
-def logging_setup(self,
-                      key,
-                      uid,
-                      name,
-                      origin,
-                      activate,
-                      content_type)
+def logging_configuration(self,
+                              name,
+                              origin,
+                              activate)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| activate |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of the WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
+| activate |  ``` Required ```  | True or False |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 name = 'name'
 origin = 'origin'
-activate = True
-content_type = 'Content-Type'
+activate = 'activate'
 
-result = advanced_logging_client.logging_setup(key, uid, name, origin, activate, content_type)
-
-```
-
-
-### <a name="logging_info1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_info1") logging_info1
-
-> WAF Log Info
-
-```python
-def logging_info1(self,
-                      body,
-                      content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiSLI()
-content_type = 'Content-Type'
-
-result = advanced_logging_client.logging_info1(body, content_type)
-
-```
-
-
-### <a name="logging_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.logging_setup1") logging_setup1
-
-> WAF Log Setup
-
-```python
-def logging_setup1(self,
-                       body,
-                       content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiSL()
-content_type = 'Content-Type'
-
-result = advanced_logging_client.logging_setup1(body, content_type)
+result = advanced_logging_client.logging_configuration(name, origin, activate)
 
 ```
 
@@ -583,68 +505,29 @@ An instance of the ``` Encryption ``` class can be accessed from the API Client.
 
 ```python
 def data_and_file_encryption(self,
-                                 key,
-                                 uid,
                                  data,
                                  method,
-                                 bit,
-                                 content_type)
+                                 bit)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| method |  ``` Required ```  | TODO: Add a parameter description |
-| bit |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | GIT URL, file URL, direct upload of file, or data as a query string |
+| method |  ``` Required ```  | Single or multiple encryption types to apply to data or files separated by a comma (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP) |
+| bit |  ``` Required ```  | Encryption key size (4096) |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 data = 'data'
 method = 'method'
-bit = 167
-content_type = 'Content-Type'
+bit = 71
 
-result = encryption_client.data_and_file_encryption(key, uid, data, method, bit, content_type)
-
-```
-
-
-### <a name="data_and_file_encryption1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.data_and_file_encryption1") data_and_file_encryption1
-
-> Data and File Encryption API
-
-```python
-def data_and_file_encryption1(self,
-                                  body,
-                                  content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiSE()
-content_type = 'Content-Type'
-
-result = encryption_client.data_and_file_encryption1(body, content_type)
+result = encryption_client.data_and_file_encryption(data, method, bit)
 
 ```
 
@@ -667,35 +550,26 @@ An instance of the ``` CDN ``` class can be accessed from the API Client.
 
 ```python
 def cdn_push_zone(self,
-                      key,
-                      uid,
                       cname,
-                      file,
-                      content_type)
+                      file)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| file |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
+| file |  ``` Required ```  | GIT URL, file URL, or direct upload of file |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 cname = 'cname'
 file = 'file'
-content_type = 'Content-Type'
 
-result = cdn_client.cdn_push_zone(key, uid, cname, file, content_type)
+result = cdn_client.cdn_push_zone(cname, file)
 
 ```
 
@@ -706,95 +580,26 @@ result = cdn_client.cdn_push_zone(key, uid, cname, file, content_type)
 
 ```python
 def cdn_pull_zone(self,
-                      key,
-                      uid,
                       origin,
-                      cname,
-                      content_type)
+                      cname)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | Domain or domain names separated by a comma |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 origin = 'origin'
 cname = 'cname'
-content_type = 'Content-Type'
 
-result = cdn_client.cdn_pull_zone(key, uid, origin, cname, content_type)
-
-```
-
-
-### <a name="cdn_push_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_push_zone1") cdn_push_zone1
-
-> CDN Push Zone API
-
-```python
-def cdn_push_zone1(self,
-                       body,
-                       content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiSCPush()
-content_type = 'Content-Type'
-
-result = cdn_client.cdn_push_zone1(body, content_type)
-
-```
-
-
-### <a name="cdn_pull_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cdn_pull_zone1") cdn_pull_zone1
-
-> CDN Pull Zone API
-
-```python
-def cdn_pull_zone1(self,
-                       body,
-                       content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiSCPull()
-content_type = 'Content-Type'
-
-result = cdn_client.cdn_pull_zone1(body, content_type)
+result = cdn_client.cdn_pull_zone(origin, cname)
 
 ```
 
@@ -817,65 +622,26 @@ An instance of the ``` DNS ``` class can be accessed from the API Client.
 
 ```python
 def dns_configuration(self,
-                          key,
-                          uid,
                           domain,
-                          records,
-                          content_type)
+                          records)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| records |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
+| records |  ``` Required ```  | Records to append to domain separated by a comma (a;www.mydomain.com;127.0.0.0,cname;mydomain.com;otherdomain.com) |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 domain = 'domain'
 records = 'records'
-content_type = 'Content-Type'
 
-result = dns_client.dns_configuration(key, uid, domain, records, content_type)
-
-```
-
-
-### <a name="dns_configuration1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_configuration1") dns_configuration1
-
-> DNS Configuration API
-
-```python
-def dns_configuration1(self,
-                           body,
-                           content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiSDC()
-content_type = 'Content-Type'
-
-result = dns_client.dns_configuration1(body, content_type)
+result = dns_client.dns_configuration(domain, records)
 
 ```
 
@@ -886,62 +652,23 @@ result = dns_client.dns_configuration1(body, content_type)
 
 ```python
 def dns_creation(self,
-                     key,
-                     uid,
-                     domain,
-                     content_type)
+                     domain)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 domain = 'domain'
-content_type = 'Content-Type'
 
-result = dns_client.dns_creation(key, uid, domain, content_type)
-
-```
-
-
-### <a name="dns_creation1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dns_creation1") dns_creation1
-
-> DNS Creation API
-
-```python
-def dns_creation1(self,
-                      body,
-                      content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiSDA()
-content_type = 'Content-Type'
-
-result = dns_client.dns_creation1(body, content_type)
+result = dns_client.dns_creation(domain)
 
 ```
 
@@ -964,62 +691,23 @@ An instance of the ``` CodeObfuscation ``` class can be accessed from the API Cl
 
 ```python
 def obfuscation_and_anti_tampering(self,
-                                       key,
-                                       uid,
-                                       app,
-                                       content_type)
+                                       app)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 app = 'app'
-content_type = 'Content-Type'
 
-result = code_obfuscation_client.obfuscation_and_anti_tampering(key, uid, app, content_type)
-
-```
-
-
-### <a name="obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscation_and_anti_tampering1") obfuscation_and_anti_tampering1
-
-> Javascript and Node.JS Obfuscation and Anti-Tampering API
-
-```python
-def obfuscation_and_anti_tampering1(self,
-                                        body,
-                                        content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiSO()
-content_type = 'Content-Type'
-
-result = code_obfuscation_client.obfuscation_and_anti_tampering1(body, content_type)
+result = code_obfuscation_client.obfuscation_and_anti_tampering(app)
 
 ```
 
@@ -1042,65 +730,26 @@ An instance of the ``` Hosting ``` class can be accessed from the API Client.
 
 ```python
 def hosting_setup(self,
-                      key,
-                      uid,
                       app,
-                      domain,
-                      content_type)
+                      domain)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 app = 'app'
 domain = 'domain'
-content_type = 'Content-Type'
 
-result = hosting_client.hosting_setup(key, uid, app, domain, content_type)
-
-```
-
-
-### <a name="hosting_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hosting_setup1") hosting_setup1
-
-> Node.JS and Static Web APP Hosting
-
-```python
-def hosting_setup1(self,
-                       body,
-                       content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiSH()
-content_type = 'Content-Type'
-
-result = hosting_client.hosting_setup1(body, content_type)
+result = hosting_client.hosting_setup(app, domain)
 
 ```
 
@@ -1212,65 +861,26 @@ An instance of the ``` ImageManipulationAndModerationAPI ``` class can be access
 
 ```python
 def image_manipulation(self,
-                           key,
-                           uid,
                            image,
-                           transform,
-                           content_type)
+                           transform)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| image |  ``` Required ```  | TODO: Add a parameter description |
-| transform |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| image |  ``` Required ```  | Image URL or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 image = 'image'
 transform = 'transform'
-content_type = 'Content-Type'
 
-result = image_manipulation_and_moderation_api_client.image_manipulation(key, uid, image, transform, content_type)
-
-```
-
-
-### <a name="image_manipulation1"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.image_manipulation1") image_manipulation1
-
-> Image Manipulation API
-
-```python
-def image_manipulation1(self,
-                            body,
-                            content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiI()
-content_type = 'Content-Type'
-
-result = image_manipulation_and_moderation_api_client.image_manipulation1(body, content_type)
+result = image_manipulation_and_moderation_api_client.image_manipulation(image, transform)
 
 ```
 
@@ -1293,77 +903,71 @@ An instance of the ``` Verification ``` class can be accessed from the API Clien
 
 ```python
 def user_address_verification(self,
-                                  key,
-                                  uid,
                                   user,
                                   a,
                                   sa,
                                   c,
                                   s,
                                   z,
-                                  content_type)
+                                  address=None)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| a |  ``` Required ```  | TODO: Add a parameter description |
-| sa |  ``` Required ```  | TODO: Add a parameter description |
-| c |  ``` Required ```  | TODO: Add a parameter description |
-| s |  ``` Required ```  | TODO: Add a parameter description |
-| z |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
+| a |  ``` Required ```  | Address Line One |
+| sa |  ``` Required ```  | Address Line Two |
+| c |  ``` Required ```  | Address City |
+| s |  ``` Required ```  | Address State or Province |
+| z |  ``` Required ```  | Address Zipcode |
+| address |  ``` Optional ```  | Address as a one line input separated by commas |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 user = 'user'
 a = 'a'
 sa = 'sa'
 c = 'c'
 s = 's'
-z = 125
-content_type = 'Content-Type'
+z = 162
+address = 'address'
 
-result = verification_client.user_address_verification(key, uid, user, a, sa, c, s, z, content_type)
+result = verification_client.user_address_verification(user, a, sa, c, s, z, address)
 
 ```
 
 
-### <a name="user_address_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_address_verification1") user_address_verification1
+### <a name="user_verification_response"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_verification_response") user_verification_response
 
-> User Address Verification API
+> Users Verification Response API
 
 ```python
-def user_address_verification1(self,
-                                   body,
-                                   content_type)
+def user_verification_response(self,
+                                   user,
+                                   code)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| code |  ``` Required ```  | Verification code entered by the user |
 
 
 
 #### Example Usage
 
 ```python
-body = HttpsApiRestShApiVA()
-content_type = 'Content-Type'
+user = 'user'
+code = 'code'
 
-result = verification_client.user_address_verification1(body, content_type)
+result = verification_client.user_verification_response(user, code)
 
 ```
 
@@ -1374,131 +978,23 @@ result = verification_client.user_address_verification1(body, content_type)
 
 ```python
 def user_verification(self,
-                          key,
-                          uid,
-                          user,
-                          code,
-                          content_type)
+                          user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 user = 'user'
-code = 'code'
-content_type = 'Content-Type'
 
-result = verification_client.user_verification(key, uid, user, code, content_type)
-
-```
-
-
-### <a name="user_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.user_verification1") user_verification1
-
-> User Verification API
-
-```python
-def user_verification1(self,
-                           body,
-                           content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiVU()
-content_type = 'Content-Type'
-
-result = verification_client.user_verification1(body, content_type)
-
-```
-
-
-### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphone_verification") cellphone_verification
-
-> Verification API
-
-```python
-def cellphone_verification(self,
-                               key,
-                               uid,
-                               to,
-                               content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-key = 'key'
-uid = 'uid'
-to = 'to'
-content_type = 'Content-Type'
-
-result = verification_client.cellphone_verification(key, uid, to, content_type)
-
-```
-
-
-### <a name="cellphone_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphone_verification1") cellphone_verification1
-
-> Verification API
-
-```python
-def cellphone_verification1(self,
-                                body,
-                                content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiV()
-content_type = 'Content-Type'
-
-result = verification_client.cellphone_verification1(body, content_type)
+result = verification_client.user_verification(user)
 
 ```
 
@@ -1521,65 +1017,26 @@ An instance of the ``` TwoFactorAuthenticationAPI ``` class can be accessed from
 
 ```python
 def 2_fa_token_response(self,
-                            key,
-                            uid,
                             user,
-                            code,
-                            content_type)
+                            code)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username or Email |
+| code |  ``` Required ```  | Response From User Containing 2FA Code |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 user = 'user'
 code = 'code'
-content_type = 'Content-Type'
 
-result = two_factor_authentication_api_client.2_fa_token_response(key, uid, user, code, content_type)
-
-```
-
-
-### <a name="2_fa_token_response1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.2_fa_token_response1") 2_fa_token_response1
-
-> Two Factor Authentication Token Reply
-
-```python
-def 2_fa_token_response1(self,
-                             body,
-                             content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApi2faT()
-content_type = 'Content-Type'
-
-result = two_factor_authentication_api_client.2_fa_token_response1(body, content_type)
+result = two_factor_authentication_api_client.2_fa_token_response(user, code)
 
 ```
 
@@ -1590,62 +1047,23 @@ result = two_factor_authentication_api_client.2_fa_token_response1(body, content
 
 ```python
 def two_factor_authentication(self,
-                                  key,
-                                  uid,
-                                  to,
-                                  content_type)
+                                  to)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| to |  ``` Required ```  | Users UID, Username, Email, Or Cellphone number |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 to = 'to'
-content_type = 'Content-Type'
 
-result = two_factor_authentication_api_client.two_factor_authentication(key, uid, to, content_type)
-
-```
-
-
-### <a name="two_factor_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.two_factor_authentication1") two_factor_authentication1
-
-> Two Factor Authentication API
-
-```python
-def two_factor_authentication1(self,
-                                   body,
-                                   content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApi2fa()
-content_type = 'Content-Type'
-
-result = two_factor_authentication_api_client.two_factor_authentication1(body, content_type)
+result = two_factor_authentication_api_client.two_factor_authentication(to)
 
 ```
 
@@ -1668,65 +1086,23 @@ An instance of the ``` UserManagement ``` class can be accessed from the API Cli
 
 ```python
 def get_user_info(self,
-                      key,
-                      uid,
-                      user,
-                      apiuid,
-                      content_type)
+                      user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users User ID |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 user = 'user'
-apiuid = 'apiuid'
-content_type = 'Content-Type'
 
-result = user_management_client.get_user_info(key, uid, user, apiuid, content_type)
-
-```
-
-
-### <a name="get_user_info1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.get_user_info1") get_user_info1
-
-> Get User Info API
-
-```python
-def get_user_info1(self,
-                       body,
-                       content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiUI()
-content_type = 'Content-Type'
-
-result = user_management_client.get_user_info1(body, content_type)
+result = user_management_client.get_user_info(user)
 
 ```
 
@@ -1737,71 +1113,34 @@ result = user_management_client.get_user_info1(body, content_type)
 
 ```python
 def update_user(self,
-                    key,
-                    uid,
                     user,
-                    apiuid,
                     avatar,
                     custom_input,
-                    content_type)
+                    _optional_query_parameters=None)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| avatar |  ``` Required ```  | TODO: Add a parameter description |
-| customInput |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| avatar |  ``` Required ```  | Avatar Image URL |
+| customInput |  ``` Required ```  | Custom input variable for users profile |
+| _optional_query_parameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 user = 'user'
-apiuid = 'apiuid'
 avatar = 'avatar'
 custom_input = 'custom input'
-content_type = 'Content-Type'
-
-result = user_management_client.update_user(key, uid, user, apiuid, avatar, custom_input, content_type)
-
-```
+# key-value map for optional query parameters
+optional_query_parameters = { }
 
 
-### <a name="update_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.update_user1") update_user1
-
-> Update User API
-
-```python
-def update_user1(self,
-                     body,
-                     content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiUU()
-content_type = 'Content-Type'
-
-result = user_management_client.update_user1(body, content_type)
+result = user_management_client.update_user(user, avatar, custom_input, optional_query_parameters)
 
 ```
 
@@ -1812,65 +1151,23 @@ result = user_management_client.update_user1(body, content_type)
 
 ```python
 def delete_user(self,
-                    api,
-                    uid,
-                    user,
-                    apiuid,
-                    content_type)
+                    user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| api |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
 
 
 
 #### Example Usage
 
 ```python
-api = 'api'
-uid = 'uid'
 user = 'user'
-apiuid = 'apiuid'
-content_type = 'Content-Type'
 
-result = user_management_client.delete_user(api, uid, user, apiuid, content_type)
-
-```
-
-
-### <a name="delete_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.delete_user1") delete_user1
-
-> Delete User API
-
-```python
-def delete_user1(self,
-                     body,
-                     content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiUD()
-content_type = 'Content-Type'
-
-result = user_management_client.delete_user1(body, content_type)
+result = user_management_client.delete_user(user)
 
 ```
 
@@ -1893,80 +1190,46 @@ An instance of the ``` LoginAndRegistration ``` class can be accessed from the A
 
 ```python
 def user_registration(self,
-                          key,
-                          uid,
+                          email,
                           user,
                           password,
-                          name,
-                          email,
-                          phone,
-                          countrycode,
-                          address,
-                          content_type)
+                          name=None,
+                          phone=None,
+                          countrycode=None,
+                          address=None,
+                          _optional_query_parameters=None)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| phone |  ``` Required ```  | TODO: Add a parameter description |
-| countrycode |  ``` Required ```  | TODO: Add a parameter description |
-| address |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| email |  ``` Required ```  | Users Email |
+| user |  ``` Required ```  | Users Username |
+| password |  ``` Required ```  | Users Password |
+| name |  ``` Optional ```  | Users Name |
+| phone |  ``` Optional ```  | Users Cellphone Number |
+| countrycode |  ``` Optional ```  | Users Country Code (US = 1) |
+| address |  ``` Optional ```  | Users Address |
+| _optional_query_parameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
+email = 'email'
 user = 'user'
 password = 'password'
 name = 'name'
-email = 'email'
-phone = 216
-countrycode = 216
+phone = 162
+countrycode = 162
 address = 'address'
-content_type = 'Content-Type'
-
-result = login_and_registration_client.user_registration(key, uid, user, password, name, email, phone, countrycode, address, content_type)
-
-```
+# key-value map for optional query parameters
+optional_query_parameters = { }
 
 
-### <a name="user_registration1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_registration1") user_registration1
-
-> User Registration API
-
-```python
-def user_registration1(self,
-                           body,
-                           content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiAUR()
-content_type = 'Content-Type'
-
-result = login_and_registration_client.user_registration1(body, content_type)
+result = login_and_registration_client.user_registration(email, user, password, name, phone, countrycode, address, optional_query_parameters)
 
 ```
 
@@ -1977,65 +1240,26 @@ result = login_and_registration_client.user_registration1(body, content_type)
 
 ```python
 def user_authentication(self,
-                            key,
-                            uid,
                             user,
-                            password,
-                            content_type)
+                            password)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users Username or Email |
+| password |  ``` Required ```  | Users Password |
 
 
 
 #### Example Usage
 
 ```python
-key = 'key'
-uid = 'uid'
 user = 'user'
 password = 'password'
-content_type = 'Content-Type'
 
-result = login_and_registration_client.user_authentication(key, uid, user, password, content_type)
-
-```
-
-
-### <a name="user_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.user_authentication1") user_authentication1
-
-> User Authentication API
-
-```python
-def user_authentication1(self,
-                             body,
-                             content_type)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```python
-body = HttpsApiRestShApiAUL()
-content_type = 'Content-Type'
-
-result = login_and_registration_client.user_authentication1(body, content_type)
+result = login_and_registration_client.user_authentication(user, password)
 
 ```
 

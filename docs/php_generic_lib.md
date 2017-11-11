@@ -288,143 +288,63 @@ $advancedLogging = $client->getAdvancedLogging();
 
 ```php
 function loggingInfo(
-        $key,
-        $uid,
         $name,
         $origin,
-        $time,
-        $contentType)
+        $time = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| time |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $name = 'name';
 $origin = 'origin';
 $time = 'time';
-$contentType = 'Content-Type';
 
-$result = $advancedLogging->loggingInfo($key, $uid, $name, $origin, $time, $contentType);
+$result = $advancedLogging->loggingInfo($name, $origin, $time);
 
 ```
 
 
-### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup") loggingSetup
+### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingConfiguration") loggingConfiguration
 
-> WAF Log Setup
+> WAF Log Configuration
 
 
 ```php
-function loggingSetup(
-        $key,
-        $uid,
+function loggingConfiguration(
         $name,
         $origin,
-        $activate,
-        $contentType)
+        $activate)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| activate |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of the WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
+| activate |  ``` Required ```  | True or False |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $name = 'name';
 $origin = 'origin';
-$activate = true;
-$contentType = 'Content-Type';
+$activate = 'activate';
 
-$result = $advancedLogging->loggingSetup($key, $uid, $name, $origin, $activate, $contentType);
-
-```
-
-
-### <a name="logging_info1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingInfo1") loggingInfo1
-
-> WAF Log Info
-
-
-```php
-function loggingInfo1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiSLI();
-$contentType = 'Content-Type';
-
-$result = $advancedLogging->loggingInfo1($body, $contentType);
-
-```
-
-
-### <a name="logging_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".AdvancedLogging.loggingSetup1") loggingSetup1
-
-> WAF Log Setup
-
-
-```php
-function loggingSetup1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiSL();
-$contentType = 'Content-Type';
-
-$result = $advancedLogging->loggingSetup1($body, $contentType);
+$result = $advancedLogging->loggingConfiguration($name, $origin, $activate);
 
 ```
 
@@ -615,69 +535,29 @@ $encryption = $client->getEncryption();
 
 ```php
 function dataAndFileEncryption(
-        $key,
-        $uid,
         $data,
         $method,
-        $bit,
-        $contentType)
+        $bit)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| method |  ``` Required ```  | TODO: Add a parameter description |
-| bit |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | GIT URL, file URL, direct upload of file, or data as a query string |
+| method |  ``` Required ```  | Single or multiple encryption types to apply to data or files separated by a comma (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP) |
+| bit |  ``` Required ```  | Encryption key size (4096) |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $data = 'data';
 $method = 'method';
-$bit = 25;
-$contentType = 'Content-Type';
+$bit = 184;
 
-$result = $encryption->dataAndFileEncryption($key, $uid, $data, $method, $bit, $contentType);
-
-```
-
-
-### <a name="data_and_file_encryption1"></a>![Method: ](https://apidocs.io/img/method.png ".Encryption.dataAndFileEncryption1") dataAndFileEncryption1
-
-> Data and File Encryption API
-
-
-```php
-function dataAndFileEncryption1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiSE();
-$contentType = 'Content-Type';
-
-$result = $encryption->dataAndFileEncryption1($body, $contentType);
+$result = $encryption->dataAndFileEncryption($data, $method, $bit);
 
 ```
 
@@ -701,35 +581,26 @@ $cDN = $client->getCDN();
 
 ```php
 function cDNPushZone(
-        $key,
-        $uid,
         $cname,
-        $file,
-        $contentType)
+        $file)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| file |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
+| file |  ``` Required ```  | GIT URL, file URL, or direct upload of file |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $cname = 'cname';
 $file = 'file';
-$contentType = 'Content-Type';
 
-$result = $cDN->cDNPushZone($key, $uid, $cname, $file, $contentType);
+$result = $cDN->cDNPushZone($cname, $file);
 
 ```
 
@@ -741,97 +612,26 @@ $result = $cDN->cDNPushZone($key, $uid, $cname, $file, $contentType);
 
 ```php
 function cDNPullZone(
-        $key,
-        $uid,
         $origin,
-        $cname,
-        $contentType)
+        $cname)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | Domain or domain names separated by a comma |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $origin = 'origin';
 $cname = 'cname';
-$contentType = 'Content-Type';
 
-$result = $cDN->cDNPullZone($key, $uid, $origin, $cname, $contentType);
-
-```
-
-
-### <a name="c_dn_push_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPushZone1") cDNPushZone1
-
-> CDN Push Zone API
-
-
-```php
-function cDNPushZone1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiSCPush();
-$contentType = 'Content-Type';
-
-$result = $cDN->cDNPushZone1($body, $contentType);
-
-```
-
-
-### <a name="c_dn_pull_zone1"></a>![Method: ](https://apidocs.io/img/method.png ".CDN.cDNPullZone1") cDNPullZone1
-
-> CDN Pull Zone API
-
-
-```php
-function cDNPullZone1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiSCPull();
-$contentType = 'Content-Type';
-
-$result = $cDN->cDNPullZone1($body, $contentType);
+$result = $cDN->cDNPullZone($origin, $cname);
 
 ```
 
@@ -855,66 +655,26 @@ $dNS = $client->getDNS();
 
 ```php
 function dNSConfiguration(
-        $key,
-        $uid,
         $domain,
-        $records,
-        $contentType)
+        $records)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| records |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
+| records |  ``` Required ```  | Records to append to domain separated by a comma (a;www.mydomain.com;127.0.0.0,cname;mydomain.com;otherdomain.com) |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $domain = 'domain';
 $records = 'records';
-$contentType = 'Content-Type';
 
-$result = $dNS->dNSConfiguration($key, $uid, $domain, $records, $contentType);
-
-```
-
-
-### <a name="d_ns_configuration1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSConfiguration1") dNSConfiguration1
-
-> DNS Configuration API
-
-
-```php
-function dNSConfiguration1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiSDC();
-$contentType = 'Content-Type';
-
-$result = $dNS->dNSConfiguration1($body, $contentType);
+$result = $dNS->dNSConfiguration($domain, $records);
 
 ```
 
@@ -925,64 +685,23 @@ $result = $dNS->dNSConfiguration1($body, $contentType);
 
 
 ```php
-function dNSCreation(
-        $key,
-        $uid,
-        $domain,
-        $contentType)
+function dNSCreation($domain)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $domain = 'domain';
-$contentType = 'Content-Type';
 
-$result = $dNS->dNSCreation($key, $uid, $domain, $contentType);
-
-```
-
-
-### <a name="d_ns_creation1"></a>![Method: ](https://apidocs.io/img/method.png ".DNS.dNSCreation1") dNSCreation1
-
-> DNS Creation API
-
-
-```php
-function dNSCreation1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiSDA();
-$contentType = 'Content-Type';
-
-$result = $dNS->dNSCreation1($body, $contentType);
+$result = $dNS->dNSCreation($domain);
 
 ```
 
@@ -1005,64 +724,23 @@ $codeObfuscation = $client->getCodeObfuscation();
 
 
 ```php
-function obfuscationAndAntiTampering(
-        $key,
-        $uid,
-        $app,
-        $contentType)
+function obfuscationAndAntiTampering($app)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $app = 'app';
-$contentType = 'Content-Type';
 
-$result = $codeObfuscation->obfuscationAndAntiTampering($key, $uid, $app, $contentType);
-
-```
-
-
-### <a name="obfuscation_and_anti_tampering1"></a>![Method: ](https://apidocs.io/img/method.png ".CodeObfuscation.obfuscationAndAntiTampering1") obfuscationAndAntiTampering1
-
-> Javascript and Node.JS Obfuscation and Anti-Tampering API
-
-
-```php
-function obfuscationAndAntiTampering1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiSO();
-$contentType = 'Content-Type';
-
-$result = $codeObfuscation->obfuscationAndAntiTampering1($body, $contentType);
+$result = $codeObfuscation->obfuscationAndAntiTampering($app);
 
 ```
 
@@ -1086,66 +764,26 @@ $hosting = $client->getHosting();
 
 ```php
 function hostingSetup(
-        $key,
-        $uid,
         $app,
-        $domain,
-        $contentType)
+        $domain)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $app = 'app';
 $domain = 'domain';
-$contentType = 'Content-Type';
 
-$result = $hosting->hostingSetup($key, $uid, $app, $domain, $contentType);
-
-```
-
-
-### <a name="hosting_setup1"></a>![Method: ](https://apidocs.io/img/method.png ".Hosting.hostingSetup1") hostingSetup1
-
-> Node.JS and Static Web APP Hosting
-
-
-```php
-function hostingSetup1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiSH();
-$contentType = 'Content-Type';
-
-$result = $hosting->hostingSetup1($body, $contentType);
+$result = $hosting->hostingSetup($app, $domain);
 
 ```
 
@@ -1260,66 +898,26 @@ $imageManipulationAndModerationAPI = $client->getImageManipulationAndModerationA
 
 ```php
 function imageManipulation(
-        $key,
-        $uid,
         $image,
-        $transform,
-        $contentType)
+        $transform)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| image |  ``` Required ```  | TODO: Add a parameter description |
-| transform |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| image |  ``` Required ```  | Image URL or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $image = 'image';
 $transform = 'transform';
-$contentType = 'Content-Type';
 
-$result = $imageManipulationAndModerationAPI->imageManipulation($key, $uid, $image, $transform, $contentType);
-
-```
-
-
-### <a name="image_manipulation1"></a>![Method: ](https://apidocs.io/img/method.png ".ImageManipulationAndModerationAPI.imageManipulation1") imageManipulation1
-
-> Image Manipulation API
-
-
-```php
-function imageManipulation1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiI();
-$contentType = 'Content-Type';
-
-$result = $imageManipulationAndModerationAPI->imageManipulation1($body, $contentType);
+$result = $imageManipulationAndModerationAPI->imageManipulation($image, $transform);
 
 ```
 
@@ -1343,78 +941,72 @@ $verification = $client->getVerification();
 
 ```php
 function userAddressVerification(
-        $key,
-        $uid,
         $user,
         $a,
         $sa,
         $c,
         $s,
         $z,
-        $contentType)
+        $address = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| a |  ``` Required ```  | TODO: Add a parameter description |
-| sa |  ``` Required ```  | TODO: Add a parameter description |
-| c |  ``` Required ```  | TODO: Add a parameter description |
-| s |  ``` Required ```  | TODO: Add a parameter description |
-| z |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
+| a |  ``` Required ```  | Address Line One |
+| sa |  ``` Required ```  | Address Line Two |
+| c |  ``` Required ```  | Address City |
+| s |  ``` Required ```  | Address State or Province |
+| z |  ``` Required ```  | Address Zipcode |
+| address |  ``` Optional ```  | Address as a one line input separated by commas |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $user = 'user';
 $a = 'a';
 $sa = 'sa';
 $c = 'c';
 $s = 's';
-$z = 25;
-$contentType = 'Content-Type';
+$z = 21;
+$address = 'address';
 
-$result = $verification->userAddressVerification($key, $uid, $user, $a, $sa, $c, $s, $z, $contentType);
+$result = $verification->userAddressVerification($user, $a, $sa, $c, $s, $z, $address);
 
 ```
 
 
-### <a name="user_address_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userAddressVerification1") userAddressVerification1
+### <a name="user_verification_response"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerificationResponse") userVerificationResponse
 
-> User Address Verification API
+> Users Verification Response API
 
 
 ```php
-function userAddressVerification1(
-        $body,
-        $contentType)
+function userVerificationResponse(
+        $user,
+        $code)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| code |  ``` Required ```  | Verification code entered by the user |
 
 
 
 #### Example Usage
 
 ```php
-$body = new HttpsApiRestShApiVA();
-$contentType = 'Content-Type';
+$user = 'user';
+$code = 'code';
 
-$result = $verification->userAddressVerification1($body, $contentType);
+$result = $verification->userVerificationResponse($user, $code);
 
 ```
 
@@ -1425,135 +1017,23 @@ $result = $verification->userAddressVerification1($body, $contentType);
 
 
 ```php
-function userVerification(
-        $key,
-        $uid,
-        $user,
-        $code,
-        $contentType)
+function userVerification($user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $user = 'user';
-$code = 'code';
-$contentType = 'Content-Type';
 
-$result = $verification->userVerification($key, $uid, $user, $code, $contentType);
-
-```
-
-
-### <a name="user_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.userVerification1") userVerification1
-
-> User Verification API
-
-
-```php
-function userVerification1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiVU();
-$contentType = 'Content-Type';
-
-$result = $verification->userVerification1($body, $contentType);
-
-```
-
-
-### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification") cellphoneVerification
-
-> Verification API
-
-
-```php
-function cellphoneVerification(
-        $key,
-        $uid,
-        $to,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$key = 'key';
-$uid = 'uid';
-$to = 'to';
-$contentType = 'Content-Type';
-
-$result = $verification->cellphoneVerification($key, $uid, $to, $contentType);
-
-```
-
-
-### <a name="cellphone_verification1"></a>![Method: ](https://apidocs.io/img/method.png ".Verification.cellphoneVerification1") cellphoneVerification1
-
-> Verification API
-
-
-```php
-function cellphoneVerification1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiV();
-$contentType = 'Content-Type';
-
-$result = $verification->cellphoneVerification1($body, $contentType);
+$result = $verification->userVerification($user);
 
 ```
 
@@ -1577,66 +1057,26 @@ $twoFactorAuthenticationAPI = $client->getTwoFactorAuthenticationAPI();
 
 ```php
 function m2FATokenResponse(
-        $key,
-        $uid,
         $user,
-        $code,
-        $contentType)
+        $code)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username or Email |
+| code |  ``` Required ```  | Response From User Containing 2FA Code |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $user = 'user';
 $code = 'code';
-$contentType = 'Content-Type';
 
-$result = $twoFactorAuthenticationAPI->m2FATokenResponse($key, $uid, $user, $code, $contentType);
-
-```
-
-
-### <a name="m2_fa_token_response1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.m2FATokenResponse1") m2FATokenResponse1
-
-> Two Factor Authentication Token Reply
-
-
-```php
-function m2FATokenResponse1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApi2faT();
-$contentType = 'Content-Type';
-
-$result = $twoFactorAuthenticationAPI->m2FATokenResponse1($body, $contentType);
+$result = $twoFactorAuthenticationAPI->m2FATokenResponse($user, $code);
 
 ```
 
@@ -1647,64 +1087,23 @@ $result = $twoFactorAuthenticationAPI->m2FATokenResponse1($body, $contentType);
 
 
 ```php
-function twoFactorAuthentication(
-        $key,
-        $uid,
-        $to,
-        $contentType)
+function twoFactorAuthentication($to)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| to |  ``` Required ```  | Users UID, Username, Email, Or Cellphone number |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $to = 'to';
-$contentType = 'Content-Type';
 
-$result = $twoFactorAuthenticationAPI->twoFactorAuthentication($key, $uid, $to, $contentType);
-
-```
-
-
-### <a name="two_factor_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".TwoFactorAuthenticationAPI.twoFactorAuthentication1") twoFactorAuthentication1
-
-> Two Factor Authentication API
-
-
-```php
-function twoFactorAuthentication1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApi2fa();
-$contentType = 'Content-Type';
-
-$result = $twoFactorAuthenticationAPI->twoFactorAuthentication1($body, $contentType);
+$result = $twoFactorAuthenticationAPI->twoFactorAuthentication($to);
 
 ```
 
@@ -1727,67 +1126,23 @@ $userManagement = $client->getUserManagement();
 
 
 ```php
-function getUserInfo(
-        $key,
-        $uid,
-        $user,
-        $apiuid,
-        $contentType)
+function getUserInfo($user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users User ID |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $user = 'user';
-$apiuid = 'apiuid';
-$contentType = 'Content-Type';
 
-$result = $userManagement->getUserInfo($key, $uid, $user, $apiuid, $contentType);
-
-```
-
-
-### <a name="get_user_info1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.getUserInfo1") getUserInfo1
-
-> Get User Info API
-
-
-```php
-function getUserInfo1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiUI();
-$contentType = 'Content-Type';
-
-$result = $userManagement->getUserInfo1($body, $contentType);
+$result = $userManagement->getUserInfo($user);
 
 ```
 
@@ -1799,72 +1154,34 @@ $result = $userManagement->getUserInfo1($body, $contentType);
 
 ```php
 function updateUser(
-        $key,
-        $uid,
         $user,
-        $apiuid,
         $avatar,
         $customInput,
-        $contentType)
+        $queryParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| avatar |  ``` Required ```  | TODO: Add a parameter description |
-| customInput |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| avatar |  ``` Required ```  | Avatar Image URL |
+| customInput |  ``` Required ```  | Custom input variable for users profile |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $user = 'user';
-$apiuid = 'apiuid';
 $avatar = 'avatar';
 $customInput = 'custom input';
-$contentType = 'Content-Type';
-
-$result = $userManagement->updateUser($key, $uid, $user, $apiuid, $avatar, $customInput, $contentType);
-
-```
+// key-value map for optional query parameters
+$queryParams = array('key' => 'value');
 
 
-### <a name="update_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.updateUser1") updateUser1
-
-> Update User API
-
-
-```php
-function updateUser1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiUU();
-$contentType = 'Content-Type';
-
-$result = $userManagement->updateUser1($body, $contentType);
+$result = $userManagement->updateUser($user, $avatar, $customInput, $queryParams);
 
 ```
 
@@ -1875,67 +1192,23 @@ $result = $userManagement->updateUser1($body, $contentType);
 
 
 ```php
-function deleteUser(
-        $api,
-        $uid,
-        $user,
-        $apiuid,
-        $contentType)
+function deleteUser($user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| api |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
 
 
 
 #### Example Usage
 
 ```php
-$api = 'api';
-$uid = 'uid';
 $user = 'user';
-$apiuid = 'apiuid';
-$contentType = 'Content-Type';
 
-$result = $userManagement->deleteUser($api, $uid, $user, $apiuid, $contentType);
-
-```
-
-
-### <a name="delete_user1"></a>![Method: ](https://apidocs.io/img/method.png ".UserManagement.deleteUser1") deleteUser1
-
-> Delete User API
-
-
-```php
-function deleteUser1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiUD();
-$contentType = 'Content-Type';
-
-$result = $userManagement->deleteUser1($body, $contentType);
+$result = $userManagement->deleteUser($user);
 
 ```
 
@@ -1959,81 +1232,46 @@ $loginAndRegistration = $client->getLoginAndRegistration();
 
 ```php
 function userRegistration(
-        $key,
-        $uid,
+        $email,
         $user,
         $password,
-        $name,
-        $email,
-        $phone,
-        $countrycode,
-        $address,
-        $contentType)
+        $name = null,
+        $phone = null,
+        $countrycode = null,
+        $address = null,
+        $queryParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| phone |  ``` Required ```  | TODO: Add a parameter description |
-| countrycode |  ``` Required ```  | TODO: Add a parameter description |
-| address |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| email |  ``` Required ```  | Users Email |
+| user |  ``` Required ```  | Users Username |
+| password |  ``` Required ```  | Users Password |
+| name |  ``` Optional ```  | Users Name |
+| phone |  ``` Optional ```  | Users Cellphone Number |
+| countrycode |  ``` Optional ```  | Users Country Code (US = 1) |
+| address |  ``` Optional ```  | Users Address |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
+$email = 'email';
 $user = 'user';
 $password = 'password';
 $name = 'name';
-$email = 'email';
-$phone = 117;
-$countrycode = 117;
+$phone = 21;
+$countrycode = 21;
 $address = 'address';
-$contentType = 'Content-Type';
-
-$result = $loginAndRegistration->userRegistration($key, $uid, $user, $password, $name, $email, $phone, $countrycode, $address, $contentType);
-
-```
+// key-value map for optional query parameters
+$queryParams = array('key' => 'value');
 
 
-### <a name="user_registration1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userRegistration1") userRegistration1
-
-> User Registration API
-
-
-```php
-function userRegistration1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiAUR();
-$contentType = 'Content-Type';
-
-$result = $loginAndRegistration->userRegistration1($body, $contentType);
+$result = $loginAndRegistration->userRegistration($email, $user, $password, $name, $phone, $countrycode, $address, $queryParams);
 
 ```
 
@@ -2045,66 +1283,26 @@ $result = $loginAndRegistration->userRegistration1($body, $contentType);
 
 ```php
 function userAuthentication(
-        $key,
-        $uid,
         $user,
-        $password,
-        $contentType)
+        $password)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users Username or Email |
+| password |  ``` Required ```  | Users Password |
 
 
 
 #### Example Usage
 
 ```php
-$key = 'key';
-$uid = 'uid';
 $user = 'user';
 $password = 'password';
-$contentType = 'Content-Type';
 
-$result = $loginAndRegistration->userAuthentication($key, $uid, $user, $password, $contentType);
-
-```
-
-
-### <a name="user_authentication1"></a>![Method: ](https://apidocs.io/img/method.png ".LoginAndRegistration.userAuthentication1") userAuthentication1
-
-> User Authentication API
-
-
-```php
-function userAuthentication1(
-        $body,
-        $contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$body = new HttpsApiRestShApiAUL();
-$contentType = 'Content-Type';
-
-$result = $loginAndRegistration->userAuthentication1($body, $contentType);
+$result = $loginAndRegistration->userAuthentication($user, $password);
 
 ```
 

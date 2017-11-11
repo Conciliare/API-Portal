@@ -243,136 +243,56 @@ IAdvancedLogging advancedLogging = client.AdvancedLogging;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSLIR> LoggingInfo(
-        string key,
-        string uid,
-        string name,
-        string origin,
-        string time,
-        string contentType)
+Task<Models.HttpsApiRestShApiSLIR> LoggingInfo(string name, string origin, string time = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| time |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of your WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application |
+| time |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string name = "name";
 string origin = "origin";
 string time = "time";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSLIR result = await advancedLogging.LoggingInfo(key, uid, name, origin, time, contentType);
+Models.HttpsApiRestShApiSLIR result = await advancedLogging.LoggingInfo(name, origin, time);
 
 ```
 
 
-### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingSetup") LoggingSetup
+### <a name="logging_configuration"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingConfiguration") LoggingConfiguration
 
-> WAF Log Setup
+> WAF Log Configuration
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSLR> LoggingSetup(
-        string key,
-        string uid,
-        string name,
-        string origin,
-        bool activate,
-        string contentType)
+Task<Models.HttpsApiRestShApiSLR> LoggingConfiguration(string name, string origin, string activate)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| activate |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| name |  ``` Required ```  | Name of the WAF zone |
+| origin |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on |
+| activate |  ``` Required ```  | True or False |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string name = "name";
 string origin = "origin";
-bool activate = true;
-string contentType = "Content-Type";
+string activate = "activate";
 
-Models.HttpsApiRestShApiSLR result = await advancedLogging.LoggingSetup(key, uid, name, origin, activate, contentType);
-
-```
-
-
-### <a name="logging_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingInfo") LoggingInfo
-
-> WAF Log Info
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSLIR> LoggingInfo(Models.HttpsApiRestShApiSLI body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiSLI();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiSLIR result = await advancedLogging.LoggingInfo(body, contentType);
-
-```
-
-
-### <a name="logging_setup"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.AdvancedLogging.LoggingSetup") LoggingSetup
-
-> WAF Log Setup
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSLR> LoggingSetup(Models.HttpsApiRestShApiSL body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiSL();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiSLR result = await advancedLogging.LoggingSetup(body, contentType);
+Models.HttpsApiRestShApiSLR result = await advancedLogging.LoggingConfiguration(name, origin, activate);
 
 ```
 
@@ -554,66 +474,26 @@ IEncryption encryption = client.Encryption;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSER> DataAndFileEncryption(
-        string key,
-        string uid,
-        string data,
-        string method,
-        int bit,
-        string contentType)
+Task<Models.HttpsApiRestShApiSER> DataAndFileEncryption(string data, string method, int bit)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| data |  ``` Required ```  | TODO: Add a parameter description |
-| method |  ``` Required ```  | TODO: Add a parameter description |
-| bit |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| data |  ``` Required ```  | GIT URL, file URL, direct upload of file, or data as a query string |
+| method |  ``` Required ```  | Single or multiple encryption types to apply to data or files separated by a comma (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP) |
+| bit |  ``` Required ```  | Encryption key size (4096) |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string data = "data";
 string method = "method";
-int bit = 148;
-string contentType = "Content-Type";
+int bit = 107;
 
-Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryption(key, uid, data, method, bit, contentType);
-
-```
-
-
-### <a name="data_and_file_encryption"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Encryption.DataAndFileEncryption") DataAndFileEncryption
-
-> Data and File Encryption API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSER> DataAndFileEncryption(Models.HttpsApiRestShApiSE body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiSE();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryption(body, contentType);
+Models.HttpsApiRestShApiSER result = await encryption.DataAndFileEncryption(data, method, bit);
 
 ```
 
@@ -636,35 +516,24 @@ ICDN cDN = client.CDN;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSCPushR> CDNPushZone(
-        string key,
-        string uid,
-        string cname,
-        string file,
-        string contentType)
+Task<Models.HttpsApiRestShApiSCPushR> CDNPushZone(string cname, string file)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| file |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
+| file |  ``` Required ```  | GIT URL, file URL, or direct upload of file |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string cname = "cname";
 string file = "file";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSCPushR result = await cDN.CDNPushZone(key, uid, cname, file, contentType);
+Models.HttpsApiRestShApiSCPushR result = await cDN.CDNPushZone(cname, file);
 
 ```
 
@@ -675,91 +544,24 @@ Models.HttpsApiRestShApiSCPushR result = await cDN.CDNPushZone(key, uid, cname, 
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSCPullR> CDNPullZone(
-        string key,
-        string uid,
-        string origin,
-        string cname,
-        string contentType)
+Task<Models.HttpsApiRestShApiSCPullR> CDNPullZone(string origin, string cname)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| origin |  ``` Required ```  | TODO: Add a parameter description |
-| cname |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| origin |  ``` Required ```  | Domain or domain names separated by a comma |
+| cname |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string origin = "origin";
 string cname = "cname";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSCPullR result = await cDN.CDNPullZone(key, uid, origin, cname, contentType);
-
-```
-
-
-### <a name="cdn_push_zone"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDN.CDNPushZone") CDNPushZone
-
-> CDN Push Zone API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSCPushR> CDNPushZone(Models.HttpsApiRestShApiSCPush body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiSCPush();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiSCPushR result = await cDN.CDNPushZone(body, contentType);
-
-```
-
-
-### <a name="cdn_pull_zone"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CDN.CDNPullZone") CDNPullZone
-
-> CDN Pull Zone API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSCPullR> CDNPullZone(Models.HttpsApiRestShApiSCPull body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiSCPull();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiSCPullR result = await cDN.CDNPullZone(body, contentType);
+Models.HttpsApiRestShApiSCPullR result = await cDN.CDNPullZone(origin, cname);
 
 ```
 
@@ -782,63 +584,24 @@ IDNS dNS = client.DNS;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSDCR> DNSConfiguration(
-        string key,
-        string uid,
-        string domain,
-        string records,
-        string contentType)
+Task<Models.HttpsApiRestShApiSDCR> DNSConfiguration(string domain, string records)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| records |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
+| records |  ``` Required ```  | Records to append to domain separated by a comma (a;www.mydomain.com;127.0.0.0,cname;mydomain.com;otherdomain.com) |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string domain = "domain";
 string records = "records";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSDCR result = await dNS.DNSConfiguration(key, uid, domain, records, contentType);
-
-```
-
-
-### <a name="dns_configuration"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNS.DNSConfiguration") DNSConfiguration
-
-> DNS Configuration API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSDCR> DNSConfiguration(Models.HttpsApiRestShApiSDC body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiSDC();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiSDCR result = await dNS.DNSConfiguration(body, contentType);
+Models.HttpsApiRestShApiSDCR result = await dNS.DNSConfiguration(domain, records);
 
 ```
 
@@ -849,60 +612,22 @@ Models.HttpsApiRestShApiSDCR result = await dNS.DNSConfiguration(body, contentTy
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSDAR> DNSCreation(
-        string key,
-        string uid,
-        string domain,
-        string contentType)
+Task<Models.HttpsApiRestShApiSDAR> DNSCreation(string domain)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string domain = "domain";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSDAR result = await dNS.DNSCreation(key, uid, domain, contentType);
-
-```
-
-
-### <a name="dns_creation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.DNS.DNSCreation") DNSCreation
-
-> DNS Creation API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSDAR> DNSCreation(Models.HttpsApiRestShApiSDA body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiSDA();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiSDAR result = await dNS.DNSCreation(body, contentType);
+Models.HttpsApiRestShApiSDAR result = await dNS.DNSCreation(domain);
 
 ```
 
@@ -925,60 +650,22 @@ ICodeObfuscation codeObfuscation = client.CodeObfuscation;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSOR> ObfuscationAndAntiTampering(
-        string key,
-        string uid,
-        string app,
-        string contentType)
+Task<Models.HttpsApiRestShApiSOR> ObfuscationAndAntiTampering(string app)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string app = "app";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSOR result = await codeObfuscation.ObfuscationAndAntiTampering(key, uid, app, contentType);
-
-```
-
-
-### <a name="obfuscation_and_anti_tampering"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.CodeObfuscation.ObfuscationAndAntiTampering") ObfuscationAndAntiTampering
-
-> Javascript and Node.JS Obfuscation and Anti-Tampering API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSOR> ObfuscationAndAntiTampering(Models.HttpsApiRestShApiSO body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiSO();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiSOR result = await codeObfuscation.ObfuscationAndAntiTampering(body, contentType);
+Models.HttpsApiRestShApiSOR result = await codeObfuscation.ObfuscationAndAntiTampering(app);
 
 ```
 
@@ -1001,63 +688,24 @@ IHosting hosting = client.Hosting;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiSHR> HostingSetup(
-        string key,
-        string uid,
-        string app,
-        string domain,
-        string contentType)
+Task<Models.HttpsApiRestShApiSHR> HostingSetup(string app, string domain)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| app |  ``` Required ```  | TODO: Add a parameter description |
-| domain |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| app |  ``` Required ```  | GIT URL or ZIP package containing your APP |
+| domain |  ``` Required ```  | Domain or domain names separated by a comma |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string app = "app";
 string domain = "domain";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiSHR result = await hosting.HostingSetup(key, uid, app, domain, contentType);
-
-```
-
-
-### <a name="hosting_setup"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Hosting.HostingSetup") HostingSetup
-
-> Node.JS and Static Web APP Hosting
-
-
-```csharp
-Task<Models.HttpsApiRestShApiSHR> HostingSetup(Models.HttpsApiRestShApiSH body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiSH();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiSHR result = await hosting.HostingSetup(body, contentType);
+Models.HttpsApiRestShApiSHR result = await hosting.HostingSetup(app, domain);
 
 ```
 
@@ -1167,63 +815,24 @@ IImageManipulationAndModerationAPI imageManipulationAndModerationAPI = client.Im
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiIR> ImageManipulation(
-        string key,
-        string uid,
-        string image,
-        string transform,
-        string contentType)
+Task<Models.HttpsApiRestShApiIR> ImageManipulation(string image, string transform)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| image |  ``` Required ```  | TODO: Add a parameter description |
-| transform |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| image |  ``` Required ```  | Image URL or direct upload |
+| transform |  ``` Required ```  | Transformations to perform |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string image = "image";
 string transform = "transform";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiIR result = await imageManipulationAndModerationAPI.ImageManipulation(key, uid, image, transform, contentType);
-
-```
-
-
-### <a name="image_manipulation"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.ImageManipulationAndModerationAPI.ImageManipulation") ImageManipulation
-
-> Image Manipulation API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiIR> ImageManipulation(Models.HttpsApiRestShApiI body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiI();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiIR result = await imageManipulationAndModerationAPI.ImageManipulation(body, contentType);
+Models.HttpsApiRestShApiIR result = await imageManipulationAndModerationAPI.ImageManipulation(image, transform);
 
 ```
 
@@ -1247,113 +856,68 @@ IVerification verification = client.Verification;
 
 ```csharp
 Task<Models.HttpsApiRestShApiVAR> UserAddressVerification(
-        string key,
-        string uid,
         string user,
         string a,
         string sa,
         string c,
         string s,
         int z,
-        string contentType)
+        string address = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| a |  ``` Required ```  | TODO: Add a parameter description |
-| sa |  ``` Required ```  | TODO: Add a parameter description |
-| c |  ``` Required ```  | TODO: Add a parameter description |
-| s |  ``` Required ```  | TODO: Add a parameter description |
-| z |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
+| a |  ``` Required ```  | Address Line One |
+| sa |  ``` Required ```  | Address Line Two |
+| c |  ``` Required ```  | Address City |
+| s |  ``` Required ```  | Address State or Province |
+| z |  ``` Required ```  | Address Zipcode |
+| address |  ``` Optional ```  | Address as a one line input separated by commas |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string user = "user";
 string a = "a";
 string sa = "sa";
 string c = "c";
 string s = "s";
-int z = 239;
-string contentType = "Content-Type";
+int z = 107;
+string address = "address";
 
-Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(key, uid, user, a, sa, c, s, z, contentType);
-
-```
-
-
-### <a name="user_address_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.UserAddressVerification") UserAddressVerification
-
-> User Address Verification API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiVAR> UserAddressVerification(Models.HttpsApiRestShApiVA body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiVA();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(body, contentType);
+Models.HttpsApiRestShApiVAR result = await verification.UserAddressVerification(user, a, sa, c, s, z, address);
 
 ```
 
 
-### <a name="user_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.UserVerification") UserVerification
+### <a name="user_verification_response"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.UserVerificationResponse") UserVerificationResponse
 
-> User Verification API
+> Users Verification Response API
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVUR> UserVerification(
-        string key,
-        string uid,
-        string user,
-        string code,
-        string contentType)
+Task<Models.HttpsApiRestShApiVUR> UserVerificationResponse(string user, string code)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| code |  ``` Required ```  | Verification code entered by the user |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string user = "user";
 string code = "code";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiVUR result = await verification.UserVerification(key, uid, user, code, contentType);
+Models.HttpsApiRestShApiVUR result = await verification.UserVerificationResponse(user, code);
 
 ```
 
@@ -1364,88 +928,22 @@ Models.HttpsApiRestShApiVUR result = await verification.UserVerification(key, ui
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiVUR> UserVerification(Models.HttpsApiRestShApiVU body, string contentType)
+Task<Models.HttpsApiRestShApiVR> UserVerification(string user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
 
 
 #### Example Usage
 
 ```csharp
-var body = new Models.HttpsApiRestShApiVU();
-string contentType = "Content-Type";
+string user = "user";
 
-Models.HttpsApiRestShApiVUR result = await verification.UserVerification(body, contentType);
-
-```
-
-
-### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.CellphoneVerification") CellphoneVerification
-
-> Verification API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiVR> CellphoneVerification(
-        string key,
-        string uid,
-        string to,
-        string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-string key = "key";
-string uid = "uid";
-string to = "to";
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiVR result = await verification.CellphoneVerification(key, uid, to, contentType);
-
-```
-
-
-### <a name="cellphone_verification"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.Verification.CellphoneVerification") CellphoneVerification
-
-> Verification API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiVR> CellphoneVerification(Models.HttpsApiRestShApiV body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiV();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiVR result = await verification.CellphoneVerification(body, contentType);
+Models.HttpsApiRestShApiVR result = await verification.UserVerification(user);
 
 ```
 
@@ -1468,63 +966,24 @@ ITwoFactorAuthenticationAPI twoFactorAuthenticationAPI = client.TwoFactorAuthent
 
 
 ```csharp
-Task<Models.HttpsApiRestShApi2faTR> M2FATokenResponse(
-        string key,
-        string uid,
-        string user,
-        string code,
-        string contentType)
+Task<Models.HttpsApiRestShApi2faTR> M2FATokenResponse(string user, string code)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| code |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username or Email |
+| code |  ``` Required ```  | Response From User Containing 2FA Code |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string user = "user";
 string code = "code";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApi2faTR result = await twoFactorAuthenticationAPI.M2FATokenResponse(key, uid, user, code, contentType);
-
-```
-
-
-### <a name="m2_fa_token_response"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPI.M2FATokenResponse") M2FATokenResponse
-
-> Two Factor Authentication Token Reply
-
-
-```csharp
-Task<Models.HttpsApiRestShApi2faTR> M2FATokenResponse(Models.HttpsApiRestShApi2faT body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApi2faT();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApi2faTR result = await twoFactorAuthenticationAPI.M2FATokenResponse(body, contentType);
+Models.HttpsApiRestShApi2faTR result = await twoFactorAuthenticationAPI.M2FATokenResponse(user, code);
 
 ```
 
@@ -1535,60 +994,22 @@ Models.HttpsApiRestShApi2faTR result = await twoFactorAuthenticationAPI.M2FAToke
 
 
 ```csharp
-Task<Models.HttpsApiRestShApi2faR> TwoFactorAuthentication(
-        string key,
-        string uid,
-        string to,
-        string contentType)
+Task<Models.HttpsApiRestShApi2faR> TwoFactorAuthentication(string to)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| to |  ``` Required ```  | Users UID, Username, Email, Or Cellphone number |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string to = "to";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApi2faR result = await twoFactorAuthenticationAPI.TwoFactorAuthentication(key, uid, to, contentType);
-
-```
-
-
-### <a name="two_factor_authentication"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.TwoFactorAuthenticationAPI.TwoFactorAuthentication") TwoFactorAuthentication
-
-> Two Factor Authentication API
-
-
-```csharp
-Task<Models.HttpsApiRestShApi2faR> TwoFactorAuthentication(Models.HttpsApiRestShApi2fa body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApi2fa();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApi2faR result = await twoFactorAuthenticationAPI.TwoFactorAuthentication(body, contentType);
+Models.HttpsApiRestShApi2faR result = await twoFactorAuthenticationAPI.TwoFactorAuthentication(to);
 
 ```
 
@@ -1611,63 +1032,22 @@ IUserManagement userManagement = client.UserManagement;
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUIR> GetUserInfo(
-        string key,
-        string uid,
-        string user,
-        string apiuid,
-        string contentType)
+Task<Models.HttpsApiRestShApiUIR> GetUserInfo(string user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users User ID |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string user = "user";
-string apiuid = "apiuid";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiUIR result = await userManagement.GetUserInfo(key, uid, user, apiuid, contentType);
-
-```
-
-
-### <a name="get_user_info"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagement.GetUserInfo") GetUserInfo
-
-> Get User Info API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiUIR> GetUserInfo(Models.HttpsApiRestShApiUI body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiUI();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiUIR result = await userManagement.GetUserInfo(body, contentType);
+Models.HttpsApiRestShApiUIR result = await userManagement.GetUserInfo(user);
 
 ```
 
@@ -1679,68 +1059,33 @@ Models.HttpsApiRestShApiUIR result = await userManagement.GetUserInfo(body, cont
 
 ```csharp
 Task<Models.HttpsApiRestShApiUUR> UpdateUser(
-        string key,
-        string uid,
         string user,
-        string apiuid,
         string avatar,
         string customInput,
-        string contentType)
+        Dictionary<string, object> queryParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| avatar |  ``` Required ```  | TODO: Add a parameter description |
-| customInput |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, Or Email |
+| avatar |  ``` Required ```  | Avatar Image URL |
+| customInput |  ``` Required ```  | Custom input variable for users profile |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string user = "user";
-string apiuid = "apiuid";
 string avatar = "avatar";
 string customInput = "custom input";
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiUUR result = await userManagement.UpdateUser(key, uid, user, apiuid, avatar, customInput, contentType);
-
-```
+// key-value map for optional query parameters
+var queryParams = new Dictionary<string, object>();
 
 
-### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagement.UpdateUser") UpdateUser
-
-> Update User API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiUUR> UpdateUser(Models.HttpsApiRestShApiUU body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiUU();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiUUR result = await userManagement.UpdateUser(body, contentType);
+Models.HttpsApiRestShApiUUR result = await userManagement.UpdateUser(user, avatar, customInput, queryParams);
 
 ```
 
@@ -1751,63 +1096,22 @@ Models.HttpsApiRestShApiUUR result = await userManagement.UpdateUser(body, conte
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiUDR> DeleteUser(
-        string api,
-        string uid,
-        string user,
-        string apiuid,
-        string contentType)
+Task<Models.HttpsApiRestShApiUDR> DeleteUser(string user)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| api |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| apiuid |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users UID, Username, or Email |
 
 
 #### Example Usage
 
 ```csharp
-string api = "api";
-string uid = "uid";
 string user = "user";
-string apiuid = "apiuid";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiUDR result = await userManagement.DeleteUser(api, uid, user, apiuid, contentType);
-
-```
-
-
-### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.UserManagement.DeleteUser") DeleteUser
-
-> Delete User API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiUDR> DeleteUser(Models.HttpsApiRestShApiUD body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiUD();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiUDR result = await userManagement.DeleteUser(body, contentType);
+Models.HttpsApiRestShApiUDR result = await userManagement.DeleteUser(user);
 
 ```
 
@@ -1831,77 +1135,45 @@ ILoginAndRegistration loginAndRegistration = client.LoginAndRegistration;
 
 ```csharp
 Task<Models.HttpsApiRestShApiAURR> UserRegistration(
-        string key,
-        string uid,
+        string email,
         string user,
         string password,
-        string name,
-        string email,
-        int phone,
-        int countrycode,
-        string address,
-        string contentType)
+        string name = null,
+        int? phone = null,
+        int? countrycode = null,
+        string address = null,
+        Dictionary<string, object> queryParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| name |  ``` Required ```  | TODO: Add a parameter description |
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| phone |  ``` Required ```  | TODO: Add a parameter description |
-| countrycode |  ``` Required ```  | TODO: Add a parameter description |
-| address |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| email |  ``` Required ```  | Users Email |
+| user |  ``` Required ```  | Users Username |
+| password |  ``` Required ```  | Users Password |
+| name |  ``` Optional ```  | Users Name |
+| phone |  ``` Optional ```  | Users Cellphone Number |
+| countrycode |  ``` Optional ```  | Users Country Code (US = 1) |
+| address |  ``` Optional ```  | Users Address |
+| queryParameters | ``` Optional ``` | Additional optional query parameters are supported by this method |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
+string email = "email";
 string user = "user";
 string password = "password";
 string name = "name";
-string email = "email";
-int phone = 239;
-int countrycode = 239;
+int? phone = 107;
+int? countrycode = 107;
 string address = "address";
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiAURR result = await loginAndRegistration.UserRegistration(key, uid, user, password, name, email, phone, countrycode, address, contentType);
-
-```
+// key-value map for optional query parameters
+var queryParams = new Dictionary<string, object>();
 
 
-### <a name="user_registration"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistration.UserRegistration") UserRegistration
-
-> User Registration API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiAURR> UserRegistration(Models.HttpsApiRestShApiAUR body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiAUR();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiAURR result = await loginAndRegistration.UserRegistration(body, contentType);
+Models.HttpsApiRestShApiAURR result = await loginAndRegistration.UserRegistration(email, user, password, name, phone, countrycode, address, queryParams);
 
 ```
 
@@ -1912,63 +1184,24 @@ Models.HttpsApiRestShApiAURR result = await loginAndRegistration.UserRegistratio
 
 
 ```csharp
-Task<Models.HttpsApiRestShApiAULR> UserAuthentication(
-        string key,
-        string uid,
-        string user,
-        string password,
-        string contentType)
+Task<Models.HttpsApiRestShApiAULR> UserAuthentication(string user, string password)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| key |  ``` Required ```  | TODO: Add a parameter description |
-| uid |  ``` Required ```  | TODO: Add a parameter description |
-| user |  ``` Required ```  | TODO: Add a parameter description |
-| password |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
+| user |  ``` Required ```  | Users Username or Email |
+| password |  ``` Required ```  | Users Password |
 
 
 #### Example Usage
 
 ```csharp
-string key = "key";
-string uid = "uid";
 string user = "user";
 string password = "password";
-string contentType = "Content-Type";
 
-Models.HttpsApiRestShApiAULR result = await loginAndRegistration.UserAuthentication(key, uid, user, password, contentType);
-
-```
-
-
-### <a name="user_authentication"></a>![Method: ](https://apidocs.io/img/method.png "SMASH.Controllers.LoginAndRegistration.UserAuthentication") UserAuthentication
-
-> User Authentication API
-
-
-```csharp
-Task<Models.HttpsApiRestShApiAULR> UserAuthentication(Models.HttpsApiRestShApiAUL body, string contentType)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | TODO: Add a parameter description |
-| contentType |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```csharp
-var body = new Models.HttpsApiRestShApiAUL();
-string contentType = "Content-Type";
-
-Models.HttpsApiRestShApiAULR result = await loginAndRegistration.UserAuthentication(body, contentType);
+Models.HttpsApiRestShApiAULR result = await loginAndRegistration.UserAuthentication(user, password);
 
 ```
 

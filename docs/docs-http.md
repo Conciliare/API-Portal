@@ -1,6 +1,6 @@
 # 
 
-**`API Version:`** `1.09`
+**`API Version:`** `1.11`
 
 # Introduction
 * ## Multi-use Flexible API for: 
@@ -280,14 +280,9 @@ Global API errors are applied across all endpoints.
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| name | string |  ``` Required ```  | - | `origin-name` | 
-| origin | string |  ``` Required ```  | - | `origin.yourdomain.tld` | 
-| time | string |  ``` Required ```  | - | `01/01/0101;24:59:01` | 
-
-#### Request Headers
->Content-Type=application/json;
+| name | string |  ``` Required ```  | Name of your WAF zone | `origin-name` | 
+| origin | string |  ``` Required ```  | IP Address of the Web Application | `origin.yourdomain.tld` | 
+| time | string |  ``` Optional ```  | Specific times or dates to lookup separated by a comma in MMDDYYHHMMSS Format ( Month Month Day Day Year Year Year Hour Hour Minute Minute Second Second [01012017120059]) | `01/01/0101;24:59:01` | 
 
 #### Responses
 **200** 
@@ -317,12 +312,12 @@ Global API errors are applied across all endpoints.
 ```
 
 
-### <a name="logging_setup"></a>![Endpoint: ](https://apidocs.io/img/method.png "Logging Setup") Logging Setup
+### <a name="logging_configuration"></a>![Endpoint: ](https://apidocs.io/img/method.png "Logging Configuration") Logging Configuration
 
 
 **`GET`** `/s/l`
 
-> WAF Log Setup
+> WAF Log Configuration
 
 
 
@@ -330,119 +325,9 @@ Global API errors are applied across all endpoints.
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| name | string |  ``` Required ```  | - | `origin-name` | 
-| origin | string |  ``` Required ```  | - | `origin.yourdomain.tld` | 
-| activate | boolean |  ``` Required ```  | - | `true` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/s/l/r](#https://api.rest.sh/api/s/l/r)**) 
-
-```
-{
-  "success": "RETURNS TRUE IF ADVANCED LOGGING IS ACTIVATED"
-}
-```
-
-
-### <a name="logging_info1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Logging Info1") Logging Info1
-
-
-**`POST`** `/s/l/i`
-
-> WAF Log Info
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/s/l/i](#https://api.rest.sh/api/s/l/i) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "name": "YOUR WAF'S NAME",
-  "origin": "ORIGIN URL",
-  "time": "LOOKUP SPECIFIC TIMES IN LOG (MM/DD/YYYY;HH:MM:SS) SEPERATED BY A COMMA OR ('*' / ALL)"
-}
-``` 
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/s/l/i/r](#https://api.rest.sh/api/s/l/i/r)**) 
-
-```
-{
-  "log": {
-    "01010101245901": {
-      "data": {
-        "result": "INFO",
-        "content": "LOG: CONTENT AND ACTIONS PERFORMED",
-        "id": "FUNCTION ID"
-      }
-    },
-    "01010101245902": {
-      "data": {
-        "result": "ERROR",
-        "content": "LOG: ERROR CONTENT AND ACTIONS PERFORMED",
-        "id": "FUNCTION ID"
-      }
-    }
-  }
-}
-```
-
-
-### <a name="logging_setup1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Logging Setup1") Logging Setup1
-
-
-**`POST`** `/s/l`
-
-> WAF Log Setup
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/s/l](#https://api.rest.sh/api/s/l) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "name": "YOUR WAF'S NAME",
-  "origin": "ORIGIN URL",
-  "activate": "TRUE OR FALSE IF YOU WANT ADVANCED LOGGING ACTIVATED"
-}
-``` 
+| name | string |  ``` Required ```  | Name of the WAF zone | `origin-name` | 
+| origin | string |  ``` Required ```  | IP Address of the Web Application you wish to configure logging on | `origin.yourdomain.tld` | 
+| activate | string |  ``` Required ```  | True or False | `"activate"` | 
 
 #### Responses
 **200** 
@@ -650,64 +535,9 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| data | string |  ``` Required ```  | - | `DATA` | 
-| method | string |  ``` Required ```  | - | `DES,RSA` | 
-| bit | number |  ``` Required ```  | - | `4096` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/s/e/r](#https://api.rest.sh/api/s/e/r)**) 
-
-```
-{
-  "data": "RETURNED ENCRYPTED DATA URL",
-  "file": "RETURNED ENCRYPTED FILE URL",
-  "success": "SHOWS TRUE IF ENCRYPTION WAS SUCCESSFULL",
-  "public": "PUBLIC ENCRYPTION KEY FOR YOUR DATA OR FILES",
-  "private": "PRIVATE ENCRYPTION KEY FOR YOUR DATA OR FILES"
-}
-```
-
-
-### <a name="data_and_file_encryption1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Data and File Encryption1") Data and File Encryption1
-
-
-**`POST`** `/s/e`
-
-> Data and File Encryption API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/s/e](#https://api.rest.sh/api/s/e) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "data": "DATA YOU WISH TO ENCRYPT",
-  "file": "FILE YOU WISH TO ENCRYPT",
-  "method": "SINGLE OR MULTIPLE ENCRYPTION TYPES TO APPLY TO DATA OR FILES SEPERATED BY A COMMA (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP)",
-  "bit": "SIZE OF ENCRYPTION KEY"
-}
-``` 
+| data | string |  ``` Required ```  | GIT URL, file URL, direct upload of file, or data as a query string | `DATA` | 
+| method | string |  ``` Required ```  | Single or multiple encryption types to apply to data or files separated by a comma (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP) | `DES,RSA` | 
+| bit | number |  ``` Required ```  | Encryption key size (4096) | `4096` | 
 
 #### Responses
 **200** 
@@ -744,13 +574,8 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| cname | string |  ``` Required ```  | - | `cdn.yourdomain.tld,cdn1.yourdomain.tld,cdn2.yourdomain.tld` | 
-| file | string |  ``` Required ```  | - | `static.yourdomain.tld/file.type` | 
-
-#### Request Headers
->Content-Type=application/json;
+| cname | string |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access | `cdn.yourdomain.tld,cdn1.yourdomain.tld,cdn2.yourdomain.tld` | 
+| file | string |  ``` Required ```  | GIT URL, file URL, or direct upload of file | `static.yourdomain.tld/file.type` | 
 
 #### Responses
 **200** 
@@ -780,104 +605,8 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| origin | string |  ``` Required ```  | - | `origin.yourdomain.tld` | 
-| cname | string |  ``` Required ```  | - | `cdn.yourdomain.tld,cdn1.yourdomain.tld,cdn2.yourdomain.tld` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/s/c/pull/r](#https://api.rest.sh/api/s/c/pull/r)**) 
-
-```
-{
-  "success": "SHOWS TRUE WHEN PULL ZONE IS DEPLOYED SUCCESSFULLY",
-  "cname": "RECORD TO APPEND YOUR URLS TO VIA A CNAME"
-}
-```
-
-
-### <a name="cdn_push_zone1"></a>![Endpoint: ](https://apidocs.io/img/method.png "CDN Push Zone1") CDN Push Zone1
-
-
-**`POST`** `/s/c/push`
-
-> CDN Push Zone API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/s/c/push](#https://api.rest.sh/api/s/c/push) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "cname": "DOMAIN OR DOMAINS YOU WISH TO ALLOW CNAME ACCESS SEPERATED BY A COMMA",
-  "file": "FILE OR FILES YOU WISH TO UPLOAD SEPERATED BY A COMMA"
-}
-``` 
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/s/c/push/r](#https://api.rest.sh/api/s/c/push/r)**) 
-
-```
-{
-  "success": "SHOWS TRUE WHEN PUSH ZONE IS DEPLOYED SUCCESSFULLY",
-  "upload": "LIST OF FILES UPLOADED TO YOUR PUSH ZONE",
-  "cname": "RECORD TO APPEND YOUR URLS TO VIA A CNAME"
-}
-```
-
-
-### <a name="cdn_pull_zone1"></a>![Endpoint: ](https://apidocs.io/img/method.png "CDN Pull Zone1") CDN Pull Zone1
-
-
-**`POST`** `/s/c/pull`
-
-> CDN Pull Zone API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/s/c/pull](#https://api.rest.sh/api/s/c/pull) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "origin": "ORIGIN DOMAIN TO PULL ASSETS FROM",
-  "cname": "DOMAIN OR DOMAINS YOU WISH TO ALLOW CNAME ACCESS SEPERATED BY A COMMA"
-}
-``` 
+| origin | string |  ``` Required ```  | Domain or domain names separated by a comma | `origin.yourdomain.tld` | 
+| cname | string |  ``` Required ```  | Domain or domain names separated by a comma you wish to allow CNAME access | `cdn.yourdomain.tld,cdn1.yourdomain.tld,cdn2.yourdomain.tld` | 
 
 #### Responses
 **200** 
@@ -911,59 +640,8 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| domain | string |  ``` Required ```  | - | `yourdomain.tld` | 
-| records | string |  ``` Required ```  | - | `set:root:a:127.0.0.1,set:www:a:127.0.0.1,set:cdn:cname:cname.domain.com` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/s/d/c/r](#https://api.rest.sh/api/s/d/c/r)**) 
-
-```
-{
-  "success": "SHOWS TRUE IF RECORDS WERE SUCCESSFULLY SET",
-  "domain": "DOMAIN",
-  "records": "RECORDS SET TO DOMAIN"
-}
-```
-
-
-### <a name="dns_configuration1"></a>![Endpoint: ](https://apidocs.io/img/method.png "DNS Configuration1") DNS Configuration1
-
-
-**`POST`** `/s/d/c`
-
-> DNS Configuration API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/s/d/c](#https://api.rest.sh/api/s/d/c) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "domain": "DOMAINS TO SET DNS RECORDS",
-  "records": "RECORDS TO SET TO DOMAIN"
-}
-``` 
+| domain | string |  ``` Required ```  | Domain or domain names separated by a comma | `yourdomain.tld` | 
+| records | string |  ``` Required ```  | Records to append to domain separated by a comma (a;www.mydomain.com;127.0.0.0,cname;mydomain.com;otherdomain.com) | `set:root:a:127.0.0.1,set:www:a:127.0.0.1,set:cdn:cname:cname.domain.com` | 
 
 #### Responses
 **200** 
@@ -993,61 +671,7 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| domain | string |  ``` Required ```  | - | `yourdomain.tld,seconddomain.tld` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/s/d/a/r](#https://api.rest.sh/api/s/d/a/r)**) 
-
-```
-{
-  "domain": "LIST OF DOMAINS ADDED",
-  "nameservers": {
-    "ns1": "NAME SERVER ONE TO POINT YOUR DOMAIN AT",
-    "ns2": "NAME SERVER TWO TO POINT YOUR DOMAIN AT",
-    "ns3": "NAME SERVER THREE TO POINT YOUR DOMAIN AT",
-    "ns4": "NAME SERVER FOUR TO POINT YOUR DOMAIN AT"
-  }
-}
-```
-
-
-### <a name="dns_creation1"></a>![Endpoint: ](https://apidocs.io/img/method.png "DNS Creation1") DNS Creation1
-
-
-**`POST`** `/s/d/a`
-
-> DNS Creation API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/s/d/a](#https://api.rest.sh/api/s/d/a) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "domain": "DOMAINS SEPERATED BY A COMMA TO ADD TO DNS"
-}
-``` 
+| domain | string |  ``` Required ```  | Domain or domain names separated by a comma | `yourdomain.tld,seconddomain.tld` | 
 
 #### Responses
 **200** 
@@ -1086,56 +710,7 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| app | string |  ``` Required ```  | - | `git://app.git` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/s/o/r](#https://api.rest.sh/api/s/o/r)**) 
-
-```
-{
-  "success": "RETURNS TRUE IF APP WAS SUCCESSFULLY OBFUSCTATED AND PROTECTED",
-  "app": "OBFUSCATED APP URL"
-}
-```
-
-
-### <a name="obfuscation_and_anti_tampering1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Obfuscation and Anti-Tampering1") Obfuscation and Anti-Tampering1
-
-
-**`POST`** `/s/o`
-
-> Javascript and Node.JS Obfuscation and Anti-Tampering API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/s/o](#https://api.rest.sh/api/s/o) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "app": "APP GIT URL or URL CONTAINING YOUR APP IN A ZIP FILE"
-}
-``` 
+| app | string |  ``` Required ```  | GIT URL or ZIP package containing your APP | `git://app.git` | 
 
 #### Responses
 **200** 
@@ -1169,60 +744,8 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| app | string |  ``` Required ```  | - | `git://app.git` | 
-| domain | string |  ``` Required ```  | - | `yourdomain.tld,seconddomain.tld` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/s/h/r](#https://api.rest.sh/api/s/h/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "url": "RETURNED APP HOSTING URL",
-  "success": "RETURNS TRUE IF APP WAS SUCCESSFULLY DEPLOYED",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-### <a name="hosting_setup1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Hosting Setup1") Hosting Setup1
-
-
-**`POST`** `/s/h`
-
-> Node.JS and Static Web APP Hosting
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/s/h](#https://api.rest.sh/api/s/h) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "app": "APP GIT URL OR URL CONTAINING YOUR APP IN A ZIP FILE",
-  "domain": "ALLOWED DOMAIN NAMES SEPERATED BY A COMMA TO CNAME WITH ACCESS TO HOSTED APP"
-}
-``` 
+| app | string |  ``` Required ```  | GIT URL or ZIP package containing your APP | `git://app.git` | 
+| domain | string |  ``` Required ```  | Domain or domain names separated by a comma | `yourdomain.tld,seconddomain.tld` | 
 
 #### Responses
 **200** 
@@ -1357,62 +880,8 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| image | string |  ``` Required ```  | - | `https://img.yourdomain.tld/image.type` | 
-| transform | string |  ``` Required ```  | - | `x:flip,y:flip,grayscale:true,compress:true;80,convert:png` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/i/r](#https://api.rest.sh/api/i/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "url": "RETURNED IMAGE URL AND DATA",
-  "success": "RETURNS TRUE IF IMAGE MANIPULATION WAS SUCCESSFULL",
-  "moderated": "RETURNS TRUE IF IMAGE CONTAINED GRAPHIC IMAGERY",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-### <a name="image_manipulation1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Image Manipulation1") Image Manipulation1
-
-
-**`POST`** `/i`
-
-> Image Manipulation API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/i](#https://api.rest.sh/api/i) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "image": "DIRECT IMAGE URL OR CLIENT UPLOAD",
-  "transform": "IMAGE MANIPULATION DIRECTIVES",
-  "moderate": "SET TO TRUE IF YOU WISH TO AUTOMATICALLT CENSOR GRAPHIC IMAGES"
-}
-``` 
+| image | string |  ``` Required ```  | Image URL or direct upload | `https://img.yourdomain.tld/image.type` | 
+| transform | string |  ``` Required ```  | Transformations to perform | `x:flip,y:flip,grayscale:true,compress:true;80,convert:png` | 
 
 #### Responses
 **200** 
@@ -1449,17 +918,13 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| user | string |  ``` Required ```  | - | `UID` | 
-| a | string |  ``` Required ```  | - | `3301 South Greenfield Rd` | 
-| sa | string |  ``` Required ```  | - | `Address Line Two` | 
-| c | string |  ``` Required ```  | - | `Gilbert` | 
-| s | string |  ``` Required ```  | - | `AZ` | 
-| z | number |  ``` Required ```  | - | `85297` | 
-
-#### Request Headers
->Content-Type=application/json;
+| user | string |  ``` Required ```  | Users UID, Username, or Email | `UID` | 
+| a | string |  ``` Required ```  | Address Line One | `3301 South Greenfield Rd` | 
+| sa | string |  ``` Required ```  | Address Line Two | `Address Line Two` | 
+| c | string |  ``` Required ```  | Address City | `Gilbert` | 
+| s | string |  ``` Required ```  | Address State or Province | `AZ` | 
+| z | number |  ``` Required ```  | Address Zipcode | `85297` | 
+| address | string |  ``` Optional ```  | Address as a one line input separated by commas | `"address"` | 
 
 #### Responses
 **200** 
@@ -1476,52 +941,32 @@ Raw
 ```
 
 
-### <a name="user_address_verification1"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Address Verification1") User Address Verification1
+### <a name="user_verification_response"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Verification Response") User Verification Response
 
 
-**`POST`** `/v/a`
+**`GET`** `/v/u`
 
-> User Address Verification API
-
-
+> Users Verification Response API
 
 
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
 
-#### Request Body
-Raw 
 
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/v/a](#https://api.rest.sh/api/v/a) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS UID",
-  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-  "a": "ADDRESS LINE ONE",
-  "sa": "ADDRESS LINE TWO",
-  "c": "CITY OR PROVINCE",
-  "s": "STATE OR REGION",
-  "z": "ZIPCODE"
-}
-``` 
+#### Query Parameters
+| Parameter | Type | Tags | Description | Example |
+|-----------|------| ---- |-------------| -------------------------------- |
+| user | string |  ``` Required ```  | Users UID, Username, Or Email | `UID` | 
+| code | string |  ``` Required ```  | Verification code entered by the user | `CODE` | 
 
 #### Responses
 **200** 
 
 
- *Example Body* (**[https://api.rest.sh/api/v/a/r](#https://api.rest.sh/api/v/a/r)**) 
+ *Example Body* (**[https://api.rest.sh/api/v/u/r](#https://api.rest.sh/api/v/u/r)**) 
 
 ```
 {
   "request": "REQUEST TYPE",
-  "active": "RETURNS TRUE, IF ADDRESS IS ACTIVE AND IF USER IS CURRENTLY THERE",
+  "correct": "RETURNS IF 2FA TOKEN IS CORRECT",
   "id": "TRANSACTION ID"
 }
 ```
@@ -1530,91 +975,9 @@ Raw
 ### <a name="user_verification"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Verification") User Verification
 
 
-**`GET`** `/v/u`
-
-> User Verification API
-
-
-
-
-#### Query Parameters
-| Parameter | Type | Tags | Description | Example |
-|-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| user | string |  ``` Required ```  | - | `UID` | 
-| code | string |  ``` Required ```  | - | `CODE` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/v/u/r](#https://api.rest.sh/api/v/u/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "correct": "RETURNS IF 2FA TOKEN IS CORRECT",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-### <a name="user_verification1"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Verification1") User Verification1
-
-
-**`POST`** `/v/u`
-
-> User Verification API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/v/u](#https://api.rest.sh/api/v/u) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS UID",
-  "code": "USER INPUTTED TOKEN"
-}
-``` 
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/v/u/r](#https://api.rest.sh/api/v/u/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "correct": "RETURNS IF 2FA TOKEN IS CORRECT",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-### <a name="cellphone_verification"></a>![Endpoint: ](https://apidocs.io/img/method.png "Cellphone Verification") Cellphone Verification
-
-
 **`GET`** `/v`
 
-> Verification API
+> User Verification API
 
 
 
@@ -1622,58 +985,7 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| to | string |  ``` Required ```  | - | `UID` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/v/r](#https://api.rest.sh/api/v/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "to": "USER BEING VERIFIED",
-  "verified": "RETURNS TRUE OR FALSE",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-### <a name="cellphone_verification1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Cellphone Verification1") Cellphone Verification1
-
-
-**`POST`** `/v`
-
-> Verification API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/v](#https://api.rest.sh/api/v) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "to": "USERS UID"
-}
-``` 
+| user | string |  ``` Required ```  | Users UID, Username, Or Email | `UID` | 
 
 #### Responses
 **200** 
@@ -1709,59 +1021,8 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| user | string |  ``` Required ```  | - | `UID` | 
-| code | string |  ``` Required ```  | - | `CODE` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/2fa/t/r](#https://api.rest.sh/api/2fa/t/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "correct": "RETURNS IF 2FA TOKEN IS CORRECT",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-### <a name="2_fa_token_response1"></a>![Endpoint: ](https://apidocs.io/img/method.png "2FA Token Response1") 2FA Token Response1
-
-
-**`POST`** `/2fa/t`
-
-> Two Factor Authentication Token Reply
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/2fa/t](#https://api.rest.sh/api/2fa/t) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS UID",
-  "code": "USER INPUTTED TOKEN"
-}
-``` 
+| user | string |  ``` Required ```  | Users UID, Username or Email | `UID` | 
+| code | string |  ``` Required ```  | Response From User Containing 2FA Code | `CODE` | 
 
 #### Responses
 **200** 
@@ -1791,59 +1052,7 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| to | string |  ``` Required ```  | - | `UID` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/2fa/r](#https://api.rest.sh/api/2fa/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "to": "USER BEING VERIFIED",
-  "verified": "RETURNS TRUE OR FALSE",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-### <a name="two_factor_authentication1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Two Factor Authentication1") Two Factor Authentication1
-
-
-**`POST`** `/2fa`
-
-> Two Factor Authentication API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/2fa](#https://api.rest.sh/api/2fa) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "request": "request",
-  "to": "to",
-  "verified": "verified",
-  "id": "id"
-}
-``` 
+| to | string |  ``` Required ```  | Users UID, Username, Email, Or Cellphone number | `UID` | 
 
 #### Responses
 **200** 
@@ -1879,78 +1088,7 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| user | string |  ``` Required ```  | - | `UID` | 
-| apiuid | string |  ``` Required ```  | - | `apiUID` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/u/i/r](#https://api.rest.sh/api/u/i/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "uid": "Users UID",
-  "apiuid": "API SIDE USER ID",
-  "verified": "RETURNS TRUE IF USER IS VERIFIED",
-  "id": "TRANSACTION ID",
-  "info": {
-    "realname": "USERS REAL NAME",
-    "displayname": "USERS USERNAME",
-    "avatar": "USER AVATAR URL",
-    "email": "USERS EMAIL",
-    "address": "USERS ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-    "address1": "USERS ADDRESS LINE ONE",
-    "address2": "USERS ADDRESS LINE TWO",
-    "city": "USERS ADDRESS CITY",
-    "state": "USERS ADDRESS STATE",
-    "zipcode": "USERS ADDRESS ZIPCODE",
-    "phone": "USERS CELL PHONE NUMBER",
-    "lastlogin": "USERS LAST LOGIN",
-    "ip": "USERS IP",
-    "2fa": "RETURNS TRUE IF 2FA IS ENABLED",
-    "iplock": "RETURNS TRUE IF IP LOCK IS ENABLED"
-  }
-}
-```
-
-
-### <a name="get_user_info1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Get User Info1") Get User Info1
-
-
-**`POST`** `/u/i`
-
-> Get User Info API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/u/i](#https://api.rest.sh/api/u/i) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID"
-}
-``` 
+| user | string |  ``` Required ```  | Users User ID | `UID` | 
 
 #### Responses
 **200** 
@@ -1997,83 +1135,13 @@ Raw
 
 
 #### Query Parameters
+> Additional optional query parameters are allowed
+
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| user | string |  ``` Required ```  | - | `UID` | 
-| apiuid | string |  ``` Required ```  | - | `apiUID` | 
-| avatar | string |  ``` Required ```  | - | `https://img.cdnurl.com/UID/image` | 
-| custom input | string |  ``` Required ```  | - | `custom input` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/u/u/r](#https://api.rest.sh/api/u/u/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "updated": "RETURNS TRUE, IF USERS PROFILE WAS SUCCESSFULLY UPDATED",
-  "id": "TRANSACTION ID",
-  "info": {
-    "uid": "USERS ID",
-    "apiuid": "API SIDE USER ID",
-    "avatar": "INPUTTED AVATAR URL",
-    "custom-input": "CUSTOM INPUTTED PROFILE DATA"
-  }
-}
-```
-
-
-### <a name="update_user1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Update User1") Update User1
-
-
-**`POST`** `/u/u`
-
-> Update User API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/u/u](#https://api.rest.sh/api/u/u) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID",
-  "oldpassword": "SEND A ENCRYPTED VERSION OF YOUR USERS CURRENT PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
-  "newpassword": "SEND A ENCRYPTED VERSION OF YOUR USERS NEW PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
-  "name": "USERS REAL NAME",
-  "email": "USERS EMAIL",
-  "phone": "USERS CELL PHONE NUMBER",
-  "avatar": "UPDATE USER AVATAR",
-  "countrycode": "USERS CELL PHONE COUNTRY CODE",
-  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-  "a": "ADDRESS LINE ONE",
-  "sa": "ADDRESS LINE TWO",
-  "c": "CITY OR PROVINCE",
-  "s": "STATE OR REGION",
-  "z": "ZIPCODE",
-  "custom-input": "ADD CUSTOM DATA/INPUTS TO YOUR USERS PROFILE"
-}
-``` 
+| user | string |  ``` Required ```  | Users UID, Username, Or Email | `UID` | 
+| avatar | string |  ``` Required ```  | Avatar Image URL | `https://img.cdnurl.com/UID/image` | 
+| custom input | string |  ``` Required ```  | Custom input variable for users profile | `custom input` | 
 
 #### Responses
 **200** 
@@ -2109,59 +1177,7 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| api | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| user | string |  ``` Required ```  | - | `UID` | 
-| apiuid | string |  ``` Required ```  | - | `apiUID` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/u/d/r](#https://api.rest.sh/api/u/d/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "deleted": "RETURNS TRUE, IF USERS ACCOUNT WAS SUCCESSFULLY DELETED",
-  "id": "TRANSACTION ID"
-}
-```
-
-
-### <a name="delete_user1"></a>![Endpoint: ](https://apidocs.io/img/method.png "Delete User1") Delete User1
-
-
-**`POST`** `/u/d`
-
-> Delete User API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/u/d](#https://api.rest.sh/api/u/d) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID"
-}
-``` 
+| user | string |  ``` Required ```  | Users UID, Username, or Email | `UID` | 
 
 #### Responses
 **200** 
@@ -2194,85 +1210,17 @@ Raw
 
 
 #### Query Parameters
+> Additional optional query parameters are allowed
+
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| user | string |  ``` Required ```  | - | `UID` | 
-| password | string |  ``` Required ```  | - | `Password` | 
-| name | string |  ``` Required ```  | - | `John Doe` | 
-| email | string |  ``` Required ```  | - | `email@email.com` | 
-| phone | number |  ``` Required ```  | - | `1234567890` | 
-| countrycode | number |  ``` Required ```  | - | `1` | 
-| address | string |  ``` Required ```  | - | `3301 South Greenfield Rd, Gilbert, AZ 85297` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/a/u/r/r](#https://api.rest.sh/api/a/u/r/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "active": "RETURNS TRUE, IF USER WAS SUCCESSFULLY REGISTERED",
-  "id": "TRANSACTION ID",
-  "info": {
-    "uid": "USERS ID",
-    "apiuid": "API SIDE USER ID",
-    "realname": "USERS REAL NAME",
-    "displayname": "USERS USERNAME",
-    "email": "USERS EMAIL",
-    "address": "USERS ADDRESS",
-    "phone": "USERS CELL PHONE NUMBER"
-  }
-}
-```
-
-
-### <a name="user_registration1"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Registration1") User Registration1
-
-
-**`POST`** `/a/u/r`
-
-> User Registration API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/a/u/r](#https://api.rest.sh/api/a/u/r) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "password": "SEND A ENCRYPTED VERSION OF YOUR USERS PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
-  "name": "USERS REAL NAME",
-  "email": "USERS EMAIL",
-  "phone": "USERS CELL PHONE NUMBER",
-  "countrycode": "USERS CELL PHONE COUNTRY CODE",
-  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-  "a": "ADDRESS LINE ONE",
-  "sa": "ADDRESS LINE TWO",
-  "c": "CITY OR PROVINCE",
-  "s": "STATE OR REGION",
-  "z": "ZIPCODE"
-}
-``` 
+| email | string |  ``` Required ```  | Users Email | `email@email.com` | 
+| user | string |  ``` Required ```  | Users Username | `UID` | 
+| password | string |  ``` Required ```  | Users Password | `Password` | 
+| name | string |  ``` Optional ```  | Users Name | `John Doe` | 
+| phone | number |  ``` Optional ```  | Users Cellphone Number | `1234567890` | 
+| countrycode | number |  ``` Optional ```  | Users Country Code (US = 1) | `1` | 
+| address | string |  ``` Optional ```  | Users Address | `3301 South Greenfield Rd, Gilbert, AZ 85297` | 
 
 #### Responses
 **200** 
@@ -2311,74 +1259,8 @@ Raw
 #### Query Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| -------------------------------- |
-| key | string |  ``` Required ```  | - | `API` | 
-| uid | string |  ``` Required ```  | - | `UID` | 
-| user | string |  ``` Required ```  | - | `Username` | 
-| password | string |  ``` Required ```  | - | `Password` | 
-
-#### Request Headers
->Content-Type=application/json;
-
-#### Responses
-**200** 
-
-
- *Example Body* (**[https://api.rest.sh/api/a/u/l/r](#https://api.rest.sh/api/a/u/l/r)**) 
-
-```
-{
-  "request": "REQUEST TYPE",
-  "uid": "Users UID",
-  "valid": "RETURNS TRUE IF USER LOGIN DETAILS ARE VALID",
-  "id": "TRANSACTION ID",
-  "info": {
-    "uid": "USERS ID",
-    "apiuid": "API SIDE USER ID",
-    "realname": "USERS REAL NAME",
-    "displayname": "USERS USERNAME",
-    "avatar": "USER AVATAR URL",
-    "email": "USERS EMAIL",
-    "address": "USERS ADDRESS",
-    "phone": "USERS CELL PHONE NUMBER",
-    "lastlogin": "USERS LAST LOGIN",
-    "ip": "USERS IP",
-    "2fa": "RETURNS TRUE IF 2FA IS ENABLED",
-    "iplock": "RETURNS TRUE IF IP LOCK IS ENABLED"
-  }
-}
-```
-
-
-### <a name="user_authentication1"></a>![Endpoint: ](https://apidocs.io/img/method.png "User Authentication1") User Authentication1
-
-
-**`POST`** `/a/u/l`
-
-> User Authentication API
-
-
-
-
-#### Request Headers
->Accept=application/json;
->Content-Type=application/json;
-
-#### Request Body
-Raw 
-
-|  Type | Tags | Description |
-| ------| ---- |-------------| 
-| [https://api.rest.sh/api/a/u/l](#https://api.rest.sh/api/a/u/l) |  ``` Required ```  | - | 
-
- *Example Body* 
-``` 
-{
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "password": "SEND A ENCRYPTED VERSION OF YOUR USERS PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD"
-}
-``` 
+| user | string |  ``` Required ```  | Users Username or Email | `Username` | 
+| password | string |  ``` Required ```  | Users Password | `Password` | 
 
 #### Responses
 **200** 
@@ -2582,10 +1464,10 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "password": "SEND A ENCRYPTED VERSION OF YOUR USERS PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD"
+  "key": "key",
+  "uid": "uid",
+  "user": "user",
+  "password": "password"
 }
 ```
 
@@ -2796,10 +1678,10 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID"
+  "key": "key",
+  "uid": "uid",
+  "user": "user",
+  "apiuid": "apiuid"
 }
 ```
 
@@ -2876,10 +1758,10 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID"
+  "key": "key",
+  "uid": "uid",
+  "user": "user",
+  "apiuid": "apiuid"
 }
 ```
 
@@ -2936,10 +1818,10 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS UID",
-  "code": "USER INPUTTED TOKEN"
+  "key": "key",
+  "uid": "uid",
+  "user": "user",
+  "code": "code"
 }
 ```
 
@@ -2996,10 +1878,10 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS UID",
-  "code": "USER INPUTTED TOKEN"
+  "key": "key",
+  "uid": "uid",
+  "user": "user",
+  "code": "code"
 }
 ```
 
@@ -3027,11 +1909,11 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "image": "DIRECT IMAGE URL OR CLIENT UPLOAD",
-  "transform": "IMAGE MANIPULATION DIRECTIVES",
-  "moderate": "SET TO TRUE IF YOU WISH TO AUTOMATICALLT CENSOR GRAPHIC IMAGES"
+  "key": "key",
+  "uid": "uid",
+  "image": "image",
+  "transform": "transform",
+  "moderate": "moderate"
 }
 ```
 
@@ -3120,10 +2002,10 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "app": "APP GIT URL OR URL CONTAINING YOUR APP IN A ZIP FILE",
-  "domain": "ALLOWED DOMAIN NAMES SEPERATED BY A COMMA TO CNAME WITH ACCESS TO HOSTED APP"
+  "key": "key",
+  "uid": "uid",
+  "app": "app",
+  "domain": "domain"
 }
 ```
 
@@ -3210,10 +2092,10 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "domain": "DOMAINS TO SET DNS RECORDS",
-  "records": "RECORDS TO SET TO DOMAIN"
+  "key": "key",
+  "uid": "uid",
+  "domain": "domain",
+  "records": "records"
 }
 ```
 
@@ -3240,10 +2122,10 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "origin": "ORIGIN DOMAIN TO PULL ASSETS FROM",
-  "cname": "DOMAIN OR DOMAINS YOU WISH TO ALLOW CNAME ACCESS SEPERATED BY A COMMA"
+  "key": "key",
+  "uid": "uid",
+  "origin": "origin",
+  "cname": "cname"
 }
 ```
 
@@ -3270,10 +2152,10 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "cname": "DOMAIN OR DOMAINS YOU WISH TO ALLOW CNAME ACCESS SEPERATED BY A COMMA",
-  "file": "FILE OR FILES YOU WISH TO UPLOAD SEPERATED BY A COMMA"
+  "key": "key",
+  "uid": "uid",
+  "cname": "cname",
+  "file": "file"
 }
 ```
 
@@ -3302,12 +2184,12 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "data": "DATA YOU WISH TO ENCRYPT",
-  "file": "FILE YOU WISH TO ENCRYPT",
-  "method": "SINGLE OR MULTIPLE ENCRYPTION TYPES TO APPLY TO DATA OR FILES SEPERATED BY A COMMA (DES, RSA, BLOWFISH, TWOFISH, AES, IDEA, PGP)",
-  "bit": "SIZE OF ENCRYPTION KEY"
+  "key": "key",
+  "uid": "uid",
+  "data": "data",
+  "file": "file",
+  "method": "method",
+  "bit": "bit"
 }
 ```
 
@@ -3429,11 +2311,11 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "name": "YOUR WAF'S NAME",
-  "origin": "ORIGIN URL",
-  "activate": "TRUE OR FALSE IF YOU WANT ADVANCED LOGGING ACTIVATED"
+  "key": "key",
+  "uid": "uid",
+  "name": "name",
+  "origin": "origin",
+  "activate": "activate"
 }
 ```
 
@@ -3461,11 +2343,11 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "name": "YOUR WAF'S NAME",
-  "origin": "ORIGIN URL",
-  "time": "LOOKUP SPECIFIC TIMES IN LOG (MM/DD/YYYY;HH:MM:SS) SEPERATED BY A COMMA OR ('*' / ALL)"
+  "key": "key",
+  "uid": "uid",
+  "name": "name",
+  "origin": "origin",
+  "time": "time"
 }
 ```
 
@@ -3548,20 +2430,20 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "password": "SEND A ENCRYPTED VERSION OF YOUR USERS PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
-  "name": "USERS REAL NAME",
-  "email": "USERS EMAIL",
-  "phone": "USERS CELL PHONE NUMBER",
-  "countrycode": "USERS CELL PHONE COUNTRY CODE",
-  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-  "a": "ADDRESS LINE ONE",
-  "sa": "ADDRESS LINE TWO",
-  "c": "CITY OR PROVINCE",
-  "s": "STATE OR REGION",
-  "z": "ZIPCODE"
+  "key": "key",
+  "uid": "uid",
+  "user": "user",
+  "password": "password",
+  "name": "name",
+  "email": "email",
+  "phone": "phone",
+  "countrycode": "countrycode",
+  "address": "address",
+  "a": "a",
+  "sa": "sa",
+  "c": "c",
+  "s": "s",
+  "z": "z"
 }
 ```
 
@@ -3602,24 +2484,24 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS EMAIL OR USERNAME",
-  "apiuid": "USERS API SIDE USER ID",
-  "oldpassword": "SEND A ENCRYPTED VERSION OF YOUR USERS CURRENT PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
-  "newpassword": "SEND A ENCRYPTED VERSION OF YOUR USERS NEW PASSWORD USING THE PRIVATE KEY ON YOUR DASHBOARD",
-  "name": "USERS REAL NAME",
-  "email": "USERS EMAIL",
-  "phone": "USERS CELL PHONE NUMBER",
-  "avatar": "UPDATE USER AVATAR",
-  "countrycode": "USERS CELL PHONE COUNTRY CODE",
-  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-  "a": "ADDRESS LINE ONE",
-  "sa": "ADDRESS LINE TWO",
-  "c": "CITY OR PROVINCE",
-  "s": "STATE OR REGION",
-  "z": "ZIPCODE",
-  "custom-input": "ADD CUSTOM DATA/INPUTS TO YOUR USERS PROFILE"
+  "key": "key",
+  "uid": "uid",
+  "user": "user",
+  "apiuid": "apiuid",
+  "oldpassword": "oldpassword",
+  "newpassword": "newpassword",
+  "name": "name",
+  "email": "email",
+  "phone": "phone",
+  "avatar": "avatar",
+  "countrycode": "countrycode",
+  "address": "address",
+  "a": "a",
+  "sa": "sa",
+  "c": "c",
+  "s": "s",
+  "z": "z",
+  "custom-input": "custom-input"
 }
 ```
 
@@ -3703,15 +2585,15 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "user": "USERS UID",
-  "address": "ADDRESS IN ONE LINE SEPERATED BY COMMAS",
-  "a": "ADDRESS LINE ONE",
-  "sa": "ADDRESS LINE TWO",
-  "c": "CITY OR PROVINCE",
-  "s": "STATE OR REGION",
-  "z": "ZIPCODE"
+  "key": "key",
+  "uid": "uid",
+  "user": "user",
+  "address": "address",
+  "a": "a",
+  "sa": "sa",
+  "c": "c",
+  "s": "s",
+  "z": "z"
 }
 ```
 
@@ -3805,9 +2687,9 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "to": "USERS UID"
+  "key": "key",
+  "uid": "uid",
+  "to": "to"
 }
 ```
 
@@ -3946,9 +2828,9 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "domain": "DOMAINS SEPERATED BY A COMMA TO ADD TO DNS"
+  "key": "key",
+  "uid": "uid",
+  "domain": "domain"
 }
 ```
 
@@ -4087,9 +2969,9 @@ Raw
 #### Example
 ```
 {
-  "key": "YOUR API KEY",
-  "uid": "YOUR USER ID",
-  "app": "APP GIT URL or URL CONTAINING YOUR APP IN A ZIP FILE"
+  "key": "key",
+  "uid": "uid",
+  "app": "app"
 }
 ```
 
