@@ -1,6 +1,6 @@
 # 
 
-**`API Version:`** `1.18`
+**`API Version:`** `1.19`
 
 # Introduction
 * ## Multi-use Flexible API for: 
@@ -344,7 +344,7 @@ This endpoint uses server `PATH`.
 ## <a name="waf_and_ddos_protection"></a>![Endpoint Group: ](https://apidocs.io/img/class.png "WAF and DDOS Protection") WAF and DDOS Protection
 
 
-### <a name="https://api.rest.sh/api/s/w/c"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w/c") https://api.rest.sh/api/s/w/c
+### <a name="waf_configuration"></a>![Endpoint: ](https://apidocs.io/img/method.png "WAF Configuration") WAF Configuration
 
 
 **`GET`** `/s/w/c`
@@ -376,7 +376,7 @@ This endpoint uses server `PATH`.
 ```
 
 
-### <a name="https://api.rest.sh/api/s/w"></a>![Endpoint: ](https://apidocs.io/img/method.png "https://api.rest.sh/api/s/w") https://api.rest.sh/api/s/w
+### <a name="waf_creation"></a>![Endpoint: ](https://apidocs.io/img/method.png "WAF Creation") WAF Creation
 
 
 **`GET`** `/s/w`

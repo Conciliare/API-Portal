@@ -353,13 +353,13 @@ The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed
 var controller = lib.WAFAndDDOSProtection;
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
+### <a name="w_af_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.wAFConfiguration") wAFConfiguration
 
 > WAF and DDOS Configuration
 
 
 ```javascript
-function httpsApiRestShApiSWC(input, callback)
+function wAFConfiguration(input, callback)
 ```
 #### Parameters
 
@@ -378,7 +378,7 @@ function httpsApiRestShApiSWC(input, callback)
         input['name'] = 'name';
         input['rule'] = 'rule';
 
-    controller.httpsApiRestShApiSWC(input, function(error, response, context) {
+    controller.wAFConfiguration(input, function(error, response, context) {
 
     
     });
@@ -386,13 +386,13 @@ function httpsApiRestShApiSWC(input, callback)
 
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
+### <a name="w_af_creation"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.wAFCreation") wAFCreation
 
 > WAF and DDOS Creation
 
 
 ```javascript
-function httpsApiRestShApiSW(input, callback)
+function wAFCreation(input, callback)
 ```
 #### Parameters
 
@@ -411,7 +411,7 @@ function httpsApiRestShApiSW(input, callback)
         input['origin'] = 'origin';
         input['cname'] = 'cname';
 
-    controller.httpsApiRestShApiSW(input, function(error, response, context) {
+    controller.wAFCreation(input, function(error, response, context) {
 
     
     });
@@ -456,7 +456,7 @@ function dataAndFileEncryption(input, callback)
     var input = [];
         input['data'] = 'data';
         input['method'] = 'method';
-        input['bit'] = 118;
+        input['bit'] = 226;
 
     controller.dataAndFileEncryption(input, function(error, response, context) {
 
@@ -840,7 +840,7 @@ function userAddressVerification(input, callback)
         input['sa'] = 'sa';
         input['c'] = 'c';
         input['s'] = 's';
-        input['z'] = 118;
+        input['z'] = 226;
         input['address'] = 'address';
 
     controller.userAddressVerification(input, function(error, response, context) {
@@ -1144,8 +1144,8 @@ function userRegistration(input, queryParams, callback)
         input['user'] = 'user';
         input['password'] = 'password';
         input['name'] = 'name';
-        input['phone'] = 118;
-        input['countrycode'] = 118;
+        input['phone'] = 226;
+        input['countrycode'] = 226;
         input['address'] = 'address';
 
     // key-value map for optional query parameters

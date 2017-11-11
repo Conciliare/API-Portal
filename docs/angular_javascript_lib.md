@@ -508,13 +508,13 @@ The singleton instance of the ``` WAFAndDDOSProtection ``` class can be accessed
 	});
 ```
 
-### <a name="https_api_rest_sh_api_swc"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSWC") httpsApiRestShApiSWC
+### <a name="w_af_configuration"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.wAFConfiguration") wAFConfiguration
 
 > WAF and DDOS Configuration
 
 
 ```javascript
-function httpsApiRestShApiSWC(input)
+function wAFConfiguration(input)
 ```
 #### Parameters
 
@@ -536,7 +536,7 @@ function httpsApiRestShApiSWC(input)
         input['rule'] = 'rule';
 
 
-		var result = WAFAndDDOSProtection.httpsApiRestShApiSWC(input);
+		var result = WAFAndDDOSProtection.wAFConfiguration(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -551,13 +551,13 @@ function httpsApiRestShApiSWC(input)
 
 
 
-### <a name="https_api_rest_sh_api_sw"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.httpsApiRestShApiSW") httpsApiRestShApiSW
+### <a name="w_af_creation"></a>![Method: ](https://apidocs.io/img/method.png ".WAFAndDDOSProtection.wAFCreation") wAFCreation
 
 > WAF and DDOS Creation
 
 
 ```javascript
-function httpsApiRestShApiSW(input)
+function wAFCreation(input)
 ```
 #### Parameters
 
@@ -579,7 +579,7 @@ function httpsApiRestShApiSW(input)
         input['cname'] = 'cname';
 
 
-		var result = WAFAndDDOSProtection.httpsApiRestShApiSW(input);
+		var result = WAFAndDDOSProtection.wAFCreation(input);
         //Function call returns a promise
         result.then(function(success){
 			//success case
@@ -634,7 +634,7 @@ function dataAndFileEncryption(input)
         var input = [];
         input['data'] = 'data';
         input['method'] = 'method';
-        input['bit'] = 90;
+        input['bit'] = 107;
 
 
 		var result = Encryption.dataAndFileEncryption(input);
@@ -1115,7 +1115,7 @@ function userAddressVerification(input)
         input['sa'] = 'sa';
         input['c'] = 'c';
         input['s'] = 's';
-        input['z'] = 90;
+        input['z'] = 107;
         input['address'] = 'address';
 
 
@@ -1502,8 +1502,8 @@ function userRegistration(input, queryParameters)
         input['user'] = 'user';
         input['password'] = 'password';
         input['name'] = 'name';
-        input['phone'] = 90;
-        input['countrycode'] = 90;
+        input['phone'] = 107;
+        input['countrycode'] = 107;
         input['address'] = 'address';
 
         // key-value map for optional query parameters
